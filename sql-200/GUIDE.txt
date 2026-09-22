@@ -1,5 +1,11 @@
 SQL-200 — 20 related scenario families, 10 scenarios per family
 
+HOW TO USE THE EXPLANATIONS
+explanations/README.md lists every family with the exercises it covers.
+Read the family doc first, attempt the starter, run the verifier, then
+compare with the readable reference in solutions/. Each doc ends with a
+policy matrix showing exactly what changes between sibling variants.
+
 Prerequisite: Node v22.16.0 with built-in node:sqlite DatabaseSync (verified).
 Authoring runtime SQLite: 3.49.1. No sqlite3 CLI, packages, network, or services.
 ExperimentalWarning from Node is informational.
