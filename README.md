@@ -15,7 +15,9 @@ runner — just you, the file, and `node`.
 
 4. Stuck for a while? The full solutions are in `SOLUTIONS.md` — but earn
    the peek: try 10 minutes of debugging first, and prefer reading the
-   solution over copying it.
+   solution over copying it. `SOLUTIONS.md` now covers all 83 exercises,
+   each with the reference code, a "Why it works" explanation and a
+   worked trace of the exercise file's own sample input.
 
 ## Order of exercises
 
@@ -54,6 +56,56 @@ runner — just you, the file, and `node`.
 | 31 | template-engine.js | strings, regex, data lookup | ⭐⭐⭐⭐ |
 | 32 | diff-arrays.js | Sets & efficiency | ⭐⭐⭐ |
 | 33 | word-ladder.js | BFS over a graph | ⭐⭐⭐⭐ |
+| 34 | two-sum.js | single-pass Map lookup | ⭐⭐ |
+| 35 | move-zeroes.js | two pointers, in place | ⭐⭐ |
+| 36 | max-subarray.js | Kadane's algorithm | ⭐⭐⭐ |
+| 37 | roman-to-int.js | value tables + lookahead | ⭐⭐ |
+| 38 | int-to-roman.js | greedy with a value table | ⭐⭐ |
+| 39 | string-compression.js | run-length encoding | ⭐⭐ |
+| 40 | longest-unique-substring.js | sliding window | ⭐⭐⭐ |
+| 41 | longest-common-prefix.js | strings & early exit | ⭐⭐ |
+| 42 | merge-sorted.js | two pointers | ⭐⭐ |
+| 43 | primes-sieve.js | Sieve of Eratosthenes | ⭐⭐⭐ |
+| 44 | power-set.js | bitmask or recursion | ⭐⭐⭐ |
+| 45 | permutations.js | backtracking | ⭐⭐⭐ |
+| 46 | rotate-array.js | reversal trick, in place | ⭐⭐⭐ |
+| 47 | debounce.js | timers & closures | ⭐⭐⭐ |
+| 48 | throttle.js | timers & closures | ⭐⭐ |
+| 49 | fibonacci-memo.js | recursion → memo → loop | ⭐⭐⭐ |
+| 50 | clone-deep.js | recursion, cycles, Dates | ⭐⭐⭐⭐ |
+| 51 | product-except-self.js | prefix/suffix products | ⭐⭐⭐ |
+| 52 | unique-paths.js | dynamic programming grid | ⭐⭐⭐ |
+| 53 | climbing-stairs.js | DP, fibonacci in disguise | ⭐⭐ |
+| 54 | coin-change.js | dynamic programming | ⭐⭐⭐ |
+| 55 | sqlite-free-json-db.js | classes, files, JSON | ⭐⭐⭐ |
+| 56 | bank-account.js | private fields, getters, errors | ⭐⭐⭐ |
+| 57 | linked-list.js | pointers via object references | ⭐⭐⭐ |
+| 58 | binary-search-tree.js | recursion + invariant | ⭐⭐⭐ |
+| 59 | binary-search.js | the O(log n) classic | ⭐⭐ |
+| 60 | promise-all.js | promise bookkeeping | ⭐⭐⭐ |
+| 61 | all-settled.js | fulfilled vs rejected records | ⭐⭐⭐ |
+| 62 | concurrency-pool.js | async scheduling with a limit | ⭐⭐⭐⭐ |
+| 63 | async-reduce.js | sequential async steps | ⭐⭐ |
+| 64 | with-timeout.js | timer lifecycle & microtasks | ⭐⭐⭐ |
+| 65 | abortable-delay.js | AbortSignal cleanup | ⭐⭐⭐⭐ |
+| 66 | query-parse.js | string splitting & decoding | ⭐⭐⭐ |
+| 67 | pagination.js | clamping & off-by-one | ⭐⭐ |
+| 68 | stable-multi-sort.js | comparators & stable ties | ⭐⭐⭐ |
+| 69 | object-path.js | own properties vs truthiness | ⭐⭐⭐ |
+| 70 | flatten-object.js | recursion with a path prefix | ⭐⭐⭐ |
+| 71 | unflatten-object.js | validation then construction | ⭐⭐⭐⭐ |
+| 72 | merge-intervals.js | sort then merge | ⭐⭐⭐ |
+| 73 | peak-overlap.js | sweep line | ⭐⭐⭐ |
+| 74 | top-k-words.js | counting + two-level sort | ⭐⭐⭐ |
+| 75 | running-median.js | binary-search insertion | ⭐⭐⭐ |
+| 76 | transaction-cart.js | atomic edits on a draft | ⭐⭐⭐⭐ |
+| 77 | state-machine.js | closures + graph validation | ⭐⭐⭐ |
+| 78 | undo-redo.js | one array, one cursor | ⭐⭐⭐⭐ |
+| 79 | queue-class.js | O(1) FIFO with a head index | ⭐⭐⭐ |
+| 80 | validation-schema.js | rule cascades & error order | ⭐⭐⭐⭐ |
+| 81 | topo-sort.js | Kahn topological sort (BFS) | ⭐⭐⭐⭐ |
+| 82 | rolling-average.js | ring buffer + running sum | ⭐⭐ |
+| 83 | async-pipeline.js | capstone: async + error trap | ⭐⭐⭐⭐ |
 
 ## Suggested path
 
