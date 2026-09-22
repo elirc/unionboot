@@ -2,7 +2,29 @@
 // Input {left:[{id,value}],right:[{id,value}]}, unique numeric ids per side. Return [id,leftValueOrNull,rightValueOrNull] rows sorted by id. Implement a inner join; null denotes an absent side. No mutation.
 // Tests: node js-rest/verify.cjs --id=108 [--starters]
 // Study tests/108.cjs for examples.
+// Why this works:
+// Both sides are indexed by id first, so every lookup after that is O(1).
+// The candidate ids are the union of both key sets, de-duplicated with a Set
+// and sorted numerically, which fixes the output order once and for all.
+// Policy inner: an id is emitted only when BOTH sides hold it, so the null
+// placeholders never actually appear in the result for this variant.
+// Nothing is written back into input.left or input.right.
 function solve(input) {
-const a=new Map(input.left.map(r=>[r.id,r.value])),b=new Map(input.right.map(r=>[r.id,r.value]));const ids=[...new Set([...a.keys(),...b.keys()])].sort((x,y)=>x-y);return ids.filter(id=>a.has(id)&&b.has(id)).map(id=>[id,a.has(id)?a.get(id):null,b.has(id)?b.get(id):null]);
+  const leftValueById = new Map(input.left.map(row => [row.id, row.value]));
+  const rightValueById = new Map(input.right.map(row => [row.id, row.value]));
+  const allIds = [...new Set([...leftValueById.keys(), ...rightValueById.keys()])];
+  allIds.sort((a, b) => a - b);
+  const rows = [];
+  for (const id of allIds) {
+    if (!(leftValueById.has(id) && rightValueById.has(id))) {
+      continue;
+    }
+    rows.push([
+      id,
+      leftValueById.has(id) ? leftValueById.get(id) : null,
+      rightValueById.has(id) ? rightValueById.get(id) : null,
+    ]);
+  }
+  return rows;
 }
 module.exports=solve;

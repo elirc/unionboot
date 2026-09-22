@@ -1,5 +1,11 @@
 JS-REST SCENARIO EXERCISES
 
+HOW TO USE THE EXPLANATIONS
+explanations/README.md lists every family with the exercises it covers.
+Read the family doc first, attempt the starter, run the verifier, then
+compare with the readable reference in solutions/. Each doc ends with a
+policy matrix showing exactly what changes between sibling variants.
+
 80 exercises. Variants deliberately revisit an API family with different policies, boundary cases, or type contracts. They are not 80 unrelated algorithms.
 
 From unionboot: node js-rest/verify.cjs

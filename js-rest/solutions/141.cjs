@@ -2,7 +2,35 @@
 // Input {a:number[],b:number[]} of integers. Return sorted multiset union. Multiplicities use maximum. Do not treat duplicates as a simple set.
 // Tests: node js-rest/verify.cjs --id=141 [--starters]
 // Study tests/141.cjs for examples.
+// Why this works:
+// A multiset cares how many times a value appears, so each side is reduced to
+// a Map from value to count. A Set would throw that information away.
+// The candidate values are the union of both key sets, sorted numerically, so
+// the output is sorted ascending without sorting the input arrays.
+// Policy union: a value survives max(countA, countB) times, which is why
+// [4,4] unioned with [4,4] is [4,4] and not [4,4,4,4].
+// Both input arrays are only read.
 function solve(input) {
-const a=new Map(),b=new Map();for(const n of input.a)a.set(n,(a.get(n)||0)+1);for(const n of input.b)b.set(n,(b.get(n)||0)+1);const out=[];for(const n of [...new Set([...a.keys(),...b.keys()])].sort((x,y)=>x-y)){const x=a.get(n)||0,y=b.get(n)||0;out.push(...Array(Math.max(x,y)).fill(n));}return out;
+  const tally = numbers => {
+    const counts = new Map();
+    for (const value of numbers) {
+      counts.set(value, (counts.get(value) || 0) + 1);
+    }
+    return counts;
+  };
+  const countsA = tally(input.a);
+  const countsB = tally(input.b);
+  const allValues = [...new Set([...countsA.keys(), ...countsB.keys()])];
+  allValues.sort((x, y) => x - y);
+  const result = [];
+  for (const value of allValues) {
+    const inA = countsA.get(value) || 0;
+    const inB = countsB.get(value) || 0;
+    const repeats = Math.max(inA, inB);
+    for (let i = 0; i < repeats; i++) {
+      result.push(value);
+    }
+  }
+  return result;
 }
 module.exports=solve;

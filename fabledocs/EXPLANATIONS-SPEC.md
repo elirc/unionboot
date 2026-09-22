@@ -146,6 +146,7 @@ This machine is slow and memory-constrained. Two node processes running test sui
 3. Never run two verifiers at the same time, and never run `verify-all.cjs` — the planner runs the full gates at the end.
 4. A failing rewrite is reverted to the baseline (`git checkout -- <track>/solutions/<id>.<ext>`) and listed in your report. Do not leave a red reference behind.
 5. Do not run `npm install`, `npm ci`, `dotnet restore`, or any build script (`build-*.cjs`). The generators refuse existing directories and would discard learner work.
+6. The scratchpad directory is SHARED between concurrently running writers. Create your own subdirectory named after your slice (e.g. `<scratchpad>/js-more-1849/`) and keep every helper script and log inside it; never write to the scratchpad root.
 
 ## 6. Report back
 
