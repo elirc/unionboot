@@ -1,0 +1,61 @@
+FULL-STACK WEB DEVELOPMENT QUESTION BANK
+=======================================
+
+A local self-study Q&A companion to the runnable unionboot exercises.
+Planned inventory: 520 questions with answers, FS001 through FS520,
+organized into 52 sections of 10 questions. Run the validator to confirm
+that all content files are present and structurally complete.
+
+FILES
+-----
+frontend-web.txt       FS001-FS260: frontend and browser foundations
+backend-delivery.txt   FS261-FS520: backend and delivery engineering
+frontend-web.json      Structured frontend question/answer edition
+backend-delivery.json  Structured backend question/answer edition
+verify.cjs             Structural integrity checks for both editions
+
+Each JSON record has id, section, question, answer, and level.
+The TXT editions contain the same questions and reference answers.
+These are study questions, not executable programming exercises.
+They are not included in the root runnable-exercise count.
+
+STUDY ROUTINE
+-------------
+1. Choose one section (10 questions).
+2. Read a question without looking at its reference answer.
+3. Answer aloud or in your own separate notes. For scenarios, state your
+   assumptions, explain the mechanism, and discuss one tradeoff.
+4. Compare with the reference answer. More than one design may be valid;
+   judge the reasoning and constraints, not exact wording.
+5. Turn one scenario into a small local implementation or debugging task.
+6. Revisit missed questions after two days and again after a week.
+
+SELF-ASSESSMENT
+---------------
+0: Cannot explain the concept yet.
+1: Recognizes the concept but misses the mechanism or key constraint.
+2: Explains the mechanism correctly with a concrete example.
+3: Also explains tradeoffs, failure cases, and how to test the approach.
+
+Suggested session: five questions from each half for a balanced review.
+Keep learner notes in a separate file so the reference editions remain
+usable as an answer key. Do not paste real secrets or customer records
+into study examples.
+
+CHECKING THE BANK
+-----------------
+From C:\Users\Owner\Desktop\unionboot run:
+
+  node fullstack-questions/verify.cjs
+
+Expected completed inventory: 520 questions, 52 sections, FS001-FS520.
+Exit 0: all structural checks passed.
+Exit 1: missing content or a structural/content-consistency check failed.
+Exit 2: unsupported command-line arguments.
+
+Checks include consecutive IDs, section counts, populated answers,
+normalized exact duplicate questions, and agreement between JSON and TXT.
+They do NOT prove every answer factually correct, detect all conceptual
+duplicates, grade your own answers, or verify application behavior.
+Check framework/version-specific details against official documentation
+when applying an answer to a real project.

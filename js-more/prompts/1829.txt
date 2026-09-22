@@ -1,0 +1,18 @@
+Async semaphore queues / scenario 1 — permits=1; queue=fifo
+
+TASK
+Export solve() -> {acquire,stats}. 1 permits. acquire() returns Promise<releaseFunction>; grant immediately if available, otherwise queue fifo. Release is idempotent and hands permit directly to one waiter before later acquisitions. stats() is {active,waiting}. Every instance independent. No timers, polling, or tasks run by semaphore itself.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1829.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1829
+node js-more/verify.cjs --starters --id=1829
+
+POLICIES
+permits=1; queue=fifo
+Semantic key: {"permits":1,"queue":"fifo"}

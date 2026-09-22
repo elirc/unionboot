@@ -1,0 +1,7 @@
+// 1581 Notification dependency form / scenario 3 — Digest requires email
+// Email and Phone text fields. SMS checkbox has no prerequisite; Digest checkbox requires Email containing @. Disable unavailable channels. Invalidated prerequisite clears selection.  Effective output is active checked names in SMS,Digest order joined by comma, or none. Save copies Effective to Saved. Save always enabled. Draft edits leave Saved unchanged.
+// Full prompt: ../prompts/1581.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId} from 'react';
+export default function Exercise({}) {
+const [p,setP]=useState(''),[e,setE]=useState(''),[s,setS]=useState(false),[d,setD]=useState(false),[c,setC]=useState(false),[saved,save]=useState('');const pOK=true,eOK=e.includes('@'),effective=[s&&pOK?'SMS':'',d&&eOK?'Digest':''].filter(Boolean).join(',')||'none';return <section><label>Phone<input value={p} onChange={e=>{setP(e.target.value);}}/></label><label>Email<input value={e} onChange={e=>{setE(e.target.value);if(!e.target.value.includes('@'))setD(false);}}/></label><label>SMS<input type="checkbox" disabled={!pOK} checked={s} onChange={e=>{setS(e.target.checked);}}/></label><label>Digest<input type="checkbox" disabled={!eOK} checked={d} onChange={e=>{setD(e.target.checked);}}/></label><button disabled={false} onClick={()=>save(effective)}>Save</button><output aria-label="Effective">{effective}</output><output aria-label="Saved">{saved}</output></section>;
+}

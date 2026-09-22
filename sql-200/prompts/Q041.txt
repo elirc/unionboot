@@ -1,0 +1,58 @@
+Q041 — family Ranking and top N per group, scenario 1: row-number-with-id-tiebreak
+
+Task
+Number players within team by score descending then id ascending; order by team and row number.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE scores(id INTEGER PRIMARY KEY,team TEXT,name TEXT,score INTEGER);
+INSERT INTO scores VALUES(1,'A','Ada',100),(2,'A','Bo',90),(3,'A','Cy',90),(4,'A','Dee',70),(5,'B','Eli',80),(6,'B','Flo',80),(7,'B','Gus',60);
+
+Concrete example
+With the exact seed above, the first result row is {"team":"A","name":"Ada","place":1}.
+
+Expected shape
+Columns (exact aliases): team, name, place. 7 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "team": "A",
+    "name": "Ada",
+    "place": 1
+  },
+  {
+    "team": "A",
+    "name": "Bo",
+    "place": 2
+  },
+  {
+    "team": "A",
+    "name": "Cy",
+    "place": 3
+  },
+  {
+    "team": "A",
+    "name": "Dee",
+    "place": 4
+  },
+  {
+    "team": "B",
+    "name": "Eli",
+    "place": 1
+  },
+  {
+    "team": "B",
+    "name": "Flo",
+    "place": 2
+  },
+  {
+    "team": "B",
+    "name": "Gus",
+    "place": 3
+  }
+]
+
+Submission
+Edit starters/Q041.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q041
+Reference: node sql-200/verify.cjs --id=Q041

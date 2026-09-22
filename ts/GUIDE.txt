@@ -1,0 +1,309 @@
+TS SCENARIO EXERCISES
+
+100 exercises. Variants deliberately revisit an API family with different policies, boundary cases, or type contracts. They are not 100 unrelated algorithms.
+
+From unionboot: node ts/verify.cjs
+Practice: node ts/verify.cjs --starters --id=184
+Edit starters, consult tests for examples, solutions only after attempting.
+TypeScript tracks use strict compilation plus negative type fixtures and runtime assertions.
+Blank starters compile but fail runtime tests by design. Reference solutions are not imported into starters.
+
+184 Sum readonly numbers / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '0-0' is required as the second argument and returned unchanged. Return {policy,result}. Sum readonly numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+185 Sum readonly numbers / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '0-1' is required as the second argument and returned unchanged. Return {policy,result}. Sum readonly numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+186 Sum readonly numbers / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '0-2' is required as the second argument and returned unchanged. Return {policy,result}. Sum readonly numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+187 Sum readonly numbers / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '0-3' is required as the second argument and returned unchanged. Return {policy,result}. Sum readonly numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+188 Sum readonly numbers / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '0-4' is required as the second argument and returned unchanged. Return {policy,result}. Sum readonly numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+189 Map to labelled records / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '1-0' is required as the second argument and returned unchanged. Return {policy,result}. Map to labelled records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+190 Map to labelled records / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '1-1' is required as the second argument and returned unchanged. Return {policy,result}. Map to labelled records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+191 Map to labelled records / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '1-2' is required as the second argument and returned unchanged. Return {policy,result}. Map to labelled records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+192 Map to labelled records / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '1-3' is required as the second argument and returned unchanged. Return {policy,result}. Map to labelled records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+193 Map to labelled records / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '1-4' is required as the second argument and returned unchanged. Return {policy,result}. Map to labelled records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+194 Discriminated sign union / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '2-0' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated sign union; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+195 Discriminated sign union / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '2-1' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated sign union; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+196 Discriminated sign union / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '2-2' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated sign union; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+197 Discriminated sign union / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '2-3' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated sign union; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+198 Discriminated sign union / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '2-4' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated sign union; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+199 Optional first value / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '3-0' is required as the second argument and returned unchanged. Return {policy,result}. Optional first value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+200 Optional first value / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '3-1' is required as the second argument and returned unchanged. Return {policy,result}. Optional first value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+201 Optional first value / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '3-2' is required as the second argument and returned unchanged. Return {policy,result}. Optional first value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+202 Optional first value / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '3-3' is required as the second argument and returned unchanged. Return {policy,result}. Optional first value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+203 Optional first value / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '3-4' is required as the second argument and returned unchanged. Return {policy,result}. Optional first value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+204 Readonly tuple bounds / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '4-0' is required as the second argument and returned unchanged. Return {policy,result}. Readonly tuple bounds; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+205 Readonly tuple bounds / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '4-1' is required as the second argument and returned unchanged. Return {policy,result}. Readonly tuple bounds; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+206 Readonly tuple bounds / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '4-2' is required as the second argument and returned unchanged. Return {policy,result}. Readonly tuple bounds; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+207 Readonly tuple bounds / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '4-3' is required as the second argument and returned unchanged. Return {policy,result}. Readonly tuple bounds; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+208 Readonly tuple bounds / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '4-4' is required as the second argument and returned unchanged. Return {policy,result}. Readonly tuple bounds; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+209 Typed Result mean / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '5-0' is required as the second argument and returned unchanged. Return {policy,result}. Typed Result mean; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+210 Typed Result mean / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '5-1' is required as the second argument and returned unchanged. Return {policy,result}. Typed Result mean; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+211 Typed Result mean / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '5-2' is required as the second argument and returned unchanged. Return {policy,result}. Typed Result mean; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+212 Typed Result mean / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '5-3' is required as the second argument and returned unchanged. Return {policy,result}. Typed Result mean; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+213 Typed Result mean / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '5-4' is required as the second argument and returned unchanged. Return {policy,result}. Typed Result mean; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+214 Record frequency index / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '6-0' is required as the second argument and returned unchanged. Return {policy,result}. Record frequency index; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+215 Record frequency index / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '6-1' is required as the second argument and returned unchanged. Return {policy,result}. Record frequency index; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+216 Record frequency index / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '6-2' is required as the second argument and returned unchanged. Return {policy,result}. Record frequency index; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+217 Record frequency index / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '6-3' is required as the second argument and returned unchanged. Return {policy,result}. Record frequency index; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+218 Record frequency index / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '6-4' is required as the second argument and returned unchanged. Return {policy,result}. Record frequency index; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+219 Generic identity copy / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '7-0' is required as the second argument and returned unchanged. Return {policy,result}. Generic identity copy; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+220 Generic identity copy / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '7-1' is required as the second argument and returned unchanged. Return {policy,result}. Generic identity copy; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+221 Generic identity copy / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '7-2' is required as the second argument and returned unchanged. Return {policy,result}. Generic identity copy; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+222 Generic identity copy / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '7-3' is required as the second argument and returned unchanged. Return {policy,result}. Generic identity copy; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+223 Generic identity copy / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '7-4' is required as the second argument and returned unchanged. Return {policy,result}. Generic identity copy; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+224 Generic pair each element / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '8-0' is required as the second argument and returned unchanged. Return {policy,result}. Generic pair each element; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+225 Generic pair each element / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '8-1' is required as the second argument and returned unchanged. Return {policy,result}. Generic pair each element; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+226 Generic pair each element / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '8-2' is required as the second argument and returned unchanged. Return {policy,result}. Generic pair each element; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+227 Generic pair each element / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '8-3' is required as the second argument and returned unchanged. Return {policy,result}. Generic pair each element; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+228 Generic pair each element / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '8-4' is required as the second argument and returned unchanged. Return {policy,result}. Generic pair each element; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+229 Generic last value / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '9-0' is required as the second argument and returned unchanged. Return {policy,result}. Generic last value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+230 Generic last value / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '9-1' is required as the second argument and returned unchanged. Return {policy,result}. Generic last value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+231 Generic last value / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '9-2' is required as the second argument and returned unchanged. Return {policy,result}. Generic last value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+232 Generic last value / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '9-3' is required as the second argument and returned unchanged. Return {policy,result}. Generic last value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+233 Generic last value / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '9-4' is required as the second argument and returned unchanged. Return {policy,result}. Generic last value; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+234 Exclude negative numbers / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '10-0' is required as the second argument and returned unchanged. Return {policy,result}. Exclude negative numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+235 Exclude negative numbers / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '10-1' is required as the second argument and returned unchanged. Return {policy,result}. Exclude negative numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+236 Exclude negative numbers / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '10-2' is required as the second argument and returned unchanged. Return {policy,result}. Exclude negative numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+237 Exclude negative numbers / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '10-3' is required as the second argument and returned unchanged. Return {policy,result}. Exclude negative numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+238 Exclude negative numbers / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '10-4' is required as the second argument and returned unchanged. Return {policy,result}. Exclude negative numbers; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+239 Cumulative typed records / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '11-0' is required as the second argument and returned unchanged. Return {policy,result}. Cumulative typed records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+240 Cumulative typed records / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '11-1' is required as the second argument and returned unchanged. Return {policy,result}. Cumulative typed records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+241 Cumulative typed records / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '11-2' is required as the second argument and returned unchanged. Return {policy,result}. Cumulative typed records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+242 Cumulative typed records / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '11-3' is required as the second argument and returned unchanged. Return {policy,result}. Cumulative typed records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+243 Cumulative typed records / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '11-4' is required as the second argument and returned unchanged. Return {policy,result}. Cumulative typed records; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+244 Tuple neighbouring differences / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '12-0' is required as the second argument and returned unchanged. Return {policy,result}. Tuple neighbouring differences; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+245 Tuple neighbouring differences / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '12-1' is required as the second argument and returned unchanged. Return {policy,result}. Tuple neighbouring differences; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+246 Tuple neighbouring differences / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '12-2' is required as the second argument and returned unchanged. Return {policy,result}. Tuple neighbouring differences; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+247 Tuple neighbouring differences / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '12-3' is required as the second argument and returned unchanged. Return {policy,result}. Tuple neighbouring differences; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+248 Tuple neighbouring differences / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '12-4' is required as the second argument and returned unchanged. Return {policy,result}. Tuple neighbouring differences; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+249 Union numeric parser / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '13-0' is required as the second argument and returned unchanged. Return {policy,result}. Union numeric parser; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+250 Union numeric parser / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '13-1' is required as the second argument and returned unchanged. Return {policy,result}. Union numeric parser; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+251 Union numeric parser / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '13-2' is required as the second argument and returned unchanged. Return {policy,result}. Union numeric parser; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+252 Union numeric parser / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '13-3' is required as the second argument and returned unchanged. Return {policy,result}. Union numeric parser; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+253 Union numeric parser / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '13-4' is required as the second argument and returned unchanged. Return {policy,result}. Union numeric parser; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+254 Nullable count summary / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '14-0' is required as the second argument and returned unchanged. Return {policy,result}. Nullable count summary; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+255 Nullable count summary / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '14-1' is required as the second argument and returned unchanged. Return {policy,result}. Nullable count summary; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+256 Nullable count summary / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '14-2' is required as the second argument and returned unchanged. Return {policy,result}. Nullable count summary; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+257 Nullable count summary / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '14-3' is required as the second argument and returned unchanged. Return {policy,result}. Nullable count summary; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+258 Nullable count summary / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '14-4' is required as the second argument and returned unchanged. Return {policy,result}. Nullable count summary; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+259 Typed sorted set / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '15-0' is required as the second argument and returned unchanged. Return {policy,result}. Typed sorted set; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+260 Typed sorted set / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '15-1' is required as the second argument and returned unchanged. Return {policy,result}. Typed sorted set; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+261 Typed sorted set / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '15-2' is required as the second argument and returned unchanged. Return {policy,result}. Typed sorted set; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+262 Typed sorted set / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '15-3' is required as the second argument and returned unchanged. Return {policy,result}. Typed sorted set; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+263 Typed sorted set / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '15-4' is required as the second argument and returned unchanged. Return {policy,result}. Typed sorted set; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+264 Discriminated parity labels / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '16-0' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated parity labels; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+265 Discriminated parity labels / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '16-1' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated parity labels; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+266 Discriminated parity labels / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '16-2' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated parity labels; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+267 Discriminated parity labels / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '16-3' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated parity labels; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+268 Discriminated parity labels / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '16-4' is required as the second argument and returned unchanged. Return {policy,result}. Discriminated parity labels; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+269 Readonly input reversal / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '17-0' is required as the second argument and returned unchanged. Return {policy,result}. Readonly input reversal; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+270 Readonly input reversal / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '17-1' is required as the second argument and returned unchanged. Return {policy,result}. Readonly input reversal; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+271 Readonly input reversal / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '17-2' is required as the second argument and returned unchanged. Return {policy,result}. Readonly input reversal; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+272 Readonly input reversal / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '17-3' is required as the second argument and returned unchanged. Return {policy,result}. Readonly input reversal; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+273 Readonly input reversal / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '17-4' is required as the second argument and returned unchanged. Return {policy,result}. Readonly input reversal; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+274 Optional object entries / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '18-0' is required as the second argument and returned unchanged. Return {policy,result}. Optional object entries; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+275 Optional object entries / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '18-1' is required as the second argument and returned unchanged. Return {policy,result}. Optional object entries; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+276 Optional object entries / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '18-2' is required as the second argument and returned unchanged. Return {policy,result}. Optional object entries; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+277 Optional object entries / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '18-3' is required as the second argument and returned unchanged. Return {policy,result}. Optional object entries; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+278 Optional object entries / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '18-4' is required as the second argument and returned unchanged. Return {policy,result}. Optional object entries; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+279 Typed running product / basic
+Implement the stated API under strict TypeScript. Scenario policy literal '19-0' is required as the second argument and returned unchanged. Return {policy,result}. Typed running product; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+280 Typed running product / empty-boundary
+Implement the stated API under strict TypeScript. Scenario policy literal '19-1' is required as the second argument and returned unchanged. Return {policy,result}. Typed running product; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+281 Typed running product / duplicate-values
+Implement the stated API under strict TypeScript. Scenario policy literal '19-2' is required as the second argument and returned unchanged. Return {policy,result}. Typed running product; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+282 Typed running product / negative-values
+Implement the stated API under strict TypeScript. Scenario policy literal '19-3' is required as the second argument and returned unchanged. Return {policy,result}. Typed running product; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+
+283 Typed running product / large-values
+Implement the stated API under strict TypeScript. Scenario policy literal '19-4' is required as the second argument and returned unchanged. Return {policy,result}. Typed running product; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.

@@ -1,0 +1,27 @@
+Q229 — family JSON mutation patch and serialization, scenario 9: persist-json-counter-increment
+
+Task
+Update stored n by adding three through json_set and return stored n and mode.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE configs(id INTEGER PRIMARY KEY,body TEXT);INSERT INTO configs VALUES(1,'{"mode":"draft","n":2,"tags":["a"],"nested":{"x":1,"y":2}}');
+
+Concrete example
+The first result row on this seed is {"n":5,"mode":"draft"}.
+
+Expected shape
+Columns: n, mode. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "n": 5,
+    "mode": "draft"
+  }
+]
+
+Submission
+Write SQL in starters/Q229.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q229
+Learner: node sql-more/verify.cjs --starters --id=Q229

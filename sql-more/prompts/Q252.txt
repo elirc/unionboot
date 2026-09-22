@@ -1,0 +1,26 @@
+Q252 — family FTS5 text retrieval and token policies, scenario 2: and-two-tokens
+
+Task
+Match quick AND fox in any columns.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE VIRTUAL TABLE articles USING fts5(title,body);INSERT INTO articles(rowid,title,body) VALUES(1,'Red fox','quick brown fox jumps'),(2,'Blue bird','quick blue bird flies'),(3,'Fox notes','slow red fox sleeps'),(4,'Garden','blue flowers grow');
+
+Concrete example
+The first result row on this seed is {"rowid":1}.
+
+Expected shape
+Columns: rowid. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "rowid": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q252.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q252
+Learner: node sql-more/verify.cjs --starters --id=Q252

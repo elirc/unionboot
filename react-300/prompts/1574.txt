@@ -1,0 +1,18 @@
+Blackout-aware booking / scenario 6 — Three-day minimum
+
+TASK
+Blank Start and End date inputs. Require End>=Start, inclusive UTC day count >=3. Reject blackout 2026-10-10..2026-10-13 with start<=blackoutEnd AND end>=blackoutStart. Validation output: incomplete, reversed, too short, blocked, available in that priority. Reserve disabled unless available and guarded on submit. Booking output stores START/END on success and survives invalid edits.
+
+EXAMPLE
+2026-10-01..2026-10-03 => available.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1574.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1574
+node react-300/verify.cjs --starters --id=1574

@@ -1,0 +1,9 @@
+// 735 Fake async request state / scenario 7 — latest request wins; clear data while loading; error fallback Unavailable
+// Injected props.load():Promise<string>, no network. Load starts request. Allow concurrent requests; only latest-started may update status/data/error. Status output labelled State is idle/loading/done/error; output labelled Data initially empty. Clear data when starting a request. Show role alert on rejection, using nonempty Error.message else 'Unavailable'. Clear prior error on retry. Cancel invalidates pending work, sets State idle, and leaves current data; disable Cancel when not loading. Ignore stale success/failure and completion after unmount.
+// Prompt: ../prompts/735.txt
+// Run from unionboot: node react-more/verify.cjs --id=735 [--starters]
+import React, {useState, useEffect, useReducer, useRef} from 'react';
+
+export default function Exercise({items=[], rows=[], load=async()=>''}) {
+const [state,set]=useState('idle'),[data,save]=useState(''),[error,fail]=useState('');const sequence=useRef(0),live=useRef(false),pending=useRef(false);useEffect(()=>{live.current=true;return ()=>{live.current=false;sequence.current++;};},[]);async function run(){pending.current=true;const id=++sequence.current;set('loading');fail('');save('');try{const value=await load();if(live.current&&id===sequence.current){pending.current=false;save(value);set('done');}}catch(err){if(live.current&&id===sequence.current){pending.current=false;fail(err instanceof Error&&err.message?err.message:"Unavailable");set('error');}}}return <section><button disabled={false} onClick={run}>Load</button><button disabled={state!=='loading'} onClick={()=>{sequence.current++;pending.current=false;set('idle');}}>Cancel</button><output aria-label="State">{state}</output><output aria-label="Data">{data}</output>{error&&<p role="alert">{error}</p>}</section>;
+}

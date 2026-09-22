@@ -1,0 +1,6 @@
+// 1399 Focus trap within a dialog [a11y]
+// Open via Open button. Dialog (role dialog, aria-label Wizard) contains two buttons First and Last. Tab from Last wraps to First; Shift+Tab from First wraps to Last. Focus the First button automatically when the dialog opens. Close button unmounts it. Implement with keydown handling on the dialog container. Output states open/closed.
+// Run: node react-junior/verify.cjs --id=1399 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({}){const [open,setOpen]=useState(false);const ref=useRef(null);const onKey=e=>{if(e.key!=='Tab')return;const buttons=ref.current?Array.from(ref.current.querySelectorAll('button')).filter(x=>!x.disabled):[];if(!buttons.length)return;const first=buttons[0],last=buttons[buttons.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}};
+return <section><button onClick={()=>{setOpen(true);}}>Open</button><output>{open?'open':'closed'}</output>{open&&<div role="dialog" aria-label="Wizard" ref={el=>{ref.current=el;}} onKeyDown={onKey}><button autoFocus>First</button><button onClick={()=>setOpen(false)}>Close</button><button>Last</button></div>}</section>;}

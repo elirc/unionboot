@@ -1,0 +1,18 @@
+Coalesced live announcements / scenario 16 — Boundary 6; announce joined burst
+
+TASK
+Subscribe injected source messages (strings). First message in a burst opens a fixed 300ms window using scheduler.after; subsequent messages do not reschedule it. On expiry announce all burst messages joined by / in role=status aria-label=Announcement with aria-live=polite and aria-atomic=true. Initially empty. Clear cancels pending burst and empties text. Guard stale scheduled callbacks and clean up both services on unmount. This is announcement batching, not a debounced text draft.
+
+EXAMPLE
+a,b,c before expiry => a/b/c, one scheduled window.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2914.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{source,scheduler}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2914
+node react-next/verify.cjs --starters --id=2914

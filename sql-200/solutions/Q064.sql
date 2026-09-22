@@ -1,0 +1,1 @@
+WITH RECURSIVE chain(id,name,manager_id,distance) AS(SELECT id,name,manager_id,0 FROM staff WHERE id=6 UNION ALL SELECT s.id,s.name,s.manager_id,c.distance+1 FROM staff s JOIN chain c ON s.id=c.manager_id) SELECT name,distance FROM chain ORDER BY distance;

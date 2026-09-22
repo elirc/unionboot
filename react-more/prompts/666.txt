@@ -1,0 +1,11 @@
+Editable label with cancel / scenario 8 — trim length 3..6; keep; unchanged allowed
+
+Initial output Abc and Edit button. Edit opens Name initialized from saved text and focuses it. Save trims and preserves case text; require 3..6 trimmed characters. Save disabled otherwise; guard submit. Submit/Enter saves, Escape and Cancel discard; return focus to Edit on exit. Invalid submission stays in edit mode.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=666
+Run your starter: node react-more/verify.cjs --starters --id=666

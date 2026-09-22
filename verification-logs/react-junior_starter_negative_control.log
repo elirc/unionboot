@@ -1,0 +1,28 @@
+starter DOM interaction tests: 0 passed, 1 failed.
+FAIL 1369 TestingLibraryElementError: Unable to find an accessible element with the role "status" and name ""
+
+Here are the accessible roles:
+
+  paragraph:
+
+  Name "":
+  [36m<p />[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<p>[39m
+      [0mTODO exercise 1369[0m
+    [36m</p>[39m
+  [36m</div>[39m
+[36m</body>[39m
+    at Object.getElementError (C:\Users\Owner\Desktop\unionboot\node_modules\@testing-library\dom\dist\config.js:37:19)
+    at C:\Users\Owner\Desktop\unionboot\node_modules\@testing-library\dom\dist\query-helpers.js:76:38
+    at C:\Users\Owner\Desktop\unionboot\node_modules\@testing-library\dom\dist\query-helpers.js:52:17
+    at C:\Users\Owner\Desktop\unionboot\node_modules\@testing-library\dom\dist\query-helpers.js:95:19
+    at status (C:\Users\Owner\Desktop\unionboot\react-junior\tests\1369.cjs:6:27)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\react-junior\tests\1369.cjs:11:14)
+    at C:\Users\Owner\Desktop\unionboot\react-junior\verify.cjs:18:46
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

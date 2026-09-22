@@ -1,0 +1,18 @@
+Heap job dispatch / scenario 3 — direction=high; aging=2
+
+TASK
+Nonpreemptive virtual scheduler. Input jobs {id,arrival,duration,priority}, arrival>=0, duration>0. Clock starts0, jumps to next arrival when idle. At each dispatch, heap-order ready jobs by -priority - 2*(now-arrival), ascending; ties input order. Return {id,start,end} execution records. No real clock or timer. Rebuild ready heap as aging changes.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1751.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1751
+node js-more/verify.cjs --starters --id=1751
+
+POLICIES
+direction=high; aging=2
+Semantic key: {"aging":2,"direction":"high"}

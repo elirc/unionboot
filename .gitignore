@@ -1,0 +1,7 @@
+﻿# Baseline snapshot created 2026-09-21 before the explanations/solutions rewrite.
+# Dependencies and compiler output only; every authored file is tracked.
+node_modules/
+bin/
+obj/
+.build/
+.verify/

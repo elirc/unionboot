@@ -1,0 +1,15 @@
+{
+  "track": "react-300",
+  "mode": "starter",
+  "groups": 1,
+  "passed": 0,
+  "failed": 1,
+  "results": [
+    {
+      "id": 1419,
+      "passed": false,
+      "phase": "dom",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ []\n- [\n-   'red apple',\n-   'green apple',\n-   'red chair',\n-   'blue cup'\n- ]\n\n    at module.exports (C:\\Users\\Owner\\Desktop\\unionboot\\react-300\\tests\\1419.cjs:21:1)\n    at C:\\Users\\Owner\\Desktop\\unionboot\\react-300\\verify.cjs:19:58\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+    }
+  ]
+}

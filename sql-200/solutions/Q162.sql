@@ -1,0 +1,1 @@
+WITH RECURSIVE span(day,max) AS(SELECT MIN(day),MAX(day) FROM visits UNION ALL SELECT day+1,span.max FROM span WHERE day<span.max) SELECT day AS missing FROM span s WHERE NOT EXISTS(SELECT 1 FROM visits v WHERE v.day=s.day) ORDER BY missing;

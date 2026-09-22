@@ -1,0 +1,1 @@
+SELECT DISTINCT v.user FROM events v JOIN events c ON c.user=v.user AND c.kind='cart' AND c.t>v.t WHERE v.kind='view' AND NOT EXISTS(SELECT 1 FROM events b WHERE b.user=c.user AND b.kind='buy' AND b.t>c.t) ORDER BY v.user;

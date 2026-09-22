@@ -1,0 +1,13 @@
+W289 — Idempotency key POST contracts
+Scenario 9/10: Key limit 16; replay 200, creation 201
+
+Handle deterministic sequential POSTs using supplied in-memory Store (not concurrency-safe; persistence/auth scope outside exercise). Require one nonblank Idempotency-Key <=16 UTF-16 units, preserve exact key. Missing/duplicate/too long ->400, no write. New key ->201 Location /submissions/ID with {id,payload}, increment ID once. Same key/payload ->200 same response data; changed payload->409 without mutation. Empty payload valid. Example k + "a" then k + "a" ->201 then200, one record.
+
+Signature: public static IResult Handle(HttpRequest request, string payload, Store store)
+Provided domain types: public sealed record Saved(int Id,string Payload); public sealed class Store {public int NextId;public Dictionary<string,Saved> Records {get;}=new(StringComparer.Ordinal);}
+
+Edit starters/W289.cs. Run node dotnet-web-300/verify.cjs --starters --id=W289 from unionboot.
+Reference: solutions/W289.cs; shared checks: tests/W289.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

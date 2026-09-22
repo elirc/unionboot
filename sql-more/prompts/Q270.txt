@@ -1,0 +1,39 @@
+Q270 — family Views projection and live query contracts, scenario 10: projection-not-security-boundary
+
+Task
+Create public_orders view exposing only id,status (not customer or amount); return those columns. This projection is not an authorization boundary in SQLite.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE orders(id INTEGER PRIMARY KEY,customer TEXT,status TEXT,amount INTEGER);INSERT INTO orders VALUES(1,'Ada','paid',10),(2,'Ada','pending',20),(3,'Bo','paid',30),(4,'Cy','cancelled',40);
+
+Concrete example
+The first result row on this seed is {"id":1,"status":"paid"}.
+
+Expected shape
+Columns: id, status. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "status": "paid"
+  },
+  {
+    "id": 2,
+    "status": "pending"
+  },
+  {
+    "id": 3,
+    "status": "paid"
+  },
+  {
+    "id": 4,
+    "status": "cancelled"
+  }
+]
+
+Submission
+Write SQL in starters/Q270.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q270
+Learner: node sql-more/verify.cjs --starters --id=Q270

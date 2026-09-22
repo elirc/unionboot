@@ -1,0 +1,81 @@
+PASS 104 Index records: keep-first
+PASS 105 Index records: keep-last
+PASS 106 Index records: reject
+PASS 107 Index records: collect
+PASS 108 inner join by identifier
+PASS 109 left join by identifier
+PASS 110 full join by identifier
+PASS 111 anti join by identifier
+PASS 112 Aggregate nested tree: sum
+PASS 113 Aggregate nested tree: count
+PASS 114 Aggregate nested tree: min
+PASS 115 Aggregate nested tree: max
+PASS 116 Nearest point: euclidean distance
+PASS 117 Nearest point: manhattan distance
+PASS 118 Nearest point: chebyshev distance
+PASS 119 Nearest point: squared distance
+PASS 120 Quantize to a step: floor
+PASS 121 Quantize to a step: ceil
+PASS 122 Quantize to a step: nearest-half-up
+PASS 123 Quantize to a step: toward-zero
+PASS 124 Configuration diff: added
+PASS 125 Configuration diff: removed
+PASS 126 Configuration diff: changed
+PASS 127 Configuration diff: unchanged
+PASS 128 Best candidate with first ties
+PASS 129 Best candidate with last ties
+PASS 130 Best candidate with all ties
+PASS 131 Best candidate with error ties
+PASS 132 Locate letters runs
+PASS 133 Locate digits runs
+PASS 134 Locate whitespace runs
+PASS 135 Locate punctuation runs
+PASS 136 Robot navigation starting north
+PASS 137 Robot navigation starting east
+PASS 138 Robot navigation starting south
+PASS 139 Robot navigation starting west
+PASS 140 Multiset intersection
+PASS 141 Multiset union
+PASS 142 Multiset subtract
+PASS 143 Multiset symmetric
+PASS 144 Bounded event buffer: drop-oldest
+PASS 145 Bounded event buffer: drop-newest
+PASS 146 Bounded event buffer: reject
+PASS 147 Bounded event buffer: grow
+PASS 148 Interval membership: closed
+PASS 149 Interval membership: open
+PASS 150 Interval membership: left-closed
+PASS 151 Interval membership: right-closed
+PASS 152 Identifier conversion: kebab
+PASS 153 Identifier conversion: snake
+PASS 154 Identifier conversion: camel
+PASS 155 Identifier conversion: pascal
+PASS 156 Positive streak: longest
+PASS 157 Positive streak: shortest
+PASS 158 Positive streak: first
+PASS 159 Positive streak: last
+PASS 160 Square matrix main sum
+PASS 161 Square matrix anti sum
+PASS 162 Square matrix above sum
+PASS 163 Square matrix below sum
+PASS 164 Tree labels in preorder
+PASS 165 Tree labels in postorder
+PASS 166 Tree labels in level-order
+PASS 167 Tree labels in leaves-only
+PASS 168 Process tagged add instructions
+PASS 169 Process tagged multiply instructions
+PASS 170 Process tagged power instructions
+PASS 171 Process tagged clamp instructions
+PASS 172 Interpolated percentile 0
+PASS 173 Interpolated percentile 25
+PASS 174 Interpolated percentile 75
+PASS 175 Interpolated percentile 100
+PASS 176 Graph classification: sources
+PASS 177 Graph classification: sinks
+PASS 178 Graph classification: isolated
+PASS 179 Graph classification: self-looped
+PASS 180 Compare text under strict normalization
+PASS 181 Compare text under ignore-case normalization
+PASS 182 Compare text under ignore-space normalization
+PASS 183 Compare text under alphanumeric normalization
+solution: 80 passed, 0 failed. TypeScript compiler gate: not applicable.

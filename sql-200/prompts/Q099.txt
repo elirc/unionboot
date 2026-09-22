@@ -1,0 +1,35 @@
+Q099 — family SQLite dates times and calendar boundaries, scenario 9: unixepoch-explicit-modifier
+
+Task
+Convert integer epoch seconds to UTC ISO timestamps using explicit unixepoch modifier; do not use auto.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE events(id INTEGER PRIMARY KEY,happened_at TEXT);
+INSERT INTO events VALUES(1,'2024-02-28 23:30:00'),(2,'2024-02-29 00:30:00'),(3,'2024-03-01 12:00:00'),(4,'2024-03-03 09:00:00'),(5,'2024-12-31 23:00:00');CREATE TABLE epochs(seconds INTEGER); INSERT INTO epochs VALUES(0),(86400),(1709164800);
+
+Concrete example
+With the exact seed above, the first result row is {"seconds":0,"utc":"1970-01-01 00:00:00"}.
+
+Expected shape
+Columns (exact aliases): seconds, utc. 3 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "seconds": 0,
+    "utc": "1970-01-01 00:00:00"
+  },
+  {
+    "seconds": 86400,
+    "utc": "1970-01-02 00:00:00"
+  },
+  {
+    "seconds": 1709164800,
+    "utc": "2024-02-29 00:00:00"
+  }
+]
+
+Submission
+Edit starters/Q099.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q099
+Reference: node sql-200/verify.cjs --id=Q099

@@ -1,0 +1,12 @@
+W297 — Binary file HTTP results
+Scenario 7/10: Download report-7.txt; UTF-8 text attachment
+
+Return an ASP.NET file result from supplied text. Null->404; empty string is a valid empty200 download. Encode UTF-8 without BOM, ContentType text/plain; charset=utf-8 and attachment download name report-7.txt. Range processing explicitly off. Example "café" ->5 bytes, not4. Tests execute actual IResult against MemoryStream, no network/filesystem.
+
+Signature: public static IResult Handle(string? text)
+
+Edit starters/W297.cs. Run node dotnet-web-300/verify.cjs --starters --id=W297 from unionboot.
+Reference: solutions/W297.cs; shared checks: tests/W297.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

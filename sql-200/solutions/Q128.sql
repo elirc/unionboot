@@ -1,0 +1,1 @@
+CREATE TABLE flags(id INTEGER PRIMARY KEY,status TEXT NOT NULL CHECK(status IN('draft','live')),enabled INTEGER NOT NULL CHECK(enabled IN(0,1))); INSERT INTO flags VALUES(1,'draft',0),(2,'live',1); SELECT id,status,enabled FROM flags ORDER BY id;

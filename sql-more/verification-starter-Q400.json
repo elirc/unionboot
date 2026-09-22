@@ -1,0 +1,17 @@
+{
+  "track": "sql-more",
+  "mode": "starter",
+  "groups": 1,
+  "passed": 0,
+  "failed": 1,
+  "results": [
+    {
+      "id": "Q400",
+      "family": "Ordered event funnels and attribution windows",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact result rows/order mismatch\n+ actual - expected\n\n+ []\n- [\n-   {\n-     user: 'A'\n-   },\n-   {\n-     user: 'C'\n-   }\n- ]\n"
+    }
+  ]
+}

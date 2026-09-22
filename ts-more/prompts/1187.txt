@@ -1,0 +1,15 @@
+1187: Flatten readonly generic layers / scenario 14
+
+Contract focus: nested readonly; generic element preservation.
+Flatten exactly one array level, preserving element order, duplicates and references. Readonly inner and outer arrays are accepted. Deeper arrays remain values, not recursively flattened. Return a fresh mutable array.
+
+This is scenario 14/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize large integers; scalar/state exercises use deterministic case seed 13. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1187.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1187.cjs. Positive strict fixtures: types/1187.positive.ts. Negative strict fixtures: types/1187.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=1187
+Reference check:
+  node ts-more/verify.cjs --id=1187
+

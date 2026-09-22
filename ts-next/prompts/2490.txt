@@ -1,0 +1,14 @@
+2490: Completion-gated immutable builders / builder-required-fields=active+tags
+
+Contract focus: phantom missing-key sets; conditional method availability.
+
+Construct a persistent builder requiring active, tags. Each set removes exactly one missing key; already-set fields cannot be set again. build is visible only after all required fields are supplied. Each branch owns its snapshot, and build returns a fresh record.
+
+Semantic variation 12/15: builder-required-fields=active+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2490.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2490.cjs. Type contracts: types/2490.positive.ts and types/2490.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2490
+Reference: node ts-next/verify.cjs --id=2490

@@ -1,0 +1,18 @@
+Scroll anchor prepend compensation / scenario 20 — Boundary 10; compensate prepended row heights
+
+TASK
+Render viewport data-testid=viewport with initial five rows R1..R5. Every Prepend adds 10 distinct new rows at top, each fixed 10px: first batch N1..N10, next N11..N20, preserving existing row identities and DOM nodes. In useLayoutEffect increase viewport.scrollTop by 100 after prepend to preserve previously visible content. Output Rows count. Prepend may be used repeatedly; compensation must occur exactly once per prepend and not on unrelated render. Toggle marker only changes Marker yes/no, never scroll position. Tests inject scrollTop; no actual layout measurements.
+
+EXAMPLE
+scrollTop=25; Prepend => 125.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3418.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3418
+node react-next/verify.cjs --starters --id=3418

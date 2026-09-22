@@ -1,0 +1,1 @@
+Three standalone JavaScript capstones, IDs 3439–3441. Read prompts, edit starters only, then node verify.cjs --starters --id=3439. Omit --starters to grade references. Blank starters intentionally fail. Tests cover stated cases, not all possible inputs.

@@ -1,0 +1,18 @@
+Wildcard topic bus / scenario 1 — order=forward; live=false; errors=collect
+
+TASK
+Export solve() returning {subscribe(pattern,callback,priority=0),emit(topic,value)}. Dot topics; '*' matches one segment, terminal '**' matches zero or more. Subscribe returns idempotent unsubscribe. Emit snapshots matching listeners in forward order (priority descending then registration). Snapshot listeners still fire after unsubscribe during dispatch. New listeners never join current dispatch. Errors collect message strings and continue. Return {delivered,errors}, including throwing callbacks in delivered. Fresh instance isolation.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1819.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1819
+node js-more/verify.cjs --starters --id=1819
+
+POLICIES
+order=forward; live=false; errors=collect
+Semantic key: {"errors":"collect","live":false,"order":"forward"}

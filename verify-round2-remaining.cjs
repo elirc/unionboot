@@ -1,0 +1,16 @@
+"use strict";
+const assert = require("node:assert/strict");
+const solutions = require("./solutions/round2-remaining.cjs");
+assert.deepEqual(solutions[34]([2, 7, 11, 15], 9), [0, 1]);
+assert.deepEqual(solutions[34]([3, 3], 6), [0, 1]);
+const intervals = [[8, 10], [1, 3], [2, 6], [10, 10]];
+const beforeIntervals = JSON.stringify(intervals);
+const merged = solutions[72](intervals);
+assert.deepEqual(merged, [[1, 6], [8, 10]]);
+assert.equal(JSON.stringify(intervals), beforeIntervals);
+assert.ok(merged.every((pair) => !intervals.includes(pair)));
+assert.deepEqual(solutions[72]([[1, 8], [2, 3], [8, 9]]), [[1, 9]]);
+assert.deepEqual(solutions[72]([]), []);
+assert.deepEqual(solutions[72]([[4, 4]]), [[4, 4]]);
+assert.deepEqual(solutions[72]([[3, 7], [1, 2]]), [[1, 2], [3, 7]]);
+console.log("Reference checks passed for exercises 34 and 72.");

@@ -1,0 +1,18 @@
+Persistent versioned stacks / scenario 8 — view=peek; empty=error
+
+TASK
+Input operations referencing existing version number. Version0 empty; push {version,value} appends a version, pop {version} appends tail version; read {version} appends query output. Versions never change; branch freely. Empty pop throws RangeError("Empty stack"). Read view peek: top/bottom order array, size number, peek value or null, last-two top two. Return {versions:count,queries}. Invalid version RangeError('Unknown version'). Values are non-null JSON primitives. Implement immutable linked nodes with structural sharing.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1856.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1856
+node js-more/verify.cjs --starters --id=1856
+
+POLICIES
+view=peek; empty=error
+Semantic key: {"empty":"error","view":"peek"}

@@ -1,0 +1,35 @@
+Q316 — family Financial ledgers balancing and allocation, scenario 6: reversal-swap-sides
+
+Task
+Reverse transaction2 as tx4 by swapping debit and credit; return account balances including original unbalanced tx3.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE ledger(tx INTEGER,line INTEGER,account TEXT,debit INTEGER,credit INTEGER,PRIMARY KEY(tx,line));INSERT INTO ledger VALUES(1,1,'cash',100,0),(1,2,'income',0,100),(2,1,'expense',30,0),(2,2,'cash',0,30),(3,1,'cash',20,0),(3,2,'income',0,15);
+
+Concrete example
+The first result row on this seed is {"account":"cash","balance":120}.
+
+Expected shape
+Columns: account, balance. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "account": "cash",
+    "balance": 120
+  },
+  {
+    "account": "expense",
+    "balance": 0
+  },
+  {
+    "account": "income",
+    "balance": -115
+  }
+]
+
+Submission
+Write SQL in starters/Q316.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q316
+Learner: node sql-more/verify.cjs --starters --id=Q316

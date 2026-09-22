@@ -1,0 +1,46 @@
+Q130 — family SQLite schema constraints and integrity, scenario 10: nullable-check-three-valued-acceptance
+
+Task
+Create optional_scores(id INTEGER PRIMARY KEY,score INTEGER CHECK(score>=0)) without NOT NULL. SQLite CHECK permits NULL because only false violates it. Insert (1,NULL),(2,0); select rows. Negative must fail; NULL must remain allowed.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE departments(id INTEGER PRIMARY KEY); INSERT INTO departments VALUES(10),(20);
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"score":null}.
+
+Expected shape
+Columns (exact aliases): id, score. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "score": null
+  },
+  {
+    "id": 2,
+    "score": 0
+  }
+]
+
+Integrity checks after the result assertion (these exercise constraints/state, not helper solution SQL):
+[
+  {
+    "sql": "INSERT INTO optional_scores VALUES(3,-1)",
+    "reject": "CHECK"
+  },
+  {
+    "sql": "INSERT INTO optional_scores VALUES(3,NULL); SELECT score FROM optional_scores WHERE id=3",
+    "expected": [
+      {
+        "score": null
+      }
+    ]
+  }
+]
+
+Submission
+Edit starters/Q130.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q130
+Reference: node sql-200/verify.cjs --id=Q130

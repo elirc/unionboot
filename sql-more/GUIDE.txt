@@ -1,0 +1,47 @@
+SQL-more: Q201..Q400, 200 scenarios in 20 families
+
+Node v22.16.0 and SQLite 3.49.1 verified, including JSON functions and FTS5. No packages, sqlite3 CLI, network, or services. SQL is executed for real in a fresh DatabaseSync(':memory:') with foreign_keys=ON for each exercise.
+
+Commands from unionboot:
+ node sql-more/verify.cjs --inventory
+ node sql-more/verify.cjs --id=Q201
+ node sql-more/verify.cjs --id=201
+ node sql-more/verify.cjs --starters --id=Q201
+ node sql-more/verify.cjs
+ node sql-more/verify.cjs --starters
+
+Inventory never opens a database. Exit 0=all selected pass; 1=grading failure including SQL errors; 2=CLI/manifest/inventory parse error. Numeric IDs are 201..400 (not ordinal1..200). Reports: verification-solution.json, verification-starter.json and per-ID suffixes such as verification-solution-Q201.json. Results include phase/errorType/error; all blank TODO starters must fail exact nonempty expected rows.
+
+Each prompt has complete seed, policy, example, exact output aliases and rows. Tests grade the actual final query result; mutation/constraint exercises may also run integrity probes. These deterministic educational tests are not anti-hardcoding security sandboxes or proof for arbitrary inputs. SQL may access local SQLite capabilities; only run trusted learner code.
+
+Tokenizer supports simple semicolon-separated queries/DDL/DML, SQL quotes and comments. CREATE TRIGGER BEGIN...END bodies and sqlite shell dot commands are outside scope. Only final statement returns graded rows.
+EQP text targets SQLite 3.49.1; optimizer details can change on another Node/SQLite version. Numeric node IDs/estimates ignored; ordered detail strings graded. FTS5 uses default unicode61 tokenizer, no custom extension. Generated columns/index metadata and JSON operators are SQLite-specific. Native lower/NOCASE are ASCII-oriented. No true boolean storage type; flags are integers/NULL.
+Financial exercises use integer units/cents and explicit rounding, not accounting advice. Graph paths enumerate tiny finite simple paths, not scalable shortest-path algorithms. Queue/transaction tasks use one connection and verify state, not contention or distributed worker safety. Views are projections, not authorization boundaries. Closure maintenance examples assume the seeded acyclic tree; no automatic cycle enforcement.
+
+Families
+1. JSON document projection and type policy (Q201..Q210)
+2. JSON array expansion and nested traversal (Q211..Q220)
+3. JSON mutation patch and serialization (Q221..Q230)
+4. Generated columns and derived schema invariants (Q231..Q240)
+5. Partial expression and composite index contracts (Q241..Q250)
+6. FTS5 text retrieval and token policies (Q251..Q260)
+7. Views projection and live query contracts (Q261..Q270)
+8. Temporal intervals and endpoint semantics (Q271..Q280)
+9. Effective dated history and as of selection (Q281..Q290)
+10. Relational division and requirement coverage (Q291..Q300)
+11. Reconciliation null safe comparison and source authority (Q301..Q310)
+12. Financial ledgers balancing and allocation (Q311..Q320)
+13. Retention cohorts and churn definitions (Q321..Q330)
+14. Composite tenant keys and relationship integrity (Q331..Q340)
+15. Schema migrations backfills and version gates (Q341..Q350)
+16. Directed graph paths reachability and dependency policy (Q351..Q360)
+17. Inventory valuation and stock flow policies (Q361..Q370)
+18. Queue jobs state machines and idempotency (Q371..Q380)
+19. Closure table hierarchies and inherited policy (Q381..Q390)
+20. Ordered event funnels and attribution windows (Q391..Q400)
+
+Authoring
+../build-sql-more.cjs preflights all 200 reference definitions against manually specified expected rows before emitting, enforces unique family|semanticKey, and refuses existing sql-more directory. It reads the reviewed SQL200 CLI template at authoring time only; generated sql-more is runtime-independent. Never delete learner work to regenerate. Fix generator-first and surgically replace affected generated files only after comparing old contents.
+
+Verification responsibility
+Author preflight checks all references while building. Focused emitted-file smoke checks accompany handoff; coordinator runs complete reference and blank suites as the integrated gate. Do not confuse preflight evidence with those full-suite reports.

@@ -1,0 +1,26 @@
+Q221 — family JSON mutation patch and serialization, scenario 1: set-replace-and-add
+
+Task
+Return JSON with mode replaced by live and new flag set to integer 1; leave other fields intact.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE configs(id INTEGER PRIMARY KEY,body TEXT);INSERT INTO configs VALUES(1,'{"mode":"draft","n":2,"tags":["a"],"nested":{"x":1,"y":2}}');
+
+Concrete example
+The first result row on this seed is {"body":"{\"mode\":\"live\",\"n\":2,\"tags\":[\"a\"],\"nested\":{\"x\":1,\"y\":2},\"flag\":1}"}.
+
+Expected shape
+Columns: body. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "body": "{\"mode\":\"live\",\"n\":2,\"tags\":[\"a\"],\"nested\":{\"x\":1,\"y\":2},\"flag\":1}"
+  }
+]
+
+Submission
+Write SQL in starters/Q221.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q221
+Learner: node sql-more/verify.cjs --starters --id=Q221

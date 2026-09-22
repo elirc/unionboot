@@ -1,0 +1,1 @@
+CREATE TABLE membership(user_id INTEGER,team_id INTEGER,role TEXT NOT NULL,PRIMARY KEY(user_id,team_id)) WITHOUT ROWID; INSERT INTO membership VALUES(1,10,'reader'),(1,20,'writer'); SELECT user_id,team_id,role FROM membership ORDER BY user_id,team_id;

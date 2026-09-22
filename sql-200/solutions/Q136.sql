@@ -1,0 +1,1 @@
+INSERT INTO inventory VALUES('A',7,12,3) ON CONFLICT(sku) DO UPDATE SET qty=excluded.qty,price=excluded.price,version=excluded.version WHERE excluded.version>inventory.version; SELECT sku,qty,price,version FROM inventory ORDER BY sku;

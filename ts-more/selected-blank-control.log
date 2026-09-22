@@ -1,0 +1,13 @@
+TypeScript compiler gate: PASSED (5.9.3; 1 starter APIs; positive + negative strict fixtures).
+starter: 0 passed, 1 failed. TypeScript compiler gate: passed before runtime.
+FAIL 784 Error: TODO exercise 784
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-more\.verify\run-JMCX5K\build\starters\784.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-more\tests\784.cjs:4:54)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-more\verify.cjs:43:48)
+    at Object.<anonymous> (C:\Users\Owner\Desktop\unionboot\ts-more\verify.cjs:48:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)

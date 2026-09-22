@@ -1,0 +1,1 @@
+SELECT c.name,(SELECT COUNT(*) FROM required r WHERE EXISTS(SELECT 1 FROM skills s WHERE s.name=c.name AND s.skill=r.skill AND s.level>=r.min_level)) AS met,(SELECT COUNT(*) FROM required) AS required FROM candidates c ORDER BY c.name;

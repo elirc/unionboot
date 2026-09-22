@@ -1,0 +1,1 @@
+CREATE TABLE customer_names(customer_id INTEGER PRIMARY KEY REFERENCES customers(id),given_name TEXT NOT NULL);INSERT INTO customer_names SELECT id,CASE WHEN instr(full_name,' ')=0 THEN full_name ELSE substr(full_name,1,instr(full_name,' ')-1) END FROM customers;SELECT customer_id,given_name FROM customer_names ORDER BY customer_id;

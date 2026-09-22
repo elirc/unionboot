@@ -1,0 +1,38 @@
+Q045 — family Ranking and top N per group, scenario 5: top-one-all-tied-winners
+
+Task
+Return all players tied for the highest score of each team; order by team,id.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE scores(id INTEGER PRIMARY KEY,team TEXT,name TEXT,score INTEGER);
+INSERT INTO scores VALUES(1,'A','Ada',100),(2,'A','Bo',90),(3,'A','Cy',90),(4,'A','Dee',70),(5,'B','Eli',80),(6,'B','Flo',80),(7,'B','Gus',60);
+
+Concrete example
+With the exact seed above, the first result row is {"team":"A","name":"Ada","score":100}.
+
+Expected shape
+Columns (exact aliases): team, name, score. 3 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "team": "A",
+    "name": "Ada",
+    "score": 100
+  },
+  {
+    "team": "B",
+    "name": "Eli",
+    "score": 80
+  },
+  {
+    "team": "B",
+    "name": "Flo",
+    "score": 80
+  }
+]
+
+Submission
+Edit starters/Q045.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q045
+Reference: node sql-200/verify.cjs --id=Q045

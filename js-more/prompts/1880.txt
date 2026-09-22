@@ -1,0 +1,18 @@
+Sudoku candidate validation / scenario 2 — box=1; diagonal=true
+
+TASK
+Input {board,row,col}. Board dimension 1, boxes 1x1, cells integer0..1; 0 blank. Reject wrong shape/cells with RangeError. Rows, columns, boxes and both main diagonals cannot duplicate nonzero digits. Return {valid:false,candidates:[]} on conflict. Otherwise candidates are ascending legal digits for chosen blank cell; occupied cell returns []. Coordinates checked on valid board only.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1880.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1880
+node js-more/verify.cjs --starters --id=1880
+
+POLICIES
+box=1; diagonal=true
+Semantic key: {"box":1,"diagonal":true}

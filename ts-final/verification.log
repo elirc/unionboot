@@ -1,0 +1,167 @@
+TypeScript compiler gate: PASSED (5.9.3; 165 solution APIs; positive + negative strict fixtures).
+PASS 1204 Variadic call forwarding / scenario 01
+PASS 1205 Variadic call forwarding / scenario 02
+PASS 1206 Variadic call forwarding / scenario 03
+PASS 1207 Variadic call forwarding / scenario 04
+PASS 1208 Variadic call forwarding / scenario 05
+PASS 1209 Variadic call forwarding / scenario 06
+PASS 1210 Variadic call forwarding / scenario 07
+PASS 1211 Variadic call forwarding / scenario 08
+PASS 1212 Variadic call forwarding / scenario 09
+PASS 1213 Variadic call forwarding / scenario 10
+PASS 1214 Variadic call forwarding / scenario 11
+PASS 1215 Variadic call forwarding / scenario 12
+PASS 1216 Variadic call forwarding / scenario 13
+PASS 1217 Variadic call forwarding / scenario 14
+PASS 1218 Variadic call forwarding / scenario 15
+PASS 1219 Typed asynchronous Result capture / scenario 01
+PASS 1220 Typed asynchronous Result capture / scenario 02
+PASS 1221 Typed asynchronous Result capture / scenario 03
+PASS 1222 Typed asynchronous Result capture / scenario 04
+PASS 1223 Typed asynchronous Result capture / scenario 05
+PASS 1224 Typed asynchronous Result capture / scenario 06
+PASS 1225 Typed asynchronous Result capture / scenario 07
+PASS 1226 Typed asynchronous Result capture / scenario 08
+PASS 1227 Typed asynchronous Result capture / scenario 09
+PASS 1228 Typed asynchronous Result capture / scenario 10
+PASS 1229 Typed asynchronous Result capture / scenario 11
+PASS 1230 Typed asynchronous Result capture / scenario 12
+PASS 1231 Typed asynchronous Result capture / scenario 13
+PASS 1232 Typed asynchronous Result capture / scenario 14
+PASS 1233 Typed asynchronous Result capture / scenario 15
+PASS 1234 Sequential typed async mapping / scenario 01
+PASS 1235 Sequential typed async mapping / scenario 02
+PASS 1236 Sequential typed async mapping / scenario 03
+PASS 1237 Sequential typed async mapping / scenario 04
+PASS 1238 Sequential typed async mapping / scenario 05
+PASS 1239 Sequential typed async mapping / scenario 06
+PASS 1240 Sequential typed async mapping / scenario 07
+PASS 1241 Sequential typed async mapping / scenario 08
+PASS 1242 Sequential typed async mapping / scenario 09
+PASS 1243 Sequential typed async mapping / scenario 10
+PASS 1244 Sequential typed async mapping / scenario 11
+PASS 1245 Sequential typed async mapping / scenario 12
+PASS 1246 Sequential typed async mapping / scenario 13
+PASS 1247 Sequential typed async mapping / scenario 14
+PASS 1248 Sequential typed async mapping / scenario 15
+PASS 1249 Exact tuple Promise resolution / scenario 01
+PASS 1250 Exact tuple Promise resolution / scenario 02
+PASS 1251 Exact tuple Promise resolution / scenario 03
+PASS 1252 Exact tuple Promise resolution / scenario 04
+PASS 1253 Exact tuple Promise resolution / scenario 05
+PASS 1254 Exact tuple Promise resolution / scenario 06
+PASS 1255 Exact tuple Promise resolution / scenario 07
+PASS 1256 Exact tuple Promise resolution / scenario 08
+PASS 1257 Exact tuple Promise resolution / scenario 09
+PASS 1258 Exact tuple Promise resolution / scenario 10
+PASS 1259 Exact tuple Promise resolution / scenario 11
+PASS 1260 Exact tuple Promise resolution / scenario 12
+PASS 1261 Exact tuple Promise resolution / scenario 13
+PASS 1262 Exact tuple Promise resolution / scenario 14
+PASS 1263 Exact tuple Promise resolution / scenario 15
+PASS 1264 Key-correlated event publisher / scenario 01
+PASS 1265 Key-correlated event publisher / scenario 02
+PASS 1266 Key-correlated event publisher / scenario 03
+PASS 1267 Key-correlated event publisher / scenario 04
+PASS 1268 Key-correlated event publisher / scenario 05
+PASS 1269 Key-correlated event publisher / scenario 06
+PASS 1270 Key-correlated event publisher / scenario 07
+PASS 1271 Key-correlated event publisher / scenario 08
+PASS 1272 Key-correlated event publisher / scenario 09
+PASS 1273 Key-correlated event publisher / scenario 10
+PASS 1274 Key-correlated event publisher / scenario 11
+PASS 1275 Key-correlated event publisher / scenario 12
+PASS 1276 Key-correlated event publisher / scenario 13
+PASS 1277 Key-correlated event publisher / scenario 14
+PASS 1278 Key-correlated event publisher / scenario 15
+PASS 1279 Discriminant-selected union extraction / scenario 01
+PASS 1280 Discriminant-selected union extraction / scenario 02
+PASS 1281 Discriminant-selected union extraction / scenario 03
+PASS 1282 Discriminant-selected union extraction / scenario 04
+PASS 1283 Discriminant-selected union extraction / scenario 05
+PASS 1284 Discriminant-selected union extraction / scenario 06
+PASS 1285 Discriminant-selected union extraction / scenario 07
+PASS 1286 Discriminant-selected union extraction / scenario 08
+PASS 1287 Discriminant-selected union extraction / scenario 09
+PASS 1288 Discriminant-selected union extraction / scenario 10
+PASS 1289 Discriminant-selected union extraction / scenario 11
+PASS 1290 Discriminant-selected union extraction / scenario 12
+PASS 1291 Discriminant-selected union extraction / scenario 13
+PASS 1292 Discriminant-selected union extraction / scenario 14
+PASS 1293 Discriminant-selected union extraction / scenario 15
+PASS 1294 Result-producing flatMap / scenario 01
+PASS 1295 Result-producing flatMap / scenario 02
+PASS 1296 Result-producing flatMap / scenario 03
+PASS 1297 Result-producing flatMap / scenario 04
+PASS 1298 Result-producing flatMap / scenario 05
+PASS 1299 Result-producing flatMap / scenario 06
+PASS 1300 Result-producing flatMap / scenario 07
+PASS 1301 Result-producing flatMap / scenario 08
+PASS 1302 Result-producing flatMap / scenario 09
+PASS 1303 Result-producing flatMap / scenario 10
+PASS 1304 Result-producing flatMap / scenario 11
+PASS 1305 Result-producing flatMap / scenario 12
+PASS 1306 Result-producing flatMap / scenario 13
+PASS 1307 Result-producing flatMap / scenario 14
+PASS 1308 Result-producing flatMap / scenario 15
+PASS 1309 Branded identifier validation / scenario 01
+PASS 1310 Branded identifier validation / scenario 02
+PASS 1311 Branded identifier validation / scenario 03
+PASS 1312 Branded identifier validation / scenario 04
+PASS 1313 Branded identifier validation / scenario 05
+PASS 1314 Branded identifier validation / scenario 06
+PASS 1315 Branded identifier validation / scenario 07
+PASS 1316 Branded identifier validation / scenario 08
+PASS 1317 Branded identifier validation / scenario 09
+PASS 1318 Branded identifier validation / scenario 10
+PASS 1319 Branded identifier validation / scenario 11
+PASS 1320 Branded identifier validation / scenario 12
+PASS 1321 Branded identifier validation / scenario 13
+PASS 1322 Branded identifier validation / scenario 14
+PASS 1323 Branded identifier validation / scenario 15
+PASS 1324 Typed leaf path lookup / scenario 01
+PASS 1325 Typed leaf path lookup / scenario 02
+PASS 1326 Typed leaf path lookup / scenario 03
+PASS 1327 Typed leaf path lookup / scenario 04
+PASS 1328 Typed leaf path lookup / scenario 05
+PASS 1329 Typed leaf path lookup / scenario 06
+PASS 1330 Typed leaf path lookup / scenario 07
+PASS 1331 Typed leaf path lookup / scenario 08
+PASS 1332 Typed leaf path lookup / scenario 09
+PASS 1333 Typed leaf path lookup / scenario 10
+PASS 1334 Typed leaf path lookup / scenario 11
+PASS 1335 Typed leaf path lookup / scenario 12
+PASS 1336 Typed leaf path lookup / scenario 13
+PASS 1337 Typed leaf path lookup / scenario 14
+PASS 1338 Typed leaf path lookup / scenario 15
+PASS 1339 Template-literal field events / scenario 01
+PASS 1340 Template-literal field events / scenario 02
+PASS 1341 Template-literal field events / scenario 03
+PASS 1342 Template-literal field events / scenario 04
+PASS 1343 Template-literal field events / scenario 05
+PASS 1344 Template-literal field events / scenario 06
+PASS 1345 Template-literal field events / scenario 07
+PASS 1346 Template-literal field events / scenario 08
+PASS 1347 Template-literal field events / scenario 09
+PASS 1348 Template-literal field events / scenario 10
+PASS 1349 Template-literal field events / scenario 11
+PASS 1350 Template-literal field events / scenario 12
+PASS 1351 Template-literal field events / scenario 13
+PASS 1352 Template-literal field events / scenario 14
+PASS 1353 Template-literal field events / scenario 15
+PASS 1354 Typed function memoization / scenario 01
+PASS 1355 Typed function memoization / scenario 02
+PASS 1356 Typed function memoization / scenario 03
+PASS 1357 Typed function memoization / scenario 04
+PASS 1358 Typed function memoization / scenario 05
+PASS 1359 Typed function memoization / scenario 06
+PASS 1360 Typed function memoization / scenario 07
+PASS 1361 Typed function memoization / scenario 08
+PASS 1362 Typed function memoization / scenario 09
+PASS 1363 Typed function memoization / scenario 10
+PASS 1364 Typed function memoization / scenario 11
+PASS 1365 Typed function memoization / scenario 12
+PASS 1366 Typed function memoization / scenario 13
+PASS 1367 Typed function memoization / scenario 14
+PASS 1368 Typed function memoization / scenario 15
+solution: 165 passed, 0 failed. TypeScript compiler gate: passed before runtime.

@@ -1,0 +1,14 @@
+2409: Exclusive option-set encodings / exclusive-options=count+active
+
+Contract focus: never forbidden properties; XOR-shaped unions.
+
+Accept exactly one of count, active options. Forbid all other option keys using optional never, including explicit undefined. Encode as key=JSON.stringify(value). From JavaScript, reject zero or multiple recognized options; inputs contain only declared keys.
+
+Semantic variation 6/15: exclusive-options=count+active. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2409.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2409.cjs. Type contracts: types/2409.positive.ts and types/2409.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2409
+Reference: node ts-next/verify.cjs --id=2409

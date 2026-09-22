@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-300",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W241",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 10,
+  "results": [
+    {
+      "id": "W241",
+      "family": "Explicit content negotiation handlers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

@@ -1,0 +1,18 @@
+Injected interval budget / scenario 9 — Tick 4, cap 13; auto-start
+
+TASK
+Injected scheduler provides every(callback) returning cancel function. Start registers one repeating callback; start on mount. Each tick increases Count by 4, clamped to 13. At cap stop subscription automatically and display done in State. Start/Stop disabled appropriately. Stop pauses, Start resumes. Reset sets Count=0 and stops even auto-start variants. Clean up exact subscription on unmount; a callback retained by test after cancellation must not update state. No real timers.
+
+EXAMPLE
+Two ticks => Count=8.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1667.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{scheduler}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1667
+node react-300/verify.cjs --starters --id=1667

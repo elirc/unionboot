@@ -1,0 +1,32 @@
+Q358 — family Directed graph paths reachability and dependency policy, scenario 8: mutual-reachability-with-b
+
+Task
+Find nodes mutually reachable with B, including B itself; this is its strongly-connected component.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE edges(src TEXT,dst TEXT,cost INTEGER,PRIMARY KEY(src,dst));INSERT INTO edges VALUES('A','B',2),('A','C',5),('B','C',1),('B','D',4),('C','D',1),('D','B',1);CREATE TABLE nodes(name TEXT PRIMARY KEY);INSERT INTO nodes VALUES('A'),('B'),('C'),('D'),('E');
+
+Concrete example
+The first result row on this seed is {"node":"B"}.
+
+Expected shape
+Columns: node. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "node": "B"
+  },
+  {
+    "node": "C"
+  },
+  {
+    "node": "D"
+  }
+]
+
+Submission
+Write SQL in starters/Q358.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q358
+Learner: node sql-more/verify.cjs --starters --id=Q358

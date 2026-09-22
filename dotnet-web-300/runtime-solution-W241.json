@@ -1,0 +1,16 @@
+{
+  "phase": "tests",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "assertions": 10,
+  "results": [
+    {
+      "id": "W241",
+      "family": "Explicit content negotiation handlers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    }
+  ]
+}

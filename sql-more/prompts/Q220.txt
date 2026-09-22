@@ -1,0 +1,33 @@
+Q220 — family JSON array expansion and nested traversal, scenario 10: frequency-versus-document-count
+
+Task
+For every tag report total occurrences and distinct baskets containing it.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE baskets(id INTEGER PRIMARY KEY,body TEXT);INSERT INTO baskets VALUES(1,'{"tags":["red","blue","red"],"items":[{"sku":"A","qty":2},{"sku":"B","qty":1}]}'),(2,'{"tags":[],"items":[]}'),(3,'{"tags":["blue"],"items":[{"sku":"A","qty":3}]}');
+
+Concrete example
+The first result row on this seed is {"tag":"blue","occurrences":2,"baskets":2}.
+
+Expected shape
+Columns: tag, occurrences, baskets. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "tag": "blue",
+    "occurrences": 2,
+    "baskets": 2
+  },
+  {
+    "tag": "red",
+    "occurrences": 2,
+    "baskets": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q220.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q220
+Learner: node sql-more/verify.cjs --starters --id=Q220

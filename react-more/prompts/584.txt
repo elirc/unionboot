@@ -1,0 +1,11 @@
+Bounded quantity editor / scenario 6 — clamp overshoot; -3..5; step 2; initial -1
+
+Start at -1; bounds -3 through 5, step 2. Add/Remove clamp overshoots and disable the button at its corresponding bound. Reset restores the initial value. Show one output.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=584
+Run your starter: node react-more/verify.cjs --starters --id=584

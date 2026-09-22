@@ -1,0 +1,187 @@
+{
+  "generatedAt": "2026-09-17T19:40:37.730Z",
+  "exerciseCount": 3384,
+  "webExerciseCount": 1718,
+  "csharpExerciseCount": 1166,
+  "dotnetWebExerciseCount": 300,
+  "sqlExerciseCount": 200,
+  "counts": {
+    "js": 253,
+    "ts": 750,
+    "react": 715,
+    "csharp": 1166,
+    "dotnetWeb": 300,
+    "sql": 200
+  },
+  "referenceChecks": 18,
+  "negativeControls": 15,
+  "skippedControls": [],
+  "results": [
+    {
+      "file": "verify-original.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "verify-39-50.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "verify-missing.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "js/batch-084-103/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "js-rest/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "ts/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "react/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "mixed-data/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "mixed-react/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "react-more/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "ts-more/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "ts-final/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "react-junior/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "react-300/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "verify-csharp.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "verify-csharp-more.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "dotnet-web-300/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "sql-200/verify.cjs",
+      "ok": true,
+      "exit": 0
+    },
+    {
+      "file": "js/batch-084-103 starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "js-rest starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "ts starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "react starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "mixed-data starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "mixed-react starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "react-more starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "ts-more starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "ts-final starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "react-junior starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "react-300 starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "CSHARP-583.cs starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "CSHARP-MORE-583.cs starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "dotnet-web-300 starter negative control",
+      "ok": true,
+      "exit": 1
+    },
+    {
+      "file": "sql-200 starter negative control",
+      "ok": true,
+      "exit": 1
+    }
+  ],
+  "passed": true
+}

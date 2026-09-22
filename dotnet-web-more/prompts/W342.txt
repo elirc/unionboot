@@ -1,0 +1,8 @@
+W342 | IFormFile in-memory binding
+Scenario 2: UTF8 upload cap 3 bytes
+Semantic key: utf8-upload-cap-3-bytes
+
+Bind one supplied IFormFile. Null/empty ->400. Copy to MemoryStream, enforce 3 actual bytes (not characters) ->413 above the cap. Otherwise 200 {size,text}, UTF-8 decoded. All files are in memory.
+
+Signature: public static async Task<IResult> Handle(IFormFile? file)
+Implement starters/W342.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

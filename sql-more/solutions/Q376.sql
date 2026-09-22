@@ -1,0 +1,1 @@
+CREATE TABLE results(job_id INTEGER PRIMARY KEY,output TEXT);INSERT INTO results VALUES(3,'ok') ON CONFLICT(job_id) DO NOTHING;INSERT INTO results VALUES(3,'ok') ON CONFLICT(job_id) DO NOTHING;SELECT job_id,output FROM results;

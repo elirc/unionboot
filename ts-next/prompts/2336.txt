@@ -1,0 +1,14 @@
+2336: Key-value entry union serialization / entry-union-fields=tags
+
+Contract focus: indexed mapped unions; entry tuple correlations.
+
+Serialize the declared own enumerable string fields in Object.keys order into fresh [key,value] pairs. The return element type is a union of correlated tuples, not a cross-product of keys and values. Input contains exactly its declared own fields. Preserve array value references.
+
+Semantic variation 8/15: entry-union-fields=tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2336.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2336.cjs. Type contracts: types/2336.positive.ts and types/2336.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2336
+Reference: node ts-next/verify.cjs --id=2336

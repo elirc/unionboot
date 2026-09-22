@@ -1,0 +1,18 @@
+Segment-tree extrema / scenario 9 — extreme=min; output=value
+
+TASK
+Input {values,ops}. Point set {index,value}; query {start,end} over half-open range. Segment tree finds min; return value. Return array of query results, null for empty range. Invalid range/index RangeError. Keep input immutable; use O(log n) point updates/queries.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1927.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1927
+node js-more/verify.cjs --starters --id=1927
+
+POLICIES
+extreme=min; output=value
+Semantic key: {"extreme":"min","output":"value"}

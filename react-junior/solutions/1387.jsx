@@ -1,0 +1,6 @@
+// 1387 Paginated people table [CRUD]
+// Props people is {id,name,role}. 3 per page, page 1-based starting at 1, page number in a Page output. Prev/Next disabled at boundaries; a Jump to last button shows the final page. When people changes via rerender, clamp the page into the valid range instead of showing an empty page. Table with column headers Name, Role and accessible table semantics. No state duplication of props.
+// Run: node react-junior/verify.cjs --id=1387 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({people=[]}){const [page,setPage]=useState(1);const pages=Math.max(1,Math.ceil(people.length/3));const current=Math.min(page,pages);const slice=people.slice((current-1)*3,current*3);
+return <section><table><thead><tr><th>Name</th><th>Role</th></tr></thead><tbody>{slice.map(x=><tr key={x.id}><td>{x.name}</td><td>{x.role}</td></tr>)}</tbody></table><button disabled={current===1} onClick={()=>setPage(current-1)}>Prev</button><output aria-label="Page">{current}</output><button disabled={current===pages} onClick={()=>setPage(current+1)}>Next</button><button onClick={()=>setPage(pages)}>Jump to last</button></section>;}

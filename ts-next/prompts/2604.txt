@@ -1,0 +1,14 @@
+2604: Index-tagged promise races / race-participants=6
+
+Contract focus: mapped tuple unions; Promise combinator attribution.
+
+Race exactly 6 typed promise-like participants. Resolve to an index-tagged union that preserves the winning position's value type. Adopt the first settled participant, propagating rejection values unchanged. Do not cancel other promises.
+
+Semantic variation 6/15: race-participants=6. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2604.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2604.cjs. Type contracts: types/2604.positive.ts and types/2604.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2604
+Reference: node ts-next/verify.cjs --id=2604

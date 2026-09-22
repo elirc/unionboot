@@ -1,0 +1,8 @@
+W330 | Custom IResult implementations
+Scenario 10: JSON result executor status 503
+Semantic key: json-result-executor-status-503
+
+Implement the execution method invoked by the supplied custom IResult adapter: status 503, JSON UTF-8 content type, X-Result=render-503, serialize {payload}. Preserve and JSON-escape the supplied text. Write on the supplied context; no second context.
+
+Signature: public static async Task ExecuteAsync(HttpContext context,string payload)
+Implement starters/W330.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

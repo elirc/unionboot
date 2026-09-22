@@ -1,0 +1,18 @@
+Staged transaction ledger / scenario 1 — Reject overdraft
+
+TASK
+Amount text field accepts nonzero finite integer adjustments keeping balance in 0..20. Initial Balance=10. Note is optional. Stage disabled when invalid, also guard submit. Stage hides form and shows Confirm/Cancel; Pending output is adjustment or none. Confirm commits once, clears drafts; Cancel discards pending but keeps drafts. Reset restores balance and clears drafts. Balance output never changes merely by staging.
+
+EXAMPLE
+Stage 10, then Cancel: Balance stays 10, Amount stays 10.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1539.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1539
+node react-300/verify.cjs --starters --id=1539

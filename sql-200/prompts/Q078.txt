@@ -1,0 +1,44 @@
+Q078 — family Set operations and membership policies, scenario 8: union-all-source-tagged
+
+Task
+Return distinct known name/source pairs (deduplicate inside each cohort), ordered by name,source.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE spring(name TEXT); CREATE TABLE autumn(name TEXT);
+INSERT INTO spring VALUES('Ada'),('Bo'),('Bo'),('Cy'),(NULL);
+INSERT INTO autumn VALUES('Bo'),('Dee'),(NULL),(NULL);
+
+Concrete example
+With the exact seed above, the first result row is {"name":"Ada","source":"spring"}.
+
+Expected shape
+Columns (exact aliases): name, source. 5 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "name": "Ada",
+    "source": "spring"
+  },
+  {
+    "name": "Bo",
+    "source": "autumn"
+  },
+  {
+    "name": "Bo",
+    "source": "spring"
+  },
+  {
+    "name": "Cy",
+    "source": "spring"
+  },
+  {
+    "name": "Dee",
+    "source": "autumn"
+  }
+]
+
+Submission
+Edit starters/Q078.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q078
+Reference: node sql-200/verify.cjs --id=Q078

@@ -1,0 +1,12 @@
+W017 — Creation and Location contracts
+Scenario 7/10: teams; trimmed title length 1..18
+
+Implement POST creation response construction (persistence is outside scope). Trim title; reject null/empty or length >18, or assignedId<=0 with 400. Otherwise return 201 with Location /teams/ID and JSON {id,title}. Length is UTF-16 units. Example " Tea ", id 7 -> 201, Location /teams/7, title Tea.
+
+Signature: public static IResult Handle(string? title, int assignedId)
+
+Edit starters/W017.cs. Run node dotnet-web-300/verify.cjs --starters --id=W017 from unionboot.
+Reference: solutions/W017.cs; shared checks: tests/W017.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

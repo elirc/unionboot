@@ -1,0 +1,18 @@
+Segment-tree extrema / scenario 3 — extreme=max; tie=first; output=pair
+
+TASK
+Input {values,ops}. Point set {index,value}; query {start,end} over half-open range. Segment tree finds max; ties choose first index; return {value,index}. Return array of query results, null for empty range. Invalid range/index RangeError. Keep input immutable; use O(log n) point updates/queries.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1921.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1921
+node js-more/verify.cjs --starters --id=1921
+
+POLICIES
+extreme=max; tie=first; output=pair
+Semantic key: {"extreme":"max","output":"pair","tie":"first"}

@@ -1,0 +1,1 @@
+CREATE TABLE items(sku TEXT PRIMARY KEY,reorder INTEGER);INSERT INTO items VALUES('A',9),('B',8);SELECT i.sku,(SELECT COALESCE(SUM(delta),0) FROM moves WHERE sku=i.sku)<i.reorder AS below FROM items i ORDER BY i.sku;

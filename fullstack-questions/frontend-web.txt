@@ -1,0 +1,1042 @@
+FRONTEND AND WEB FOUNDATIONS
+260 self-study questions with reference answers; not executable exercises.
+
+FS001 | Semantic HTML | junior
+Q: When should a clickable control be a button rather than a link?
+A: Use a button for an action such as submitting, toggling, or opening a dialog. Use an anchor with an href for navigation. Native elements provide keyboard behavior and browser affordances that custom clickable containers otherwise need to reproduce.
+
+FS002 | Semantic HTML | junior
+Q: How would you structure headings on a product detail page?
+A: Use headings to express the document hierarchy, not to select a font size. Give the page a clear primary heading and use subordinate headings for related sections. Screen-reader users can navigate this outline independently of the visual layout.
+
+FS003 | Semantic HTML | junior
+Q: Why does a search field need a label when its placeholder describes the input?
+A: A placeholder disappears as someone types and is not a dependable replacement for a label. Associate a visible label with the input using matching for and id attributes. If space truly requires hiding it, preserve an accessible name.
+
+FS004 | Semantic HTML | junior
+Q: How do main, nav, and aside help users beyond making markup readable?
+A: These elements can expose meaningful landmarks to assistive technology. Main identifies primary content, nav identifies a major navigation region, and aside marks complementary content. Use them according to purpose rather than wrapping every small component in a landmark.
+
+FS005 | Semantic HTML | junior
+Q: Should a pricing comparison use a table or a collection of layout divs?
+A: Use a table when the information genuinely has row and column relationships. Associate headers with the corresponding cells and provide a useful caption. Use layout primitives for positioning rather than tables when no tabular relationship exists.
+
+FS006 | Semantic HTML | junior
+Q: What is the difference between meaningful and decorative image alternatives?
+A: A meaningful image needs alternative text that communicates its purpose in context. A purely decorative image normally uses an empty alt attribute so it can be skipped. Avoid repeating nearby text or describing irrelevant visual details.
+
+FS007 | Semantic HTML | junior
+Q: Why can adding ARIA roles to native controls make an interface worse?
+A: An inappropriate role can replace useful native semantics without supplying the required behavior. Prefer native elements and add ARIA only where necessary. A role describes an interaction contract; it does not automatically implement keyboard handling or focus management.
+
+FS008 | Semantic HTML | junior
+Q: How would you mark up a grouped set of shipping choices?
+A: Use radio inputs sharing a name when exactly one option may be selected. Group related controls with a fieldset and an informative legend. Associate each option with its own label so the group and individual choices are understandable.
+
+FS009 | Semantic HTML | junior
+Q: When is an ordered list preferable to a series of paragraphs?
+A: Use an ordered list when sequence or rank is meaningful, such as installation steps. Use an unordered list for a collection without inherent order. List semantics communicate grouping and item counts more reliably than manually inserted symbols.
+
+FS010 | Semantic HTML | junior
+Q: What problems can duplicate HTML id values cause in a reusable component?
+A: Duplicate IDs can make label associations, fragment navigation, and scripting target the wrong element. Generate stable unique identifiers when multiple instances can coexist. Test the component rendered more than once rather than only in isolation.
+
+FS011 | Accessible interaction | junior
+Q: What should happen to focus when a modal dialog opens and closes?
+A: Move focus to an appropriate element inside the dialog, keep interaction within a genuinely modal dialog, and restore focus sensibly when it closes. Provide a clear dismiss action and test keyboard navigation rather than relying on visual appearance.
+
+FS012 | Accessible interaction | junior
+Q: How can you make an asynchronous save result understandable without stealing focus?
+A: Use an appropriate live status region to announce the result while retaining focus on the user's current task. Keep messages concise and avoid announcing every intermediate change. Reserve urgent announcements for conditions that genuinely require immediate attention.
+
+FS013 | Accessible interaction | junior
+Q: Why is removing the default focus outline a usability regression?
+A: Keyboard users need to see which element will receive the next action. Replace the default outline only with another clearly visible focus indicator. Verify it against all backgrounds and ensure clipping or overlays do not hide it.
+
+FS014 | Accessible interaction | mid
+Q: How should keyboard behavior differ between tabs and ordinary navigation links?
+A: Tabs switch between panels in a coordinated widget and commonly use arrow keys within the tab list. Navigation links follow normal document navigation. Do not apply tab roles to ordinary links unless you also implement the expected selection and panel relationships.
+
+FS015 | Accessible interaction | junior
+Q: Why is a red border alone insufficient to explain a validation failure?
+A: Color alone does not convey the reason to all users. Provide explanatory text, associate it with the relevant control, and expose invalid state appropriately. The message should explain how to recover rather than merely saying something is wrong.
+
+FS016 | Accessible interaction | mid
+Q: How would you test a custom combobox for accessibility?
+A: Test its accessible name, expanded state, active option, selection, and expected keyboard interactions. Check screen-reader behavior and focus during filtering and closing. Automated scans help find markup defects but cannot establish that the complete interaction is usable.
+
+FS017 | Accessible interaction | junior
+Q: How should an interface respond to a reduced-motion preference?
+A: Reduce nonessential movement and provide alternatives to animations that convey important information. A reduced-motion preference does not necessarily mean removing every transition. Preserve comprehension and test whether disabling motion changes timing assumptions or hides completion feedback.
+
+FS018 | Accessible interaction | junior
+Q: Why should icon-only toolbar buttons have explicit accessible names?
+A: The icon's appearance may not communicate its purpose to assistive technology or unfamiliar users. Give each button a concise action name and provide visible clarification where helpful. Avoid names that describe the icon instead of the action.
+
+FS019 | Accessible interaction | mid
+Q: What accessibility concerns arise when a list is virtualized?
+A: Offscreen items may not exist in the document, affecting search, reading order, focus, and assistive navigation. Preserve focused items where appropriate and expose useful collection information. Test the actual reading and keyboard experience instead of assuming fewer nodes are always better.
+
+FS020 | Accessible interaction | junior
+Q: What is a skip link and when does it become useful?
+A: A skip link lets keyboard users bypass repeated navigation and jump to primary content. Make it discoverable when focused and ensure its target receives an appropriate navigation outcome. It is especially useful on pages with long repeated headers.
+
+FS021 | CSS layout | junior
+Q: When would you choose Grid over Flexbox for a dashboard?
+A: Grid is useful when rows and columns need coordinated two-dimensional alignment. Flexbox is useful for distributing items along one principal axis. They work well together: a dashboard can use Grid globally and Flexbox inside each card.
+
+FS022 | CSS layout | junior
+Q: Why can a flex child overflow even when its parent has available shrinking space?
+A: A flex item's automatic minimum size can preserve its content width and prevent shrinking as expected. Inspect minimum sizes and overflow behavior; setting min-width to zero may be appropriate. Also handle long unbroken content rather than masking it globally.
+
+FS023 | CSS layout | junior
+Q: How does border-box sizing simplify component dimensions?
+A: With border-box, the declared width includes padding and borders, making layout calculations more predictable. Margins remain outside that width. Understand the sizing model when mixing components so added padding does not unexpectedly expand a constrained element.
+
+FS024 | CSS layout | mid
+Q: Why might a sticky sidebar fail to stick while scrolling?
+A: Inspect the sidebar's inset, available travel distance, and scrolling ancestors. An ancestor's overflow behavior may change which container governs sticky positioning. Also check whether the containing block is too short to allow the expected movement.
+
+FS025 | CSS layout | mid
+Q: Why does an enormous z-index sometimes fail to place a menu above another panel?
+A: Z-index is resolved within stacking contexts, not across one global numeric ordering. Properties such as transforms or opacity can create separate contexts. Inspect the ancestor contexts and consider a suitable overlay root rather than continually increasing the number.
+
+FS026 | CSS layout | junior
+Q: How can you center a loading message without absolute positioning?
+A: Use a flex or grid container with appropriate alignment properties and an intentional available height. This preserves normal layout behavior and usually adapts better to changing content. Avoid a fixed height if text wrapping or zoom should expand the container.
+
+FS027 | CSS layout | junior
+Q: What is the practical difference between gap and margins in a wrapping layout?
+A: Gap creates spacing between layout items without adding outer spacing around the container. Margins belong to individual elements and can affect edges differently. Choose deliberately, particularly when wrapping changes which items appear at the start of a row.
+
+FS028 | CSS layout | junior
+Q: How would you preserve the shape of media before it finishes loading?
+A: Provide intrinsic dimensions or a suitable aspect ratio so the browser can reserve space. Choose object-fit behavior based on whether cropping is acceptable. Reserving layout space reduces visible jumps without requiring the resource to finish downloading first.
+
+FS029 | CSS layout | mid
+Q: When is absolute positioning a good choice, and when does it create fragile layouts?
+A: It suits overlays or decorations positioned relative to a known containing block. It becomes fragile for primary content whose size changes with text, localization, or viewport width. Keep ordinary document content in flow unless there is a clear reason not to.
+
+FS030 | CSS layout | junior
+Q: Why might width: 100vw introduce horizontal scrolling?
+A: Viewport units can include space that does not match the available content width, including scrollbar-related differences. Added padding or borders can also expand the element. Prefer a container-relative width when the intent is simply to fill the parent.
+
+FS031 | Responsive design | junior
+Q: How should you choose breakpoints for a responsive page?
+A: Choose breakpoints where the content or interaction needs a different arrangement, not merely from a list of popular devices. Resize continuously and test intermediate widths. Content length, zoom, and input methods matter as much as screen dimensions.
+
+FS032 | Responsive design | mid
+Q: When are container queries more useful than viewport media queries?
+A: Container queries let a component adapt to its allocated space even when the viewport stays unchanged. This helps reusable cards in sidebars and main columns. Use viewport queries for page-level concerns and establish an appropriate containment context for component queries.
+
+FS033 | Responsive design | junior
+Q: How would you make a dense data table usable on a narrow screen?
+A: Preserve the relationships users need, potentially using a labeled horizontal scroll region or a carefully designed alternate presentation. Do not hide essential columns arbitrarily. Test keyboard access, column headers, and whether comparing values remains practical.
+
+FS034 | Responsive design | junior
+Q: Why can fixed-height cards fail when a user increases text size?
+A: Text may wrap onto additional lines and overflow, overlap, or disappear inside the fixed height. Prefer content-driven sizing or carefully chosen minimum heights. Test zoom and larger text settings rather than only the default font and sample copy.
+
+FS035 | Responsive design | junior
+Q: How do srcset and sizes help responsive image delivery?
+A: They let the browser choose an image candidate using the intended display size and device characteristics. Provide truthful sizes information and appropriate candidates. CSS still controls layout; these attributes mainly help avoid downloading unnecessarily large or inadequate images.
+
+FS036 | Responsive design | mid
+Q: What should change for a touchscreen interface beyond its layout width?
+A: Consider target size, spacing, lack of hover, and gesture conflicts. A narrow screen does not prove touch input, and a wide screen does not prove mouse input. Ensure essential actions work across input methods rather than hiding them behind hover.
+
+FS037 | Responsive design | junior
+Q: How can clamp make typography flexible without becoming unreadably small?
+A: Clamp allows a preferred fluid value within explicit minimum and maximum bounds. Select those bounds around readable content rather than visual effect alone. Test zoom behavior and avoid formulas that effectively prevent users from enlarging text.
+
+FS038 | Responsive design | mid
+Q: Why might a mobile page jump when browser controls appear or disappear?
+A: The available viewport can change as browser chrome or an on-screen keyboard changes. Traditional viewport-height assumptions may not match the intended visible area. Consider newer viewport units where supported and test scrolling and input focus on actual mobile browsers.
+
+FS039 | Responsive design | junior
+Q: What is the tradeoff in turning desktop navigation into a collapsed mobile menu?
+A: Collapsing saves space but makes destinations less immediately discoverable and introduces another interaction. Keep the trigger clear and preserve keyboard and focus behavior. Consider which high-value destinations should remain visible rather than collapsing everything by habit.
+
+FS040 | Responsive design | junior
+Q: How would you diagnose horizontal overflow without hiding overflow on the entire page?
+A: Inspect which element extends beyond the viewport, then examine fixed widths, minimum sizes, long strings, and positioned children. Fix the source with suitable wrapping or sizing rules. Global clipping can conceal inaccessible content instead of solving the layout problem.
+
+FS041 | Forms and validation | junior
+Q: Why is browser-side form validation useful if the server must validate again?
+A: Client validation gives quick feedback and prevents avoidable round trips. Server validation remains authoritative because clients can be modified and business state can change. Share clear contracts where useful without treating browser checks as an authorization or integrity boundary.
+
+FS042 | Forms and validation | junior
+Q: Should validation errors appear while typing, on blur, or after submission?
+A: Choose timing based on the field and interruption cost. Avoid showing errors before someone has had a reasonable chance to enter valid input. After submission, make failures easy to locate and preserve entered values for correction.
+
+FS043 | Forms and validation | junior
+Q: What is the difference between disabling a field and making it read-only?
+A: Disabled controls generally cannot be interacted with and are not included in native form submission. Read-only text controls remain available for focus and submission. Select the behavior that matches the workflow rather than using either state solely for styling.
+
+FS044 | Forms and validation | mid
+Q: How should a form handle a server validation error after passing local checks?
+A: Map field-specific errors to their controls and present other failures at form level. Preserve values and explain recovery. Server conditions may have changed, so a local success does not mean a later rejection is necessarily a frontend defect.
+
+FS045 | Forms and validation | junior
+Q: Why should a save button communicate pending state instead of simply disappearing?
+A: Users need confirmation that their action was received and is still processing. Keep a clear pending indication and prevent accidental duplicate submissions where appropriate. Preserve layout and announce completion or failure so users do not have to infer the outcome.
+
+FS046 | Forms and validation | mid
+Q: How would you support a form with dependent country and region fields?
+A: Define what happens to an existing region when its country changes, and load new options without letting stale responses overwrite current choices. Represent loading and unavailable states explicitly. Validate that the final pair is coherent on the server.
+
+FS047 | Forms and validation | junior
+Q: Why should a phone number usually not use a numeric input type?
+A: Phone numbers are identifiers with formatting, prefixes, and sometimes leading zeros, not quantities for arithmetic. A telephone input can request a suitable keyboard without imposing numeric semantics. Validation must account for the regions and formats the application supports.
+
+FS048 | Forms and validation | mid
+Q: How can autofill affect a form that was only tested through manual typing?
+A: Autofill may populate several fields at once and interact differently with event handling or visual labels. Use appropriate autocomplete attributes and test saved values in real browsers. Avoid assuming every meaningful change follows the same keystroke sequence.
+
+FS049 | Forms and validation | junior
+Q: How should resetting a form differ from clearing every visible control?
+A: A reset usually restores defined initial values rather than making every value empty. Also reset validation and submission state where appropriate. Confirm the intended behavior for edited records so a reset does not silently discard more work than expected.
+
+FS050 | Forms and validation | mid
+Q: What must a multi-step form preserve when users move backward?
+A: Preserve relevant entries, validation context, and a predictable focus destination. Define whether later answers remain valid when earlier choices change. Do not make backward navigation silently submit or erase data, and offer a review step for consequential submissions.
+
+FS051 | JavaScript values | junior
+Q: Why can two objects with identical properties compare unequal with strict equality?
+A: Strict equality compares object identity, not structural content. Separately created objects have different references even when their properties match. Choose a deliberate comparison strategy for the domain rather than assuming JSON serialization is a universal deep-equality operation.
+
+FS052 | JavaScript values | junior
+Q: When should nullish coalescing replace logical OR for a default value?
+A: Use nullish coalescing when only null and undefined mean missing. Logical OR also replaces valid falsy values such as zero, false, and an empty string. Decide which values are legitimate before choosing the defaulting expression.
+
+FS053 | JavaScript values | junior
+Q: Why does spreading an object not fully isolate its nested data?
+A: Object spread creates a shallow copy, so nested objects and arrays remain shared references. Updating those nested values can still affect the original. Copy along changed paths or use a suitable cloning strategy with clearly understood supported types.
+
+FS054 | JavaScript values | junior
+Q: What makes floating-point arithmetic unsuitable for naive money calculations?
+A: Many decimal fractions are not represented exactly in binary floating point. Repeated arithmetic can expose rounding differences. Use a domain-appropriate representation, such as validated minor units or a decimal library, and define rounding rules explicitly.
+
+FS055 | JavaScript values | junior
+Q: How does a Map differ from an ordinary object used as a lookup?
+A: A Map accepts keys of different types and has dedicated size and iteration APIs. Ordinary objects have property-key coercion and prototype behavior to consider. Choose based on the contract, and use safe own-property handling when accepting arbitrary dictionary keys.
+
+FS056 | JavaScript values | mid
+Q: Why can an array with empty slots behave differently from one containing undefined?
+A: An empty slot is a missing indexed property, while an explicit undefined value is still an element property. Some iteration methods skip holes. Validate density when algorithms require one value per position, and test sparse arrays deliberately.
+
+FS057 | JavaScript values | junior
+Q: What should you consider before using sort on data received through props?
+A: Array sort mutates its receiver, which can unexpectedly change shared data. Copy the array first or use a supported nonmutating alternative. Supply a comparator suitable for the values rather than relying on default string-based ordering.
+
+FS058 | JavaScript values | mid
+Q: Why can a date-only string produce an unexpected displayed calendar day?
+A: Date parsing and display can apply different time-zone assumptions, shifting the observed day. Distinguish calendar dates from instants. Preserve date-only values as date-only data when appropriate, and explicitly choose zones when formatting timestamps.
+
+FS059 | JavaScript values | junior
+Q: When is optional chaining helpful, and what errors can it conceal?
+A: Optional chaining safely stops access through null or undefined where absence is expected. It does not validate types or guarantee later operations are meaningful. Using it everywhere can hide broken invariants that should instead trigger explicit handling.
+
+FS060 | JavaScript values | junior
+Q: Why is JSON parsing not sufficient validation of an API response?
+A: Parsing proves that the text has valid JSON syntax, not that it matches the expected fields, types, or business rules. Validate the decoded value at the boundary and distinguish malformed transport data from an ordinary empty result.
+
+FS061 | Functions and modules | junior
+Q: How does a closure help implement a debounced search callback?
+A: A closure lets the callback retain access to timer state across invocations. Each new call can replace the pending timer. Define cancellation and cleanup behavior so delayed work does not continue after the owning component or interaction ends.
+
+FS062 | Functions and modules | junior
+Q: Why can passing an object method as a callback change its behavior?
+A: A method's this value depends on how it is called, not simply where it was defined. Passing it as an unbound function can lose the receiver. Bind deliberately or use a wrapper that preserves the required context.
+
+FS063 | Functions and modules | mid
+Q: How do you distinguish a pure transformation from a function with side effects?
+A: A pure transformation produces its result from its inputs without changing external state. Side effects include storage writes, network calls, and mutation of shared objects. Isolating transformations often makes testing easier while keeping effects explicit at application boundaries.
+
+FS064 | Functions and modules | junior
+Q: What belongs in a module's public API rather than being exported for convenience?
+A: Export the stable operations and types that consumers genuinely need. Keep implementation details private so they can change without breaking callers. A smaller public surface makes dependencies easier to understand and reduces accidental coupling between features.
+
+FS065 | Functions and modules | mid
+Q: Why can circular module imports cause initialization problems?
+A: Modules in a cycle may observe dependencies before the expected initialization has completed. Exact behavior depends on the module system and evaluation order. Break the cycle by separating shared contracts or moving coordination to a higher-level module.
+
+FS066 | Functions and modules | junior
+Q: When is a dynamic import useful in a web application?
+A: Dynamic import can load code when a route or feature is needed rather than including it in the initial bundle. Handle loading and failure states. Excessive fragmentation can create request overhead and sequential loading delays, so measure the result.
+
+FS067 | Functions and modules | mid
+Q: What is stale captured state in a callback?
+A: A callback may retain values from the render or scope in which it was created while the application has moved on. Decide whether it should use a snapshot or current state. Update dependencies, use functional updates, or use an appropriate mutable reference.
+
+FS068 | Functions and modules | junior
+Q: Why are default parameter values not a replacement for input validation?
+A: A default parameter primarily handles undefined arguments. It does not reject wrong types, invalid ranges, or incompatible combinations. Validate external inputs explicitly and use defaults only when the missing-value behavior is part of the documented contract.
+
+FS069 | Functions and modules | mid
+Q: How can dependency injection make a browser utility easier to test?
+A: Pass dependencies such as a clock, storage adapter, or request function instead of reading globals everywhere. Tests can provide controlled implementations while production uses real services. Keep the interface focused so injection does not become unnecessary framework complexity.
+
+FS070 | Functions and modules | junior
+Q: Why should a utility name describe its result or effect instead of its implementation?
+A: Callers need to understand what the function promises, not its current loop or library choice. Names tied to implementation become misleading after refactors. Include meaningful effects in the contract so a seemingly harmless helper does not hide persistence or network activity.
+
+FS071 | DOM and events | junior
+Q: How does event delegation help a list with many interactive rows?
+A: A listener on a common ancestor can handle bubbled events from multiple descendants. Determine the intended control using the event path or an appropriate closest lookup. Check containment and avoid assuming the direct target is always the button itself.
+
+FS072 | DOM and events | junior
+Q: What is the difference between preventDefault and stopPropagation?
+A: PreventDefault requests cancellation of a cancelable event's default action. StopPropagation prevents further propagation through the event path but does not itself cancel that action. Use each for a specific reason rather than applying both to every handler.
+
+FS073 | DOM and events | mid
+Q: Why might a passive touch listener ignore a call to preventDefault?
+A: A passive listener promises that it will not cancel the event, allowing browser scrolling optimizations. Calling preventDefault violates that promise and is ineffective there. Use appropriate touch-action rules and choose listener options based on the interaction's real needs.
+
+FS074 | DOM and events | junior
+Q: When should a component remove a global event listener?
+A: Remove it when the component or behavior no longer owns the subscription. Retain the function identity needed for removal and match relevant options. Repeated setup without cleanup can create duplicate actions and keep otherwise unused objects reachable.
+
+FS075 | DOM and events | mid
+Q: Why can an Enter-key submit handler break input through an IME?
+A: Enter may confirm a composition candidate rather than indicate intent to submit. Account for composition state and test the relevant input sequence. Treat text entry as more than individual key presses, especially for languages using composition-based input.
+
+FS076 | DOM and events | junior
+Q: Why is textContent safer than HTML insertion when displaying plain user text?
+A: TextContent treats the value as text rather than interpreting markup. HTML insertion requires a separate trust and sanitization decision. Use ordinary text rendering when formatting is unnecessary, and do not assume escaping one context makes a value safe everywhere.
+
+FS077 | DOM and events | mid
+Q: What is pointer capture useful for in a draggable splitter?
+A: Pointer capture keeps subsequent pointer events directed to the capturing element during an interaction even when the pointer leaves its bounds. Handle release and cancellation cleanly. It does not remove the need for keyboard alternatives or sensible touch behavior.
+
+FS078 | DOM and events | junior
+Q: Why should DOM measurements and style writes be grouped carefully?
+A: Alternating layout-dependent reads with writes can force repeated synchronous layout work. Gather needed measurements, calculate changes, and apply updates together where practical. Measure actual performance before adding elaborate scheduling that obscures a simple interaction.
+
+FS079 | DOM and events | mid
+Q: When would you use ResizeObserver instead of listening only for window resize?
+A: An element can change size because of content or surrounding layout without the window resizing. ResizeObserver follows the element itself. Avoid feedback loops where the observer repeatedly changes the same dimensions it observes, and disconnect subscriptions during cleanup.
+
+FS080 | DOM and events | junior
+Q: How does a browser event's target differ from currentTarget?
+A: Target identifies the originating event target, subject to retargeting rules. CurrentTarget identifies the object whose listener is currently running. In a delegated handler, these often differ, so choose deliberately when reading attributes or updating the intended control.
+
+FS081 | Asynchronous UI | junior
+Q: Why does awaiting a promise not make a long CPU calculation responsive?
+A: Await yields while a promise is pending, but synchronous computation still occupies the thread when it runs. Break work into manageable tasks or move suitable computation to a worker. Wrapping an expensive loop in a promise alone does not solve blocking.
+
+FS082 | Asynchronous UI | mid
+Q: How can an older search response overwrite newer search results?
+A: Requests may finish in a different order from when they started. Associate responses with the current query or request generation and ignore obsolete results. Cancellation helps reduce unnecessary work, but explicit relevance checks remain useful when cancellation is not guaranteed.
+
+FS083 | Asynchronous UI | junior
+Q: When should independent API requests be started together?
+A: Start independent requests together when doing so reduces latency without overwhelming the service or client. Awaiting them sequentially creates unnecessary delay. Keep truly dependent requests ordered and decide whether one failure should discard or preserve other successful results.
+
+FS084 | Asynchronous UI | junior
+Q: How does Promise.allSettled support a partially available dashboard?
+A: It reports each input promise's outcome without rejecting solely because one request failed. The interface can display successful panels and localized failures. This does not automatically provide timeouts, retries, or dependency handling; those still need deliberate policy.
+
+FS085 | Asynchronous UI | mid
+Q: What should happen when a user navigates away during an upload?
+A: Define whether the upload is canceled, continues in an application-level owner, or requires a warning about interruption. Release component subscriptions either way. Do not equate closing the view with proof that the server stopped processing the request.
+
+FS086 | Asynchronous UI | junior
+Q: What is the difference between debouncing and throttling user-driven work?
+A: Debouncing waits for a quiet period, making it useful for settled input. Throttling limits execution frequency while activity continues. Choose based on whether the interface needs a final value, periodic feedback, or both, and define trailing-call behavior.
+
+FS087 | Asynchronous UI | mid
+Q: Why can repeatedly queueing microtasks delay rendering?
+A: Browsers generally drain the microtask queue before proceeding to other event-loop work, including rendering opportunities. A chain that keeps adding microtasks can monopolize progress. Yield through an appropriate task boundary when substantial work must be divided for responsiveness.
+
+FS088 | Asynchronous UI | junior
+Q: How would you distinguish loading, empty, and failed states in a results view?
+A: Model them as separate outcomes instead of using an empty array to mean all three. Loading means the result is unresolved, empty means a successful query found nothing, and failed means the result could not be obtained. Offer appropriate guidance for each.
+
+FS089 | Asynchronous UI | mid
+Q: When is an optimistic update a poor fit?
+A: Avoid assuming success when a failed operation is costly, common, or difficult to reverse clearly. Optimism works best with predictable actions and a coherent reconciliation strategy. Communicate pending status and define what users see when the server rejects the change.
+
+FS090 | Asynchronous UI | mid
+Q: What should a retry button preserve after a transient request failure?
+A: Preserve the user's intended input and enough request context to retry the same action safely. Determine whether the previous attempt may have succeeded before repeating a mutation. Avoid regenerating identifiers or silently changing parameters in ways that alter the operation.
+
+FS091 | HTTP in the browser | junior
+Q: Why does fetch require checking response status even when no exception was thrown?
+A: Fetch usually resolves when an HTTP response arrives, including many error status codes. Check response.ok or the expected status before treating the body as success. Network failures and aborted requests are different from a server's explicit rejection.
+
+FS092 | HTTP in the browser | junior
+Q: What should a client do with a successful 204 response?
+A: A 204 response has no response content to parse. Handle the documented success outcome without unconditionally calling a JSON parser. Design response handling around the endpoint contract rather than assuming every successful request returns an object.
+
+FS093 | HTTP in the browser | mid
+Q: What does a CORS failure tell you, and what does it not prove?
+A: It indicates that browser cross-origin access requirements were not satisfied for that interaction. It does not by itself prove the server was unreachable or that no request reached it. Inspect preflight and actual request behavior separately using browser diagnostics.
+
+FS094 | HTTP in the browser | junior
+Q: Why should URL parameters be encoded using URL APIs rather than string concatenation?
+A: Parameter values may contain separators, spaces, or characters with special meaning in a URL. URL and URLSearchParams handle serialization more reliably. Still validate the resulting destination and avoid confusing encoding with authorization or general input validation.
+
+FS095 | HTTP in the browser | mid
+Q: How can credentials configuration affect a cross-origin browser request?
+A: The request's credentials mode affects whether browser-managed credentials are sent or accepted in relevant contexts. The server must also satisfy the applicable cross-origin rules. Cookie attributes and browser privacy policies can further limit behavior, so test the complete configuration.
+
+FS096 | HTTP in the browser | junior
+Q: Why is application/json not the correct content type for every request body?
+A: The content type describes the actual representation being sent. FormData, text, and binary payloads have different formats and handling requirements. When using FormData, let the browser generate its multipart boundary rather than inventing a mismatched header.
+
+FS097 | HTTP in the browser | mid
+Q: How should a frontend treat a 429 response?
+A: Explain that the action is temporarily limited and respect a valid retry policy, including applicable Retry-After guidance. Avoid immediate retry loops. Preserve user intent where practical and coordinate retries so multiple interface components do not intensify the overload.
+
+FS098 | HTTP in the browser | junior
+Q: What is the difference between a network timeout and a server-declared business rejection?
+A: A timeout leaves uncertainty about whether processing completed, whereas an explicit business response reports a defined outcome. Present different recovery guidance and avoid blindly repeating consequential actions. Use request identifiers or status reconciliation where the operation requires certainty.
+
+FS099 | HTTP in the browser | mid
+Q: Why can a redirect change the behavior of an API request unexpectedly?
+A: Redirect handling can affect the destination, method behavior for particular status codes, credentials, and response format. A request expecting JSON might eventually receive a login page. Inspect the final response and use explicit authentication failure contracts for APIs.
+
+FS100 | HTTP in the browser | junior
+Q: What information is useful when reporting a failed browser API call?
+A: Record the operation, status or network error, approximate timing, and a safe correlation identifier. Exclude secrets and unnecessary personal data. Separate the user's action from low-level details so engineers can connect the failure to the relevant server logs.
+
+FS101 | Browser caching | junior
+Q: How does a fresh cached response differ from a revalidated response?
+A: A fresh cached response can be reused under its caching rules without contacting the server. Revalidation checks whether stored content remains usable. This distinction explains why some requests avoid network transfer while others still incur a round trip.
+
+FS102 | Browser caching | mid
+Q: What is the difference between no-cache and no-store?
+A: No-cache permits storage but requires successful validation before reuse under its rules. No-store directs caches not to store the message. Choose based on sensitivity and reuse requirements rather than interpreting the names as interchangeable commands to disable caching.
+
+FS103 | Browser caching | junior
+Q: Why do hashed asset filenames work well with long cache lifetimes?
+A: A content change produces a new URL, allowing old assets to remain safely cached while new pages reference new versions. Keep the entry document's caching policy compatible with releases. A long-lived URL whose content changes needs another invalidation strategy.
+
+FS104 | Browser caching | mid
+Q: What role does an ETag play in conditional retrieval?
+A: An ETag is a validator representing a selected resource representation. A client can send it in a conditional request so the server can indicate whether reuse is appropriate. It is not inherently a timestamp or a guarantee that the content is globally immutable.
+
+FS105 | Browser caching | mid
+Q: Why must shared caches distinguish responses that vary by language or encoding?
+A: Different request characteristics may produce different representations at the same URL. Correct variation metadata lets caches avoid reusing an incompatible representation. Keep the variation set intentional because excessive variation reduces cache efficiency and complicates reasoning about reuse.
+
+FS106 | Browser caching | junior
+Q: Why can clearing a browser cache appear to fix a deployment without fixing its cause?
+A: Clearing removes the stale combination currently visible to that browser. Incorrect cache headers, release ordering, or service-worker behavior may still affect other users. Diagnose the invalidation contract and version relationships instead of relying on manual clearing as the permanent solution.
+
+FS107 | Browser caching | mid
+Q: How does an application query cache differ from the HTTP cache?
+A: An application cache tracks domain data and component subscriptions using application-defined keys and freshness policies. The HTTP cache operates around requests and response metadata. They can coexist, but invalidating one does not automatically invalidate the other.
+
+FS108 | Browser caching | junior
+Q: What should happen to cached user-specific frontend data after logout?
+A: Clear or isolate account-scoped application data so another session cannot display it accidentally. Cancel or disregard in-flight results from the old session. Also review persistence and shared cache policies; changing the visible login screen alone is insufficient.
+
+FS109 | Browser caching | mid
+Q: When can stale-while-revalidate behavior improve the user experience?
+A: It can show usable cached information immediately while fetching an updated version in the background. It is inappropriate when stale values could drive unsafe decisions without clear qualification. Define acceptable staleness and make meaningful updates or refresh failures understandable.
+
+FS110 | Browser caching | mid
+Q: Why should a cache key include more than an endpoint pathname?
+A: The result may depend on query parameters, account scope, locale, or other inputs. Omitting relevant dimensions can display the wrong data. Include the inputs that determine the representation while avoiding unstable or irrelevant values that destroy useful reuse.
+
+FS111 | Cookies and storage | junior
+Q: When would sessionStorage be preferable to localStorage for a draft?
+A: Session storage is scoped to a tab's page session, while local storage persists more broadly for the origin. Choose based on the desired lifetime and sharing behavior. Neither is guaranteed durable storage, and sensitive content needs a separate protection decision.
+
+FS112 | Cookies and storage | junior
+Q: Why should browser storage reads and writes have failure handling?
+A: Storage may be unavailable, restricted, cleared, or full. Treat access as fallible and allow the interface to operate with a sensible fallback. Do not make a nonessential preference such as theme selection prevent the entire application from rendering.
+
+FS113 | Cookies and storage | mid
+Q: What does an HttpOnly cookie protect, and what remains outside that protection?
+A: HttpOnly prevents ordinary page JavaScript from reading the cookie value. It does not prevent the browser from attaching the cookie to applicable requests or make the entire session immune to malicious page behavior. Combine it with other appropriate session protections.
+
+FS114 | Cookies and storage | mid
+Q: Why are Secure and SameSite separate cookie decisions?
+A: Secure restricts cookie transmission to secure contexts under browser rules. SameSite governs inclusion in certain cross-site request contexts. They address different concerns and interact with the application's navigation and authentication flows, so configure and test both deliberately.
+
+FS115 | Cookies and storage | junior
+Q: When is IndexedDB more suitable than localStorage?
+A: IndexedDB supports larger structured data and asynchronous transactional operations, making it useful for offline records and local indexes. Local storage is simpler but synchronous and string-based. Account for schema upgrades, quota limits, and recovery in either design.
+
+FS116 | Cookies and storage | mid
+Q: How should a frontend evolve persisted data when its schema changes?
+A: Version the stored representation and define migration or invalidation behavior. Validate old data before using it in the new application. A failed migration should lead to a recoverable state rather than repeated startup crashes or silent corruption.
+
+FS117 | Cookies and storage | junior
+Q: Why is localStorage unsuitable as an authoritative multi-device source of truth?
+A: Its contents live in a particular browser storage context and do not automatically synchronize with other devices. Users can clear or alter them. Use a server-backed system when the data must be shared, reliably retained, or authoritatively validated.
+
+FS118 | Cookies and storage | mid
+Q: How can two open tabs create conflicting edits to locally stored state?
+A: Each tab may read an old value and later overwrite another tab's change. A storage event can notify other contexts but does not provide a full conflict-resolution protocol. Use transactions, version checks, or explicit ownership appropriate to the storage mechanism.
+
+FS119 | Cookies and storage | junior
+Q: What should a remember-my-preferences option communicate to the user?
+A: Explain what will be retained and whether it applies only to this browser or to the account. Keep preference retention distinct from retaining sensitive form content. Provide a way to reset it and respect the application's privacy commitments.
+
+FS120 | Cookies and storage | mid
+Q: Why does private browsing require testing rather than assumptions about persistence?
+A: Storage availability and lifetime vary by browser and mode, and access may fail or disappear when the session ends. Verify the behaviors your application relies on. Offer graceful degradation rather than promising offline retention that the environment cannot guarantee.
+
+FS121 | URLs and navigation | junior
+Q: Which interface state belongs in the URL?
+A: State useful for bookmarking, sharing, or restoring navigation often belongs in the URL, such as search filters and pagination. Temporary interaction details usually do not. Exclude secrets and consider whether a value is appropriate for history and logs.
+
+FS122 | URLs and navigation | junior
+Q: When should changing a filter replace the history entry instead of pushing a new one?
+A: Replace an entry when the update refines the current navigation state and should not require many Back presses to undo. Push when it represents a meaningful new destination. Define the user experience explicitly, particularly for continuously changing search input.
+
+FS123 | URLs and navigation | mid
+Q: Why can a client-routed page work through links but fail on a direct reload?
+A: Client navigation may render the route without requesting a corresponding server document. A direct reload asks the server for that path, exposing missing routing or fallback configuration. Configure delivery appropriately while keeping API and missing-asset responses distinct.
+
+FS124 | URLs and navigation | junior
+Q: How should a page interpret malformed query parameters?
+A: Parse them against a defined schema and apply explicit defaults or show a useful error. Do not let arbitrary strings flow into rendering and request logic unchecked. Preserve valid parameters when correcting one invalid value where practical.
+
+FS125 | URLs and navigation | mid
+Q: What makes scroll restoration important in a long catalog?
+A: Users expect returning from a detail page to preserve their browsing position and filters. Restoring too early, before content dimensions stabilize, can produce a wrong position. Coordinate restoration with loading and retain a meaningful fallback when the dataset changes.
+
+FS126 | URLs and navigation | junior
+Q: Why should external links remain usable without a custom click handler?
+A: A real href preserves copying, opening in a new tab, context menus, and progressive behavior when scripts fail. Enhance navigation only when necessary. A handler that always prevents default can unintentionally remove these familiar browser capabilities.
+
+FS127 | URLs and navigation | mid
+Q: What should happen when a route references a resource that no longer exists?
+A: Show a meaningful not-found or unavailable state rather than an endless loader. Distinguish absence from permission and transport failures according to the API contract. Offer a sensible next destination without exposing information the user is not allowed to see.
+
+FS128 | URLs and navigation | junior
+Q: How can canonical URLs help avoid duplicate representations of the same page?
+A: Choose a consistent preferred URL and normalize redundant forms where appropriate. Search engines and sharing flows benefit from stable destinations. Preserve meaningful query state and do not redirect distinct content to one URL merely because the visual templates look similar.
+
+FS129 | URLs and navigation | mid
+Q: How should unsaved-change warnings interact with internal navigation?
+A: Warn only when meaningful unsaved work would be lost, and offer clear stay or leave choices. Handle internal routing and browser lifecycle limitations separately. Avoid blanket warnings that appear even after successful saves or for purely cosmetic state.
+
+FS130 | URLs and navigation | junior
+Q: Why should redirect destinations from user input be validated?
+A: A destination string can point outside the intended application or use an inappropriate scheme. Restrict redirects to acceptable destinations using a clear policy. Encoding the value does not establish trust, and the server must enforce its own corresponding rules.
+
+FS131 | API client design | junior
+Q: What responsibilities belong in a shared API client?
+A: Centralize transport configuration, response decoding, safe error normalization, and cancellation support. Keep feature-specific presentation outside the client. This gives screens consistent behavior without making the client responsible for every business decision or user message.
+
+FS132 | API client design | mid
+Q: How should an API client represent an expected business failure?
+A: Use a documented error shape or discriminated result that preserves meaningful error categories. Avoid reducing every failure to a generic string. Callers should be able to choose recovery behavior without inspecting brittle implementation-specific message text.
+
+FS133 | API client design | mid
+Q: Why should request cancellation propagate through wrapper functions?
+A: If a wrapper discards the caller's cancellation signal, obsolete work continues despite the owning view's intentions. Accept and pass signals consistently. Treat cancellation as distinct from a genuine failure when it was deliberately initiated by the application.
+
+FS134 | API client design | junior
+Q: How can a client avoid assuming an API's array order is stable?
+A: Read the documented ordering contract and request explicit ordering when supported. Apply a presentation sort only when appropriate, without mutating shared data. Stable identifiers should drive selection and identity rather than an item's current array position.
+
+FS135 | API client design | mid
+Q: What should happen when two components request the same data simultaneously?
+A: A shared query layer can deduplicate equivalent in-flight requests and distribute the result to both subscribers. Define equivalence using the complete request scope. Keep subscription cancellation separate from canceling work still needed by another component.
+
+FS136 | API client design | mid
+Q: How would you normalize inconsistent dates returned by multiple services?
+A: Create explicit boundary adapters that understand each service's date contract and produce one internal representation. Reject ambiguous values rather than guessing. Keep original semantics such as calendar date versus timestamp visible in the model and tests.
+
+FS137 | API client design | junior
+Q: Why should mock API responses include missing optional fields?
+A: Happy-path examples containing every field can conceal assumptions that fail with real responses. Include absent fields, empty collections, and documented null values. Distinguish supported optionality from invalid responses so tests do not normalize away actual contract violations.
+
+FS138 | API client design | mid
+Q: How can an authentication refresh flow avoid multiple simultaneous refresh requests?
+A: Coordinate refresh through one shared in-flight operation and let eligible requests await it. Bound retry behavior and handle refresh failure coherently. Do not endlessly replay requests or assume every mutation is safe to repeat after authentication changes.
+
+FS139 | API client design | junior
+Q: What belongs in a DTO-to-view-model adapter?
+A: Translate transport naming and representations into values suited to the interface, such as parsed timestamps or explicit display state. Keep formatting choices and domain assumptions visible. Avoid spreading transport-specific quirks across every component that consumes the response.
+
+FS140 | API client design | mid
+Q: How should a frontend handle an added enum value from a newer server?
+A: Decide whether unknown values can be shown with a safe fallback or must produce an explicit unsupported state. Avoid silently treating them as an existing meaning. Test forward compatibility where independent deployment makes newer server responses possible.
+
+FS141 | Frontend architecture | junior
+Q: When should a large component be split into smaller components?
+A: Split around meaningful responsibilities, independently understandable interactions, or reusable presentation. File length alone is not a sufficient reason. Keep closely related state and behavior together unless separating them makes ownership and data flow clearer.
+
+FS142 | Frontend architecture | mid
+Q: How do feature-oriented folders differ from grouping all files by technical type?
+A: Feature folders keep related screens, data access, and tests near the behavior they implement. Type-based folders group components or services globally. Either can work, but clear dependency boundaries matter more than the folder names alone.
+
+FS143 | Frontend architecture | junior
+Q: Why should shared UI components avoid direct knowledge of every application endpoint?
+A: Presentation components are easier to reuse and test when they receive data and callbacks through a clear interface. Feature owners can coordinate requests. Avoid forcing this separation mechanically when a small feature component is intentionally responsible for its own data.
+
+FS144 | Frontend architecture | mid
+Q: What is a useful boundary between domain logic and UI logic?
+A: Domain logic describes rules that remain meaningful without the browser, while UI logic handles rendering and interaction state. Separate reusable rules where practical. Test that the interface invokes them correctly rather than duplicating slightly different rules across screens.
+
+FS145 | Frontend architecture | mid
+Q: Why can a global utility module become a maintenance problem?
+A: A miscellaneous utility module accumulates unrelated responsibilities and attracts dependencies from everywhere. Changes become harder to reason about. Group helpers by coherent purpose and keep feature-specific functions local until genuine reuse justifies a shared abstraction.
+
+FS146 | Frontend architecture | junior
+Q: How should configuration differ from user-editable application state?
+A: Configuration selects environment or deployment behavior, while user state changes through ordinary interactions. Give each a clear source and validation strategy. Do not hide mutable business state in build-time settings or expose secrets through client configuration.
+
+FS147 | Frontend architecture | mid
+Q: When is introducing a state-machine model useful for a UI workflow?
+A: It helps when transitions and legal state combinations are difficult to express with independent booleans. Model events and allowed transitions explicitly. Start with the workflow's actual complexity rather than adopting a large framework for a simple toggle.
+
+FS148 | Frontend architecture | junior
+Q: What should a component contract say about controlled and uncontrolled usage?
+A: Specify who owns the current value, how changes are reported, and how initial values behave. Avoid switching ownership accidentally during the component's lifetime. Document reset behavior and test both supported modes instead of leaving consumers to infer them.
+
+FS149 | Frontend architecture | mid
+Q: How can a frontend dependency boundary be tested?
+A: Use static import rules or architecture tests to prohibit unwanted dependencies between layers or features. Review exceptions deliberately. Such checks enforce the chosen structure, but they cannot prove that the structure itself is appropriate for the product.
+
+FS150 | Frontend architecture | mid
+Q: What makes an incremental frontend migration safer than a wholesale rewrite?
+A: Small slices allow behavior comparison, focused testing, and rollback while the product remains usable. Define interoperability and ownership during the transition. Track temporary duplication explicitly so the migration does not leave two competing architectures indefinitely.
+
+FS151 | React rendering | junior
+Q: Why must React rendering avoid changing external state?
+A: Rendering calculates what the interface should look like and may be repeated or abandoned. External side effects during render can therefore occur unexpectedly. Keep event-driven effects in handlers and synchronization with external systems in appropriate lifecycle mechanisms.
+
+FS152 | React rendering | junior
+Q: Why should list keys represent stable identity rather than array positions?
+A: Keys help React associate elements with prior instances across updates. Position-based keys can attach state to the wrong item after insertion or reordering. Use identifiers that remain stable for the lifetime of each logical item.
+
+FS153 | React rendering | junior
+Q: Why might several state updates based on the same captured value produce an unexpected total?
+A: Each update may read the same render-time snapshot instead of the result of the preceding update. Use functional updates when the new value depends on previous state. This expresses the dependency without relying on immediate synchronous mutation.
+
+FS154 | React rendering | mid
+Q: When does memoizing a React component help, and when does it not?
+A: Memoization can avoid repeated rendering when inputs remain equivalent and rendering cost matters. Newly created props or changing context can limit the benefit. Measure before adding it and never use memoization to conceal incorrect state ownership or side effects.
+
+FS155 | React rendering | junior
+Q: Why can changing a component's key reset its local state?
+A: A changed key tells React to treat the element as a different identity at that position. The prior instance is replaced, so local state is recreated. Use this intentionally for reset behavior, not as an arbitrary way to force updates.
+
+FS156 | React rendering | mid
+Q: What can development Strict Mode reveal about a component?
+A: Additional development checks can expose impure rendering and missing cleanup by exercising behavior more than once. They are diagnostic behavior, not a reason to suppress valid effects globally. Fix the underlying assumptions and distinguish development checks from production execution.
+
+FS157 | React rendering | junior
+Q: Why should a component derive a filtered list instead of storing a second synchronized copy?
+A: If the filtered list is fully determined by existing data and filters, storing it introduces another value that can drift out of sync. Derive it during rendering and memoize only when justified by cost. Store genuinely independent state instead.
+
+FS158 | React rendering | mid
+Q: How can a portal affect layout and event reasoning?
+A: A portal places DOM content outside its parent's DOM location while retaining its React relationship. This helps overlays escape clipping, but requires deliberate focus and accessibility behavior. Distinguish DOM ancestry from React event propagation when debugging interactions.
+
+FS159 | React rendering | junior
+Q: What kinds of failures do React error boundaries not generally catch?
+A: Error boundaries handle relevant rendering failures in their descendant tree, not every possible application error. Ordinary event-handler failures and unrelated asynchronous callbacks need their own handling. Place boundaries around recoverable UI areas and provide a useful fallback.
+
+FS160 | React rendering | mid
+Q: Why can hydration warnings indicate a real correctness problem?
+A: Hydration expects the initial client output to match the server-rendered structure. Differences from random values, local time assumptions, or browser-only data can cause inconsistent behavior. Make initial rendering deterministic and isolate client-only updates appropriately.
+
+FS161 | React effects and hooks | junior
+Q: When does an operation belong in an effect rather than an event handler?
+A: Use an effect to synchronize with an external system because rendered state requires it. Use an event handler for work directly caused by a specific user action. This distinction prevents unrelated rerenders from accidentally repeating action-specific work.
+
+FS162 | React effects and hooks | junior
+Q: Why should effect dependencies reflect the values actually used?
+A: Dependencies tell React when synchronization needs to be updated for changed inputs. Omitting used reactive values can leave stale behavior. Restructure the code when dependencies cause unwanted repetition rather than simply suppressing the dependency check.
+
+FS163 | React effects and hooks | mid
+Q: How should an effect manage a subscription when its source changes?
+A: Subscribe to the current source and return cleanup that removes that exact subscription. When dependencies change, cleanup should release the old resource before replacement. Test rapid source changes and unmounting to detect duplicate listeners or stale updates.
+
+FS164 | React effects and hooks | junior
+Q: What is a ref appropriate for that ordinary state is not?
+A: A ref can retain a mutable value or DOM reference without scheduling a render when it changes. Use state for values that determine visible output. Keeping display-critical values only in refs can make the interface fail to update.
+
+FS165 | React effects and hooks | mid
+Q: When is a layout effect preferable to an ordinary effect?
+A: Use it when a DOM measurement and immediate adjustment must occur before the user sees an incorrect frame. It can block painting, so keep the work small. Most external synchronization does not require this timing and should use ordinary effects.
+
+FS166 | React effects and hooks | junior
+Q: Why must hooks be called in a consistent order?
+A: React associates hook state with call positions within a component. Conditional calls can change those positions between renders and associate state incorrectly. Put conditions inside supported hook logic or split conditional behavior into separate components.
+
+FS167 | React effects and hooks | mid
+Q: What should a custom hook expose to consumers?
+A: Expose meaningful state and operations rather than its internal bookkeeping. Define ownership, cleanup, and error behavior clearly. A custom hook shares stateful logic between callers, but separate invocations do not automatically share the same state instance.
+
+FS168 | React effects and hooks | mid
+Q: Why must an external store snapshot be stable when its data has not changed?
+A: Consumers need a reliable way to determine whether the store changed. Returning a new snapshot object on every read can trigger unnecessary work or repeated updates. Cache snapshots appropriately and coordinate subscriptions with the external-store API's contract.
+
+FS169 | React effects and hooks | junior
+Q: How would you test a hook that starts a timer?
+A: Use a controllable clock or timer mechanism, advance time deliberately, and verify the observable outcome. Unmount or change dependencies to verify cleanup. Do not let tests depend on arbitrary real-time sleeps that make failures slow and intermittent.
+
+FS170 | React effects and hooks | mid
+Q: Why does useMemo not provide a place for important side effects?
+A: Memoization is a performance optimization for calculating values, not a lifecycle guarantee for external work. The calculation must remain safe to repeat or discard. Put consequential actions in the appropriate handler or synchronization mechanism instead.
+
+FS171 | Application state | junior
+Q: How do you decide whether state should remain local or move upward?
+A: Keep state with the smallest owner that coordinates all consumers needing it. Lift it when multiple components must agree, not simply because global access is convenient. Excessive lifting creates unnecessary coupling and makes unrelated parts rerender or change together.
+
+FS172 | Application state | mid
+Q: Why distinguish server state from local interaction state?
+A: Server state has remote ownership, freshness, synchronization, and failure concerns. Local interaction state describes things such as an open menu or draft selection. Separate policies make it easier to refresh data without unexpectedly resetting the user's current interaction.
+
+FS173 | Application state | junior
+Q: How can independent booleans create impossible UI states?
+A: Flags such as loading, failed, and succeeded can accidentally all become true. Represent mutually exclusive states with one explicit state value or tagged structure. Keep additional independent flags only when their combinations are genuinely meaningful.
+
+FS174 | Application state | mid
+Q: Why normalize a large collection of related client-side records?
+A: Storing records by identity can reduce duplication and make updates to shared entities consistent. Relationships can reference identifiers rather than embedding repeated copies. Balance these advantages against added lookup complexity for small, naturally nested datasets.
+
+FS175 | Application state | junior
+Q: What does a reducer improve in a complicated form workflow?
+A: A reducer centralizes transitions from events to state, making related updates explicit and testable. It does not automatically simplify a poorly designed state model. Use meaningful events and keep network calls or other side effects outside the pure transition function.
+
+FS176 | Application state | mid
+Q: How should selection behave when a filtered list no longer contains the selected item?
+A: Define whether selection remains as a hidden persistent choice or is cleared when unavailable. Communicate the policy so users do not act on unseen items accidentally. Use stable identifiers and reconcile selection when records are deleted or permissions change.
+
+FS177 | Application state | junior
+Q: Why should a store selector return only the data a component needs?
+A: Focused selectors clarify dependencies and can reduce updates caused by unrelated changes. Their return identity also matters when equality checks drive subscriptions. Avoid generating unstable objects unnecessarily, but do not add memoization without a clear behavior or performance need.
+
+FS178 | Application state | mid
+Q: What should an undo feature record for a local editing operation?
+A: Record enough information to reverse the intended change, or preserve a suitable prior snapshot. Define grouping, history limits, and behavior after external updates. Reverting local UI state does not automatically reverse a server-side action that already completed.
+
+FS179 | Application state | mid
+Q: Why can copying incoming props into state cause stale displays?
+A: The copied value may stop tracking later prop updates, producing two competing sources of truth. Derive directly unless the component intentionally owns an editable draft. For drafts, define reset and conflict behavior when the underlying record changes.
+
+FS180 | Application state | junior
+Q: How should a logout action affect frontend state ownership?
+A: Reset or replace account-scoped stores and subscriptions while retaining appropriate non-sensitive device preferences. Avoid retaining data under ambiguous global keys. Treat a subsequent login as a new scope so delayed results from the previous account cannot populate it.
+
+FS181 | Practical TypeScript | junior
+Q: Why use unknown instead of any at an untrusted data boundary?
+A: Unknown forces consumers to establish a value's shape before using it, while any bypasses those checks. Narrow or validate the value through deliberate guards. TypeScript still does not validate incoming runtime data merely because an interface exists.
+
+FS182 | Practical TypeScript | junior
+Q: How can a discriminated union model an asynchronous result?
+A: Give each state a shared literal discriminator and only the fields valid for that state. Checking the discriminator narrows the accessible fields. This prevents accessing successful data while loading and makes exhaustive handling easier than several optional properties.
+
+FS183 | Practical TypeScript | mid
+Q: What does satisfies provide that a broad type assertion does not?
+A: Satisfies checks that an expression conforms to a target type while preserving useful information about its inferred type. An assertion can override the compiler's view without proving compatibility in the same way. Neither substitutes for runtime validation.
+
+FS184 | Practical TypeScript | junior
+Q: Why can a non-null assertion hide a real frontend bug?
+A: The assertion only tells the compiler to ignore nullability at that point. It does not create the value at runtime. Prefer an actual guard or a stronger lifecycle contract when an element or response field can legitimately be absent.
+
+FS185 | Practical TypeScript | mid
+Q: How can branded types distinguish identifiers with the same primitive representation?
+A: A brand adds a compile-time distinction between values such as user IDs and order IDs. Construct branded values at validated boundaries. Brands do not change runtime representation or prevent incorrect values introduced through unchecked assertions.
+
+FS186 | Practical TypeScript | junior
+Q: When is a generic function better than accepting a broad union?
+A: Use a generic when the relationship between input and output types matters across different callers. A union suits a fixed set of alternatives with explicit behavior. Avoid adding generics that appear only once and express no useful relationship.
+
+FS187 | Practical TypeScript | mid
+Q: What does readonly guarantee for a value passed to a function?
+A: Readonly restricts assignments through that typed reference; it does not necessarily freeze the runtime object or make nested data deeply immutable. Other aliases may still mutate it. Match the type contract with runtime ownership expectations and tests.
+
+FS188 | Practical TypeScript | junior
+Q: Why enable checks for possibly missing indexed values?
+A: Array indexes and dictionary lookups can miss at runtime even when their nominal element type looks definite. Stricter indexed-access checking exposes those assumptions. Handle absence explicitly instead of assuming every requested index or key exists.
+
+FS189 | Practical TypeScript | mid
+Q: How can exhaustiveness checks help when adding a new UI state?
+A: A switch or equivalent branching structure can require all members of a discriminated union to be handled. Adding a state then exposes omitted branches during compilation. Ensure the input is actually validated before relying on compile-time exhaustiveness for external data.
+
+FS190 | Practical TypeScript | mid
+Q: Why should negative type tests accompany a reusable typed component API?
+A: Positive examples show accepted usage, while negative fixtures demonstrate that invalid prop combinations or callbacks are rejected. Keep these fixtures bound to the actual implementation. Runtime tests remain necessary because compiler guarantees do not establish behavioral correctness.
+
+FS191 | Frontend performance | junior
+Q: What should you measure before optimizing a slow page?
+A: Identify the user-visible delay and collect relevant timings under representative conditions. Determine whether the bottleneck is network transfer, scripting, layout, rendering, or backend response. Optimizing an unrelated metric can add complexity without improving the actual experience.
+
+FS192 | Frontend performance | mid
+Q: Why can a small JavaScript bundle still make a page unresponsive?
+A: Transferred size is only one cost. Expensive execution, repeated rendering, and long tasks can block interaction even with little code. Profile main-thread work and interaction latency rather than treating bundle size as a complete measure of runtime performance.
+
+FS193 | Frontend performance | junior
+Q: How would you reduce layout shifts caused by late-loading content?
+A: Reserve appropriate space for images, embeds, and predictable loading regions. Avoid inserting unexpected content above an active reading position. Measure actual shifts and account for responsive dimensions rather than assigning arbitrary fixed heights that break at other sizes.
+
+FS194 | Frontend performance | mid
+Q: When can lazy loading make the initial user experience worse?
+A: Lazy loading critical above-the-fold content can delay the resource users need first. Dependencies may also form a loading waterfall. Prioritize essential content and lazy-load genuinely deferred features, verifying the effect with realistic network and device conditions.
+
+FS195 | Frontend performance | junior
+Q: What does a performance budget help a team decide?
+A: A budget makes acceptable costs such as script transfer, loading time, or interaction latency explicit. Use it to evaluate changes and catch regressions. Choose measurements tied to user needs rather than one arbitrary number that encourages gaming the test.
+
+FS196 | Frontend performance | mid
+Q: Why should expensive search indexing sometimes move into a web worker?
+A: A worker can perform suitable computation without occupying the interface's main thread. Account for message serialization, synchronization, and worker startup costs. DOM access remains on the main thread, so design a clear boundary around data processing rather than moving everything.
+
+FS197 | Frontend performance | junior
+Q: How can excessive font loading hurt a page?
+A: Multiple families and weights add downloads and can delay or alter text rendering. Load only needed variants and choose appropriate fallback and display behavior. Check readability and layout stability instead of selecting a font strategy solely for visual consistency.
+
+FS198 | Frontend performance | mid
+Q: Why are laboratory results and real-user performance data complementary?
+A: Laboratory tests provide repeatable conditions for diagnosis, while real-user data captures varied devices, networks, and usage. Neither alone describes every experience. Use both to distinguish reproducible regressions from problems affecting particular populations or interactions.
+
+FS199 | Frontend performance | mid
+Q: How can measuring every DOM node during scroll cause a performance problem?
+A: Frequent measurements can trigger substantial layout work and compete with scrolling. Reduce the amount of work, cache valid information, or use observers appropriate to the question. Verify correctness when content changes invalidate previously measured positions.
+
+FS200 | Frontend performance | junior
+Q: Why should performance improvements include a correctness check?
+A: An optimization that skips necessary updates or renders stale data is not a successful improvement. Run behavioral tests alongside measurements and inspect boundary cases. State the tradeoff explicitly when accepting reduced fidelity for a demonstrated performance benefit.
+
+FS201 | Frontend testing | junior
+Q: Why should a UI test query controls by accessible role and name?
+A: These queries express how users identify the interface and can reveal missing semantics. They are generally less tied to layout details than class selectors. Use other selectors when justified, but avoid making implementation structure the main contract of every test.
+
+FS202 | Frontend testing | mid
+Q: How should a test wait for asynchronous UI changes?
+A: Wait for the specific observable condition or assertion using the test framework's async facilities. Arbitrary sleeps are slower and unreliable across machines. Ensure the test also surfaces a failed outcome rather than waiting indefinitely for success alone.
+
+FS203 | Frontend testing | junior
+Q: What should remain real in a component test that mocks network calls?
+A: Keep the relevant rendering and user interaction behavior real so the test exercises the component's integration with its state. Mock the external boundary, not the behavior being tested. Include realistic response shapes and failure outcomes in the controlled transport.
+
+FS204 | Frontend testing | mid
+Q: Why can a test passing in jsdom still fail in an actual browser?
+A: A simulated DOM does not implement every layout, rendering, navigation, or device behavior of a browser. Use real-browser tests for contracts that depend on those capabilities. Treat fast component tests and browser tests as complementary layers.
+
+FS205 | Frontend testing | junior
+Q: When do snapshot tests become less useful?
+A: Large snapshots can record incidental markup and make meaningful changes hard to review. Prefer focused assertions for behavior and important structure. A snapshot is useful only when reviewers can understand what changed and whether the new output is correct.
+
+FS206 | Frontend testing | mid
+Q: How would you test out-of-order search responses deterministically?
+A: Provide controllable promises for two requests, resolve the newer one first, then resolve the older one. Assert that the current query's results remain visible. This directly tests response relevance without depending on random delays or actual network races.
+
+FS207 | Frontend testing | junior
+Q: Why should tests restore globals and timers after each case?
+A: Leaked globals, listeners, timers, or mocks can change later tests and make outcomes depend on execution order. Clean up through the framework's lifecycle tools. Also test meaningful resource cleanup in production components rather than relying solely on test teardown.
+
+FS208 | Frontend testing | mid
+Q: What is the difference between testing a loading skeleton and testing loading behavior?
+A: A skeleton assertion checks a particular presentation. Loading behavior also includes when it appears, whether prior content remains, and how success or failure replaces it. Prefer a clear state-transition test over asserting only that placeholder markup exists.
+
+FS209 | Frontend testing | junior
+Q: How can visual regression testing produce misleading failures?
+A: Fonts, animations, dynamic dates, and environment differences can alter screenshots without a meaningful product defect. Stabilize the environment and mask only genuinely irrelevant regions. Review differences rather than automatically accepting updates that could conceal real layout regressions.
+
+FS210 | Frontend testing | mid
+Q: Why are blank-starter failures useful in an exercise grader?
+A: They show that the grader rejects missing behavior rather than passing merely because files load. Require failures for the intended reason, not syntax or setup errors. A good negative control complements passing reference solutions but does not prove complete test coverage.
+
+FS211 | Debugging and diagnostics | junior
+Q: How would you narrow down a page that renders blank after a deployment?
+A: Check console errors, resource loading, and whether the initial document and entry scripts match the release. Separate startup failure from a legitimately empty route. Reproduce under the affected environment before changing unrelated dependencies or clearing evidence.
+
+FS212 | Debugging and diagnostics | mid
+Q: What do source maps contribute to production debugging?
+A: They connect transformed production code to its original source locations, making stack traces more actionable. Control access and upload practices according to the application's information policy. Source maps improve diagnosis but do not replace release identifiers or reliable error context.
+
+FS213 | Debugging and diagnostics | junior
+Q: Why should an error report include the application release version?
+A: A stack trace or behavior description is difficult to interpret without knowing which code was running. Include a safe release identifier with diagnostics. This helps distinguish current defects from stale clients and verify whether a fix reached the affected population.
+
+FS214 | Debugging and diagnostics | mid
+Q: How can you investigate a growing browser memory footprint?
+A: Reproduce a repeated interaction and compare memory behavior after cleanup opportunities. Inspect retained listeners, detached nodes, caches, and pending work. A temporary allocation increase is not automatically a leak; focus on objects retained beyond their useful lifetime.
+
+FS215 | Debugging and diagnostics | junior
+Q: What makes a minimal reproduction more useful than a screenshot alone?
+A: A reproduction identifies the inputs, sequence, environment, and actual outcome needed to trigger the defect. A screenshot captures only one visible moment. Reduce unrelated code while preserving the failure so the cause can be tested rather than guessed.
+
+FS216 | Debugging and diagnostics | mid
+Q: Why can logging every user action create more problems than it solves?
+A: Unbounded logging adds noise, costs, and privacy exposure. Select events that support defined diagnostic questions and remove sensitive values. Use sampling and retention policies deliberately, while ensuring important failures remain observable and can be connected to relevant sessions safely.
+
+FS217 | Debugging and diagnostics | junior
+Q: How should a bug report distinguish expected behavior from an assumption?
+A: State the observed sequence and outcome, then identify the contract or user requirement supporting the expected result. Label uncertain assumptions explicitly. This prevents a proposed implementation preference from being mistaken for a confirmed defect.
+
+FS218 | Debugging and diagnostics | mid
+Q: Why should debugging a flaky test begin with evidence instead of more retries?
+A: Retries can hide timing, shared-state, or environment problems without identifying their cause. Capture the failing state and check ownership of asynchronous work. Use repetition as a diagnostic tool, not as the sole fix for an unexplained failure.
+
+FS219 | Debugging and diagnostics | junior
+Q: What does a browser network waterfall reveal about a slow page?
+A: It shows request timing and dependency patterns, including resources that begin only after earlier work finishes. Look for avoidable serialization and delayed critical resources. Correlate it with main-thread activity because network timing alone does not explain every visible delay.
+
+FS220 | Debugging and diagnostics | mid
+Q: How can feature-flag context help diagnose a UI defect?
+A: Different flag assignments may make identical releases behave differently. Capture relevant non-sensitive flag state with the report and reproduce that configuration. Avoid logging every setting indiscriminately, and remember that a flag rollback may mitigate without explaining the underlying defect.
+
+FS221 | Loading and recovery UX | junior
+Q: When should a screen retain old data while refreshing?
+A: Retaining previous data can preserve context when a refresh is not a change of identity or scope. Indicate that an update is pending when it matters. Never show another account's or incompatible query's data merely to avoid an empty state.
+
+FS222 | Loading and recovery UX | mid
+Q: How should a partially failed bulk action be presented?
+A: Report which items succeeded and which failed, with safe retry options for the remaining work. Do not label the entire operation successful or replay successful items blindly. Preserve enough selection context for the user to understand and resolve the partial outcome.
+
+FS223 | Loading and recovery UX | junior
+Q: Why is a useful empty state more than a message saying no data?
+A: Explain whether the collection is genuinely empty or current filters exclude all results. Offer an appropriate next step such as adjusting filters or creating an item. Avoid promotional or instructional content that obscures the user's actual situation.
+
+FS224 | Loading and recovery UX | mid
+Q: What should a destructive-action confirmation contain?
+A: Identify the action, affected object or scope, and meaningful consequences in plain language. Use specific button labels rather than ambiguous confirmation text. Consider recoverable alternatives such as undo when they provide better protection without repetitive warnings.
+
+FS225 | Loading and recovery UX | junior
+Q: Why can an indefinite spinner undermine trust?
+A: It provides no distinction between slow progress, a stalled request, and a failed operation. Define timeout or recovery behavior and explain uncertainty honestly. Show progress only when it corresponds to meaningful measured work rather than an invented percentage.
+
+FS226 | Loading and recovery UX | mid
+Q: How should the interface respond when permissions change while a page is open?
+A: Reconcile capabilities after authoritative rejection or updated permission data. Remove unavailable actions and explain the change without discarding recoverable drafts unnecessarily. Do not assume a control remaining visible means the server will continue permitting its operation.
+
+FS227 | Loading and recovery UX | junior
+Q: When is inline feedback preferable to a toast?
+A: Use inline feedback when the message belongs to a specific field or persistent task context. Toasts suit brief, nonblocking status updates but can disappear before users understand them. Important failures should remain discoverable with a clear recovery path.
+
+FS228 | Loading and recovery UX | mid
+Q: How would you communicate a save whose server outcome is unknown?
+A: Explain that confirmation was not received rather than claiming the save failed. Offer a status check or safe reconciliation path before another consequential attempt. Preserve the draft and distinguish uncertainty from an explicit rejection returned by the server.
+
+FS229 | Loading and recovery UX | junior
+Q: What makes a retry action genuinely helpful?
+A: It should repeat an appropriate operation, preserve useful context, and report its outcome clearly. If recovery requires changing input or permissions, explain that instead. A generic retry button is misleading when the same unchanged request cannot reasonably succeed.
+
+FS230 | Loading and recovery UX | mid
+Q: How can autosave coexist with user confidence about saved work?
+A: Expose pending, saved, and failed states with accurate timing and preserve recoverable drafts. Define conflict behavior and when writes occur. Avoid claiming everything is saved while the latest edit remains queued or while an earlier request is still unresolved.
+
+FS231 | Internationalization | junior
+Q: Why should translated sentences not be assembled from independently translated fragments?
+A: Word order and grammatical relationships differ across languages. Translate complete messages with named placeholders so translators can reorganize them. Keep dynamic values separate from markup and provide context where the intended meaning is ambiguous.
+
+FS232 | Internationalization | mid
+Q: Why do plural messages need more than singular and plural English forms?
+A: Languages use different plural categories and rules depending on the number. Use a localization system that supports the relevant rules rather than a binary condition. Test representative quantities and let translators define complete messages for each required category.
+
+FS233 | Internationalization | junior
+Q: How should currency values be formatted for different locales?
+A: Use locale-aware formatting with an explicit currency and an appropriate numeric representation. Locale determines presentation conventions, not which currency a value represents. Keep formatting separate from conversion and apply the domain's rounding rules before display where necessary.
+
+FS234 | Internationalization | mid
+Q: What should a right-to-left layout review examine besides text alignment?
+A: Check navigation order, icons with directional meaning, mixed-direction values, and spacing assumptions. Logical CSS properties can reduce hardcoded left-right behavior. Do not mirror every image automatically; some symbols and data sequences should preserve their original orientation.
+
+FS235 | Internationalization | junior
+Q: Why should translation testing include longer strings than the English source?
+A: Translations may require substantially more space and can reveal clipping, wrapping, and fixed-height assumptions. Test flexible layouts and important controls with expanded text. Shortening translations arbitrarily to fit a rigid design can damage clarity and accessibility.
+
+FS236 | Internationalization | mid
+Q: How should user-selected time zones affect a scheduling interface?
+A: Display instants in the chosen zone and make that zone clear where ambiguity matters. Handle daylight-saving transitions and distinguish recurring local schedules from fixed instants. A numeric offset alone does not capture a region's future time-zone rules.
+
+FS237 | Internationalization | junior
+Q: Why can sorting names with a basic character-code comparison be unsuitable?
+A: Human sorting expectations differ by locale and may treat case or accents differently. Use an appropriate locale-aware comparator for presentation. Keep server pagination ordering coherent with the contract rather than sorting each retrieved page independently and implying a global order.
+
+FS238 | Internationalization | mid
+Q: How should a translation system handle a missing message key?
+A: Provide a deliberate fallback and make missing translations observable during development and release checks. Avoid crashing the entire interface for one missing label. Ensure fallback behavior does not expose confusing internal keys in important user-facing workflows.
+
+FS239 | Internationalization | junior
+Q: Why should language preference and geographic region be modeled separately?
+A: A person may read one language while using another region's date, currency, or address conventions. Do not infer all preferences from location alone. Allow appropriate overrides and distinguish presentation preferences from legal or service-availability rules.
+
+FS240 | Internationalization | mid
+Q: What is pseudo-localization useful for before translations exist?
+A: Pseudo-localization modifies source strings to expose hardcoded text, expansion problems, and encoding assumptions. It helps test the application's internationalization infrastructure early. It does not replace actual translation review or testing with readers of the supported languages.
+
+FS241 | Offline and browser lifecycle | junior
+Q: Why is navigator.onLine insufficient to prove an API is reachable?
+A: It reflects a browser connectivity signal, not successful access to a particular service. A network can exist while the service is unreachable or authentication fails. Use actual request outcomes and present offline indicators as guidance rather than authoritative reachability proof.
+
+FS242 | Offline and browser lifecycle | mid
+Q: What should an offline edit queue record?
+A: Record the intended operation, stable identity, relevant base version, and enough context for safe reconciliation. Define ordering and conflict handling when connectivity returns. Local acceptance must not be presented as confirmed server persistence until synchronization actually succeeds.
+
+FS243 | Offline and browser lifecycle | mid
+Q: Why does a service-worker update need a user-experience policy?
+A: An old page may continue using an old worker while a new version waits or activates. Forcing replacement can disrupt in-progress work or mix incompatible assets. Define update notification, activation timing, and compatibility instead of assuming deployment immediately replaces every client.
+
+FS244 | Offline and browser lifecycle | junior
+Q: How should a cached offline page explain its limitations?
+A: Indicate which information may be stale and which actions require connectivity. Preserve access to useful cached content without implying live status. If queued actions are supported, distinguish pending synchronization from completed changes and provide a way to inspect failures.
+
+FS245 | Offline and browser lifecycle | mid
+Q: Why should applications not depend on an unload handler for essential persistence?
+A: Browsers may terminate pages without reliably running the handler, especially on mobile. Persist important work incrementally and use appropriate lifecycle signals as best-effort supplements. Do not promise guaranteed saving based solely on a final request during page exit.
+
+FS246 | Offline and browser lifecycle | junior
+Q: How can visibility changes affect polling and timers?
+A: Browsers may throttle work in background tabs, so timer intervals are not exact clocks. Reduce unnecessary polling when hidden and refresh appropriately on return. Calculate elapsed time from timestamps rather than assuming every scheduled callback ran on time.
+
+FS247 | Offline and browser lifecycle | mid
+Q: What must an application reconcile after restoring a page from browser history cache?
+A: Restored pages can retain prior state without following a complete fresh-load path. Recheck time-sensitive data or session status when appropriate. Test restoration separately from ordinary navigation so stale assumptions do not survive unnoticed in a resumed interface.
+
+FS248 | Offline and browser lifecycle | junior
+Q: Why should object URLs created for file previews be revoked?
+A: Object URLs keep access to associated binary resources until released or their context ends. Revoke URLs when previews are replaced or no longer needed. Avoid revoking them before the consuming element has finished using the resource.
+
+FS249 | Offline and browser lifecycle | mid
+Q: How can offline conflict resolution preserve user work?
+A: Keep the local change and relevant server version available while deciding whether to merge, retry, or ask the user. Do not silently overwrite a newer remote edit. The correct policy depends on whether fields can be merged independently and safely.
+
+FS250 | Offline and browser lifecycle | junior
+Q: Why should storage quota exhaustion be part of offline testing?
+A: Offline features depend on local resources that can be limited or evicted. Test failures when saving new content and preserve existing recoverable data where possible. Explain the limitation and offer cleanup rather than reporting a successful save that never persisted.
+
+FS251 | Privacy and defensive security | junior
+Q: Why is hiding an administration button not an authorization control?
+A: A user can interact with a server independently of the visible interface. The server must authorize the action and resource for every relevant request. Hiding unavailable controls improves usability but cannot establish the permission boundary.
+
+FS252 | Privacy and defensive security | mid
+Q: What does a content security policy contribute to a frontend's defenses?
+A: A carefully designed policy restricts permitted resource and script behavior, reducing the impact of some injection defects. It complements safe rendering and input handling rather than replacing them. Roll it out with monitoring and test legitimate application functionality.
+
+FS253 | Privacy and defensive security | junior
+Q: Why must secrets never be placed in frontend build-time environment variables?
+A: Values included in client bundles are delivered to users and can be inspected. Build-time substitution does not make them secret. Keep privileged credentials on a trusted backend and expose only intentionally public configuration to the browser.
+
+FS254 | Privacy and defensive security | mid
+Q: How should an application safely display limited user-authored rich text?
+A: Use a maintained sanitizer with a restrictive policy appropriate to the output context, or a constrained structured format rendered through safe components. Avoid arbitrary HTML insertion. Validate link schemes and test permitted formatting without trusting client-only enforcement.
+
+FS255 | Privacy and defensive security | junior
+Q: What personal information should be excluded from frontend analytics by default?
+A: Avoid collecting form contents, credentials, sensitive identifiers, and unnecessary personal details. Start from a defined measurement question and collect the minimum needed. Review automatic capture behavior, retention, and consent obligations rather than assuming a vendor's default configuration is appropriate.
+
+FS256 | Privacy and defensive security | mid
+Q: Why do cookie-authenticated applications need a deliberate CSRF strategy?
+A: Browsers can attach applicable cookies automatically, so a server must distinguish legitimate state-changing requests under its security model. Use established protections appropriate to the framework and deployment. Do not rely on hidden buttons or cross-origin response restrictions alone.
+
+FS257 | Privacy and defensive security | junior
+Q: How should clipboard actions communicate their outcome?
+A: Request the operation through supported browser APIs and handle permission or context failures. Confirm copying only after success, and provide a fallback where appropriate. Avoid copying hidden sensitive content that differs from what the user reasonably expected.
+
+FS258 | Privacy and defensive security | mid
+Q: Why should a browser permission request occur in a meaningful context?
+A: People can make an informed decision when the feature and reason are clear. Ask when the capability is needed rather than immediately on page load. Handle denial gracefully and explain how the feature works without repeatedly pressuring the user.
+
+FS259 | Privacy and defensive security | junior
+Q: What should a frontend dependency update review include beyond whether installation succeeds?
+A: Review release changes, compatibility, maintenance status, and relevant security advisories. Run behavior and build checks for affected features. A successfully resolved dependency tree does not establish that the application still works or that every transitive dependency is appropriate.
+
+FS260 | Privacy and defensive security | mid
+Q: How can session-replay tooling unintentionally expose sensitive information?
+A: Replay tools may capture text, inputs, or page states that contain private data. Use explicit masking and collection policies, verify them against real flows with synthetic data, and limit access and retention. Do not assume one global setting covers every dynamically rendered field.

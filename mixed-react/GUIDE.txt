@@ -1,0 +1,76 @@
+MIXED-REACT
+
+65 React scenario exercises across 13 interaction families. Variants revisit a family with changed constraints; these are not 65 unrelated components.
+
+From unionboot: node mixed-react/verify.cjs
+Practice one: node mixed-react/verify.cjs --starters --id=519
+
+Tests use jsdom, React act, accessible queries and actual events. No external APIs.
+Each exercise exports a component; read tests to see example props. Import a starter in your own React application for a visual preview. No preview server is included.
+Do not copy reference solutions into starters unless you intentionally want solved files.
+
+519 Bounded quantity editor / scenario 1
+520 Bounded quantity editor / scenario 2
+521 Bounded quantity editor / scenario 3
+522 Bounded quantity editor / scenario 4
+523 Bounded quantity editor / scenario 5
+524 Validated text submission / scenario 1
+525 Validated text submission / scenario 2
+526 Validated text submission / scenario 3
+527 Validated text submission / scenario 4
+528 Validated text submission / scenario 5
+529 Filtered product list / scenario 1
+530 Filtered product list / scenario 2
+531 Filtered product list / scenario 3
+532 Filtered product list / scenario 4
+533 Filtered product list / scenario 5
+534 Exclusive accordion / scenario 1
+535 Exclusive accordion / scenario 2
+536 Exclusive accordion / scenario 3
+537 Exclusive accordion / scenario 4
+538 Exclusive accordion / scenario 5
+539 Accessible tab selection / scenario 1
+540 Accessible tab selection / scenario 2
+541 Accessible tab selection / scenario 3
+542 Accessible tab selection / scenario 4
+543 Accessible tab selection / scenario 5
+544 Checklist selection cap / scenario 1
+545 Checklist selection cap / scenario 2
+546 Checklist selection cap / scenario 3
+547 Checklist selection cap / scenario 4
+548 Checklist selection cap / scenario 5
+549 Stable sortable table / scenario 1
+550 Stable sortable table / scenario 2
+551 Stable sortable table / scenario 3
+552 Stable sortable table / scenario 4
+553 Stable sortable table / scenario 5
+554 Paged list controls / scenario 1
+555 Paged list controls / scenario 2
+556 Paged list controls / scenario 3
+557 Paged list controls / scenario 4
+558 Paged list controls / scenario 5
+559 Editable label with cancel / scenario 1
+560 Editable label with cancel / scenario 2
+561 Editable label with cancel / scenario 3
+562 Editable label with cancel / scenario 4
+563 Editable label with cancel / scenario 5
+564 Confirm destructive local action / scenario 1
+565 Confirm destructive local action / scenario 2
+566 Confirm destructive local action / scenario 3
+567 Confirm destructive local action / scenario 4
+568 Confirm destructive local action / scenario 5
+569 Reducer undoable text / scenario 1
+570 Reducer undoable text / scenario 2
+571 Reducer undoable text / scenario 3
+572 Reducer undoable text / scenario 4
+573 Reducer undoable text / scenario 5
+574 Password visibility and length / scenario 1
+575 Password visibility and length / scenario 2
+576 Password visibility and length / scenario 3
+577 Password visibility and length / scenario 4
+578 Password visibility and length / scenario 5
+579 Select all checklist / scenario 1
+580 Select all checklist / scenario 2
+581 Select all checklist / scenario 3
+582 Select all checklist / scenario 4
+583 Select all checklist / scenario 5

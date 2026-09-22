@@ -1,0 +1,14 @@
+1972: Bounded infer-chain box peeling / peel-budget=4
+
+Contract focus: conditional infer chains; recursion fuel; terminal values.
+
+Peel at most 4 own value boxes. Stop early at any unboxed value. Inputs are plain data objects (no inherited value properties, getters, or cycles). The conditional infer chain must stop at the same budget as runtime. The final assertion bridges the verified loop and conditional type.
+
+Semantic variation 4/15: peel-budget=4. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/1972.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/1972.cjs. Type contracts: types/1972.positive.ts and types/1972.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=1972
+Reference: node ts-next/verify.cjs --id=1972

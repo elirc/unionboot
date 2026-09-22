@@ -1,0 +1,14 @@
+2113: Tuple insertion boundary inference / insert-index=10
+
+Contract focus: tuple rest decomposition; insertion position algebra.
+
+Insert one value at zero-based index 10, clamped to the tuple end. Preserve every position type and value reference, returning a new tuple without changing input.
+
+Semantic variation 10/15: insert-index=10. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2113.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2113.cjs. Type contracts: types/2113.positive.ts and types/2113.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2113
+Reference: node ts-next/verify.cjs --id=2113

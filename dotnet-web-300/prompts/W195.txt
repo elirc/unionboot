@@ -1,0 +1,12 @@
+W195 — Streaming text response writers
+Scenario 5/10: NDJSON integer stream; max 5 records
+
+Write newline-delimited JSON {value:INTEGER}, at most5 records, to HttpResponse using async enumeration with RequestAborted. ContentType application/x-ndjson; charset=utf-8. Empty input produces empty200 body. Stop enumeration at cap, dispose enumerator; propagate cancellation. Example source[1,2] ->first min(2,5) JSON lines. In-process MemoryStream, not a network streaming test.
+
+Signature: public static async Task Handle(HttpContext context, IAsyncEnumerable<int> source)
+
+Edit starters/W195.cs. Run node dotnet-web-300/verify.cjs --starters --id=W195 from unionboot.
+Reference: solutions/W195.cs; shared checks: tests/W195.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

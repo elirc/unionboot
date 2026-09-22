@@ -1,0 +1,33 @@
+Q140 — family UPSERT conflict targets and merge policy, scenario 10: composite-conflict-target
+
+Task
+Create counters(bucket TEXT,name TEXT,value INTEGER,PRIMARY KEY(bucket,name)); insert day/hits=2 and week/hits=8, then upsert day/hits incoming 3 by adding only that composite key. Return sorted rows.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE inventory(sku TEXT PRIMARY KEY NOT NULL,qty INTEGER NOT NULL,price INTEGER NOT NULL,version INTEGER NOT NULL);
+INSERT INTO inventory VALUES('A',5,10,2),('B',0,20,1);
+
+Concrete example
+With the exact seed above, the first result row is {"bucket":"day","name":"hits","value":5}.
+
+Expected shape
+Columns (exact aliases): bucket, name, value. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "bucket": "day",
+    "name": "hits",
+    "value": 5
+  },
+  {
+    "bucket": "week",
+    "name": "hits",
+    "value": 8
+  }
+]
+
+Submission
+Edit starters/Q140.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q140
+Reference: node sql-200/verify.cjs --id=Q140

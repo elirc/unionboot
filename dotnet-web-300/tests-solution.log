@@ -1,0 +1,301 @@
+PASS W001 Resource lookup HTTP results
+PASS W002 Resource lookup HTTP results
+PASS W003 Resource lookup HTTP results
+PASS W004 Resource lookup HTTP results
+PASS W005 Resource lookup HTTP results
+PASS W006 Resource lookup HTTP results
+PASS W007 Resource lookup HTTP results
+PASS W008 Resource lookup HTTP results
+PASS W009 Resource lookup HTTP results
+PASS W010 Resource lookup HTTP results
+PASS W011 Creation and Location contracts
+PASS W012 Creation and Location contracts
+PASS W013 Creation and Location contracts
+PASS W014 Creation and Location contracts
+PASS W015 Creation and Location contracts
+PASS W016 Creation and Location contracts
+PASS W017 Creation and Location contracts
+PASS W018 Creation and Location contracts
+PASS W019 Creation and Location contracts
+PASS W020 Creation and Location contracts
+PASS W021 Conditional deletion contracts
+PASS W022 Conditional deletion contracts
+PASS W023 Conditional deletion contracts
+PASS W024 Conditional deletion contracts
+PASS W025 Conditional deletion contracts
+PASS W026 Conditional deletion contracts
+PASS W027 Conditional deletion contracts
+PASS W028 Conditional deletion contracts
+PASS W029 Conditional deletion contracts
+PASS W030 Conditional deletion contracts
+PASS W031 ValidationProblem field errors
+PASS W032 ValidationProblem field errors
+PASS W033 ValidationProblem field errors
+PASS W034 ValidationProblem field errors
+PASS W035 ValidationProblem field errors
+PASS W036 ValidationProblem field errors
+PASS W037 ValidationProblem field errors
+PASS W038 ValidationProblem field errors
+PASS W039 ValidationProblem field errors
+PASS W040 ValidationProblem field errors
+PASS W041 Pagination query handlers
+PASS W042 Pagination query handlers
+PASS W043 Pagination query handlers
+PASS W044 Pagination query handlers
+PASS W045 Pagination query handlers
+PASS W046 Pagination query handlers
+PASS W047 Pagination query handlers
+PASS W048 Pagination query handlers
+PASS W049 Pagination query handlers
+PASS W050 Pagination query handlers
+PASS W051 Filter and sort endpoint projections
+PASS W052 Filter and sort endpoint projections
+PASS W053 Filter and sort endpoint projections
+PASS W054 Filter and sort endpoint projections
+PASS W055 Filter and sort endpoint projections
+PASS W056 Filter and sort endpoint projections
+PASS W057 Filter and sort endpoint projections
+PASS W058 Filter and sort endpoint projections
+PASS W059 Filter and sort endpoint projections
+PASS W060 Filter and sort endpoint projections
+PASS W061 Strict boolean request query
+PASS W062 Strict boolean request query
+PASS W063 Strict boolean request query
+PASS W064 Strict boolean request query
+PASS W065 Strict boolean request query
+PASS W066 Strict boolean request query
+PASS W067 Strict boolean request query
+PASS W068 Strict boolean request query
+PASS W069 Strict boolean request query
+PASS W070 Strict boolean request query
+PASS W071 Date range query binding
+PASS W072 Date range query binding
+PASS W073 Date range query binding
+PASS W074 Date range query binding
+PASS W075 Date range query binding
+PASS W076 Date range query binding
+PASS W077 Date range query binding
+PASS W078 Date range query binding
+PASS W079 Date range query binding
+PASS W080 Date range query binding
+PASS W081 Header based request versioning
+PASS W082 Header based request versioning
+PASS W083 Header based request versioning
+PASS W084 Header based request versioning
+PASS W085 Header based request versioning
+PASS W086 Header based request versioning
+PASS W087 Header based request versioning
+PASS W088 Header based request versioning
+PASS W089 Header based request versioning
+PASS W090 Header based request versioning
+PASS W091 JSON media type gates
+PASS W092 JSON media type gates
+PASS W093 JSON media type gates
+PASS W094 JSON media type gates
+PASS W095 JSON media type gates
+PASS W096 JSON media type gates
+PASS W097 JSON media type gates
+PASS W098 JSON media type gates
+PASS W099 JSON media type gates
+PASS W100 JSON media type gates
+PASS W101 JSON request body validation
+PASS W102 JSON request body validation
+PASS W103 JSON request body validation
+PASS W104 JSON request body validation
+PASS W105 JSON request body validation
+PASS W106 JSON request body validation
+PASS W107 JSON request body validation
+PASS W108 JSON request body validation
+PASS W109 JSON request body validation
+PASS W110 JSON request body validation
+PASS W111 Form body handling
+PASS W112 Form body handling
+PASS W113 Form body handling
+PASS W114 Form body handling
+PASS W115 Form body handling
+PASS W116 Form body handling
+PASS W117 Form body handling
+PASS W118 Form body handling
+PASS W119 Form body handling
+PASS W120 Form body handling
+PASS W121 Route value parsing handlers
+PASS W122 Route value parsing handlers
+PASS W123 Route value parsing handlers
+PASS W124 Route value parsing handlers
+PASS W125 Route value parsing handlers
+PASS W126 Route value parsing handlers
+PASS W127 Route value parsing handlers
+PASS W128 Route value parsing handlers
+PASS W129 Route value parsing handlers
+PASS W130 Route value parsing handlers
+PASS W131 Dependency injection lifetime registration
+PASS W132 Dependency injection lifetime registration
+PASS W133 Dependency injection lifetime registration
+PASS W134 Dependency injection lifetime registration
+PASS W135 Dependency injection lifetime registration
+PASS W136 Dependency injection lifetime registration
+PASS W137 Dependency injection lifetime registration
+PASS W138 Dependency injection lifetime registration
+PASS W139 Dependency injection lifetime registration
+PASS W140 Dependency injection lifetime registration
+PASS W141 Keyed dependency injection
+PASS W142 Keyed dependency injection
+PASS W143 Keyed dependency injection
+PASS W144 Keyed dependency injection
+PASS W145 Keyed dependency injection
+PASS W146 Keyed dependency injection
+PASS W147 Keyed dependency injection
+PASS W148 Keyed dependency injection
+PASS W149 Keyed dependency injection
+PASS W150 Keyed dependency injection
+PASS W151 Options configuration and validation
+PASS W152 Options configuration and validation
+PASS W153 Options configuration and validation
+PASS W154 Options configuration and validation
+PASS W155 Options configuration and validation
+PASS W156 Options configuration and validation
+PASS W157 Options configuration and validation
+PASS W158 Options configuration and validation
+PASS W159 Options configuration and validation
+PASS W160 Options configuration and validation
+PASS W161 Response header middleware
+PASS W162 Response header middleware
+PASS W163 Response header middleware
+PASS W164 Response header middleware
+PASS W165 Response header middleware
+PASS W166 Response header middleware
+PASS W167 Response header middleware
+PASS W168 Response header middleware
+PASS W169 Response header middleware
+PASS W170 Response header middleware
+PASS W171 Domain error boundary middleware
+PASS W172 Domain error boundary middleware
+PASS W173 Domain error boundary middleware
+PASS W174 Domain error boundary middleware
+PASS W175 Domain error boundary middleware
+PASS W176 Domain error boundary middleware
+PASS W177 Domain error boundary middleware
+PASS W178 Domain error boundary middleware
+PASS W179 Domain error boundary middleware
+PASS W180 Domain error boundary middleware
+PASS W181 Request cancellation propagation
+PASS W182 Request cancellation propagation
+PASS W183 Request cancellation propagation
+PASS W184 Request cancellation propagation
+PASS W185 Request cancellation propagation
+PASS W186 Request cancellation propagation
+PASS W187 Request cancellation propagation
+PASS W188 Request cancellation propagation
+PASS W189 Request cancellation propagation
+PASS W190 Request cancellation propagation
+PASS W191 Streaming text response writers
+PASS W192 Streaming text response writers
+PASS W193 Streaming text response writers
+PASS W194 Streaming text response writers
+PASS W195 Streaming text response writers
+PASS W196 Streaming text response writers
+PASS W197 Streaming text response writers
+PASS W198 Streaming text response writers
+PASS W199 Streaming text response writers
+PASS W200 Streaming text response writers
+PASS W201 Endpoint route metadata
+PASS W202 Endpoint route metadata
+PASS W203 Endpoint route metadata
+PASS W204 Endpoint route metadata
+PASS W205 Endpoint route metadata
+PASS W206 Endpoint route metadata
+PASS W207 Endpoint route metadata
+PASS W208 Endpoint route metadata
+PASS W209 Endpoint route metadata
+PASS W210 Endpoint route metadata
+PASS W211 Authorization policy registration
+PASS W212 Authorization policy registration
+PASS W213 Authorization policy registration
+PASS W214 Authorization policy registration
+PASS W215 Authorization policy registration
+PASS W216 Authorization policy registration
+PASS W217 Authorization policy registration
+PASS W218 Authorization policy registration
+PASS W219 Authorization policy registration
+PASS W220 Authorization policy registration
+PASS W221 Protected endpoint policy metadata
+PASS W222 Protected endpoint policy metadata
+PASS W223 Protected endpoint policy metadata
+PASS W224 Protected endpoint policy metadata
+PASS W225 Protected endpoint policy metadata
+PASS W226 Protected endpoint policy metadata
+PASS W227 Protected endpoint policy metadata
+PASS W228 Protected endpoint policy metadata
+PASS W229 Protected endpoint policy metadata
+PASS W230 Protected endpoint policy metadata
+PASS W231 Current principal response projection
+PASS W232 Current principal response projection
+PASS W233 Current principal response projection
+PASS W234 Current principal response projection
+PASS W235 Current principal response projection
+PASS W236 Current principal response projection
+PASS W237 Current principal response projection
+PASS W238 Current principal response projection
+PASS W239 Current principal response projection
+PASS W240 Current principal response projection
+PASS W241 Explicit content negotiation handlers
+PASS W242 Explicit content negotiation handlers
+PASS W243 Explicit content negotiation handlers
+PASS W244 Explicit content negotiation handlers
+PASS W245 Explicit content negotiation handlers
+PASS W246 Explicit content negotiation handlers
+PASS W247 Explicit content negotiation handlers
+PASS W248 Explicit content negotiation handlers
+PASS W249 Explicit content negotiation handlers
+PASS W250 Explicit content negotiation handlers
+PASS W251 Conditional GET ETags
+PASS W252 Conditional GET ETags
+PASS W253 Conditional GET ETags
+PASS W254 Conditional GET ETags
+PASS W255 Conditional GET ETags
+PASS W256 Conditional GET ETags
+PASS W257 Conditional GET ETags
+PASS W258 Conditional GET ETags
+PASS W259 Conditional GET ETags
+PASS W260 Conditional GET ETags
+PASS W261 Cache policy response middleware
+PASS W262 Cache policy response middleware
+PASS W263 Cache policy response middleware
+PASS W264 Cache policy response middleware
+PASS W265 Cache policy response middleware
+PASS W266 Cache policy response middleware
+PASS W267 Cache policy response middleware
+PASS W268 Cache policy response middleware
+PASS W269 Cache policy response middleware
+PASS W270 Cache policy response middleware
+PASS W271 Injected deterministic cache handlers
+PASS W272 Injected deterministic cache handlers
+PASS W273 Injected deterministic cache handlers
+PASS W274 Injected deterministic cache handlers
+PASS W275 Injected deterministic cache handlers
+PASS W276 Injected deterministic cache handlers
+PASS W277 Injected deterministic cache handlers
+PASS W278 Injected deterministic cache handlers
+PASS W279 Injected deterministic cache handlers
+PASS W280 Injected deterministic cache handlers
+PASS W281 Idempotency key POST contracts
+PASS W282 Idempotency key POST contracts
+PASS W283 Idempotency key POST contracts
+PASS W284 Idempotency key POST contracts
+PASS W285 Idempotency key POST contracts
+PASS W286 Idempotency key POST contracts
+PASS W287 Idempotency key POST contracts
+PASS W288 Idempotency key POST contracts
+PASS W289 Idempotency key POST contracts
+PASS W290 Idempotency key POST contracts
+PASS W291 Binary file HTTP results
+PASS W292 Binary file HTTP results
+PASS W293 Binary file HTTP results
+PASS W294 Binary file HTTP results
+PASS W295 Binary file HTTP results
+PASS W296 Binary file HTTP results
+PASS W297 Binary file HTTP results
+PASS W298 Binary file HTTP results
+PASS W299 Binary file HTTP results
+PASS W300 Binary file HTTP results
+Groups: 300 passed, 0 failed; assertions: 2160

@@ -1,0 +1,31 @@
+Q035 — family Subqueries correlated lookups and existence, scenario 5: in-subquery-positive-bonus
+
+Task
+Return employees appearing in the set of positive-bonus employee ids.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE employees(id INTEGER PRIMARY KEY,name TEXT,dept TEXT,salary INTEGER);
+CREATE TABLE bonuses(employee_id INTEGER,amount INTEGER);
+INSERT INTO employees VALUES(1,'Ada','A',100),(2,'Bo','A',80),(3,'Cy','A',80),(4,'Dee','B',90),(5,'Eli','B',60),(6,'Flo','C',NULL);
+INSERT INTO bonuses VALUES(1,10),(1,5),(3,0),(4,20),(NULL,99);
+
+Concrete example
+With the exact seed above, the first result row is {"name":"Ada"}.
+
+Expected shape
+Columns (exact aliases): name. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "name": "Ada"
+  },
+  {
+    "name": "Dee"
+  }
+]
+
+Submission
+Edit starters/Q035.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q035
+Reference: node sql-200/verify.cjs --id=Q035

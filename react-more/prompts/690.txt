@@ -1,0 +1,11 @@
+Reducer undoable text / scenario 12 — 3-entry bounded history; lower; reject blank commits
+
+Use useReducer for controlled Text history, initially 'start'. Normalize changes by lowercasing (preserve whitespace). Reject empty normalized strings. Identical normalized value does not create an entry. Retain at most 3 entries, dropping oldest. Undo/Redo navigate; new edit after undo drops redo. Output retained entry count. Clear history keeps the current text as the only entry. Buttons disable at boundaries.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=690
+Run your starter: node react-more/verify.cjs --starters --id=690

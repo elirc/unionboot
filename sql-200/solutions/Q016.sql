@@ -1,0 +1,1 @@
+SELECT DISTINCT c.id,c.name FROM customers c JOIN orders o ON o.customer_id=c.id JOIN lines l ON l.order_id=o.id JOIN products p ON p.id=l.product_id WHERE o.status='paid' AND p.category='office' ORDER BY c.id;

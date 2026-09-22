@@ -1,0 +1,18 @@
+Ranked trie autocomplete / scenario 5 — rank=longest; limit=2
+
+TASK
+Input {words:[{word,score}],prefix}, unique ASCII word strings, finite scores. Build a trie; collect prefix matches, rank by longest (score descending, lengths as named, recent means reverse input position, lexical code-unit ascending). Break ties lexically. Return at most 2 word strings. Empty prefix matches every word, including empty word; no match returns [].
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1733.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1733
+node js-more/verify.cjs --starters --id=1733
+
+POLICIES
+rank=longest; limit=2
+Semantic key: {"limit":2,"rank":"longest"}

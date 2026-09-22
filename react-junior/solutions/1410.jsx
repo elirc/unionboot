@@ -1,0 +1,6 @@
+// 1410 Memoized filtering / performance variant [performance]
+// Props items are {id,name,tier}. A Tier select (all/gold/silver) and a Min length number input (nonnegative integer, default 0). Render matching names (exact tier match AND name length >= min) in listitems. Compute the filtered list with useMemo keyed on [items, tier, minLength]; otherwise still correct. Output count. Changing an unrelated rerender prop must not reset either control (state lives in the component, not the list).
+// Run: node react-junior/verify.cjs --id=1410 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({items=[]}){const [tier,setTier]=useState('all'),[minLen,setMinLen]=useState('0');const filtered=useMemo(()=>items.filter(x=>(tier==='all'||x.tier===tier)&&x.name.length>=Number(minLen)),[items,tier,minLen]);
+return <section><label>Tier<select value={tier} onChange={e=>setTier(e.target.value)}>{['all','gold','silver'].map(x=><option key={x}>{x}</option>)}</select></label><label>Min length<input type="number" min="0" step="1" value={minLen} onChange={e=>setMinLen(e.target.value)}/></label><ul>{filtered.map(x=><li key={x.id}>{x.name}</li>)}</ul><output>{filtered.length}</output></section>;}

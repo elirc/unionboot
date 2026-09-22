@@ -1,0 +1,32 @@
+Q149 — family Transactions savepoints and atomic state, scenario 9: nested-savepoint-preserve-middle
+
+Task
+Begin, add 1 to account 1, savepoint a, add 2, savepoint b, add 4, rollback to b, release b, release a, commit. Return balances.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE accounts(id INTEGER PRIMARY KEY,balance INTEGER NOT NULL CHECK(balance>=0));
+INSERT INTO accounts VALUES(1,100),(2,50);
+CREATE TABLE audit(id INTEGER PRIMARY KEY,note TEXT);
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"balance":103}.
+
+Expected shape
+Columns (exact aliases): id, balance. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "balance": 103
+  },
+  {
+    "id": 2,
+    "balance": 50
+  }
+]
+
+Submission
+Edit starters/Q149.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q149
+Reference: node sql-200/verify.cjs --id=Q149

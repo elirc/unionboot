@@ -1,0 +1,18 @@
+Virtual window slicing / scenario 7 — Boundary 7; visible rows only
+
+TASK
+Render data-testid=viewport; fixed row height 10px, visible capacity 8. onScroll derives first visible index floor(max(0,scrollTop)/10), clamped so a full final window remains (or zero for short lists). Render only slice [first-0,first+8+0), clipped to data. Outputs Start (zero-based rendered start), End (exclusive), Offset (start*10). Each listitem must have aria-posinset originalIndex+1 and aria-setsize full length. Prop shrink clamps immediately. This exercise tests virtualization math, not actual jsdom scrolling/layout.
+
+EXAMPLE
+scrollTop=30 => Start=3, End=11.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3005.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{items=[]}
+Example data: {"items":["Item 1","Item 2","Item 3","Item 4","Item 5","Item 6","Item 7","Item 8","Item 9","Item 10","Item 11","Item 12","Item 13","Item 14","Item 15","Item 16","Item 17","Item 18","Item 19","Item 20","Item 21","Item 22","Item 23","Item 24","Item 25","Item 26","Item 27","Item 28","Item 29","Item 30","Item 31","Item 32","Item 33","Item 34","Item 35","Item 36","Item 37","Item 38","Item 39","Item 40"]}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3005
+node react-next/verify.cjs --starters --id=3005

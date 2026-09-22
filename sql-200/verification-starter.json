@@ -1,0 +1,1609 @@
+{
+  "track": "sql-200",
+  "mode": "starter",
+  "groups": 200,
+  "passed": 0,
+  "failed": 200,
+  "results": [
+    {
+      "id": "Q001",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Blue',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Bo'\n-   },\n-   {\n-     label: 'Gold',\n-     name: 'Cy'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q002",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Blue',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Bo'\n-   },\n-   {\n-     label: 'Gold',\n-     name: 'Cy'\n-   },\n-   {\n-     label: null,\n-     name: 'Dee'\n-   },\n-   {\n-     label: null,\n-     name: 'Eli'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q003",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Blue',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Bo'\n-   },\n-   {\n-     label: 'Gold',\n-     name: 'Cy'\n-   },\n-   {\n-     label: 'Red',\n-     name: null\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q004",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: null,\n-     name: 'Dee'\n-   },\n-   {\n-     label: null,\n-     name: 'Eli'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Bo'\n-   },\n-   {\n-     label: 'Gold',\n-     name: 'Cy'\n-   },\n-   {\n-     label: 'Red',\n-     name: null\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q005",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Blue',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Bo'\n-   },\n-   {\n-     label: null,\n-     name: 'Cy'\n-   },\n-   {\n-     label: null,\n-     name: 'Dee'\n-   },\n-   {\n-     label: null,\n-     name: 'Eli'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q006",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Blue',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Blue',\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q007",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     first: 'Ada',\n-     second: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q008",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Gold',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Red',\n-     name: 'Ada'\n-   },\n-   {\n-     label: 'Gold',\n-     name: 'Bo'\n-   },\n-   {\n-     label: 'Red',\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q009",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Dee'\n-   },\n-   {\n-     name: 'Eli'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q010",
+      "family": "Join preservation and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'Blue',\n-     members: 2\n-   },\n-   {\n-     label: 'Gold',\n-     members: 1\n-   },\n-   {\n-     label: 'Red',\n-     members: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q011",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     amount: 6,\n-     customer: 'Ada',\n-     order_id: 10,\n-     product: 'Pen',\n-     qty: 2\n-   },\n-   {\n-     amount: 8,\n-     customer: 'Ada',\n-     order_id: 10,\n-     product: 'Mug',\n-     qty: 1\n-   },\n-   {\n-     amount: 3,\n-     customer: 'Bo',\n-     order_id: 12,\n-     product: 'Pen',\n-     qty: 1\n-   },\n-   {\n-     amount: 4,\n-     customer: 'Bo',\n-     order_id: 12,\n-     product: 'Pad',\n-     qty: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q012",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     spend: 14\n-   },\n-   {\n-     name: 'Bo',\n-     spend: 7\n-   },\n-   {\n-     name: 'Cy',\n-     spend: 0\n-   },\n-   {\n-     name: 'Dee',\n-     spend: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q013",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     category: 'home',\n-     revenue: 8\n-   },\n-   {\n-     category: 'office',\n-     revenue: 13\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q014",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     buyers: 2,\n-     name: 'Pen'\n-   },\n-   {\n-     buyers: 1,\n-     name: 'Mug'\n-   },\n-   {\n-     buyers: 1,\n-     name: 'Pad'\n-   },\n-   {\n-     buyers: 0,\n-     name: 'Lamp'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q015",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     paid_orders: 1\n-   },\n-   {\n-     name: 'Bo',\n-     paid_orders: 1\n-   },\n-   {\n-     name: 'Cy',\n-     paid_orders: 0\n-   },\n-   {\n-     name: 'Dee',\n-     paid_orders: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q016",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Ada'\n-   },\n-   {\n-     id: 2,\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q017",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Pad',\n-     reserved: 4\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q018",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     category: 'home',\n-     name: 'Ada',\n-     total: 8\n-   },\n-   {\n-     category: 'office',\n-     name: 'Ada',\n-     total: 6\n-   },\n-   {\n-     category: 'office',\n-     name: 'Bo',\n-     total: 7\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q019",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Cy'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q020",
+      "family": "Multi-table commerce joins",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     average_order: 10.5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q021",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     region: 'East',\n-     total: 130\n-   },\n-   {\n-     region: 'North',\n-     total: 30\n-   },\n-   {\n-     region: 'South',\n-     total: null\n-   },\n-   {\n-     region: 'West',\n-     total: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q022",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     region: 'East',\n-     total: 30\n-   },\n-   {\n-     region: 'North',\n-     total: 40\n-   },\n-   {\n-     region: 'West',\n-     total: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q023",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     region: 'East',\n-     total: 30\n-   },\n-   {\n-     region: 'North',\n-     total: 40\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q024",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     known_count: 3,\n-     region: 'East',\n-     rows_count: 3\n-   },\n-   {\n-     known_count: 2,\n-     region: 'North',\n-     rows_count: 2\n-   },\n-   {\n-     known_count: 0,\n-     region: 'South',\n-     rows_count: 1\n-   },\n-   {\n-     known_count: 1,\n-     region: 'West',\n-     rows_count: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q025",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     average: 43.33,\n-     region: 'East'\n-   },\n-   {\n-     average: 15,\n-     region: 'North'\n-   },\n-   {\n-     average: null,\n-     region: 'South'\n-   },\n-   {\n-     average: 5,\n-     region: 'West'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q026",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     average: 43.33,\n-     region: 'East'\n-   },\n-   {\n-     average: 15,\n-     region: 'North'\n-   },\n-   {\n-     average: 0,\n-     region: 'South'\n-   },\n-   {\n-     average: 2.5,\n-     region: 'West'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q027",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     region: 'East',\n-     statuses: 2\n-   },\n-   {\n-     region: 'North',\n-     statuses: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q028",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     entries: 3,\n-     region: 'East'\n-   },\n-   {\n-     entries: 2,\n-     region: 'North'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q029",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     region: 'East',\n-     total: 130\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q030",
+      "family": "GROUP BY HAVING and aggregate policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     entries: 2,\n-     region: 'East',\n-     status: 'paid',\n-     total: 30\n-   },\n-   {\n-     entries: 1,\n-     region: 'East',\n-     status: 'pending',\n-     total: 100\n-   },\n-   {\n-     entries: 1,\n-     region: 'North',\n-     status: 'paid',\n-     total: 40\n-   },\n-   {\n-     entries: 1,\n-     region: 'North',\n-     status: 'refund',\n-     total: -10\n-   },\n-   {\n-     entries: 1,\n-     region: 'South',\n-     status: 'pending',\n-     total: 0\n-   },\n-   {\n-     entries: 2,\n-     region: 'West',\n-     status: 'paid',\n-     total: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q031",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     salary: 100\n-   },\n-   {\n-     name: 'Dee',\n-     salary: 90\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q032",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     salary: 100\n-   },\n-   {\n-     name: 'Dee',\n-     salary: 90\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q033",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Cy'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q034",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Bo'\n-   },\n-   {\n-     name: 'Eli'\n-   },\n-   {\n-     name: 'Flo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q035",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q036",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     bonus: 15,\n-     name: 'Ada'\n-   },\n-   {\n-     bonus: 0,\n-     name: 'Bo'\n-   },\n-   {\n-     bonus: 0,\n-     name: 'Cy'\n-   },\n-   {\n-     bonus: 20,\n-     name: 'Dee'\n-   },\n-   {\n-     bonus: 0,\n-     name: 'Eli'\n-   },\n-   {\n-     bonus: 0,\n-     name: 'Flo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q037",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     bonus: 15,\n-     name: 'Ada'\n-   },\n-   {\n-     bonus: 20,\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q038",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q039",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     higher: 0,\n-     name: 'Ada'\n-   },\n-   {\n-     higher: 1,\n-     name: 'Bo'\n-   },\n-   {\n-     higher: 1,\n-     name: 'Cy'\n-   },\n-   {\n-     higher: 0,\n-     name: 'Dee'\n-   },\n-   {\n-     higher: 1,\n-     name: 'Eli'\n-   },\n-   {\n-     higher: 0,\n-     name: 'Flo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q040",
+      "family": "Subqueries correlated lookups and existence",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     dept: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q041",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     place: 1,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Bo',\n-     place: 2,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Cy',\n-     place: 3,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Dee',\n-     place: 4,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     place: 1,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Flo',\n-     place: 2,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Gus',\n-     place: 3,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q042",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     place: 1,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Bo',\n-     place: 2,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Cy',\n-     place: 2,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Dee',\n-     place: 4,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     place: 1,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Flo',\n-     place: 1,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Gus',\n-     place: 3,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q043",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     place: 1,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Bo',\n-     place: 2,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Cy',\n-     place: 2,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Dee',\n-     place: 3,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     place: 1,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Flo',\n-     place: 1,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Gus',\n-     place: 2,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q044",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     score: 100,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     score: 80,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q045",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     score: 100,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     score: 80,\n-     team: 'B'\n-   },\n-   {\n-     name: 'Flo',\n-     score: 80,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q046",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     team: 'A'\n-   },\n-   {\n-     name: 'Bo',\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     team: 'B'\n-   },\n-   {\n-     name: 'Flo',\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q047",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     team: 'A'\n-   },\n-   {\n-     name: 'Bo',\n-     team: 'A'\n-   },\n-   {\n-     name: 'Cy',\n-     team: 'A'\n-   },\n-   {\n-     name: 'Eli',\n-     team: 'B'\n-   },\n-   {\n-     name: 'Flo',\n-     team: 'B'\n-   },\n-   {\n-     name: 'Gus',\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q048",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     place: 1\n-   },\n-   {\n-     name: 'Bo',\n-     place: 2\n-   },\n-   {\n-     name: 'Cy',\n-     place: 2\n-   },\n-   {\n-     name: 'Eli',\n-     place: 4\n-   },\n-   {\n-     name: 'Flo',\n-     place: 4\n-   },\n-   {\n-     name: 'Dee',\n-     place: 6\n-   },\n-   {\n-     name: 'Gus',\n-     place: 7\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q049",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Bo',\n-     score: 90,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Cy',\n-     score: 90,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Gus',\n-     score: 60,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q050",
+      "family": "Ranking and top N per group",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Dee',\n-     score: 70,\n-     team: 'A'\n-   },\n-   {\n-     name: 'Gus',\n-     score: 60,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q051",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     previous: null\n-   },\n-   {\n-     id: 2,\n-     previous: 10\n-   },\n-   {\n-     id: 3,\n-     previous: 20\n-   },\n-   {\n-     id: 4,\n-     previous: 30\n-   },\n-   {\n-     id: 5,\n-     previous: null\n-   },\n-   {\n-     id: 6,\n-     previous: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q052",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     next: 20\n-   },\n-   {\n-     id: 2,\n-     next: 30\n-   },\n-   {\n-     id: 3,\n-     next: 40\n-   },\n-   {\n-     id: 4,\n-     next: 0\n-   },\n-   {\n-     id: 5,\n-     next: 15\n-   },\n-   {\n-     id: 6,\n-     next: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q053",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     delta: null,\n-     id: 1\n-   },\n-   {\n-     delta: 10,\n-     id: 2\n-   },\n-   {\n-     delta: 10,\n-     id: 3\n-   },\n-   {\n-     delta: 10,\n-     id: 4\n-   },\n-   {\n-     delta: null,\n-     id: 5\n-   },\n-   {\n-     delta: 10,\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q054",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     total: 10\n-   },\n-   {\n-     id: 2,\n-     total: 30\n-   },\n-   {\n-     id: 3,\n-     total: 60\n-   },\n-   {\n-     id: 4,\n-     total: 100\n-   },\n-   {\n-     id: 5,\n-     total: 5\n-   },\n-   {\n-     id: 6,\n-     total: 20\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q055",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     total: 10\n-   },\n-   {\n-     id: 2,\n-     total: 60\n-   },\n-   {\n-     id: 3,\n-     total: 60\n-   },\n-   {\n-     id: 4,\n-     total: 100\n-   },\n-   {\n-     id: 5,\n-     total: 5\n-   },\n-   {\n-     id: 6,\n-     total: 20\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q056",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     average: 10,\n-     id: 1\n-   },\n-   {\n-     average: 15,\n-     id: 2\n-   },\n-   {\n-     average: 25,\n-     id: 3\n-   },\n-   {\n-     average: 35,\n-     id: 4\n-   },\n-   {\n-     average: 5,\n-     id: 5\n-   },\n-   {\n-     average: 10,\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q057",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     average: 15,\n-     id: 1\n-   },\n-   {\n-     average: 20,\n-     id: 2\n-   },\n-   {\n-     average: 30,\n-     id: 3\n-   },\n-   {\n-     average: 35,\n-     id: 4\n-   },\n-   {\n-     average: 10,\n-     id: 5\n-   },\n-   {\n-     average: 10,\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q058",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     last_value: 40\n-   },\n-   {\n-     id: 2,\n-     last_value: 40\n-   },\n-   {\n-     id: 3,\n-     last_value: 40\n-   },\n-   {\n-     id: 4,\n-     last_value: 40\n-   },\n-   {\n-     id: 5,\n-     last_value: 15\n-   },\n-   {\n-     id: 6,\n-     last_value: 15\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q059",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     percent: 10\n-   },\n-   {\n-     id: 2,\n-     percent: 20\n-   },\n-   {\n-     id: 3,\n-     percent: 30\n-   },\n-   {\n-     id: 4,\n-     percent: 40\n-   },\n-   {\n-     id: 5,\n-     percent: 25\n-   },\n-   {\n-     id: 6,\n-     percent: 75\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q060",
+      "family": "Window offsets frames and analytics",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     total: 10\n-   },\n-   {\n-     id: 2,\n-     total: 60\n-   },\n-   {\n-     id: 3,\n-     total: 60\n-   },\n-   {\n-     id: 4,\n-     total: 40\n-   },\n-   {\n-     id: 5,\n-     total: 5\n-   },\n-   {\n-     id: 6,\n-     total: 15\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q061",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     reports: 2\n-   },\n-   {\n-     name: 'Bo',\n-     reports: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q062",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     depth: 0,\n-     name: 'Ada'\n-   },\n-   {\n-     depth: 1,\n-     name: 'Bo'\n-   },\n-   {\n-     depth: 1,\n-     name: 'Cy'\n-   },\n-   {\n-     depth: 2,\n-     name: 'Dee'\n-   },\n-   {\n-     depth: 2,\n-     name: 'Eli'\n-   },\n-   {\n-     depth: 3,\n-     name: 'Flo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q063",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Dee'\n-   },\n-   {\n-     name: 'Eli'\n-   },\n-   {\n-     name: 'Flo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q064",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     distance: 0,\n-     name: 'Flo'\n-   },\n-   {\n-     distance: 1,\n-     name: 'Dee'\n-   },\n-   {\n-     distance: 2,\n-     name: 'Bo'\n-   },\n-   {\n-     distance: 3,\n-     name: 'Ada'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q065",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     path: 'Ada/Cy'\n-   },\n-   {\n-     path: 'Ada/Bo/Eli'\n-   },\n-   {\n-     path: 'Ada/Bo/Dee/Flo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q066",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Dee'\n-   },\n-   {\n-     name: 'Eli'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q067",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     node: 1\n-   },\n-   {\n-     node: 2\n-   },\n-   {\n-     node: 3\n-   },\n-   {\n-     node: 4\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q068",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     n: 2,\n-     square: 4\n-   },\n-   {\n-     n: 3,\n-     square: 9\n-   },\n-   {\n-     n: 4,\n-     square: 16\n-   },\n-   {\n-     n: 5,\n-     square: 25\n-   },\n-   {\n-     n: 6,\n-     square: 36\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q069",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     day: '2024-01-01',\n-     events: 2\n-   },\n-   {\n-     day: '2024-01-02',\n-     events: 0\n-   },\n-   {\n-     day: '2024-01-03',\n-     events: 1\n-   },\n-   {\n-     day: '2024-01-04',\n-     events: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q070",
+      "family": "CTE pipelines and recursive traversal",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     descendants: 5,\n-     name: 'Ada'\n-   },\n-   {\n-     descendants: 3,\n-     name: 'Bo'\n-   },\n-   {\n-     descendants: 1,\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q071",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: null\n-   },\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Bo'\n-   },\n-   {\n-     name: 'Cy'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q072",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: null\n-   },\n-   {\n-     name: null\n-   },\n-   {\n-     name: null\n-   },\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Bo'\n-   },\n-   {\n-     name: 'Bo'\n-   },\n-   {\n-     name: 'Bo'\n-   },\n-   {\n-     name: 'Cy'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q073",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: null\n-   },\n-   {\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q074",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Cy'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q075",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q076",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada'\n-   },\n-   {\n-     name: 'Cy'\n-   },\n-   {\n-     name: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q077",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q078",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Ada',\n-     source: 'spring'\n-   },\n-   {\n-     name: 'Bo',\n-     source: 'autumn'\n-   },\n-   {\n-     name: 'Bo',\n-     source: 'spring'\n-   },\n-   {\n-     name: 'Cy',\n-     source: 'spring'\n-   },\n-   {\n-     name: 'Dee',\n-     source: 'autumn'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q079",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: null,\n-     occurrences: 3\n-   },\n-   {\n-     name: 'Ada',\n-     occurrences: 1\n-   },\n-   {\n-     name: 'Bo',\n-     occurrences: 3\n-   },\n-   {\n-     name: 'Cy',\n-     occurrences: 1\n-   },\n-   {\n-     name: 'Dee',\n-     occurrences: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q080",
+      "family": "Set operations and membership policies",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     name: 'Bo'\n-   },\n-   {\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q081",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     value: 10\n-   },\n-   {\n-     id: 2,\n-     value: -1\n-   },\n-   {\n-     id: 3,\n-     value: 5\n-   },\n-   {\n-     id: 4,\n-     value: -1\n-   },\n-   {\n-     id: 5,\n-     value: 0\n-   },\n-   {\n-     id: 6,\n-     value: 3\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q082",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     ratio: 5\n-   },\n-   {\n-     id: 2,\n-     ratio: null\n-   },\n-   {\n-     id: 3,\n-     ratio: null\n-   },\n-   {\n-     id: 4,\n-     ratio: null\n-   },\n-   {\n-     id: 5,\n-     ratio: null\n-   },\n-   {\n-     id: 6,\n-     ratio: null\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q083",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     label: 'ok'\n-   },\n-   {\n-     id: 2,\n-     label: 'unknown'\n-   },\n-   {\n-     id: 3,\n-     label: 'unknown'\n-   },\n-   {\n-     id: 4,\n-     label: 'missing'\n-   },\n-   {\n-     id: 5,\n-     label: 'zero'\n-   },\n-   {\n-     id: 6,\n-     label: 'unknown'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q084",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1\n-   },\n-   {\n-     id: 5\n-   },\n-   {\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q085",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1\n-   },\n-   {\n-     id: 2\n-   },\n-   {\n-     id: 4\n-   },\n-   {\n-     id: 5\n-   },\n-   {\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q086",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 4\n-   },\n-   {\n-     id: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q087",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1\n-   },\n-   {\n-     id: 2\n-   },\n-   {\n-     id: 3\n-   },\n-   {\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q088",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     a: 10,\n-     id: 1\n-   },\n-   {\n-     a: 0,\n-     id: 5\n-   },\n-   {\n-     a: 3,\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q089",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     truth: 1\n-   },\n-   {\n-     id: 2,\n-     truth: 1\n-   },\n-   {\n-     id: 3,\n-     truth: 1\n-   },\n-   {\n-     id: 4,\n-     truth: null\n-   },\n-   {\n-     id: 5,\n-     truth: 0\n-   },\n-   {\n-     id: 6,\n-     truth: null\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q090",
+      "family": "NULL semantics and three valued logic",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     known: 4,\n-     missing: 2,\n-     zeros: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q091",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     day: '2024-02-28',\n-     id: 1\n-   },\n-   {\n-     day: '2024-02-29',\n-     id: 2\n-   },\n-   {\n-     day: '2024-03-01',\n-     id: 3\n-   },\n-   {\n-     day: '2024-03-03',\n-     id: 4\n-   },\n-   {\n-     day: '2024-12-31',\n-     id: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q092",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1\n-   },\n-   {\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q093",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     events: 2,\n-     month: '2024-02'\n-   },\n-   {\n-     events: 2,\n-     month: '2024-03'\n-   },\n-   {\n-     events: 1,\n-     month: '2024-12'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q094",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     month_end: '2024-02-29'\n-   },\n-   {\n-     id: 2,\n-     month_end: '2024-02-29'\n-   },\n-   {\n-     id: 3,\n-     month_end: '2024-03-31'\n-   },\n-   {\n-     id: 4,\n-     month_end: '2024-03-31'\n-   },\n-   {\n-     id: 5,\n-     month_end: '2024-12-31'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q095",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     local_day: '2024-02-29'\n-   },\n-   {\n-     id: 2,\n-     local_day: '2024-02-29'\n-   },\n-   {\n-     id: 3,\n-     local_day: '2024-03-01'\n-   },\n-   {\n-     id: 4,\n-     local_day: '2024-03-03'\n-   },\n-   {\n-     id: 5,\n-     local_day: '2025-01-01'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q096",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     hours: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q097",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 4,\n-     weekday: '0'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q098",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     week_start: '2024-02-26'\n-   },\n-   {\n-     id: 2,\n-     week_start: '2024-02-26'\n-   },\n-   {\n-     id: 3,\n-     week_start: '2024-02-26'\n-   },\n-   {\n-     id: 4,\n-     week_start: '2024-02-26'\n-   },\n-   {\n-     id: 5,\n-     week_start: '2024-12-30'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q099",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     seconds: 0,\n-     utc: '1970-01-01 00:00:00'\n-   },\n-   {\n-     seconds: 86400,\n-     utc: '1970-01-02 00:00:00'\n-   },\n-   {\n-     seconds: 1709164800,\n-     utc: '2024-02-29 00:00:00'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q100",
+      "family": "SQLite dates times and calendar boundaries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     age_days: 5,\n-     id: 1\n-   },\n-   {\n-     age_days: 4,\n-     id: 2\n-   },\n-   {\n-     age_days: 3,\n-     id: 3\n-   },\n-   {\n-     age_days: 1,\n-     id: 4\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q101",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'ada@example.com',\n-     id: 1,\n-     name: 'Ada'\n-   },\n-   {\n-     email: 'bo@work.org',\n-     id: 2,\n-     name: 'Bo'\n-   },\n-   {\n-     email: 'cy@example.com',\n-     id: 3,\n-     name: 'cy'\n-   },\n-   {\n-     email: null,\n-     id: 4,\n-     name: 'Dee'\n-   },\n-   {\n-     email: 'eli+tag@example.com',\n-     id: 5,\n-     name: 'Eli'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q102",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     domain: 'example.com',\n-     id: 1\n-   },\n-   {\n-     domain: 'work.org',\n-     id: 2\n-   },\n-   {\n-     domain: 'example.com',\n-     id: 3\n-   },\n-   {\n-     domain: 'example.com',\n-     id: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q103",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     contacts: 3,\n-     domain: 'example.com'\n-   },\n-   {\n-     contacts: 1,\n-     domain: 'work.org'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q104",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     number: 1,\n-     prefix: 'AB'\n-   },\n-   {\n-     id: 2,\n-     number: 2,\n-     prefix: 'AB'\n-   },\n-   {\n-     id: 3,\n-     number: 10,\n-     prefix: 'XY'\n-   },\n-   {\n-     id: 4,\n-     number: 11,\n-     prefix: 'XY'\n-   },\n-   {\n-     id: 5,\n-     number: 100,\n-     prefix: 'ZZ'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q105",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     compact: 'AB001',\n-     id: 1\n-   },\n-   {\n-     compact: 'AB002',\n-     id: 2\n-   },\n-   {\n-     compact: 'XY010',\n-     id: 3\n-   },\n-   {\n-     compact: 'XY011',\n-     id: 4\n-   },\n-   {\n-     compact: 'ZZ100',\n-     id: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q106",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Ada'\n-   },\n-   {\n-     id: 4,\n-     name: 'Dee'\n-   },\n-   {\n-     id: 5,\n-     name: 'Eli'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q107",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     code: 'XY-010',\n-     id: 3\n-   },\n-   {\n-     code: 'XY-011',\n-     id: 4\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q108",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     label: 'a_b'\n-   },\n-   {\n-     id: 3,\n-     label: '_'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q109",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     display: 'Ada <ada@example.com>',\n-     id: 1\n-   },\n-   {\n-     display: 'Bo <bo@work.org>',\n-     id: 2\n-   },\n-   {\n-     display: 'cy <cy@example.com>',\n-     id: 3\n-   },\n-   {\n-     display: 'Dee <no-email>',\n-     id: 4\n-   },\n-   {\n-     display: 'Eli <eli+tag@example.com>',\n-     id: 5\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q110",
+      "family": "String normalization parsing and matching",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     roster: 'Eli,Dee,cy,Bo,Ada'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q111",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     band: 'urgent',\n-     id: 1\n-   },\n-   {\n-     band: 'low',\n-     id: 2\n-   },\n-   {\n-     band: 'normal',\n-     id: 3\n-   },\n-   {\n-     band: 'urgent',\n-     id: 4\n-   },\n-   {\n-     band: 'unknown',\n-     id: 5\n-   },\n-   {\n-     band: 'low',\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q112",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     label: 'todo'\n-   },\n-   {\n-     id: 2,\n-     label: 'done'\n-   },\n-   {\n-     id: 3,\n-     label: 'todo'\n-   },\n-   {\n-     id: 4,\n-     label: 'done'\n-   },\n-   {\n-     id: 5,\n-     label: 'waiting'\n-   },\n-   {\n-     id: 6,\n-     label: 'todo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q113",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     closed_count: 1,\n-     open_count: 2,\n-     pending_count: 0,\n-     team: 'A'\n-   },\n-   {\n-     closed_count: 1,\n-     open_count: 1,\n-     pending_count: 1,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q114",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     closed_hours: 5,\n-     open_hours: 2,\n-     team: 'A'\n-   },\n-   {\n-     closed_hours: 3,\n-     open_hours: 0,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q115",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     average_open: 2,\n-     team: 'A'\n-   },\n-   {\n-     average_open: 0,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q116",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     points: 8,\n-     team: 'A'\n-   },\n-   {\n-     points: 6,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q117",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     size: 'small'\n-   },\n-   {\n-     id: 2,\n-     size: 'large'\n-   },\n-   {\n-     id: 3,\n-     size: 'unestimated'\n-   },\n-   {\n-     id: 4,\n-     size: 'small'\n-   },\n-   {\n-     id: 5,\n-     size: 'large'\n-   },\n-   {\n-     id: 6,\n-     size: 'none'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q118",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     team: 'A',\n-     tickets: 3\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q119",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     closed_percent: 33.3,\n-     team: 'A'\n-   },\n-   {\n-     closed_percent: 33.3,\n-     team: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q120",
+      "family": "CASE pivot and conditional aggregation",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 5,\n-     status: 'pending'\n-   },\n-   {\n-     id: 1,\n-     status: 'open'\n-   },\n-   {\n-     id: 3,\n-     status: 'open'\n-   },\n-   {\n-     id: 6,\n-     status: 'open'\n-   },\n-   {\n-     id: 2,\n-     status: 'closed'\n-   },\n-   {\n-     id: 4,\n-     status: 'closed'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q121",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'One'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q122",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     qty: 0,\n-     sku: 'A'\n-   },\n-   {\n-     qty: 3,\n-     sku: 'B'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q123",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'Ada@x',\n-     id: 1\n-   },\n-   {\n-     email: 'ada@x',\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q124",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'Ada@x',\n-     id: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q125",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     role: 'reader',\n-     team_id: 10,\n-     user_id: 1\n-   },\n-   {\n-     role: 'writer',\n-     team_id: 20,\n-     user_id: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q126",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     dept_id: 10,\n-     id: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q127",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     dept_id: 20,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q128",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     enabled: 0,\n-     id: 1,\n-     status: 'draft'\n-   },\n-   {\n-     enabled: 1,\n-     id: 2,\n-     status: 'live'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q129",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     value: 7\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q130",
+      "family": "SQLite schema constraints and integrity",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     score: null\n-   },\n-   {\n-     id: 2,\n-     score: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q131",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 10,\n-     qty: 5,\n-     sku: 'A',\n-     version: 2\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   },\n-   {\n-     price: 30,\n-     qty: 3,\n-     sku: 'C',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q132",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 10,\n-     qty: 5,\n-     sku: 'A',\n-     version: 2\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q133",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 10,\n-     qty: 3,\n-     sku: 'A',\n-     version: 2\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q134",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 10,\n-     qty: 8,\n-     sku: 'A',\n-     version: 2\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q135",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 10,\n-     qty: 5,\n-     sku: 'A',\n-     version: 2\n-   },\n-   {\n-     price: 20,\n-     qty: 4,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q136",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 12,\n-     qty: 7,\n-     sku: 'A',\n-     version: 3\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q137",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 10,\n-     qty: 5,\n-     sku: 'A',\n-     version: 2\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q138",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 8,\n-     qty: 5,\n-     sku: 'A',\n-     version: 3\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q139",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     price: 11,\n-     qty: 6,\n-     sku: 'A',\n-     version: 3\n-   },\n-   {\n-     price: 20,\n-     qty: 0,\n-     sku: 'B',\n-     version: 1\n-   },\n-   {\n-     price: 30,\n-     qty: 2,\n-     sku: 'C',\n-     version: 1\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q140",
+      "family": "UPSERT conflict targets and merge policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     bucket: 'day',\n-     name: 'hits',\n-     value: 5\n-   },\n-   {\n-     bucket: 'week',\n-     name: 'hits',\n-     value: 8\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q141",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 80,\n-     id: 1\n-   },\n-   {\n-     balance: 70,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q142",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 100,\n-     id: 1\n-   },\n-   {\n-     balance: 50,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q143",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 90,\n-     id: 1\n-   },\n-   {\n-     balance: 50,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q144",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 100,\n-     id: 1\n-   },\n-   {\n-     balance: 50,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q145",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 105,\n-     id: 1\n-   },\n-   {\n-     balance: 55,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q146",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     tables_found: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q147",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     audit_count: 1,\n-     balance: 90,\n-     id: 1\n-   },\n-   {\n-     audit_count: 1,\n-     balance: 60,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q148",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     audit_count: 0,\n-     balance: 100,\n-     id: 1\n-   },\n-   {\n-     audit_count: 0,\n-     balance: 50,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q149",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 103,\n-     id: 1\n-   },\n-   {\n-     balance: 50,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q150",
+      "family": "Transactions savepoints and atomic state",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     balance: 85,\n-     id: 1\n-   },\n-   {\n-     balance: 65,\n-     id: 2\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q151",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     status: 'open'\n-   },\n-   {\n-     id: 2,\n-     status: 'done'\n-   },\n-   {\n-     id: 3,\n-     status: 'cancelled'\n-   },\n-   {\n-     id: 4,\n-     status: 'open'\n-   },\n-   {\n-     id: 5,\n-     status: 'done'\n-   },\n-   {\n-     id: 6,\n-     status: 'open'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q152",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     owner: 'Ada'\n-   },\n-   {\n-     id: 2,\n-     owner: 'Ada'\n-   },\n-   {\n-     id: 4,\n-     owner: 'Cy'\n-   },\n-   {\n-     id: 5,\n-     owner: 'Cy'\n-   },\n-   {\n-     id: 6,\n-     owner: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q153",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     points: 5\n-   },\n-   {\n-     id: 2,\n-     points: 7\n-   },\n-   {\n-     id: 3,\n-     points: 2\n-   },\n-   {\n-     id: 4,\n-     points: 3\n-   },\n-   {\n-     id: 5,\n-     points: 0\n-   },\n-   {\n-     id: 6,\n-     points: null\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q154",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     points: 3\n-   },\n-   {\n-     id: 2,\n-     points: 5\n-   },\n-   {\n-     id: 3,\n-     points: 2\n-   },\n-   {\n-     id: 4,\n-     points: 4\n-   },\n-   {\n-     id: 5,\n-     points: 1\n-   },\n-   {\n-     id: 6,\n-     points: 0\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q155",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     status: 'open'\n-   },\n-   {\n-     id: 3,\n-     status: 'open'\n-   },\n-   {\n-     id: 4,\n-     status: 'open'\n-   },\n-   {\n-     id: 6,\n-     status: 'open'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q156",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     owner: 'Ada'\n-   },\n-   {\n-     id: 2,\n-     owner: 'Ada'\n-   },\n-   {\n-     id: 4,\n-     owner: 'Cy'\n-   },\n-   {\n-     id: 5,\n-     owner: 'Cy'\n-   },\n-   {\n-     id: 6,\n-     owner: 'Dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q157",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     points: 13\n-   },\n-   {\n-     id: 2,\n-     points: 5\n-   },\n-   {\n-     id: 3,\n-     points: 2\n-   },\n-   {\n-     id: 4,\n-     points: 14\n-   },\n-   {\n-     id: 5,\n-     points: 1\n-   },\n-   {\n-     id: 6,\n-     points: 10\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q158",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     status: 'open'\n-   },\n-   {\n-     id: 2,\n-     status: 'done'\n-   },\n-   {\n-     id: 3,\n-     status: 'open'\n-   },\n-   {\n-     id: 4,\n-     status: 'urgent'\n-   },\n-   {\n-     id: 5,\n-     status: 'done'\n-   },\n-   {\n-     id: 6,\n-     status: 'open'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q159",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     owner: 'Ada'\n-   },\n-   {\n-     id: 2,\n-     owner: 'Ada'\n-   },\n-   {\n-     id: 4,\n-     owner: 'Cy'\n-   },\n-   {\n-     id: 5,\n-     owner: 'Cy'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q160",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 3,\n-     points: 9\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q161",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     day: 1,\n-     gap: 1\n-   },\n-   {\n-     day: 2,\n-     gap: 2\n-   },\n-   {\n-     day: 4,\n-     gap: 1\n-   },\n-   {\n-     day: 5,\n-     gap: 1\n-   },\n-   {\n-     day: 6,\n-     gap: 3\n-   },\n-   {\n-     day: 9,\n-     gap: null\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q162",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     missing: 3\n-   },\n-   {\n-     missing: 7\n-   },\n-   {\n-     missing: 8\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q163",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     day: 4\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q164",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     day: 1,\n-     island: 0\n-   },\n-   {\n-     day: 2,\n-     island: 0\n-   },\n-   {\n-     day: 4,\n-     island: 1\n-   },\n-   {\n-     day: 5,\n-     island: 1\n-   },\n-   {\n-     day: 6,\n-     island: 1\n-   },\n-   {\n-     day: 9,\n-     island: 3\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q165",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     largest: 3\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q166",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     end_day: 2,\n-     size: 2,\n-     start_day: 1\n-   },\n-   {\n-     end_day: 6,\n-     size: 3,\n-     start_day: 4\n-   },\n-   {\n-     end_day: 9,\n-     size: 1,\n-     start_day: 9\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q167",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     flag: 0,\n-     id: 1\n-   },\n-   {\n-     flag: 0,\n-     id: 2\n-   },\n-   {\n-     flag: 0,\n-     id: 3\n-   },\n-   {\n-     flag: 0,\n-     id: 4\n-   },\n-   {\n-     flag: 1,\n-     id: 5\n-   },\n-   {\n-     flag: 0,\n-     id: 6\n-   },\n-   {\n-     flag: 0,\n-     id: 7\n-   },\n-   {\n-     flag: 1,\n-     id: 8\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q168",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     longest: 3\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q169",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     longest: 4\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q170",
+      "family": "Gaps islands sequences and streaks",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     level: 80\n-   },\n-   {\n-     id: 2,\n-     level: 60\n-   },\n-   {\n-     id: 3,\n-     level: 50\n-   },\n-   {\n-     id: 5,\n-     level: 55\n-   },\n-   {\n-     id: 6,\n-     level: 54\n-   },\n-   {\n-     id: 8,\n-     level: 70\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q171",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'ada@x.com',\n-     id: 1\n-   },\n-   {\n-     email: 'bo@x.com',\n-     id: 2\n-   },\n-   {\n-     email: null,\n-     id: 4\n-   },\n-   {\n-     email: 'CY@x.com',\n-     id: 5\n-   },\n-   {\n-     email: 'dee@x.com',\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q172",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'bo@x.com',\n-     id: 2\n-   },\n-   {\n-     email: 'ada@x.com',\n-     id: 3\n-   },\n-   {\n-     email: null,\n-     id: 4\n-   },\n-   {\n-     email: 'CY@x.com',\n-     id: 5\n-   },\n-   {\n-     email: 'dee@x.com',\n-     id: 7\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q173",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: null,\n-     first_id: 4\n-   },\n-   {\n-     email: 'ada@x.com',\n-     first_id: 1\n-   },\n-   {\n-     email: 'bo@x.com',\n-     first_id: 2\n-   },\n-   {\n-     email: 'cy@x.com',\n-     first_id: 5\n-   },\n-   {\n-     email: 'dee@x.com',\n-     first_id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q174",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'ada@x.com',\n-     id: 1\n-   },\n-   {\n-     email: 'bo@x.com',\n-     id: 2\n-   },\n-   {\n-     email: null,\n-     id: 4\n-   },\n-   {\n-     email: 'CY@x.com',\n-     id: 5\n-   },\n-   {\n-     email: 'dee@x.com',\n-     id: 6\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q175",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     copies: 2,\n-     email: 'ada@x.com'\n-   },\n-   {\n-     copies: 2,\n-     email: 'dee@x.com'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q176",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     copies: 2,\n-     email: 'bo@x.com',\n-     name: 'Bo'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q177",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'bo@x.com',\n-     id: 2,\n-     name: 'Bo'\n-   },\n-   {\n-     email: 'ada@x.com',\n-     id: 3,\n-     name: 'ada'\n-   },\n-   {\n-     email: 'CY@x.com',\n-     id: 5,\n-     name: 'cy'\n-   },\n-   {\n-     email: 'dee@x.com',\n-     id: 7,\n-     name: 'dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q178",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'ada@x.com',\n-     name: 'Ada'\n-   },\n-   {\n-     email: 'bo@x.com',\n-     name: 'Bo'\n-   },\n-   {\n-     email: null,\n-     name: 'Cy'\n-   },\n-   {\n-     email: 'dee@x.com',\n-     name: 'Dee'\n-   },\n-   {\n-     email: 'ada@x.com',\n-     name: 'ada'\n-   },\n-   {\n-     email: 'CY@x.com',\n-     name: 'cy'\n-   },\n-   {\n-     email: 'dee@x.com',\n-     name: 'dee'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q179",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     email: 'ada@x.com',\n-     id: 1\n-   },\n-   {\n-     email: 'bo@x.com',\n-     id: 2\n-   },\n-   {\n-     email: 'ada@x.com',\n-     id: 3\n-   },\n-   {\n-     email: 'CY@x.com',\n-     id: 5\n-   },\n-   {\n-     email: 'dee@x.com',\n-     id: 6\n-   },\n-   {\n-     email: 'dee@x.com',\n-     id: 7\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q180",
+      "family": "Deduplication keep policies and hygiene",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     duplicate_count: 2,\n-     total_rows: 7\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q181",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Pen'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q182",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Pen',\n-     price: 3\n-   },\n-   {\n-     id: 3,\n-     name: 'Pad',\n-     price: 12\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q183",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Pen'\n-   },\n-   {\n-     id: 3,\n-     name: 'Pad'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q184",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 4,\n-     name: 'Lamp'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q185",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Pen'\n-   },\n-   {\n-     id: 3,\n-     name: 'Pad'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q186",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     cheapest: 8\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q187",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 2,\n-     price: 10\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q188",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 6,\n-     name: \"O'Brien pen\"\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q189",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Pen',\n-     price: 3\n-   },\n-   {\n-     id: 2,\n-     name: 'Mug',\n-     price: 8\n-   },\n-   {\n-     id: 3,\n-     name: 'Pad',\n-     price: 12\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q190",
+      "family": "Parameterized queries with node sqlite bindings",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     expensive: 2,\n-     total: 78\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q191",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SEARCH orders2 USING INTEGER PRIMARY KEY (rowid=?)'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q192",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SCAN orders2'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q193",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SEARCH orders2 USING INDEX orders2_status (status=?)'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q194",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SEARCH orders2 USING COVERING INDEX orders2_cover (status=?)'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q195",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SEARCH o USING COVERING INDEX orders2_status (status=?)'\n-   },\n-   {\n-     detail: 'SEARCH l USING INDEX lines2_order (order_id=?)'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q196",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     order_id: 1,\n-     product_id: 100\n-   },\n-   {\n-     order_id: 1,\n-     product_id: 101\n-   },\n-   {\n-     order_id: 2,\n-     product_id: 100\n-   },\n-   {\n-     order_id: 3,\n-     product_id: 100\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q197",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SEARCH t2 USING COVERING INDEX sqlite_autoindex_t2_1 (x=?)'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q198",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SCAN orders2'\n-   },\n-   {\n-     detail: 'LIST SUBQUERY 1'\n-   },\n-   {\n-     detail: 'SCAN orders2'\n-   },\n-   {\n-     detail: 'CREATE BLOOM FILTER'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q199",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SEARCH orders2 USING COVERING INDEX orders2_status_cust (status=?)'\n-   }\n- ]\n"
+    },
+    {
+      "id": "Q200",
+      "family": "EXPLAIN QUERY PLAN and index aware queries",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact rows/order do not match expected result\n+ actual - expected\n\n+ []\n- [\n-   {\n-     detail: 'SCAN lines2'\n-   },\n-   {\n-     detail: 'USE TEMP B-TREE FOR GROUP BY'\n-   }\n- ]\n"
+    }
+  ]
+}

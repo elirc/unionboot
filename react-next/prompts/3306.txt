@@ -1,0 +1,18 @@
+Paste replacement transaction / scenario 8 — Boundary 8; preserve pasted case
+
+TASK
+Draft textarea starts abcdef. Intercept paste using clipboardData.getData('text/plain'), remove CR/LF, preserve case, truncate PASTED text to 8 characters, and replace current selection (selectionStart..selectionEnd), leaving unselected text untouched. Prevent default and restore caret just after inserted text using a layout effect. Changes by ordinary typing stay untouched. Output Text echoes full draft.
+
+EXAMPLE
+Select bc, paste xy => axydef. Only pasted text is truncated; unselected text stays intact.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3306.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3306
+node react-next/verify.cjs --starters --id=3306

@@ -1,0 +1,9 @@
+{
+  "mode": "starter",
+  "compilerVersion": "5.9.3",
+  "id": 2299,
+  "compiler": "passed",
+  "runtime": "failed",
+  "todoMatch": true,
+  "diagnostic": "Error: TODO exercise 2299\n    at solve (C:\\Users\\Owner\\Desktop\\unionboot\\ts-next\\.verify\\run-np1Or5\\build\\starters\\2299.js:6:11)\n    at module.exports (C:\\Users\\Owner\\Desktop\\unionboot\\ts-next\\tests\\2299.cjs:4:60)\n    at main (C:\\Users\\Owner\\Desktop\\unionboot\\ts-next\\verify.cjs:24:196)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}

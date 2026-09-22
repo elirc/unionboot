@@ -1,0 +1,18 @@
+Shared quota allocation / scenario 7 — Atomic oversized batch
+
+TASK
+A and B share 5 units, initially A=0, B=0. Take A/B requests 6; reject an entire request when free units are insufficient. Release A/B returns up to 6 owned units. Label outputs A, B, Free. Keep action buttons enabled, guard state updates. Reset restores initial counts.
+
+EXAMPLE
+Initially Free=5; Take A gives A=0 and Free=5.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1535.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1535
+node react-300/verify.cjs --starters --id=1535

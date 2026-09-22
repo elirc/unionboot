@@ -1,0 +1,12 @@
+W073 — Date range query binding
+Scenario 3/10: ISO dates; maximum inclusive span 3 days
+
+Require exactly one from and to in yyyy-MM-dd. Inclusive number of days must be1..3. Reject missing, duplicate, invalid calendar date, reversed/excessive range with400. Success200 {from,to,days}. Example same date2024-02-29 ->days1 (leap-day valid).
+
+Signature: public static IResult Handle(HttpRequest request)
+
+Edit starters/W073.cs. Run node dotnet-web-300/verify.cjs --starters --id=W073 from unionboot.
+Reference: solutions/W073.cs; shared checks: tests/W073.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

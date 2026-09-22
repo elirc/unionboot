@@ -1,0 +1,14 @@
+2008: Saturating tuple suffix algebra / drop=10
+
+Contract focus: variadic rest inference; bounded drop.
+
+Drop up to 10 leading positions and return a fresh readonly-typed suffix. Dropping beyond a tuple yields []. Preserve exact remaining position types. Inputs are finite tuples.
+
+Semantic variation 10/15: drop=10. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2008.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2008.cjs. Type contracts: types/2008.positive.ts and types/2008.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2008
+Reference: node ts-next/verify.cjs --id=2008

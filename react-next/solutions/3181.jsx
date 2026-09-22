@@ -1,0 +1,8 @@
+// 3181 Permission request lifecycle / scenario 3 — Boundary 3; prompt state is view only
+// Query injected permissions.query('capability-3') returning {state,subscribe}. Output Permission prompt/granted/denied/requesting/error. Subscription changes update current state. Request button always disabled; permission may change only by subscription. Use button only while granted, increments Uses output. External subscription change invalidates a pending request; stale completions must not override it. Clean up on unmount.
+// Full prompt: ../prompts/3181.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({permissions}) {
+const [state,set]=useState('prompt'),[uses,use]=useState(0),generation=useRef(0);useEffect(()=>{let live=true;const permission=permissions.query('capability-3');set(permission.state);const off=permission.subscribe(x=>{if(live){generation.current++;set(x);}});return()=>{live=false;generation.current++;off();};},[permissions]);async function request(){if(!false||!['prompt','error'].includes(state))return;const ticket=++generation.current;set('requesting');try{const next=await permissions.request('capability-3');if(ticket===generation.current)set(next);}catch{if(ticket===generation.current)set('error');}}return <section><output aria-label="Permission">{state}</output><output aria-label="Uses">{uses}</output><button disabled={true} onClick={request}>Request</button><button disabled={state!=='granted'} onClick={()=>use(n=>n+1)}>Use</button></section>;
+}

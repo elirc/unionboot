@@ -1,0 +1,12 @@
+W259 — Conditional GET ETags
+Scenario 9/10: Representation v9; weak If-None-Match comparison
+
+Always set response ETag to quoted "v9". For GET, If-None-Match tokens separated by commas: trim each, match strong tag, W/weak form, or *. Match->304 empty body; no match/missing->200 {version:9}. Malformed tokens are ignored. Scope: fixed comma-free tag, not a general HTTP entity-tag parser. Example W/"v9" ->304.
+
+Signature: public static IResult Handle(HttpContext context)
+
+Edit starters/W259.cs. Run node dotnet-web-300/verify.cjs --starters --id=W259 from unionboot.
+Reference: solutions/W259.cs; shared checks: tests/W259.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

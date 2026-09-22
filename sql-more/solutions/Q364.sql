@@ -1,0 +1,1 @@
+WITH b AS(SELECT id,sku,SUM(delta) OVER(PARTITION BY sku ORDER BY at,id ROWS UNBOUNDED PRECEDING) AS stock FROM moves) SELECT id,sku,stock FROM b WHERE stock<0 ORDER BY id;

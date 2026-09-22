@@ -1,0 +1,38 @@
+Q390 — family Closure table hierarchies and inherited policy, scenario 10: override-only-versus-inherited
+
+Task
+Return nodes with explicit policy and their parent effective policy (closest ancestor excluding self); Root parent policy is NULL.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE nodes(id INTEGER PRIMARY KEY,name TEXT);CREATE TABLE closure(ancestor INTEGER,descendant INTEGER,depth INTEGER,PRIMARY KEY(ancestor,descendant));INSERT INTO nodes VALUES(1,'Root'),(2,'Sales'),(3,'Support'),(4,'East'),(5,'West');INSERT INTO closure VALUES(1,1,0),(2,2,0),(3,3,0),(4,4,0),(5,5,0),(1,2,1),(1,3,1),(2,4,1),(2,5,1),(1,4,2),(1,5,2);CREATE TABLE policy(node INTEGER PRIMARY KEY,mode TEXT);INSERT INTO policy VALUES(1,'read'),(2,'write'),(5,'deny');
+
+Concrete example
+The first result row on this seed is {"name":"Root","own":"read","inherited":null}.
+
+Expected shape
+Columns: name, own, inherited. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "name": "Root",
+    "own": "read",
+    "inherited": null
+  },
+  {
+    "name": "Sales",
+    "own": "write",
+    "inherited": "read"
+  },
+  {
+    "name": "West",
+    "own": "deny",
+    "inherited": "write"
+  }
+]
+
+Submission
+Write SQL in starters/Q390.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q390
+Learner: node sql-more/verify.cjs --starters --id=Q390

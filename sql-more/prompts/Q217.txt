@@ -1,0 +1,31 @@
+Q217 — family JSON array expansion and nested traversal, scenario 7: sku-rollup-across-documents
+
+Task
+Sum quantities across all nested item objects, grouped by SKU.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE baskets(id INTEGER PRIMARY KEY,body TEXT);INSERT INTO baskets VALUES(1,'{"tags":["red","blue","red"],"items":[{"sku":"A","qty":2},{"sku":"B","qty":1}]}'),(2,'{"tags":[],"items":[]}'),(3,'{"tags":["blue"],"items":[{"sku":"A","qty":3}]}');
+
+Concrete example
+The first result row on this seed is {"sku":"A","qty":5}.
+
+Expected shape
+Columns: sku, qty. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "sku": "A",
+    "qty": 5
+  },
+  {
+    "sku": "B",
+    "qty": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q217.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q217
+Learner: node sql-more/verify.cjs --starters --id=Q217

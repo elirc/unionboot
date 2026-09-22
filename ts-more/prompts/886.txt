@@ -1,0 +1,15 @@
+886: Nullish compaction / scenario 13
+
+Contract focus: NonNullable; type guards; unions.
+Remove only null and undefined. Keep falsy but present values (0, false, empty string, NaN). Return a NonNullable element array without asserting that every falsy value is absent.
+
+This is scenario 13/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize mixed duplicates; scalar/state exercises use deterministic case seed 12. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/886.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/886.cjs. Positive strict fixtures: types/886.positive.ts. Negative strict fixtures: types/886.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=886
+Reference check:
+  node ts-more/verify.cjs --id=886
+

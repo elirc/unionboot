@@ -1,0 +1,41 @@
+Q069 — family CTE pipelines and recursive traversal, scenario 9: recursive-date-spine-left-join
+
+Task
+Generate 2024-01-01 through 2024-01-04 inclusively, left join daily events, and zero-fill absent days. SQLite date modifiers are dialect-specific.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE staff(id INTEGER PRIMARY KEY,name TEXT,manager_id INTEGER);
+INSERT INTO staff VALUES(1,'Ada',NULL),(2,'Bo',1),(3,'Cy',1),(4,'Dee',2),(5,'Eli',2),(6,'Flo',4);
+CREATE TABLE edges(src INTEGER,dst INTEGER);
+INSERT INTO edges VALUES(1,2),(2,3),(3,1),(2,4);CREATE TABLE events(id INTEGER,day TEXT); INSERT INTO events VALUES(1,'2024-01-01'),(2,'2024-01-01'),(3,'2024-01-03');
+
+Concrete example
+With the exact seed above, the first result row is {"day":"2024-01-01","events":2}.
+
+Expected shape
+Columns (exact aliases): day, events. 4 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "day": "2024-01-01",
+    "events": 2
+  },
+  {
+    "day": "2024-01-02",
+    "events": 0
+  },
+  {
+    "day": "2024-01-03",
+    "events": 1
+  },
+  {
+    "day": "2024-01-04",
+    "events": 0
+  }
+]
+
+Submission
+Edit starters/Q069.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q069
+Reference: node sql-200/verify.cjs --id=Q069

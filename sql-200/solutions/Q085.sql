@@ -1,0 +1,1 @@
+SELECT id FROM measures WHERE a<>5 OR a IS NULL ORDER BY id;

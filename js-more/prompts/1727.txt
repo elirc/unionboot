@@ -1,0 +1,18 @@
+LFU cache eviction / scenario 9 — capacity=6; tie=oldest
+
+TASK
+Input {ops} with get {key} and put {key,value}, string keys and primitive non-null values. Capacity 6; evict least frequency, ties oldest last successful access. Insert frequency 1; get hit and put replacement each increment frequency and touch sequence. Miss returns null and does not touch. Return {reads,entries}; entries are [key,value,frequency] sorted by code-unit key. Unknown operation throws Error('Unknown operation').
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1727.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1727
+node js-more/verify.cjs --starters --id=1727
+
+POLICIES
+capacity=6; tie=oldest
+Semantic key: {"capacity":6,"tie":"oldest"}

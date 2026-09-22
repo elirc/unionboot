@@ -1,0 +1,1 @@
+WITH keys AS(SELECT key FROM local UNION SELECT key FROM remote) SELECT k.key,CASE WHEN l.key IS NULL THEN 'insert' WHEN r.key IS NULL THEN 'delete' WHEN l.value IS r.value THEN 'same' ELSE 'update' END AS action FROM keys k LEFT JOIN local l USING(key) LEFT JOIN remote r USING(key) ORDER BY k.key;

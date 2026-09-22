@@ -1,0 +1,11 @@
+Keyboard escape cleanup / scenario 7 — ctrlKey + Escape; allow text controls; initial open
+
+Output open/closed, Open button, and labelled Notes input. Global document keydown closes the panel on Escape only with ctrlKey true. Ignore already-defaultPrevented events. Other keys ignored. Initial state open. Render Panel content only while open. Register one listener in useEffect and remove the exact listener on unmount. Reopening must work repeatedly.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=725
+Run your starter: node react-more/verify.cjs --starters --id=725

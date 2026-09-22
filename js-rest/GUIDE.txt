@@ -1,0 +1,249 @@
+JS-REST SCENARIO EXERCISES
+
+80 exercises. Variants deliberately revisit an API family with different policies, boundary cases, or type contracts. They are not 80 unrelated algorithms.
+
+From unionboot: node js-rest/verify.cjs
+Practice: node js-rest/verify.cjs --starters --id=104
+Edit starters, consult tests for examples, solutions only after attempting.
+TypeScript tracks use strict compilation plus negative type fixtures and runtime assertions.
+Blank starters compile but fail runtime tests by design. Reference solutions are not imported into starters.
+
+104 Index records: keep-first
+Input {rows:[{id,value}]} with string ids and primitive values. Return sorted [id,value] pairs. Duplicate policy: keep-first; collect returns arrays even for a single value. reject throws Error for duplicates. Use Map so all string keys work. Preserve input.
+
+105 Index records: keep-last
+Input {rows:[{id,value}]} with string ids and primitive values. Return sorted [id,value] pairs. Duplicate policy: keep-last; collect returns arrays even for a single value. reject throws Error for duplicates. Use Map so all string keys work. Preserve input.
+
+106 Index records: reject
+Input {rows:[{id,value}]} with string ids and primitive values. Return sorted [id,value] pairs. Duplicate policy: reject; collect returns arrays even for a single value. reject throws Error for duplicates. Use Map so all string keys work. Preserve input.
+
+107 Index records: collect
+Input {rows:[{id,value}]} with string ids and primitive values. Return sorted [id,value] pairs. Duplicate policy: collect; collect returns arrays even for a single value. reject throws Error for duplicates. Use Map so all string keys work. Preserve input.
+
+108 inner join by identifier
+Input {left:[{id,value}],right:[{id,value}]}, unique numeric ids per side. Return [id,leftValueOrNull,rightValueOrNull] rows sorted by id. Implement a inner join; null denotes an absent side. No mutation.
+
+109 left join by identifier
+Input {left:[{id,value}],right:[{id,value}]}, unique numeric ids per side. Return [id,leftValueOrNull,rightValueOrNull] rows sorted by id. Implement a left join; null denotes an absent side. No mutation.
+
+110 full join by identifier
+Input {left:[{id,value}],right:[{id,value}]}, unique numeric ids per side. Return [id,leftValueOrNull,rightValueOrNull] rows sorted by id. Implement a full join; null denotes an absent side. No mutation.
+
+111 anti join by identifier
+Input {left:[{id,value}],right:[{id,value}]}, unique numeric ids per side. Return left-only [id,leftValue] rows sorted by id. Implement a anti join; null denotes an absent side. No mutation.
+
+112 Aggregate nested tree: sum
+Input null or a tree {value:number,children:Tree[]}. Return sum across all nodes. Empty tree returns 0. Use a stack to handle deep trees without recursive calls.
+
+113 Aggregate nested tree: count
+Input null or a tree {value:number,children:Tree[]}. Return count across all nodes. Empty tree returns 0. Use a stack to handle deep trees without recursive calls.
+
+114 Aggregate nested tree: min
+Input null or a tree {value:number,children:Tree[]}. Return min across all nodes. Empty tree returns null. Use a stack to handle deep trees without recursive calls.
+
+115 Aggregate nested tree: max
+Input null or a tree {value:number,children:Tree[]}. Return max across all nodes. Empty tree returns null. Use a stack to handle deep trees without recursive calls.
+
+116 Nearest point: euclidean distance
+Input {origin:[x,y],points:[[x,y],...]}. Return index of nearest point by euclidean distance; first wins ties, -1 if empty. Coordinates are finite. Do not sort/mutate input.
+
+117 Nearest point: manhattan distance
+Input {origin:[x,y],points:[[x,y],...]}. Return index of nearest point by manhattan distance; first wins ties, -1 if empty. Coordinates are finite. Do not sort/mutate input.
+
+118 Nearest point: chebyshev distance
+Input {origin:[x,y],points:[[x,y],...]}. Return index of nearest point by chebyshev distance; first wins ties, -1 if empty. Coordinates are finite. Do not sort/mutate input.
+
+119 Nearest point: squared distance
+Input {origin:[x,y],points:[[x,y],...]}. Return index of nearest point by squared distance; first wins ties, -1 if empty. Coordinates are finite. Do not sort/mutate input.
+
+120 Quantize to a step: floor
+Input {values:number[],step:number}; step must be finite and >0 or throw Error('Invalid step'). Round each value/step using floor, then multiply by step. nearest-half-up means Math.floor(x+0.5), including negatives. Normalize negative zero to zero.
+
+121 Quantize to a step: ceil
+Input {values:number[],step:number}; step must be finite and >0 or throw Error('Invalid step'). Round each value/step using ceil, then multiply by step. nearest-half-up means Math.floor(x+0.5), including negatives. Normalize negative zero to zero.
+
+122 Quantize to a step: nearest-half-up
+Input {values:number[],step:number}; step must be finite and >0 or throw Error('Invalid step'). Round each value/step using nearest-half-up, then multiply by step. nearest-half-up means Math.floor(x+0.5), including negatives. Normalize negative zero to zero.
+
+123 Quantize to a step: toward-zero
+Input {values:number[],step:number}; step must be finite and >0 or throw Error('Invalid step'). Round each value/step using toward-zero, then multiply by step. nearest-half-up means Math.floor(x+0.5), including negatives. Normalize negative zero to zero.
+
+124 Configuration diff: added
+Input {before,after} plain objects with primitive values. Return lexically sorted keys that were added. Use own properties and Object.is for comparing present values; no mutation.
+
+125 Configuration diff: removed
+Input {before,after} plain objects with primitive values. Return lexically sorted keys that were removed. Use own properties and Object.is for comparing present values; no mutation.
+
+126 Configuration diff: changed
+Input {before,after} plain objects with primitive values. Return lexically sorted keys that were changed. Use own properties and Object.is for comparing present values; no mutation.
+
+127 Configuration diff: unchanged
+Input {before,after} plain objects with primitive values. Return lexically sorted keys that were unchanged. Use own properties and Object.is for comparing present values; no mutation.
+
+128 Best candidate with first ties
+Input array of {id:string,score:number}. Return id or null of maximum-score candidates, using first tie policy.  Empty returns null.
+
+129 Best candidate with last ties
+Input array of {id:string,score:number}. Return id or null of maximum-score candidates, using last tie policy.  Empty returns null.
+
+130 Best candidate with all ties
+Input array of {id:string,score:number}. Return array of ids of maximum-score candidates, using all tie policy.  Empty returns [].
+
+131 Best candidate with error ties
+Input array of {id:string,score:number}. Return id or null of maximum-score candidates, using error tie policy. Throw Error("Tied score") if top score is shared. Empty returns null.
+
+132 Locate letters runs
+Input ASCII string. Return {start,end,text} for maximal runs of letters, with end exclusive. Letters A–Z/a–z; digits 0–9; whitespace JS \s; punctuation means non-alphanumeric, non-whitespace. Indices are UTF-16 offsets.
+
+133 Locate digits runs
+Input ASCII string. Return {start,end,text} for maximal runs of digits, with end exclusive. Letters A–Z/a–z; digits 0–9; whitespace JS \s; punctuation means non-alphanumeric, non-whitespace. Indices are UTF-16 offsets.
+
+134 Locate whitespace runs
+Input ASCII string. Return {start,end,text} for maximal runs of whitespace, with end exclusive. Letters A–Z/a–z; digits 0–9; whitespace JS \s; punctuation means non-alphanumeric, non-whitespace. Indices are UTF-16 offsets.
+
+135 Locate punctuation runs
+Input ASCII string. Return {start,end,text} for maximal runs of punctuation, with end exclusive. Letters A–Z/a–z; digits 0–9; whitespace JS \s; punctuation means non-alphanumeric, non-whitespace. Indices are UTF-16 offsets.
+
+136 Robot navigation starting north
+Input string of L,R,F commands; invalid character throws Error('Invalid command'). Start at (0,0) facing north. L/R turn90 degrees; F moves one unit; north increases y, east increases x. Return {x,y,direction} using N/E/S/W.
+
+137 Robot navigation starting east
+Input string of L,R,F commands; invalid character throws Error('Invalid command'). Start at (0,0) facing east. L/R turn90 degrees; F moves one unit; north increases y, east increases x. Return {x,y,direction} using N/E/S/W.
+
+138 Robot navigation starting south
+Input string of L,R,F commands; invalid character throws Error('Invalid command'). Start at (0,0) facing south. L/R turn90 degrees; F moves one unit; north increases y, east increases x. Return {x,y,direction} using N/E/S/W.
+
+139 Robot navigation starting west
+Input string of L,R,F commands; invalid character throws Error('Invalid command'). Start at (0,0) facing west. L/R turn90 degrees; F moves one unit; north increases y, east increases x. Return {x,y,direction} using N/E/S/W.
+
+140 Multiset intersection
+Input {a:number[],b:number[]} of integers. Return sorted multiset intersection. Multiplicities use minimum. Do not treat duplicates as a simple set.
+
+141 Multiset union
+Input {a:number[],b:number[]} of integers. Return sorted multiset union. Multiplicities use maximum. Do not treat duplicates as a simple set.
+
+142 Multiset subtract
+Input {a:number[],b:number[]} of integers. Return sorted multiset subtract. Multiplicities use max(aCount-bCount,0). Do not treat duplicates as a simple set.
+
+143 Multiset symmetric
+Input {a:number[],b:number[]} of integers. Return sorted multiset symmetric. Multiplicities use absolute count difference. Do not treat duplicates as a simple set.
+
+144 Bounded event buffer: drop-oldest
+Input {capacity,events}; capacity positive integer or Error('Invalid capacity'). Process primitive events in order. On capacity overflow drop-oldest . Return final buffer, leaving events unchanged. grow ignores the cap after validation.
+
+145 Bounded event buffer: drop-newest
+Input {capacity,events}; capacity positive integer or Error('Invalid capacity'). Process primitive events in order. On capacity overflow drop-newest . Return final buffer, leaving events unchanged. grow ignores the cap after validation.
+
+146 Bounded event buffer: reject
+Input {capacity,events}; capacity positive integer or Error('Invalid capacity'). Process primitive events in order. On capacity overflow reject with Error("Overflow"). Return final buffer, leaving events unchanged. grow ignores the cap after validation.
+
+147 Bounded event buffer: grow
+Input {capacity,events}; capacity positive integer or Error('Invalid capacity'). Process primitive events in order. On capacity overflow grow . Return final buffer, leaving events unchanged. grow ignores the cap after validation.
+
+148 Interval membership: closed
+Input {start,end,values}. Reject start>end with Error('Invalid interval'). Return values within closed interval: start<=x<=end. Preserve order/duplicates.
+
+149 Interval membership: open
+Input {start,end,values}. Reject start>end with Error('Invalid interval'). Return values within open interval: start<x<end. Preserve order/duplicates.
+
+150 Interval membership: left-closed
+Input {start,end,values}. Reject start>end with Error('Invalid interval'). Return values within left-closed interval: start<=x<end. Preserve order/duplicates.
+
+151 Interval membership: right-closed
+Input {start,end,values}. Reject start>end with Error('Invalid interval'). Return values within right-closed interval: start<x<=end. Preserve order/duplicates.
+
+152 Identifier conversion: kebab
+Input string, tokenize maximal ASCII letter/digit runs, lowercase tokens, return kebabCase identifier. Punctuation and whitespace separate tokens. Empty/no tokens returns ''. camel lowercases first token; pascal capitalizes every token.
+
+153 Identifier conversion: snake
+Input string, tokenize maximal ASCII letter/digit runs, lowercase tokens, return snakeCase identifier. Punctuation and whitespace separate tokens. Empty/no tokens returns ''. camel lowercases first token; pascal capitalizes every token.
+
+154 Identifier conversion: camel
+Input string, tokenize maximal ASCII letter/digit runs, lowercase tokens, return camelCase identifier. Punctuation and whitespace separate tokens. Empty/no tokens returns ''. camel lowercases first token; pascal capitalizes every token.
+
+155 Identifier conversion: pascal
+Input string, tokenize maximal ASCII letter/digit runs, lowercase tokens, return pascalCase identifier. Punctuation and whitespace separate tokens. Empty/no tokens returns ''. camel lowercases first token; pascal capitalizes every token.
+
+156 Positive streak: longest
+Input finite-number array. Return {start,length} for longest contiguous run of strictly positive numbers, or null. First run wins equal lengths. Zero/negative breaks a streak.
+
+157 Positive streak: shortest
+Input finite-number array. Return {start,length} for shortest contiguous run of strictly positive numbers, or null. First run wins equal lengths. Zero/negative breaks a streak.
+
+158 Positive streak: first
+Input finite-number array. Return {start,length} for first contiguous run of strictly positive numbers, or null.  Zero/negative breaks a streak.
+
+159 Positive streak: last
+Input finite-number array. Return {start,length} for last contiguous run of strictly positive numbers, or null.  Zero/negative breaks a streak.
+
+160 Square matrix main sum
+Input square matrix of finite numbers; [] returns0. Reject non-square rows with Error('Not square'). Sum main diagonal cells, no mutation.
+
+161 Square matrix anti sum
+Input square matrix of finite numbers; [] returns0. Reject non-square rows with Error('Not square'). Sum anti-diagonal cells, no mutation.
+
+162 Square matrix above sum
+Input square matrix of finite numbers; [] returns0. Reject non-square rows with Error('Not square'). Sum strictly above main diagonal cells, no mutation.
+
+163 Square matrix below sum
+Input square matrix of finite numbers; [] returns0. Reject non-square rows with Error('Not square'). Sum strictly below main diagonal cells, no mutation.
+
+164 Tree labels in preorder
+Input null or {label:string,children:Node[]}. Return labels in preorder, respecting child order. No mutation; trees contain no cycles. leaves-only uses depth-first order.
+
+165 Tree labels in postorder
+Input null or {label:string,children:Node[]}. Return labels in postorder, respecting child order. No mutation; trees contain no cycles. leaves-only uses depth-first order.
+
+166 Tree labels in level-order
+Input null or {label:string,children:Node[]}. Return labels in level-order, respecting child order. No mutation; trees contain no cycles. leaves-only uses depth-first order.
+
+167 Tree labels in leaves-only
+Input null or {label:string,children:Node[]}. Return labels in leaves-only, respecting child order. No mutation; trees contain no cycles. leaves-only uses depth-first order.
+
+168 Process tagged add instructions
+Input {initial,steps}. Each step must have type 'add' or throw Error('Unknown operation'). Apply step.value addition left-to-right. Return {value,trace} where trace records each result. Finite valid values supplied.
+
+169 Process tagged multiply instructions
+Input {initial,steps}. Each step must have type 'multiply' or throw Error('Unknown operation'). Apply step.value multiplication left-to-right. Return {value,trace} where trace records each result. Finite valid values supplied.
+
+170 Process tagged power instructions
+Input {initial,steps}. Each step must have type 'power' or throw Error('Unknown operation'). Apply raise current to step.value left-to-right. Return {value,trace} where trace records each result. Finite valid values supplied.
+
+171 Process tagged clamp instructions
+Input {initial,steps}. Each step must have type 'clamp' or throw Error('Unknown operation'). Apply clamp current between step.min and step.max left-to-right. Return {value,trace} where trace records each result. Finite valid values supplied.
+
+172 Interpolated percentile 0
+Input finite-number array. Sort a copy. Return percentile 0 using linear interpolation at (length-1)*p/100; null if empty. Do not mutate input.
+
+173 Interpolated percentile 25
+Input finite-number array. Sort a copy. Return percentile 25 using linear interpolation at (length-1)*p/100; null if empty. Do not mutate input.
+
+174 Interpolated percentile 75
+Input finite-number array. Sort a copy. Return percentile 75 using linear interpolation at (length-1)*p/100; null if empty. Do not mutate input.
+
+175 Interpolated percentile 100
+Input finite-number array. Sort a copy. Return percentile 100 using linear interpolation at (length-1)*p/100; null if empty. Do not mutate input.
+
+176 Graph classification: sources
+Input {nodes:string[],edges:[from,to][]}. Nodes unique, edges reference nodes; duplicate edges permitted. Return sorted labels of nodes with no incoming edges.
+
+177 Graph classification: sinks
+Input {nodes:string[],edges:[from,to][]}. Nodes unique, edges reference nodes; duplicate edges permitted. Return sorted labels of nodes with no outgoing edges.
+
+178 Graph classification: isolated
+Input {nodes:string[],edges:[from,to][]}. Nodes unique, edges reference nodes; duplicate edges permitted. Return sorted labels of nodes with neither incoming nor outgoing edges.
+
+179 Graph classification: self-looped
+Input {nodes:string[],edges:[from,to][]}. Nodes unique, edges reference nodes; duplicate edges permitted. Return sorted labels of nodes with an edge to themselves.
+
+180 Compare text under strict normalization
+Input {a,b} strings. Normalize with no changes. Return {equal,firstDifference} where index is in normalized strings, -1 if equal; shorter-prefix mismatch is at shorter length.
+
+181 Compare text under ignore-case normalization
+Input {a,b} strings. Normalize with lowercase only. Return {equal,firstDifference} where index is in normalized strings, -1 if equal; shorter-prefix mismatch is at shorter length.
+
+182 Compare text under ignore-space normalization
+Input {a,b} strings. Normalize with remove all whitespace only. Return {equal,firstDifference} where index is in normalized strings, -1 if equal; shorter-prefix mismatch is at shorter length.
+
+183 Compare text under alphanumeric normalization
+Input {a,b} strings. Normalize with lowercase and remove all characters except ASCII letters/digits. Return {equal,firstDifference} where index is in normalized strings, -1 if equal; shorter-prefix mismatch is at shorter length.

@@ -1,0 +1,18 @@
+Bulk table actions / scenario 3 — Confirm bulk archive
+
+TASK
+Rows A(open), B(done), C(open), D(locked). Filter select all/open; row checkboxes Pick NAME, locked D disabled. Changing filter clears selection. Selected output counts selections, including hidden ones. Apply disabled with no selection. Apply opens Confirm/Cancel review; Confirm performs action; Cancel preserves selection. Action marks selected records done. Successful action clears selection. Rows have text NAME:STATE. Props not required.
+
+EXAMPLE
+Select A then Apply and Confirm: A becomes A:done.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1511.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1511
+node react-300/verify.cjs --starters --id=1511

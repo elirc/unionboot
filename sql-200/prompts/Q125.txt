@@ -1,0 +1,44 @@
+Q125 — family SQLite schema constraints and integrity, scenario 5: composite-primary-key-without-rowid
+
+Task
+SQLite-specific: create membership(user_id INTEGER,team_id INTEGER,role TEXT NOT NULL,PRIMARY KEY(user_id,team_id)) WITHOUT ROWID. Insert (1,10,reader),(1,20,writer); select all sorted by both ids. Duplicate pair and NULL key must fail.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE departments(id INTEGER PRIMARY KEY); INSERT INTO departments VALUES(10),(20);
+
+Concrete example
+With the exact seed above, the first result row is {"user_id":1,"team_id":10,"role":"reader"}.
+
+Expected shape
+Columns (exact aliases): user_id, team_id, role. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "user_id": 1,
+    "team_id": 10,
+    "role": "reader"
+  },
+  {
+    "user_id": 1,
+    "team_id": 20,
+    "role": "writer"
+  }
+]
+
+Integrity checks after the result assertion (these exercise constraints/state, not helper solution SQL):
+[
+  {
+    "sql": "INSERT INTO membership VALUES(1,10,'owner')",
+    "reject": "UNIQUE"
+  },
+  {
+    "sql": "INSERT INTO membership VALUES(NULL,10,'owner')",
+    "reject": "NOT NULL"
+  }
+]
+
+Submission
+Edit starters/Q125.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q125
+Reference: node sql-200/verify.cjs --id=Q125

@@ -1,0 +1,59 @@
+Q030 — family GROUP BY HAVING and aggregate policy, scenario 10: group-by-two-dimensions
+
+Task
+Group by region and status, returning rows and zero-filled total; order by both grouping keys.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE sales(id INTEGER PRIMARY KEY,region TEXT,amount INTEGER,status TEXT);
+INSERT INTO sales VALUES(1,'East',10,'paid'),(2,'East',20,'paid'),(3,'East',100,'pending'),(4,'West',5,'paid'),(5,'West',NULL,'paid'),(6,'North',40,'paid'),(7,'North',-10,'refund'),(8,'South',NULL,'pending');
+
+Concrete example
+With the exact seed above, the first result row is {"region":"East","status":"paid","entries":2,"total":30}.
+
+Expected shape
+Columns (exact aliases): region, status, entries, total. 6 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "region": "East",
+    "status": "paid",
+    "entries": 2,
+    "total": 30
+  },
+  {
+    "region": "East",
+    "status": "pending",
+    "entries": 1,
+    "total": 100
+  },
+  {
+    "region": "North",
+    "status": "paid",
+    "entries": 1,
+    "total": 40
+  },
+  {
+    "region": "North",
+    "status": "refund",
+    "entries": 1,
+    "total": -10
+  },
+  {
+    "region": "South",
+    "status": "pending",
+    "entries": 1,
+    "total": 0
+  },
+  {
+    "region": "West",
+    "status": "paid",
+    "entries": 2,
+    "total": 5
+  }
+]
+
+Submission
+Edit starters/Q030.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q030
+Reference: node sql-200/verify.cjs --id=Q030

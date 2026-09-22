@@ -1,0 +1,1 @@
+WITH f AS(SELECT id,CASE WHEN level<=LAG(level) OVER(ORDER BY id) THEN 0 ELSE 1 END AS new_run FROM battery),s AS(SELECT id,SUM(new_run) OVER(ORDER BY id ROWS UNBOUNDED PRECEDING) AS run FROM f),c AS(SELECT run,COUNT(*) AS size FROM s GROUP BY run) SELECT MAX(size) AS longest FROM c;

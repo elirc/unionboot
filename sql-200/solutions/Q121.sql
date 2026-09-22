@@ -1,0 +1,1 @@
+CREATE TABLE items(id INTEGER PRIMARY KEY,name TEXT NOT NULL); INSERT INTO items(name) VALUES('One'); SELECT id,name FROM items ORDER BY id;

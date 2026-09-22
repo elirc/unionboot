@@ -1,0 +1,14 @@
+2196: Budgeted kebab-to-camel literal transforms / hyphen-conversions=3
+
+Contract focus: Capitalize intrinsic; recursive infer composition.
+
+Convert at most 3 hyphens to capitalization of the immediately following ASCII character. A final hyphen disappears. A consecutive hyphen is a character (uppercasing leaves it unchanged). Input domain: ASCII text only, so first-character intrinsic and runtime slicing agree.
+
+Semantic variation 3/15: hyphen-conversions=3. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2196.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2196.cjs. Type contracts: types/2196.positive.ts and types/2196.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2196
+Reference: node ts-next/verify.cjs --id=2196

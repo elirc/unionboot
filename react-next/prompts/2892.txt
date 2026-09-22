@@ -1,0 +1,18 @@
+Pointer capture drag intent / scenario 14 — Boundary 4; y axis threshold
+
+TASK
+A Drag handle button tracks the first primary pointer only, captures its pointerId on down, releases on matching up/cancel. Ignore other IDs and nonprimary buttons. Measure absolute clientY distance from start; threshold 20px enters dragging. Output Gesture idle/pressed/dragging/dropped/canceled; pointerup gives dropped only after dragging, otherwise idle. pointercancel gives canceled. Capture methods are injected on DOM node by tests.
+
+EXAMPLE
+Move 19px => pressed; 20px => dragging; up => dropped.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2892.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2892
+node react-next/verify.cjs --starters --id=2892

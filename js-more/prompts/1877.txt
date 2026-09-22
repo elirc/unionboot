@@ -1,0 +1,18 @@
+LCS edit scripts / scenario 9 — fold=false; output=length
+
+TASK
+Input {a,b}, ASCII strings. Longest common subsequence via dynamic programming, case-sensitive. Return LCS length. Only length matters. Delete character comes from a, keep/insert from b. Not Levenshtein: substitutions are separate delete and insert.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1877.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1877
+node js-more/verify.cjs --starters --id=1877
+
+POLICIES
+fold=false; output=length
+Semantic key: {"fold":false,"output":"length"}

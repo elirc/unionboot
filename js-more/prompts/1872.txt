@@ -1,0 +1,18 @@
+LCS edit scripts / scenario 4 — tie=insert; fold=true; output=ops
+
+TASK
+Input {a,b}, ASCII strings. Longest common subsequence via dynamic programming, ignore case. Return edit operations [keep|delete|insert,character]. Walk from start; when equal always keep target character; on equal LCS alternatives prefer insert. Delete character comes from a, keep/insert from b. Not Levenshtein: substitutions are separate delete and insert.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1872.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1872
+node js-more/verify.cjs --starters --id=1872
+
+POLICIES
+tie=insert; fold=true; output=ops
+Semantic key: {"fold":true,"output":"ops","tie":"insert"}

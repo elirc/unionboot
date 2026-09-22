@@ -1,0 +1,1 @@
+SELECT n.name FROM closure mine JOIN closure peer ON peer.ancestor=mine.ancestor AND peer.depth=1 JOIN nodes n ON n.id=peer.descendant WHERE mine.descendant=4 AND mine.depth=1 AND peer.descendant<>4 ORDER BY n.id;

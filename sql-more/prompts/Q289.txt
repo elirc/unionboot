@@ -1,0 +1,33 @@
+Q289 — family Effective dated history and as of selection, scenario 9: future-scheduled-versions
+
+Task
+Return versions scheduled strictly after asof day6, ordered by effective date then SKU.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE prices(sku TEXT,valid_from INTEGER,valid_to INTEGER,price INTEGER,PRIMARY KEY(sku,valid_from));INSERT INTO prices VALUES('A',1,4,10),('A',4,8,12),('A',8,NULL,15),('B',2,6,7),('B',7,NULL,9);
+
+Concrete example
+The first result row on this seed is {"sku":"B","valid_from":7,"price":9}.
+
+Expected shape
+Columns: sku, valid_from, price. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "sku": "B",
+    "valid_from": 7,
+    "price": 9
+  },
+  {
+    "sku": "A",
+    "valid_from": 8,
+    "price": 15
+  }
+]
+
+Submission
+Write SQL in starters/Q289.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q289
+Learner: node sql-more/verify.cjs --starters --id=Q289

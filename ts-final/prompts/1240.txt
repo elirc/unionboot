@@ -1,0 +1,15 @@
+1240: Sequential typed async mapping / scenario 07
+
+Contract focus: async generics; readonly inputs; sequencing.
+Map items sequentially: await each result before starting the next. Preserve output order and inferred awaited element type. Stop on the first thrown/rejected callback and propagate its value. Empty resolves [].
+
+This is scenario 7/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize descending input; scalar/state exercises use deterministic case seed 6. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1240.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1240.cjs. Positive strict fixtures: types/1240.positive.ts. Negative strict fixtures: types/1240.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-final/verify.cjs --starters --id=1240
+Reference check:
+  node ts-final/verify.cjs --id=1240
+

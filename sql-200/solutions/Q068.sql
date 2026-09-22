@@ -1,0 +1,1 @@
+WITH RECURSIVE nums(n) AS(VALUES(2) UNION ALL SELECT n+1 FROM nums WHERE n<6) SELECT n,n*n AS square FROM nums ORDER BY n;

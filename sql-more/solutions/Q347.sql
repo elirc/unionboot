@@ -1,0 +1,1 @@
+BEGIN;ALTER TABLE customers ADD COLUMN tier TEXT;PRAGMA user_version=2;ROLLBACK;SELECT user_version AS version,(SELECT COUNT(*) FROM pragma_table_info('customers') WHERE name='tier') AS tier_columns FROM pragma_user_version;

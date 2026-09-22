@@ -1,0 +1,18 @@
+File batch admission / scenario 20 — Boundary 10; reject whole batch if any file invalid
+
+TASK
+Files input type=file multiple. Process files on change, replacing prior selection. Valid files have type text/plain and size<=100 bytes (zero-byte valid). Any invalid member rejects entire batch. Output Names comma-joined, Bytes total accepted size. Alert Rejected N when invalid count>0, otherwise no alert. Empty input selection clears all. Clear resets input.value='' and state so same file can be chosen again. Never mutate FileList or File objects.
+
+EXAMPLE
+ok.txt size 100 and large.txt size 101 => none accepted, Rejected 1.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3138.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3138
+node react-next/verify.cjs --starters --id=3138

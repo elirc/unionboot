@@ -1,0 +1,18 @@
+Compound field registration / scenario 7 — Boundary 7; fieldset keeps inputs enabled
+
+TASK
+Build compound FieldRoot, FieldInput and FieldSummary components sharing context rather than prop drilling. Root registers descendant field IDs on mount and unregisters on unmount; duplicate IDs are outside contract. Render 7 inputs initially, each labelled Field 1..7, and Registered output with count. Add field mounts one more; Remove field unmounts last but never below zero. Toggle disabled toggles context disabled state; inputs deliberately ignore disabled context, but Disabled output still reflects state. Counts must reflect actual mounted inputs, not a second hardcoded counter.
+
+EXAMPLE
+7 fields => Registered=7; remove then add => 7.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2925.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2925
+node react-next/verify.cjs --starters --id=2925

@@ -1,0 +1,18 @@
+Editable combobox navigation / scenario 8 — Substring search; wrap options; limit 3
+
+TASK
+Color input role combobox, aria-autocomplete=list, controls a unique listbox ID. Initially closed. Typing opens filtered options (substring, trim/case-fold query), limited to 3, resets active option to first (none if empty). ArrowDown/Up wrap active option; input keeps DOM focus, aria-activedescendant points at active option. Enter selects active; clicking option also selects; Selection output chosen text, input replaced by choice, popup closes. Escape closes without selecting or clearing draft. Empty matches all; no results renders No matches text.
+
+EXAMPLE
+Typing am yields Amber and Amethyst.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1716.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1716
+node react-300/verify.cjs --starters --id=1716

@@ -1,0 +1,1 @@
+WITH t AS(SELECT sku,SUM(delta) AS stock,SUM(CASE WHEN delta<0 THEN -delta ELSE 0 END)/5.0 AS rate FROM moves GROUP BY sku) SELECT sku,ROUND(rate,1) AS rate,ROUND(stock/NULLIF(rate,0),1) AS cover_days FROM t ORDER BY sku;

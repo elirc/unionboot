@@ -1,0 +1,8 @@
+// 2976 Fixed-window event throttle / scenario 18 — Boundary 8; leading and latest trailing delivery
+// A renderless throttling effect subscribes source. First event in an idle window delivers immediately through onDeliver(value) and Delivered output. Suppress additional events for 200ms using scheduler.after, without restarting window. At window end also deliver the latest suppressed value, if any, then become idle. Count counts deliveries. Clean up subscription and timer; retained canceled callbacks do nothing. This is fixed-window throttling, not quiet-period debouncing.
+// Full prompt: ../prompts/2976.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({source,scheduler,onDeliver}) {
+const [last,set]=useState(''),[count,setCount]=useState(0);useEffect(()=>{let live=true,busy=false,queued=null,cancel=null;const deliver=x=>{set(x);setCount(c=>c+1);onDeliver(x);};const off=source.subscribe(x=>{if(!live)return;if(busy){queued=x;return;}busy=true;deliver(x);cancel=scheduler.after(200,()=>{if(!live)return;if(queued!==null)deliver(queued);queued=null;busy=false;});});return()=>{live=false;off();cancel?.();};},[source,scheduler,onDeliver]);return <section><output aria-label="Delivered">{last}</output><output aria-label="Count">{count}</output></section>;
+}

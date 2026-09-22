@@ -1,0 +1,35 @@
+Q343 — family Schema migrations backfills and version gates, scenario 3: backfill-first-token
+
+Task
+Add given_name and fill with first space-delimited token, or whole full_name if no space.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE customers(id INTEGER PRIMARY KEY,full_name TEXT,age_text TEXT);INSERT INTO customers VALUES(1,'Ada Lovelace','36'),(2,'Bo Li','20'),(3,'Cy','unknown');PRAGMA user_version=1;
+
+Concrete example
+The first result row on this seed is {"id":1,"given_name":"Ada"}.
+
+Expected shape
+Columns: id, given_name. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "given_name": "Ada"
+  },
+  {
+    "id": 2,
+    "given_name": "Bo"
+  },
+  {
+    "id": 3,
+    "given_name": "Cy"
+  }
+]
+
+Submission
+Write SQL in starters/Q343.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q343
+Learner: node sql-more/verify.cjs --starters --id=Q343

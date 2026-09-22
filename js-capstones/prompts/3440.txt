@@ -1,0 +1,3 @@
+3440 — Replay idempotent ordered account events
+
+Implement solve(initial, events). initial is a safe-integer balance. Each event is {id,revision,delta}: nonempty string ID, positive safe-integer revision, safe-integer delta. Validate every event before deduplicating. A repeated ID is ignored only when revision and delta exactly match; conflicting reuse throws Error. Sort unique events by revision; revisions must be exactly 1..N, else throw. Every intermediate balance must be a nonnegative safe integer, otherwise throw. Return {balance, revision:N, applied:[IDs in revision order]}. Do not mutate inputs. Example initial=10, events=[{id:"b",revision:2,delta:-3},{id:"a",revision:1,delta:5}] returns {balance:12,revision:2,applied:["a","b"]}. Invalid initial balance throws.

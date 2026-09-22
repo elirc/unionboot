@@ -1,0 +1,8 @@
+W315 | Endpoint filter pipelines
+Scenario 5: Argument 0 range 1 through 5
+Semantic key: argument-0-range-1-through-5
+
+Validate argument index 0 is an int in 1..5. Missing, wrong type or out of bounds ->400 without calling next. Valid ->await next exactly once, return its object unchanged.
+
+Signature: public static async ValueTask<object?> Invoke(EndpointFilterInvocationContext context,EndpointFilterDelegate next)
+Implement starters/W315.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

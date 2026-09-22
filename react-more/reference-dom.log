@@ -1,0 +1,201 @@
+PASS 584 Bounded quantity editor / scenario 6 — clamp overshoot; -3..5; step 2; initial -1
+PASS 585 Bounded quantity editor / scenario 7 — clamp overshoot; 2..11; step 4; initial 2
+PASS 586 Bounded quantity editor / scenario 8 — clamp overshoot; 0..3; step 8; initial 3
+PASS 587 Bounded quantity editor / scenario 9 — clamp overshoot; -8..-2; step 2; initial -5
+PASS 588 Bounded quantity editor / scenario 10 — clamp overshoot; 4..4; step 1; initial 4
+PASS 589 Bounded quantity editor / scenario 11 — wrap to opposite bound; 0..5; step 2; initial 0
+PASS 590 Bounded quantity editor / scenario 12 — wrap to opposite bound; -3..3; step 4; initial 3
+PASS 591 Bounded quantity editor / scenario 13 — wrap to opposite bound; 2..9; step 20; initial 5
+PASS 592 Bounded quantity editor / scenario 14 — wrap to opposite bound; 0..1; step 1; initial 1
+PASS 593 Bounded quantity editor / scenario 15 — clamp overshoot; -5..0; step 3; initial -2
+PASS 594 Validated text submission / scenario 6 — 2..5 trimmed characters; letters; upper saved text
+PASS 595 Validated text submission / scenario 7 — 3..6 trimmed characters; letters; lower saved text
+PASS 596 Validated text submission / scenario 8 — 1..3 trimmed characters; digits; keep saved text
+PASS 597 Validated text submission / scenario 9 — 4..8 trimmed characters; letters; keep saved text
+PASS 598 Validated text submission / scenario 10 — 2..2 trimmed characters; digits; keep saved text
+PASS 599 Validated text submission / scenario 11 — 3..5 trimmed characters; any; upper saved text
+PASS 600 Validated text submission / scenario 12 — 1..4 trimmed characters; any; lower saved text
+PASS 601 Validated text submission / scenario 13 — 5..9 trimmed characters; letters; upper saved text
+PASS 602 Validated text submission / scenario 14 — 2..6 trimmed characters; digits; keep saved text
+PASS 603 Validated text submission / scenario 15 — 4..4 trimmed characters; any; keep saved text
+PASS 604 Filtered product list / scenario 6 — includes, case-sensitive, trim, retain duplicates, limit 2
+PASS 605 Filtered product list / scenario 7 — startsWith, case-folded, literal spaces, retain duplicates, limit none
+PASS 606 Filtered product list / scenario 8 — endsWith, case-folded, trim, retain duplicates, limit none
+PASS 607 Filtered product list / scenario 9 — includes, case-sensitive, literal spaces, retain duplicates, limit none
+PASS 608 Filtered product list / scenario 10 — startsWith, case-folded, trim, retain duplicates, limit 2
+PASS 609 Filtered product list / scenario 11 — endsWith, case-folded, literal spaces, deduplicate exact strings, limit none
+PASS 610 Filtered product list / scenario 12 — includes, case-sensitive, trim, deduplicate exact strings, limit none
+PASS 611 Filtered product list / scenario 13 — startsWith, case-folded, literal spaces, deduplicate exact strings, limit none
+PASS 612 Filtered product list / scenario 14 — endsWith, case-folded, trim, deduplicate exact strings, limit 2
+PASS 613 Filtered product list / scenario 15 — includes, case-sensitive, literal spaces, deduplicate exact strings, limit none
+PASS 614 Exclusive accordion / scenario 6 — one must stay open; One disabled; unmount closed content
+PASS 615 Exclusive accordion / scenario 7 — all may close; Two disabled; unmount closed content
+PASS 616 Exclusive accordion / scenario 8 — one must stay open; Three disabled; unmount closed content
+PASS 617 Exclusive accordion / scenario 9 — all may close; One disabled; unmount closed content
+PASS 618 Exclusive accordion / scenario 10 — one must stay open; Two disabled; unmount closed content
+PASS 619 Exclusive accordion / scenario 11 — all may close; Three disabled; hide closed content
+PASS 620 Exclusive accordion / scenario 12 — one must stay open; One disabled; hide closed content
+PASS 621 Exclusive accordion / scenario 13 — all may close; Two disabled; hide closed content
+PASS 622 Exclusive accordion / scenario 14 — one must stay open; Three disabled; hide closed content
+PASS 623 Exclusive accordion / scenario 15 — all may close; One disabled; hide closed content
+PASS 624 Accessible tab selection / scenario 6 — horizontal; automatic activation; disabled Red; initial 1
+PASS 625 Accessible tab selection / scenario 7 — vertical; automatic activation; disabled Green; initial 2
+PASS 626 Accessible tab selection / scenario 8 — horizontal; automatic activation; disabled Blue; initial 0
+PASS 627 Accessible tab selection / scenario 9 — vertical; automatic activation; disabled Red; initial 2
+PASS 628 Accessible tab selection / scenario 10 — horizontal; automatic activation; disabled Green; initial 0
+PASS 629 Accessible tab selection / scenario 11 — vertical; manual Enter/Space activation; disabled Blue; initial 1
+PASS 630 Accessible tab selection / scenario 12 — horizontal; manual Enter/Space activation; disabled Red; initial 1
+PASS 631 Accessible tab selection / scenario 13 — vertical; manual Enter/Space activation; disabled Green; initial 2
+PASS 632 Accessible tab selection / scenario 14 — horizontal; manual Enter/Space activation; disabled Blue; initial 0
+PASS 633 Accessible tab selection / scenario 15 — vertical; manual Enter/Space activation; disabled Red; initial 2
+PASS 634 Checklist selection cap / scenario 6 — cap 1; click output; initial empty; locked B
+PASS 635 Checklist selection cap / scenario 7 — cap 2; alphabetical output; initial empty; locked none
+PASS 636 Checklist selection cap / scenario 8 — cap 3; click output; initial empty; locked none
+PASS 637 Checklist selection cap / scenario 9 — cap 1; alphabetical output; initial empty; locked none
+PASS 638 Checklist selection cap / scenario 10 — cap 2; click output; initial empty; locked B
+PASS 639 Checklist selection cap / scenario 11 — cap 3; alphabetical output; initial D; locked none
+PASS 640 Checklist selection cap / scenario 12 — cap 1; click output; initial D; locked none
+PASS 641 Checklist selection cap / scenario 13 — cap 2; alphabetical output; initial D; locked none
+PASS 642 Checklist selection cap / scenario 14 — cap 3; click output; initial D; locked B
+PASS 643 Checklist selection cap / scenario 15 — cap 1; alphabetical output; initial D; locked none
+PASS 644 Stable sortable table / scenario 6 — initial name ascending; case-folded names; null always first
+PASS 645 Stable sortable table / scenario 7 — initial score ascending; case-sensitive names; null always first
+PASS 646 Stable sortable table / scenario 8 — initial name ascending; case-sensitive names; null always last
+PASS 647 Stable sortable table / scenario 9 — initial score ascending; case-folded names; null always last
+PASS 648 Stable sortable table / scenario 10 — initial name ascending; case-sensitive names; null always first
+PASS 649 Stable sortable table / scenario 11 — initial score descending; case-sensitive names; null always first
+PASS 650 Stable sortable table / scenario 12 — initial name descending; case-folded names; null always last
+PASS 651 Stable sortable table / scenario 13 — initial score descending; case-sensitive names; null always last
+PASS 652 Stable sortable table / scenario 14 — initial name descending; case-sensitive names; null always first
+PASS 653 Stable sortable table / scenario 15 — initial score descending; case-folded names; null always first
+PASS 654 Paged list controls / scenario 6 — size 1; start page 1; bounded navigation; shrink permanently clamps
+PASS 655 Paged list controls / scenario 7 — size 2; start page 2; bounded navigation; shrink permanently clamps
+PASS 656 Paged list controls / scenario 8 — size 3; start page 3; bounded navigation; shrink permanently clamps
+PASS 657 Paged list controls / scenario 9 — size 4; start page 1; bounded navigation; shrink permanently clamps
+PASS 658 Paged list controls / scenario 10 — size 1; start page 2; bounded navigation; shrink permanently clamps
+PASS 659 Paged list controls / scenario 11 — size 2; start page 3; cyclic navigation; shrink permanently clamps
+PASS 660 Paged list controls / scenario 12 — size 3; start page 1; cyclic navigation; shrink permanently clamps
+PASS 661 Paged list controls / scenario 13 — size 4; start page 2; cyclic navigation; shrink permanently clamps
+PASS 662 Paged list controls / scenario 14 — size 1; start page 3; cyclic navigation; shrink permanently clamps
+PASS 663 Paged list controls / scenario 15 — size 2; start page 1; cyclic navigation; shrink permanently clamps
+PASS 664 Editable label with cancel / scenario 6 — trim length 1..4; upper; unchanged allowed
+PASS 665 Editable label with cancel / scenario 7 — trim length 2..5; lower; unchanged allowed
+PASS 666 Editable label with cancel / scenario 8 — trim length 3..6; keep; unchanged allowed
+PASS 667 Editable label with cancel / scenario 9 — trim length 1..5; upper; unchanged allowed
+PASS 668 Editable label with cancel / scenario 10 — trim length 2..6; lower; unchanged allowed
+PASS 669 Editable label with cancel / scenario 11 — trim length 3..7; keep; unchanged cannot save
+PASS 670 Editable label with cancel / scenario 12 — trim length 1..6; upper; unchanged cannot save
+PASS 671 Editable label with cancel / scenario 13 — trim length 2..7; lower; unchanged cannot save
+PASS 672 Editable label with cancel / scenario 14 — trim length 3..8; keep; unchanged cannot save
+PASS 673 Editable label with cancel / scenario 15 — trim length 1..7; upper; unchanged cannot save
+PASS 674 Confirm destructive local action / scenario 6 — 2 records; remove all; phrase DELETE; case-insensitive; phrase only
+PASS 675 Confirm destructive local action / scenario 7 — 3 records; remove one per confirmation; phrase DELETE; case-sensitive; phrase only
+PASS 676 Confirm destructive local action / scenario 8 — 4 records; remove all; phrase DELETE; case-sensitive; phrase only
+PASS 677 Confirm destructive local action / scenario 9 — 5 records; remove one per confirmation; phrase DELETE; case-insensitive; phrase only
+PASS 678 Confirm destructive local action / scenario 10 — 6 records; remove all; phrase DELETE; case-sensitive; phrase only
+PASS 679 Confirm destructive local action / scenario 11 — 7 records; remove one per confirmation; phrase remove; case-sensitive; acknowledgment required
+PASS 680 Confirm destructive local action / scenario 12 — 8 records; remove all; phrase remove; case-insensitive; acknowledgment required
+PASS 681 Confirm destructive local action / scenario 13 — 9 records; remove one per confirmation; phrase remove; case-sensitive; acknowledgment required
+PASS 682 Confirm destructive local action / scenario 14 — 10 records; remove all; phrase remove; case-sensitive; acknowledgment required
+PASS 683 Confirm destructive local action / scenario 15 — 11 records; remove one per confirmation; phrase remove; case-insensitive; acknowledgment required
+PASS 684 Reducer undoable text / scenario 6 — 2-entry bounded history; trim; reject blank commits
+PASS 685 Reducer undoable text / scenario 7 — 3-entry bounded history; trim; allow blank commits
+PASS 686 Reducer undoable text / scenario 8 — 4-entry bounded history; trim; reject blank commits
+PASS 687 Reducer undoable text / scenario 9 — 5-entry bounded history; trim; allow blank commits
+PASS 688 Reducer undoable text / scenario 10 — 6-entry bounded history; trim; reject blank commits
+PASS 689 Reducer undoable text / scenario 11 — 2-entry bounded history; lower; allow blank commits
+PASS 690 Reducer undoable text / scenario 12 — 3-entry bounded history; lower; reject blank commits
+PASS 691 Reducer undoable text / scenario 13 — 4-entry bounded history; lower; allow blank commits
+PASS 692 Reducer undoable text / scenario 14 — 5-entry bounded history; lower; reject blank commits
+PASS 693 Reducer undoable text / scenario 15 — 6-entry bounded history; lower; allow blank commits
+PASS 694 Password visibility and length / scenario 6 — length 3..7; digit required; raw evaluation; blur re-hides
+PASS 695 Password visibility and length / scenario 7 — length 4..8; no digit rule; raw evaluation; blur re-hides
+PASS 696 Password visibility and length / scenario 8 — length 5..9; digit required; raw evaluation; blur re-hides
+PASS 697 Password visibility and length / scenario 9 — length 6..10; no digit rule; raw evaluation; blur re-hides
+PASS 698 Password visibility and length / scenario 10 — length 7..11; digit required; raw evaluation; blur re-hides
+PASS 699 Password visibility and length / scenario 11 — length 3..7; no digit rule; trim for evaluation; blur re-hides
+PASS 700 Password visibility and length / scenario 12 — length 4..8; digit required; trim for evaluation; blur re-hides
+PASS 701 Password visibility and length / scenario 13 — length 5..9; no digit rule; trim for evaluation; blur re-hides
+PASS 702 Password visibility and length / scenario 14 — length 6..10; digit required; trim for evaluation; blur re-hides
+PASS 703 Password visibility and length / scenario 15 — length 7..11; no digit rule; trim for evaluation; blur re-hides
+PASS 704 Select all checklist / scenario 6 — 3 items; eligible 2,3; initial none; all ignores locked items
+PASS 705 Select all checklist / scenario 7 — 4 items; eligible 1,3,4; initial none; all ignores locked items
+PASS 706 Select all checklist / scenario 8 — 5 items; eligible 1,2,4,5; initial none; all ignores locked items
+PASS 707 Select all checklist / scenario 9 — 6 items; eligible 1,2,3,5,6; initial none; all ignores locked items
+PASS 708 Select all checklist / scenario 10 — 3 items; eligible 1,3; initial none; all ignores locked items
+PASS 709 Select all checklist / scenario 11 — 4 items; eligible 1,3,4; initial 1; all ignores locked items
+PASS 710 Select all checklist / scenario 12 — 5 items; eligible 1,3,4,5; initial 1; all ignores locked items
+PASS 711 Select all checklist / scenario 13 — 6 items; eligible 1,3,4,5,6; initial 1; all ignores locked items
+PASS 712 Select all checklist / scenario 14 — 3 items; eligible 1,2; initial 1; all ignores locked items
+PASS 713 Select all checklist / scenario 15 — 4 items; eligible none; initial none; all ignores locked items
+PASS 714 Context preference provider / scenario 6 — light → dark → system; initial light; Next + Reset; synchronized nested readers
+PASS 715 Context preference provider / scenario 7 — compact → comfortable; initial comfortable; Next + Reset; synchronized nested readers
+PASS 716 Context preference provider / scenario 8 — en → fr → es; initial es; Next + Reset; synchronized nested readers
+PASS 717 Context preference provider / scenario 9 — low → normal → high; initial low; Next + Reset; synchronized nested readers
+PASS 718 Context preference provider / scenario 10 — quiet → verbose; initial quiet; Next + Reset; synchronized nested readers
+PASS 719 Context preference provider / scenario 11 — light → dark → system; initial system; Previous + Next; synchronized nested readers
+PASS 720 Context preference provider / scenario 12 — compact → comfortable; initial compact; Previous + Next; synchronized nested readers
+PASS 721 Context preference provider / scenario 13 — en → fr → es; initial fr; Previous + Next; synchronized nested readers
+PASS 722 Context preference provider / scenario 14 — low → normal → high; initial high; Previous + Next; synchronized nested readers
+PASS 723 Context preference provider / scenario 15 — quiet → verbose; initial verbose; Previous + Next; synchronized nested readers
+PASS 724 Keyboard escape cleanup / scenario 6 — Enter; allow text controls; initial closed
+PASS 725 Keyboard escape cleanup / scenario 7 — ctrlKey + Escape; allow text controls; initial open
+PASS 726 Keyboard escape cleanup / scenario 8 — altKey + Enter; allow text controls; initial open
+PASS 727 Keyboard escape cleanup / scenario 9 — Escape; allow text controls; initial closed
+PASS 728 Keyboard escape cleanup / scenario 10 — ctrlKey + Enter; allow text controls; initial open
+PASS 729 Keyboard escape cleanup / scenario 11 — altKey + Escape; ignore text controls; initial open
+PASS 730 Keyboard escape cleanup / scenario 12 — Enter; ignore text controls; initial closed
+PASS 731 Keyboard escape cleanup / scenario 13 — ctrlKey + Escape; ignore text controls; initial open
+PASS 732 Keyboard escape cleanup / scenario 14 — altKey + Enter; ignore text controls; initial open
+PASS 733 Keyboard escape cleanup / scenario 15 — Escape; ignore text controls; initial closed
+PASS 734 Fake async request state / scenario 6 — latest request wins; retain data while loading; error fallback Failed
+PASS 735 Fake async request state / scenario 7 — latest request wins; clear data while loading; error fallback Unavailable
+PASS 736 Fake async request state / scenario 8 — latest request wins; retain data while loading; error fallback Try again
+PASS 737 Fake async request state / scenario 9 — latest request wins; clear data while loading; error fallback Error
+PASS 738 Fake async request state / scenario 10 — latest request wins; retain data while loading; error fallback Offline
+PASS 739 Fake async request state / scenario 11 — one pending request; clear data while loading; error fallback Failed
+PASS 740 Fake async request state / scenario 12 — one pending request; retain data while loading; error fallback Unavailable
+PASS 741 Fake async request state / scenario 13 — one pending request; clear data while loading; error fallback Try again
+PASS 742 Fake async request state / scenario 14 — one pending request; retain data while loading; error fallback Error
+PASS 743 Fake async request state / scenario 15 — one pending request; clear data while loading; error fallback Offline
+PASS 744 Ref focus controls / scenario 6 — focus First; clear both; select text; disable focus when locked
+PASS 745 Ref focus controls / scenario 7 — focus Second; clear both; caret at end; disable focus when locked
+PASS 746 Ref focus controls / scenario 8 — focus First; clear both; caret at start; disable focus when locked
+PASS 747 Ref focus controls / scenario 9 — focus Second; clear both; select text; disable focus when locked
+PASS 748 Ref focus controls / scenario 10 — focus First; clear both; caret at end; disable focus when locked
+PASS 749 Ref focus controls / scenario 11 — focus Second; clear target; caret at start; fallback when locked
+PASS 750 Ref focus controls / scenario 12 — focus First; clear target; select text; fallback when locked
+PASS 751 Ref focus controls / scenario 13 — focus Second; clear target; caret at end; fallback when locked
+PASS 752 Ref focus controls / scenario 14 — focus First; clear target; caret at start; fallback when locked
+PASS 753 Ref focus controls / scenario 15 — focus Second; clear target; select text; fallback when locked
+PASS 754 Dependent option selection / scenario 6 — initial North; always reset city; placeholder reset; empty region
+PASS 755 Dependent option selection / scenario 7 — initial South; always reset city; first-option reset; empty region
+PASS 756 Dependent option selection / scenario 8 — initial North; always reset city; last-option reset; empty region
+PASS 757 Dependent option selection / scenario 9 — initial South; always reset city; placeholder reset; empty region
+PASS 758 Dependent option selection / scenario 10 — initial North; always reset city; first-option reset; empty region
+PASS 759 Dependent option selection / scenario 11 — initial South; preserve still-valid city; last-option reset; empty region
+PASS 760 Dependent option selection / scenario 12 — initial North; preserve still-valid city; placeholder reset; empty region
+PASS 761 Dependent option selection / scenario 13 — initial South; preserve still-valid city; first-option reset; empty region
+PASS 762 Dependent option selection / scenario 14 — initial North; preserve still-valid city; last-option reset; empty region
+PASS 763 Dependent option selection / scenario 15 — initial South; preserve still-valid city; placeholder reset; empty region
+PASS 764 Tag editor with duplicate policy / scenario 6 — cap 2; maximum 3 chars; case-insensitive duplicates; insertion-order display
+PASS 765 Tag editor with duplicate policy / scenario 7 — cap 3; maximum 4 chars; case-sensitive duplicates; insertion-order display
+PASS 766 Tag editor with duplicate policy / scenario 8 — cap 4; maximum 5 chars; case-insensitive duplicates; insertion-order display
+PASS 767 Tag editor with duplicate policy / scenario 9 — cap 2; maximum 6 chars; case-sensitive duplicates; insertion-order display
+PASS 768 Tag editor with duplicate policy / scenario 10 — cap 3; maximum 3 chars; case-insensitive duplicates; insertion-order display
+PASS 769 Tag editor with duplicate policy / scenario 11 — cap 4; maximum 4 chars; case-sensitive duplicates; sorted display
+PASS 770 Tag editor with duplicate policy / scenario 12 — cap 2; maximum 5 chars; case-insensitive duplicates; sorted display
+PASS 771 Tag editor with duplicate policy / scenario 13 — cap 3; maximum 6 chars; case-sensitive duplicates; sorted display
+PASS 772 Tag editor with duplicate policy / scenario 14 — cap 4; maximum 3 chars; case-insensitive duplicates; sorted display
+PASS 773 Tag editor with duplicate policy / scenario 15 — cap 2; maximum 4 chars; case-sensitive duplicates; sorted display
+PASS 774 Two-stage form wizard / scenario 6 — name 1..4; uppercase saved name; no acknowledgment; start over
+PASS 775 Two-stage form wizard / scenario 7 — name 2..5; preserved saved name; no acknowledgment; start over
+PASS 776 Two-stage form wizard / scenario 8 — name 3..6; uppercase saved name; no acknowledgment; start over
+PASS 777 Two-stage form wizard / scenario 9 — name 1..4; preserved saved name; no acknowledgment; start over
+PASS 778 Two-stage form wizard / scenario 10 — name 2..5; uppercase saved name; no acknowledgment; start over
+PASS 779 Two-stage form wizard / scenario 11 — name 3..6; preserved saved name; review acknowledgment; start over
+PASS 780 Two-stage form wizard / scenario 12 — name 1..4; uppercase saved name; review acknowledgment; start over
+PASS 781 Two-stage form wizard / scenario 13 — name 2..5; preserved saved name; review acknowledgment; start over
+PASS 782 Two-stage form wizard / scenario 14 — name 3..6; uppercase saved name; review acknowledgment; start over
+PASS 783 Two-stage form wizard / scenario 15 — name 1..4; preserved saved name; review acknowledgment; start over
+solution DOM interaction groups: 200 passed, 0 failed. Original files unchanged: 501.

@@ -1,0 +1,27 @@
+Q378 — family Queue jobs state machines and idempotency, scenario 8: priority-queue-next-job
+
+Task
+Add priority default5, set bulk job priority1, and select next queued job ordered by priority,id. Return queue,id.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE jobs(id INTEGER PRIMARY KEY,queue TEXT,state TEXT CHECK(state IN('queued','running','done','failed')));INSERT INTO jobs VALUES(1,'mail','queued'),(2,'mail','running'),(3,'mail','done'),(4,'bulk','queued'),(5,'bulk','failed');
+
+Concrete example
+The first result row on this seed is {"queue":"bulk","id":4}.
+
+Expected shape
+Columns: queue, id. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "queue": "bulk",
+    "id": 4
+  }
+]
+
+Submission
+Write SQL in starters/Q378.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q378
+Learner: node sql-more/verify.cjs --starters --id=Q378

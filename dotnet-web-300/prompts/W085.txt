@@ -1,0 +1,12 @@
+W085 — Header based request versioning
+Scenario 5/10: X-Api-Version 5; missing accepted as current
+
+Read X-Api-Version case-insensitively via HttpRequest.Headers. Missing or exactly one literal "5" ->200 JSON {version:5}. Other/empty/multiple values ->400 {error:"unsupported-version"}. No numeric normalization. Example header lower-case x-api-version:5 succeeds.
+
+Signature: public static IResult Handle(HttpRequest request)
+
+Edit starters/W085.cs. Run node dotnet-web-300/verify.cjs --starters --id=W085 from unionboot.
+Reference: solutions/W085.cs; shared checks: tests/W085.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

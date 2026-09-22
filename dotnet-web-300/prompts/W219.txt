@@ -1,0 +1,12 @@
+W219 — Authorization policy registration
+Scenario 9/10: permission-9 requires authenticated permission reports.read
+
+Register an ASP.NET Core authorization policy permission-9: require authenticated principal AND claim permission=reports.read (exact value). Exercise normal access decisions through IAuthorizationService; do not implement token parsing or authentication. Example authenticated matching principal succeeds; anonymous matching claim still fails.
+
+Signature: public static void Configure(IServiceCollection services)
+
+Edit starters/W219.cs. Run node dotnet-web-300/verify.cjs --starters --id=W219 from unionboot.
+Reference: solutions/W219.cs; shared checks: tests/W219.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

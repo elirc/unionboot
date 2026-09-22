@@ -1,0 +1,1 @@
+CREATE TABLE calc(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,discount INTEGER,net INTEGER AS(qty*price-discount) STORED CHECK(net>=0));INSERT INTO calc(id,qty,price,discount) SELECT * FROM source;SELECT id,net FROM calc ORDER BY id;

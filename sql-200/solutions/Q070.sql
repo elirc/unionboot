@@ -1,0 +1,1 @@
+WITH RECURSIVE links(ancestor,descendant) AS(SELECT manager_id,id FROM staff WHERE manager_id IS NOT NULL UNION ALL SELECT l.ancestor,s.id FROM links l JOIN staff s ON s.manager_id=l.descendant) SELECT s.name,COUNT(*) AS descendants FROM links l JOIN staff s ON s.id=l.ancestor GROUP BY s.id,s.name ORDER BY s.id;

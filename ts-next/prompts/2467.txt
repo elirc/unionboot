@@ -1,0 +1,14 @@
+2467: Finite protocol transition tables / protocol-steps=4
+
+Contract focus: state-dependent events; indexed transition return types.
+
+Advance a linear 4-step protocol from s0 to terminal s4. Only nonterminal states accept advance; the return type must be the exact successor of the input state. This is not a generic counter reducer: legal transitions are statically indexed by state.
+
+Semantic variation 4/15: protocol-steps=4. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2467.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2467.cjs. Type contracts: types/2467.positive.ts and types/2467.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2467
+Reference: node ts-next/verify.cjs --id=2467

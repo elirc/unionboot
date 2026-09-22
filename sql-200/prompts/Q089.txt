@@ -1,0 +1,48 @@
+Q089 — family NULL semantics and three valued logic, scenario 9: three-valued-or-truth-table
+
+Task
+Show the SQLite result (1=true,0=false,NULL=unknown) of (a=5 OR b=2) for every row. SQLite has no separate boolean storage type.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE measures(id INTEGER PRIMARY KEY,a INTEGER,b INTEGER,label TEXT);
+INSERT INTO measures VALUES(1,10,2,'ok'),(2,NULL,2,NULL),(3,5,0,''),(4,NULL,NULL,'missing'),(5,0,0,'zero'),(6,3,NULL,NULL);
+CREATE TABLE excluded(value INTEGER); INSERT INTO excluded VALUES(5),(NULL);
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"truth":1}.
+
+Expected shape
+Columns (exact aliases): id, truth. 6 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "truth": 1
+  },
+  {
+    "id": 2,
+    "truth": 1
+  },
+  {
+    "id": 3,
+    "truth": 1
+  },
+  {
+    "id": 4,
+    "truth": null
+  },
+  {
+    "id": 5,
+    "truth": 0
+  },
+  {
+    "id": 6,
+    "truth": null
+  }
+]
+
+Submission
+Edit starters/Q089.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q089
+Reference: node sql-200/verify.cjs --id=Q089

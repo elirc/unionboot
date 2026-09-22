@@ -1,0 +1,18 @@
+Imperative editor handle / scenario 12 — Boundary 2; handle reads trimmed draft
+
+TASK
+Child Editor owns Draft input, initially 2 x characters. Expose focus(),read(),clear() via useImperativeHandle and a ref. Parent Focus calls child handle, Snapshot stores read() in Saved, Clear editor calls clear() without changing Saved. read returns trimmed text. Parent must not own a duplicate draft state. Each mounted editor ref must reference the current draft, not the initial closure.
+
+EXAMPLE
+Draft=' a ' then Snapshot => Saved=a; Clear editor keeps Saved.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3290.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3290
+node react-next/verify.cjs --starters --id=3290

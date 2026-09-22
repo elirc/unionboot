@@ -1,0 +1,18 @@
+Elementary cellular automata / scenario 2 — rule=30; wrap=true
+
+TASK
+Input {cells,steps}, array of0/1 and nonnegative integer steps. Elementary rule 30: neighborhood code=left*4+self*2+right, next=(rule>>code)&1. Boundary wraps circularly. Synchronous updates. Return history including initial snapshot. Empty cells produces steps+1 empty rows. Invalid steps RangeError('Steps').
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1950.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1950
+node js-more/verify.cjs --starters --id=1950
+
+POLICIES
+rule=30; wrap=true
+Semantic key: {"rule":30,"wrap":true}

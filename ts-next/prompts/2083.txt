@@ -1,0 +1,14 @@
+2083: Position-labelled tuple enumeration / input-arity=10
+
+Contract focus: mapped tuple indexes; numeric template inference.
+
+Enumerate all input positions as index/value records. Each index in the output type is its exact numeric literal, not number. Preserve order and do not mutate the input. This version accepts exactly 10 numeric positions; readonly tuple inputs are supported. Output is readonly statically, not frozen unless stated.
+
+Semantic variation 10/15: input-arity=10. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2083.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2083.cjs. Type contracts: types/2083.positive.ts and types/2083.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2083
+Reference: node ts-next/verify.cjs --id=2083

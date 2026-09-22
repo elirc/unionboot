@@ -1,0 +1,11 @@
+Dependent option selection / scenario 12 — initial North; preserve still-valid city; placeholder reset; empty region
+
+Region select North/South/Empty; choices North: Shared,A,B; South: Shared,C; Empty: none. Initially North, city (none). Include an empty City option labelled Choose city; reset uses it. On Region change preserve selected nonempty city if valid in new region; otherwise reset. City select disabled for Empty. Output Region:City (use '-' for no selection). Reset button restores original region/city.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=760
+Run your starter: node react-more/verify.cjs --starters --id=760

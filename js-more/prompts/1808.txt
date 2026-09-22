@@ -1,0 +1,18 @@
+Huffman prefix codes / scenario 10 — output=length; unit=bytes
+
+TASK
+Input ASCII string. Huffman frequencies; repeatedly merge two least-weight nodes, ties ascending (length invariant) by sorted concatenated leaf-symbol key. First removed is left child. Return ceil(total encoded bit length/8), padding final byte; singleton uses1 bit per symbol. Empty yields 0.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1808.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1808
+node js-more/verify.cjs --starters --id=1808
+
+POLICIES
+output=length; unit=bytes
+Semantic key: {"output":"length","unit":"bytes"}

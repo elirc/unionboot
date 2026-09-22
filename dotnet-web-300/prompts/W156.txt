@@ -1,0 +1,13 @@
+W156 — Options configuration and validation
+Scenario 6/10: PageOptions limit 6..16
+
+Register configured PageOptions with Limit=limit and options validation inclusive6..16. Validation runs when IOptions<PageOptions>.Value is resolved, not during registration. Invalid throws OptionsValidationException with failure limit-range. Example limit6->valid;5->validation failure. No NuGet configuration binder needed.
+
+Signature: public static void Configure(IServiceCollection services, int limit)
+Provided domain types: public sealed class PageOptions { public int Limit {get;set;} }
+
+Edit starters/W156.cs. Run node dotnet-web-300/verify.cjs --starters --id=W156 from unionboot.
+Reference: solutions/W156.cs; shared checks: tests/W156.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

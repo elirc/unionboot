@@ -1,0 +1,27 @@
+Q248 — family Partial expression and composite index contracts, scenario 8: composite-left-prefix-range
+
+Task
+Create tenant,email index and force it for tenant10 and email>=B; explain the equality-prefix/range access.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE users(id INTEGER PRIMARY KEY,email TEXT,active INTEGER,tenant INTEGER);INSERT INTO users VALUES(1,'Ada@x',1,10),(2,'ada@x',0,10),(3,'Bo@x',1,20);
+
+Concrete example
+The first result row on this seed is {"detail":"SEARCH users USING COVERING INDEX tenant_email (tenant=? AND email>?)"}.
+
+Expected shape
+Columns: detail. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "detail": "SEARCH users USING COVERING INDEX tenant_email (tenant=? AND email>?)"
+  }
+]
+
+Submission
+Write SQL in starters/Q248.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+EXPLAIN QUERY PLAN returns native plan rows; the runtime compares detail strings only, ignoring numeric node identifiers/estimates. See GUIDE for version caveat.
+Reference: node sql-more/verify.cjs --id=Q248
+Learner: node sql-more/verify.cjs --starters --id=Q248

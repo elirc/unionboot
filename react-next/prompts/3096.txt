@@ -1,0 +1,18 @@
+Lazy panel mount lifetime / scenario 18 — Boundary 8; keep visited panels mounted
+
+TASK
+Two tabs A/B with labelled tabpanels. Only A is initially mounted; B mounts on first visit. Each panel owns an uncontrolled Note A/B input initialized to seed8. Visited inactive panels remain mounted with hidden=true, preserving drafts and effects. Child effect calls onMount(name) and cleanup onUnmount(name). Tab aria-selected must track active; use matching tab/tabpanel IDs. This tests mount lifetime, beyond basic tab selection.
+
+EXAMPLE
+Edit Note A, visit B then A => edited draft retained.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3096.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{onMount,onUnmount}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3096
+node react-next/verify.cjs --starters --id=3096

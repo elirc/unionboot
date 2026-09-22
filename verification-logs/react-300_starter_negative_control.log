@@ -1,0 +1,12 @@
+starter DOM groups: 0 passed, 1 failed.
+FAIL 1419 dom Expected values to be strictly deep-equal:
++ actual - expected
+
++ []
+- [
+-   'red apple',
+-   'green apple',
+-   'red chair',
+-   'blue cup'
+- ]
+

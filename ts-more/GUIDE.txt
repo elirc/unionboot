@@ -1,0 +1,46 @@
+TS-MORE - STRICT TYPESCRIPT CONTRACT PRACTICE
+
+420 exercises; IDs 784-1203. 28 API families, each with 15 explicitly labelled regression scenarios. This is repeated contract practice, NOT 420 unrelated algorithms. Signatures and implementations repeat within a family; scenario inputs and deterministic seeds vary. Boundary tests remain shared deliberately. No artificial policy tokens.
+
+Workflow
+1. Read prompts/<id>.txt and inspect the public signature in starters/<id>.ts.
+2. Implement the blank body without importing solutions.
+3. Inspect tests/<id>.cjs for concrete runtime examples and types/<id>.*.ts for compile contracts.
+4. Run node ts-more/verify.cjs --starters --id=784. (--id 784 also works.)
+5. Run node ts-more/verify.cjs for all references, or --starters for all your work.
+
+The verifier invokes the existing TypeScript 5.9.3 tsc CLI before any runtime test. Strict, exactOptionalPropertyTypes, noUncheckedIndexedAccess, useUnknownInCatchVariables and noImplicitReturns are enabled. Positive and @ts-expect-error negative fixtures are rebound to the selected STARTER in practice mode; solution types cannot mask a broken starter API. Fixtures are never executed. The exported solve symbol has an any guard, supplemented by concrete typed assignments and negative return-use checks; fixtures are regression coverage, not a complete proof against deliberate type escapes.
+
+Exit codes: 0 all pass; 1 runtime failures; 2 compiler/setup failures. Unknown flags/IDs fail. Untouched starters compile successfully but every test fails with TODO exercise <id>; compiler failure is NOT a successful blank-starter control. Temporary compiler outputs live under .verify/ and are cleaned after each run. Readonly contracts do not imply runtime deep freeze unless the prompt says so.
+
+Authoring source: ../build-ts-expansion.cjs. It refuses to overwrite either existing track so a rerun cannot destroy learner work. Root package, index and master verifier are intentionally not edited by this generator.
+
+Families
+784-798: Stable generic partition (generics; readonly inputs; callback variance)
+799-813: Generic chunk boundaries (generics; indexed access; validation)
+814-828: Shortest typed zip (two type parameters; tuples; readonly)
+829-843: Key-safe property projection (keyof; indexed access; generic constraints)
+844-858: Stable unique by key (generic keys; Map/Set equality; readonly)
+859-873: Group into typed Map (generic Map keys; bucket types)
+874-888: Nullish compaction (NonNullable; type guards; unions)
+889-903: Predicate-directed extraction (user-defined type guards; generic subtypes)
+904-918: First typed search result (discriminated unions; generic payloads)
+919-933: Typed Result mapping (generic success/error unions; callback contracts)
+934-948: Collect successful Results (union narrowing; error accumulation; tuples)
+949-963: Generic immutable tree map (recursive types; readonly; generic transformation)
+964-978: Unknown finite number decoder (unknown boundaries; typeof narrowing; Result)
+979-993: Unknown record decoder (unknown object narrowing; exact optional properties)
+994-1008: Unknown string array guard (type predicates; unknown; readonly arrays)
+1009-1023: Tagged shape measurement (exhaustive discriminated unions; never)
+1024-1038: Exhaustive counter reducer (tagged actions; immutable state; readonly)
+1039-1053: Own-property typed pick (Pick; keyof; symbol keys; mapped results)
+1054-1068: Immutable typed property replacement (keyof; indexed assignment; NoInfer)
+1069-1083: Typed object value mapping (mapped types; own string keys; generic callbacks)
+1084-1098: Exact optional settings patch (Partial; exactOptionalPropertyTypes; immutable merge)
+1099-1113: Runtime-frozen readonly snapshot (Readonly mapped type; shallow copy semantics)
+1114-1128: Minimum nonempty tuple (nonempty tuples; generic comparison; safe indexing)
+1129-1143: Literal pair constructor (const type parameters; readonly tuples; inference)
+1144-1158: Two-stage typed composition (higher-order generics; inference; callback variance)
+1159-1173: Nullish fallback without falsy loss (generic inference; nullish unions; NoInfer)
+1174-1188: Flatten readonly generic layers (nested readonly; generic element preservation)
+1189-1203: Generic frequency map (generic Map keys; SameValueZero; readonly)

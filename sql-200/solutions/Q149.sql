@@ -1,0 +1,1 @@
+BEGIN; UPDATE accounts SET balance=balance+1 WHERE id=1; SAVEPOINT a; UPDATE accounts SET balance=balance+2 WHERE id=1; SAVEPOINT b; UPDATE accounts SET balance=balance+4 WHERE id=1; ROLLBACK TO b; RELEASE b; RELEASE a; COMMIT; SELECT id,balance FROM accounts ORDER BY id;

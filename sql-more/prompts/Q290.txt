@@ -1,0 +1,43 @@
+Q290 — family Effective dated history and as of selection, scenario 10: atomic-close-and-append-version
+
+Task
+At day10 close A current row and insert A price18 valid_from10 with NULL end in one transaction; return A history.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE prices(sku TEXT,valid_from INTEGER,valid_to INTEGER,price INTEGER,PRIMARY KEY(sku,valid_from));INSERT INTO prices VALUES('A',1,4,10),('A',4,8,12),('A',8,NULL,15),('B',2,6,7),('B',7,NULL,9);
+
+Concrete example
+The first result row on this seed is {"valid_from":1,"valid_to":4,"price":10}.
+
+Expected shape
+Columns: valid_from, valid_to, price. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "valid_from": 1,
+    "valid_to": 4,
+    "price": 10
+  },
+  {
+    "valid_from": 4,
+    "valid_to": 8,
+    "price": 12
+  },
+  {
+    "valid_from": 8,
+    "valid_to": 10,
+    "price": 15
+  },
+  {
+    "valid_from": 10,
+    "valid_to": null,
+    "price": 18
+  }
+]
+
+Submission
+Write SQL in starters/Q290.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q290
+Learner: node sql-more/verify.cjs --starters --id=Q290

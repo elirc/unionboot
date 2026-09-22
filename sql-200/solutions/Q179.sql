@@ -1,0 +1,1 @@
+DELETE FROM raw WHERE email IS NULL; SELECT id,email FROM raw ORDER BY id;

@@ -1,0 +1,18 @@
+Reset-key error boundaries / scenario 13 — Boundary 3; reset when resetKey changes
+
+TASK
+A class error boundary catches descendant render errors, shows alert Panel unavailable and Retry panel. Child starts Count=3; Increment adds one. broken prop makes child throw. Recovery remounts child with original Count. A changed resetKey clears the boundary error automatically. An error must not remove a sibling output Shell with text stable. Tests intentionally trigger React error logging.
+
+EXAMPLE
+Increment then broken=true => fallback. Repair broken and change resetKey => Count=3, not 4.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2771.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{resetKey="A",broken=false}
+Example data: {"broken":false}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2771
+node react-next/verify.cjs --starters --id=2771

@@ -1,0 +1,14 @@
+1990: Saturating tuple prefix algebra / take=7
+
+Contract focus: tuple infer; bounded take; literal length.
+
+Return a fresh prefix of at most 7 positions. Preserve tuple position types and saturate at input length. This API accepts finite tuples, not widened arrays; the signature enforces a known length. The slice result assertion follows its bounds.
+
+Semantic variation 7/15: take=7. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/1990.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/1990.cjs. Type contracts: types/1990.positive.ts and types/1990.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=1990
+Reference: node ts-next/verify.cjs --id=1990

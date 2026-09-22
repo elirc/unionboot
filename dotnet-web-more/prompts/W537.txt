@@ -1,0 +1,8 @@
+W537 | Request culture injected providers
+Scenario 7: Injected culture fallback it-IT
+Semantic key: injected-culture-fallback-it-it
+
+Call the injected IRequestCultureProvider exactly once with the original context. Use its first culture or fallback it-IT when no result/cultures. Do not mutate process-wide CurrentCulture; this is request-local resolution.
+
+Signature: public static async Task<string> Resolve(HttpContext context,IRequestCultureProvider provider)
+Implement starters/W537.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

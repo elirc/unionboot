@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-more",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W341",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 8,
+  "results": [
+    {
+      "id": "W341",
+      "family": "IFormFile in-memory binding",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

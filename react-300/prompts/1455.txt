@@ -1,0 +1,18 @@
+Compare selected records / scenario 7 — 2 compare slots; difference; prune missing selection
+
+TASK
+Pick ID checkboxes choose records in click order, cap 2; disable unchecked boxes at cap, selected remain removable. Selection output joins stored IDs by comma. Value output subtracts later existing values from the first selected existing value (0 if none). On prop disappearance permanently remove missing ids. Clear resets selections. Preserve props.
+
+EXAMPLE
+Select A then B => Value=5.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1455.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{rows=[]}
+Example data: {"rows":[{"id":"A","value":8},{"id":"B","value":3},{"id":"C","value":5},{"id":"D","value":1}]}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1455
+node react-300/verify.cjs --starters --id=1455

@@ -1,0 +1,39 @@
+Q236 — family Generated columns and derived schema invariants, scenario 6: generated-normalized-unique-key
+
+Task
+Create emails with normalized generated lower(trim(email)) UNIQUE; insert spaced Ada and Bo, return normalization. Differently cased Ada duplicate must fail (ASCII normalization).
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE source(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,discount INTEGER);INSERT INTO source VALUES(1,2,10,3),(2,0,8,0),(3,3,7,2);
+
+Concrete example
+The first result row on this seed is {"id":1,"normalized":"ada@x"}.
+
+Expected shape
+Columns: id, normalized. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "normalized": "ada@x"
+  },
+  {
+    "id": 2,
+    "normalized": "bo@x"
+  }
+]
+
+Post-result integrity assertions:
+[
+  {
+    "sql": "INSERT INTO emails(id,email) VALUES(3,'ADA@X')",
+    "reject": "UNIQUE"
+  }
+]
+
+Submission
+Write SQL in starters/Q236.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q236
+Learner: node sql-more/verify.cjs --starters --id=Q236

@@ -1,0 +1,15 @@
+{
+  "track": "dotnet-web-300",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "all",
+  "groups": 300,
+  "phase": "inventory",
+  "inventory": {
+    "exercises": 300,
+    "families": 30,
+    "scenariosPerFamily": 10
+  },
+  "passed": 300,
+  "failed": 0
+}

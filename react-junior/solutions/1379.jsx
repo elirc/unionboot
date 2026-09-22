@@ -1,0 +1,5 @@
+// 1379 Normalize a phone number on submission [forms]
+// Phone input preserves raw typing. Save strips all non-ASCII digits and accepts exactly 10 digits. Invalid submission shows role alert Enter 10 digits without clearing the raw value or the previous saved result. Valid submission clears the alert, keeps the raw input, and outputs (DDD) DDD-DDDD. Native form submission must not navigate.
+// Run: node react-junior/verify.cjs --id=1379 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({}){const [raw,setRaw]=useState(''),[saved,setSaved]=useState(''),[error,setError]=useState(false);return <form onSubmit={e=>{e.preventDefault();const digits=raw.replace(/[^0-9]/g,'');if(digits.length!==10){setError(true);return;}setError(false);setSaved('('+digits.slice(0,3)+') '+digits.slice(3,6)+'-'+digits.slice(6));}}><label>Phone<input value={raw} onChange={e=>setRaw(e.target.value)}/></label><button>Save</button>{error&&<p role="alert">Enter 10 digits</p>}<output>{saved}</output></form>;}

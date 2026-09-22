@@ -1,0 +1,28 @@
+Q324 — family Retention cohorts and churn definitions, scenario 4: day-three-mature-cohorts-only
+
+Task
+At asof3, include cohorts old enough for day3 retention, then count exact day3 retained users.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE users(id INTEGER PRIMARY KEY,joined INTEGER);CREATE TABLE activity(user_id INTEGER,day INTEGER);INSERT INTO users VALUES(1,0),(2,0),(3,1),(4,1);INSERT INTO activity VALUES(1,0),(1,1),(1,1),(1,3),(2,0),(3,1),(3,2);
+
+Concrete example
+The first result row on this seed is {"cohort":0,"retained":1,"signups":2}.
+
+Expected shape
+Columns: cohort, retained, signups. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "cohort": 0,
+    "retained": 1,
+    "signups": 2
+  }
+]
+
+Submission
+Write SQL in starters/Q324.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q324
+Learner: node sql-more/verify.cjs --starters --id=Q324

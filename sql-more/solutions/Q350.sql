@@ -1,0 +1,1 @@
+CREATE TABLE snapshot AS SELECT * FROM customers;CREATE TABLE migration_audit(version INTEGER PRIMARY KEY,copied INTEGER);INSERT INTO migration_audit SELECT 2,COUNT(*) FROM snapshot;SELECT version,copied FROM migration_audit;

@@ -1,0 +1,25 @@
+{
+  "track": "ts-next",
+  "mode": "solution",
+  "scope": "single-id",
+  "requestedIds": [
+    2523
+  ],
+  "compilerVersion": "5.9.3",
+  "compilerTimeoutMs": 300000,
+  "compilerPassed": true,
+  "runtimeStarted": true,
+  "blankControlPassed": false,
+  "passed": 1,
+  "failed": 0,
+  "exitCode": 0,
+  "results": [
+    {
+      "id": 2523,
+      "compiler": "passed",
+      "runtime": "passed",
+      "todoMatch": false
+    }
+  ],
+  "completedAt": "2026-09-17T22:48:14.182Z"
+}

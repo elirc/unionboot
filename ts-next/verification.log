@@ -1,0 +1,1803 @@
+
+=== 2026-09-17T19:08:24.167Z single-id ===
+SETUP ERROR: AssertionError [ERR_ASSERTION]: Fixture still bound to solution
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:17:352)
+    at Object.<anonymous> (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:38:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+exitCode=2
+
+=== 2026-09-17T19:09:33.633Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2718 Typed coefficient polynomial evaluation / polynomial-degree=15
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T19:11:15.747Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 1969 Bounded infer-chain box peeling / peel-budget=1
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T19:24:58.767Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+ts-next/solutions/2179.ts(5,40): error TS1161: Unterminated regular expression literal.
+ts-next/solutions/2179.ts(6,1): error TS1005: ';' expected.
+ts-next/solutions/2179.ts(6,2): error TS1161: Unterminated regular expression literal.
+ts-next/solutions/2179.ts(6,17): error TS1005: ';' expected.
+TypeScript compiler gate: FAILED; runtime tests NOT RUN.
+exitCode=2
+
+=== 2026-09-17T19:26:16.362Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2193 Bounded ASCII whitespace trimming / leading-whitespace-budget=15
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T19:28:01.644Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2478 Finite protocol transition tables / protocol-steps=15
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T19:29:28.142Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2688 I18n named message argument inference / message-arguments=15
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T19:35:12.266Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2493 Completion-gated immutable builders / builder-required-fields=name+count+active+tags
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T21:47:52.221Z full ===
+TypeScript compiler gate: START (5.9.3; 750 solution APIs; positive + negative fixtures bound to candidate).
+ts-next/solutions/2014.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? readonly [H, ...R] : readonly [F]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2015.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? readonly [H, H, ...R] : readonly [H, F] : readonly [F, F]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2016.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? readonly [H, H, H, ...R] : readonly [H, H, F] : readonly [H, F, F] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2017.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? readonly [H, H, H, H, ...R] : readonly [...] : readonly [...] : readonly [...] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2018.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2019.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] : readon...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2020.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...] : readonly [...] : readonly [...] : readonly [......' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2021.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...] : readonly [...] : rea...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2022.ts(5,75): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2023.ts(5,76): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2024.ts(5,76): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2025.ts(5,76): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2026.ts(5,76): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2027.ts(5,76): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2028.ts(5,76): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2029.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? readonly [...R, H] : readonly []' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2030.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? readonly [...R, H] : readonly [] : readonly []' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2031.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? readonly [...R, H] : readonly [] : readonly [] : readonly []' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2032.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? readonly [......] : readonly [] : readonly [] : readonly [] : readonly []' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2033.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? readonly [......] : readonly [] : readonly [] : readonly [] : readonly [] : readonly []' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2034.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? readonly [......] : readonly [] : readonly [] : reado...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2035.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? readonly [......] :...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2036.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2037.ts(5,91): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2038.ts(5,92): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2039.ts(5,92): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2040.ts(5,92): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2041.ts(5,92): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2042.ts(5,92): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2043.ts(5,92): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [...R, H] extends readonly [infer H, ...infer R] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends readonly [...] ? [......] extends re...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2044.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 1 element(s) but source may have fewer.
+ts-next/solutions/2045.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 2 element(s) but source may have fewer.
+ts-next/solutions/2046.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 3 element(s) but source may have fewer.
+ts-next/solutions/2047.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 4 element(s) but source may have fewer.
+ts-next/solutions/2048.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 5 element(s) but source may have fewer.
+ts-next/solutions/2049.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 6 element(s) but source may have fewer.
+ts-next/solutions/2050.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 7 element(s) but source may have fewer.
+ts-next/solutions/2051.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 8 element(s) but source may have fewer.
+ts-next/solutions/2052.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 9 element(s) but source may have fewer.
+ts-next/solutions/2053.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 10 element(s) but source may have fewer.
+ts-next/solutions/2054.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 11 element(s) but source may have fewer.
+ts-next/solutions/2055.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 12 element(s) but source may have fewer.
+ts-next/solutions/2056.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 13 element(s) but source may have fewer.
+ts-next/solutions/2057.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 14 element(s) but source may have fewer.
+ts-next/solutions/2058.ts(5,10): error TS2352: Conversion of type 'T[]' to type 'readonly [T, T, T, T, T, T, T, T, T, T, T, T, T, T, T]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Target requires 15 element(s) but source may have fewer.
+ts-next/solutions/2104.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? readonly [H, V, ...R] : readonly [V]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2105.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? readonly [H, H, V, ...R] : readonly [H, V] : readonly [V]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2106.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? readonly [H, H, H, V, ...R] : readonly [H, H, V] : readonly [H, V] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2107.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? readonly [H, H, H, H, V, ...R] : readonly [...] : readonly [...] : readonly [...] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2108.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2109.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] : readon...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2110.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...] : readonly [...] : readonly [...] : readonly [......' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2111.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...] : readonly [...] : rea...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2112.ts(5,47): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? readonly [...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2113.ts(5,48): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2114.ts(5,48): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2115.ts(5,48): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2116.ts(5,48): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2117.ts(5,48): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2118.ts(5,48): error TS2352: Conversion of type 'unknown[]' to type 'T extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [infer H, ...infer R] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends readonly [...] ? R extends ...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2149.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? readonly [H, R] : readonly [S]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2150.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [H, H, R] : readonly [H, R] : readonly [S]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2151.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [H, H, H, R] : readonly [H, H, R] : readonly [H, R] : readonly [S]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2152.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [H, H, H, H, R] : readonly [...] : readonly [...] : readonly [...] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2153.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2154.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] : readonly [...] :...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2155.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [...] : readonly [...] : readonly [...] : readonly [...]...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2156.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? readonly [...] : readonly [.....' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2157.ts(5,180): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2158.ts(5,181): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2159.ts(5,181): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2160.ts(5,181): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2161.ts(5,181): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2162.ts(5,181): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+ts-next/solutions/2163.ts(5,181): error TS2352: Conversion of type 'string[]' to type 'S extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer R}` ? R extends `${infer H}|${infer...' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+TypeScript compiler gate: FAILED; runtime tests NOT RUN.
+exitCode=2
+
+=== 2026-09-17T21:56:03.976Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2014 Minimum-width tuple padding / minimum-width=1
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T21:56:47.593Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2058 Literal tuple replication / copies=15
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T21:57:44.638Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2163 Budgeted delimited literal parsing / maximum-splits=15
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T22:07:36.133Z full ===
+TypeScript compiler gate: START (5.9.3; 750 solution APIs; positive + negative fixtures bound to candidate).
+Error: spawnSync C:\Program Files\nodejs\node.exe ETIMEDOUT
+TypeScript compiler gate: FAILED; runtime tests NOT RUN.
+exitCode=2
+
+=== 2026-09-17T22:27:07.742Z full ===
+TypeScript compiler gate: START (5.9.3; 750 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 1969 Bounded infer-chain box peeling / peel-budget=1
+PASS 1970 Bounded infer-chain box peeling / peel-budget=2
+PASS 1971 Bounded infer-chain box peeling / peel-budget=3
+PASS 1972 Bounded infer-chain box peeling / peel-budget=4
+PASS 1973 Bounded infer-chain box peeling / peel-budget=5
+PASS 1974 Bounded infer-chain box peeling / peel-budget=6
+PASS 1975 Bounded infer-chain box peeling / peel-budget=7
+PASS 1976 Bounded infer-chain box peeling / peel-budget=8
+PASS 1977 Bounded infer-chain box peeling / peel-budget=9
+PASS 1978 Bounded infer-chain box peeling / peel-budget=10
+PASS 1979 Bounded infer-chain box peeling / peel-budget=11
+PASS 1980 Bounded infer-chain box peeling / peel-budget=12
+PASS 1981 Bounded infer-chain box peeling / peel-budget=13
+PASS 1982 Bounded infer-chain box peeling / peel-budget=14
+PASS 1983 Bounded infer-chain box peeling / peel-budget=15
+PASS 1984 Saturating tuple prefix algebra / take=1
+PASS 1985 Saturating tuple prefix algebra / take=2
+PASS 1986 Saturating tuple prefix algebra / take=3
+PASS 1987 Saturating tuple prefix algebra / take=4
+PASS 1988 Saturating tuple prefix algebra / take=5
+PASS 1989 Saturating tuple prefix algebra / take=6
+PASS 1990 Saturating tuple prefix algebra / take=7
+PASS 1991 Saturating tuple prefix algebra / take=8
+PASS 1992 Saturating tuple prefix algebra / take=9
+PASS 1993 Saturating tuple prefix algebra / take=10
+PASS 1994 Saturating tuple prefix algebra / take=11
+PASS 1995 Saturating tuple prefix algebra / take=12
+PASS 1996 Saturating tuple prefix algebra / take=13
+PASS 1997 Saturating tuple prefix algebra / take=14
+PASS 1998 Saturating tuple prefix algebra / take=15
+PASS 1999 Saturating tuple suffix algebra / drop=1
+PASS 2000 Saturating tuple suffix algebra / drop=2
+PASS 2001 Saturating tuple suffix algebra / drop=3
+PASS 2002 Saturating tuple suffix algebra / drop=4
+PASS 2003 Saturating tuple suffix algebra / drop=5
+PASS 2004 Saturating tuple suffix algebra / drop=6
+PASS 2005 Saturating tuple suffix algebra / drop=7
+PASS 2006 Saturating tuple suffix algebra / drop=8
+PASS 2007 Saturating tuple suffix algebra / drop=9
+PASS 2008 Saturating tuple suffix algebra / drop=10
+PASS 2009 Saturating tuple suffix algebra / drop=11
+PASS 2010 Saturating tuple suffix algebra / drop=12
+PASS 2011 Saturating tuple suffix algebra / drop=13
+PASS 2012 Saturating tuple suffix algebra / drop=14
+PASS 2013 Saturating tuple suffix algebra / drop=15
+PASS 2014 Minimum-width tuple padding / minimum-width=1
+PASS 2015 Minimum-width tuple padding / minimum-width=2
+PASS 2016 Minimum-width tuple padding / minimum-width=3
+PASS 2017 Minimum-width tuple padding / minimum-width=4
+PASS 2018 Minimum-width tuple padding / minimum-width=5
+PASS 2019 Minimum-width tuple padding / minimum-width=6
+PASS 2020 Minimum-width tuple padding / minimum-width=7
+PASS 2021 Minimum-width tuple padding / minimum-width=8
+PASS 2022 Minimum-width tuple padding / minimum-width=9
+PASS 2023 Minimum-width tuple padding / minimum-width=10
+PASS 2024 Minimum-width tuple padding / minimum-width=11
+PASS 2025 Minimum-width tuple padding / minimum-width=12
+PASS 2026 Minimum-width tuple padding / minimum-width=13
+PASS 2027 Minimum-width tuple padding / minimum-width=14
+PASS 2028 Minimum-width tuple padding / minimum-width=15
+PASS 2029 Tuple left-rotation proofs / rotate-left=1
+PASS 2030 Tuple left-rotation proofs / rotate-left=2
+PASS 2031 Tuple left-rotation proofs / rotate-left=3
+PASS 2032 Tuple left-rotation proofs / rotate-left=4
+PASS 2033 Tuple left-rotation proofs / rotate-left=5
+PASS 2034 Tuple left-rotation proofs / rotate-left=6
+PASS 2035 Tuple left-rotation proofs / rotate-left=7
+PASS 2036 Tuple left-rotation proofs / rotate-left=8
+PASS 2037 Tuple left-rotation proofs / rotate-left=9
+PASS 2038 Tuple left-rotation proofs / rotate-left=10
+PASS 2039 Tuple left-rotation proofs / rotate-left=11
+PASS 2040 Tuple left-rotation proofs / rotate-left=12
+PASS 2041 Tuple left-rotation proofs / rotate-left=13
+PASS 2042 Tuple left-rotation proofs / rotate-left=14
+PASS 2043 Tuple left-rotation proofs / rotate-left=15
+PASS 2044 Literal tuple replication / copies=1
+PASS 2045 Literal tuple replication / copies=2
+PASS 2046 Literal tuple replication / copies=3
+PASS 2047 Literal tuple replication / copies=4
+PASS 2048 Literal tuple replication / copies=5
+PASS 2049 Literal tuple replication / copies=6
+PASS 2050 Literal tuple replication / copies=7
+PASS 2051 Literal tuple replication / copies=8
+PASS 2052 Literal tuple replication / copies=9
+PASS 2053 Literal tuple replication / copies=10
+PASS 2054 Literal tuple replication / copies=11
+PASS 2055 Literal tuple replication / copies=12
+PASS 2056 Literal tuple replication / copies=13
+PASS 2057 Literal tuple replication / copies=14
+PASS 2058 Literal tuple replication / copies=15
+PASS 2059 Overlapping tuple window types / window-width=1
+PASS 2060 Overlapping tuple window types / window-width=2
+PASS 2061 Overlapping tuple window types / window-width=3
+PASS 2062 Overlapping tuple window types / window-width=4
+PASS 2063 Overlapping tuple window types / window-width=5
+PASS 2064 Overlapping tuple window types / window-width=6
+PASS 2065 Overlapping tuple window types / window-width=7
+PASS 2066 Overlapping tuple window types / window-width=8
+PASS 2067 Overlapping tuple window types / window-width=9
+PASS 2068 Overlapping tuple window types / window-width=10
+PASS 2069 Overlapping tuple window types / window-width=11
+PASS 2070 Overlapping tuple window types / window-width=12
+PASS 2071 Overlapping tuple window types / window-width=13
+PASS 2072 Overlapping tuple window types / window-width=14
+PASS 2073 Overlapping tuple window types / window-width=15
+PASS 2074 Position-labelled tuple enumeration / input-arity=1
+PASS 2075 Position-labelled tuple enumeration / input-arity=2
+PASS 2076 Position-labelled tuple enumeration / input-arity=3
+PASS 2077 Position-labelled tuple enumeration / input-arity=4
+PASS 2078 Position-labelled tuple enumeration / input-arity=5
+PASS 2079 Position-labelled tuple enumeration / input-arity=6
+PASS 2080 Position-labelled tuple enumeration / input-arity=7
+PASS 2081 Position-labelled tuple enumeration / input-arity=8
+PASS 2082 Position-labelled tuple enumeration / input-arity=9
+PASS 2083 Position-labelled tuple enumeration / input-arity=10
+PASS 2084 Position-labelled tuple enumeration / input-arity=11
+PASS 2085 Position-labelled tuple enumeration / input-arity=12
+PASS 2086 Position-labelled tuple enumeration / input-arity=13
+PASS 2087 Position-labelled tuple enumeration / input-arity=14
+PASS 2088 Position-labelled tuple enumeration / input-arity=15
+PASS 2089 Positional reverse tuple contracts / heterogeneous-arity=1
+PASS 2090 Positional reverse tuple contracts / heterogeneous-arity=2
+PASS 2091 Positional reverse tuple contracts / heterogeneous-arity=3
+PASS 2092 Positional reverse tuple contracts / heterogeneous-arity=4
+PASS 2093 Positional reverse tuple contracts / heterogeneous-arity=5
+PASS 2094 Positional reverse tuple contracts / heterogeneous-arity=6
+PASS 2095 Positional reverse tuple contracts / heterogeneous-arity=7
+PASS 2096 Positional reverse tuple contracts / heterogeneous-arity=8
+PASS 2097 Positional reverse tuple contracts / heterogeneous-arity=9
+PASS 2098 Positional reverse tuple contracts / heterogeneous-arity=10
+PASS 2099 Positional reverse tuple contracts / heterogeneous-arity=11
+PASS 2100 Positional reverse tuple contracts / heterogeneous-arity=12
+PASS 2101 Positional reverse tuple contracts / heterogeneous-arity=13
+PASS 2102 Positional reverse tuple contracts / heterogeneous-arity=14
+PASS 2103 Positional reverse tuple contracts / heterogeneous-arity=15
+PASS 2104 Tuple insertion boundary inference / insert-index=1
+PASS 2105 Tuple insertion boundary inference / insert-index=2
+PASS 2106 Tuple insertion boundary inference / insert-index=3
+PASS 2107 Tuple insertion boundary inference / insert-index=4
+PASS 2108 Tuple insertion boundary inference / insert-index=5
+PASS 2109 Tuple insertion boundary inference / insert-index=6
+PASS 2110 Tuple insertion boundary inference / insert-index=7
+PASS 2111 Tuple insertion boundary inference / insert-index=8
+PASS 2112 Tuple insertion boundary inference / insert-index=9
+PASS 2113 Tuple insertion boundary inference / insert-index=10
+PASS 2114 Tuple insertion boundary inference / insert-index=11
+PASS 2115 Tuple insertion boundary inference / insert-index=12
+PASS 2116 Tuple insertion boundary inference / insert-index=13
+PASS 2117 Tuple insertion boundary inference / insert-index=14
+PASS 2118 Tuple insertion boundary inference / insert-index=15
+PASS 2119 Route-template parameter binding / route-parameters=1
+PASS 2120 Route-template parameter binding / route-parameters=2
+PASS 2121 Route-template parameter binding / route-parameters=3
+PASS 2122 Route-template parameter binding / route-parameters=4
+PASS 2123 Route-template parameter binding / route-parameters=5
+PASS 2124 Route-template parameter binding / route-parameters=6
+PASS 2125 Route-template parameter binding / route-parameters=7
+PASS 2126 Route-template parameter binding / route-parameters=8
+PASS 2127 Route-template parameter binding / route-parameters=9
+PASS 2128 Route-template parameter binding / route-parameters=10
+PASS 2129 Route-template parameter binding / route-parameters=11
+PASS 2130 Route-template parameter binding / route-parameters=12
+PASS 2131 Route-template parameter binding / route-parameters=13
+PASS 2132 Route-template parameter binding / route-parameters=14
+PASS 2133 Route-template parameter binding / route-parameters=15
+PASS 2134 Positional printf-token inference / format-token-arity=1
+PASS 2135 Positional printf-token inference / format-token-arity=2
+PASS 2136 Positional printf-token inference / format-token-arity=3
+PASS 2137 Positional printf-token inference / format-token-arity=4
+PASS 2138 Positional printf-token inference / format-token-arity=5
+PASS 2139 Positional printf-token inference / format-token-arity=6
+PASS 2140 Positional printf-token inference / format-token-arity=7
+PASS 2141 Positional printf-token inference / format-token-arity=8
+PASS 2142 Positional printf-token inference / format-token-arity=9
+PASS 2143 Positional printf-token inference / format-token-arity=10
+PASS 2144 Positional printf-token inference / format-token-arity=11
+PASS 2145 Positional printf-token inference / format-token-arity=12
+PASS 2146 Positional printf-token inference / format-token-arity=13
+PASS 2147 Positional printf-token inference / format-token-arity=14
+PASS 2148 Positional printf-token inference / format-token-arity=15
+PASS 2149 Budgeted delimited literal parsing / maximum-splits=1
+PASS 2150 Budgeted delimited literal parsing / maximum-splits=2
+PASS 2151 Budgeted delimited literal parsing / maximum-splits=3
+PASS 2152 Budgeted delimited literal parsing / maximum-splits=4
+PASS 2153 Budgeted delimited literal parsing / maximum-splits=5
+PASS 2154 Budgeted delimited literal parsing / maximum-splits=6
+PASS 2155 Budgeted delimited literal parsing / maximum-splits=7
+PASS 2156 Budgeted delimited literal parsing / maximum-splits=8
+PASS 2157 Budgeted delimited literal parsing / maximum-splits=9
+PASS 2158 Budgeted delimited literal parsing / maximum-splits=10
+PASS 2159 Budgeted delimited literal parsing / maximum-splits=11
+PASS 2160 Budgeted delimited literal parsing / maximum-splits=12
+PASS 2161 Budgeted delimited literal parsing / maximum-splits=13
+PASS 2162 Budgeted delimited literal parsing / maximum-splits=14
+PASS 2163 Budgeted delimited literal parsing / maximum-splits=15
+PASS 2164 Bounded leading-slash normalization / slash-budget=1
+PASS 2165 Bounded leading-slash normalization / slash-budget=2
+PASS 2166 Bounded leading-slash normalization / slash-budget=3
+PASS 2167 Bounded leading-slash normalization / slash-budget=4
+PASS 2168 Bounded leading-slash normalization / slash-budget=5
+PASS 2169 Bounded leading-slash normalization / slash-budget=6
+PASS 2170 Bounded leading-slash normalization / slash-budget=7
+PASS 2171 Bounded leading-slash normalization / slash-budget=8
+PASS 2172 Bounded leading-slash normalization / slash-budget=9
+PASS 2173 Bounded leading-slash normalization / slash-budget=10
+PASS 2174 Bounded leading-slash normalization / slash-budget=11
+PASS 2175 Bounded leading-slash normalization / slash-budget=12
+PASS 2176 Bounded leading-slash normalization / slash-budget=13
+PASS 2177 Bounded leading-slash normalization / slash-budget=14
+PASS 2178 Bounded leading-slash normalization / slash-budget=15
+PASS 2179 Bounded ASCII whitespace trimming / leading-whitespace-budget=1
+PASS 2180 Bounded ASCII whitespace trimming / leading-whitespace-budget=2
+PASS 2181 Bounded ASCII whitespace trimming / leading-whitespace-budget=3
+PASS 2182 Bounded ASCII whitespace trimming / leading-whitespace-budget=4
+PASS 2183 Bounded ASCII whitespace trimming / leading-whitespace-budget=5
+PASS 2184 Bounded ASCII whitespace trimming / leading-whitespace-budget=6
+PASS 2185 Bounded ASCII whitespace trimming / leading-whitespace-budget=7
+PASS 2186 Bounded ASCII whitespace trimming / leading-whitespace-budget=8
+PASS 2187 Bounded ASCII whitespace trimming / leading-whitespace-budget=9
+PASS 2188 Bounded ASCII whitespace trimming / leading-whitespace-budget=10
+PASS 2189 Bounded ASCII whitespace trimming / leading-whitespace-budget=11
+PASS 2190 Bounded ASCII whitespace trimming / leading-whitespace-budget=12
+PASS 2191 Bounded ASCII whitespace trimming / leading-whitespace-budget=13
+PASS 2192 Bounded ASCII whitespace trimming / leading-whitespace-budget=14
+PASS 2193 Bounded ASCII whitespace trimming / leading-whitespace-budget=15
+PASS 2194 Budgeted kebab-to-camel literal transforms / hyphen-conversions=1
+PASS 2195 Budgeted kebab-to-camel literal transforms / hyphen-conversions=2
+PASS 2196 Budgeted kebab-to-camel literal transforms / hyphen-conversions=3
+PASS 2197 Budgeted kebab-to-camel literal transforms / hyphen-conversions=4
+PASS 2198 Budgeted kebab-to-camel literal transforms / hyphen-conversions=5
+PASS 2199 Budgeted kebab-to-camel literal transforms / hyphen-conversions=6
+PASS 2200 Budgeted kebab-to-camel literal transforms / hyphen-conversions=7
+PASS 2201 Budgeted kebab-to-camel literal transforms / hyphen-conversions=8
+PASS 2202 Budgeted kebab-to-camel literal transforms / hyphen-conversions=9
+PASS 2203 Budgeted kebab-to-camel literal transforms / hyphen-conversions=10
+PASS 2204 Budgeted kebab-to-camel literal transforms / hyphen-conversions=11
+PASS 2205 Budgeted kebab-to-camel literal transforms / hyphen-conversions=12
+PASS 2206 Budgeted kebab-to-camel literal transforms / hyphen-conversions=13
+PASS 2207 Budgeted kebab-to-camel literal transforms / hyphen-conversions=14
+PASS 2208 Budgeted kebab-to-camel literal transforms / hyphen-conversions=15
+PASS 2209 Suffix-selected asset descriptors / asset-kinds=png
+PASS 2210 Suffix-selected asset descriptors / asset-kinds=mp3
+PASS 2211 Suffix-selected asset descriptors / asset-kinds=png+mp3
+PASS 2212 Suffix-selected asset descriptors / asset-kinds=txt
+PASS 2213 Suffix-selected asset descriptors / asset-kinds=png+txt
+PASS 2214 Suffix-selected asset descriptors / asset-kinds=mp3+txt
+PASS 2215 Suffix-selected asset descriptors / asset-kinds=png+mp3+txt
+PASS 2216 Suffix-selected asset descriptors / asset-kinds=json
+PASS 2217 Suffix-selected asset descriptors / asset-kinds=png+json
+PASS 2218 Suffix-selected asset descriptors / asset-kinds=mp3+json
+PASS 2219 Suffix-selected asset descriptors / asset-kinds=png+mp3+json
+PASS 2220 Suffix-selected asset descriptors / asset-kinds=txt+json
+PASS 2221 Suffix-selected asset descriptors / asset-kinds=png+txt+json
+PASS 2222 Suffix-selected asset descriptors / asset-kinds=mp3+txt+json
+PASS 2223 Suffix-selected asset descriptors / asset-kinds=png+mp3+txt+json
+PASS 2224 Query-template placeholder interpolation / query-placeholder-arity=1
+PASS 2225 Query-template placeholder interpolation / query-placeholder-arity=2
+PASS 2226 Query-template placeholder interpolation / query-placeholder-arity=3
+PASS 2227 Query-template placeholder interpolation / query-placeholder-arity=4
+PASS 2228 Query-template placeholder interpolation / query-placeholder-arity=5
+PASS 2229 Query-template placeholder interpolation / query-placeholder-arity=6
+PASS 2230 Query-template placeholder interpolation / query-placeholder-arity=7
+PASS 2231 Query-template placeholder interpolation / query-placeholder-arity=8
+PASS 2232 Query-template placeholder interpolation / query-placeholder-arity=9
+PASS 2233 Query-template placeholder interpolation / query-placeholder-arity=10
+PASS 2234 Query-template placeholder interpolation / query-placeholder-arity=11
+PASS 2235 Query-template placeholder interpolation / query-placeholder-arity=12
+PASS 2236 Query-template placeholder interpolation / query-placeholder-arity=13
+PASS 2237 Query-template placeholder interpolation / query-placeholder-arity=14
+PASS 2238 Query-template placeholder interpolation / query-placeholder-arity=15
+PASS 2239 Fixed-width binary-word decoding / binary-width=1
+PASS 2240 Fixed-width binary-word decoding / binary-width=2
+PASS 2241 Fixed-width binary-word decoding / binary-width=3
+PASS 2242 Fixed-width binary-word decoding / binary-width=4
+PASS 2243 Fixed-width binary-word decoding / binary-width=5
+PASS 2244 Fixed-width binary-word decoding / binary-width=6
+PASS 2245 Fixed-width binary-word decoding / binary-width=7
+PASS 2246 Fixed-width binary-word decoding / binary-width=8
+PASS 2247 Fixed-width binary-word decoding / binary-width=9
+PASS 2248 Fixed-width binary-word decoding / binary-width=10
+PASS 2249 Fixed-width binary-word decoding / binary-width=11
+PASS 2250 Fixed-width binary-word decoding / binary-width=12
+PASS 2251 Fixed-width binary-word decoding / binary-width=13
+PASS 2252 Fixed-width binary-word decoding / binary-width=14
+PASS 2253 Fixed-width binary-word decoding / binary-width=15
+PASS 2254 Balanced literal envelope construction / bracket-depth=1
+PASS 2255 Balanced literal envelope construction / bracket-depth=2
+PASS 2256 Balanced literal envelope construction / bracket-depth=3
+PASS 2257 Balanced literal envelope construction / bracket-depth=4
+PASS 2258 Balanced literal envelope construction / bracket-depth=5
+PASS 2259 Balanced literal envelope construction / bracket-depth=6
+PASS 2260 Balanced literal envelope construction / bracket-depth=7
+PASS 2261 Balanced literal envelope construction / bracket-depth=8
+PASS 2262 Balanced literal envelope construction / bracket-depth=9
+PASS 2263 Balanced literal envelope construction / bracket-depth=10
+PASS 2264 Balanced literal envelope construction / bracket-depth=11
+PASS 2265 Balanced literal envelope construction / bracket-depth=12
+PASS 2266 Balanced literal envelope construction / bracket-depth=13
+PASS 2267 Balanced literal envelope construction / bracket-depth=14
+PASS 2268 Balanced literal envelope construction / bracket-depth=15
+PASS 2269 Getter-key remapping surfaces / getter-fields=name
+PASS 2270 Getter-key remapping surfaces / getter-fields=count
+PASS 2271 Getter-key remapping surfaces / getter-fields=name+count
+PASS 2272 Getter-key remapping surfaces / getter-fields=active
+PASS 2273 Getter-key remapping surfaces / getter-fields=name+active
+PASS 2274 Getter-key remapping surfaces / getter-fields=count+active
+PASS 2275 Getter-key remapping surfaces / getter-fields=name+count+active
+PASS 2276 Getter-key remapping surfaces / getter-fields=tags
+PASS 2277 Getter-key remapping surfaces / getter-fields=name+tags
+PASS 2278 Getter-key remapping surfaces / getter-fields=count+tags
+PASS 2279 Getter-key remapping surfaces / getter-fields=name+count+tags
+PASS 2280 Getter-key remapping surfaces / getter-fields=active+tags
+PASS 2281 Getter-key remapping surfaces / getter-fields=name+active+tags
+PASS 2282 Getter-key remapping surfaces / getter-fields=count+active+tags
+PASS 2283 Getter-key remapping surfaces / getter-fields=name+count+active+tags
+PASS 2284 Setter-key remapping surfaces / setter-fields=name
+PASS 2285 Setter-key remapping surfaces / setter-fields=count
+PASS 2286 Setter-key remapping surfaces / setter-fields=name+count
+PASS 2287 Setter-key remapping surfaces / setter-fields=active
+PASS 2288 Setter-key remapping surfaces / setter-fields=name+active
+PASS 2289 Setter-key remapping surfaces / setter-fields=count+active
+PASS 2290 Setter-key remapping surfaces / setter-fields=name+count+active
+PASS 2291 Setter-key remapping surfaces / setter-fields=tags
+PASS 2292 Setter-key remapping surfaces / setter-fields=name+tags
+PASS 2293 Setter-key remapping surfaces / setter-fields=count+tags
+PASS 2294 Setter-key remapping surfaces / setter-fields=name+count+tags
+PASS 2295 Setter-key remapping surfaces / setter-fields=active+tags
+PASS 2296 Setter-key remapping surfaces / setter-fields=name+active+tags
+PASS 2297 Setter-key remapping surfaces / setter-fields=count+active+tags
+PASS 2298 Setter-key remapping surfaces / setter-fields=name+count+active+tags
+PASS 2299 Null-omitting optional property contracts / omittable-fields=name
+PASS 2300 Null-omitting optional property contracts / omittable-fields=count
+PASS 2301 Null-omitting optional property contracts / omittable-fields=name+count
+PASS 2302 Null-omitting optional property contracts / omittable-fields=active
+PASS 2303 Null-omitting optional property contracts / omittable-fields=name+active
+PASS 2304 Null-omitting optional property contracts / omittable-fields=count+active
+PASS 2305 Null-omitting optional property contracts / omittable-fields=name+count+active
+PASS 2306 Null-omitting optional property contracts / omittable-fields=tags
+PASS 2307 Null-omitting optional property contracts / omittable-fields=name+tags
+PASS 2308 Null-omitting optional property contracts / omittable-fields=count+tags
+PASS 2309 Null-omitting optional property contracts / omittable-fields=name+count+tags
+PASS 2310 Null-omitting optional property contracts / omittable-fields=active+tags
+PASS 2311 Null-omitting optional property contracts / omittable-fields=name+active+tags
+PASS 2312 Null-omitting optional property contracts / omittable-fields=count+active+tags
+PASS 2313 Null-omitting optional property contracts / omittable-fields=name+count+active+tags
+PASS 2314 Optional-property default materialization / required-default-fields=name
+PASS 2315 Optional-property default materialization / required-default-fields=count
+PASS 2316 Optional-property default materialization / required-default-fields=name+count
+PASS 2317 Optional-property default materialization / required-default-fields=active
+PASS 2318 Optional-property default materialization / required-default-fields=name+active
+PASS 2319 Optional-property default materialization / required-default-fields=count+active
+PASS 2320 Optional-property default materialization / required-default-fields=name+count+active
+PASS 2321 Optional-property default materialization / required-default-fields=tags
+PASS 2322 Optional-property default materialization / required-default-fields=name+tags
+PASS 2323 Optional-property default materialization / required-default-fields=count+tags
+PASS 2324 Optional-property default materialization / required-default-fields=name+count+tags
+PASS 2325 Optional-property default materialization / required-default-fields=active+tags
+PASS 2326 Optional-property default materialization / required-default-fields=name+active+tags
+PASS 2327 Optional-property default materialization / required-default-fields=count+active+tags
+PASS 2328 Optional-property default materialization / required-default-fields=name+count+active+tags
+PASS 2329 Key-value entry union serialization / entry-union-fields=name
+PASS 2330 Key-value entry union serialization / entry-union-fields=count
+PASS 2331 Key-value entry union serialization / entry-union-fields=name+count
+PASS 2332 Key-value entry union serialization / entry-union-fields=active
+PASS 2333 Key-value entry union serialization / entry-union-fields=name+active
+PASS 2334 Key-value entry union serialization / entry-union-fields=count+active
+PASS 2335 Key-value entry union serialization / entry-union-fields=name+count+active
+PASS 2336 Key-value entry union serialization / entry-union-fields=tags
+PASS 2337 Key-value entry union serialization / entry-union-fields=name+tags
+PASS 2338 Key-value entry union serialization / entry-union-fields=count+tags
+PASS 2339 Key-value entry union serialization / entry-union-fields=name+count+tags
+PASS 2340 Key-value entry union serialization / entry-union-fields=active+tags
+PASS 2341 Key-value entry union serialization / entry-union-fields=name+active+tags
+PASS 2342 Key-value entry union serialization / entry-union-fields=count+active+tags
+PASS 2343 Key-value entry union serialization / entry-union-fields=name+count+active+tags
+PASS 2344 Schema-literal value inference / schema-fields=name
+PASS 2345 Schema-literal value inference / schema-fields=count
+PASS 2346 Schema-literal value inference / schema-fields=name+count
+PASS 2347 Schema-literal value inference / schema-fields=active
+PASS 2348 Schema-literal value inference / schema-fields=name+active
+PASS 2349 Schema-literal value inference / schema-fields=count+active
+PASS 2350 Schema-literal value inference / schema-fields=name+count+active
+PASS 2351 Schema-literal value inference / schema-fields=tags
+PASS 2352 Schema-literal value inference / schema-fields=name+tags
+PASS 2353 Schema-literal value inference / schema-fields=count+tags
+PASS 2354 Schema-literal value inference / schema-fields=name+count+tags
+PASS 2355 Schema-literal value inference / schema-fields=active+tags
+PASS 2356 Schema-literal value inference / schema-fields=name+active+tags
+PASS 2357 Schema-literal value inference / schema-fields=count+active+tags
+PASS 2358 Schema-literal value inference / schema-fields=name+count+active+tags
+PASS 2359 Phantom capability authorization plans / required-capabilities=name
+PASS 2360 Phantom capability authorization plans / required-capabilities=count
+PASS 2361 Phantom capability authorization plans / required-capabilities=name+count
+PASS 2362 Phantom capability authorization plans / required-capabilities=active
+PASS 2363 Phantom capability authorization plans / required-capabilities=name+active
+PASS 2364 Phantom capability authorization plans / required-capabilities=count+active
+PASS 2365 Phantom capability authorization plans / required-capabilities=name+count+active
+PASS 2366 Phantom capability authorization plans / required-capabilities=tags
+PASS 2367 Phantom capability authorization plans / required-capabilities=name+tags
+PASS 2368 Phantom capability authorization plans / required-capabilities=count+tags
+PASS 2369 Phantom capability authorization plans / required-capabilities=name+count+tags
+PASS 2370 Phantom capability authorization plans / required-capabilities=active+tags
+PASS 2371 Phantom capability authorization plans / required-capabilities=name+active+tags
+PASS 2372 Phantom capability authorization plans / required-capabilities=count+active+tags
+PASS 2373 Phantom capability authorization plans / required-capabilities=name+count+active+tags
+PASS 2374 Exhaustive handler-table dispatch / handled-variants=name
+PASS 2375 Exhaustive handler-table dispatch / handled-variants=count
+PASS 2376 Exhaustive handler-table dispatch / handled-variants=name+count
+PASS 2377 Exhaustive handler-table dispatch / handled-variants=active
+PASS 2378 Exhaustive handler-table dispatch / handled-variants=name+active
+PASS 2379 Exhaustive handler-table dispatch / handled-variants=count+active
+PASS 2380 Exhaustive handler-table dispatch / handled-variants=name+count+active
+PASS 2381 Exhaustive handler-table dispatch / handled-variants=tags
+PASS 2382 Exhaustive handler-table dispatch / handled-variants=name+tags
+PASS 2383 Exhaustive handler-table dispatch / handled-variants=count+tags
+PASS 2384 Exhaustive handler-table dispatch / handled-variants=name+count+tags
+PASS 2385 Exhaustive handler-table dispatch / handled-variants=active+tags
+PASS 2386 Exhaustive handler-table dispatch / handled-variants=name+active+tags
+PASS 2387 Exhaustive handler-table dispatch / handled-variants=count+active+tags
+PASS 2388 Exhaustive handler-table dispatch / handled-variants=name+count+active+tags
+PASS 2389 Readonly-key release maps / released-readonly-fields=name
+PASS 2390 Readonly-key release maps / released-readonly-fields=count
+PASS 2391 Readonly-key release maps / released-readonly-fields=name+count
+PASS 2392 Readonly-key release maps / released-readonly-fields=active
+PASS 2393 Readonly-key release maps / released-readonly-fields=name+active
+PASS 2394 Readonly-key release maps / released-readonly-fields=count+active
+PASS 2395 Readonly-key release maps / released-readonly-fields=name+count+active
+PASS 2396 Readonly-key release maps / released-readonly-fields=tags
+PASS 2397 Readonly-key release maps / released-readonly-fields=name+tags
+PASS 2398 Readonly-key release maps / released-readonly-fields=count+tags
+PASS 2399 Readonly-key release maps / released-readonly-fields=name+count+tags
+PASS 2400 Readonly-key release maps / released-readonly-fields=active+tags
+PASS 2401 Readonly-key release maps / released-readonly-fields=name+active+tags
+PASS 2402 Readonly-key release maps / released-readonly-fields=count+active+tags
+PASS 2403 Readonly-key release maps / released-readonly-fields=name+count+active+tags
+PASS 2404 Exclusive option-set encodings / exclusive-options=name
+PASS 2405 Exclusive option-set encodings / exclusive-options=count
+PASS 2406 Exclusive option-set encodings / exclusive-options=name+count
+PASS 2407 Exclusive option-set encodings / exclusive-options=active
+PASS 2408 Exclusive option-set encodings / exclusive-options=name+active
+PASS 2409 Exclusive option-set encodings / exclusive-options=count+active
+PASS 2410 Exclusive option-set encodings / exclusive-options=name+count+active
+PASS 2411 Exclusive option-set encodings / exclusive-options=tags
+PASS 2412 Exclusive option-set encodings / exclusive-options=name+tags
+PASS 2413 Exclusive option-set encodings / exclusive-options=count+tags
+PASS 2414 Exclusive option-set encodings / exclusive-options=name+count+tags
+PASS 2415 Exclusive option-set encodings / exclusive-options=active+tags
+PASS 2416 Exclusive option-set encodings / exclusive-options=name+active+tags
+PASS 2417 Exclusive option-set encodings / exclusive-options=count+active+tags
+PASS 2418 Exclusive option-set encodings / exclusive-options=name+count+active+tags
+PASS 2419 Depth-limited readonly graph copies / readonly-depth=1
+PASS 2420 Depth-limited readonly graph copies / readonly-depth=2
+PASS 2421 Depth-limited readonly graph copies / readonly-depth=3
+PASS 2422 Depth-limited readonly graph copies / readonly-depth=4
+PASS 2423 Depth-limited readonly graph copies / readonly-depth=5
+PASS 2424 Depth-limited readonly graph copies / readonly-depth=6
+PASS 2425 Depth-limited readonly graph copies / readonly-depth=7
+PASS 2426 Depth-limited readonly graph copies / readonly-depth=8
+PASS 2427 Depth-limited readonly graph copies / readonly-depth=9
+PASS 2428 Depth-limited readonly graph copies / readonly-depth=10
+PASS 2429 Depth-limited readonly graph copies / readonly-depth=11
+PASS 2430 Depth-limited readonly graph copies / readonly-depth=12
+PASS 2431 Depth-limited readonly graph copies / readonly-depth=13
+PASS 2432 Depth-limited readonly graph copies / readonly-depth=14
+PASS 2433 Depth-limited readonly graph copies / readonly-depth=15
+PASS 2434 Depth-limited patch materialization / patch-depth=1
+PASS 2435 Depth-limited patch materialization / patch-depth=2
+PASS 2436 Depth-limited patch materialization / patch-depth=3
+PASS 2437 Depth-limited patch materialization / patch-depth=4
+PASS 2438 Depth-limited patch materialization / patch-depth=5
+PASS 2439 Depth-limited patch materialization / patch-depth=6
+PASS 2440 Depth-limited patch materialization / patch-depth=7
+PASS 2441 Depth-limited patch materialization / patch-depth=8
+PASS 2442 Depth-limited patch materialization / patch-depth=9
+PASS 2443 Depth-limited patch materialization / patch-depth=10
+PASS 2444 Depth-limited patch materialization / patch-depth=11
+PASS 2445 Depth-limited patch materialization / patch-depth=12
+PASS 2446 Depth-limited patch materialization / patch-depth=13
+PASS 2447 Depth-limited patch materialization / patch-depth=14
+PASS 2448 Depth-limited patch materialization / patch-depth=15
+PASS 2449 Nested promise-container inference / async-container-depth=1
+PASS 2450 Nested promise-container inference / async-container-depth=2
+PASS 2451 Nested promise-container inference / async-container-depth=3
+PASS 2452 Nested promise-container inference / async-container-depth=4
+PASS 2453 Nested promise-container inference / async-container-depth=5
+PASS 2454 Nested promise-container inference / async-container-depth=6
+PASS 2455 Nested promise-container inference / async-container-depth=7
+PASS 2456 Nested promise-container inference / async-container-depth=8
+PASS 2457 Nested promise-container inference / async-container-depth=9
+PASS 2458 Nested promise-container inference / async-container-depth=10
+PASS 2459 Nested promise-container inference / async-container-depth=11
+PASS 2460 Nested promise-container inference / async-container-depth=12
+PASS 2461 Nested promise-container inference / async-container-depth=13
+PASS 2462 Nested promise-container inference / async-container-depth=14
+PASS 2463 Nested promise-container inference / async-container-depth=15
+PASS 2464 Finite protocol transition tables / protocol-steps=1
+PASS 2465 Finite protocol transition tables / protocol-steps=2
+PASS 2466 Finite protocol transition tables / protocol-steps=3
+PASS 2467 Finite protocol transition tables / protocol-steps=4
+PASS 2468 Finite protocol transition tables / protocol-steps=5
+PASS 2469 Finite protocol transition tables / protocol-steps=6
+PASS 2470 Finite protocol transition tables / protocol-steps=7
+PASS 2471 Finite protocol transition tables / protocol-steps=8
+PASS 2472 Finite protocol transition tables / protocol-steps=9
+PASS 2473 Finite protocol transition tables / protocol-steps=10
+PASS 2474 Finite protocol transition tables / protocol-steps=11
+PASS 2475 Finite protocol transition tables / protocol-steps=12
+PASS 2476 Finite protocol transition tables / protocol-steps=13
+PASS 2477 Finite protocol transition tables / protocol-steps=14
+PASS 2478 Finite protocol transition tables / protocol-steps=15
+PASS 2479 Completion-gated immutable builders / builder-required-fields=name
+PASS 2480 Completion-gated immutable builders / builder-required-fields=count
+PASS 2481 Completion-gated immutable builders / builder-required-fields=name+count
+PASS 2482 Completion-gated immutable builders / builder-required-fields=active
+PASS 2483 Completion-gated immutable builders / builder-required-fields=name+active
+PASS 2484 Completion-gated immutable builders / builder-required-fields=count+active
+PASS 2485 Completion-gated immutable builders / builder-required-fields=name+count+active
+PASS 2486 Completion-gated immutable builders / builder-required-fields=tags
+PASS 2487 Completion-gated immutable builders / builder-required-fields=name+tags
+PASS 2488 Completion-gated immutable builders / builder-required-fields=count+tags
+PASS 2489 Completion-gated immutable builders / builder-required-fields=name+count+tags
+PASS 2490 Completion-gated immutable builders / builder-required-fields=active+tags
+PASS 2491 Completion-gated immutable builders / builder-required-fields=name+active+tags
+PASS 2492 Completion-gated immutable builders / builder-required-fields=count+active+tags
+PASS 2493 Completion-gated immutable builders / builder-required-fields=name+count+active+tags
+PASS 2494 Covariant producer widening / producer-output-fields=name
+PASS 2495 Covariant producer widening / producer-output-fields=count
+PASS 2496 Covariant producer widening / producer-output-fields=name+count
+PASS 2497 Covariant producer widening / producer-output-fields=active
+PASS 2498 Covariant producer widening / producer-output-fields=name+active
+PASS 2499 Covariant producer widening / producer-output-fields=count+active
+PASS 2500 Covariant producer widening / producer-output-fields=name+count+active
+PASS 2501 Covariant producer widening / producer-output-fields=tags
+PASS 2502 Covariant producer widening / producer-output-fields=name+tags
+PASS 2503 Covariant producer widening / producer-output-fields=count+tags
+PASS 2504 Covariant producer widening / producer-output-fields=name+count+tags
+PASS 2505 Covariant producer widening / producer-output-fields=active+tags
+PASS 2506 Covariant producer widening / producer-output-fields=name+active+tags
+PASS 2507 Covariant producer widening / producer-output-fields=count+active+tags
+PASS 2508 Covariant producer widening / producer-output-fields=name+count+active+tags
+FAIL 2509 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2509.cjs:4:123)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2510 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2510.cjs:4:120)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2511 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2511.cjs:4:133)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2512 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2512.cjs:4:124)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2513 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2513.cjs:4:137)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2514 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2514.cjs:4:134)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2515 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2515.cjs:4:147)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2516 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2516.cjs:4:127)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2517 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2517.cjs:4:140)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2518 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2518.cjs:4:137)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2519 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2519.cjs:4:150)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2520 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2520.cjs:4:141)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2521 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2521.cjs:4:154)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2522 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2522.cjs:4:151)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 2523 AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== undefined
+
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-next\tests\2523.cjs:4:164)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-next\verify.cjs:25:196)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+PASS 2524 Invariant read-write cell copies / cell-value-fields=name
+PASS 2525 Invariant read-write cell copies / cell-value-fields=count
+PASS 2526 Invariant read-write cell copies / cell-value-fields=name+count
+PASS 2527 Invariant read-write cell copies / cell-value-fields=active
+PASS 2528 Invariant read-write cell copies / cell-value-fields=name+active
+PASS 2529 Invariant read-write cell copies / cell-value-fields=count+active
+PASS 2530 Invariant read-write cell copies / cell-value-fields=name+count+active
+PASS 2531 Invariant read-write cell copies / cell-value-fields=tags
+PASS 2532 Invariant read-write cell copies / cell-value-fields=name+tags
+PASS 2533 Invariant read-write cell copies / cell-value-fields=count+tags
+PASS 2534 Invariant read-write cell copies / cell-value-fields=name+count+tags
+PASS 2535 Invariant read-write cell copies / cell-value-fields=active+tags
+PASS 2536 Invariant read-write cell copies / cell-value-fields=name+active+tags
+PASS 2537 Invariant read-write cell copies / cell-value-fields=count+active+tags
+PASS 2538 Invariant read-write cell copies / cell-value-fields=name+count+active+tags
+PASS 2539 Explicit-this record methods / this-receiver-fields=name
+PASS 2540 Explicit-this record methods / this-receiver-fields=count
+PASS 2541 Explicit-this record methods / this-receiver-fields=name+count
+PASS 2542 Explicit-this record methods / this-receiver-fields=active
+PASS 2543 Explicit-this record methods / this-receiver-fields=name+active
+PASS 2544 Explicit-this record methods / this-receiver-fields=count+active
+PASS 2545 Explicit-this record methods / this-receiver-fields=name+count+active
+PASS 2546 Explicit-this record methods / this-receiver-fields=tags
+PASS 2547 Explicit-this record methods / this-receiver-fields=name+tags
+PASS 2548 Explicit-this record methods / this-receiver-fields=count+tags
+PASS 2549 Explicit-this record methods / this-receiver-fields=name+count+tags
+PASS 2550 Explicit-this record methods / this-receiver-fields=active+tags
+PASS 2551 Explicit-this record methods / this-receiver-fields=name+active+tags
+PASS 2552 Explicit-this record methods / this-receiver-fields=count+active+tags
+PASS 2553 Explicit-this record methods / this-receiver-fields=name+count+active+tags
+PASS 2554 Abstract renderer specialization / abstract-render-fields=name
+PASS 2555 Abstract renderer specialization / abstract-render-fields=count
+PASS 2556 Abstract renderer specialization / abstract-render-fields=name+count
+PASS 2557 Abstract renderer specialization / abstract-render-fields=active
+PASS 2558 Abstract renderer specialization / abstract-render-fields=name+active
+PASS 2559 Abstract renderer specialization / abstract-render-fields=count+active
+PASS 2560 Abstract renderer specialization / abstract-render-fields=name+count+active
+PASS 2561 Abstract renderer specialization / abstract-render-fields=tags
+PASS 2562 Abstract renderer specialization / abstract-render-fields=name+tags
+PASS 2563 Abstract renderer specialization / abstract-render-fields=count+tags
+PASS 2564 Abstract renderer specialization / abstract-render-fields=name+count+tags
+PASS 2565 Abstract renderer specialization / abstract-render-fields=active+tags
+PASS 2566 Abstract renderer specialization / abstract-render-fields=name+active+tags
+PASS 2567 Abstract renderer specialization / abstract-render-fields=count+active+tags
+PASS 2568 Abstract renderer specialization / abstract-render-fields=name+count+active+tags
+PASS 2569 Capability-composed audit mixins / audit-methods=name
+PASS 2570 Capability-composed audit mixins / audit-methods=count
+PASS 2571 Capability-composed audit mixins / audit-methods=name+count
+PASS 2572 Capability-composed audit mixins / audit-methods=active
+PASS 2573 Capability-composed audit mixins / audit-methods=name+active
+PASS 2574 Capability-composed audit mixins / audit-methods=count+active
+PASS 2575 Capability-composed audit mixins / audit-methods=name+count+active
+PASS 2576 Capability-composed audit mixins / audit-methods=tags
+PASS 2577 Capability-composed audit mixins / audit-methods=name+tags
+PASS 2578 Capability-composed audit mixins / audit-methods=count+tags
+PASS 2579 Capability-composed audit mixins / audit-methods=name+count+tags
+PASS 2580 Capability-composed audit mixins / audit-methods=active+tags
+PASS 2581 Capability-composed audit mixins / audit-methods=name+active+tags
+PASS 2582 Capability-composed audit mixins / audit-methods=count+active+tags
+PASS 2583 Capability-composed audit mixins / audit-methods=name+count+active+tags
+PASS 2584 Arity-directed overload selection / overload-tuple-width=1
+PASS 2585 Arity-directed overload selection / overload-tuple-width=2
+PASS 2586 Arity-directed overload selection / overload-tuple-width=3
+PASS 2587 Arity-directed overload selection / overload-tuple-width=4
+PASS 2588 Arity-directed overload selection / overload-tuple-width=5
+PASS 2589 Arity-directed overload selection / overload-tuple-width=6
+PASS 2590 Arity-directed overload selection / overload-tuple-width=7
+PASS 2591 Arity-directed overload selection / overload-tuple-width=8
+PASS 2592 Arity-directed overload selection / overload-tuple-width=9
+PASS 2593 Arity-directed overload selection / overload-tuple-width=10
+PASS 2594 Arity-directed overload selection / overload-tuple-width=11
+PASS 2595 Arity-directed overload selection / overload-tuple-width=12
+PASS 2596 Arity-directed overload selection / overload-tuple-width=13
+PASS 2597 Arity-directed overload selection / overload-tuple-width=14
+PASS 2598 Arity-directed overload selection / overload-tuple-width=15
+PASS 2599 Index-tagged promise races / race-participants=1
+PASS 2600 Index-tagged promise races / race-participants=2
+PASS 2601 Index-tagged promise races / race-participants=3
+PASS 2602 Index-tagged promise races / race-participants=4
+PASS 2603 Index-tagged promise races / race-participants=5
+PASS 2604 Index-tagged promise races / race-participants=6
+PASS 2605 Index-tagged promise races / race-participants=7
+PASS 2606 Index-tagged promise races / race-participants=8
+PASS 2607 Index-tagged promise races / race-participants=9
+PASS 2608 Index-tagged promise races / race-participants=10
+PASS 2609 Index-tagged promise races / race-participants=11
+PASS 2610 Index-tagged promise races / race-participants=12
+PASS 2611 Index-tagged promise races / race-participants=13
+PASS 2612 Index-tagged promise races / race-participants=14
+PASS 2613 Index-tagged promise races / race-participants=15
+PASS 2614 Keyed all-settled outcome maps / settled-keys=name
+PASS 2615 Keyed all-settled outcome maps / settled-keys=count
+PASS 2616 Keyed all-settled outcome maps / settled-keys=name+count
+PASS 2617 Keyed all-settled outcome maps / settled-keys=active
+PASS 2618 Keyed all-settled outcome maps / settled-keys=name+active
+PASS 2619 Keyed all-settled outcome maps / settled-keys=count+active
+PASS 2620 Keyed all-settled outcome maps / settled-keys=name+count+active
+PASS 2621 Keyed all-settled outcome maps / settled-keys=tags
+PASS 2622 Keyed all-settled outcome maps / settled-keys=name+tags
+PASS 2623 Keyed all-settled outcome maps / settled-keys=count+tags
+PASS 2624 Keyed all-settled outcome maps / settled-keys=name+count+tags
+PASS 2625 Keyed all-settled outcome maps / settled-keys=active+tags
+PASS 2626 Keyed all-settled outcome maps / settled-keys=name+active+tags
+PASS 2627 Keyed all-settled outcome maps / settled-keys=count+active+tags
+PASS 2628 Keyed all-settled outcome maps / settled-keys=name+count+active+tags
+PASS 2629 Finite retry-attempt contracts / maximum-attempts=1
+PASS 2630 Finite retry-attempt contracts / maximum-attempts=2
+PASS 2631 Finite retry-attempt contracts / maximum-attempts=3
+PASS 2632 Finite retry-attempt contracts / maximum-attempts=4
+PASS 2633 Finite retry-attempt contracts / maximum-attempts=5
+PASS 2634 Finite retry-attempt contracts / maximum-attempts=6
+PASS 2635 Finite retry-attempt contracts / maximum-attempts=7
+PASS 2636 Finite retry-attempt contracts / maximum-attempts=8
+PASS 2637 Finite retry-attempt contracts / maximum-attempts=9
+PASS 2638 Finite retry-attempt contracts / maximum-attempts=10
+PASS 2639 Finite retry-attempt contracts / maximum-attempts=11
+PASS 2640 Finite retry-attempt contracts / maximum-attempts=12
+PASS 2641 Finite retry-attempt contracts / maximum-attempts=13
+PASS 2642 Finite retry-attempt contracts / maximum-attempts=14
+PASS 2643 Finite retry-attempt contracts / maximum-attempts=15
+PASS 2644 Cursor-page boundary metadata / cursor-key-fields=name
+PASS 2645 Cursor-page boundary metadata / cursor-key-fields=count
+PASS 2646 Cursor-page boundary metadata / cursor-key-fields=name+count
+PASS 2647 Cursor-page boundary metadata / cursor-key-fields=active
+PASS 2648 Cursor-page boundary metadata / cursor-key-fields=name+active
+PASS 2649 Cursor-page boundary metadata / cursor-key-fields=count+active
+PASS 2650 Cursor-page boundary metadata / cursor-key-fields=name+count+active
+PASS 2651 Cursor-page boundary metadata / cursor-key-fields=tags
+PASS 2652 Cursor-page boundary metadata / cursor-key-fields=name+tags
+PASS 2653 Cursor-page boundary metadata / cursor-key-fields=count+tags
+PASS 2654 Cursor-page boundary metadata / cursor-key-fields=name+count+tags
+PASS 2655 Cursor-page boundary metadata / cursor-key-fields=active+tags
+PASS 2656 Cursor-page boundary metadata / cursor-key-fields=name+active+tags
+PASS 2657 Cursor-page boundary metadata / cursor-key-fields=count+active+tags
+PASS 2658 Cursor-page boundary metadata / cursor-key-fields=name+count+active+tags
+PASS 2659 Unit-exponent quantity multiplication / left-length-exponent=1
+PASS 2660 Unit-exponent quantity multiplication / left-length-exponent=2
+PASS 2661 Unit-exponent quantity multiplication / left-length-exponent=3
+PASS 2662 Unit-exponent quantity multiplication / left-length-exponent=4
+PASS 2663 Unit-exponent quantity multiplication / left-length-exponent=5
+PASS 2664 Unit-exponent quantity multiplication / left-length-exponent=6
+PASS 2665 Unit-exponent quantity multiplication / left-length-exponent=7
+PASS 2666 Unit-exponent quantity multiplication / left-length-exponent=8
+PASS 2667 Unit-exponent quantity multiplication / left-length-exponent=9
+PASS 2668 Unit-exponent quantity multiplication / left-length-exponent=10
+PASS 2669 Unit-exponent quantity multiplication / left-length-exponent=11
+PASS 2670 Unit-exponent quantity multiplication / left-length-exponent=12
+PASS 2671 Unit-exponent quantity multiplication / left-length-exponent=13
+PASS 2672 Unit-exponent quantity multiplication / left-length-exponent=14
+PASS 2673 Unit-exponent quantity multiplication / left-length-exponent=15
+PASS 2674 I18n named message argument inference / message-arguments=1
+PASS 2675 I18n named message argument inference / message-arguments=2
+PASS 2676 I18n named message argument inference / message-arguments=3
+PASS 2677 I18n named message argument inference / message-arguments=4
+PASS 2678 I18n named message argument inference / message-arguments=5
+PASS 2679 I18n named message argument inference / message-arguments=6
+PASS 2680 I18n named message argument inference / message-arguments=7
+PASS 2681 I18n named message argument inference / message-arguments=8
+PASS 2682 I18n named message argument inference / message-arguments=9
+PASS 2683 I18n named message argument inference / message-arguments=10
+PASS 2684 I18n named message argument inference / message-arguments=11
+PASS 2685 I18n named message argument inference / message-arguments=12
+PASS 2686 I18n named message argument inference / message-arguments=13
+PASS 2687 I18n named message argument inference / message-arguments=14
+PASS 2688 I18n named message argument inference / message-arguments=15
+PASS 2689 Index-safe fixed vector dot products / vector-dimension=1
+PASS 2690 Index-safe fixed vector dot products / vector-dimension=2
+PASS 2691 Index-safe fixed vector dot products / vector-dimension=3
+PASS 2692 Index-safe fixed vector dot products / vector-dimension=4
+PASS 2693 Index-safe fixed vector dot products / vector-dimension=5
+PASS 2694 Index-safe fixed vector dot products / vector-dimension=6
+PASS 2695 Index-safe fixed vector dot products / vector-dimension=7
+PASS 2696 Index-safe fixed vector dot products / vector-dimension=8
+PASS 2697 Index-safe fixed vector dot products / vector-dimension=9
+PASS 2698 Index-safe fixed vector dot products / vector-dimension=10
+PASS 2699 Index-safe fixed vector dot products / vector-dimension=11
+PASS 2700 Index-safe fixed vector dot products / vector-dimension=12
+PASS 2701 Index-safe fixed vector dot products / vector-dimension=13
+PASS 2702 Index-safe fixed vector dot products / vector-dimension=14
+PASS 2703 Index-safe fixed vector dot products / vector-dimension=15
+PASS 2704 Typed coefficient polynomial evaluation / polynomial-degree=1
+PASS 2705 Typed coefficient polynomial evaluation / polynomial-degree=2
+PASS 2706 Typed coefficient polynomial evaluation / polynomial-degree=3
+PASS 2707 Typed coefficient polynomial evaluation / polynomial-degree=4
+PASS 2708 Typed coefficient polynomial evaluation / polynomial-degree=5
+PASS 2709 Typed coefficient polynomial evaluation / polynomial-degree=6
+PASS 2710 Typed coefficient polynomial evaluation / polynomial-degree=7
+PASS 2711 Typed coefficient polynomial evaluation / polynomial-degree=8
+PASS 2712 Typed coefficient polynomial evaluation / polynomial-degree=9
+PASS 2713 Typed coefficient polynomial evaluation / polynomial-degree=10
+PASS 2714 Typed coefficient polynomial evaluation / polynomial-degree=11
+PASS 2715 Typed coefficient polynomial evaluation / polynomial-degree=12
+PASS 2716 Typed coefficient polynomial evaluation / polynomial-degree=13
+PASS 2717 Typed coefficient polynomial evaluation / polynomial-degree=14
+PASS 2718 Typed coefficient polynomial evaluation / polynomial-degree=15
+solution: 735 passed, 15 failed.
+exitCode=1
+
+=== 2026-09-17T22:47:19.578Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2509 Contravariant consumer narrowing / consumer-input-fields=name
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T22:48:14.182Z single-id ===
+TypeScript compiler gate: START (5.9.3; 1 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 2523 Contravariant consumer narrowing / consumer-input-fields=name+count+active+tags
+solution: 1 passed, 0 failed.
+exitCode=0
+
+=== 2026-09-17T22:57:24.876Z full ===
+TypeScript compiler gate: START (5.9.3; 750 solution APIs; positive + negative fixtures bound to candidate).
+TypeScript compiler gate: PASSED before runtime.
+PASS 1969 Bounded infer-chain box peeling / peel-budget=1
+PASS 1970 Bounded infer-chain box peeling / peel-budget=2
+PASS 1971 Bounded infer-chain box peeling / peel-budget=3
+PASS 1972 Bounded infer-chain box peeling / peel-budget=4
+PASS 1973 Bounded infer-chain box peeling / peel-budget=5
+PASS 1974 Bounded infer-chain box peeling / peel-budget=6
+PASS 1975 Bounded infer-chain box peeling / peel-budget=7
+PASS 1976 Bounded infer-chain box peeling / peel-budget=8
+PASS 1977 Bounded infer-chain box peeling / peel-budget=9
+PASS 1978 Bounded infer-chain box peeling / peel-budget=10
+PASS 1979 Bounded infer-chain box peeling / peel-budget=11
+PASS 1980 Bounded infer-chain box peeling / peel-budget=12
+PASS 1981 Bounded infer-chain box peeling / peel-budget=13
+PASS 1982 Bounded infer-chain box peeling / peel-budget=14
+PASS 1983 Bounded infer-chain box peeling / peel-budget=15
+PASS 1984 Saturating tuple prefix algebra / take=1
+PASS 1985 Saturating tuple prefix algebra / take=2
+PASS 1986 Saturating tuple prefix algebra / take=3
+PASS 1987 Saturating tuple prefix algebra / take=4
+PASS 1988 Saturating tuple prefix algebra / take=5
+PASS 1989 Saturating tuple prefix algebra / take=6
+PASS 1990 Saturating tuple prefix algebra / take=7
+PASS 1991 Saturating tuple prefix algebra / take=8
+PASS 1992 Saturating tuple prefix algebra / take=9
+PASS 1993 Saturating tuple prefix algebra / take=10
+PASS 1994 Saturating tuple prefix algebra / take=11
+PASS 1995 Saturating tuple prefix algebra / take=12
+PASS 1996 Saturating tuple prefix algebra / take=13
+PASS 1997 Saturating tuple prefix algebra / take=14
+PASS 1998 Saturating tuple prefix algebra / take=15
+PASS 1999 Saturating tuple suffix algebra / drop=1
+PASS 2000 Saturating tuple suffix algebra / drop=2
+PASS 2001 Saturating tuple suffix algebra / drop=3
+PASS 2002 Saturating tuple suffix algebra / drop=4
+PASS 2003 Saturating tuple suffix algebra / drop=5
+PASS 2004 Saturating tuple suffix algebra / drop=6
+PASS 2005 Saturating tuple suffix algebra / drop=7
+PASS 2006 Saturating tuple suffix algebra / drop=8
+PASS 2007 Saturating tuple suffix algebra / drop=9
+PASS 2008 Saturating tuple suffix algebra / drop=10
+PASS 2009 Saturating tuple suffix algebra / drop=11
+PASS 2010 Saturating tuple suffix algebra / drop=12
+PASS 2011 Saturating tuple suffix algebra / drop=13
+PASS 2012 Saturating tuple suffix algebra / drop=14
+PASS 2013 Saturating tuple suffix algebra / drop=15
+PASS 2014 Minimum-width tuple padding / minimum-width=1
+PASS 2015 Minimum-width tuple padding / minimum-width=2
+PASS 2016 Minimum-width tuple padding / minimum-width=3
+PASS 2017 Minimum-width tuple padding / minimum-width=4
+PASS 2018 Minimum-width tuple padding / minimum-width=5
+PASS 2019 Minimum-width tuple padding / minimum-width=6
+PASS 2020 Minimum-width tuple padding / minimum-width=7
+PASS 2021 Minimum-width tuple padding / minimum-width=8
+PASS 2022 Minimum-width tuple padding / minimum-width=9
+PASS 2023 Minimum-width tuple padding / minimum-width=10
+PASS 2024 Minimum-width tuple padding / minimum-width=11
+PASS 2025 Minimum-width tuple padding / minimum-width=12
+PASS 2026 Minimum-width tuple padding / minimum-width=13
+PASS 2027 Minimum-width tuple padding / minimum-width=14
+PASS 2028 Minimum-width tuple padding / minimum-width=15
+PASS 2029 Tuple left-rotation proofs / rotate-left=1
+PASS 2030 Tuple left-rotation proofs / rotate-left=2
+PASS 2031 Tuple left-rotation proofs / rotate-left=3
+PASS 2032 Tuple left-rotation proofs / rotate-left=4
+PASS 2033 Tuple left-rotation proofs / rotate-left=5
+PASS 2034 Tuple left-rotation proofs / rotate-left=6
+PASS 2035 Tuple left-rotation proofs / rotate-left=7
+PASS 2036 Tuple left-rotation proofs / rotate-left=8
+PASS 2037 Tuple left-rotation proofs / rotate-left=9
+PASS 2038 Tuple left-rotation proofs / rotate-left=10
+PASS 2039 Tuple left-rotation proofs / rotate-left=11
+PASS 2040 Tuple left-rotation proofs / rotate-left=12
+PASS 2041 Tuple left-rotation proofs / rotate-left=13
+PASS 2042 Tuple left-rotation proofs / rotate-left=14
+PASS 2043 Tuple left-rotation proofs / rotate-left=15
+PASS 2044 Literal tuple replication / copies=1
+PASS 2045 Literal tuple replication / copies=2
+PASS 2046 Literal tuple replication / copies=3
+PASS 2047 Literal tuple replication / copies=4
+PASS 2048 Literal tuple replication / copies=5
+PASS 2049 Literal tuple replication / copies=6
+PASS 2050 Literal tuple replication / copies=7
+PASS 2051 Literal tuple replication / copies=8
+PASS 2052 Literal tuple replication / copies=9
+PASS 2053 Literal tuple replication / copies=10
+PASS 2054 Literal tuple replication / copies=11
+PASS 2055 Literal tuple replication / copies=12
+PASS 2056 Literal tuple replication / copies=13
+PASS 2057 Literal tuple replication / copies=14
+PASS 2058 Literal tuple replication / copies=15
+PASS 2059 Overlapping tuple window types / window-width=1
+PASS 2060 Overlapping tuple window types / window-width=2
+PASS 2061 Overlapping tuple window types / window-width=3
+PASS 2062 Overlapping tuple window types / window-width=4
+PASS 2063 Overlapping tuple window types / window-width=5
+PASS 2064 Overlapping tuple window types / window-width=6
+PASS 2065 Overlapping tuple window types / window-width=7
+PASS 2066 Overlapping tuple window types / window-width=8
+PASS 2067 Overlapping tuple window types / window-width=9
+PASS 2068 Overlapping tuple window types / window-width=10
+PASS 2069 Overlapping tuple window types / window-width=11
+PASS 2070 Overlapping tuple window types / window-width=12
+PASS 2071 Overlapping tuple window types / window-width=13
+PASS 2072 Overlapping tuple window types / window-width=14
+PASS 2073 Overlapping tuple window types / window-width=15
+PASS 2074 Position-labelled tuple enumeration / input-arity=1
+PASS 2075 Position-labelled tuple enumeration / input-arity=2
+PASS 2076 Position-labelled tuple enumeration / input-arity=3
+PASS 2077 Position-labelled tuple enumeration / input-arity=4
+PASS 2078 Position-labelled tuple enumeration / input-arity=5
+PASS 2079 Position-labelled tuple enumeration / input-arity=6
+PASS 2080 Position-labelled tuple enumeration / input-arity=7
+PASS 2081 Position-labelled tuple enumeration / input-arity=8
+PASS 2082 Position-labelled tuple enumeration / input-arity=9
+PASS 2083 Position-labelled tuple enumeration / input-arity=10
+PASS 2084 Position-labelled tuple enumeration / input-arity=11
+PASS 2085 Position-labelled tuple enumeration / input-arity=12
+PASS 2086 Position-labelled tuple enumeration / input-arity=13
+PASS 2087 Position-labelled tuple enumeration / input-arity=14
+PASS 2088 Position-labelled tuple enumeration / input-arity=15
+PASS 2089 Positional reverse tuple contracts / heterogeneous-arity=1
+PASS 2090 Positional reverse tuple contracts / heterogeneous-arity=2
+PASS 2091 Positional reverse tuple contracts / heterogeneous-arity=3
+PASS 2092 Positional reverse tuple contracts / heterogeneous-arity=4
+PASS 2093 Positional reverse tuple contracts / heterogeneous-arity=5
+PASS 2094 Positional reverse tuple contracts / heterogeneous-arity=6
+PASS 2095 Positional reverse tuple contracts / heterogeneous-arity=7
+PASS 2096 Positional reverse tuple contracts / heterogeneous-arity=8
+PASS 2097 Positional reverse tuple contracts / heterogeneous-arity=9
+PASS 2098 Positional reverse tuple contracts / heterogeneous-arity=10
+PASS 2099 Positional reverse tuple contracts / heterogeneous-arity=11
+PASS 2100 Positional reverse tuple contracts / heterogeneous-arity=12
+PASS 2101 Positional reverse tuple contracts / heterogeneous-arity=13
+PASS 2102 Positional reverse tuple contracts / heterogeneous-arity=14
+PASS 2103 Positional reverse tuple contracts / heterogeneous-arity=15
+PASS 2104 Tuple insertion boundary inference / insert-index=1
+PASS 2105 Tuple insertion boundary inference / insert-index=2
+PASS 2106 Tuple insertion boundary inference / insert-index=3
+PASS 2107 Tuple insertion boundary inference / insert-index=4
+PASS 2108 Tuple insertion boundary inference / insert-index=5
+PASS 2109 Tuple insertion boundary inference / insert-index=6
+PASS 2110 Tuple insertion boundary inference / insert-index=7
+PASS 2111 Tuple insertion boundary inference / insert-index=8
+PASS 2112 Tuple insertion boundary inference / insert-index=9
+PASS 2113 Tuple insertion boundary inference / insert-index=10
+PASS 2114 Tuple insertion boundary inference / insert-index=11
+PASS 2115 Tuple insertion boundary inference / insert-index=12
+PASS 2116 Tuple insertion boundary inference / insert-index=13
+PASS 2117 Tuple insertion boundary inference / insert-index=14
+PASS 2118 Tuple insertion boundary inference / insert-index=15
+PASS 2119 Route-template parameter binding / route-parameters=1
+PASS 2120 Route-template parameter binding / route-parameters=2
+PASS 2121 Route-template parameter binding / route-parameters=3
+PASS 2122 Route-template parameter binding / route-parameters=4
+PASS 2123 Route-template parameter binding / route-parameters=5
+PASS 2124 Route-template parameter binding / route-parameters=6
+PASS 2125 Route-template parameter binding / route-parameters=7
+PASS 2126 Route-template parameter binding / route-parameters=8
+PASS 2127 Route-template parameter binding / route-parameters=9
+PASS 2128 Route-template parameter binding / route-parameters=10
+PASS 2129 Route-template parameter binding / route-parameters=11
+PASS 2130 Route-template parameter binding / route-parameters=12
+PASS 2131 Route-template parameter binding / route-parameters=13
+PASS 2132 Route-template parameter binding / route-parameters=14
+PASS 2133 Route-template parameter binding / route-parameters=15
+PASS 2134 Positional printf-token inference / format-token-arity=1
+PASS 2135 Positional printf-token inference / format-token-arity=2
+PASS 2136 Positional printf-token inference / format-token-arity=3
+PASS 2137 Positional printf-token inference / format-token-arity=4
+PASS 2138 Positional printf-token inference / format-token-arity=5
+PASS 2139 Positional printf-token inference / format-token-arity=6
+PASS 2140 Positional printf-token inference / format-token-arity=7
+PASS 2141 Positional printf-token inference / format-token-arity=8
+PASS 2142 Positional printf-token inference / format-token-arity=9
+PASS 2143 Positional printf-token inference / format-token-arity=10
+PASS 2144 Positional printf-token inference / format-token-arity=11
+PASS 2145 Positional printf-token inference / format-token-arity=12
+PASS 2146 Positional printf-token inference / format-token-arity=13
+PASS 2147 Positional printf-token inference / format-token-arity=14
+PASS 2148 Positional printf-token inference / format-token-arity=15
+PASS 2149 Budgeted delimited literal parsing / maximum-splits=1
+PASS 2150 Budgeted delimited literal parsing / maximum-splits=2
+PASS 2151 Budgeted delimited literal parsing / maximum-splits=3
+PASS 2152 Budgeted delimited literal parsing / maximum-splits=4
+PASS 2153 Budgeted delimited literal parsing / maximum-splits=5
+PASS 2154 Budgeted delimited literal parsing / maximum-splits=6
+PASS 2155 Budgeted delimited literal parsing / maximum-splits=7
+PASS 2156 Budgeted delimited literal parsing / maximum-splits=8
+PASS 2157 Budgeted delimited literal parsing / maximum-splits=9
+PASS 2158 Budgeted delimited literal parsing / maximum-splits=10
+PASS 2159 Budgeted delimited literal parsing / maximum-splits=11
+PASS 2160 Budgeted delimited literal parsing / maximum-splits=12
+PASS 2161 Budgeted delimited literal parsing / maximum-splits=13
+PASS 2162 Budgeted delimited literal parsing / maximum-splits=14
+PASS 2163 Budgeted delimited literal parsing / maximum-splits=15
+PASS 2164 Bounded leading-slash normalization / slash-budget=1
+PASS 2165 Bounded leading-slash normalization / slash-budget=2
+PASS 2166 Bounded leading-slash normalization / slash-budget=3
+PASS 2167 Bounded leading-slash normalization / slash-budget=4
+PASS 2168 Bounded leading-slash normalization / slash-budget=5
+PASS 2169 Bounded leading-slash normalization / slash-budget=6
+PASS 2170 Bounded leading-slash normalization / slash-budget=7
+PASS 2171 Bounded leading-slash normalization / slash-budget=8
+PASS 2172 Bounded leading-slash normalization / slash-budget=9
+PASS 2173 Bounded leading-slash normalization / slash-budget=10
+PASS 2174 Bounded leading-slash normalization / slash-budget=11
+PASS 2175 Bounded leading-slash normalization / slash-budget=12
+PASS 2176 Bounded leading-slash normalization / slash-budget=13
+PASS 2177 Bounded leading-slash normalization / slash-budget=14
+PASS 2178 Bounded leading-slash normalization / slash-budget=15
+PASS 2179 Bounded ASCII whitespace trimming / leading-whitespace-budget=1
+PASS 2180 Bounded ASCII whitespace trimming / leading-whitespace-budget=2
+PASS 2181 Bounded ASCII whitespace trimming / leading-whitespace-budget=3
+PASS 2182 Bounded ASCII whitespace trimming / leading-whitespace-budget=4
+PASS 2183 Bounded ASCII whitespace trimming / leading-whitespace-budget=5
+PASS 2184 Bounded ASCII whitespace trimming / leading-whitespace-budget=6
+PASS 2185 Bounded ASCII whitespace trimming / leading-whitespace-budget=7
+PASS 2186 Bounded ASCII whitespace trimming / leading-whitespace-budget=8
+PASS 2187 Bounded ASCII whitespace trimming / leading-whitespace-budget=9
+PASS 2188 Bounded ASCII whitespace trimming / leading-whitespace-budget=10
+PASS 2189 Bounded ASCII whitespace trimming / leading-whitespace-budget=11
+PASS 2190 Bounded ASCII whitespace trimming / leading-whitespace-budget=12
+PASS 2191 Bounded ASCII whitespace trimming / leading-whitespace-budget=13
+PASS 2192 Bounded ASCII whitespace trimming / leading-whitespace-budget=14
+PASS 2193 Bounded ASCII whitespace trimming / leading-whitespace-budget=15
+PASS 2194 Budgeted kebab-to-camel literal transforms / hyphen-conversions=1
+PASS 2195 Budgeted kebab-to-camel literal transforms / hyphen-conversions=2
+PASS 2196 Budgeted kebab-to-camel literal transforms / hyphen-conversions=3
+PASS 2197 Budgeted kebab-to-camel literal transforms / hyphen-conversions=4
+PASS 2198 Budgeted kebab-to-camel literal transforms / hyphen-conversions=5
+PASS 2199 Budgeted kebab-to-camel literal transforms / hyphen-conversions=6
+PASS 2200 Budgeted kebab-to-camel literal transforms / hyphen-conversions=7
+PASS 2201 Budgeted kebab-to-camel literal transforms / hyphen-conversions=8
+PASS 2202 Budgeted kebab-to-camel literal transforms / hyphen-conversions=9
+PASS 2203 Budgeted kebab-to-camel literal transforms / hyphen-conversions=10
+PASS 2204 Budgeted kebab-to-camel literal transforms / hyphen-conversions=11
+PASS 2205 Budgeted kebab-to-camel literal transforms / hyphen-conversions=12
+PASS 2206 Budgeted kebab-to-camel literal transforms / hyphen-conversions=13
+PASS 2207 Budgeted kebab-to-camel literal transforms / hyphen-conversions=14
+PASS 2208 Budgeted kebab-to-camel literal transforms / hyphen-conversions=15
+PASS 2209 Suffix-selected asset descriptors / asset-kinds=png
+PASS 2210 Suffix-selected asset descriptors / asset-kinds=mp3
+PASS 2211 Suffix-selected asset descriptors / asset-kinds=png+mp3
+PASS 2212 Suffix-selected asset descriptors / asset-kinds=txt
+PASS 2213 Suffix-selected asset descriptors / asset-kinds=png+txt
+PASS 2214 Suffix-selected asset descriptors / asset-kinds=mp3+txt
+PASS 2215 Suffix-selected asset descriptors / asset-kinds=png+mp3+txt
+PASS 2216 Suffix-selected asset descriptors / asset-kinds=json
+PASS 2217 Suffix-selected asset descriptors / asset-kinds=png+json
+PASS 2218 Suffix-selected asset descriptors / asset-kinds=mp3+json
+PASS 2219 Suffix-selected asset descriptors / asset-kinds=png+mp3+json
+PASS 2220 Suffix-selected asset descriptors / asset-kinds=txt+json
+PASS 2221 Suffix-selected asset descriptors / asset-kinds=png+txt+json
+PASS 2222 Suffix-selected asset descriptors / asset-kinds=mp3+txt+json
+PASS 2223 Suffix-selected asset descriptors / asset-kinds=png+mp3+txt+json
+PASS 2224 Query-template placeholder interpolation / query-placeholder-arity=1
+PASS 2225 Query-template placeholder interpolation / query-placeholder-arity=2
+PASS 2226 Query-template placeholder interpolation / query-placeholder-arity=3
+PASS 2227 Query-template placeholder interpolation / query-placeholder-arity=4
+PASS 2228 Query-template placeholder interpolation / query-placeholder-arity=5
+PASS 2229 Query-template placeholder interpolation / query-placeholder-arity=6
+PASS 2230 Query-template placeholder interpolation / query-placeholder-arity=7
+PASS 2231 Query-template placeholder interpolation / query-placeholder-arity=8
+PASS 2232 Query-template placeholder interpolation / query-placeholder-arity=9
+PASS 2233 Query-template placeholder interpolation / query-placeholder-arity=10
+PASS 2234 Query-template placeholder interpolation / query-placeholder-arity=11
+PASS 2235 Query-template placeholder interpolation / query-placeholder-arity=12
+PASS 2236 Query-template placeholder interpolation / query-placeholder-arity=13
+PASS 2237 Query-template placeholder interpolation / query-placeholder-arity=14
+PASS 2238 Query-template placeholder interpolation / query-placeholder-arity=15
+PASS 2239 Fixed-width binary-word decoding / binary-width=1
+PASS 2240 Fixed-width binary-word decoding / binary-width=2
+PASS 2241 Fixed-width binary-word decoding / binary-width=3
+PASS 2242 Fixed-width binary-word decoding / binary-width=4
+PASS 2243 Fixed-width binary-word decoding / binary-width=5
+PASS 2244 Fixed-width binary-word decoding / binary-width=6
+PASS 2245 Fixed-width binary-word decoding / binary-width=7
+PASS 2246 Fixed-width binary-word decoding / binary-width=8
+PASS 2247 Fixed-width binary-word decoding / binary-width=9
+PASS 2248 Fixed-width binary-word decoding / binary-width=10
+PASS 2249 Fixed-width binary-word decoding / binary-width=11
+PASS 2250 Fixed-width binary-word decoding / binary-width=12
+PASS 2251 Fixed-width binary-word decoding / binary-width=13
+PASS 2252 Fixed-width binary-word decoding / binary-width=14
+PASS 2253 Fixed-width binary-word decoding / binary-width=15
+PASS 2254 Balanced literal envelope construction / bracket-depth=1
+PASS 2255 Balanced literal envelope construction / bracket-depth=2
+PASS 2256 Balanced literal envelope construction / bracket-depth=3
+PASS 2257 Balanced literal envelope construction / bracket-depth=4
+PASS 2258 Balanced literal envelope construction / bracket-depth=5
+PASS 2259 Balanced literal envelope construction / bracket-depth=6
+PASS 2260 Balanced literal envelope construction / bracket-depth=7
+PASS 2261 Balanced literal envelope construction / bracket-depth=8
+PASS 2262 Balanced literal envelope construction / bracket-depth=9
+PASS 2263 Balanced literal envelope construction / bracket-depth=10
+PASS 2264 Balanced literal envelope construction / bracket-depth=11
+PASS 2265 Balanced literal envelope construction / bracket-depth=12
+PASS 2266 Balanced literal envelope construction / bracket-depth=13
+PASS 2267 Balanced literal envelope construction / bracket-depth=14
+PASS 2268 Balanced literal envelope construction / bracket-depth=15
+PASS 2269 Getter-key remapping surfaces / getter-fields=name
+PASS 2270 Getter-key remapping surfaces / getter-fields=count
+PASS 2271 Getter-key remapping surfaces / getter-fields=name+count
+PASS 2272 Getter-key remapping surfaces / getter-fields=active
+PASS 2273 Getter-key remapping surfaces / getter-fields=name+active
+PASS 2274 Getter-key remapping surfaces / getter-fields=count+active
+PASS 2275 Getter-key remapping surfaces / getter-fields=name+count+active
+PASS 2276 Getter-key remapping surfaces / getter-fields=tags
+PASS 2277 Getter-key remapping surfaces / getter-fields=name+tags
+PASS 2278 Getter-key remapping surfaces / getter-fields=count+tags
+PASS 2279 Getter-key remapping surfaces / getter-fields=name+count+tags
+PASS 2280 Getter-key remapping surfaces / getter-fields=active+tags
+PASS 2281 Getter-key remapping surfaces / getter-fields=name+active+tags
+PASS 2282 Getter-key remapping surfaces / getter-fields=count+active+tags
+PASS 2283 Getter-key remapping surfaces / getter-fields=name+count+active+tags
+PASS 2284 Setter-key remapping surfaces / setter-fields=name
+PASS 2285 Setter-key remapping surfaces / setter-fields=count
+PASS 2286 Setter-key remapping surfaces / setter-fields=name+count
+PASS 2287 Setter-key remapping surfaces / setter-fields=active
+PASS 2288 Setter-key remapping surfaces / setter-fields=name+active
+PASS 2289 Setter-key remapping surfaces / setter-fields=count+active
+PASS 2290 Setter-key remapping surfaces / setter-fields=name+count+active
+PASS 2291 Setter-key remapping surfaces / setter-fields=tags
+PASS 2292 Setter-key remapping surfaces / setter-fields=name+tags
+PASS 2293 Setter-key remapping surfaces / setter-fields=count+tags
+PASS 2294 Setter-key remapping surfaces / setter-fields=name+count+tags
+PASS 2295 Setter-key remapping surfaces / setter-fields=active+tags
+PASS 2296 Setter-key remapping surfaces / setter-fields=name+active+tags
+PASS 2297 Setter-key remapping surfaces / setter-fields=count+active+tags
+PASS 2298 Setter-key remapping surfaces / setter-fields=name+count+active+tags
+PASS 2299 Null-omitting optional property contracts / omittable-fields=name
+PASS 2300 Null-omitting optional property contracts / omittable-fields=count
+PASS 2301 Null-omitting optional property contracts / omittable-fields=name+count
+PASS 2302 Null-omitting optional property contracts / omittable-fields=active
+PASS 2303 Null-omitting optional property contracts / omittable-fields=name+active
+PASS 2304 Null-omitting optional property contracts / omittable-fields=count+active
+PASS 2305 Null-omitting optional property contracts / omittable-fields=name+count+active
+PASS 2306 Null-omitting optional property contracts / omittable-fields=tags
+PASS 2307 Null-omitting optional property contracts / omittable-fields=name+tags
+PASS 2308 Null-omitting optional property contracts / omittable-fields=count+tags
+PASS 2309 Null-omitting optional property contracts / omittable-fields=name+count+tags
+PASS 2310 Null-omitting optional property contracts / omittable-fields=active+tags
+PASS 2311 Null-omitting optional property contracts / omittable-fields=name+active+tags
+PASS 2312 Null-omitting optional property contracts / omittable-fields=count+active+tags
+PASS 2313 Null-omitting optional property contracts / omittable-fields=name+count+active+tags
+PASS 2314 Optional-property default materialization / required-default-fields=name
+PASS 2315 Optional-property default materialization / required-default-fields=count
+PASS 2316 Optional-property default materialization / required-default-fields=name+count
+PASS 2317 Optional-property default materialization / required-default-fields=active
+PASS 2318 Optional-property default materialization / required-default-fields=name+active
+PASS 2319 Optional-property default materialization / required-default-fields=count+active
+PASS 2320 Optional-property default materialization / required-default-fields=name+count+active
+PASS 2321 Optional-property default materialization / required-default-fields=tags
+PASS 2322 Optional-property default materialization / required-default-fields=name+tags
+PASS 2323 Optional-property default materialization / required-default-fields=count+tags
+PASS 2324 Optional-property default materialization / required-default-fields=name+count+tags
+PASS 2325 Optional-property default materialization / required-default-fields=active+tags
+PASS 2326 Optional-property default materialization / required-default-fields=name+active+tags
+PASS 2327 Optional-property default materialization / required-default-fields=count+active+tags
+PASS 2328 Optional-property default materialization / required-default-fields=name+count+active+tags
+PASS 2329 Key-value entry union serialization / entry-union-fields=name
+PASS 2330 Key-value entry union serialization / entry-union-fields=count
+PASS 2331 Key-value entry union serialization / entry-union-fields=name+count
+PASS 2332 Key-value entry union serialization / entry-union-fields=active
+PASS 2333 Key-value entry union serialization / entry-union-fields=name+active
+PASS 2334 Key-value entry union serialization / entry-union-fields=count+active
+PASS 2335 Key-value entry union serialization / entry-union-fields=name+count+active
+PASS 2336 Key-value entry union serialization / entry-union-fields=tags
+PASS 2337 Key-value entry union serialization / entry-union-fields=name+tags
+PASS 2338 Key-value entry union serialization / entry-union-fields=count+tags
+PASS 2339 Key-value entry union serialization / entry-union-fields=name+count+tags
+PASS 2340 Key-value entry union serialization / entry-union-fields=active+tags
+PASS 2341 Key-value entry union serialization / entry-union-fields=name+active+tags
+PASS 2342 Key-value entry union serialization / entry-union-fields=count+active+tags
+PASS 2343 Key-value entry union serialization / entry-union-fields=name+count+active+tags
+PASS 2344 Schema-literal value inference / schema-fields=name
+PASS 2345 Schema-literal value inference / schema-fields=count
+PASS 2346 Schema-literal value inference / schema-fields=name+count
+PASS 2347 Schema-literal value inference / schema-fields=active
+PASS 2348 Schema-literal value inference / schema-fields=name+active
+PASS 2349 Schema-literal value inference / schema-fields=count+active
+PASS 2350 Schema-literal value inference / schema-fields=name+count+active
+PASS 2351 Schema-literal value inference / schema-fields=tags
+PASS 2352 Schema-literal value inference / schema-fields=name+tags
+PASS 2353 Schema-literal value inference / schema-fields=count+tags
+PASS 2354 Schema-literal value inference / schema-fields=name+count+tags
+PASS 2355 Schema-literal value inference / schema-fields=active+tags
+PASS 2356 Schema-literal value inference / schema-fields=name+active+tags
+PASS 2357 Schema-literal value inference / schema-fields=count+active+tags
+PASS 2358 Schema-literal value inference / schema-fields=name+count+active+tags
+PASS 2359 Phantom capability authorization plans / required-capabilities=name
+PASS 2360 Phantom capability authorization plans / required-capabilities=count
+PASS 2361 Phantom capability authorization plans / required-capabilities=name+count
+PASS 2362 Phantom capability authorization plans / required-capabilities=active
+PASS 2363 Phantom capability authorization plans / required-capabilities=name+active
+PASS 2364 Phantom capability authorization plans / required-capabilities=count+active
+PASS 2365 Phantom capability authorization plans / required-capabilities=name+count+active
+PASS 2366 Phantom capability authorization plans / required-capabilities=tags
+PASS 2367 Phantom capability authorization plans / required-capabilities=name+tags
+PASS 2368 Phantom capability authorization plans / required-capabilities=count+tags
+PASS 2369 Phantom capability authorization plans / required-capabilities=name+count+tags
+PASS 2370 Phantom capability authorization plans / required-capabilities=active+tags
+PASS 2371 Phantom capability authorization plans / required-capabilities=name+active+tags
+PASS 2372 Phantom capability authorization plans / required-capabilities=count+active+tags
+PASS 2373 Phantom capability authorization plans / required-capabilities=name+count+active+tags
+PASS 2374 Exhaustive handler-table dispatch / handled-variants=name
+PASS 2375 Exhaustive handler-table dispatch / handled-variants=count
+PASS 2376 Exhaustive handler-table dispatch / handled-variants=name+count
+PASS 2377 Exhaustive handler-table dispatch / handled-variants=active
+PASS 2378 Exhaustive handler-table dispatch / handled-variants=name+active
+PASS 2379 Exhaustive handler-table dispatch / handled-variants=count+active
+PASS 2380 Exhaustive handler-table dispatch / handled-variants=name+count+active
+PASS 2381 Exhaustive handler-table dispatch / handled-variants=tags
+PASS 2382 Exhaustive handler-table dispatch / handled-variants=name+tags
+PASS 2383 Exhaustive handler-table dispatch / handled-variants=count+tags
+PASS 2384 Exhaustive handler-table dispatch / handled-variants=name+count+tags
+PASS 2385 Exhaustive handler-table dispatch / handled-variants=active+tags
+PASS 2386 Exhaustive handler-table dispatch / handled-variants=name+active+tags
+PASS 2387 Exhaustive handler-table dispatch / handled-variants=count+active+tags
+PASS 2388 Exhaustive handler-table dispatch / handled-variants=name+count+active+tags
+PASS 2389 Readonly-key release maps / released-readonly-fields=name
+PASS 2390 Readonly-key release maps / released-readonly-fields=count
+PASS 2391 Readonly-key release maps / released-readonly-fields=name+count
+PASS 2392 Readonly-key release maps / released-readonly-fields=active
+PASS 2393 Readonly-key release maps / released-readonly-fields=name+active
+PASS 2394 Readonly-key release maps / released-readonly-fields=count+active
+PASS 2395 Readonly-key release maps / released-readonly-fields=name+count+active
+PASS 2396 Readonly-key release maps / released-readonly-fields=tags
+PASS 2397 Readonly-key release maps / released-readonly-fields=name+tags
+PASS 2398 Readonly-key release maps / released-readonly-fields=count+tags
+PASS 2399 Readonly-key release maps / released-readonly-fields=name+count+tags
+PASS 2400 Readonly-key release maps / released-readonly-fields=active+tags
+PASS 2401 Readonly-key release maps / released-readonly-fields=name+active+tags
+PASS 2402 Readonly-key release maps / released-readonly-fields=count+active+tags
+PASS 2403 Readonly-key release maps / released-readonly-fields=name+count+active+tags
+PASS 2404 Exclusive option-set encodings / exclusive-options=name
+PASS 2405 Exclusive option-set encodings / exclusive-options=count
+PASS 2406 Exclusive option-set encodings / exclusive-options=name+count
+PASS 2407 Exclusive option-set encodings / exclusive-options=active
+PASS 2408 Exclusive option-set encodings / exclusive-options=name+active
+PASS 2409 Exclusive option-set encodings / exclusive-options=count+active
+PASS 2410 Exclusive option-set encodings / exclusive-options=name+count+active
+PASS 2411 Exclusive option-set encodings / exclusive-options=tags
+PASS 2412 Exclusive option-set encodings / exclusive-options=name+tags
+PASS 2413 Exclusive option-set encodings / exclusive-options=count+tags
+PASS 2414 Exclusive option-set encodings / exclusive-options=name+count+tags
+PASS 2415 Exclusive option-set encodings / exclusive-options=active+tags
+PASS 2416 Exclusive option-set encodings / exclusive-options=name+active+tags
+PASS 2417 Exclusive option-set encodings / exclusive-options=count+active+tags
+PASS 2418 Exclusive option-set encodings / exclusive-options=name+count+active+tags
+PASS 2419 Depth-limited readonly graph copies / readonly-depth=1
+PASS 2420 Depth-limited readonly graph copies / readonly-depth=2
+PASS 2421 Depth-limited readonly graph copies / readonly-depth=3
+PASS 2422 Depth-limited readonly graph copies / readonly-depth=4
+PASS 2423 Depth-limited readonly graph copies / readonly-depth=5
+PASS 2424 Depth-limited readonly graph copies / readonly-depth=6
+PASS 2425 Depth-limited readonly graph copies / readonly-depth=7
+PASS 2426 Depth-limited readonly graph copies / readonly-depth=8
+PASS 2427 Depth-limited readonly graph copies / readonly-depth=9
+PASS 2428 Depth-limited readonly graph copies / readonly-depth=10
+PASS 2429 Depth-limited readonly graph copies / readonly-depth=11
+PASS 2430 Depth-limited readonly graph copies / readonly-depth=12
+PASS 2431 Depth-limited readonly graph copies / readonly-depth=13
+PASS 2432 Depth-limited readonly graph copies / readonly-depth=14
+PASS 2433 Depth-limited readonly graph copies / readonly-depth=15
+PASS 2434 Depth-limited patch materialization / patch-depth=1
+PASS 2435 Depth-limited patch materialization / patch-depth=2
+PASS 2436 Depth-limited patch materialization / patch-depth=3
+PASS 2437 Depth-limited patch materialization / patch-depth=4
+PASS 2438 Depth-limited patch materialization / patch-depth=5
+PASS 2439 Depth-limited patch materialization / patch-depth=6
+PASS 2440 Depth-limited patch materialization / patch-depth=7
+PASS 2441 Depth-limited patch materialization / patch-depth=8
+PASS 2442 Depth-limited patch materialization / patch-depth=9
+PASS 2443 Depth-limited patch materialization / patch-depth=10
+PASS 2444 Depth-limited patch materialization / patch-depth=11
+PASS 2445 Depth-limited patch materialization / patch-depth=12
+PASS 2446 Depth-limited patch materialization / patch-depth=13
+PASS 2447 Depth-limited patch materialization / patch-depth=14
+PASS 2448 Depth-limited patch materialization / patch-depth=15
+PASS 2449 Nested promise-container inference / async-container-depth=1
+PASS 2450 Nested promise-container inference / async-container-depth=2
+PASS 2451 Nested promise-container inference / async-container-depth=3
+PASS 2452 Nested promise-container inference / async-container-depth=4
+PASS 2453 Nested promise-container inference / async-container-depth=5
+PASS 2454 Nested promise-container inference / async-container-depth=6
+PASS 2455 Nested promise-container inference / async-container-depth=7
+PASS 2456 Nested promise-container inference / async-container-depth=8
+PASS 2457 Nested promise-container inference / async-container-depth=9
+PASS 2458 Nested promise-container inference / async-container-depth=10
+PASS 2459 Nested promise-container inference / async-container-depth=11
+PASS 2460 Nested promise-container inference / async-container-depth=12
+PASS 2461 Nested promise-container inference / async-container-depth=13
+PASS 2462 Nested promise-container inference / async-container-depth=14
+PASS 2463 Nested promise-container inference / async-container-depth=15
+PASS 2464 Finite protocol transition tables / protocol-steps=1
+PASS 2465 Finite protocol transition tables / protocol-steps=2
+PASS 2466 Finite protocol transition tables / protocol-steps=3
+PASS 2467 Finite protocol transition tables / protocol-steps=4
+PASS 2468 Finite protocol transition tables / protocol-steps=5
+PASS 2469 Finite protocol transition tables / protocol-steps=6
+PASS 2470 Finite protocol transition tables / protocol-steps=7
+PASS 2471 Finite protocol transition tables / protocol-steps=8
+PASS 2472 Finite protocol transition tables / protocol-steps=9
+PASS 2473 Finite protocol transition tables / protocol-steps=10
+PASS 2474 Finite protocol transition tables / protocol-steps=11
+PASS 2475 Finite protocol transition tables / protocol-steps=12
+PASS 2476 Finite protocol transition tables / protocol-steps=13
+PASS 2477 Finite protocol transition tables / protocol-steps=14
+PASS 2478 Finite protocol transition tables / protocol-steps=15
+PASS 2479 Completion-gated immutable builders / builder-required-fields=name
+PASS 2480 Completion-gated immutable builders / builder-required-fields=count
+PASS 2481 Completion-gated immutable builders / builder-required-fields=name+count
+PASS 2482 Completion-gated immutable builders / builder-required-fields=active
+PASS 2483 Completion-gated immutable builders / builder-required-fields=name+active
+PASS 2484 Completion-gated immutable builders / builder-required-fields=count+active
+PASS 2485 Completion-gated immutable builders / builder-required-fields=name+count+active
+PASS 2486 Completion-gated immutable builders / builder-required-fields=tags
+PASS 2487 Completion-gated immutable builders / builder-required-fields=name+tags
+PASS 2488 Completion-gated immutable builders / builder-required-fields=count+tags
+PASS 2489 Completion-gated immutable builders / builder-required-fields=name+count+tags
+PASS 2490 Completion-gated immutable builders / builder-required-fields=active+tags
+PASS 2491 Completion-gated immutable builders / builder-required-fields=name+active+tags
+PASS 2492 Completion-gated immutable builders / builder-required-fields=count+active+tags
+PASS 2493 Completion-gated immutable builders / builder-required-fields=name+count+active+tags
+PASS 2494 Covariant producer widening / producer-output-fields=name
+PASS 2495 Covariant producer widening / producer-output-fields=count
+PASS 2496 Covariant producer widening / producer-output-fields=name+count
+PASS 2497 Covariant producer widening / producer-output-fields=active
+PASS 2498 Covariant producer widening / producer-output-fields=name+active
+PASS 2499 Covariant producer widening / producer-output-fields=count+active
+PASS 2500 Covariant producer widening / producer-output-fields=name+count+active
+PASS 2501 Covariant producer widening / producer-output-fields=tags
+PASS 2502 Covariant producer widening / producer-output-fields=name+tags
+PASS 2503 Covariant producer widening / producer-output-fields=count+tags
+PASS 2504 Covariant producer widening / producer-output-fields=name+count+tags
+PASS 2505 Covariant producer widening / producer-output-fields=active+tags
+PASS 2506 Covariant producer widening / producer-output-fields=name+active+tags
+PASS 2507 Covariant producer widening / producer-output-fields=count+active+tags
+PASS 2508 Covariant producer widening / producer-output-fields=name+count+active+tags
+PASS 2509 Contravariant consumer narrowing / consumer-input-fields=name
+PASS 2510 Contravariant consumer narrowing / consumer-input-fields=count
+PASS 2511 Contravariant consumer narrowing / consumer-input-fields=name+count
+PASS 2512 Contravariant consumer narrowing / consumer-input-fields=active
+PASS 2513 Contravariant consumer narrowing / consumer-input-fields=name+active
+PASS 2514 Contravariant consumer narrowing / consumer-input-fields=count+active
+PASS 2515 Contravariant consumer narrowing / consumer-input-fields=name+count+active
+PASS 2516 Contravariant consumer narrowing / consumer-input-fields=tags
+PASS 2517 Contravariant consumer narrowing / consumer-input-fields=name+tags
+PASS 2518 Contravariant consumer narrowing / consumer-input-fields=count+tags
+PASS 2519 Contravariant consumer narrowing / consumer-input-fields=name+count+tags
+PASS 2520 Contravariant consumer narrowing / consumer-input-fields=active+tags
+PASS 2521 Contravariant consumer narrowing / consumer-input-fields=name+active+tags
+PASS 2522 Contravariant consumer narrowing / consumer-input-fields=count+active+tags
+PASS 2523 Contravariant consumer narrowing / consumer-input-fields=name+count+active+tags
+PASS 2524 Invariant read-write cell copies / cell-value-fields=name
+PASS 2525 Invariant read-write cell copies / cell-value-fields=count
+PASS 2526 Invariant read-write cell copies / cell-value-fields=name+count
+PASS 2527 Invariant read-write cell copies / cell-value-fields=active
+PASS 2528 Invariant read-write cell copies / cell-value-fields=name+active
+PASS 2529 Invariant read-write cell copies / cell-value-fields=count+active
+PASS 2530 Invariant read-write cell copies / cell-value-fields=name+count+active
+PASS 2531 Invariant read-write cell copies / cell-value-fields=tags
+PASS 2532 Invariant read-write cell copies / cell-value-fields=name+tags
+PASS 2533 Invariant read-write cell copies / cell-value-fields=count+tags
+PASS 2534 Invariant read-write cell copies / cell-value-fields=name+count+tags
+PASS 2535 Invariant read-write cell copies / cell-value-fields=active+tags
+PASS 2536 Invariant read-write cell copies / cell-value-fields=name+active+tags
+PASS 2537 Invariant read-write cell copies / cell-value-fields=count+active+tags
+PASS 2538 Invariant read-write cell copies / cell-value-fields=name+count+active+tags
+PASS 2539 Explicit-this record methods / this-receiver-fields=name
+PASS 2540 Explicit-this record methods / this-receiver-fields=count
+PASS 2541 Explicit-this record methods / this-receiver-fields=name+count
+PASS 2542 Explicit-this record methods / this-receiver-fields=active
+PASS 2543 Explicit-this record methods / this-receiver-fields=name+active
+PASS 2544 Explicit-this record methods / this-receiver-fields=count+active
+PASS 2545 Explicit-this record methods / this-receiver-fields=name+count+active
+PASS 2546 Explicit-this record methods / this-receiver-fields=tags
+PASS 2547 Explicit-this record methods / this-receiver-fields=name+tags
+PASS 2548 Explicit-this record methods / this-receiver-fields=count+tags
+PASS 2549 Explicit-this record methods / this-receiver-fields=name+count+tags
+PASS 2550 Explicit-this record methods / this-receiver-fields=active+tags
+PASS 2551 Explicit-this record methods / this-receiver-fields=name+active+tags
+PASS 2552 Explicit-this record methods / this-receiver-fields=count+active+tags
+PASS 2553 Explicit-this record methods / this-receiver-fields=name+count+active+tags
+PASS 2554 Abstract renderer specialization / abstract-render-fields=name
+PASS 2555 Abstract renderer specialization / abstract-render-fields=count
+PASS 2556 Abstract renderer specialization / abstract-render-fields=name+count
+PASS 2557 Abstract renderer specialization / abstract-render-fields=active
+PASS 2558 Abstract renderer specialization / abstract-render-fields=name+active
+PASS 2559 Abstract renderer specialization / abstract-render-fields=count+active
+PASS 2560 Abstract renderer specialization / abstract-render-fields=name+count+active
+PASS 2561 Abstract renderer specialization / abstract-render-fields=tags
+PASS 2562 Abstract renderer specialization / abstract-render-fields=name+tags
+PASS 2563 Abstract renderer specialization / abstract-render-fields=count+tags
+PASS 2564 Abstract renderer specialization / abstract-render-fields=name+count+tags
+PASS 2565 Abstract renderer specialization / abstract-render-fields=active+tags
+PASS 2566 Abstract renderer specialization / abstract-render-fields=name+active+tags
+PASS 2567 Abstract renderer specialization / abstract-render-fields=count+active+tags
+PASS 2568 Abstract renderer specialization / abstract-render-fields=name+count+active+tags
+PASS 2569 Capability-composed audit mixins / audit-methods=name
+PASS 2570 Capability-composed audit mixins / audit-methods=count
+PASS 2571 Capability-composed audit mixins / audit-methods=name+count
+PASS 2572 Capability-composed audit mixins / audit-methods=active
+PASS 2573 Capability-composed audit mixins / audit-methods=name+active
+PASS 2574 Capability-composed audit mixins / audit-methods=count+active
+PASS 2575 Capability-composed audit mixins / audit-methods=name+count+active
+PASS 2576 Capability-composed audit mixins / audit-methods=tags
+PASS 2577 Capability-composed audit mixins / audit-methods=name+tags
+PASS 2578 Capability-composed audit mixins / audit-methods=count+tags
+PASS 2579 Capability-composed audit mixins / audit-methods=name+count+tags
+PASS 2580 Capability-composed audit mixins / audit-methods=active+tags
+PASS 2581 Capability-composed audit mixins / audit-methods=name+active+tags
+PASS 2582 Capability-composed audit mixins / audit-methods=count+active+tags
+PASS 2583 Capability-composed audit mixins / audit-methods=name+count+active+tags
+PASS 2584 Arity-directed overload selection / overload-tuple-width=1
+PASS 2585 Arity-directed overload selection / overload-tuple-width=2
+PASS 2586 Arity-directed overload selection / overload-tuple-width=3
+PASS 2587 Arity-directed overload selection / overload-tuple-width=4
+PASS 2588 Arity-directed overload selection / overload-tuple-width=5
+PASS 2589 Arity-directed overload selection / overload-tuple-width=6
+PASS 2590 Arity-directed overload selection / overload-tuple-width=7
+PASS 2591 Arity-directed overload selection / overload-tuple-width=8
+PASS 2592 Arity-directed overload selection / overload-tuple-width=9
+PASS 2593 Arity-directed overload selection / overload-tuple-width=10
+PASS 2594 Arity-directed overload selection / overload-tuple-width=11
+PASS 2595 Arity-directed overload selection / overload-tuple-width=12
+PASS 2596 Arity-directed overload selection / overload-tuple-width=13
+PASS 2597 Arity-directed overload selection / overload-tuple-width=14
+PASS 2598 Arity-directed overload selection / overload-tuple-width=15
+PASS 2599 Index-tagged promise races / race-participants=1
+PASS 2600 Index-tagged promise races / race-participants=2
+PASS 2601 Index-tagged promise races / race-participants=3
+PASS 2602 Index-tagged promise races / race-participants=4
+PASS 2603 Index-tagged promise races / race-participants=5
+PASS 2604 Index-tagged promise races / race-participants=6
+PASS 2605 Index-tagged promise races / race-participants=7
+PASS 2606 Index-tagged promise races / race-participants=8
+PASS 2607 Index-tagged promise races / race-participants=9
+PASS 2608 Index-tagged promise races / race-participants=10
+PASS 2609 Index-tagged promise races / race-participants=11
+PASS 2610 Index-tagged promise races / race-participants=12
+PASS 2611 Index-tagged promise races / race-participants=13
+PASS 2612 Index-tagged promise races / race-participants=14
+PASS 2613 Index-tagged promise races / race-participants=15
+PASS 2614 Keyed all-settled outcome maps / settled-keys=name
+PASS 2615 Keyed all-settled outcome maps / settled-keys=count
+PASS 2616 Keyed all-settled outcome maps / settled-keys=name+count
+PASS 2617 Keyed all-settled outcome maps / settled-keys=active
+PASS 2618 Keyed all-settled outcome maps / settled-keys=name+active
+PASS 2619 Keyed all-settled outcome maps / settled-keys=count+active
+PASS 2620 Keyed all-settled outcome maps / settled-keys=name+count+active
+PASS 2621 Keyed all-settled outcome maps / settled-keys=tags
+PASS 2622 Keyed all-settled outcome maps / settled-keys=name+tags
+PASS 2623 Keyed all-settled outcome maps / settled-keys=count+tags
+PASS 2624 Keyed all-settled outcome maps / settled-keys=name+count+tags
+PASS 2625 Keyed all-settled outcome maps / settled-keys=active+tags
+PASS 2626 Keyed all-settled outcome maps / settled-keys=name+active+tags
+PASS 2627 Keyed all-settled outcome maps / settled-keys=count+active+tags
+PASS 2628 Keyed all-settled outcome maps / settled-keys=name+count+active+tags
+PASS 2629 Finite retry-attempt contracts / maximum-attempts=1
+PASS 2630 Finite retry-attempt contracts / maximum-attempts=2
+PASS 2631 Finite retry-attempt contracts / maximum-attempts=3
+PASS 2632 Finite retry-attempt contracts / maximum-attempts=4
+PASS 2633 Finite retry-attempt contracts / maximum-attempts=5
+PASS 2634 Finite retry-attempt contracts / maximum-attempts=6
+PASS 2635 Finite retry-attempt contracts / maximum-attempts=7
+PASS 2636 Finite retry-attempt contracts / maximum-attempts=8
+PASS 2637 Finite retry-attempt contracts / maximum-attempts=9
+PASS 2638 Finite retry-attempt contracts / maximum-attempts=10
+PASS 2639 Finite retry-attempt contracts / maximum-attempts=11
+PASS 2640 Finite retry-attempt contracts / maximum-attempts=12
+PASS 2641 Finite retry-attempt contracts / maximum-attempts=13
+PASS 2642 Finite retry-attempt contracts / maximum-attempts=14
+PASS 2643 Finite retry-attempt contracts / maximum-attempts=15
+PASS 2644 Cursor-page boundary metadata / cursor-key-fields=name
+PASS 2645 Cursor-page boundary metadata / cursor-key-fields=count
+PASS 2646 Cursor-page boundary metadata / cursor-key-fields=name+count
+PASS 2647 Cursor-page boundary metadata / cursor-key-fields=active
+PASS 2648 Cursor-page boundary metadata / cursor-key-fields=name+active
+PASS 2649 Cursor-page boundary metadata / cursor-key-fields=count+active
+PASS 2650 Cursor-page boundary metadata / cursor-key-fields=name+count+active
+PASS 2651 Cursor-page boundary metadata / cursor-key-fields=tags
+PASS 2652 Cursor-page boundary metadata / cursor-key-fields=name+tags
+PASS 2653 Cursor-page boundary metadata / cursor-key-fields=count+tags
+PASS 2654 Cursor-page boundary metadata / cursor-key-fields=name+count+tags
+PASS 2655 Cursor-page boundary metadata / cursor-key-fields=active+tags
+PASS 2656 Cursor-page boundary metadata / cursor-key-fields=name+active+tags
+PASS 2657 Cursor-page boundary metadata / cursor-key-fields=count+active+tags
+PASS 2658 Cursor-page boundary metadata / cursor-key-fields=name+count+active+tags
+PASS 2659 Unit-exponent quantity multiplication / left-length-exponent=1
+PASS 2660 Unit-exponent quantity multiplication / left-length-exponent=2
+PASS 2661 Unit-exponent quantity multiplication / left-length-exponent=3
+PASS 2662 Unit-exponent quantity multiplication / left-length-exponent=4
+PASS 2663 Unit-exponent quantity multiplication / left-length-exponent=5
+PASS 2664 Unit-exponent quantity multiplication / left-length-exponent=6
+PASS 2665 Unit-exponent quantity multiplication / left-length-exponent=7
+PASS 2666 Unit-exponent quantity multiplication / left-length-exponent=8
+PASS 2667 Unit-exponent quantity multiplication / left-length-exponent=9
+PASS 2668 Unit-exponent quantity multiplication / left-length-exponent=10
+PASS 2669 Unit-exponent quantity multiplication / left-length-exponent=11
+PASS 2670 Unit-exponent quantity multiplication / left-length-exponent=12
+PASS 2671 Unit-exponent quantity multiplication / left-length-exponent=13
+PASS 2672 Unit-exponent quantity multiplication / left-length-exponent=14
+PASS 2673 Unit-exponent quantity multiplication / left-length-exponent=15
+PASS 2674 I18n named message argument inference / message-arguments=1
+PASS 2675 I18n named message argument inference / message-arguments=2
+PASS 2676 I18n named message argument inference / message-arguments=3
+PASS 2677 I18n named message argument inference / message-arguments=4
+PASS 2678 I18n named message argument inference / message-arguments=5
+PASS 2679 I18n named message argument inference / message-arguments=6
+PASS 2680 I18n named message argument inference / message-arguments=7
+PASS 2681 I18n named message argument inference / message-arguments=8
+PASS 2682 I18n named message argument inference / message-arguments=9
+PASS 2683 I18n named message argument inference / message-arguments=10
+PASS 2684 I18n named message argument inference / message-arguments=11
+PASS 2685 I18n named message argument inference / message-arguments=12
+PASS 2686 I18n named message argument inference / message-arguments=13
+PASS 2687 I18n named message argument inference / message-arguments=14
+PASS 2688 I18n named message argument inference / message-arguments=15
+PASS 2689 Index-safe fixed vector dot products / vector-dimension=1
+PASS 2690 Index-safe fixed vector dot products / vector-dimension=2
+PASS 2691 Index-safe fixed vector dot products / vector-dimension=3
+PASS 2692 Index-safe fixed vector dot products / vector-dimension=4
+PASS 2693 Index-safe fixed vector dot products / vector-dimension=5
+PASS 2694 Index-safe fixed vector dot products / vector-dimension=6
+PASS 2695 Index-safe fixed vector dot products / vector-dimension=7
+PASS 2696 Index-safe fixed vector dot products / vector-dimension=8
+PASS 2697 Index-safe fixed vector dot products / vector-dimension=9
+PASS 2698 Index-safe fixed vector dot products / vector-dimension=10
+PASS 2699 Index-safe fixed vector dot products / vector-dimension=11
+PASS 2700 Index-safe fixed vector dot products / vector-dimension=12
+PASS 2701 Index-safe fixed vector dot products / vector-dimension=13
+PASS 2702 Index-safe fixed vector dot products / vector-dimension=14
+PASS 2703 Index-safe fixed vector dot products / vector-dimension=15
+PASS 2704 Typed coefficient polynomial evaluation / polynomial-degree=1
+PASS 2705 Typed coefficient polynomial evaluation / polynomial-degree=2
+PASS 2706 Typed coefficient polynomial evaluation / polynomial-degree=3
+PASS 2707 Typed coefficient polynomial evaluation / polynomial-degree=4
+PASS 2708 Typed coefficient polynomial evaluation / polynomial-degree=5
+PASS 2709 Typed coefficient polynomial evaluation / polynomial-degree=6
+PASS 2710 Typed coefficient polynomial evaluation / polynomial-degree=7
+PASS 2711 Typed coefficient polynomial evaluation / polynomial-degree=8
+PASS 2712 Typed coefficient polynomial evaluation / polynomial-degree=9
+PASS 2713 Typed coefficient polynomial evaluation / polynomial-degree=10
+PASS 2714 Typed coefficient polynomial evaluation / polynomial-degree=11
+PASS 2715 Typed coefficient polynomial evaluation / polynomial-degree=12
+PASS 2716 Typed coefficient polynomial evaluation / polynomial-degree=13
+PASS 2717 Typed coefficient polynomial evaluation / polynomial-degree=14
+PASS 2718 Typed coefficient polynomial evaluation / polynomial-degree=15
+solution: 750 passed, 0 failed.
+exitCode=0

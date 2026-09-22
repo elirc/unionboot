@@ -1,0 +1,8 @@
+// 3387 Native listener phase contract / scenario 9 — Boundary 9; bubble-phase native listener
+// Attach native click listener to data-testid=outer via useEffect with capture=false. Child Inner button has its own React onClick. Output Trace appends N9 when native outer fires and R when React child fires. With delegation at root, native outer listener runs before child React bubble handler in both modes. Stop checkbox controls a native INNER listener which stopPropagation() before outer bubble; capture outer still fires. Reset clears trace. Cleanup exact listener/options on unmount. This tests native vs delegated event phases, not menu keyboard behavior.
+// Full prompt: ../prompts/3387.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({}) {
+const [trace,set]=useState([]),[stop,setStop]=useState(false),outer=useRef(null),inner=useRef(null);useEffect(()=>{const node=outer.current,fn=()=>set(xs=>[...xs,'N9']);node.addEventListener('click',fn,false);return()=>node.removeEventListener('click',fn,false);},[]);useEffect(()=>{const node=inner.current,fn=e=>{if(stop)e.stopPropagation();};node.addEventListener('click',fn);return()=>node.removeEventListener('click',fn);},[stop]);return <section><label>Stop<input type="checkbox" checked={stop} onChange={e=>setStop(e.target.checked)}/></label><div data-testid="outer" ref={outer}><button ref={inner} onClick={()=>set(xs=>[...xs,'R'])}>Inner</button></div><output aria-label="Trace">{trace.join(',')||'empty'}</output><button onClick={()=>set([])}>Reset</button></section>;
+}

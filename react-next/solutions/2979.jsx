@@ -1,0 +1,8 @@
+// 2979 Shared promise resource cache / scenario 1 — Boundary 1; evict rejected cache entry
+// Exercise owns a Map of promise entries keyed by resource. Two buttons Load left/Load right request the same key K1 using injected pool.load(key). Deduplicate pending and fulfilled promises: a shared request can populate both outputs Left/Right. Each output begins idle, becomes loading, then response string or error. Evict a rejected entry so next click retries. Invalidate deletes key cache without changing displayed values. No fetching on mount; ignore completions after unmount.
+// Full prompt: ../prompts/2979.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({pool}) {
+const cache=useRef(new Map()),live=useRef(true);const [values,set]=useState({Left:'idle',Right:'idle'});useEffect(()=>{live.current=true;return()=>{live.current=false;};},[]);async function load(side){set(s=>({...s,[side]:'loading'}));const key='K1';let promise=cache.current.get(key);if(!promise){promise=Promise.resolve().then(()=>pool.load(key));cache.current.set(key,promise);promise.catch(()=>{if(cache.current.get(key)===promise)cache.current.delete(key);});}try{const result=await promise;if(live.current)set(s=>({...s,[side]:result}));}catch{if(live.current)set(s=>({...s,[side]:'error'}));}}return <section>{['Left','Right'].map(side=><div key={side}><output aria-label={side}>{values[side]}</output><button onClick={()=>load(side)}>Load {side.toLowerCase()}</button></div>)}<button onClick={()=>cache.current.delete('K1')}>Invalidate</button></section>;
+}

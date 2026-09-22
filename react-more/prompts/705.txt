@@ -1,0 +1,11 @@
+Select all checklist / scenario 7 — 4 items; eligible 1,3,4; initial none; all ignores locked items
+
+Render All and Item1..Item4 checkboxes. Only items 1,3,4 are eligible; others disabled and always unchecked. Initial selection empty. All selects/deselects only eligible items; it is disabled if none exist, checked only if eligible set is nonempty and fully selected, indeterminate for partial eligible selection. Output selected item numbers sorted ascending joined by comma. Clear clears selection.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=705
+Run your starter: node react-more/verify.cjs --starters --id=705

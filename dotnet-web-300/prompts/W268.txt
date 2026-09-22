@@ -1,0 +1,12 @@
+W268 — Cache policy response middleware
+Scenario 8/10: Public max-age 120; authenticated no-store
+
+Set cache policy before next: authenticated ->no-store; anonymous ->public, max-age=120. Preserve Vary tokens, add Accept once (case-insensitive); don't append if wildcard*. Replace old Cache-Control. Call next once. These are response hints, not a server cache implementation. Example existing Vary=Origin ->Origin, Accept.
+
+Signature: public static RequestDelegate Wrap(RequestDelegate next)
+
+Edit starters/W268.cs. Run node dotnet-web-300/verify.cjs --starters --id=W268 from unionboot.
+Reference: solutions/W268.cs; shared checks: tests/W268.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

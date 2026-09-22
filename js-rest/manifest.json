@@ -1,0 +1,642 @@
+[
+  {
+    "id": 104,
+    "tech": "js",
+    "title": "Index records: keep-first",
+    "starter": "starters/104.cjs",
+    "solution": "solutions/104.cjs",
+    "test": "tests/104.cjs"
+  },
+  {
+    "id": 105,
+    "tech": "js",
+    "title": "Index records: keep-last",
+    "starter": "starters/105.cjs",
+    "solution": "solutions/105.cjs",
+    "test": "tests/105.cjs"
+  },
+  {
+    "id": 106,
+    "tech": "js",
+    "title": "Index records: reject",
+    "starter": "starters/106.cjs",
+    "solution": "solutions/106.cjs",
+    "test": "tests/106.cjs"
+  },
+  {
+    "id": 107,
+    "tech": "js",
+    "title": "Index records: collect",
+    "starter": "starters/107.cjs",
+    "solution": "solutions/107.cjs",
+    "test": "tests/107.cjs"
+  },
+  {
+    "id": 108,
+    "tech": "js",
+    "title": "inner join by identifier",
+    "starter": "starters/108.cjs",
+    "solution": "solutions/108.cjs",
+    "test": "tests/108.cjs"
+  },
+  {
+    "id": 109,
+    "tech": "js",
+    "title": "left join by identifier",
+    "starter": "starters/109.cjs",
+    "solution": "solutions/109.cjs",
+    "test": "tests/109.cjs"
+  },
+  {
+    "id": 110,
+    "tech": "js",
+    "title": "full join by identifier",
+    "starter": "starters/110.cjs",
+    "solution": "solutions/110.cjs",
+    "test": "tests/110.cjs"
+  },
+  {
+    "id": 111,
+    "tech": "js",
+    "title": "anti join by identifier",
+    "starter": "starters/111.cjs",
+    "solution": "solutions/111.cjs",
+    "test": "tests/111.cjs"
+  },
+  {
+    "id": 112,
+    "tech": "js",
+    "title": "Aggregate nested tree: sum",
+    "starter": "starters/112.cjs",
+    "solution": "solutions/112.cjs",
+    "test": "tests/112.cjs"
+  },
+  {
+    "id": 113,
+    "tech": "js",
+    "title": "Aggregate nested tree: count",
+    "starter": "starters/113.cjs",
+    "solution": "solutions/113.cjs",
+    "test": "tests/113.cjs"
+  },
+  {
+    "id": 114,
+    "tech": "js",
+    "title": "Aggregate nested tree: min",
+    "starter": "starters/114.cjs",
+    "solution": "solutions/114.cjs",
+    "test": "tests/114.cjs"
+  },
+  {
+    "id": 115,
+    "tech": "js",
+    "title": "Aggregate nested tree: max",
+    "starter": "starters/115.cjs",
+    "solution": "solutions/115.cjs",
+    "test": "tests/115.cjs"
+  },
+  {
+    "id": 116,
+    "tech": "js",
+    "title": "Nearest point: euclidean distance",
+    "starter": "starters/116.cjs",
+    "solution": "solutions/116.cjs",
+    "test": "tests/116.cjs"
+  },
+  {
+    "id": 117,
+    "tech": "js",
+    "title": "Nearest point: manhattan distance",
+    "starter": "starters/117.cjs",
+    "solution": "solutions/117.cjs",
+    "test": "tests/117.cjs"
+  },
+  {
+    "id": 118,
+    "tech": "js",
+    "title": "Nearest point: chebyshev distance",
+    "starter": "starters/118.cjs",
+    "solution": "solutions/118.cjs",
+    "test": "tests/118.cjs"
+  },
+  {
+    "id": 119,
+    "tech": "js",
+    "title": "Nearest point: squared distance",
+    "starter": "starters/119.cjs",
+    "solution": "solutions/119.cjs",
+    "test": "tests/119.cjs"
+  },
+  {
+    "id": 120,
+    "tech": "js",
+    "title": "Quantize to a step: floor",
+    "starter": "starters/120.cjs",
+    "solution": "solutions/120.cjs",
+    "test": "tests/120.cjs"
+  },
+  {
+    "id": 121,
+    "tech": "js",
+    "title": "Quantize to a step: ceil",
+    "starter": "starters/121.cjs",
+    "solution": "solutions/121.cjs",
+    "test": "tests/121.cjs"
+  },
+  {
+    "id": 122,
+    "tech": "js",
+    "title": "Quantize to a step: nearest-half-up",
+    "starter": "starters/122.cjs",
+    "solution": "solutions/122.cjs",
+    "test": "tests/122.cjs"
+  },
+  {
+    "id": 123,
+    "tech": "js",
+    "title": "Quantize to a step: toward-zero",
+    "starter": "starters/123.cjs",
+    "solution": "solutions/123.cjs",
+    "test": "tests/123.cjs"
+  },
+  {
+    "id": 124,
+    "tech": "js",
+    "title": "Configuration diff: added",
+    "starter": "starters/124.cjs",
+    "solution": "solutions/124.cjs",
+    "test": "tests/124.cjs"
+  },
+  {
+    "id": 125,
+    "tech": "js",
+    "title": "Configuration diff: removed",
+    "starter": "starters/125.cjs",
+    "solution": "solutions/125.cjs",
+    "test": "tests/125.cjs"
+  },
+  {
+    "id": 126,
+    "tech": "js",
+    "title": "Configuration diff: changed",
+    "starter": "starters/126.cjs",
+    "solution": "solutions/126.cjs",
+    "test": "tests/126.cjs"
+  },
+  {
+    "id": 127,
+    "tech": "js",
+    "title": "Configuration diff: unchanged",
+    "starter": "starters/127.cjs",
+    "solution": "solutions/127.cjs",
+    "test": "tests/127.cjs"
+  },
+  {
+    "id": 128,
+    "tech": "js",
+    "title": "Best candidate with first ties",
+    "starter": "starters/128.cjs",
+    "solution": "solutions/128.cjs",
+    "test": "tests/128.cjs"
+  },
+  {
+    "id": 129,
+    "tech": "js",
+    "title": "Best candidate with last ties",
+    "starter": "starters/129.cjs",
+    "solution": "solutions/129.cjs",
+    "test": "tests/129.cjs"
+  },
+  {
+    "id": 130,
+    "tech": "js",
+    "title": "Best candidate with all ties",
+    "starter": "starters/130.cjs",
+    "solution": "solutions/130.cjs",
+    "test": "tests/130.cjs"
+  },
+  {
+    "id": 131,
+    "tech": "js",
+    "title": "Best candidate with error ties",
+    "starter": "starters/131.cjs",
+    "solution": "solutions/131.cjs",
+    "test": "tests/131.cjs"
+  },
+  {
+    "id": 132,
+    "tech": "js",
+    "title": "Locate letters runs",
+    "starter": "starters/132.cjs",
+    "solution": "solutions/132.cjs",
+    "test": "tests/132.cjs"
+  },
+  {
+    "id": 133,
+    "tech": "js",
+    "title": "Locate digits runs",
+    "starter": "starters/133.cjs",
+    "solution": "solutions/133.cjs",
+    "test": "tests/133.cjs"
+  },
+  {
+    "id": 134,
+    "tech": "js",
+    "title": "Locate whitespace runs",
+    "starter": "starters/134.cjs",
+    "solution": "solutions/134.cjs",
+    "test": "tests/134.cjs"
+  },
+  {
+    "id": 135,
+    "tech": "js",
+    "title": "Locate punctuation runs",
+    "starter": "starters/135.cjs",
+    "solution": "solutions/135.cjs",
+    "test": "tests/135.cjs"
+  },
+  {
+    "id": 136,
+    "tech": "js",
+    "title": "Robot navigation starting north",
+    "starter": "starters/136.cjs",
+    "solution": "solutions/136.cjs",
+    "test": "tests/136.cjs"
+  },
+  {
+    "id": 137,
+    "tech": "js",
+    "title": "Robot navigation starting east",
+    "starter": "starters/137.cjs",
+    "solution": "solutions/137.cjs",
+    "test": "tests/137.cjs"
+  },
+  {
+    "id": 138,
+    "tech": "js",
+    "title": "Robot navigation starting south",
+    "starter": "starters/138.cjs",
+    "solution": "solutions/138.cjs",
+    "test": "tests/138.cjs"
+  },
+  {
+    "id": 139,
+    "tech": "js",
+    "title": "Robot navigation starting west",
+    "starter": "starters/139.cjs",
+    "solution": "solutions/139.cjs",
+    "test": "tests/139.cjs"
+  },
+  {
+    "id": 140,
+    "tech": "js",
+    "title": "Multiset intersection",
+    "starter": "starters/140.cjs",
+    "solution": "solutions/140.cjs",
+    "test": "tests/140.cjs"
+  },
+  {
+    "id": 141,
+    "tech": "js",
+    "title": "Multiset union",
+    "starter": "starters/141.cjs",
+    "solution": "solutions/141.cjs",
+    "test": "tests/141.cjs"
+  },
+  {
+    "id": 142,
+    "tech": "js",
+    "title": "Multiset subtract",
+    "starter": "starters/142.cjs",
+    "solution": "solutions/142.cjs",
+    "test": "tests/142.cjs"
+  },
+  {
+    "id": 143,
+    "tech": "js",
+    "title": "Multiset symmetric",
+    "starter": "starters/143.cjs",
+    "solution": "solutions/143.cjs",
+    "test": "tests/143.cjs"
+  },
+  {
+    "id": 144,
+    "tech": "js",
+    "title": "Bounded event buffer: drop-oldest",
+    "starter": "starters/144.cjs",
+    "solution": "solutions/144.cjs",
+    "test": "tests/144.cjs"
+  },
+  {
+    "id": 145,
+    "tech": "js",
+    "title": "Bounded event buffer: drop-newest",
+    "starter": "starters/145.cjs",
+    "solution": "solutions/145.cjs",
+    "test": "tests/145.cjs"
+  },
+  {
+    "id": 146,
+    "tech": "js",
+    "title": "Bounded event buffer: reject",
+    "starter": "starters/146.cjs",
+    "solution": "solutions/146.cjs",
+    "test": "tests/146.cjs"
+  },
+  {
+    "id": 147,
+    "tech": "js",
+    "title": "Bounded event buffer: grow",
+    "starter": "starters/147.cjs",
+    "solution": "solutions/147.cjs",
+    "test": "tests/147.cjs"
+  },
+  {
+    "id": 148,
+    "tech": "js",
+    "title": "Interval membership: closed",
+    "starter": "starters/148.cjs",
+    "solution": "solutions/148.cjs",
+    "test": "tests/148.cjs"
+  },
+  {
+    "id": 149,
+    "tech": "js",
+    "title": "Interval membership: open",
+    "starter": "starters/149.cjs",
+    "solution": "solutions/149.cjs",
+    "test": "tests/149.cjs"
+  },
+  {
+    "id": 150,
+    "tech": "js",
+    "title": "Interval membership: left-closed",
+    "starter": "starters/150.cjs",
+    "solution": "solutions/150.cjs",
+    "test": "tests/150.cjs"
+  },
+  {
+    "id": 151,
+    "tech": "js",
+    "title": "Interval membership: right-closed",
+    "starter": "starters/151.cjs",
+    "solution": "solutions/151.cjs",
+    "test": "tests/151.cjs"
+  },
+  {
+    "id": 152,
+    "tech": "js",
+    "title": "Identifier conversion: kebab",
+    "starter": "starters/152.cjs",
+    "solution": "solutions/152.cjs",
+    "test": "tests/152.cjs"
+  },
+  {
+    "id": 153,
+    "tech": "js",
+    "title": "Identifier conversion: snake",
+    "starter": "starters/153.cjs",
+    "solution": "solutions/153.cjs",
+    "test": "tests/153.cjs"
+  },
+  {
+    "id": 154,
+    "tech": "js",
+    "title": "Identifier conversion: camel",
+    "starter": "starters/154.cjs",
+    "solution": "solutions/154.cjs",
+    "test": "tests/154.cjs"
+  },
+  {
+    "id": 155,
+    "tech": "js",
+    "title": "Identifier conversion: pascal",
+    "starter": "starters/155.cjs",
+    "solution": "solutions/155.cjs",
+    "test": "tests/155.cjs"
+  },
+  {
+    "id": 156,
+    "tech": "js",
+    "title": "Positive streak: longest",
+    "starter": "starters/156.cjs",
+    "solution": "solutions/156.cjs",
+    "test": "tests/156.cjs"
+  },
+  {
+    "id": 157,
+    "tech": "js",
+    "title": "Positive streak: shortest",
+    "starter": "starters/157.cjs",
+    "solution": "solutions/157.cjs",
+    "test": "tests/157.cjs"
+  },
+  {
+    "id": 158,
+    "tech": "js",
+    "title": "Positive streak: first",
+    "starter": "starters/158.cjs",
+    "solution": "solutions/158.cjs",
+    "test": "tests/158.cjs"
+  },
+  {
+    "id": 159,
+    "tech": "js",
+    "title": "Positive streak: last",
+    "starter": "starters/159.cjs",
+    "solution": "solutions/159.cjs",
+    "test": "tests/159.cjs"
+  },
+  {
+    "id": 160,
+    "tech": "js",
+    "title": "Square matrix main sum",
+    "starter": "starters/160.cjs",
+    "solution": "solutions/160.cjs",
+    "test": "tests/160.cjs"
+  },
+  {
+    "id": 161,
+    "tech": "js",
+    "title": "Square matrix anti sum",
+    "starter": "starters/161.cjs",
+    "solution": "solutions/161.cjs",
+    "test": "tests/161.cjs"
+  },
+  {
+    "id": 162,
+    "tech": "js",
+    "title": "Square matrix above sum",
+    "starter": "starters/162.cjs",
+    "solution": "solutions/162.cjs",
+    "test": "tests/162.cjs"
+  },
+  {
+    "id": 163,
+    "tech": "js",
+    "title": "Square matrix below sum",
+    "starter": "starters/163.cjs",
+    "solution": "solutions/163.cjs",
+    "test": "tests/163.cjs"
+  },
+  {
+    "id": 164,
+    "tech": "js",
+    "title": "Tree labels in preorder",
+    "starter": "starters/164.cjs",
+    "solution": "solutions/164.cjs",
+    "test": "tests/164.cjs"
+  },
+  {
+    "id": 165,
+    "tech": "js",
+    "title": "Tree labels in postorder",
+    "starter": "starters/165.cjs",
+    "solution": "solutions/165.cjs",
+    "test": "tests/165.cjs"
+  },
+  {
+    "id": 166,
+    "tech": "js",
+    "title": "Tree labels in level-order",
+    "starter": "starters/166.cjs",
+    "solution": "solutions/166.cjs",
+    "test": "tests/166.cjs"
+  },
+  {
+    "id": 167,
+    "tech": "js",
+    "title": "Tree labels in leaves-only",
+    "starter": "starters/167.cjs",
+    "solution": "solutions/167.cjs",
+    "test": "tests/167.cjs"
+  },
+  {
+    "id": 168,
+    "tech": "js",
+    "title": "Process tagged add instructions",
+    "starter": "starters/168.cjs",
+    "solution": "solutions/168.cjs",
+    "test": "tests/168.cjs"
+  },
+  {
+    "id": 169,
+    "tech": "js",
+    "title": "Process tagged multiply instructions",
+    "starter": "starters/169.cjs",
+    "solution": "solutions/169.cjs",
+    "test": "tests/169.cjs"
+  },
+  {
+    "id": 170,
+    "tech": "js",
+    "title": "Process tagged power instructions",
+    "starter": "starters/170.cjs",
+    "solution": "solutions/170.cjs",
+    "test": "tests/170.cjs"
+  },
+  {
+    "id": 171,
+    "tech": "js",
+    "title": "Process tagged clamp instructions",
+    "starter": "starters/171.cjs",
+    "solution": "solutions/171.cjs",
+    "test": "tests/171.cjs"
+  },
+  {
+    "id": 172,
+    "tech": "js",
+    "title": "Interpolated percentile 0",
+    "starter": "starters/172.cjs",
+    "solution": "solutions/172.cjs",
+    "test": "tests/172.cjs"
+  },
+  {
+    "id": 173,
+    "tech": "js",
+    "title": "Interpolated percentile 25",
+    "starter": "starters/173.cjs",
+    "solution": "solutions/173.cjs",
+    "test": "tests/173.cjs"
+  },
+  {
+    "id": 174,
+    "tech": "js",
+    "title": "Interpolated percentile 75",
+    "starter": "starters/174.cjs",
+    "solution": "solutions/174.cjs",
+    "test": "tests/174.cjs"
+  },
+  {
+    "id": 175,
+    "tech": "js",
+    "title": "Interpolated percentile 100",
+    "starter": "starters/175.cjs",
+    "solution": "solutions/175.cjs",
+    "test": "tests/175.cjs"
+  },
+  {
+    "id": 176,
+    "tech": "js",
+    "title": "Graph classification: sources",
+    "starter": "starters/176.cjs",
+    "solution": "solutions/176.cjs",
+    "test": "tests/176.cjs"
+  },
+  {
+    "id": 177,
+    "tech": "js",
+    "title": "Graph classification: sinks",
+    "starter": "starters/177.cjs",
+    "solution": "solutions/177.cjs",
+    "test": "tests/177.cjs"
+  },
+  {
+    "id": 178,
+    "tech": "js",
+    "title": "Graph classification: isolated",
+    "starter": "starters/178.cjs",
+    "solution": "solutions/178.cjs",
+    "test": "tests/178.cjs"
+  },
+  {
+    "id": 179,
+    "tech": "js",
+    "title": "Graph classification: self-looped",
+    "starter": "starters/179.cjs",
+    "solution": "solutions/179.cjs",
+    "test": "tests/179.cjs"
+  },
+  {
+    "id": 180,
+    "tech": "js",
+    "title": "Compare text under strict normalization",
+    "starter": "starters/180.cjs",
+    "solution": "solutions/180.cjs",
+    "test": "tests/180.cjs"
+  },
+  {
+    "id": 181,
+    "tech": "js",
+    "title": "Compare text under ignore-case normalization",
+    "starter": "starters/181.cjs",
+    "solution": "solutions/181.cjs",
+    "test": "tests/181.cjs"
+  },
+  {
+    "id": 182,
+    "tech": "js",
+    "title": "Compare text under ignore-space normalization",
+    "starter": "starters/182.cjs",
+    "solution": "solutions/182.cjs",
+    "test": "tests/182.cjs"
+  },
+  {
+    "id": 183,
+    "tech": "js",
+    "title": "Compare text under alphanumeric normalization",
+    "starter": "starters/183.cjs",
+    "solution": "solutions/183.cjs",
+    "test": "tests/183.cjs"
+  }
+]

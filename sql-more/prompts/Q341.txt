@@ -1,0 +1,35 @@
+Q341 — family Schema migrations backfills and version gates, scenario 1: add-column-default-backfill
+
+Task
+Add tier TEXT NOT NULL DEFAULT basic; existing rows must read basic.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE customers(id INTEGER PRIMARY KEY,full_name TEXT,age_text TEXT);INSERT INTO customers VALUES(1,'Ada Lovelace','36'),(2,'Bo Li','20'),(3,'Cy','unknown');PRAGMA user_version=1;
+
+Concrete example
+The first result row on this seed is {"id":1,"tier":"basic"}.
+
+Expected shape
+Columns: id, tier. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "tier": "basic"
+  },
+  {
+    "id": 2,
+    "tier": "basic"
+  },
+  {
+    "id": 3,
+    "tier": "basic"
+  }
+]
+
+Submission
+Write SQL in starters/Q341.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q341
+Learner: node sql-more/verify.cjs --starters --id=Q341

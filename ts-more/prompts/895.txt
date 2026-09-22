@@ -1,0 +1,15 @@
+895: Predicate-directed extraction / scenario 07
+
+Contract focus: user-defined type guards; generic subtypes.
+Filter with a user-defined type predicate. Preserve the narrowed subtype in the return type rather than returning the original union. Do not mutate the input.
+
+This is scenario 7/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize descending input; scalar/state exercises use deterministic case seed 6. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/895.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/895.cjs. Positive strict fixtures: types/895.positive.ts. Negative strict fixtures: types/895.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=895
+Reference check:
+  node ts-more/verify.cjs --id=895
+

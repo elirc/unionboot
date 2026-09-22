@@ -1,0 +1,16 @@
+{
+  "phase": "tests",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "assertions": 8,
+  "results": [
+    {
+      "id": "W341",
+      "family": "IFormFile in-memory binding",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    }
+  ]
+}

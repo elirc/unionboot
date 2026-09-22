@@ -1,0 +1,18 @@
+Reducer publishing workflow / scenario 5 — Independent review; edit only; rejection retains draft; title minimum 1
+
+TASK
+Use useReducer. State output begins draft; Title input initially empty, editable only in draft. Publish draft requires trimmed title length >=1, then enters review (Approve publishes; Reject returns draft, keeping title). Published exposes Edit returning to draft. Show only actions valid for current state. Title output echoes trimmed title.
+
+EXAMPLE
+Title=Ready; Publish draft makes State=review.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1553.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1553
+node react-300/verify.cjs --starters --id=1553

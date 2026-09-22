@@ -1,0 +1,15 @@
+{
+  "track": "react-300",
+  "mode": "starter",
+  "groups": 1,
+  "passed": 0,
+  "failed": 1,
+  "results": [
+    {
+      "id": 1517,
+      "passed": false,
+      "phase": "dom",
+      "error": "TestingLibraryElementError: Unable to find an accessible element with the role \"status\" and name \"Selected\"\n\nThere are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div />\u001b[39m\n\u001b[36m</body>\u001b[39m\n    at Object.getElementError (C:\\Users\\Owner\\Desktop\\unionboot\\node_modules\\@testing-library\\dom\\dist\\config.js:37:19)\n    at C:\\Users\\Owner\\Desktop\\unionboot\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:76:38\n    at C:\\Users\\Owner\\Desktop\\unionboot\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:52:17\n    at C:\\Users\\Owner\\Desktop\\unionboot\\node_modules\\@testing-library\\dom\\dist\\query-helpers.js:95:19\n    at out (C:\\Users\\Owner\\Desktop\\unionboot\\react-300\\tests\\1517.cjs:12:22)\n    at module.exports (C:\\Users\\Owner\\Desktop\\unionboot\\react-300\\tests\\1517.cjs:21:4)\n    at C:\\Users\\Owner\\Desktop\\unionboot\\react-300\\verify.cjs:19:58\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Connectivity capability gate / scenario 13 — Boundary 3; defer one latest action until online
+
+TASK
+Read injected connection.read() on mount; subscribe to booleans. Sync action payload is 3. Output Network online/offline, Pending yes/no, Syncs count. Clicking Sync online calls onSync(3) immediately. Offline remember one pending action (coalesce repeated clicks), execute once on next online transition. Going online clears alert. Duplicate online events must not replay queued work. Unmount unsubscribes and cancels pending intent.
+
+EXAMPLE
+Three offline clicks then online => 1 sync calls.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3171.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{connection,onSync}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3171
+node react-next/verify.cjs --starters --id=3171

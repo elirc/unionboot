@@ -1,0 +1,14 @@
+2402: Readonly-key release maps / released-readonly-fields=count+active+tags
+
+Contract focus: minus-readonly modifiers; selected mutable capability.
+
+Copy a readonly record and release assignment capability only for count, active, tags. Other fields stay readonly in the public result type. This is shallow: nested arrays keep their original readonly type and reference. Runtime creates a fresh ordinary object without freezing either object.
+
+Semantic variation 14/15: released-readonly-fields=count+active+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2402.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2402.cjs. Type contracts: types/2402.positive.ts and types/2402.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2402
+Reference: node ts-next/verify.cjs --id=2402

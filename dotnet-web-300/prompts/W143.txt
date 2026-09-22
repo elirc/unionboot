@@ -1,0 +1,13 @@
+W143 — Keyed dependency injection
+Scenario 3/10: Key 'push'; fallback key 'default'
+
+Register keyed singleton IChannel: key push->NamedChannel and key default->DefaultChannel. No unkeyed registration. Required unknown key must fail. Example resolving push yields Name=push, twice returns same instance. Keys are case-sensitive; two key instances differ.
+
+Signature: public static void Configure(IServiceCollection services)
+Provided domain types: public interface IChannel { string Name {get;} } public sealed class NamedChannel:IChannel {public string Name=>"push";} public sealed class DefaultChannel:IChannel {public string Name=>"default";}
+
+Edit starters/W143.cs. Run node dotnet-web-300/verify.cjs --starters --id=W143 from unionboot.
+Reference: solutions/W143.cs; shared checks: tests/W143.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

@@ -1,0 +1,18 @@
+Shared quota allocation / scenario 2 — Clamp group booking
+
+TASK
+A and B share 7 units, initially A=2, B=1. Take A/B requests 4; take remaining free units for oversized requests. Release A/B returns up to 4 owned units. Label outputs A, B, Free. Keep action buttons enabled, guard state updates. Reset restores initial counts.
+
+EXAMPLE
+Initially Free=4; Take A gives A=6 and Free=0.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1530.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1530
+node react-300/verify.cjs --starters --id=1530

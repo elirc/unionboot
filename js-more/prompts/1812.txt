@@ -1,0 +1,18 @@
+JSON wildcard selection / scenario 4 — order=reverse; missing=skip; output=all
+
+TASK
+Input {value,path}, JSON data, path array of own-property string tokens or '*'. Expand wildcard over Object.keys order reverse; primitives have no wildcard children. Literal missing key drops branch. Repeat per path segment. Return all resulting values. Empty path selects root. No prototype traversal, no expressions or recursive descent.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1812.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1812
+node js-more/verify.cjs --starters --id=1812
+
+POLICIES
+order=reverse; missing=skip; output=all
+Semantic key: {"missing":"skip","order":"reverse","output":"all"}

@@ -1,0 +1,15 @@
+932: Typed Result mapping / scenario 14
+
+Contract focus: generic success/error unions; callback contracts.
+Map only a successful Result payload. Preserve the error type and return the exact failure object without invoking the mapper. Propagate mapper exceptions. Success returns a fresh Result.
+
+This is scenario 14/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize large integers; scalar/state exercises use deterministic case seed 13. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/932.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/932.cjs. Positive strict fixtures: types/932.positive.ts. Negative strict fixtures: types/932.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=932
+Reference check:
+  node ts-more/verify.cjs --id=932
+

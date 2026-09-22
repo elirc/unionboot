@@ -1,0 +1,12 @@
+Compile solutions only (300 independent classes; one sequential SDK project).
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  WebExercises -> C:\Users\Owner\Desktop\unionboot\dotnet-web-300\bin\Debug\net10.0\WebExercises.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:33.13
+PASS W181 Request cancellation propagation
+Groups: 1 passed, 0 failed; assertions: 7

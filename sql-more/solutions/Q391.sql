@@ -1,0 +1,1 @@
+SELECT user FROM events GROUP BY user HAVING COUNT(DISTINCT kind)=3 ORDER BY user;

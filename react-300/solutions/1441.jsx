@@ -1,0 +1,7 @@
+// 1441 Filter-aware pagination / scenario 3 — Page size 4; reset on filtering; case-folded query
+// Props items strings, list page size 4. Query substring matching case-insensitive. Page starts1, Page output. Prev/Next disable at boundaries. Filter edits reset to page1. Size select 4/5; changing size resets page1. Count shows filtered total. Empty list still Page1.
+// Full prompt: ../prompts/1441.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId} from 'react';
+export default function Exercise({items=[]}) {
+const [q,setQ]=useState(''),[size,setSize]=useState(4),[page,setPage]=useState(1);const shown=items.filter(x=>x.toLowerCase().includes(q.toLowerCase())),pages=Math.max(1,Math.ceil(shown.length/size)),current=Math.min(page,pages);useEffect(()=>setPage(p=>Math.min(p,pages)),[pages]);return <section><label>Query<input value={q} onChange={e=>{setQ(e.target.value);setPage(1);}}/></label><label>Size<select value={size} onChange={e=>{setSize(Number(e.target.value));setPage(1);}}><option>4</option><option>5</option></select></label><ul>{shown.slice((current-1)*size,current*size).map((x,i)=><li key={i}>{x}</li>)}</ul><output aria-label="Page">{current}</output><output aria-label="Count">{shown.length}</output><button disabled={current===1} onClick={()=>setPage(current-1)}>Prev</button><button disabled={current===pages} onClick={()=>setPage(current+1)}>Next</button></section>;
+}

@@ -1,0 +1,18 @@
+Abortable keyed resource / scenario 3 — Retain prior data; blank key is valid; fallback failed
+
+TASK
+Injected load(resourceKey,signal) resolves string. Load on mount and resourceKey/load change. State output idle/loading/ready/error, Data initially empty. Pass even blank keys to load. Retain prior data during loading and errors. Each effect owns AbortController, abort cleanup on replacement/unmount. Ignore stale success/rejection even when service ignores abort. Rejection alert uses nonempty Error.message or failed. Retry button reloads current key and clears error.
+
+EXAMPLE
+A request pending, switch to B; B resolves new then A resolves old => Data stays new.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1591.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{resourceKey="A",load}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1591
+node react-300/verify.cjs --starters --id=1591

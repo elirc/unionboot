@@ -1,0 +1,12 @@
+W166 — Response header middleware
+Scenario 6/10: X-Exercise-6=web-6; overwrite before next
+
+Build RequestDelegate middleware that sets X-Exercise-6=web-6 before awaiting next exactly once. Replace existing header, preserve others; propagate downstream exceptions. This header is not a security control. Example existing X-Exercise-6=old becomesweb-6, downstream sees it.
+
+Signature: public static RequestDelegate Wrap(RequestDelegate next)
+
+Edit starters/W166.cs. Run node dotnet-web-300/verify.cjs --starters --id=W166 from unionboot.
+Reference: solutions/W166.cs; shared checks: tests/W166.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

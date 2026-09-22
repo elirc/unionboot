@@ -1,0 +1,1 @@
+ALTER TABLE customers ADD COLUMN age INTEGER;UPDATE customers SET age=CASE WHEN age_text<>'' AND age_text NOT GLOB '*[^0-9]*' THEN CAST(age_text AS INTEGER) END;SELECT id,age FROM customers ORDER BY id;

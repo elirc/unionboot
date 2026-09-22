@@ -1,0 +1,38 @@
+Q238 — family Generated columns and derived schema invariants, scenario 8: generated-column-chain
+
+Task
+Create gross=qty*price and net=gross-discount as generated columns; copy source and return gross,net.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE source(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,discount INTEGER);INSERT INTO source VALUES(1,2,10,3),(2,0,8,0),(3,3,7,2);
+
+Concrete example
+The first result row on this seed is {"id":1,"gross":20,"net":17}.
+
+Expected shape
+Columns: id, gross, net. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "gross": 20,
+    "net": 17
+  },
+  {
+    "id": 2,
+    "gross": 0,
+    "net": 0
+  },
+  {
+    "id": 3,
+    "gross": 21,
+    "net": 19
+  }
+]
+
+Submission
+Write SQL in starters/Q238.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q238
+Learner: node sql-more/verify.cjs --starters --id=Q238

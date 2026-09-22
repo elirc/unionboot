@@ -1,0 +1,14 @@
+2308: Null-omitting optional property contracts / omittable-fields=count+tags
+
+Contract focus: optional mapped modifiers; null exclusion; own-key omission.
+
+Copy non-null fields and omit null-valued keys entirely. Every output key is optional but explicitly undefined is not allowed. Keep false, zero, empty strings and arrays. This contract differs from array compaction: absence is represented in mapped object modifiers.
+
+Semantic variation 10/15: omittable-fields=count+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2308.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2308.cjs. Type contracts: types/2308.positive.ts and types/2308.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2308
+Reference: node ts-next/verify.cjs --id=2308

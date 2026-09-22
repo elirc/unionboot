@@ -1,0 +1,7 @@
+// 1689 Storage-backed versioned draft / scenario 1 — Schema version 1; raw storage
+// Injected storage getItem/setItem/removeItem may throw. Read storageKey once on mount. Accept JSON {version:1,text:string}, else use empty draft (wrong version, malformed, absent). Text editing stores JSON same schema with raw text while field preserves raw input; output Text echoes field. Clear empties field and removes key, not storing empty JSON. No mount write. Output Storage says ok or unavailable after operation failure; input still usable. Do not access browser storage directly. storageKey is fixed per mount.
+// Full prompt: ../prompts/1689.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId} from 'react';
+export default function Exercise({storage,storageKey="draft"}) {
+const [state,set]=useState(()=>{try{const raw=storage.getItem(storageKey);let value;try{value=JSON.parse(raw);}catch{}return {text:value&&value.version===1&&typeof value.text==='string'?value.text:'',status:'ok'};}catch{return {text:'',status:'unavailable'};}});function change(text){let status='ok';try{storage.setItem(storageKey,JSON.stringify({version:1,text:text}));}catch{status='unavailable';}set({text,status});}return <section><label>Text<input value={state.text} onChange={e=>change(e.target.value)}/></label><output aria-label="Text">{state.text}</output><output aria-label="Storage">{state.status}</output><button onClick={()=>{let status='ok';try{storage.removeItem(storageKey);}catch{status='unavailable';}set({text:'',status});}}>Clear</button></section>;
+}

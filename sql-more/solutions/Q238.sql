@@ -1,0 +1,1 @@
+CREATE TABLE calc(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,discount INTEGER,gross INTEGER AS(qty*price),net INTEGER AS(gross-discount));INSERT INTO calc(id,qty,price,discount) SELECT * FROM source;SELECT id,gross,net FROM calc ORDER BY id;

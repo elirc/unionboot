@@ -1,0 +1,13 @@
+W140 — Dependency injection lifetime registration
+Scenario 10/10: RequestStamp Scoped; scenario 10
+
+Register Stamp using Scoped lifetime in the supplied collection. Do not create a provider inside Configure or register an instance manually. Tests resolve twice in one scope and once in another; singleton survives scopes, scoped shares only within one, transient always differs. Example expected same-within-scope=true. Null collection follows standard ArgumentNullException.
+
+Signature: public static void Configure(IServiceCollection services)
+Provided domain types: public sealed class Stamp { public Guid Id {get;}=Guid.NewGuid(); }
+
+Edit starters/W140.cs. Run node dotnet-web-300/verify.cjs --starters --id=W140 from unionboot.
+Reference: solutions/W140.cs; shared checks: tests/W140.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

@@ -1,0 +1,13 @@
+W147 — Keyed dependency injection
+Scenario 7/10: Key 'batch'; fallback key 'default'
+
+Register keyed singleton IChannel: key batch->NamedChannel and key default->DefaultChannel. No unkeyed registration. Required unknown key must fail. Example resolving batch yields Name=batch, twice returns same instance. Keys are case-sensitive; two key instances differ.
+
+Signature: public static void Configure(IServiceCollection services)
+Provided domain types: public interface IChannel { string Name {get;} } public sealed class NamedChannel:IChannel {public string Name=>"batch";} public sealed class DefaultChannel:IChannel {public string Name=>"default";}
+
+Edit starters/W147.cs. Run node dotnet-web-300/verify.cjs --starters --id=W147 from unionboot.
+Reference: solutions/W147.cs; shared checks: tests/W147.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

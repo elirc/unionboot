@@ -1,0 +1,1 @@
+CREATE TABLE counters(bucket TEXT,name TEXT,value INTEGER,PRIMARY KEY(bucket,name)); INSERT INTO counters VALUES('day','hits',2),('week','hits',8); INSERT INTO counters VALUES('day','hits',3) ON CONFLICT(bucket,name) DO UPDATE SET value=counters.value+excluded.value; SELECT bucket,name,value FROM counters ORDER BY bucket,name;

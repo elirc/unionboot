@@ -1,0 +1,833 @@
+TypeScript compiler gate: PASSED (5.9.3; 165 starter APIs; positive + negative strict fixtures).
+starter: 0 passed, 165 failed. TypeScript compiler gate: passed before runtime.
+FAIL 1204 Error: TODO exercise 1204
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1204.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1204.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at Object.<anonymous> (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:48:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+FAIL 1205 Error: TODO exercise 1205
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1205.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1205.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1206 Error: TODO exercise 1206
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1206.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1206.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1207 Error: TODO exercise 1207
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1207.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1207.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1208 Error: TODO exercise 1208
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1208.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1208.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1209 Error: TODO exercise 1209
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1209.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1209.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1210 Error: TODO exercise 1210
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1210.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1210.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1211 Error: TODO exercise 1211
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1211.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1211.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1212 Error: TODO exercise 1212
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1212.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1212.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1213 Error: TODO exercise 1213
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1213.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1213.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1214 Error: TODO exercise 1214
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1214.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1214.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1215 Error: TODO exercise 1215
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1215.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1215.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1216 Error: TODO exercise 1216
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1216.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1216.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1217 Error: TODO exercise 1217
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1217.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1217.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1218 Error: TODO exercise 1218
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1218.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1218.cjs:4:26)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1219 Error: TODO exercise 1219
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1219.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1219.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1220 Error: TODO exercise 1220
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1220.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1220.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1221 Error: TODO exercise 1221
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1221.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1221.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1222 Error: TODO exercise 1222
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1222.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1222.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1223 Error: TODO exercise 1223
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1223.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1223.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1224 Error: TODO exercise 1224
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1224.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1224.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1225 Error: TODO exercise 1225
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1225.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1225.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1226 Error: TODO exercise 1226
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1226.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1226.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1227 Error: TODO exercise 1227
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1227.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1227.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1228 Error: TODO exercise 1228
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1228.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1228.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1229 Error: TODO exercise 1229
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1229.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1229.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1230 Error: TODO exercise 1230
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1230.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1230.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1231 Error: TODO exercise 1231
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1231.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1231.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1232 Error: TODO exercise 1232
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1232.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1232.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1233 Error: TODO exercise 1233
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1233.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1233.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1234 Error: TODO exercise 1234
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1234.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1234.cjs:4:77)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1235 Error: TODO exercise 1235
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1235.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1235.cjs:4:78)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1236 Error: TODO exercise 1236
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1236.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1236.cjs:4:82)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1237 Error: TODO exercise 1237
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1237.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1237.cjs:4:84)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1238 Error: TODO exercise 1238
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1238.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1238.cjs:4:85)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1239 Error: TODO exercise 1239
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1239.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1239.cjs:4:85)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1240 Error: TODO exercise 1240
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1240.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1240.cjs:4:82)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1241 Error: TODO exercise 1241
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1241.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1241.cjs:4:86)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1242 Error: TODO exercise 1242
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1242.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1242.cjs:4:86)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1243 Error: TODO exercise 1243
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1243.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1243.cjs:4:87)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1244 Error: TODO exercise 1244
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1244.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1244.cjs:4:82)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1245 Error: TODO exercise 1245
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1245.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1245.cjs:4:90)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1246 Error: TODO exercise 1246
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1246.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1246.cjs:4:86)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1247 Error: TODO exercise 1247
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1247.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1247.cjs:4:94)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1248 Error: TODO exercise 1248
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1248.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1248.cjs:4:89)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1249 Error: TODO exercise 1249
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1249.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1249.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1250 Error: TODO exercise 1250
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1250.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1250.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1251 Error: TODO exercise 1251
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1251.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1251.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1252 Error: TODO exercise 1252
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1252.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1252.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1253 Error: TODO exercise 1253
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1253.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1253.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1254 Error: TODO exercise 1254
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1254.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1254.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1255 Error: TODO exercise 1255
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1255.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1255.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1256 Error: TODO exercise 1256
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1256.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1256.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1257 Error: TODO exercise 1257
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1257.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1257.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1258 Error: TODO exercise 1258
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1258.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1258.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1259 Error: TODO exercise 1259
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1259.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1259.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1260 Error: TODO exercise 1260
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1260.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1260.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1261 Error: TODO exercise 1261
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1261.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1261.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1262 Error: TODO exercise 1262
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1262.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1262.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1263 Error: TODO exercise 1263
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1263.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1263.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1264 Error: TODO exercise 1264
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1264.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1264.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1265 Error: TODO exercise 1265
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1265.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1265.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1266 Error: TODO exercise 1266
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1266.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1266.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1267 Error: TODO exercise 1267
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1267.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1267.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1268 Error: TODO exercise 1268
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1268.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1268.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1269 Error: TODO exercise 1269
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1269.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1269.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1270 Error: TODO exercise 1270
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1270.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1270.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1271 Error: TODO exercise 1271
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1271.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1271.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1272 Error: TODO exercise 1272
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1272.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1272.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1273 Error: TODO exercise 1273
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1273.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1273.cjs:4:53)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1274 Error: TODO exercise 1274
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1274.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1274.cjs:4:54)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1275 Error: TODO exercise 1275
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1275.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1275.cjs:4:54)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1276 Error: TODO exercise 1276
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1276.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1276.cjs:4:54)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1277 Error: TODO exercise 1277
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1277.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1277.cjs:4:54)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1278 Error: TODO exercise 1278
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1278.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1278.cjs:4:54)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1279 Error: TODO exercise 1279
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1279.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1279.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1280 Error: TODO exercise 1280
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1280.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1280.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1281 Error: TODO exercise 1281
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1281.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1281.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1282 Error: TODO exercise 1282
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1282.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1282.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1283 Error: TODO exercise 1283
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1283.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1283.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1284 Error: TODO exercise 1284
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1284.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1284.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1285 Error: TODO exercise 1285
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1285.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1285.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1286 Error: TODO exercise 1286
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1286.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1286.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1287 Error: TODO exercise 1287
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1287.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1287.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1288 Error: TODO exercise 1288
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1288.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1288.cjs:4:111)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1289 Error: TODO exercise 1289
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1289.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1289.cjs:4:113)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1290 Error: TODO exercise 1290
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1290.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1290.cjs:4:113)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1291 Error: TODO exercise 1291
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1291.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1291.cjs:4:113)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1292 Error: TODO exercise 1292
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1292.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1292.cjs:4:113)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1293 Error: TODO exercise 1293
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1293.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1293.cjs:4:113)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1294 Error: TODO exercise 1294
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1294.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1294.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1295 Error: TODO exercise 1295
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1295.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1295.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1296 Error: TODO exercise 1296
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1296.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1296.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1297 Error: TODO exercise 1297
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1297.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1297.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1298 Error: TODO exercise 1298
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1298.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1298.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1299 Error: TODO exercise 1299
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1299.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1299.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1300 Error: TODO exercise 1300
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1300.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1300.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1301 Error: TODO exercise 1301
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1301.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1301.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1302 Error: TODO exercise 1302
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1302.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1302.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1303 Error: TODO exercise 1303
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1303.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1303.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1304 Error: TODO exercise 1304
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1304.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1304.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1305 Error: TODO exercise 1305
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1305.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1305.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1306 Error: TODO exercise 1306
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1306.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1306.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1307 Error: TODO exercise 1307
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1307.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1307.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1308 Error: TODO exercise 1308
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1308.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1308.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1309 Error: TODO exercise 1309
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1309.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1309.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1310 Error: TODO exercise 1310
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1310.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1310.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1311 Error: TODO exercise 1311
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1311.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1311.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1312 Error: TODO exercise 1312
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1312.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1312.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1313 Error: TODO exercise 1313
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1313.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1313.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1314 Error: TODO exercise 1314
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1314.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1314.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1315 Error: TODO exercise 1315
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1315.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1315.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1316 Error: TODO exercise 1316
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1316.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1316.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1317 Error: TODO exercise 1317
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1317.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1317.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1318 Error: TODO exercise 1318
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1318.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1318.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1319 Error: TODO exercise 1319
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1319.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1319.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1320 Error: TODO exercise 1320
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1320.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1320.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1321 Error: TODO exercise 1321
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1321.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1321.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1322 Error: TODO exercise 1322
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1322.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1322.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1323 Error: TODO exercise 1323
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1323.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1323.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1324 Error: TODO exercise 1324
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1324.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1324.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1325 Error: TODO exercise 1325
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1325.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1325.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1326 Error: TODO exercise 1326
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1326.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1326.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1327 Error: TODO exercise 1327
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1327.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1327.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1328 Error: TODO exercise 1328
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1328.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1328.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1329 Error: TODO exercise 1329
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1329.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1329.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1330 Error: TODO exercise 1330
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1330.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1330.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1331 Error: TODO exercise 1331
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1331.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1331.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1332 Error: TODO exercise 1332
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1332.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1332.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1333 Error: TODO exercise 1333
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1333.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1333.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1334 Error: TODO exercise 1334
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1334.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1334.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1335 Error: TODO exercise 1335
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1335.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1335.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1336 Error: TODO exercise 1336
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1336.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1336.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1337 Error: TODO exercise 1337
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1337.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1337.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1338 Error: TODO exercise 1338
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1338.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1338.cjs:4:14)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1339 Error: TODO exercise 1339
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1339.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1339.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1340 Error: TODO exercise 1340
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1340.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1340.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1341 Error: TODO exercise 1341
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1341.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1341.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1342 Error: TODO exercise 1342
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1342.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1342.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1343 Error: TODO exercise 1343
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1343.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1343.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1344 Error: TODO exercise 1344
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1344.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1344.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1345 Error: TODO exercise 1345
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1345.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1345.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1346 Error: TODO exercise 1346
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1346.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1346.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1347 Error: TODO exercise 1347
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1347.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1347.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1348 Error: TODO exercise 1348
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1348.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1348.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1349 Error: TODO exercise 1349
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1349.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1349.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1350 Error: TODO exercise 1350
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1350.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1350.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1351 Error: TODO exercise 1351
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1351.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1351.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1352 Error: TODO exercise 1352
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1352.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1352.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1353 Error: TODO exercise 1353
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1353.js:6:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1353.cjs:4:18)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1354 Error: TODO exercise 1354
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1354.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1354.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1355 Error: TODO exercise 1355
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1355.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1355.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1356 Error: TODO exercise 1356
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1356.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1356.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1357 Error: TODO exercise 1357
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1357.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1357.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1358 Error: TODO exercise 1358
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1358.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1358.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1359 Error: TODO exercise 1359
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1359.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1359.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1360 Error: TODO exercise 1360
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1360.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1360.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1361 Error: TODO exercise 1361
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1361.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1361.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1362 Error: TODO exercise 1362
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1362.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1362.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1363 Error: TODO exercise 1363
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1363.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1363.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1364 Error: TODO exercise 1364
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1364.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1364.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1365 Error: TODO exercise 1365
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1365.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1365.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1366 Error: TODO exercise 1366
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1366.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1366.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1367 Error: TODO exercise 1367
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1367.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1367.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+FAIL 1368 Error: TODO exercise 1368
+    at solve (C:\Users\Owner\Desktop\unionboot\ts-final\.verify\run-ZTAX2Y\build\starters\1368.js:10:11)
+    at module.exports (C:\Users\Owner\Desktop\unionboot\ts-final\tests\1368.cjs:4:24)
+    at main (C:\Users\Owner\Desktop\unionboot\ts-final\verify.cjs:43:48)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

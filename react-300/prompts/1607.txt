@@ -1,0 +1,18 @@
+Latest validated async form / scenario 9 — Minimum 5 letters; explicit cancel; lowercase request
+
+TASK
+Handle text input. Check requires trimmed ASCII letters length>=5. Normalize request lowercase. Each Check starts check(normalized,AbortSignal), supersedes and aborts previous; keep Check enabled while valid pending. Editing invalidates/aborts request and resets Result idle. Output Result idle/checking/available/taken/error. Boolean true means available, false taken; current error alert Check failed. Cancel aborts and sets idle, retains draft. Abort on unmount. Ignore stale results and sync throws are errors.
+
+EXAMPLE
+aaaaa => request aaaaa.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1607.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{check}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1607
+node react-300/verify.cjs --starters --id=1607

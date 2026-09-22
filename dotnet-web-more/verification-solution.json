@@ -1,0 +1,2136 @@
+{
+  "track": "dotnet-web-more",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "all",
+  "groups": 300,
+  "phase": "tests",
+  "passed": 290,
+  "failed": 10,
+  "assertions": 2064,
+  "results": [
+    {
+      "id": "W301",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W302",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W303",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W304",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W305",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W306",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W307",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 11
+    },
+    {
+      "id": "W308",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 12
+    },
+    {
+      "id": "W309",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 13
+    },
+    {
+      "id": "W310",
+      "family": "Rate limiting partition counters",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 14
+    },
+    {
+      "id": "W311",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W312",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W313",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W314",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W315",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W316",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W317",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W318",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W319",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W320",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W321",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W322",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W323",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W324",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W325",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W326",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W327",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W328",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W329",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W330",
+      "family": "Custom IResult implementations",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W331",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W332",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W333",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W334",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W335",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W336",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W337",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W338",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W339",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W340",
+      "family": "ProblemDetails customization",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W341",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W342",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W343",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W344",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W345",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W346",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W347",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W348",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W349",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W350",
+      "family": "IFormFile in-memory binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 8,
+      "errorType": "Exception",
+      "error": "Expected \"\\u0022\\\\u00E9\\u0022\", got \"\\u0022\\u00E9\\u0022\""
+    },
+    {
+      "id": "W351",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W352",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W353",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W354",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W355",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W356",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W357",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W358",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W359",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W360",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W361",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W362",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W363",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W364",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W365",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W366",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W367",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W368",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W369",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W370",
+      "family": "IRouteConstraint evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W371",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W372",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W373",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W374",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W375",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W376",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W377",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W378",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W379",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W380",
+      "family": "CORS policy evaluation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W381",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W382",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W383",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W384",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W385",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W386",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W387",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W388",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W389",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W390",
+      "family": "HMAC webhook signatures",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W391",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W392",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W393",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W394",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W395",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W396",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W397",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W398",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W399",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W400",
+      "family": "Cursor pagination",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W401",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W402",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W403",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W404",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W405",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W406",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W407",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W408",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W409",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W410",
+      "family": "If-Match ETag concurrency",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W411",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W412",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W413",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W414",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W415",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W416",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W417",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W418",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W419",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W420",
+      "family": "Output cache policy objects",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W421",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W422",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W423",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W424",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W425",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W426",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W427",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W428",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W429",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W430",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W431",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W432",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W433",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W434",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W435",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W436",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W437",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W438",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W439",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W440",
+      "family": "Hosted service lifecycle",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W441",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W442",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W443",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W444",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W445",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W446",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W447",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W448",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W449",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W450",
+      "family": "Captured ILogger assertions",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W451",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W452",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W453",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W454",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W455",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W456",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W457",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W458",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W459",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W460",
+      "family": "Options post-configure validation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W461",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W462",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W463",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W464",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W465",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W466",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W467",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W468",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W469",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W470",
+      "family": "Media type segment versioning",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W471",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W472",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W473",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W474",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W475",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W476",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W477",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W478",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    },
+    {
+      "id": "W479",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    },
+    {
+      "id": "W480",
+      "family": "Sparse fieldset projection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W481",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W482",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W483",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W484",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W485",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W486",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W487",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W488",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W489",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W490",
+      "family": "Exception handler status mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W491",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W492",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W493",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W494",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W495",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W496",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W497",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W498",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W499",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W500",
+      "family": "Static-like content type mapping",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W501",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W502",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W503",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W504",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W505",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W506",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W507",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W508",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W509",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W510",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W511",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W512",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W513",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W514",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W515",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W516",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W517",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W518",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W519",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W520",
+      "family": "Form-file size gates",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W521",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W522",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W523",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W524",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W525",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W526",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W527",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W528",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W529",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W530",
+      "family": "Header propagation policies",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W531",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W532",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W533",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W534",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W535",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W536",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W537",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W538",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W539",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W540",
+      "family": "Request culture injected providers",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 5
+    },
+    {
+      "id": "W541",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W542",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W543",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W544",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W545",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W546",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W547",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W548",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W549",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W550",
+      "family": "Health-check aggregation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W551",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W552",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W553",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W554",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W555",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W556",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W557",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W558",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W559",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W560",
+      "family": "Compile-time endpoint metadata reflection",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    },
+    {
+      "id": "W561",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W562",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W563",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W564",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W565",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W566",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W567",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W568",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W569",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W570",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    },
+    {
+      "id": "W571",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W572",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W573",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W574",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W575",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W576",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W577",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W578",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W579",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W580",
+      "family": "Response compression decision logic",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W581",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W582",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W583",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W584",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W585",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W586",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W587",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W588",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W589",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W590",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    },
+    {
+      "id": "W591",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W592",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W593",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W594",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W595",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W596",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W597",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W598",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W599",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    },
+    {
+      "id": "W600",
+      "family": "Idempotent PATCH merge semantics",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 10
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 1
+}

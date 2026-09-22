@@ -1,0 +1,43 @@
+Q296 — family Relational division and requirement coverage, scenario 6: coverage-fraction
+
+Task
+Return met and required counts per candidate, preserving zero coverage.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE candidates(name TEXT PRIMARY KEY);CREATE TABLE skills(name TEXT,skill TEXT,level INTEGER);CREATE TABLE required(skill TEXT,min_level INTEGER);INSERT INTO candidates VALUES('Ada'),('Bo'),('Cy'),('Dee');INSERT INTO skills VALUES('Ada','sql',3),('Ada','js',2),('Ada','css',1),('Bo','sql',2),('Cy','sql',1),('Cy','js',3);INSERT INTO required VALUES('sql',2),('js',2);
+
+Concrete example
+The first result row on this seed is {"name":"Ada","met":2,"required":2}.
+
+Expected shape
+Columns: name, met, required. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "name": "Ada",
+    "met": 2,
+    "required": 2
+  },
+  {
+    "name": "Bo",
+    "met": 1,
+    "required": 2
+  },
+  {
+    "name": "Cy",
+    "met": 1,
+    "required": 2
+  },
+  {
+    "name": "Dee",
+    "met": 0,
+    "required": 2
+  }
+]
+
+Submission
+Write SQL in starters/Q296.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q296
+Learner: node sql-more/verify.cjs --starters --id=Q296

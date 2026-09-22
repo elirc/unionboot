@@ -1,0 +1,1 @@
+WITH distinct_days AS(SELECT DISTINCT user_id,day FROM activity),g AS(SELECT user_id,day-LAG(day) OVER(PARTITION BY user_id ORDER BY day) AS gap FROM distinct_days) SELECT DISTINCT user_id FROM g WHERE gap>=2 ORDER BY user_id;

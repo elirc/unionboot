@@ -1,0 +1,1 @@
+WITH weights(id,w) AS(VALUES(1,1),(2,2),(3,3)),base AS(SELECT id,10*w/6 AS floor_cents,10*w%6 AS remainder FROM weights),r AS(SELECT *,ROW_NUMBER() OVER(ORDER BY remainder DESC,id) AS priority,SUM(floor_cents) OVER() AS allocated FROM base) SELECT id,floor_cents+CASE WHEN priority<=10-allocated THEN 1 ELSE 0 END AS cents FROM r ORDER BY id;

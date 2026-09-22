@@ -1,0 +1,1 @@
+SELECT id FROM measures WHERE a=b OR (a IS NULL AND b IS NULL) ORDER BY id;

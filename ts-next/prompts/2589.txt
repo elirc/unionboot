@@ -1,0 +1,14 @@
+2589: Arity-directed overload selection / overload-tuple-width=6
+
+Contract focus: overload sets; conditional input-return relationships.
+
+Return an overloaded formatter: scalar number gives string; a readonly tuple of exactly 6 numbers gives a readonly string tuple of the same arity. The implementation signature is not public, so union arguments need narrowing before a call. No mutation or locale formatting.
+
+Semantic variation 6/15: overload-tuple-width=6. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2589.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2589.cjs. Type contracts: types/2589.positive.ts and types/2589.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2589
+Reference: node ts-next/verify.cjs --id=2589

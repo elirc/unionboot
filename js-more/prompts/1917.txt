@@ -1,0 +1,18 @@
+Fenwick point updates / scenario 9 — update=set; inclusive=false; output=sum; initialOffset=1
+
+TASK
+Input {values,ops}, finite numbers. Fenwick tree supports update {index,value} (set) and range {start,end} (exclusive end). Return {answers,values} snapshot after updates; queries return sum, empty average null. Initialize every input value plus1 before processing. Invalid integer index/range throws RangeError. Empty ranges allowed only if normalized end===start. O(log n) updates/queries after setup, no input mutation.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1917.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1917
+node js-more/verify.cjs --starters --id=1917
+
+POLICIES
+update=set; inclusive=false; output=sum; initialOffset=1
+Semantic key: {"inclusive":false,"initialOffset":1,"output":"sum","update":"set"}

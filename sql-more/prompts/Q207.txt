@@ -1,0 +1,27 @@
+Q207 — family JSON document projection and type policy, scenario 7: json-rendered-versus-sql-extracted
+
+Task
+For id 1 show -> JSON name text (including JSON quotes) and ->> SQL name text. SQLite-specific operators.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE docs(id INTEGER PRIMARY KEY,body TEXT CHECK(json_valid(body)));INSERT INTO docs VALUES(1,'{"name":"Ada","age":30,"active":true,"city":null}'),(2,'{"name":"Bo","age":"20","active":false}'),(3,'{"name":"Cy","active":true,"city":"Rome"}');
+
+Concrete example
+The first result row on this seed is {"json_name":"\"Ada\"","sql_name":"Ada"}.
+
+Expected shape
+Columns: json_name, sql_name. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "json_name": "\"Ada\"",
+    "sql_name": "Ada"
+  }
+]
+
+Submission
+Write SQL in starters/Q207.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q207
+Learner: node sql-more/verify.cjs --starters --id=Q207

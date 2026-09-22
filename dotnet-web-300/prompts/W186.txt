@@ -1,0 +1,12 @@
+W186 — Request cancellation propagation
+Scenario 6/10: Injected inventory lookup; amount factor 6
+
+Pass exact RequestAborted token to injected async lookup. Check cancellation before calling and after awaiting. Never swallow cancellation. Return200 {amount:lookupValue*6} with long arithmetic. Example lookup3 ->amount18. No actual network or delay; tests inject completion/cancellation.
+
+Signature: public static async Task<IResult> Handle(HttpContext context, Func<CancellationToken,Task<int>> lookup)
+
+Edit starters/W186.cs. Run node dotnet-web-300/verify.cjs --starters --id=W186 from unionboot.
+Reference: solutions/W186.cs; shared checks: tests/W186.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

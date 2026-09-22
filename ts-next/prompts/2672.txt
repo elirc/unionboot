@@ -1,0 +1,14 @@
+2672: Unit-exponent quantity multiplication / left-length-exponent=14
+
+Contract focus: unique-symbol dimension brands; exponent tuple composition.
+
+Multiply a branded length^14 quantity by a duration, obtaining length^14*time. Brands are minted externally; plain numbers and dimensions in the wrong order must not be accepted. Runtime arithmetic is ordinary multiplication with no conversion; inputs and product are finite.
+
+Semantic variation 14/15: left-length-exponent=14. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2672.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2672.cjs. Type contracts: types/2672.positive.ts and types/2672.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2672
+Reference: node ts-next/verify.cjs --id=2672

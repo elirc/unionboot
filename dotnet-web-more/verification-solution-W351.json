@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-more",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W351",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 3,
+  "results": [
+    {
+      "id": "W351",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

@@ -1,0 +1,14 @@
+2582: Capability-composed audit mixins / audit-methods=count+active+tags
+
+Contract focus: intersection mixins; object augmentation; method capabilities.
+
+Mix audit methods into a shallow copy of any richer Model. Preserve extra property types through an intersection and keep the source unchanged. Each audit method reads the original object's current field value lazily. Input must not already contain the reserved audit method names.
+
+Semantic variation 14/15: audit-methods=count+active+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2582.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2582.cjs. Type contracts: types/2582.positive.ts and types/2582.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2582
+Reference: node ts-next/verify.cjs --id=2582

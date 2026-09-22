@@ -1,0 +1,28 @@
+Q364 — family Inventory valuation and stock flow policies, scenario 4: negative-inventory-incidents
+
+Task
+After an extra B shipment of8, find moves where resulting running stock is negative; report id,sku,stock.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);INSERT INTO moves VALUES(6,'B',-8,6);
+
+Concrete example
+The first result row on this seed is {"id":6,"sku":"B","stock":-3}.
+
+Expected shape
+Columns: id, sku, stock. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 6,
+    "sku": "B",
+    "stock": -3
+  }
+]
+
+Submission
+Write SQL in starters/Q364.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q364
+Learner: node sql-more/verify.cjs --starters --id=Q364

@@ -1,0 +1,1 @@
+SELECT c.name,COUNT(DISTINCT o.id) AS paid_orders FROM customers c LEFT JOIN orders o ON o.customer_id=c.id AND o.status='paid' LEFT JOIN lines l ON l.order_id=o.id GROUP BY c.id,c.name ORDER BY c.id;

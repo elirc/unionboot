@@ -1,0 +1,1 @@
+CREATE VIEW active_orders AS SELECT id FROM orders WHERE status='paid';DROP VIEW active_orders;CREATE VIEW active_orders AS SELECT id FROM orders WHERE status IN('paid','pending');SELECT id FROM active_orders ORDER BY id;

@@ -1,0 +1,12 @@
+W238 — Current principal response projection
+Scenario 8/10: Authenticated staff_id projection only
+
+Project current principal into minimal profile. Unauthenticated->401. Authenticated needs exactly one nonblank staff_id claim; absent/duplicate/blank->403. Success200 JSON {id}, preserving claim text; never expose other claims. This is not token validation. Example authenticated staff_id=u7 plus secret claim ->only {id:"u7"}.
+
+Signature: public static IResult Handle(ClaimsPrincipal user)
+
+Edit starters/W238.cs. Run node dotnet-web-300/verify.cjs --starters --id=W238 from unionboot.
+Reference: solutions/W238.cs; shared checks: tests/W238.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

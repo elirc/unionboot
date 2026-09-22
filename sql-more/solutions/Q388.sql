@@ -1,0 +1,1 @@
+CREATE TEMP TABLE doomed AS SELECT descendant AS id FROM closure WHERE ancestor=2;DELETE FROM closure WHERE ancestor IN(SELECT id FROM doomed) OR descendant IN(SELECT id FROM doomed);DELETE FROM policy WHERE node IN(SELECT id FROM doomed);DELETE FROM nodes WHERE id IN(SELECT id FROM doomed);SELECT id,name FROM nodes ORDER BY id;

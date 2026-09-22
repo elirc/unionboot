@@ -1,0 +1,34 @@
+Q249 — family Partial expression and composite index contracts, scenario 9: partial-unique-transition-failure
+
+Task
+Create active-only normalized unique index; return inactive ids. Activating id2 must fail due to id1.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE users(id INTEGER PRIMARY KEY,email TEXT,active INTEGER,tenant INTEGER);INSERT INTO users VALUES(1,'Ada@x',1,10),(2,'ada@x',0,10),(3,'Bo@x',1,20);
+
+Concrete example
+The first result row on this seed is {"id":2}.
+
+Expected shape
+Columns: id. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 2
+  }
+]
+
+Post-result integrity assertions:
+[
+  {
+    "sql": "UPDATE users SET active=1 WHERE id=2",
+    "reject": "UNIQUE"
+  }
+]
+
+Submission
+Write SQL in starters/Q249.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q249
+Learner: node sql-more/verify.cjs --starters --id=Q249

@@ -1,0 +1,1 @@
+ALTER TABLE customers ADD COLUMN given_name TEXT;UPDATE customers SET given_name=CASE WHEN instr(full_name,' ')=0 THEN full_name ELSE substr(full_name,1,instr(full_name,' ')-1) END;SELECT id,given_name FROM customers ORDER BY id;

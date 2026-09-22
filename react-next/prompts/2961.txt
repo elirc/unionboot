@@ -1,0 +1,18 @@
+Fixed-window event throttle / scenario 3 — Boundary 3; leading delivery only
+
+TASK
+A renderless throttling effect subscribes source. First event in an idle window delivers immediately through onDeliver(value) and Delivered output. Suppress additional events for 75ms using scheduler.after, without restarting window. Drop suppressed values; become idle when window ends. Count counts deliveries. Clean up subscription and timer; retained canceled callbacks do nothing. This is fixed-window throttling, not quiet-period debouncing.
+
+EXAMPLE
+Emit A,B,C in one window => only A.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2961.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{source,scheduler,onDeliver}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2961
+node react-next/verify.cjs --starters --id=2961

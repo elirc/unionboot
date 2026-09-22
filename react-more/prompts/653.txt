@@ -1,0 +1,11 @@
+Stable sortable table / scenario 15 — initial score descending; case-folded names; null always first
+
+Props rows {id,name,score}, score may be null. Accessible table columns ID, Name, Score. Initially score descending. Name/Score header buttons select ascending for a new column, toggle current. Compare names case-insensitively using < and > (not locale order). Null scores always first in both directions; show an em dash for null. Keep original prop order for ties, even descending. Set aria-sort on active th; inactive th uses none. Never mutate rows.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {"rows":[{"id":"a","name":"zoe","score":null},{"id":"b","name":"Ada","score":2},{"id":"c","name":"ada","score":2},{"id":"d","name":"Bob","score":0},{"id":"e","name":"Ada","score":-1}]}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=653
+Run your starter: node react-more/verify.cjs --starters --id=653

@@ -1,0 +1,12 @@
+W258 — Conditional GET ETags
+Scenario 8/10: Representation v8; weak If-None-Match comparison
+
+Always set response ETag to quoted "v8". For GET, If-None-Match tokens separated by commas: trim each, match strong tag, W/weak form, or *. Match->304 empty body; no match/missing->200 {version:8}. Malformed tokens are ignored. Scope: fixed comma-free tag, not a general HTTP entity-tag parser. Example W/"v8" ->304.
+
+Signature: public static IResult Handle(HttpContext context)
+
+Edit starters/W258.cs. Run node dotnet-web-300/verify.cjs --starters --id=W258 from unionboot.
+Reference: solutions/W258.cs; shared checks: tests/W258.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

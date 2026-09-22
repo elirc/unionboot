@@ -1,0 +1,1 @@
+WITH RECURSIVE p(node,path,cost) AS(VALUES('A','/A/',0) UNION ALL SELECT e.dst,p.path||e.dst||'/',p.cost+e.cost FROM p JOIN edges e ON e.src=p.node WHERE instr(p.path,'/'||e.dst||'/')=0) SELECT path,cost FROM p WHERE node='D' ORDER BY cost,path LIMIT 1;

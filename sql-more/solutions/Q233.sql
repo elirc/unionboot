@@ -1,0 +1,1 @@
+CREATE TABLE calc(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,total INTEGER AS(qty*price));INSERT INTO calc(id,qty,price) SELECT id,qty,price FROM source;UPDATE calc SET qty=4 WHERE id=1;SELECT id,total FROM calc ORDER BY id;

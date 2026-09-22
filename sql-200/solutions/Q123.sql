@@ -1,0 +1,1 @@
+CREATE TABLE users(id INTEGER PRIMARY KEY,email TEXT NOT NULL UNIQUE); INSERT INTO users VALUES(1,'Ada@x'),(2,'ada@x'); SELECT id,email FROM users ORDER BY id;

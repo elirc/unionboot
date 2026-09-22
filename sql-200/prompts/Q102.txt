@@ -1,0 +1,39 @@
+Q102 — family String normalization parsing and matching, scenario 2: extract-email-domain
+
+Task
+Extract lowercase domain after @ for known emails, using instr and substr.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE contacts(id INTEGER PRIMARY KEY,name TEXT,email TEXT,code TEXT);
+INSERT INTO contacts VALUES(1,' Ada ','ADA@EXAMPLE.COM','AB-001'),(2,'Bo','bo@work.org','AB-002'),(3,'cy','cy@example.com','XY-010'),(4,'Dee',NULL,'XY-011'),(5,'Eli','eli+tag@example.com','ZZ-100');
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"domain":"example.com"}.
+
+Expected shape
+Columns (exact aliases): id, domain. 4 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "domain": "example.com"
+  },
+  {
+    "id": 2,
+    "domain": "work.org"
+  },
+  {
+    "id": 3,
+    "domain": "example.com"
+  },
+  {
+    "id": 5,
+    "domain": "example.com"
+  }
+]
+
+Submission
+Edit starters/Q102.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q102
+Reference: node sql-200/verify.cjs --id=Q102

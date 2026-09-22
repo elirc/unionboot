@@ -1,0 +1,3 @@
+3439 — Merge independent flat-document edits
+
+Implement solve(base, local, remote) for flat records whose own enumerable values are strings. Inputs must not change. Absence means deletion. For each key: if local equals remote use it; otherwise if local equals base use remote; otherwise if remote equals base use local; otherwise record a conflict and keep local (including local deletion). Return {value, conflicts}; conflicts is lexicographically sorted. Keys such as __proto__ are ordinary data keys. Example base={a:"old"}, local={a:"new"}, remote={a:"old",b:"x"} returns {value:{a:"new",b:"x"},conflicts:[]}.

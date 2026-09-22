@@ -1,0 +1,1 @@
+UPDATE tasks SET points=points+(SELECT delta FROM adjustments a WHERE a.owner=tasks.owner) WHERE EXISTS(SELECT 1 FROM adjustments a WHERE a.owner=tasks.owner); SELECT id,points FROM tasks ORDER BY id;

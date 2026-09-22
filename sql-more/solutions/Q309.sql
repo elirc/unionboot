@@ -1,0 +1,1 @@
+INSERT INTO local SELECT * FROM remote WHERE true ON CONFLICT(key) DO NOTHING;SELECT key,value FROM local ORDER BY key;

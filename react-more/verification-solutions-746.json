@@ -1,0 +1,511 @@
+{
+  "track": "react-more",
+  "mode": "solution",
+  "selectedId": 746,
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "originalFilesUnchanged": 501,
+  "coverage": {
+    "scope": "React family expansion only; mixed integrations untouched",
+    "originalReact": 100,
+    "addedReact": 200,
+    "combinedReact": 300,
+    "originalScenariosPerFamily": 5,
+    "addedScenariosPerFamily": 10,
+    "combinedScenariosPerFamily": 15,
+    "existingMixedReact": 65,
+    "addedMixedReact": 0,
+    "combinedReactIncludingUnexpandedMixedReact": 365,
+    "families": [
+      {
+        "name": "Bounded quantity editor",
+        "originalIds": [
+          284,
+          285,
+          286,
+          287,
+          288
+        ],
+        "addedIds": [
+          584,
+          585,
+          586,
+          587,
+          588,
+          589,
+          590,
+          591,
+          592,
+          593
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Validated text submission",
+        "originalIds": [
+          289,
+          290,
+          291,
+          292,
+          293
+        ],
+        "addedIds": [
+          594,
+          595,
+          596,
+          597,
+          598,
+          599,
+          600,
+          601,
+          602,
+          603
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Filtered product list",
+        "originalIds": [
+          294,
+          295,
+          296,
+          297,
+          298
+        ],
+        "addedIds": [
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612,
+          613
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Exclusive accordion",
+        "originalIds": [
+          299,
+          300,
+          301,
+          302,
+          303
+        ],
+        "addedIds": [
+          614,
+          615,
+          616,
+          617,
+          618,
+          619,
+          620,
+          621,
+          622,
+          623
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Accessible tab selection",
+        "originalIds": [
+          304,
+          305,
+          306,
+          307,
+          308
+        ],
+        "addedIds": [
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Checklist selection cap",
+        "originalIds": [
+          309,
+          310,
+          311,
+          312,
+          313
+        ],
+        "addedIds": [
+          634,
+          635,
+          636,
+          637,
+          638,
+          639,
+          640,
+          641,
+          642,
+          643
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Stable sortable table",
+        "originalIds": [
+          314,
+          315,
+          316,
+          317,
+          318
+        ],
+        "addedIds": [
+          644,
+          645,
+          646,
+          647,
+          648,
+          649,
+          650,
+          651,
+          652,
+          653
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Paged list controls",
+        "originalIds": [
+          319,
+          320,
+          321,
+          322,
+          323
+        ],
+        "addedIds": [
+          654,
+          655,
+          656,
+          657,
+          658,
+          659,
+          660,
+          661,
+          662,
+          663
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Editable label with cancel",
+        "originalIds": [
+          324,
+          325,
+          326,
+          327,
+          328
+        ],
+        "addedIds": [
+          664,
+          665,
+          666,
+          667,
+          668,
+          669,
+          670,
+          671,
+          672,
+          673
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Confirm destructive local action",
+        "originalIds": [
+          329,
+          330,
+          331,
+          332,
+          333
+        ],
+        "addedIds": [
+          674,
+          675,
+          676,
+          677,
+          678,
+          679,
+          680,
+          681,
+          682,
+          683
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Reducer undoable text",
+        "originalIds": [
+          334,
+          335,
+          336,
+          337,
+          338
+        ],
+        "addedIds": [
+          684,
+          685,
+          686,
+          687,
+          688,
+          689,
+          690,
+          691,
+          692,
+          693
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Password visibility and length",
+        "originalIds": [
+          339,
+          340,
+          341,
+          342,
+          343
+        ],
+        "addedIds": [
+          694,
+          695,
+          696,
+          697,
+          698,
+          699,
+          700,
+          701,
+          702,
+          703
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Select all checklist",
+        "originalIds": [
+          344,
+          345,
+          346,
+          347,
+          348
+        ],
+        "addedIds": [
+          704,
+          705,
+          706,
+          707,
+          708,
+          709,
+          710,
+          711,
+          712,
+          713
+        ],
+        "mixedReactExisting": 5,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Context preference provider",
+        "originalIds": [
+          349,
+          350,
+          351,
+          352,
+          353
+        ],
+        "addedIds": [
+          714,
+          715,
+          716,
+          717,
+          718,
+          719,
+          720,
+          721,
+          722,
+          723
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Keyboard escape cleanup",
+        "originalIds": [
+          354,
+          355,
+          356,
+          357,
+          358
+        ],
+        "addedIds": [
+          724,
+          725,
+          726,
+          727,
+          728,
+          729,
+          730,
+          731,
+          732,
+          733
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Fake async request state",
+        "originalIds": [
+          359,
+          360,
+          361,
+          362,
+          363
+        ],
+        "addedIds": [
+          734,
+          735,
+          736,
+          737,
+          738,
+          739,
+          740,
+          741,
+          742,
+          743
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Ref focus controls",
+        "originalIds": [
+          364,
+          365,
+          366,
+          367,
+          368
+        ],
+        "addedIds": [
+          744,
+          745,
+          746,
+          747,
+          748,
+          749,
+          750,
+          751,
+          752,
+          753
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Dependent option selection",
+        "originalIds": [
+          369,
+          370,
+          371,
+          372,
+          373
+        ],
+        "addedIds": [
+          754,
+          755,
+          756,
+          757,
+          758,
+          759,
+          760,
+          761,
+          762,
+          763
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Tag editor with duplicate policy",
+        "originalIds": [
+          374,
+          375,
+          376,
+          377,
+          378
+        ],
+        "addedIds": [
+          764,
+          765,
+          766,
+          767,
+          768,
+          769,
+          770,
+          771,
+          772,
+          773
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      },
+      {
+        "name": "Two-stage form wizard",
+        "originalIds": [
+          379,
+          380,
+          381,
+          382,
+          383
+        ],
+        "addedIds": [
+          774,
+          775,
+          776,
+          777,
+          778,
+          779,
+          780,
+          781,
+          782,
+          783
+        ],
+        "mixedReactExisting": 0,
+        "mixedReactAdded": 0
+      }
+    ]
+  },
+  "results": [
+    {
+      "id": 746,
+      "family": "Ref focus controls",
+      "scenario": 8,
+      "passed": true
+    }
+  ]
+}

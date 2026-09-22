@@ -1,0 +1,7 @@
+// 1571 Blackout-aware booking / scenario 3 — Two-day minimum
+// Blank Start and End date inputs. Require End>=Start, inclusive UTC day count >=2. Reject blackout 2026-10-08..2026-10-09 with start<=blackoutEnd AND end>=blackoutStart. Validation output: incomplete, reversed, too short, blocked, available in that priority. Reserve disabled unless available and guarded on submit. Booking output stores START/END on success and survives invalid edits.
+// Full prompt: ../prompts/1571.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId} from 'react';
+export default function Exercise({}) {
+const [start,setStart]=useState(''),[end,setEnd]=useState(''),[saved,save]=useState('');const days=(Date.parse(end+'T00:00:00Z')-Date.parse(start+'T00:00:00Z'))/86400000+1,overlap=start<="2026-10-09"&&end>="2026-10-08";const state=!start||!end?'incomplete':end<start?'reversed':days<2?'too short':overlap?'blocked':'available';return <form onSubmit={e=>{e.preventDefault();if(state==='available')save(start+'/'+end);}}><label>Start<input type="date" value={start} onChange={e=>setStart(e.target.value)}/></label><label>End<input type="date" value={end} onChange={e=>setEnd(e.target.value)}/></label><output aria-label="Validation">{state}</output><output aria-label="Booking">{saved}</output><button disabled={state!=='available'}>Reserve</button></form>;
+}

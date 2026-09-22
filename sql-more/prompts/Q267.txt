@@ -1,0 +1,27 @@
+Q267 — family Views projection and live query contracts, scenario 7: drop-view-preserve-base
+
+Task
+Create and drop paid_orders view, then return base row count and view-existence count.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE orders(id INTEGER PRIMARY KEY,customer TEXT,status TEXT,amount INTEGER);INSERT INTO orders VALUES(1,'Ada','paid',10),(2,'Ada','pending',20),(3,'Bo','paid',30),(4,'Cy','cancelled',40);
+
+Concrete example
+The first result row on this seed is {"orders":4,"views":0}.
+
+Expected shape
+Columns: orders, views. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "orders": 4,
+    "views": 0
+  }
+]
+
+Submission
+Write SQL in starters/Q267.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q267
+Learner: node sql-more/verify.cjs --starters --id=Q267

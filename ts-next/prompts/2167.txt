@@ -1,0 +1,14 @@
+2167: Bounded leading-slash normalization / slash-budget=4
+
+Contract focus: recursive template consumption; normalization budgets.
+
+Remove up to 4 leading / characters. Never touch interior or trailing slashes, backslashes, or whitespace. Preserve the exact transformed string literal type. This is bounded consumption, not general path resolution.
+
+Semantic variation 4/15: slash-budget=4. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2167.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2167.cjs. Type contracts: types/2167.positive.ts and types/2167.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2167
+Reference: node ts-next/verify.cjs --id=2167

@@ -1,0 +1,31 @@
+Q370 — family Inventory valuation and stock flow policies, scenario 10: cycle-count-variance-writeback
+
+Task
+Given system stock A=11 from ledger and physical count9, insert adjustment move id6 delta-2 and return final stock.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);CREATE TABLE physical(sku TEXT PRIMARY KEY,counted INTEGER);INSERT INTO physical VALUES('A',9),('B',5);
+
+Concrete example
+The first result row on this seed is {"sku":"A","stock":9}.
+
+Expected shape
+Columns: sku, stock. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "sku": "A",
+    "stock": 9
+  },
+  {
+    "sku": "B",
+    "stock": 5
+  }
+]
+
+Submission
+Write SQL in starters/Q370.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q370
+Learner: node sql-more/verify.cjs --starters --id=Q370

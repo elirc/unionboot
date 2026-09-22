@@ -1,0 +1,18 @@
+Range selection anchor / scenario 6 — Shift range replaces; skip locked C; 1-based initial anchor
+
+TASK
+Buttons Pick A..E, aria-pressed indicates selection. Initial selection empty, anchor A. Normal click toggles item and sets anchor. Shift-click selects inclusive range from anchor to clicked item, replace previous picks, does not move anchor. C is disabled and ranges skip it. Selection output sorted A..E joined comma. Clear clears picks and restores initial anchor; Anchor output.
+
+EXAMPLE
+Normal Pick A then Shift Pick D => A,B,D.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1704.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1704
+node react-300/verify.cjs --starters --id=1704

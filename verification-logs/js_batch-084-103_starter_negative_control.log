@@ -1,0 +1,13 @@
+starter checks: 0 passed, 1 failed; 1 exercises.
+Blank starters are intentional; syntax checking is not correctness verification.
+FAIL 84: Error: TODO: groupRuns
+    at groupRuns (C:\Users\Owner\Desktop\unionboot\js\batch-084-103\starters\084-adjacent-groups.cjs:7:9)
+    at check (C:\Users\Owner\Desktop\unionboot\js\batch-084-103\tests\084-adjacent-groups.cjs:4:18)
+    at Object.<anonymous> (C:\Users\Owner\Desktop\unionboot\js\batch-084-103\verify.cjs:20:27)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)

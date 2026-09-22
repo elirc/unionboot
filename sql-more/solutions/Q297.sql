@@ -1,0 +1,1 @@
+SELECT c.name FROM candidates c WHERE NOT EXISTS(SELECT skill FROM required EXCEPT SELECT skill FROM skills WHERE name=c.name) AND NOT EXISTS(SELECT skill FROM skills WHERE name=c.name EXCEPT SELECT skill FROM required) ORDER BY c.name;

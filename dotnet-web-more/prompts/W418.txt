@@ -1,0 +1,8 @@
+W418 | Output cache policy objects
+Scenario 8: Public GET policy TTL 120 seconds
+Semantic key: public-get-policy-ttl-120-seconds
+
+Create IOutputCachePolicy whose request phase enables lookup/storage only for GET without Authorization and outside /private. Set expiration 120s. Other policy phases complete without effects. Tests invoke the real policy object, not cache middleware.
+
+Signature: public static IOutputCachePolicy Create()
+Implement starters/W418.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

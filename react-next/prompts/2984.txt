@@ -1,0 +1,18 @@
+Shared promise resource cache / scenario 6 — Boundary 6; evict rejected cache entry
+
+TASK
+Exercise owns a Map of promise entries keyed by resource. Two buttons Load left/Load right request the same key K6 using injected pool.load(key). Deduplicate pending and fulfilled promises: a shared request can populate both outputs Left/Right. Each output begins idle, becomes loading, then response string or error. Evict a rejected entry so next click retries. Invalidate deletes key cache without changing displayed values. No fetching on mount; ignore completions after unmount.
+
+EXAMPLE
+Load left and right before resolution => one pool call for K6.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2984.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{pool}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2984
+node react-next/verify.cjs --starters --id=2984

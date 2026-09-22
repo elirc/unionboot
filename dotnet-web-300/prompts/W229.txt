@@ -1,0 +1,12 @@
+W229 — Protected endpoint policy metadata
+Scenario 9/10: /private9 requires Editors9; no anonymous override
+
+Attach policy Editors9 to a POST-only RouteEndpoint at/private9, using IAuthorizeData metadata (AuthorizeAttribute). Do not add AllowAnonymous. Return endpoint with delegate. Metadata alone does not authenticate requests: app must install auth middleware; tests only inspect policy application. Example combined policy with a configured authenticated-user policy must reject an anonymous user.
+
+Signature: public static RouteEndpoint Build()
+
+Edit starters/W229.cs. Run node dotnet-web-300/verify.cjs --starters --id=W229 from unionboot.
+Reference: solutions/W229.cs; shared checks: tests/W229.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

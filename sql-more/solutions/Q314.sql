@@ -1,0 +1,1 @@
+WITH good AS(SELECT tx FROM ledger GROUP BY tx HAVING SUM(debit)=SUM(credit)) SELECT account,SUM(debit-credit) AS balance FROM ledger WHERE tx IN(SELECT tx FROM good) GROUP BY account ORDER BY account;

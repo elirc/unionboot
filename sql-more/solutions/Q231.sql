@@ -1,0 +1,1 @@
+CREATE TABLE calc(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,total INTEGER GENERATED ALWAYS AS(qty*price) VIRTUAL);INSERT INTO calc(id,qty,price) SELECT id,qty,price FROM source; SELECT id,total FROM calc ORDER BY id;

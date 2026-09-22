@@ -1,0 +1,13 @@
+W055 — Filter and sort endpoint projections
+Scenario 5/10: Ascending ordinal labels; cap 6
+
+GET projection: optional single q, trim it; match active item names with OrdinalIgnoreCase substring. Sort names ordinal ascending, ties id ascending, cap6; return200 JSON array of {id,name}, never Active. Duplicate q ->400. Missing/empty q matches all active. Example q=TE finds active Tea, not inactive Tea.
+
+Signature: public static IResult Handle(HttpRequest request, IReadOnlyList<Item> rows)
+Provided domain types: public sealed record Item(int Id,string Name,bool Active);
+
+Edit starters/W055.cs. Run node dotnet-web-300/verify.cjs --starters --id=W055 from unionboot.
+Reference: solutions/W055.cs; shared checks: tests/W055.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

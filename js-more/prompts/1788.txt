@@ -1,0 +1,18 @@
+KMP substring matches / scenario 10 — output=count; fold=true
+
+TASK
+Input {text,pattern}, ASCII strings. KMP search with ASCII case folding. Output count: all returns overlapping offsets; disjoint greedily skips consumed pattern; first/last returns index or -1; count counts overlaps. Empty pattern matches every boundary0..text.length in every mode, including disjoint. Indices are UTF-16 offsets.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1788.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1788
+node js-more/verify.cjs --starters --id=1788
+
+POLICIES
+output=count; fold=true
+Semantic key: {"fold":true,"output":"count"}

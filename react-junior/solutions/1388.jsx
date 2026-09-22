@@ -1,0 +1,6 @@
+// 1388 Expandable search over records [CRUD / a11y]
+// Props records are {id,title,summary}. A Search input filters case-insensitively on title substring only (not summary). Render matches as buttons with aria-expanded, unexpanded rows show title only. Expanding shows the summary paragraph. Multiple rows can be expanded at once. Zero matches render an output with 0. Empty query matches all. Expansion is retained even while a row is filtered out. Row expansion must survive unrelated typing that keeps the row visible.
+// Run: node react-junior/verify.cjs --id=1388 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({records=[]}){const [query,setQuery]=useState('');const [open,setOpen]=useState(()=>new Set());const matches=records.filter(x=>x.title.toLowerCase().includes(query.toLowerCase()));
+return <section><label>Search<input value={query} onChange={e=>setQuery(e.target.value)}/></label><output>{matches.length}</output><ul>{matches.map(x=><li key={x.id}><button aria-expanded={open.has(x.id)} onClick={()=>setOpen(old=>{const next=new Set(old);next.has(x.id)?next.delete(x.id):next.add(x.id);return next;})}>{x.title}</button>{open.has(x.id)&&<p>{x.summary}</p>}</li>)}</ul></section>;}

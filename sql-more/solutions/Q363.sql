@@ -1,0 +1,1 @@
+WITH b AS(SELECT sku,SUM(delta) OVER(PARTITION BY sku ORDER BY at,id ROWS UNBOUNDED PRECEDING) AS stock FROM moves) SELECT sku,MIN(stock) AS low FROM b GROUP BY sku ORDER BY sku;

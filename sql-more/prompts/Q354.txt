@@ -1,0 +1,35 @@
+Q354 — family Directed graph paths reachability and dependency policy, scenario 4: simple-paths-to-d
+
+Task
+Enumerate simple paths A->D, avoiding repeated nodes with delimiter-protected visited string. Return path,cost ordered cost,path.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE edges(src TEXT,dst TEXT,cost INTEGER,PRIMARY KEY(src,dst));INSERT INTO edges VALUES('A','B',2),('A','C',5),('B','C',1),('B','D',4),('C','D',1),('D','B',1);CREATE TABLE nodes(name TEXT PRIMARY KEY);INSERT INTO nodes VALUES('A'),('B'),('C'),('D'),('E');
+
+Concrete example
+The first result row on this seed is {"path":"/A/B/C/D/","cost":4}.
+
+Expected shape
+Columns: path, cost. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "path": "/A/B/C/D/",
+    "cost": 4
+  },
+  {
+    "path": "/A/B/D/",
+    "cost": 6
+  },
+  {
+    "path": "/A/C/D/",
+    "cost": 6
+  }
+]
+
+Submission
+Write SQL in starters/Q354.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q354
+Learner: node sql-more/verify.cjs --starters --id=Q354

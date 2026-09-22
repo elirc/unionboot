@@ -1,0 +1,300 @@
+JAVASCRIPT MORE: 250 NEW SCENARIOS
+
+IDs1719..1968; 25 families x10 scenarios, not250 unrelated algorithms. Plain Node22 CommonJS, no dependencies. Every scenario has independent starter/reference/test and prompt. Cases deliberately revisit active policy, tie-break, boundary or initial-data choices. Existing tracks and root integration untouched.
+
+PRACTICE
+Read prompts/ID.txt, implement starters/ID.cjs, run node js-more/verify.cjs --starters --id=ID. Read tests before solutions. Fresh starters pass node --check but throw matching TODO exercise ID at runtime.
+
+VERIFY
+node js-more/verify.cjs --inventory
+node js-more/verify.cjs --id=1719
+node js-more/verify.cjs --starters --id=1719
+node js-more/verify.cjs
+node js-more/verify.cjs --starters
+Also supports --id ID. Exit0 success/inventory, exit1 grading or inventory failure, exit2 usage/unknown ID. Unknown and repeated flags are rejected. Every selected starter, solution and test passes node --check before runtime grading. Tests use multiple assertions per group. Runtime errors include phase and stack.
+Reports verification-solution.json / verification-starter.json describe the latest run, including a single-ID run; per-ID runs additionally write verification-MODE-ID.json. Inspect groups before calling a report a full-suite result. Logs reference.log and blank.log describe latest run in that mode. Suites run sequentially; no installs, services, timers or wall-clock sleeps.
+
+DESIGN
+CommonJS module export follows js-rest architecture. Added explicit prompts, strict inventory/CLI, syntax phases, JSON reports and log files. Independent oracles use brute-force/reference mathematics and no solution imports. Structural/complexity constraints need code review as well as tests. Generator semantic gate requires unique family|active-policy JSON for every family. No inactive zero-bit knob for Huffman length; no tie knob for extrema values or LCS length.
+
+GENERATOR
+node build-js-more.cjs creates js-more once. It refuses an existing js-more path; no overwrite flag. Never delete learner work to regenerate. Apply any future corrections surgically to generator and exact unchanged generated file. No grading suite is executed by generation or inventory.
+
+FAMILIES
+1719..1728 LFU cache eviction
+1729..1738 Ranked trie autocomplete
+1739..1748 Weighted interval scheduling
+1749..1758 Heap job dispatch
+1759..1768 Union-find components
+1769..1778 Dijkstra route policies
+1779..1788 KMP substring matches
+1789..1798 Decimal-string arithmetic
+1799..1808 Huffman prefix codes
+1809..1818 JSON wildcard selection
+1819..1828 Wildcard topic bus
+1829..1838 Async semaphore queues
+1839..1848 Lazy iterator pipelines
+1849..1858 Persistent versioned stacks
+1859..1868 Precedence expression parsing
+1869..1878 LCS edit scripts
+1879..1888 Sudoku candidate validation
+1889..1898 Injected token-bucket limiter
+1899..1908 Bloom membership bitsets
+1909..1918 Fenwick point updates
+1919..1928 Segment-tree extrema
+1929..1938 Consistent-hash ring
+1939..1948 Zero-one knapsack policies
+1949..1958 Elementary cellular automata
+1959..1968 Polynomial convolution
+
+INDEX
+1719 LFU cache eviction / scenario 1 — capacity=2; tie=oldest
+1720 LFU cache eviction / scenario 2 — capacity=2; tie=newest
+1721 LFU cache eviction / scenario 3 — capacity=3; tie=oldest
+1722 LFU cache eviction / scenario 4 — capacity=3; tie=newest
+1723 LFU cache eviction / scenario 5 — capacity=4; tie=oldest
+1724 LFU cache eviction / scenario 6 — capacity=4; tie=newest
+1725 LFU cache eviction / scenario 7 — capacity=5; tie=oldest
+1726 LFU cache eviction / scenario 8 — capacity=5; tie=newest
+1727 LFU cache eviction / scenario 9 — capacity=6; tie=oldest
+1728 LFU cache eviction / scenario 10 — capacity=6; tie=newest
+1729 Ranked trie autocomplete / scenario 1 — rank=score; limit=2
+1730 Ranked trie autocomplete / scenario 2 — rank=score; limit=4
+1731 Ranked trie autocomplete / scenario 3 — rank=shortest; limit=2
+1732 Ranked trie autocomplete / scenario 4 — rank=shortest; limit=4
+1733 Ranked trie autocomplete / scenario 5 — rank=longest; limit=2
+1734 Ranked trie autocomplete / scenario 6 — rank=longest; limit=4
+1735 Ranked trie autocomplete / scenario 7 — rank=recent; limit=2
+1736 Ranked trie autocomplete / scenario 8 — rank=recent; limit=4
+1737 Ranked trie autocomplete / scenario 9 — rank=lexical; limit=2
+1738 Ranked trie autocomplete / scenario 10 — rank=lexical; limit=4
+1739 Weighted interval scheduling / scenario 1 — gap=0; tie=fewer
+1740 Weighted interval scheduling / scenario 2 — gap=0; tie=more
+1741 Weighted interval scheduling / scenario 3 — gap=1; tie=fewer
+1742 Weighted interval scheduling / scenario 4 — gap=1; tie=more
+1743 Weighted interval scheduling / scenario 5 — gap=2; tie=fewer
+1744 Weighted interval scheduling / scenario 6 — gap=2; tie=more
+1745 Weighted interval scheduling / scenario 7 — gap=3; tie=fewer
+1746 Weighted interval scheduling / scenario 8 — gap=3; tie=more
+1747 Weighted interval scheduling / scenario 9 — gap=4; tie=fewer
+1748 Weighted interval scheduling / scenario 10 — gap=4; tie=more
+1749 Heap job dispatch / scenario 1 — direction=high; aging=0
+1750 Heap job dispatch / scenario 2 — direction=high; aging=1
+1751 Heap job dispatch / scenario 3 — direction=high; aging=2
+1752 Heap job dispatch / scenario 4 — direction=high; aging=3
+1753 Heap job dispatch / scenario 5 — direction=high; aging=4
+1754 Heap job dispatch / scenario 6 — direction=low; aging=0
+1755 Heap job dispatch / scenario 7 — direction=low; aging=1
+1756 Heap job dispatch / scenario 8 — direction=low; aging=2
+1757 Heap job dispatch / scenario 9 — direction=low; aging=3
+1758 Heap job dispatch / scenario 10 — direction=low; aging=4
+1759 Union-find components / scenario 1 — size=3; root=minimum
+1760 Union-find components / scenario 2 — size=3; root=maximum
+1761 Union-find components / scenario 3 — size=4; root=minimum
+1762 Union-find components / scenario 4 — size=4; root=maximum
+1763 Union-find components / scenario 5 — size=5; root=minimum
+1764 Union-find components / scenario 6 — size=5; root=maximum
+1765 Union-find components / scenario 7 — size=6; root=minimum
+1766 Union-find components / scenario 8 — size=6; root=maximum
+1767 Union-find components / scenario 9 — size=7; root=minimum
+1768 Union-find components / scenario 10 — size=7; root=maximum
+1769 Dijkstra route policies / scenario 1 — toll=0; tie=lexical
+1770 Dijkstra route policies / scenario 2 — toll=0; tie=fewest
+1771 Dijkstra route policies / scenario 3 — toll=1; tie=lexical
+1772 Dijkstra route policies / scenario 4 — toll=1; tie=fewest
+1773 Dijkstra route policies / scenario 5 — toll=2; tie=lexical
+1774 Dijkstra route policies / scenario 6 — toll=2; tie=fewest
+1775 Dijkstra route policies / scenario 7 — toll=3; tie=lexical
+1776 Dijkstra route policies / scenario 8 — toll=3; tie=fewest
+1777 Dijkstra route policies / scenario 9 — toll=4; tie=lexical
+1778 Dijkstra route policies / scenario 10 — toll=4; tie=fewest
+1779 KMP substring matches / scenario 1 — output=all; fold=false
+1780 KMP substring matches / scenario 2 — output=all; fold=true
+1781 KMP substring matches / scenario 3 — output=disjoint; fold=false
+1782 KMP substring matches / scenario 4 — output=disjoint; fold=true
+1783 KMP substring matches / scenario 5 — output=first; fold=false
+1784 KMP substring matches / scenario 6 — output=first; fold=true
+1785 KMP substring matches / scenario 7 — output=last; fold=false
+1786 KMP substring matches / scenario 8 — output=last; fold=true
+1787 KMP substring matches / scenario 9 — output=count; fold=false
+1788 KMP substring matches / scenario 10 — output=count; fold=true
+1789 Decimal-string arithmetic / scenario 1 — op=add; pad=false
+1790 Decimal-string arithmetic / scenario 2 — op=add; pad=true
+1791 Decimal-string arithmetic / scenario 3 — op=difference; pad=false
+1792 Decimal-string arithmetic / scenario 4 — op=difference; pad=true
+1793 Decimal-string arithmetic / scenario 5 — op=subtract; pad=false
+1794 Decimal-string arithmetic / scenario 6 — op=subtract; pad=true
+1795 Decimal-string arithmetic / scenario 7 — op=multiply; pad=false
+1796 Decimal-string arithmetic / scenario 8 — op=multiply; pad=true
+1797 Decimal-string arithmetic / scenario 9 — op=maximum; pad=false
+1798 Decimal-string arithmetic / scenario 10 — op=maximum; pad=true
+1799 Huffman prefix codes / scenario 1 — tie=ascending; output=table; zero=0
+1800 Huffman prefix codes / scenario 2 — tie=ascending; output=table; zero=1
+1801 Huffman prefix codes / scenario 3 — tie=ascending; output=both; zero=0
+1802 Huffman prefix codes / scenario 4 — tie=ascending; output=both; zero=1
+1803 Huffman prefix codes / scenario 5 — output=length; unit=bits
+1804 Huffman prefix codes / scenario 6 — tie=descending; output=table; zero=0
+1805 Huffman prefix codes / scenario 7 — tie=descending; output=table; zero=1
+1806 Huffman prefix codes / scenario 8 — tie=descending; output=both; zero=0
+1807 Huffman prefix codes / scenario 9 — tie=descending; output=both; zero=1
+1808 Huffman prefix codes / scenario 10 — output=length; unit=bytes
+1809 JSON wildcard selection / scenario 1 — order=forward; missing=skip; output=all
+1810 JSON wildcard selection / scenario 2 — order=forward; missing=null; output=all
+1811 JSON wildcard selection / scenario 3 — order=forward; missing=error; output=all
+1812 JSON wildcard selection / scenario 4 — order=reverse; missing=skip; output=all
+1813 JSON wildcard selection / scenario 5 — order=reverse; missing=null; output=all
+1814 JSON wildcard selection / scenario 6 — order=reverse; missing=error; output=all
+1815 JSON wildcard selection / scenario 7 — order=forward; missing=skip; output=first
+1816 JSON wildcard selection / scenario 8 — order=forward; missing=null; output=first
+1817 JSON wildcard selection / scenario 9 — order=reverse; missing=skip; output=first
+1818 JSON wildcard selection / scenario 10 — order=reverse; missing=null; output=first
+1819 Wildcard topic bus / scenario 1 — order=forward; live=false; errors=collect
+1820 Wildcard topic bus / scenario 2 — order=forward; live=true; errors=collect
+1821 Wildcard topic bus / scenario 3 — order=reverse; live=false; errors=collect
+1822 Wildcard topic bus / scenario 4 — order=reverse; live=true; errors=collect
+1823 Wildcard topic bus / scenario 5 — order=priority; live=false; errors=collect
+1824 Wildcard topic bus / scenario 6 — order=priority; live=true; errors=collect
+1825 Wildcard topic bus / scenario 7 — order=forward; live=false; errors=throw
+1826 Wildcard topic bus / scenario 8 — order=forward; live=true; errors=throw
+1827 Wildcard topic bus / scenario 9 — order=priority; live=false; errors=throw
+1828 Wildcard topic bus / scenario 10 — order=priority; live=true; errors=throw
+1829 Async semaphore queues / scenario 1 — permits=1; queue=fifo
+1830 Async semaphore queues / scenario 2 — permits=1; queue=lifo
+1831 Async semaphore queues / scenario 3 — permits=2; queue=fifo
+1832 Async semaphore queues / scenario 4 — permits=2; queue=lifo
+1833 Async semaphore queues / scenario 5 — permits=3; queue=fifo
+1834 Async semaphore queues / scenario 6 — permits=3; queue=lifo
+1835 Async semaphore queues / scenario 7 — permits=4; queue=fifo
+1836 Async semaphore queues / scenario 8 — permits=4; queue=lifo
+1837 Async semaphore queues / scenario 9 — permits=5; queue=fifo
+1838 Async semaphore queues / scenario 10 — permits=5; queue=lifo
+1839 Lazy iterator pipelines / scenario 1 — mode=even; take=2
+1840 Lazy iterator pipelines / scenario 2 — mode=even; take=4
+1841 Lazy iterator pipelines / scenario 3 — mode=positive; take=2
+1842 Lazy iterator pipelines / scenario 4 — mode=positive; take=4
+1843 Lazy iterator pipelines / scenario 5 — mode=square; take=2
+1844 Lazy iterator pipelines / scenario 6 — mode=square; take=4
+1845 Lazy iterator pipelines / scenario 7 — mode=negate; take=2
+1846 Lazy iterator pipelines / scenario 8 — mode=negate; take=4
+1847 Lazy iterator pipelines / scenario 9 — mode=double; take=2
+1848 Lazy iterator pipelines / scenario 10 — mode=double; take=4
+1849 Persistent versioned stacks / scenario 1 — view=top; empty=empty
+1850 Persistent versioned stacks / scenario 2 — view=top; empty=error
+1851 Persistent versioned stacks / scenario 3 — view=bottom; empty=empty
+1852 Persistent versioned stacks / scenario 4 — view=bottom; empty=error
+1853 Persistent versioned stacks / scenario 5 — view=size; empty=empty
+1854 Persistent versioned stacks / scenario 6 — view=size; empty=error
+1855 Persistent versioned stacks / scenario 7 — view=peek; empty=empty
+1856 Persistent versioned stacks / scenario 8 — view=peek; empty=error
+1857 Persistent versioned stacks / scenario 9 — view=last-two; empty=empty
+1858 Persistent versioned stacks / scenario 10 — view=last-two; empty=error
+1859 Precedence expression parsing / scenario 1 — precedence=standard; power=left; unaryPlus=false
+1860 Precedence expression parsing / scenario 2 — precedence=standard; power=right; unaryPlus=false
+1861 Precedence expression parsing / scenario 3 — precedence=flat; power=left; unaryPlus=false
+1862 Precedence expression parsing / scenario 4 — precedence=flat; power=right; unaryPlus=false
+1863 Precedence expression parsing / scenario 5 — precedence=standard; power=left; unaryPlus=true
+1864 Precedence expression parsing / scenario 6 — precedence=standard; power=right; unaryPlus=true
+1865 Precedence expression parsing / scenario 7 — precedence=flat; power=left; unaryPlus=true
+1866 Precedence expression parsing / scenario 8 — precedence=flat; power=right; unaryPlus=true
+1867 Precedence expression parsing / scenario 9 — precedence=standard; power=right; unaryPlus=false; offset=1
+1868 Precedence expression parsing / scenario 10 — precedence=flat; power=right; unaryPlus=true; offset=1
+1869 LCS edit scripts / scenario 1 — tie=delete; fold=false; output=ops
+1870 LCS edit scripts / scenario 2 — tie=delete; fold=true; output=ops
+1871 LCS edit scripts / scenario 3 — tie=insert; fold=false; output=ops
+1872 LCS edit scripts / scenario 4 — tie=insert; fold=true; output=ops
+1873 LCS edit scripts / scenario 5 — tie=delete; fold=false; output=common
+1874 LCS edit scripts / scenario 6 — tie=delete; fold=true; output=common
+1875 LCS edit scripts / scenario 7 — tie=insert; fold=false; output=common
+1876 LCS edit scripts / scenario 8 — tie=insert; fold=true; output=common
+1877 LCS edit scripts / scenario 9 — fold=false; output=length
+1878 LCS edit scripts / scenario 10 — fold=true; output=length
+1879 Sudoku candidate validation / scenario 1 — box=1; diagonal=false
+1880 Sudoku candidate validation / scenario 2 — box=1; diagonal=true
+1881 Sudoku candidate validation / scenario 3 — box=2; diagonal=false
+1882 Sudoku candidate validation / scenario 4 — box=2; diagonal=true
+1883 Sudoku candidate validation / scenario 5 — box=3; diagonal=false
+1884 Sudoku candidate validation / scenario 6 — box=3; diagonal=true
+1885 Sudoku candidate validation / scenario 7 — box=4; diagonal=false
+1886 Sudoku candidate validation / scenario 8 — box=4; diagonal=true
+1887 Sudoku candidate validation / scenario 9 — box=5; diagonal=false
+1888 Sudoku candidate validation / scenario 10 — box=5; diagonal=true
+1889 Injected token-bucket limiter / scenario 1 — capacity=2; refill=0.5
+1890 Injected token-bucket limiter / scenario 2 — capacity=2; refill=1
+1891 Injected token-bucket limiter / scenario 3 — capacity=3; refill=0.5
+1892 Injected token-bucket limiter / scenario 4 — capacity=3; refill=1
+1893 Injected token-bucket limiter / scenario 5 — capacity=4; refill=0.5
+1894 Injected token-bucket limiter / scenario 6 — capacity=4; refill=1
+1895 Injected token-bucket limiter / scenario 7 — capacity=5; refill=0.5
+1896 Injected token-bucket limiter / scenario 8 — capacity=5; refill=1
+1897 Injected token-bucket limiter / scenario 9 — capacity=6; refill=0.5
+1898 Injected token-bucket limiter / scenario 10 — capacity=6; refill=1
+1899 Bloom membership bitsets / scenario 1 — bits=7; hashes=2
+1900 Bloom membership bitsets / scenario 2 — bits=7; hashes=3
+1901 Bloom membership bitsets / scenario 3 — bits=11; hashes=2
+1902 Bloom membership bitsets / scenario 4 — bits=11; hashes=3
+1903 Bloom membership bitsets / scenario 5 — bits=17; hashes=2
+1904 Bloom membership bitsets / scenario 6 — bits=17; hashes=3
+1905 Bloom membership bitsets / scenario 7 — bits=23; hashes=2
+1906 Bloom membership bitsets / scenario 8 — bits=23; hashes=3
+1907 Bloom membership bitsets / scenario 9 — bits=31; hashes=2
+1908 Bloom membership bitsets / scenario 10 — bits=31; hashes=3
+1909 Fenwick point updates / scenario 1 — update=set; inclusive=false; output=sum
+1910 Fenwick point updates / scenario 2 — update=set; inclusive=true; output=sum
+1911 Fenwick point updates / scenario 3 — update=add; inclusive=false; output=sum
+1912 Fenwick point updates / scenario 4 — update=add; inclusive=true; output=sum
+1913 Fenwick point updates / scenario 5 — update=set; inclusive=false; output=average
+1914 Fenwick point updates / scenario 6 — update=set; inclusive=true; output=average
+1915 Fenwick point updates / scenario 7 — update=add; inclusive=false; output=average
+1916 Fenwick point updates / scenario 8 — update=add; inclusive=true; output=average
+1917 Fenwick point updates / scenario 9 — update=set; inclusive=false; output=sum; initialOffset=1
+1918 Fenwick point updates / scenario 10 — update=add; inclusive=true; output=average; initialOffset=1
+1919 Segment-tree extrema / scenario 1 — extreme=min; tie=first; output=pair
+1920 Segment-tree extrema / scenario 2 — extreme=min; tie=last; output=pair
+1921 Segment-tree extrema / scenario 3 — extreme=max; tie=first; output=pair
+1922 Segment-tree extrema / scenario 4 — extreme=max; tie=last; output=pair
+1923 Segment-tree extrema / scenario 5 — extreme=min; tie=first; output=index
+1924 Segment-tree extrema / scenario 6 — extreme=min; tie=last; output=index
+1925 Segment-tree extrema / scenario 7 — extreme=max; tie=first; output=index
+1926 Segment-tree extrema / scenario 8 — extreme=max; tie=last; output=index
+1927 Segment-tree extrema / scenario 9 — extreme=min; output=value
+1928 Segment-tree extrema / scenario 10 — extreme=max; output=value
+1929 Consistent-hash ring / scenario 1 — replicas=1; slots=97
+1930 Consistent-hash ring / scenario 2 — replicas=1; slots=127
+1931 Consistent-hash ring / scenario 3 — replicas=2; slots=97
+1932 Consistent-hash ring / scenario 4 — replicas=2; slots=127
+1933 Consistent-hash ring / scenario 5 — replicas=3; slots=97
+1934 Consistent-hash ring / scenario 6 — replicas=3; slots=127
+1935 Consistent-hash ring / scenario 7 — replicas=4; slots=97
+1936 Consistent-hash ring / scenario 8 — replicas=4; slots=127
+1937 Consistent-hash ring / scenario 9 — replicas=5; slots=97
+1938 Consistent-hash ring / scenario 10 — replicas=5; slots=127
+1939 Zero-one knapsack policies / scenario 1 — capacity=4; tie=lighter
+1940 Zero-one knapsack policies / scenario 2 — capacity=4; tie=heavier
+1941 Zero-one knapsack policies / scenario 3 — capacity=5; tie=lighter
+1942 Zero-one knapsack policies / scenario 4 — capacity=5; tie=heavier
+1943 Zero-one knapsack policies / scenario 5 — capacity=6; tie=lighter
+1944 Zero-one knapsack policies / scenario 6 — capacity=6; tie=heavier
+1945 Zero-one knapsack policies / scenario 7 — capacity=7; tie=lighter
+1946 Zero-one knapsack policies / scenario 8 — capacity=7; tie=heavier
+1947 Zero-one knapsack policies / scenario 9 — capacity=8; tie=lighter
+1948 Zero-one knapsack policies / scenario 10 — capacity=8; tie=heavier
+1949 Elementary cellular automata / scenario 1 — rule=30; wrap=false
+1950 Elementary cellular automata / scenario 2 — rule=30; wrap=true
+1951 Elementary cellular automata / scenario 3 — rule=54; wrap=false
+1952 Elementary cellular automata / scenario 4 — rule=54; wrap=true
+1953 Elementary cellular automata / scenario 5 — rule=90; wrap=false
+1954 Elementary cellular automata / scenario 6 — rule=90; wrap=true
+1955 Elementary cellular automata / scenario 7 — rule=110; wrap=false
+1956 Elementary cellular automata / scenario 8 — rule=110; wrap=true
+1957 Elementary cellular automata / scenario 9 — rule=184; wrap=false
+1958 Elementary cellular automata / scenario 10 — rule=184; wrap=true
+1959 Polynomial convolution / scenario 1 — modulus=0; trim=false
+1960 Polynomial convolution / scenario 2 — modulus=0; trim=true
+1961 Polynomial convolution / scenario 3 — modulus=2; trim=false
+1962 Polynomial convolution / scenario 4 — modulus=2; trim=true
+1963 Polynomial convolution / scenario 5 — modulus=5; trim=false
+1964 Polynomial convolution / scenario 6 — modulus=5; trim=true
+1965 Polynomial convolution / scenario 7 — modulus=7; trim=false
+1966 Polynomial convolution / scenario 8 — modulus=7; trim=true
+1967 Polynomial convolution / scenario 9 — modulus=11; trim=false
+1968 Polynomial convolution / scenario 10 — modulus=11; trim=true

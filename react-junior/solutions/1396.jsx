@@ -1,0 +1,6 @@
+// 1396 Debounced save with flushed unsaved state [effects]
+// Text input auto-saves 400ms after the last keystroke. Unsaved output says Unsaved changes or Saved; a Save now button flushes immediately (disabled when nothing pending). Navigating away (unmount) must not throw. After save, output returns to Saved. Use effect + timeout with the right dependency list so repeated typing does not save each keystroke.
+// Run: node react-junior/verify.cjs --id=1396 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({}){const [text,setText]=useState(''),[saved,setSaved]=useState(''),[dirty,setDirty]=useState(false);const timer=useRef(null);useEffect(()=>{if(!dirty)return;timer.current=setTimeout(()=>{setSaved(text);setDirty(false);},400);return()=>clearTimeout(timer.current);},[dirty,text]);
+return <section><label>Text<input value={text} onChange={e=>{setText(e.target.value);setDirty(true);}}/></label><button disabled={!dirty} onClick={()=>{clearTimeout(timer.current);setSaved(text);setDirty(false);}}>Save now</button><output>{dirty?'Unsaved changes':saved?'Saved':'Saved'}</output><output aria-label="Value">{saved}</output></section>;}

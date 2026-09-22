@@ -1,0 +1,7 @@
+// 210: Typed Result mean / empty-boundary
+// Implement the stated API under strict TypeScript. Scenario policy literal '5-1' is required as the second argument and returned unchanged. Return {policy,result}. Typed Result mean; preserve input. See examples for boundary behavior. Avoid any. This is a typed scenario variant in a 20-family track.
+// Tests: node ts/verify.cjs --id=210 [--starters]
+// Study tests/210.cjs for examples.
+export function solve(input: readonly number[], policy: '5-1'): {policy:'5-1'; result:{ok:true;value:number}|{ok:false;error:'empty'}} {
+throw new Error('TODO exercise 210');
+}

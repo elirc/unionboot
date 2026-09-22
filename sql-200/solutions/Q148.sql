@@ -1,0 +1,1 @@
+BEGIN; UPDATE accounts SET balance=balance-10 WHERE id=1; UPDATE accounts SET balance=balance+10 WHERE id=2; INSERT INTO audit(note) VALUES('transfer:10'); ROLLBACK; SELECT id,balance,(SELECT COUNT(*) FROM audit) AS audit_count FROM accounts ORDER BY id;

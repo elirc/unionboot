@@ -1,0 +1,33 @@
+Q368 — family Inventory valuation and stock flow policies, scenario 8: days-of-cover-simple-turns
+
+Task
+Compute average daily outflow (absolute negative deltas / fixed five-day window) and current stock/rate as days of cover; round both to one decimal.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);
+
+Concrete example
+The first result row on this seed is {"sku":"A","rate":0.8,"cover_days":13.8}.
+
+Expected shape
+Columns: sku, rate, cover_days. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "sku": "A",
+    "rate": 0.8,
+    "cover_days": 13.8
+  },
+  {
+    "sku": "B",
+    "rate": 0.4,
+    "cover_days": 12.5
+  }
+]
+
+Submission
+Write SQL in starters/Q368.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q368
+Learner: node sql-more/verify.cjs --starters --id=Q368

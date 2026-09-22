@@ -1,0 +1,16 @@
+{
+  "phase": "tests",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "assertions": 7,
+  "results": [
+    {
+      "id": "W501",
+      "family": "WebSocket handshake stub features",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    }
+  ]
+}

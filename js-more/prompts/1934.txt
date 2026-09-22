@@ -1,0 +1,18 @@
+Consistent-hash ring / scenario 6 — replicas=3; slots=127
+
+TASK
+Input {nodes,keys}, unique ASCII node labels, ASCII key strings. Ring modulus 127; hash starts0, for each char h=(31*h+code)%modulus. Create 3 virtual nodes per label using node+'#'+replica, replica0-based. Sort by position, then node ASCII, then replica. Key owner first ring position>=hash(key), wrapping. Return owners in key order, null when no nodes. Use binary-search successor.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1934.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1934
+node js-more/verify.cjs --starters --id=1934
+
+POLICIES
+replicas=3; slots=127
+Semantic key: {"replicas":3,"slots":127}

@@ -1,0 +1,1 @@
+BEGIN;CREATE TABLE next_customers(id INTEGER PRIMARY KEY,name TEXT NOT NULL CHECK(length(name)>0));INSERT INTO next_customers SELECT id,full_name FROM customers;DROP TABLE customers;ALTER TABLE next_customers RENAME TO customers;COMMIT;SELECT id,name FROM customers ORDER BY id;

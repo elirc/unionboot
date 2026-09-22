@@ -1,0 +1,18 @@
+Context menu anchor geometry / scenario 5 — Boundary 5; preserve requested coordinates
+
+TASK
+Contextmenu event on Target opens role=menu labelled Context. Prevent native menu. Menu size 25px square; use event clientX/clientY. Use event coordinates unchanged, even beyond viewport. Position output left,top or closed. Render inline style left/top/width/height in px; width and height must both be 25, even for unbounded positioning. Escape on menu closes; another contextmenu repositions. No focus navigation or action items required: this is positioning/event behavior.
+
+EXAMPLE
+Request 199,99 => 199,99.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3323.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{viewport={width:200,height:100}}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3323
+node react-next/verify.cjs --starters --id=3323

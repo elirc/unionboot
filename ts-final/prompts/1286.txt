@@ -1,0 +1,15 @@
+1286: Discriminant-selected union extraction / scenario 08
+
+Contract focus: Extract; indexed access; generic unions.
+Select records with a matching kind. Given a discriminated union, the returned array contains only the selected union member type via Extract. Preserve order and object identity. K must be a member of the input kind union.
+
+This is scenario 8/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize alternating signs; scalar/state exercises use deterministic case seed 7. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1286.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1286.cjs. Positive strict fixtures: types/1286.positive.ts. Negative strict fixtures: types/1286.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-final/verify.cjs --starters --id=1286
+Reference check:
+  node ts-final/verify.cjs --id=1286
+

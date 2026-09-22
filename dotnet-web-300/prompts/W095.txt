@@ -1,0 +1,12 @@
+W095 — JSON media type gates
+Scenario 5/10: JSON-only; declared body limit 128 bytes
+
+Gate a body before downstream parsing. HasJsonContentType accepts application/json and application/*+json with parameters; otherwise415. Declared ContentLength >128->413 (media type gate runs first). Unknown length is accepted; this gate alone does NOT enforce streamed size. Valid ->202 {accepted:true}. Example application/problem+json at128 bytes ->202.
+
+Signature: public static IResult Handle(HttpRequest request)
+
+Edit starters/W095.cs. Run node dotnet-web-300/verify.cjs --starters --id=W095 from unionboot.
+Reference: solutions/W095.cs; shared checks: tests/W095.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

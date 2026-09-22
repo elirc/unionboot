@@ -1,0 +1,8 @@
+W359 | LinkGenerator path resolution
+Scenario 9: Named cities link under version 9
+Semantic key: named-cities-link-under-version-9
+
+Use real LinkGenerator.GetPathByName for endpoint cities, supply id and path base /v9. Do not manually concatenate the generated route. Unresolved endpoint ->null.
+
+Signature: public static string? Resolve(LinkGenerator generator,int id)
+Implement starters/W359.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

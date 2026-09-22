@@ -1,0 +1,26 @@
+Q096 — family SQLite dates times and calendar boundaries, scenario 6: elapsed-hours-julianday
+
+Task
+Calculate elapsed hours from event 1 to event 2 with julianday; round to two decimals.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE events(id INTEGER PRIMARY KEY,happened_at TEXT);
+INSERT INTO events VALUES(1,'2024-02-28 23:30:00'),(2,'2024-02-29 00:30:00'),(3,'2024-03-01 12:00:00'),(4,'2024-03-03 09:00:00'),(5,'2024-12-31 23:00:00');
+
+Concrete example
+With the exact seed above, the first result row is {"hours":1}.
+
+Expected shape
+Columns (exact aliases): hours. 1 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "hours": 1
+  }
+]
+
+Submission
+Edit starters/Q096.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q096
+Reference: node sql-200/verify.cjs --id=Q096

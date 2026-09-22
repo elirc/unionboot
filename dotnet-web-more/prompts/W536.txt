@@ -1,0 +1,8 @@
+W536 | Request culture injected providers
+Scenario 6: Injected culture fallback ko-KR
+Semantic key: injected-culture-fallback-ko-kr
+
+Call the injected IRequestCultureProvider exactly once with the original context. Use its first culture or fallback ko-KR when no result/cultures. Do not mutate process-wide CurrentCulture; this is request-local resolution.
+
+Signature: public static async Task<string> Resolve(HttpContext context,IRequestCultureProvider provider)
+Implement starters/W536.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

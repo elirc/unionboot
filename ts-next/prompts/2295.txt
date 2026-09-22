@@ -1,0 +1,14 @@
+2295: Setter-key remapping surfaces / setter-fields=active+tags
+
+Contract focus: mapped as clauses; callback parameter correlation.
+
+Create setter closures for active, tags. Each remapped setter accepts only its corresponding field type and mutates that field on the original input. Other fields must remain untouched. Construction itself has no mutation.
+
+Semantic variation 12/15: setter-fields=active+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2295.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2295.cjs. Type contracts: types/2295.positive.ts and types/2295.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2295
+Reference: node ts-next/verify.cjs --id=2295

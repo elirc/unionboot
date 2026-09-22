@@ -1,0 +1,16 @@
+{
+  "phase": "tests",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "assertions": 3,
+  "results": [
+    {
+      "id": "W351",
+      "family": "LinkGenerator path resolution",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 3
+    }
+  ]
+}

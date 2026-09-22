@@ -1,0 +1,162 @@
+[
+  {
+    "id": 84,
+    "title": "Group consecutive equal values",
+    "api": "groupRuns",
+    "starter": "starters/084-adjacent-groups.cjs",
+    "solution": "solutions/084-adjacent-groups.cjs",
+    "test": "tests/084-adjacent-groups.cjs"
+  },
+  {
+    "id": 85,
+    "title": "Zip uneven arrays",
+    "api": "zipLongest",
+    "starter": "starters/085-zip-longest.cjs",
+    "solution": "solutions/085-zip-longest.cjs",
+    "test": "tests/085-zip-longest.cjs"
+  },
+  {
+    "id": 86,
+    "title": "Partition with callback indices",
+    "api": "partition",
+    "starter": "starters/086-stable-partition.cjs",
+    "solution": "solutions/086-stable-partition.cjs",
+    "test": "tests/086-stable-partition.cjs"
+  },
+  {
+    "id": 87,
+    "title": "Rolling fixed-window sums",
+    "api": "windowSums",
+    "starter": "starters/087-window-sums.cjs",
+    "solution": "solutions/087-window-sums.cjs",
+    "test": "tests/087-window-sums.cjs"
+  },
+  {
+    "id": 88,
+    "title": "Build a range-sum query function",
+    "api": "rangeSumIndex",
+    "starter": "starters/088-range-sum-index.cjs",
+    "solution": "solutions/088-range-sum-index.cjs",
+    "test": "tests/088-range-sum-index.cjs"
+  },
+  {
+    "id": 89,
+    "title": "First valid insertion index",
+    "api": "lowerBound",
+    "starter": "starters/089-lower-bound.cjs",
+    "solution": "solutions/089-lower-bound.cjs",
+    "test": "tests/089-lower-bound.cjs"
+  },
+  {
+    "id": 90,
+    "title": "Compact sorted duplicates in place",
+    "api": "compactSorted",
+    "starter": "starters/090-sorted-compaction.cjs",
+    "solution": "solutions/090-sorted-compaction.cjs",
+    "test": "tests/090-sorted-compaction.cjs"
+  },
+  {
+    "id": 91,
+    "title": "Decode explicit run records",
+    "api": "decodeRuns",
+    "starter": "starters/091-decode-runs.cjs",
+    "solution": "solutions/091-decode-runs.cjs",
+    "test": "tests/091-decode-runs.cjs"
+  },
+  {
+    "id": 92,
+    "title": "Escape literal regex input",
+    "api": "escapeRegex",
+    "starter": "starters/092-literal-regex.cjs",
+    "solution": "solutions/092-literal-regex.cjs",
+    "test": "tests/092-literal-regex.cjs"
+  },
+  {
+    "id": 93,
+    "title": "Normalize an absolute virtual path",
+    "api": "normalizePath",
+    "starter": "starters/093-normalize-posix.cjs",
+    "solution": "solutions/093-normalize-posix.cjs",
+    "test": "tests/093-normalize-posix.cjs"
+  },
+  {
+    "id": 94,
+    "title": "Compare numeric version components",
+    "api": "compareVersions",
+    "starter": "starters/094-version-compare.cjs",
+    "solution": "solutions/094-version-compare.cjs",
+    "test": "tests/094-version-compare.cjs"
+  },
+  {
+    "id": 95,
+    "title": "Bezout coefficients with BigInt",
+    "api": "extendedGcd",
+    "starter": "starters/095-extended-gcd.cjs",
+    "solution": "solutions/095-extended-gcd.cjs",
+    "test": "tests/095-extended-gcd.cjs"
+  },
+  {
+    "id": 96,
+    "title": "Normalize a rational number",
+    "api": "normalizeFraction",
+    "starter": "starters/096-fraction-normalize.cjs",
+    "solution": "solutions/096-fraction-normalize.cjs",
+    "test": "tests/096-fraction-normalize.cjs"
+  },
+  {
+    "id": 97,
+    "title": "Encode BigInt without toString(radix)",
+    "api": "encodeBase",
+    "starter": "starters/097-base-encode.cjs",
+    "solution": "solutions/097-base-encode.cjs",
+    "test": "tests/097-base-encode.cjs"
+  },
+  {
+    "id": 98,
+    "title": "Transpose a rectangular matrix",
+    "api": "transpose",
+    "starter": "starters/098-matrix-transpose.cjs",
+    "solution": "solutions/098-matrix-transpose.cjs",
+    "test": "tests/098-matrix-transpose.cjs"
+  },
+  {
+    "id": 99,
+    "title": "Walk a matrix clockwise",
+    "api": "spiral",
+    "starter": "starters/099-spiral-traversal.cjs",
+    "solution": "solutions/099-spiral-traversal.cjs",
+    "test": "tests/099-spiral-traversal.cjs"
+  },
+  {
+    "id": 100,
+    "title": "Length of a strictly increasing subsequence",
+    "api": "lisLength",
+    "starter": "starters/100-increasing-subsequence.cjs",
+    "solution": "solutions/100-increasing-subsequence.cjs",
+    "test": "tests/100-increasing-subsequence.cjs"
+  },
+  {
+    "id": 101,
+    "title": "Levenshtein edit distance",
+    "api": "editDistance",
+    "starter": "starters/101-edit-distance.cjs",
+    "solution": "solutions/101-edit-distance.cjs",
+    "test": "tests/101-edit-distance.cjs"
+  },
+  {
+    "id": 102,
+    "title": "Fixed-size combinations reaching a target",
+    "api": "chooseSum",
+    "starter": "starters/102-choose-sum.cjs",
+    "solution": "solutions/102-choose-sum.cjs",
+    "test": "tests/102-choose-sum.cjs"
+  },
+  {
+    "id": 103,
+    "title": "Breadth-first reachable labels",
+    "api": "reachable",
+    "starter": "starters/103-graph-reachability.cjs",
+    "solution": "solutions/103-graph-reachability.cjs",
+    "test": "tests/103-graph-reachability.cjs"
+  }
+]

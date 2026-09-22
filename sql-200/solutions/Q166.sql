@@ -1,0 +1,1 @@
+WITH g AS(SELECT day,day-ROW_NUMBER() OVER(ORDER BY day) AS island FROM visits),agg AS(SELECT island,MIN(day) AS start_day,MAX(day) AS end_day,COUNT(*) AS size FROM g GROUP BY island) SELECT start_day,end_day,size FROM agg ORDER BY start_day;

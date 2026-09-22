@@ -1,0 +1,1 @@
+WITH r AS(SELECT id,delta AS units,SUM(delta) OVER(ORDER BY at DESC,id DESC) AS cumulative FROM moves WHERE sku='A' AND delta>0),a AS(SELECT id,MAX(0,MIN(units,8-(cumulative-units))) AS consumed FROM r) SELECT id,consumed FROM a WHERE consumed>0 ORDER BY id DESC;

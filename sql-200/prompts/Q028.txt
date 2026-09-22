@@ -1,0 +1,31 @@
+Q028 — family GROUP BY HAVING and aggregate policy, scenario 8: having-no-unknowns
+
+Task
+Return only regions with no NULL amounts, plus row count.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE sales(id INTEGER PRIMARY KEY,region TEXT,amount INTEGER,status TEXT);
+INSERT INTO sales VALUES(1,'East',10,'paid'),(2,'East',20,'paid'),(3,'East',100,'pending'),(4,'West',5,'paid'),(5,'West',NULL,'paid'),(6,'North',40,'paid'),(7,'North',-10,'refund'),(8,'South',NULL,'pending');
+
+Concrete example
+With the exact seed above, the first result row is {"region":"East","entries":3}.
+
+Expected shape
+Columns (exact aliases): region, entries. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "region": "East",
+    "entries": 3
+  },
+  {
+    "region": "North",
+    "entries": 2
+  }
+]
+
+Submission
+Edit starters/Q028.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q028
+Reference: node sql-200/verify.cjs --id=Q028

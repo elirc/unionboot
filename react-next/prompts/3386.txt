@@ -1,0 +1,18 @@
+Native listener phase contract / scenario 8 — Boundary 8; bubble-phase native listener
+
+TASK
+Attach native click listener to data-testid=outer via useEffect with capture=false. Child Inner button has its own React onClick. Output Trace appends N8 when native outer fires and R when React child fires. With delegation at root, native outer listener runs before child React bubble handler in both modes. Stop checkbox controls a native INNER listener which stopPropagation() before outer bubble; capture outer still fires. Reset clears trace. Cleanup exact listener/options on unmount. This tests native vs delegated event phases, not menu keyboard behavior.
+
+EXAMPLE
+Stop off => N8,R. Stop on => empty (React bubble also prevented).
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3386.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3386
+node react-next/verify.cjs --starters --id=3386

@@ -1,0 +1,5 @@
+'use strict';
+const assert=require('node:assert/strict');
+module.exports=async function(solve){
+const input=Object.freeze([1]);assert.deepEqual(solve(input),[1]);assert.deepEqual(input,[1]);assert.notEqual(solve(input),input);const alternate=input.map(x=>typeof x==='number'?-x:typeof x==='string'?'':!x);assert.deepEqual(solve(alternate),[...alternate].reverse());
+};

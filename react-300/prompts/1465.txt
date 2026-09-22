@@ -1,0 +1,18 @@
+Keyboard action menu / scenario 7 — Wrap movement; disabled Copy; close on activation
+
+TASK
+Actions button toggles role menu labelled Actions, aria-expanded. Opening focuses first enabled menuitem. Copy/Move/Share menuitems; Copy disabled. ArrowDown/Up wrap through enabled items; Home/End focus first/last. Roving tabIndex. Enter or Space activates focused item and outputs its name in Chosen, closes menu, restores trigger focus. Escape always closes/restores focus. Click menuitem same as keyboard.
+
+EXAMPLE
+Open then End focuses Share.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1465.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1465
+node react-300/verify.cjs --starters --id=1465

@@ -1,0 +1,18 @@
+Staged transaction ledger / scenario 8 — Negative opening balance
+
+TASK
+Amount text field accepts nonzero finite integer adjustments keeping balance in -8..8. Initial Balance=-2. Note requires trimmed text. Stage disabled when invalid, also guard submit. Stage hides form and shows Confirm/Cancel; Pending output is adjustment or none. Confirm commits once, clears drafts; Cancel discards pending but keeps drafts. Reset restores balance and clears drafts. Balance output never changes merely by staging.
+
+EXAMPLE
+Stage 10, then Cancel: Balance stays -2, Amount stays 10.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1546.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1546
+node react-300/verify.cjs --starters --id=1546

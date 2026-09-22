@@ -1,0 +1,35 @@
+Q234 — family Generated columns and derived schema invariants, scenario 4: generated-column-write-rejection
+
+Task
+Create virtual total, insert (1,2,10), and return row. Grader checks that direct assignment to total is rejected.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE source(id INTEGER PRIMARY KEY,qty INTEGER,price INTEGER,discount INTEGER);INSERT INTO source VALUES(1,2,10,3),(2,0,8,0),(3,3,7,2);
+
+Concrete example
+The first result row on this seed is {"id":1,"total":20}.
+
+Expected shape
+Columns: id, total. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "total": 20
+  }
+]
+
+Post-result integrity assertions:
+[
+  {
+    "sql": "UPDATE calc SET total=9",
+    "reject": "generated column"
+  }
+]
+
+Submission
+Write SQL in starters/Q234.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q234
+Learner: node sql-more/verify.cjs --starters --id=Q234

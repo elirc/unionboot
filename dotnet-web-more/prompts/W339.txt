@@ -1,0 +1,8 @@
+W339 | ProblemDetails customization
+Scenario 9: Problem status 429 with trace correlation
+Semantic key: problem-status-429-with-trace-correlation
+
+Return ProblemDetails status 429, title Rejected 429, type urn:problem:429, detail unchanged, instance from request path and traceId extension from context. Null detail stays null/omitted, never fabricated.
+
+Signature: public static IResult Handle(string? detail,HttpContext context)
+Implement starters/W339.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

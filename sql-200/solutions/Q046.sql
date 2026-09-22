@@ -1,0 +1,1 @@
+WITH r AS(SELECT *,ROW_NUMBER() OVER(PARTITION BY team ORDER BY score DESC,id) AS n FROM scores) SELECT team,name FROM r WHERE n<=2 ORDER BY team,n;

@@ -1,0 +1,1 @@
+CREATE TABLE emails(id INTEGER PRIMARY KEY,email TEXT,normalized TEXT AS(lower(trim(email))) UNIQUE);INSERT INTO emails(id,email) VALUES(1,' Ada@x '),(2,'Bo@x');SELECT id,normalized FROM emails ORDER BY id;

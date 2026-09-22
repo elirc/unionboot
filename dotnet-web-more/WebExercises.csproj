@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><LangVersion>14</LangVersion><EnableDefaultCompileItems>false</EnableDefaultCompileItems><ExerciseSet Condition="'$(ExerciseSet)' == ''">solutions</ExerciseSet><UseSharedCompilation>false</UseSharedCompilation><BuildInParallel>false</BuildInParallel><NuGetAudit>false</NuGetAudit></PropertyGroup>
+<ItemGroup><FrameworkReference Include="Microsoft.AspNetCore.App"/><Compile Include="Program.cs;Support.cs;tests/*.cs"/><Compile Include="$(ExerciseSet)/*.cs"/></ItemGroup>
+<Target Name="ValidateExerciseSet" BeforeTargets="PrepareForBuild"><Error Condition="'$(ExerciseSet)' != 'solutions' and '$(ExerciseSet)' != 'starters'" Text="ExerciseSet must be starters or solutions"/></Target>
+</Project>

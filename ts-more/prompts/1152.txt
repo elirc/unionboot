@@ -1,0 +1,15 @@
+1152: Two-stage typed composition / scenario 09
+
+Contract focus: higher-order generics; inference; callback variance.
+Compose first then second into a unary function. Preserve initial input and final output types; reject incompatible intermediate types. Do not invoke either callback until the returned function is called. Propagate exceptions.
+
+This is scenario 9/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize repeated extremes; scalar/state exercises use deterministic case seed 8. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1152.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1152.cjs. Positive strict fixtures: types/1152.positive.ts. Negative strict fixtures: types/1152.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=1152
+Reference check:
+  node ts-more/verify.cjs --id=1152
+

@@ -1,0 +1,15 @@
+{
+  "track": "js-more",
+  "mode": "starter",
+  "groups": 1,
+  "passed": 0,
+  "failed": 1,
+  "results": [
+    {
+      "id": 1808,
+      "passed": false,
+      "phase": "runtime",
+      "error": "Error: TODO exercise 1808\n    at solve (C:\\Users\\Owner\\Desktop\\unionboot\\js-more\\starters\\1808.cjs:6:9)\n    at check (C:\\Users\\Owner\\Desktop\\unionboot\\js-more\\tests\\1808.cjs:8:73)\n    at module.exports (C:\\Users\\Owner\\Desktop\\unionboot\\js-more\\tests\\1808.cjs:10:80)\n    at C:\\Users\\Owner\\Desktop\\unionboot\\js-more\\verify.cjs:34:188\n    at Object.<anonymous> (C:\\Users\\Owner\\Desktop\\unionboot\\js-more\\verify.cjs:45:3)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)"
+    }
+  ]
+}

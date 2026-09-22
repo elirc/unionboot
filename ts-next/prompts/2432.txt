@@ -1,0 +1,14 @@
+2432: Depth-limited readonly graph copies / readonly-depth=14
+
+Contract focus: recursive mapped readonly; bounded ownership.
+
+Clone and freeze exactly the first 14 object levels, leaving values at the boundary by reference with their original mutable types. Inputs are acyclic plain records/dense arrays with enumerable string keys only. Preserve primitives. Depth 0 is the root.
+
+Semantic variation 14/15: readonly-depth=14. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2432.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2432.cjs. Type contracts: types/2432.positive.ts and types/2432.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2432
+Reference: node ts-next/verify.cjs --id=2432

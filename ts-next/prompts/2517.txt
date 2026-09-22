@@ -1,0 +1,14 @@
+2517: Contravariant consumer narrowing / consumer-input-fields=name+tags
+
+Contract focus: in variance annotations; callback substitution.
+
+Adapt a consumer capable of handling any Partial<Model> to one publicly accepting complete Model records. This direction is safe by contravariance; the reverse is not. Construction must not call accept. Forward each reference exactly once, discard any callback return value so the adapter returns undefined, and propagate exceptions. A void callback type permits a value-returning function; it does not erase that value at runtime.
+
+Semantic variation 9/15: consumer-input-fields=name+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2517.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2517.cjs. Type contracts: types/2517.positive.ts and types/2517.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2517
+Reference: node ts-next/verify.cjs --id=2517

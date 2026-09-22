@@ -1,0 +1,8 @@
+// 2907 Coalesced live announcements / scenario 9 — Boundary 9; announce latest in burst
+// Subscribe injected source messages (strings). First message in a burst opens a fixed 450ms window using scheduler.after; subsequent messages do not reschedule it. On expiry announce only last burst message in role=status aria-label=Announcement with aria-live=polite and aria-atomic=true. Initially empty. Clear cancels pending burst and empties text. Guard stale scheduled callbacks and clean up both services on unmount. This is announcement batching, not a debounced text draft.
+// Full prompt: ../prompts/2907.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({source,scheduler}) {
+const [message,set]=useState('');const queue=useRef([]),cancel=useRef(null),ticket=useRef(0);const clear=()=>{ticket.current++;cancel.current?.();cancel.current=null;queue.current=[];};useEffect(()=>{let live=true;const off=source.subscribe(x=>{if(!live)return;queue.current.push(x);if(cancel.current)return;const id=++ticket.current;cancel.current=scheduler.after(450,()=>{if(!live||id!==ticket.current)return;set(queue.current.at(-1));queue.current=[];cancel.current=null;});});return()=>{live=false;off();clear();};},[source,scheduler]);return <section><div role="status" aria-label="Announcement" aria-live="polite" aria-atomic="true">{message}</div><button onClick={()=>{clear();set('');}}>Clear</button></section>;
+}

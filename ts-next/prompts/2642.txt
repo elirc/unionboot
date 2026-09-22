@@ -1,0 +1,14 @@
+2642: Finite retry-attempt contracts / maximum-attempts=14
+
+Contract focus: numeric literal unions; typed retry callbacks; failure boundaries.
+
+Retry sequentially at most 14 times with one-based attempt literals. No timers, jitter or external effects. Stop on first success, including undefined or false; after exhaustion return the exact last thrown value. Never invoke attempts beyond the typed union.
+
+Semantic variation 14/15: maximum-attempts=14. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2642.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2642.cjs. Type contracts: types/2642.positive.ts and types/2642.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2642
+Reference: node ts-next/verify.cjs --id=2642

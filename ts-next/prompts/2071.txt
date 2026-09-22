@@ -1,0 +1,14 @@
+2071: Overlapping tuple window types / window-width=13
+
+Contract focus: recursive tuple windows; saturated boundaries.
+
+Create every overlapping full window of width 13, advancing one position. Do not include partial windows. Return fresh outer and inner arrays with exact readonly tuple position contracts.
+
+Semantic variation 13/15: window-width=13. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2071.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2071.cjs. Type contracts: types/2071.positive.ts and types/2071.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2071
+Reference: node ts-next/verify.cjs --id=2071

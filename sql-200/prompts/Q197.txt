@@ -1,0 +1,29 @@
+Q197 — family EXPLAIN QUERY PLAN and index aware queries, scenario 7: auto-index-for-unique-constraint
+
+Task
+Create t2(x TEXT UNIQUE) and explain SELECT * FROM t2 WHERE x='a'. Observe the persistent index SQLite creates to enforce UNIQUE (sqlite_autoindex_t2_1), rather than a table scan. This constraint index is not a transient query-time automatic index.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE orders2(id INTEGER PRIMARY KEY,customer_id INTEGER NOT NULL,status TEXT NOT NULL);
+CREATE TABLE lines2(order_id INTEGER NOT NULL,product_id INTEGER);
+INSERT INTO orders2 VALUES(1,10,'paid'),(2,11,'pending'),(3,10,'paid');
+INSERT INTO lines2 VALUES(1,100),(1,101),(3,100);
+
+Concrete example
+With the exact seed above, the first result row is {"detail":"SEARCH t2 USING COVERING INDEX sqlite_autoindex_t2_1 (x=?)"}.
+
+Expected shape
+Columns (exact aliases): detail. 1 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "detail": "SEARCH t2 USING COVERING INDEX sqlite_autoindex_t2_1 (x=?)"
+  }
+]
+
+Submission
+Edit starters/Q197.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+EXPLAIN QUERY PLAN mode: return the native EQP rows. The runner compares only their detail strings in order, ignoring numeric node IDs/parent/estimates. Text expectations target the bundled SQLite version documented in GUIDE.txt.
+Run: node sql-200/verify.cjs --starters --id=Q197
+Reference: node sql-200/verify.cjs --id=Q197

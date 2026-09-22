@@ -1,0 +1,14 @@
+2285: Setter-key remapping surfaces / setter-fields=count
+
+Contract focus: mapped as clauses; callback parameter correlation.
+
+Create setter closures for count. Each remapped setter accepts only its corresponding field type and mutates that field on the original input. Other fields must remain untouched. Construction itself has no mutation.
+
+Semantic variation 2/15: setter-fields=count. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2285.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2285.cjs. Type contracts: types/2285.positive.ts and types/2285.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2285
+Reference: node ts-next/verify.cjs --id=2285

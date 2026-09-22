@@ -1,0 +1,18 @@
+Transition-backed route preview / scenario 9 — Boundary 9; urgent route replacement
+
+TASK
+Render route content inside Suspense with fallback Loading route. Go navigates from home to next. Set route urgently: show fallback while waiting; Pending output remains no. resource.read(route) returns text or throws its pending promise. Use output Route inside the boundary; Home button returns home. Route result for this scenario is Route 9.
+
+EXAMPLE
+Go while next is pending => Loading route appears. Resolve => Route 9.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2747.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{resource}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2747
+node react-next/verify.cjs --starters --id=2747

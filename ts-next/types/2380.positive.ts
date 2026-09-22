@@ -1,0 +1,7 @@
+import * as api from '../solutions/2380';
+import {solve} from '../solutions/2380';
+type Assert<T extends true>=T;
+type Equal<A,B>=(<T>()=>T extends A?1:2) extends (<T>()=>T extends B?1:2)?true:false;
+type NotAny<T>=0 extends (1&T)?false:true;
+type SafeFunction=Assert<NotAny<typeof solve>>;
+const handlers:api.Handlers={name:(value:string)=>String(value),count:(value:number)=>String(value),active:(value:boolean)=>String(value)};const s:string=solve({kind:"name",value:"Ada"},handlers);void s;

@@ -1,0 +1,18 @@
+Keyboard multi-selection listbox / scenario 13 — Boundary 5; selection insertion order
+
+TASK
+Listbox Choices with 5 options Item1..Item5; aria-multiselectable=true. Keep focus on listbox; aria-activedescendant points to active option. Initially Item1 active. Up/Down clamp active index. Space toggles active selection. Click toggles clicked option and makes it active. Selected output joins chosen names in selection order, or none. Ctrl+A selects all, Clear empties selection. No range selection.
+
+EXAMPLE
+Down Space, Up Space => Item2,Item1.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3251.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3251
+node react-next/verify.cjs --starters --id=3251

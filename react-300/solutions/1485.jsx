@@ -1,0 +1,7 @@
+// 1485 Line-item draft editor / scenario 7 — Zero permitted; cap 2; cancel restores drafts
+// Start with saved rows A:2 and B:3. Edit opens Quantity A/B text fields copied from saved rows. Require finite integers >=0 <=5. Save all disabled if any invalid, guarded on submit; commits both atomically and exits edit. Cancel exits without saving and next Edit resets to saved values. Outputs A and B always show saved quantities.
+// Full prompt: ../prompts/1485.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId} from 'react';
+export default function Exercise({}) {
+const [saved,save]=useState({A:2,B:3}),[draft,set]=useState(null),[editing,edit]=useState(false);const valid=draft&&Object.values(draft).every(x=>x.trim()!==''&&Number.isInteger(Number(x))&&Number(x)>=0&&Number(x)<=5);return <section>{['A','B'].map(k=><output key={k} aria-label={k}>{saved[k]}</output>)}{editing?<form onSubmit={e=>{e.preventDefault();if(valid){save({A:Number(draft.A),B:Number(draft.B)});edit(false);set(null);}}}>{['A','B'].map(k=><label key={k}>Quantity {k}<input value={draft[k]} onChange={e=>{const value=e.target.value;set(d=>({...d,[k]:value}));}}/></label>)}<button disabled={!valid}>Save all</button><button type="button" onClick={()=>{edit(false);set(null);}}>Cancel</button></form>:<button onClick={()=>{set(d=>d||{A:String(saved.A),B:String(saved.B)});edit(true);}}>Edit</button>}</section>;
+}

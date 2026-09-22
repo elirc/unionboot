@@ -1,0 +1,4002 @@
+[
+  {
+    "id": 584,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 6,
+    "variant": "clamp overshoot; -3..5; step 2; initial -1",
+    "title": "Bounded quantity editor / scenario 6 — clamp overshoot; -3..5; step 2; initial -1",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/584.txt",
+    "starter": "starters/584.jsx",
+    "solution": "solutions/584.jsx",
+    "test": "tests/584.cjs"
+  },
+  {
+    "id": 585,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 7,
+    "variant": "clamp overshoot; 2..11; step 4; initial 2",
+    "title": "Bounded quantity editor / scenario 7 — clamp overshoot; 2..11; step 4; initial 2",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/585.txt",
+    "starter": "starters/585.jsx",
+    "solution": "solutions/585.jsx",
+    "test": "tests/585.cjs"
+  },
+  {
+    "id": 586,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 8,
+    "variant": "clamp overshoot; 0..3; step 8; initial 3",
+    "title": "Bounded quantity editor / scenario 8 — clamp overshoot; 0..3; step 8; initial 3",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/586.txt",
+    "starter": "starters/586.jsx",
+    "solution": "solutions/586.jsx",
+    "test": "tests/586.cjs"
+  },
+  {
+    "id": 587,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 9,
+    "variant": "clamp overshoot; -8..-2; step 2; initial -5",
+    "title": "Bounded quantity editor / scenario 9 — clamp overshoot; -8..-2; step 2; initial -5",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/587.txt",
+    "starter": "starters/587.jsx",
+    "solution": "solutions/587.jsx",
+    "test": "tests/587.cjs"
+  },
+  {
+    "id": 588,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 10,
+    "variant": "clamp overshoot; 4..4; step 1; initial 4",
+    "title": "Bounded quantity editor / scenario 10 — clamp overshoot; 4..4; step 1; initial 4",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/588.txt",
+    "starter": "starters/588.jsx",
+    "solution": "solutions/588.jsx",
+    "test": "tests/588.cjs"
+  },
+  {
+    "id": 589,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 11,
+    "variant": "wrap to opposite bound; 0..5; step 2; initial 0",
+    "title": "Bounded quantity editor / scenario 11 — wrap to opposite bound; 0..5; step 2; initial 0",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/589.txt",
+    "starter": "starters/589.jsx",
+    "solution": "solutions/589.jsx",
+    "test": "tests/589.cjs"
+  },
+  {
+    "id": 590,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 12,
+    "variant": "wrap to opposite bound; -3..3; step 4; initial 3",
+    "title": "Bounded quantity editor / scenario 12 — wrap to opposite bound; -3..3; step 4; initial 3",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/590.txt",
+    "starter": "starters/590.jsx",
+    "solution": "solutions/590.jsx",
+    "test": "tests/590.cjs"
+  },
+  {
+    "id": 591,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 13,
+    "variant": "wrap to opposite bound; 2..9; step 20; initial 5",
+    "title": "Bounded quantity editor / scenario 13 — wrap to opposite bound; 2..9; step 20; initial 5",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/591.txt",
+    "starter": "starters/591.jsx",
+    "solution": "solutions/591.jsx",
+    "test": "tests/591.cjs"
+  },
+  {
+    "id": 592,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 14,
+    "variant": "wrap to opposite bound; 0..1; step 1; initial 1",
+    "title": "Bounded quantity editor / scenario 14 — wrap to opposite bound; 0..1; step 1; initial 1",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/592.txt",
+    "starter": "starters/592.jsx",
+    "solution": "solutions/592.jsx",
+    "test": "tests/592.cjs"
+  },
+  {
+    "id": 593,
+    "tech": "react",
+    "family": "Bounded quantity editor",
+    "familyIndex": 1,
+    "scenario": 15,
+    "variant": "clamp overshoot; -5..0; step 3; initial -2",
+    "title": "Bounded quantity editor / scenario 15 — clamp overshoot; -5..0; step 3; initial -2",
+    "originalIds": [
+      284,
+      285,
+      286,
+      287,
+      288
+    ],
+    "prompt": "prompts/593.txt",
+    "starter": "starters/593.jsx",
+    "solution": "solutions/593.jsx",
+    "test": "tests/593.cjs"
+  },
+  {
+    "id": 594,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 6,
+    "variant": "2..5 trimmed characters; letters; upper saved text",
+    "title": "Validated text submission / scenario 6 — 2..5 trimmed characters; letters; upper saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/594.txt",
+    "starter": "starters/594.jsx",
+    "solution": "solutions/594.jsx",
+    "test": "tests/594.cjs"
+  },
+  {
+    "id": 595,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 7,
+    "variant": "3..6 trimmed characters; letters; lower saved text",
+    "title": "Validated text submission / scenario 7 — 3..6 trimmed characters; letters; lower saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/595.txt",
+    "starter": "starters/595.jsx",
+    "solution": "solutions/595.jsx",
+    "test": "tests/595.cjs"
+  },
+  {
+    "id": 596,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 8,
+    "variant": "1..3 trimmed characters; digits; keep saved text",
+    "title": "Validated text submission / scenario 8 — 1..3 trimmed characters; digits; keep saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/596.txt",
+    "starter": "starters/596.jsx",
+    "solution": "solutions/596.jsx",
+    "test": "tests/596.cjs"
+  },
+  {
+    "id": 597,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 9,
+    "variant": "4..8 trimmed characters; letters; keep saved text",
+    "title": "Validated text submission / scenario 9 — 4..8 trimmed characters; letters; keep saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/597.txt",
+    "starter": "starters/597.jsx",
+    "solution": "solutions/597.jsx",
+    "test": "tests/597.cjs"
+  },
+  {
+    "id": 598,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 10,
+    "variant": "2..2 trimmed characters; digits; keep saved text",
+    "title": "Validated text submission / scenario 10 — 2..2 trimmed characters; digits; keep saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/598.txt",
+    "starter": "starters/598.jsx",
+    "solution": "solutions/598.jsx",
+    "test": "tests/598.cjs"
+  },
+  {
+    "id": 599,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 11,
+    "variant": "3..5 trimmed characters; any; upper saved text",
+    "title": "Validated text submission / scenario 11 — 3..5 trimmed characters; any; upper saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/599.txt",
+    "starter": "starters/599.jsx",
+    "solution": "solutions/599.jsx",
+    "test": "tests/599.cjs"
+  },
+  {
+    "id": 600,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 12,
+    "variant": "1..4 trimmed characters; any; lower saved text",
+    "title": "Validated text submission / scenario 12 — 1..4 trimmed characters; any; lower saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/600.txt",
+    "starter": "starters/600.jsx",
+    "solution": "solutions/600.jsx",
+    "test": "tests/600.cjs"
+  },
+  {
+    "id": 601,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 13,
+    "variant": "5..9 trimmed characters; letters; upper saved text",
+    "title": "Validated text submission / scenario 13 — 5..9 trimmed characters; letters; upper saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/601.txt",
+    "starter": "starters/601.jsx",
+    "solution": "solutions/601.jsx",
+    "test": "tests/601.cjs"
+  },
+  {
+    "id": 602,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 14,
+    "variant": "2..6 trimmed characters; digits; keep saved text",
+    "title": "Validated text submission / scenario 14 — 2..6 trimmed characters; digits; keep saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/602.txt",
+    "starter": "starters/602.jsx",
+    "solution": "solutions/602.jsx",
+    "test": "tests/602.cjs"
+  },
+  {
+    "id": 603,
+    "tech": "react",
+    "family": "Validated text submission",
+    "familyIndex": 2,
+    "scenario": 15,
+    "variant": "4..4 trimmed characters; any; keep saved text",
+    "title": "Validated text submission / scenario 15 — 4..4 trimmed characters; any; keep saved text",
+    "originalIds": [
+      289,
+      290,
+      291,
+      292,
+      293
+    ],
+    "prompt": "prompts/603.txt",
+    "starter": "starters/603.jsx",
+    "solution": "solutions/603.jsx",
+    "test": "tests/603.cjs"
+  },
+  {
+    "id": 604,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 6,
+    "variant": "includes, case-sensitive, trim, retain duplicates, limit 2",
+    "title": "Filtered product list / scenario 6 — includes, case-sensitive, trim, retain duplicates, limit 2",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/604.txt",
+    "starter": "starters/604.jsx",
+    "solution": "solutions/604.jsx",
+    "test": "tests/604.cjs"
+  },
+  {
+    "id": 605,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 7,
+    "variant": "startsWith, case-folded, literal spaces, retain duplicates, limit none",
+    "title": "Filtered product list / scenario 7 — startsWith, case-folded, literal spaces, retain duplicates, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/605.txt",
+    "starter": "starters/605.jsx",
+    "solution": "solutions/605.jsx",
+    "test": "tests/605.cjs"
+  },
+  {
+    "id": 606,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 8,
+    "variant": "endsWith, case-folded, trim, retain duplicates, limit none",
+    "title": "Filtered product list / scenario 8 — endsWith, case-folded, trim, retain duplicates, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/606.txt",
+    "starter": "starters/606.jsx",
+    "solution": "solutions/606.jsx",
+    "test": "tests/606.cjs"
+  },
+  {
+    "id": 607,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 9,
+    "variant": "includes, case-sensitive, literal spaces, retain duplicates, limit none",
+    "title": "Filtered product list / scenario 9 — includes, case-sensitive, literal spaces, retain duplicates, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/607.txt",
+    "starter": "starters/607.jsx",
+    "solution": "solutions/607.jsx",
+    "test": "tests/607.cjs"
+  },
+  {
+    "id": 608,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 10,
+    "variant": "startsWith, case-folded, trim, retain duplicates, limit 2",
+    "title": "Filtered product list / scenario 10 — startsWith, case-folded, trim, retain duplicates, limit 2",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/608.txt",
+    "starter": "starters/608.jsx",
+    "solution": "solutions/608.jsx",
+    "test": "tests/608.cjs"
+  },
+  {
+    "id": 609,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 11,
+    "variant": "endsWith, case-folded, literal spaces, deduplicate exact strings, limit none",
+    "title": "Filtered product list / scenario 11 — endsWith, case-folded, literal spaces, deduplicate exact strings, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/609.txt",
+    "starter": "starters/609.jsx",
+    "solution": "solutions/609.jsx",
+    "test": "tests/609.cjs"
+  },
+  {
+    "id": 610,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 12,
+    "variant": "includes, case-sensitive, trim, deduplicate exact strings, limit none",
+    "title": "Filtered product list / scenario 12 — includes, case-sensitive, trim, deduplicate exact strings, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/610.txt",
+    "starter": "starters/610.jsx",
+    "solution": "solutions/610.jsx",
+    "test": "tests/610.cjs"
+  },
+  {
+    "id": 611,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 13,
+    "variant": "startsWith, case-folded, literal spaces, deduplicate exact strings, limit none",
+    "title": "Filtered product list / scenario 13 — startsWith, case-folded, literal spaces, deduplicate exact strings, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/611.txt",
+    "starter": "starters/611.jsx",
+    "solution": "solutions/611.jsx",
+    "test": "tests/611.cjs"
+  },
+  {
+    "id": 612,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 14,
+    "variant": "endsWith, case-folded, trim, deduplicate exact strings, limit 2",
+    "title": "Filtered product list / scenario 14 — endsWith, case-folded, trim, deduplicate exact strings, limit 2",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/612.txt",
+    "starter": "starters/612.jsx",
+    "solution": "solutions/612.jsx",
+    "test": "tests/612.cjs"
+  },
+  {
+    "id": 613,
+    "tech": "react",
+    "family": "Filtered product list",
+    "familyIndex": 3,
+    "scenario": 15,
+    "variant": "includes, case-sensitive, literal spaces, deduplicate exact strings, limit none",
+    "title": "Filtered product list / scenario 15 — includes, case-sensitive, literal spaces, deduplicate exact strings, limit none",
+    "originalIds": [
+      294,
+      295,
+      296,
+      297,
+      298
+    ],
+    "prompt": "prompts/613.txt",
+    "starter": "starters/613.jsx",
+    "solution": "solutions/613.jsx",
+    "test": "tests/613.cjs"
+  },
+  {
+    "id": 614,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 6,
+    "variant": "one must stay open; One disabled; unmount closed content",
+    "title": "Exclusive accordion / scenario 6 — one must stay open; One disabled; unmount closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/614.txt",
+    "starter": "starters/614.jsx",
+    "solution": "solutions/614.jsx",
+    "test": "tests/614.cjs"
+  },
+  {
+    "id": 615,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 7,
+    "variant": "all may close; Two disabled; unmount closed content",
+    "title": "Exclusive accordion / scenario 7 — all may close; Two disabled; unmount closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/615.txt",
+    "starter": "starters/615.jsx",
+    "solution": "solutions/615.jsx",
+    "test": "tests/615.cjs"
+  },
+  {
+    "id": 616,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 8,
+    "variant": "one must stay open; Three disabled; unmount closed content",
+    "title": "Exclusive accordion / scenario 8 — one must stay open; Three disabled; unmount closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/616.txt",
+    "starter": "starters/616.jsx",
+    "solution": "solutions/616.jsx",
+    "test": "tests/616.cjs"
+  },
+  {
+    "id": 617,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 9,
+    "variant": "all may close; One disabled; unmount closed content",
+    "title": "Exclusive accordion / scenario 9 — all may close; One disabled; unmount closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/617.txt",
+    "starter": "starters/617.jsx",
+    "solution": "solutions/617.jsx",
+    "test": "tests/617.cjs"
+  },
+  {
+    "id": 618,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 10,
+    "variant": "one must stay open; Two disabled; unmount closed content",
+    "title": "Exclusive accordion / scenario 10 — one must stay open; Two disabled; unmount closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/618.txt",
+    "starter": "starters/618.jsx",
+    "solution": "solutions/618.jsx",
+    "test": "tests/618.cjs"
+  },
+  {
+    "id": 619,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 11,
+    "variant": "all may close; Three disabled; hide closed content",
+    "title": "Exclusive accordion / scenario 11 — all may close; Three disabled; hide closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/619.txt",
+    "starter": "starters/619.jsx",
+    "solution": "solutions/619.jsx",
+    "test": "tests/619.cjs"
+  },
+  {
+    "id": 620,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 12,
+    "variant": "one must stay open; One disabled; hide closed content",
+    "title": "Exclusive accordion / scenario 12 — one must stay open; One disabled; hide closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/620.txt",
+    "starter": "starters/620.jsx",
+    "solution": "solutions/620.jsx",
+    "test": "tests/620.cjs"
+  },
+  {
+    "id": 621,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 13,
+    "variant": "all may close; Two disabled; hide closed content",
+    "title": "Exclusive accordion / scenario 13 — all may close; Two disabled; hide closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/621.txt",
+    "starter": "starters/621.jsx",
+    "solution": "solutions/621.jsx",
+    "test": "tests/621.cjs"
+  },
+  {
+    "id": 622,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 14,
+    "variant": "one must stay open; Three disabled; hide closed content",
+    "title": "Exclusive accordion / scenario 14 — one must stay open; Three disabled; hide closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/622.txt",
+    "starter": "starters/622.jsx",
+    "solution": "solutions/622.jsx",
+    "test": "tests/622.cjs"
+  },
+  {
+    "id": 623,
+    "tech": "react",
+    "family": "Exclusive accordion",
+    "familyIndex": 4,
+    "scenario": 15,
+    "variant": "all may close; One disabled; hide closed content",
+    "title": "Exclusive accordion / scenario 15 — all may close; One disabled; hide closed content",
+    "originalIds": [
+      299,
+      300,
+      301,
+      302,
+      303
+    ],
+    "prompt": "prompts/623.txt",
+    "starter": "starters/623.jsx",
+    "solution": "solutions/623.jsx",
+    "test": "tests/623.cjs"
+  },
+  {
+    "id": 624,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 6,
+    "variant": "horizontal; automatic activation; disabled Red; initial 1",
+    "title": "Accessible tab selection / scenario 6 — horizontal; automatic activation; disabled Red; initial 1",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/624.txt",
+    "starter": "starters/624.jsx",
+    "solution": "solutions/624.jsx",
+    "test": "tests/624.cjs"
+  },
+  {
+    "id": 625,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 7,
+    "variant": "vertical; automatic activation; disabled Green; initial 2",
+    "title": "Accessible tab selection / scenario 7 — vertical; automatic activation; disabled Green; initial 2",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/625.txt",
+    "starter": "starters/625.jsx",
+    "solution": "solutions/625.jsx",
+    "test": "tests/625.cjs"
+  },
+  {
+    "id": 626,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 8,
+    "variant": "horizontal; automatic activation; disabled Blue; initial 0",
+    "title": "Accessible tab selection / scenario 8 — horizontal; automatic activation; disabled Blue; initial 0",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/626.txt",
+    "starter": "starters/626.jsx",
+    "solution": "solutions/626.jsx",
+    "test": "tests/626.cjs"
+  },
+  {
+    "id": 627,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 9,
+    "variant": "vertical; automatic activation; disabled Red; initial 2",
+    "title": "Accessible tab selection / scenario 9 — vertical; automatic activation; disabled Red; initial 2",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/627.txt",
+    "starter": "starters/627.jsx",
+    "solution": "solutions/627.jsx",
+    "test": "tests/627.cjs"
+  },
+  {
+    "id": 628,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 10,
+    "variant": "horizontal; automatic activation; disabled Green; initial 0",
+    "title": "Accessible tab selection / scenario 10 — horizontal; automatic activation; disabled Green; initial 0",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/628.txt",
+    "starter": "starters/628.jsx",
+    "solution": "solutions/628.jsx",
+    "test": "tests/628.cjs"
+  },
+  {
+    "id": 629,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 11,
+    "variant": "vertical; manual Enter/Space activation; disabled Blue; initial 1",
+    "title": "Accessible tab selection / scenario 11 — vertical; manual Enter/Space activation; disabled Blue; initial 1",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/629.txt",
+    "starter": "starters/629.jsx",
+    "solution": "solutions/629.jsx",
+    "test": "tests/629.cjs"
+  },
+  {
+    "id": 630,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 12,
+    "variant": "horizontal; manual Enter/Space activation; disabled Red; initial 1",
+    "title": "Accessible tab selection / scenario 12 — horizontal; manual Enter/Space activation; disabled Red; initial 1",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/630.txt",
+    "starter": "starters/630.jsx",
+    "solution": "solutions/630.jsx",
+    "test": "tests/630.cjs"
+  },
+  {
+    "id": 631,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 13,
+    "variant": "vertical; manual Enter/Space activation; disabled Green; initial 2",
+    "title": "Accessible tab selection / scenario 13 — vertical; manual Enter/Space activation; disabled Green; initial 2",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/631.txt",
+    "starter": "starters/631.jsx",
+    "solution": "solutions/631.jsx",
+    "test": "tests/631.cjs"
+  },
+  {
+    "id": 632,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 14,
+    "variant": "horizontal; manual Enter/Space activation; disabled Blue; initial 0",
+    "title": "Accessible tab selection / scenario 14 — horizontal; manual Enter/Space activation; disabled Blue; initial 0",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/632.txt",
+    "starter": "starters/632.jsx",
+    "solution": "solutions/632.jsx",
+    "test": "tests/632.cjs"
+  },
+  {
+    "id": 633,
+    "tech": "react",
+    "family": "Accessible tab selection",
+    "familyIndex": 5,
+    "scenario": 15,
+    "variant": "vertical; manual Enter/Space activation; disabled Red; initial 2",
+    "title": "Accessible tab selection / scenario 15 — vertical; manual Enter/Space activation; disabled Red; initial 2",
+    "originalIds": [
+      304,
+      305,
+      306,
+      307,
+      308
+    ],
+    "prompt": "prompts/633.txt",
+    "starter": "starters/633.jsx",
+    "solution": "solutions/633.jsx",
+    "test": "tests/633.cjs"
+  },
+  {
+    "id": 634,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 6,
+    "variant": "cap 1; click output; initial empty; locked B",
+    "title": "Checklist selection cap / scenario 6 — cap 1; click output; initial empty; locked B",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/634.txt",
+    "starter": "starters/634.jsx",
+    "solution": "solutions/634.jsx",
+    "test": "tests/634.cjs"
+  },
+  {
+    "id": 635,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 7,
+    "variant": "cap 2; alphabetical output; initial empty; locked none",
+    "title": "Checklist selection cap / scenario 7 — cap 2; alphabetical output; initial empty; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/635.txt",
+    "starter": "starters/635.jsx",
+    "solution": "solutions/635.jsx",
+    "test": "tests/635.cjs"
+  },
+  {
+    "id": 636,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 8,
+    "variant": "cap 3; click output; initial empty; locked none",
+    "title": "Checklist selection cap / scenario 8 — cap 3; click output; initial empty; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/636.txt",
+    "starter": "starters/636.jsx",
+    "solution": "solutions/636.jsx",
+    "test": "tests/636.cjs"
+  },
+  {
+    "id": 637,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 9,
+    "variant": "cap 1; alphabetical output; initial empty; locked none",
+    "title": "Checklist selection cap / scenario 9 — cap 1; alphabetical output; initial empty; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/637.txt",
+    "starter": "starters/637.jsx",
+    "solution": "solutions/637.jsx",
+    "test": "tests/637.cjs"
+  },
+  {
+    "id": 638,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 10,
+    "variant": "cap 2; click output; initial empty; locked B",
+    "title": "Checklist selection cap / scenario 10 — cap 2; click output; initial empty; locked B",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/638.txt",
+    "starter": "starters/638.jsx",
+    "solution": "solutions/638.jsx",
+    "test": "tests/638.cjs"
+  },
+  {
+    "id": 639,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 11,
+    "variant": "cap 3; alphabetical output; initial D; locked none",
+    "title": "Checklist selection cap / scenario 11 — cap 3; alphabetical output; initial D; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/639.txt",
+    "starter": "starters/639.jsx",
+    "solution": "solutions/639.jsx",
+    "test": "tests/639.cjs"
+  },
+  {
+    "id": 640,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 12,
+    "variant": "cap 1; click output; initial D; locked none",
+    "title": "Checklist selection cap / scenario 12 — cap 1; click output; initial D; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/640.txt",
+    "starter": "starters/640.jsx",
+    "solution": "solutions/640.jsx",
+    "test": "tests/640.cjs"
+  },
+  {
+    "id": 641,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 13,
+    "variant": "cap 2; alphabetical output; initial D; locked none",
+    "title": "Checklist selection cap / scenario 13 — cap 2; alphabetical output; initial D; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/641.txt",
+    "starter": "starters/641.jsx",
+    "solution": "solutions/641.jsx",
+    "test": "tests/641.cjs"
+  },
+  {
+    "id": 642,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 14,
+    "variant": "cap 3; click output; initial D; locked B",
+    "title": "Checklist selection cap / scenario 14 — cap 3; click output; initial D; locked B",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/642.txt",
+    "starter": "starters/642.jsx",
+    "solution": "solutions/642.jsx",
+    "test": "tests/642.cjs"
+  },
+  {
+    "id": 643,
+    "tech": "react",
+    "family": "Checklist selection cap",
+    "familyIndex": 6,
+    "scenario": 15,
+    "variant": "cap 1; alphabetical output; initial D; locked none",
+    "title": "Checklist selection cap / scenario 15 — cap 1; alphabetical output; initial D; locked none",
+    "originalIds": [
+      309,
+      310,
+      311,
+      312,
+      313
+    ],
+    "prompt": "prompts/643.txt",
+    "starter": "starters/643.jsx",
+    "solution": "solutions/643.jsx",
+    "test": "tests/643.cjs"
+  },
+  {
+    "id": 644,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 6,
+    "variant": "initial name ascending; case-folded names; null always first",
+    "title": "Stable sortable table / scenario 6 — initial name ascending; case-folded names; null always first",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/644.txt",
+    "starter": "starters/644.jsx",
+    "solution": "solutions/644.jsx",
+    "test": "tests/644.cjs"
+  },
+  {
+    "id": 645,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 7,
+    "variant": "initial score ascending; case-sensitive names; null always first",
+    "title": "Stable sortable table / scenario 7 — initial score ascending; case-sensitive names; null always first",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/645.txt",
+    "starter": "starters/645.jsx",
+    "solution": "solutions/645.jsx",
+    "test": "tests/645.cjs"
+  },
+  {
+    "id": 646,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 8,
+    "variant": "initial name ascending; case-sensitive names; null always last",
+    "title": "Stable sortable table / scenario 8 — initial name ascending; case-sensitive names; null always last",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/646.txt",
+    "starter": "starters/646.jsx",
+    "solution": "solutions/646.jsx",
+    "test": "tests/646.cjs"
+  },
+  {
+    "id": 647,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 9,
+    "variant": "initial score ascending; case-folded names; null always last",
+    "title": "Stable sortable table / scenario 9 — initial score ascending; case-folded names; null always last",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/647.txt",
+    "starter": "starters/647.jsx",
+    "solution": "solutions/647.jsx",
+    "test": "tests/647.cjs"
+  },
+  {
+    "id": 648,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 10,
+    "variant": "initial name ascending; case-sensitive names; null always first",
+    "title": "Stable sortable table / scenario 10 — initial name ascending; case-sensitive names; null always first",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/648.txt",
+    "starter": "starters/648.jsx",
+    "solution": "solutions/648.jsx",
+    "test": "tests/648.cjs"
+  },
+  {
+    "id": 649,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 11,
+    "variant": "initial score descending; case-sensitive names; null always first",
+    "title": "Stable sortable table / scenario 11 — initial score descending; case-sensitive names; null always first",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/649.txt",
+    "starter": "starters/649.jsx",
+    "solution": "solutions/649.jsx",
+    "test": "tests/649.cjs"
+  },
+  {
+    "id": 650,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 12,
+    "variant": "initial name descending; case-folded names; null always last",
+    "title": "Stable sortable table / scenario 12 — initial name descending; case-folded names; null always last",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/650.txt",
+    "starter": "starters/650.jsx",
+    "solution": "solutions/650.jsx",
+    "test": "tests/650.cjs"
+  },
+  {
+    "id": 651,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 13,
+    "variant": "initial score descending; case-sensitive names; null always last",
+    "title": "Stable sortable table / scenario 13 — initial score descending; case-sensitive names; null always last",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/651.txt",
+    "starter": "starters/651.jsx",
+    "solution": "solutions/651.jsx",
+    "test": "tests/651.cjs"
+  },
+  {
+    "id": 652,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 14,
+    "variant": "initial name descending; case-sensitive names; null always first",
+    "title": "Stable sortable table / scenario 14 — initial name descending; case-sensitive names; null always first",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/652.txt",
+    "starter": "starters/652.jsx",
+    "solution": "solutions/652.jsx",
+    "test": "tests/652.cjs"
+  },
+  {
+    "id": 653,
+    "tech": "react",
+    "family": "Stable sortable table",
+    "familyIndex": 7,
+    "scenario": 15,
+    "variant": "initial score descending; case-folded names; null always first",
+    "title": "Stable sortable table / scenario 15 — initial score descending; case-folded names; null always first",
+    "originalIds": [
+      314,
+      315,
+      316,
+      317,
+      318
+    ],
+    "prompt": "prompts/653.txt",
+    "starter": "starters/653.jsx",
+    "solution": "solutions/653.jsx",
+    "test": "tests/653.cjs"
+  },
+  {
+    "id": 654,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 6,
+    "variant": "size 1; start page 1; bounded navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 6 — size 1; start page 1; bounded navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/654.txt",
+    "starter": "starters/654.jsx",
+    "solution": "solutions/654.jsx",
+    "test": "tests/654.cjs"
+  },
+  {
+    "id": 655,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 7,
+    "variant": "size 2; start page 2; bounded navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 7 — size 2; start page 2; bounded navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/655.txt",
+    "starter": "starters/655.jsx",
+    "solution": "solutions/655.jsx",
+    "test": "tests/655.cjs"
+  },
+  {
+    "id": 656,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 8,
+    "variant": "size 3; start page 3; bounded navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 8 — size 3; start page 3; bounded navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/656.txt",
+    "starter": "starters/656.jsx",
+    "solution": "solutions/656.jsx",
+    "test": "tests/656.cjs"
+  },
+  {
+    "id": 657,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 9,
+    "variant": "size 4; start page 1; bounded navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 9 — size 4; start page 1; bounded navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/657.txt",
+    "starter": "starters/657.jsx",
+    "solution": "solutions/657.jsx",
+    "test": "tests/657.cjs"
+  },
+  {
+    "id": 658,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 10,
+    "variant": "size 1; start page 2; bounded navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 10 — size 1; start page 2; bounded navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/658.txt",
+    "starter": "starters/658.jsx",
+    "solution": "solutions/658.jsx",
+    "test": "tests/658.cjs"
+  },
+  {
+    "id": 659,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 11,
+    "variant": "size 2; start page 3; cyclic navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 11 — size 2; start page 3; cyclic navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/659.txt",
+    "starter": "starters/659.jsx",
+    "solution": "solutions/659.jsx",
+    "test": "tests/659.cjs"
+  },
+  {
+    "id": 660,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 12,
+    "variant": "size 3; start page 1; cyclic navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 12 — size 3; start page 1; cyclic navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/660.txt",
+    "starter": "starters/660.jsx",
+    "solution": "solutions/660.jsx",
+    "test": "tests/660.cjs"
+  },
+  {
+    "id": 661,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 13,
+    "variant": "size 4; start page 2; cyclic navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 13 — size 4; start page 2; cyclic navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/661.txt",
+    "starter": "starters/661.jsx",
+    "solution": "solutions/661.jsx",
+    "test": "tests/661.cjs"
+  },
+  {
+    "id": 662,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 14,
+    "variant": "size 1; start page 3; cyclic navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 14 — size 1; start page 3; cyclic navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/662.txt",
+    "starter": "starters/662.jsx",
+    "solution": "solutions/662.jsx",
+    "test": "tests/662.cjs"
+  },
+  {
+    "id": 663,
+    "tech": "react",
+    "family": "Paged list controls",
+    "familyIndex": 8,
+    "scenario": 15,
+    "variant": "size 2; start page 1; cyclic navigation; shrink permanently clamps",
+    "title": "Paged list controls / scenario 15 — size 2; start page 1; cyclic navigation; shrink permanently clamps",
+    "originalIds": [
+      319,
+      320,
+      321,
+      322,
+      323
+    ],
+    "prompt": "prompts/663.txt",
+    "starter": "starters/663.jsx",
+    "solution": "solutions/663.jsx",
+    "test": "tests/663.cjs"
+  },
+  {
+    "id": 664,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 6,
+    "variant": "trim length 1..4; upper; unchanged allowed",
+    "title": "Editable label with cancel / scenario 6 — trim length 1..4; upper; unchanged allowed",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/664.txt",
+    "starter": "starters/664.jsx",
+    "solution": "solutions/664.jsx",
+    "test": "tests/664.cjs"
+  },
+  {
+    "id": 665,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 7,
+    "variant": "trim length 2..5; lower; unchanged allowed",
+    "title": "Editable label with cancel / scenario 7 — trim length 2..5; lower; unchanged allowed",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/665.txt",
+    "starter": "starters/665.jsx",
+    "solution": "solutions/665.jsx",
+    "test": "tests/665.cjs"
+  },
+  {
+    "id": 666,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 8,
+    "variant": "trim length 3..6; keep; unchanged allowed",
+    "title": "Editable label with cancel / scenario 8 — trim length 3..6; keep; unchanged allowed",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/666.txt",
+    "starter": "starters/666.jsx",
+    "solution": "solutions/666.jsx",
+    "test": "tests/666.cjs"
+  },
+  {
+    "id": 667,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 9,
+    "variant": "trim length 1..5; upper; unchanged allowed",
+    "title": "Editable label with cancel / scenario 9 — trim length 1..5; upper; unchanged allowed",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/667.txt",
+    "starter": "starters/667.jsx",
+    "solution": "solutions/667.jsx",
+    "test": "tests/667.cjs"
+  },
+  {
+    "id": 668,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 10,
+    "variant": "trim length 2..6; lower; unchanged allowed",
+    "title": "Editable label with cancel / scenario 10 — trim length 2..6; lower; unchanged allowed",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/668.txt",
+    "starter": "starters/668.jsx",
+    "solution": "solutions/668.jsx",
+    "test": "tests/668.cjs"
+  },
+  {
+    "id": 669,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 11,
+    "variant": "trim length 3..7; keep; unchanged cannot save",
+    "title": "Editable label with cancel / scenario 11 — trim length 3..7; keep; unchanged cannot save",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/669.txt",
+    "starter": "starters/669.jsx",
+    "solution": "solutions/669.jsx",
+    "test": "tests/669.cjs"
+  },
+  {
+    "id": 670,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 12,
+    "variant": "trim length 1..6; upper; unchanged cannot save",
+    "title": "Editable label with cancel / scenario 12 — trim length 1..6; upper; unchanged cannot save",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/670.txt",
+    "starter": "starters/670.jsx",
+    "solution": "solutions/670.jsx",
+    "test": "tests/670.cjs"
+  },
+  {
+    "id": 671,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 13,
+    "variant": "trim length 2..7; lower; unchanged cannot save",
+    "title": "Editable label with cancel / scenario 13 — trim length 2..7; lower; unchanged cannot save",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/671.txt",
+    "starter": "starters/671.jsx",
+    "solution": "solutions/671.jsx",
+    "test": "tests/671.cjs"
+  },
+  {
+    "id": 672,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 14,
+    "variant": "trim length 3..8; keep; unchanged cannot save",
+    "title": "Editable label with cancel / scenario 14 — trim length 3..8; keep; unchanged cannot save",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/672.txt",
+    "starter": "starters/672.jsx",
+    "solution": "solutions/672.jsx",
+    "test": "tests/672.cjs"
+  },
+  {
+    "id": 673,
+    "tech": "react",
+    "family": "Editable label with cancel",
+    "familyIndex": 9,
+    "scenario": 15,
+    "variant": "trim length 1..7; upper; unchanged cannot save",
+    "title": "Editable label with cancel / scenario 15 — trim length 1..7; upper; unchanged cannot save",
+    "originalIds": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "prompt": "prompts/673.txt",
+    "starter": "starters/673.jsx",
+    "solution": "solutions/673.jsx",
+    "test": "tests/673.cjs"
+  },
+  {
+    "id": 674,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 6,
+    "variant": "2 records; remove all; phrase DELETE; case-insensitive; phrase only",
+    "title": "Confirm destructive local action / scenario 6 — 2 records; remove all; phrase DELETE; case-insensitive; phrase only",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/674.txt",
+    "starter": "starters/674.jsx",
+    "solution": "solutions/674.jsx",
+    "test": "tests/674.cjs"
+  },
+  {
+    "id": 675,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 7,
+    "variant": "3 records; remove one per confirmation; phrase DELETE; case-sensitive; phrase only",
+    "title": "Confirm destructive local action / scenario 7 — 3 records; remove one per confirmation; phrase DELETE; case-sensitive; phrase only",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/675.txt",
+    "starter": "starters/675.jsx",
+    "solution": "solutions/675.jsx",
+    "test": "tests/675.cjs"
+  },
+  {
+    "id": 676,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 8,
+    "variant": "4 records; remove all; phrase DELETE; case-sensitive; phrase only",
+    "title": "Confirm destructive local action / scenario 8 — 4 records; remove all; phrase DELETE; case-sensitive; phrase only",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/676.txt",
+    "starter": "starters/676.jsx",
+    "solution": "solutions/676.jsx",
+    "test": "tests/676.cjs"
+  },
+  {
+    "id": 677,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 9,
+    "variant": "5 records; remove one per confirmation; phrase DELETE; case-insensitive; phrase only",
+    "title": "Confirm destructive local action / scenario 9 — 5 records; remove one per confirmation; phrase DELETE; case-insensitive; phrase only",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/677.txt",
+    "starter": "starters/677.jsx",
+    "solution": "solutions/677.jsx",
+    "test": "tests/677.cjs"
+  },
+  {
+    "id": 678,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 10,
+    "variant": "6 records; remove all; phrase DELETE; case-sensitive; phrase only",
+    "title": "Confirm destructive local action / scenario 10 — 6 records; remove all; phrase DELETE; case-sensitive; phrase only",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/678.txt",
+    "starter": "starters/678.jsx",
+    "solution": "solutions/678.jsx",
+    "test": "tests/678.cjs"
+  },
+  {
+    "id": 679,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 11,
+    "variant": "7 records; remove one per confirmation; phrase remove; case-sensitive; acknowledgment required",
+    "title": "Confirm destructive local action / scenario 11 — 7 records; remove one per confirmation; phrase remove; case-sensitive; acknowledgment required",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/679.txt",
+    "starter": "starters/679.jsx",
+    "solution": "solutions/679.jsx",
+    "test": "tests/679.cjs"
+  },
+  {
+    "id": 680,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 12,
+    "variant": "8 records; remove all; phrase remove; case-insensitive; acknowledgment required",
+    "title": "Confirm destructive local action / scenario 12 — 8 records; remove all; phrase remove; case-insensitive; acknowledgment required",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/680.txt",
+    "starter": "starters/680.jsx",
+    "solution": "solutions/680.jsx",
+    "test": "tests/680.cjs"
+  },
+  {
+    "id": 681,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 13,
+    "variant": "9 records; remove one per confirmation; phrase remove; case-sensitive; acknowledgment required",
+    "title": "Confirm destructive local action / scenario 13 — 9 records; remove one per confirmation; phrase remove; case-sensitive; acknowledgment required",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/681.txt",
+    "starter": "starters/681.jsx",
+    "solution": "solutions/681.jsx",
+    "test": "tests/681.cjs"
+  },
+  {
+    "id": 682,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 14,
+    "variant": "10 records; remove all; phrase remove; case-sensitive; acknowledgment required",
+    "title": "Confirm destructive local action / scenario 14 — 10 records; remove all; phrase remove; case-sensitive; acknowledgment required",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/682.txt",
+    "starter": "starters/682.jsx",
+    "solution": "solutions/682.jsx",
+    "test": "tests/682.cjs"
+  },
+  {
+    "id": 683,
+    "tech": "react",
+    "family": "Confirm destructive local action",
+    "familyIndex": 10,
+    "scenario": 15,
+    "variant": "11 records; remove one per confirmation; phrase remove; case-insensitive; acknowledgment required",
+    "title": "Confirm destructive local action / scenario 15 — 11 records; remove one per confirmation; phrase remove; case-insensitive; acknowledgment required",
+    "originalIds": [
+      329,
+      330,
+      331,
+      332,
+      333
+    ],
+    "prompt": "prompts/683.txt",
+    "starter": "starters/683.jsx",
+    "solution": "solutions/683.jsx",
+    "test": "tests/683.cjs"
+  },
+  {
+    "id": 684,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 6,
+    "variant": "2-entry bounded history; trim; reject blank commits",
+    "title": "Reducer undoable text / scenario 6 — 2-entry bounded history; trim; reject blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/684.txt",
+    "starter": "starters/684.jsx",
+    "solution": "solutions/684.jsx",
+    "test": "tests/684.cjs"
+  },
+  {
+    "id": 685,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 7,
+    "variant": "3-entry bounded history; trim; allow blank commits",
+    "title": "Reducer undoable text / scenario 7 — 3-entry bounded history; trim; allow blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/685.txt",
+    "starter": "starters/685.jsx",
+    "solution": "solutions/685.jsx",
+    "test": "tests/685.cjs"
+  },
+  {
+    "id": 686,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 8,
+    "variant": "4-entry bounded history; trim; reject blank commits",
+    "title": "Reducer undoable text / scenario 8 — 4-entry bounded history; trim; reject blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/686.txt",
+    "starter": "starters/686.jsx",
+    "solution": "solutions/686.jsx",
+    "test": "tests/686.cjs"
+  },
+  {
+    "id": 687,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 9,
+    "variant": "5-entry bounded history; trim; allow blank commits",
+    "title": "Reducer undoable text / scenario 9 — 5-entry bounded history; trim; allow blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/687.txt",
+    "starter": "starters/687.jsx",
+    "solution": "solutions/687.jsx",
+    "test": "tests/687.cjs"
+  },
+  {
+    "id": 688,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 10,
+    "variant": "6-entry bounded history; trim; reject blank commits",
+    "title": "Reducer undoable text / scenario 10 — 6-entry bounded history; trim; reject blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/688.txt",
+    "starter": "starters/688.jsx",
+    "solution": "solutions/688.jsx",
+    "test": "tests/688.cjs"
+  },
+  {
+    "id": 689,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 11,
+    "variant": "2-entry bounded history; lower; allow blank commits",
+    "title": "Reducer undoable text / scenario 11 — 2-entry bounded history; lower; allow blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/689.txt",
+    "starter": "starters/689.jsx",
+    "solution": "solutions/689.jsx",
+    "test": "tests/689.cjs"
+  },
+  {
+    "id": 690,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 12,
+    "variant": "3-entry bounded history; lower; reject blank commits",
+    "title": "Reducer undoable text / scenario 12 — 3-entry bounded history; lower; reject blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/690.txt",
+    "starter": "starters/690.jsx",
+    "solution": "solutions/690.jsx",
+    "test": "tests/690.cjs"
+  },
+  {
+    "id": 691,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 13,
+    "variant": "4-entry bounded history; lower; allow blank commits",
+    "title": "Reducer undoable text / scenario 13 — 4-entry bounded history; lower; allow blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/691.txt",
+    "starter": "starters/691.jsx",
+    "solution": "solutions/691.jsx",
+    "test": "tests/691.cjs"
+  },
+  {
+    "id": 692,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 14,
+    "variant": "5-entry bounded history; lower; reject blank commits",
+    "title": "Reducer undoable text / scenario 14 — 5-entry bounded history; lower; reject blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/692.txt",
+    "starter": "starters/692.jsx",
+    "solution": "solutions/692.jsx",
+    "test": "tests/692.cjs"
+  },
+  {
+    "id": 693,
+    "tech": "react",
+    "family": "Reducer undoable text",
+    "familyIndex": 11,
+    "scenario": 15,
+    "variant": "6-entry bounded history; lower; allow blank commits",
+    "title": "Reducer undoable text / scenario 15 — 6-entry bounded history; lower; allow blank commits",
+    "originalIds": [
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "prompt": "prompts/693.txt",
+    "starter": "starters/693.jsx",
+    "solution": "solutions/693.jsx",
+    "test": "tests/693.cjs"
+  },
+  {
+    "id": 694,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 6,
+    "variant": "length 3..7; digit required; raw evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 6 — length 3..7; digit required; raw evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/694.txt",
+    "starter": "starters/694.jsx",
+    "solution": "solutions/694.jsx",
+    "test": "tests/694.cjs"
+  },
+  {
+    "id": 695,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 7,
+    "variant": "length 4..8; no digit rule; raw evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 7 — length 4..8; no digit rule; raw evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/695.txt",
+    "starter": "starters/695.jsx",
+    "solution": "solutions/695.jsx",
+    "test": "tests/695.cjs"
+  },
+  {
+    "id": 696,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 8,
+    "variant": "length 5..9; digit required; raw evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 8 — length 5..9; digit required; raw evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/696.txt",
+    "starter": "starters/696.jsx",
+    "solution": "solutions/696.jsx",
+    "test": "tests/696.cjs"
+  },
+  {
+    "id": 697,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 9,
+    "variant": "length 6..10; no digit rule; raw evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 9 — length 6..10; no digit rule; raw evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/697.txt",
+    "starter": "starters/697.jsx",
+    "solution": "solutions/697.jsx",
+    "test": "tests/697.cjs"
+  },
+  {
+    "id": 698,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 10,
+    "variant": "length 7..11; digit required; raw evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 10 — length 7..11; digit required; raw evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/698.txt",
+    "starter": "starters/698.jsx",
+    "solution": "solutions/698.jsx",
+    "test": "tests/698.cjs"
+  },
+  {
+    "id": 699,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 11,
+    "variant": "length 3..7; no digit rule; trim for evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 11 — length 3..7; no digit rule; trim for evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/699.txt",
+    "starter": "starters/699.jsx",
+    "solution": "solutions/699.jsx",
+    "test": "tests/699.cjs"
+  },
+  {
+    "id": 700,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 12,
+    "variant": "length 4..8; digit required; trim for evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 12 — length 4..8; digit required; trim for evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/700.txt",
+    "starter": "starters/700.jsx",
+    "solution": "solutions/700.jsx",
+    "test": "tests/700.cjs"
+  },
+  {
+    "id": 701,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 13,
+    "variant": "length 5..9; no digit rule; trim for evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 13 — length 5..9; no digit rule; trim for evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/701.txt",
+    "starter": "starters/701.jsx",
+    "solution": "solutions/701.jsx",
+    "test": "tests/701.cjs"
+  },
+  {
+    "id": 702,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 14,
+    "variant": "length 6..10; digit required; trim for evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 14 — length 6..10; digit required; trim for evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/702.txt",
+    "starter": "starters/702.jsx",
+    "solution": "solutions/702.jsx",
+    "test": "tests/702.cjs"
+  },
+  {
+    "id": 703,
+    "tech": "react",
+    "family": "Password visibility and length",
+    "familyIndex": 12,
+    "scenario": 15,
+    "variant": "length 7..11; no digit rule; trim for evaluation; blur re-hides",
+    "title": "Password visibility and length / scenario 15 — length 7..11; no digit rule; trim for evaluation; blur re-hides",
+    "originalIds": [
+      339,
+      340,
+      341,
+      342,
+      343
+    ],
+    "prompt": "prompts/703.txt",
+    "starter": "starters/703.jsx",
+    "solution": "solutions/703.jsx",
+    "test": "tests/703.cjs"
+  },
+  {
+    "id": 704,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 6,
+    "variant": "3 items; eligible 2,3; initial none; all ignores locked items",
+    "title": "Select all checklist / scenario 6 — 3 items; eligible 2,3; initial none; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/704.txt",
+    "starter": "starters/704.jsx",
+    "solution": "solutions/704.jsx",
+    "test": "tests/704.cjs"
+  },
+  {
+    "id": 705,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 7,
+    "variant": "4 items; eligible 1,3,4; initial none; all ignores locked items",
+    "title": "Select all checklist / scenario 7 — 4 items; eligible 1,3,4; initial none; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/705.txt",
+    "starter": "starters/705.jsx",
+    "solution": "solutions/705.jsx",
+    "test": "tests/705.cjs"
+  },
+  {
+    "id": 706,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 8,
+    "variant": "5 items; eligible 1,2,4,5; initial none; all ignores locked items",
+    "title": "Select all checklist / scenario 8 — 5 items; eligible 1,2,4,5; initial none; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/706.txt",
+    "starter": "starters/706.jsx",
+    "solution": "solutions/706.jsx",
+    "test": "tests/706.cjs"
+  },
+  {
+    "id": 707,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 9,
+    "variant": "6 items; eligible 1,2,3,5,6; initial none; all ignores locked items",
+    "title": "Select all checklist / scenario 9 — 6 items; eligible 1,2,3,5,6; initial none; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/707.txt",
+    "starter": "starters/707.jsx",
+    "solution": "solutions/707.jsx",
+    "test": "tests/707.cjs"
+  },
+  {
+    "id": 708,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 10,
+    "variant": "3 items; eligible 1,3; initial none; all ignores locked items",
+    "title": "Select all checklist / scenario 10 — 3 items; eligible 1,3; initial none; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/708.txt",
+    "starter": "starters/708.jsx",
+    "solution": "solutions/708.jsx",
+    "test": "tests/708.cjs"
+  },
+  {
+    "id": 709,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 11,
+    "variant": "4 items; eligible 1,3,4; initial 1; all ignores locked items",
+    "title": "Select all checklist / scenario 11 — 4 items; eligible 1,3,4; initial 1; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/709.txt",
+    "starter": "starters/709.jsx",
+    "solution": "solutions/709.jsx",
+    "test": "tests/709.cjs"
+  },
+  {
+    "id": 710,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 12,
+    "variant": "5 items; eligible 1,3,4,5; initial 1; all ignores locked items",
+    "title": "Select all checklist / scenario 12 — 5 items; eligible 1,3,4,5; initial 1; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/710.txt",
+    "starter": "starters/710.jsx",
+    "solution": "solutions/710.jsx",
+    "test": "tests/710.cjs"
+  },
+  {
+    "id": 711,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 13,
+    "variant": "6 items; eligible 1,3,4,5,6; initial 1; all ignores locked items",
+    "title": "Select all checklist / scenario 13 — 6 items; eligible 1,3,4,5,6; initial 1; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/711.txt",
+    "starter": "starters/711.jsx",
+    "solution": "solutions/711.jsx",
+    "test": "tests/711.cjs"
+  },
+  {
+    "id": 712,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 14,
+    "variant": "3 items; eligible 1,2; initial 1; all ignores locked items",
+    "title": "Select all checklist / scenario 14 — 3 items; eligible 1,2; initial 1; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/712.txt",
+    "starter": "starters/712.jsx",
+    "solution": "solutions/712.jsx",
+    "test": "tests/712.cjs"
+  },
+  {
+    "id": 713,
+    "tech": "react",
+    "family": "Select all checklist",
+    "familyIndex": 13,
+    "scenario": 15,
+    "variant": "4 items; eligible none; initial none; all ignores locked items",
+    "title": "Select all checklist / scenario 15 — 4 items; eligible none; initial none; all ignores locked items",
+    "originalIds": [
+      344,
+      345,
+      346,
+      347,
+      348
+    ],
+    "prompt": "prompts/713.txt",
+    "starter": "starters/713.jsx",
+    "solution": "solutions/713.jsx",
+    "test": "tests/713.cjs"
+  },
+  {
+    "id": 714,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 6,
+    "variant": "light → dark → system; initial light; Next + Reset; synchronized nested readers",
+    "title": "Context preference provider / scenario 6 — light → dark → system; initial light; Next + Reset; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/714.txt",
+    "starter": "starters/714.jsx",
+    "solution": "solutions/714.jsx",
+    "test": "tests/714.cjs"
+  },
+  {
+    "id": 715,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 7,
+    "variant": "compact → comfortable; initial comfortable; Next + Reset; synchronized nested readers",
+    "title": "Context preference provider / scenario 7 — compact → comfortable; initial comfortable; Next + Reset; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/715.txt",
+    "starter": "starters/715.jsx",
+    "solution": "solutions/715.jsx",
+    "test": "tests/715.cjs"
+  },
+  {
+    "id": 716,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 8,
+    "variant": "en → fr → es; initial es; Next + Reset; synchronized nested readers",
+    "title": "Context preference provider / scenario 8 — en → fr → es; initial es; Next + Reset; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/716.txt",
+    "starter": "starters/716.jsx",
+    "solution": "solutions/716.jsx",
+    "test": "tests/716.cjs"
+  },
+  {
+    "id": 717,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 9,
+    "variant": "low → normal → high; initial low; Next + Reset; synchronized nested readers",
+    "title": "Context preference provider / scenario 9 — low → normal → high; initial low; Next + Reset; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/717.txt",
+    "starter": "starters/717.jsx",
+    "solution": "solutions/717.jsx",
+    "test": "tests/717.cjs"
+  },
+  {
+    "id": 718,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 10,
+    "variant": "quiet → verbose; initial quiet; Next + Reset; synchronized nested readers",
+    "title": "Context preference provider / scenario 10 — quiet → verbose; initial quiet; Next + Reset; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/718.txt",
+    "starter": "starters/718.jsx",
+    "solution": "solutions/718.jsx",
+    "test": "tests/718.cjs"
+  },
+  {
+    "id": 719,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 11,
+    "variant": "light → dark → system; initial system; Previous + Next; synchronized nested readers",
+    "title": "Context preference provider / scenario 11 — light → dark → system; initial system; Previous + Next; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/719.txt",
+    "starter": "starters/719.jsx",
+    "solution": "solutions/719.jsx",
+    "test": "tests/719.cjs"
+  },
+  {
+    "id": 720,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 12,
+    "variant": "compact → comfortable; initial compact; Previous + Next; synchronized nested readers",
+    "title": "Context preference provider / scenario 12 — compact → comfortable; initial compact; Previous + Next; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/720.txt",
+    "starter": "starters/720.jsx",
+    "solution": "solutions/720.jsx",
+    "test": "tests/720.cjs"
+  },
+  {
+    "id": 721,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 13,
+    "variant": "en → fr → es; initial fr; Previous + Next; synchronized nested readers",
+    "title": "Context preference provider / scenario 13 — en → fr → es; initial fr; Previous + Next; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/721.txt",
+    "starter": "starters/721.jsx",
+    "solution": "solutions/721.jsx",
+    "test": "tests/721.cjs"
+  },
+  {
+    "id": 722,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 14,
+    "variant": "low → normal → high; initial high; Previous + Next; synchronized nested readers",
+    "title": "Context preference provider / scenario 14 — low → normal → high; initial high; Previous + Next; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/722.txt",
+    "starter": "starters/722.jsx",
+    "solution": "solutions/722.jsx",
+    "test": "tests/722.cjs"
+  },
+  {
+    "id": 723,
+    "tech": "react",
+    "family": "Context preference provider",
+    "familyIndex": 14,
+    "scenario": 15,
+    "variant": "quiet → verbose; initial verbose; Previous + Next; synchronized nested readers",
+    "title": "Context preference provider / scenario 15 — quiet → verbose; initial verbose; Previous + Next; synchronized nested readers",
+    "originalIds": [
+      349,
+      350,
+      351,
+      352,
+      353
+    ],
+    "prompt": "prompts/723.txt",
+    "starter": "starters/723.jsx",
+    "solution": "solutions/723.jsx",
+    "test": "tests/723.cjs"
+  },
+  {
+    "id": 724,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 6,
+    "variant": "Enter; allow text controls; initial closed",
+    "title": "Keyboard escape cleanup / scenario 6 — Enter; allow text controls; initial closed",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/724.txt",
+    "starter": "starters/724.jsx",
+    "solution": "solutions/724.jsx",
+    "test": "tests/724.cjs"
+  },
+  {
+    "id": 725,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 7,
+    "variant": "ctrlKey + Escape; allow text controls; initial open",
+    "title": "Keyboard escape cleanup / scenario 7 — ctrlKey + Escape; allow text controls; initial open",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/725.txt",
+    "starter": "starters/725.jsx",
+    "solution": "solutions/725.jsx",
+    "test": "tests/725.cjs"
+  },
+  {
+    "id": 726,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 8,
+    "variant": "altKey + Enter; allow text controls; initial open",
+    "title": "Keyboard escape cleanup / scenario 8 — altKey + Enter; allow text controls; initial open",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/726.txt",
+    "starter": "starters/726.jsx",
+    "solution": "solutions/726.jsx",
+    "test": "tests/726.cjs"
+  },
+  {
+    "id": 727,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 9,
+    "variant": "Escape; allow text controls; initial closed",
+    "title": "Keyboard escape cleanup / scenario 9 — Escape; allow text controls; initial closed",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/727.txt",
+    "starter": "starters/727.jsx",
+    "solution": "solutions/727.jsx",
+    "test": "tests/727.cjs"
+  },
+  {
+    "id": 728,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 10,
+    "variant": "ctrlKey + Enter; allow text controls; initial open",
+    "title": "Keyboard escape cleanup / scenario 10 — ctrlKey + Enter; allow text controls; initial open",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/728.txt",
+    "starter": "starters/728.jsx",
+    "solution": "solutions/728.jsx",
+    "test": "tests/728.cjs"
+  },
+  {
+    "id": 729,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 11,
+    "variant": "altKey + Escape; ignore text controls; initial open",
+    "title": "Keyboard escape cleanup / scenario 11 — altKey + Escape; ignore text controls; initial open",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/729.txt",
+    "starter": "starters/729.jsx",
+    "solution": "solutions/729.jsx",
+    "test": "tests/729.cjs"
+  },
+  {
+    "id": 730,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 12,
+    "variant": "Enter; ignore text controls; initial closed",
+    "title": "Keyboard escape cleanup / scenario 12 — Enter; ignore text controls; initial closed",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/730.txt",
+    "starter": "starters/730.jsx",
+    "solution": "solutions/730.jsx",
+    "test": "tests/730.cjs"
+  },
+  {
+    "id": 731,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 13,
+    "variant": "ctrlKey + Escape; ignore text controls; initial open",
+    "title": "Keyboard escape cleanup / scenario 13 — ctrlKey + Escape; ignore text controls; initial open",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/731.txt",
+    "starter": "starters/731.jsx",
+    "solution": "solutions/731.jsx",
+    "test": "tests/731.cjs"
+  },
+  {
+    "id": 732,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 14,
+    "variant": "altKey + Enter; ignore text controls; initial open",
+    "title": "Keyboard escape cleanup / scenario 14 — altKey + Enter; ignore text controls; initial open",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/732.txt",
+    "starter": "starters/732.jsx",
+    "solution": "solutions/732.jsx",
+    "test": "tests/732.cjs"
+  },
+  {
+    "id": 733,
+    "tech": "react",
+    "family": "Keyboard escape cleanup",
+    "familyIndex": 15,
+    "scenario": 15,
+    "variant": "Escape; ignore text controls; initial closed",
+    "title": "Keyboard escape cleanup / scenario 15 — Escape; ignore text controls; initial closed",
+    "originalIds": [
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "prompt": "prompts/733.txt",
+    "starter": "starters/733.jsx",
+    "solution": "solutions/733.jsx",
+    "test": "tests/733.cjs"
+  },
+  {
+    "id": 734,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 6,
+    "variant": "latest request wins; retain data while loading; error fallback Failed",
+    "title": "Fake async request state / scenario 6 — latest request wins; retain data while loading; error fallback Failed",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/734.txt",
+    "starter": "starters/734.jsx",
+    "solution": "solutions/734.jsx",
+    "test": "tests/734.cjs"
+  },
+  {
+    "id": 735,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 7,
+    "variant": "latest request wins; clear data while loading; error fallback Unavailable",
+    "title": "Fake async request state / scenario 7 — latest request wins; clear data while loading; error fallback Unavailable",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/735.txt",
+    "starter": "starters/735.jsx",
+    "solution": "solutions/735.jsx",
+    "test": "tests/735.cjs"
+  },
+  {
+    "id": 736,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 8,
+    "variant": "latest request wins; retain data while loading; error fallback Try again",
+    "title": "Fake async request state / scenario 8 — latest request wins; retain data while loading; error fallback Try again",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/736.txt",
+    "starter": "starters/736.jsx",
+    "solution": "solutions/736.jsx",
+    "test": "tests/736.cjs"
+  },
+  {
+    "id": 737,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 9,
+    "variant": "latest request wins; clear data while loading; error fallback Error",
+    "title": "Fake async request state / scenario 9 — latest request wins; clear data while loading; error fallback Error",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/737.txt",
+    "starter": "starters/737.jsx",
+    "solution": "solutions/737.jsx",
+    "test": "tests/737.cjs"
+  },
+  {
+    "id": 738,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 10,
+    "variant": "latest request wins; retain data while loading; error fallback Offline",
+    "title": "Fake async request state / scenario 10 — latest request wins; retain data while loading; error fallback Offline",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/738.txt",
+    "starter": "starters/738.jsx",
+    "solution": "solutions/738.jsx",
+    "test": "tests/738.cjs"
+  },
+  {
+    "id": 739,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 11,
+    "variant": "one pending request; clear data while loading; error fallback Failed",
+    "title": "Fake async request state / scenario 11 — one pending request; clear data while loading; error fallback Failed",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/739.txt",
+    "starter": "starters/739.jsx",
+    "solution": "solutions/739.jsx",
+    "test": "tests/739.cjs"
+  },
+  {
+    "id": 740,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 12,
+    "variant": "one pending request; retain data while loading; error fallback Unavailable",
+    "title": "Fake async request state / scenario 12 — one pending request; retain data while loading; error fallback Unavailable",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/740.txt",
+    "starter": "starters/740.jsx",
+    "solution": "solutions/740.jsx",
+    "test": "tests/740.cjs"
+  },
+  {
+    "id": 741,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 13,
+    "variant": "one pending request; clear data while loading; error fallback Try again",
+    "title": "Fake async request state / scenario 13 — one pending request; clear data while loading; error fallback Try again",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/741.txt",
+    "starter": "starters/741.jsx",
+    "solution": "solutions/741.jsx",
+    "test": "tests/741.cjs"
+  },
+  {
+    "id": 742,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 14,
+    "variant": "one pending request; retain data while loading; error fallback Error",
+    "title": "Fake async request state / scenario 14 — one pending request; retain data while loading; error fallback Error",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/742.txt",
+    "starter": "starters/742.jsx",
+    "solution": "solutions/742.jsx",
+    "test": "tests/742.cjs"
+  },
+  {
+    "id": 743,
+    "tech": "react",
+    "family": "Fake async request state",
+    "familyIndex": 16,
+    "scenario": 15,
+    "variant": "one pending request; clear data while loading; error fallback Offline",
+    "title": "Fake async request state / scenario 15 — one pending request; clear data while loading; error fallback Offline",
+    "originalIds": [
+      359,
+      360,
+      361,
+      362,
+      363
+    ],
+    "prompt": "prompts/743.txt",
+    "starter": "starters/743.jsx",
+    "solution": "solutions/743.jsx",
+    "test": "tests/743.cjs"
+  },
+  {
+    "id": 744,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 6,
+    "variant": "focus First; clear both; select text; disable focus when locked",
+    "title": "Ref focus controls / scenario 6 — focus First; clear both; select text; disable focus when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/744.txt",
+    "starter": "starters/744.jsx",
+    "solution": "solutions/744.jsx",
+    "test": "tests/744.cjs"
+  },
+  {
+    "id": 745,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 7,
+    "variant": "focus Second; clear both; caret at end; disable focus when locked",
+    "title": "Ref focus controls / scenario 7 — focus Second; clear both; caret at end; disable focus when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/745.txt",
+    "starter": "starters/745.jsx",
+    "solution": "solutions/745.jsx",
+    "test": "tests/745.cjs"
+  },
+  {
+    "id": 746,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 8,
+    "variant": "focus First; clear both; caret at start; disable focus when locked",
+    "title": "Ref focus controls / scenario 8 — focus First; clear both; caret at start; disable focus when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/746.txt",
+    "starter": "starters/746.jsx",
+    "solution": "solutions/746.jsx",
+    "test": "tests/746.cjs"
+  },
+  {
+    "id": 747,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 9,
+    "variant": "focus Second; clear both; select text; disable focus when locked",
+    "title": "Ref focus controls / scenario 9 — focus Second; clear both; select text; disable focus when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/747.txt",
+    "starter": "starters/747.jsx",
+    "solution": "solutions/747.jsx",
+    "test": "tests/747.cjs"
+  },
+  {
+    "id": 748,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 10,
+    "variant": "focus First; clear both; caret at end; disable focus when locked",
+    "title": "Ref focus controls / scenario 10 — focus First; clear both; caret at end; disable focus when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/748.txt",
+    "starter": "starters/748.jsx",
+    "solution": "solutions/748.jsx",
+    "test": "tests/748.cjs"
+  },
+  {
+    "id": 749,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 11,
+    "variant": "focus Second; clear target; caret at start; fallback when locked",
+    "title": "Ref focus controls / scenario 11 — focus Second; clear target; caret at start; fallback when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/749.txt",
+    "starter": "starters/749.jsx",
+    "solution": "solutions/749.jsx",
+    "test": "tests/749.cjs"
+  },
+  {
+    "id": 750,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 12,
+    "variant": "focus First; clear target; select text; fallback when locked",
+    "title": "Ref focus controls / scenario 12 — focus First; clear target; select text; fallback when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/750.txt",
+    "starter": "starters/750.jsx",
+    "solution": "solutions/750.jsx",
+    "test": "tests/750.cjs"
+  },
+  {
+    "id": 751,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 13,
+    "variant": "focus Second; clear target; caret at end; fallback when locked",
+    "title": "Ref focus controls / scenario 13 — focus Second; clear target; caret at end; fallback when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/751.txt",
+    "starter": "starters/751.jsx",
+    "solution": "solutions/751.jsx",
+    "test": "tests/751.cjs"
+  },
+  {
+    "id": 752,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 14,
+    "variant": "focus First; clear target; caret at start; fallback when locked",
+    "title": "Ref focus controls / scenario 14 — focus First; clear target; caret at start; fallback when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/752.txt",
+    "starter": "starters/752.jsx",
+    "solution": "solutions/752.jsx",
+    "test": "tests/752.cjs"
+  },
+  {
+    "id": 753,
+    "tech": "react",
+    "family": "Ref focus controls",
+    "familyIndex": 17,
+    "scenario": 15,
+    "variant": "focus Second; clear target; select text; fallback when locked",
+    "title": "Ref focus controls / scenario 15 — focus Second; clear target; select text; fallback when locked",
+    "originalIds": [
+      364,
+      365,
+      366,
+      367,
+      368
+    ],
+    "prompt": "prompts/753.txt",
+    "starter": "starters/753.jsx",
+    "solution": "solutions/753.jsx",
+    "test": "tests/753.cjs"
+  },
+  {
+    "id": 754,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 6,
+    "variant": "initial North; always reset city; placeholder reset; empty region",
+    "title": "Dependent option selection / scenario 6 — initial North; always reset city; placeholder reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/754.txt",
+    "starter": "starters/754.jsx",
+    "solution": "solutions/754.jsx",
+    "test": "tests/754.cjs"
+  },
+  {
+    "id": 755,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 7,
+    "variant": "initial South; always reset city; first-option reset; empty region",
+    "title": "Dependent option selection / scenario 7 — initial South; always reset city; first-option reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/755.txt",
+    "starter": "starters/755.jsx",
+    "solution": "solutions/755.jsx",
+    "test": "tests/755.cjs"
+  },
+  {
+    "id": 756,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 8,
+    "variant": "initial North; always reset city; last-option reset; empty region",
+    "title": "Dependent option selection / scenario 8 — initial North; always reset city; last-option reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/756.txt",
+    "starter": "starters/756.jsx",
+    "solution": "solutions/756.jsx",
+    "test": "tests/756.cjs"
+  },
+  {
+    "id": 757,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 9,
+    "variant": "initial South; always reset city; placeholder reset; empty region",
+    "title": "Dependent option selection / scenario 9 — initial South; always reset city; placeholder reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/757.txt",
+    "starter": "starters/757.jsx",
+    "solution": "solutions/757.jsx",
+    "test": "tests/757.cjs"
+  },
+  {
+    "id": 758,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 10,
+    "variant": "initial North; always reset city; first-option reset; empty region",
+    "title": "Dependent option selection / scenario 10 — initial North; always reset city; first-option reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/758.txt",
+    "starter": "starters/758.jsx",
+    "solution": "solutions/758.jsx",
+    "test": "tests/758.cjs"
+  },
+  {
+    "id": 759,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 11,
+    "variant": "initial South; preserve still-valid city; last-option reset; empty region",
+    "title": "Dependent option selection / scenario 11 — initial South; preserve still-valid city; last-option reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/759.txt",
+    "starter": "starters/759.jsx",
+    "solution": "solutions/759.jsx",
+    "test": "tests/759.cjs"
+  },
+  {
+    "id": 760,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 12,
+    "variant": "initial North; preserve still-valid city; placeholder reset; empty region",
+    "title": "Dependent option selection / scenario 12 — initial North; preserve still-valid city; placeholder reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/760.txt",
+    "starter": "starters/760.jsx",
+    "solution": "solutions/760.jsx",
+    "test": "tests/760.cjs"
+  },
+  {
+    "id": 761,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 13,
+    "variant": "initial South; preserve still-valid city; first-option reset; empty region",
+    "title": "Dependent option selection / scenario 13 — initial South; preserve still-valid city; first-option reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/761.txt",
+    "starter": "starters/761.jsx",
+    "solution": "solutions/761.jsx",
+    "test": "tests/761.cjs"
+  },
+  {
+    "id": 762,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 14,
+    "variant": "initial North; preserve still-valid city; last-option reset; empty region",
+    "title": "Dependent option selection / scenario 14 — initial North; preserve still-valid city; last-option reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/762.txt",
+    "starter": "starters/762.jsx",
+    "solution": "solutions/762.jsx",
+    "test": "tests/762.cjs"
+  },
+  {
+    "id": 763,
+    "tech": "react",
+    "family": "Dependent option selection",
+    "familyIndex": 18,
+    "scenario": 15,
+    "variant": "initial South; preserve still-valid city; placeholder reset; empty region",
+    "title": "Dependent option selection / scenario 15 — initial South; preserve still-valid city; placeholder reset; empty region",
+    "originalIds": [
+      369,
+      370,
+      371,
+      372,
+      373
+    ],
+    "prompt": "prompts/763.txt",
+    "starter": "starters/763.jsx",
+    "solution": "solutions/763.jsx",
+    "test": "tests/763.cjs"
+  },
+  {
+    "id": 764,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 6,
+    "variant": "cap 2; maximum 3 chars; case-insensitive duplicates; insertion-order display",
+    "title": "Tag editor with duplicate policy / scenario 6 — cap 2; maximum 3 chars; case-insensitive duplicates; insertion-order display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/764.txt",
+    "starter": "starters/764.jsx",
+    "solution": "solutions/764.jsx",
+    "test": "tests/764.cjs"
+  },
+  {
+    "id": 765,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 7,
+    "variant": "cap 3; maximum 4 chars; case-sensitive duplicates; insertion-order display",
+    "title": "Tag editor with duplicate policy / scenario 7 — cap 3; maximum 4 chars; case-sensitive duplicates; insertion-order display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/765.txt",
+    "starter": "starters/765.jsx",
+    "solution": "solutions/765.jsx",
+    "test": "tests/765.cjs"
+  },
+  {
+    "id": 766,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 8,
+    "variant": "cap 4; maximum 5 chars; case-insensitive duplicates; insertion-order display",
+    "title": "Tag editor with duplicate policy / scenario 8 — cap 4; maximum 5 chars; case-insensitive duplicates; insertion-order display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/766.txt",
+    "starter": "starters/766.jsx",
+    "solution": "solutions/766.jsx",
+    "test": "tests/766.cjs"
+  },
+  {
+    "id": 767,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 9,
+    "variant": "cap 2; maximum 6 chars; case-sensitive duplicates; insertion-order display",
+    "title": "Tag editor with duplicate policy / scenario 9 — cap 2; maximum 6 chars; case-sensitive duplicates; insertion-order display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/767.txt",
+    "starter": "starters/767.jsx",
+    "solution": "solutions/767.jsx",
+    "test": "tests/767.cjs"
+  },
+  {
+    "id": 768,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 10,
+    "variant": "cap 3; maximum 3 chars; case-insensitive duplicates; insertion-order display",
+    "title": "Tag editor with duplicate policy / scenario 10 — cap 3; maximum 3 chars; case-insensitive duplicates; insertion-order display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/768.txt",
+    "starter": "starters/768.jsx",
+    "solution": "solutions/768.jsx",
+    "test": "tests/768.cjs"
+  },
+  {
+    "id": 769,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 11,
+    "variant": "cap 4; maximum 4 chars; case-sensitive duplicates; sorted display",
+    "title": "Tag editor with duplicate policy / scenario 11 — cap 4; maximum 4 chars; case-sensitive duplicates; sorted display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/769.txt",
+    "starter": "starters/769.jsx",
+    "solution": "solutions/769.jsx",
+    "test": "tests/769.cjs"
+  },
+  {
+    "id": 770,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 12,
+    "variant": "cap 2; maximum 5 chars; case-insensitive duplicates; sorted display",
+    "title": "Tag editor with duplicate policy / scenario 12 — cap 2; maximum 5 chars; case-insensitive duplicates; sorted display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/770.txt",
+    "starter": "starters/770.jsx",
+    "solution": "solutions/770.jsx",
+    "test": "tests/770.cjs"
+  },
+  {
+    "id": 771,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 13,
+    "variant": "cap 3; maximum 6 chars; case-sensitive duplicates; sorted display",
+    "title": "Tag editor with duplicate policy / scenario 13 — cap 3; maximum 6 chars; case-sensitive duplicates; sorted display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/771.txt",
+    "starter": "starters/771.jsx",
+    "solution": "solutions/771.jsx",
+    "test": "tests/771.cjs"
+  },
+  {
+    "id": 772,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 14,
+    "variant": "cap 4; maximum 3 chars; case-insensitive duplicates; sorted display",
+    "title": "Tag editor with duplicate policy / scenario 14 — cap 4; maximum 3 chars; case-insensitive duplicates; sorted display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/772.txt",
+    "starter": "starters/772.jsx",
+    "solution": "solutions/772.jsx",
+    "test": "tests/772.cjs"
+  },
+  {
+    "id": 773,
+    "tech": "react",
+    "family": "Tag editor with duplicate policy",
+    "familyIndex": 19,
+    "scenario": 15,
+    "variant": "cap 2; maximum 4 chars; case-sensitive duplicates; sorted display",
+    "title": "Tag editor with duplicate policy / scenario 15 — cap 2; maximum 4 chars; case-sensitive duplicates; sorted display",
+    "originalIds": [
+      374,
+      375,
+      376,
+      377,
+      378
+    ],
+    "prompt": "prompts/773.txt",
+    "starter": "starters/773.jsx",
+    "solution": "solutions/773.jsx",
+    "test": "tests/773.cjs"
+  },
+  {
+    "id": 774,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 6,
+    "variant": "name 1..4; uppercase saved name; no acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 6 — name 1..4; uppercase saved name; no acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/774.txt",
+    "starter": "starters/774.jsx",
+    "solution": "solutions/774.jsx",
+    "test": "tests/774.cjs"
+  },
+  {
+    "id": 775,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 7,
+    "variant": "name 2..5; preserved saved name; no acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 7 — name 2..5; preserved saved name; no acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/775.txt",
+    "starter": "starters/775.jsx",
+    "solution": "solutions/775.jsx",
+    "test": "tests/775.cjs"
+  },
+  {
+    "id": 776,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 8,
+    "variant": "name 3..6; uppercase saved name; no acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 8 — name 3..6; uppercase saved name; no acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/776.txt",
+    "starter": "starters/776.jsx",
+    "solution": "solutions/776.jsx",
+    "test": "tests/776.cjs"
+  },
+  {
+    "id": 777,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 9,
+    "variant": "name 1..4; preserved saved name; no acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 9 — name 1..4; preserved saved name; no acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/777.txt",
+    "starter": "starters/777.jsx",
+    "solution": "solutions/777.jsx",
+    "test": "tests/777.cjs"
+  },
+  {
+    "id": 778,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 10,
+    "variant": "name 2..5; uppercase saved name; no acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 10 — name 2..5; uppercase saved name; no acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/778.txt",
+    "starter": "starters/778.jsx",
+    "solution": "solutions/778.jsx",
+    "test": "tests/778.cjs"
+  },
+  {
+    "id": 779,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 11,
+    "variant": "name 3..6; preserved saved name; review acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 11 — name 3..6; preserved saved name; review acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/779.txt",
+    "starter": "starters/779.jsx",
+    "solution": "solutions/779.jsx",
+    "test": "tests/779.cjs"
+  },
+  {
+    "id": 780,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 12,
+    "variant": "name 1..4; uppercase saved name; review acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 12 — name 1..4; uppercase saved name; review acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/780.txt",
+    "starter": "starters/780.jsx",
+    "solution": "solutions/780.jsx",
+    "test": "tests/780.cjs"
+  },
+  {
+    "id": 781,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 13,
+    "variant": "name 2..5; preserved saved name; review acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 13 — name 2..5; preserved saved name; review acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/781.txt",
+    "starter": "starters/781.jsx",
+    "solution": "solutions/781.jsx",
+    "test": "tests/781.cjs"
+  },
+  {
+    "id": 782,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 14,
+    "variant": "name 3..6; uppercase saved name; review acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 14 — name 3..6; uppercase saved name; review acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/782.txt",
+    "starter": "starters/782.jsx",
+    "solution": "solutions/782.jsx",
+    "test": "tests/782.cjs"
+  },
+  {
+    "id": 783,
+    "tech": "react",
+    "family": "Two-stage form wizard",
+    "familyIndex": 20,
+    "scenario": 15,
+    "variant": "name 1..4; preserved saved name; review acknowledgment; start over",
+    "title": "Two-stage form wizard / scenario 15 — name 1..4; preserved saved name; review acknowledgment; start over",
+    "originalIds": [
+      379,
+      380,
+      381,
+      382,
+      383
+    ],
+    "prompt": "prompts/783.txt",
+    "starter": "starters/783.jsx",
+    "solution": "solutions/783.jsx",
+    "test": "tests/783.cjs"
+  }
+]

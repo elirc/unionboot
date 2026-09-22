@@ -1,0 +1,1 @@
+WITH RECURSIVE days(day) AS(VALUES('2024-01-01') UNION ALL SELECT date(day,'+1 day') FROM days WHERE day<'2024-01-04') SELECT d.day,COUNT(e.id) AS events FROM days d LEFT JOIN events e ON e.day=d.day GROUP BY d.day ORDER BY d.day;

@@ -1,0 +1,18 @@
+External subscription projection / scenario 10 — maximum projection; pause/resume supported
+
+TASK
+Injected source.subscribe(listener) returns unsubscribe. Messages are finite numbers. Output Value initially none. Show maximum received value. Pause unsubscribes and ignores messages; Resume resubscribes preserving accumulated value. Reset clears accumulated value but not subscription. Source prop replacement unsubscribes old and subscribes new, preserving value. Ignore callbacks retained after unsubscribe/unmount.
+
+EXAMPLE
+Emit 3,3,-2 => 3.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1688.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{source}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1688
+node react-300/verify.cjs --starters --id=1688

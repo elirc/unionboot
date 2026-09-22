@@ -1,0 +1,11 @@
+Filtered product list / scenario 13 — startsWith, case-folded, literal spaces, deduplicate exact strings, limit none
+
+Render props.items strings in a list. Search uses startsWith, case-insensitive matching; preserve query whitespace. Remove exact duplicate result strings, keeping first occurrence. Show every match. Output visible count, not total matches. Empty query matches all. Preserve input order and props; respond to updated props.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {"items":["Alpha","Beta","Alphabet","alpha","Delta","Alpha"]}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=611
+Run your starter: node react-more/verify.cjs --starters --id=611

@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-more",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W561",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 6,
+  "results": [
+    {
+      "id": "W561",
+      "family": "Typed route groups and delegate contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 6
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

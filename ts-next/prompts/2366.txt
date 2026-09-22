@@ -1,0 +1,14 @@
+2366: Phantom capability authorization plans / required-capabilities=tags
+
+Contract focus: phantom records; structural capabilities; input authority.
+
+Build a plan requiring tags capabilities. A Permit is minted by an external authorization layer, not by this exercise. The unique-symbol phantom marker prevents arbitrary plain records from being accepted. At runtime check all required true flags; return only required names in declaration order.
+
+Semantic variation 8/15: required-capabilities=tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2366.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2366.cjs. Type contracts: types/2366.positive.ts and types/2366.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2366
+Reference: node ts-next/verify.cjs --id=2366

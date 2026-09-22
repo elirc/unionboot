@@ -1,0 +1,49 @@
+Q170 — family Gaps islands sequences and streaks, scenario 10: adjacent-duplicate-compress
+
+Task
+Return battery readings that differ from the immediately preceding reading, keeping the first reading. Order by id.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE visits(id INTEGER PRIMARY KEY,day INTEGER);
+INSERT INTO visits VALUES(1,1),(2,2),(3,4),(4,5),(5,6),(6,9);
+CREATE TABLE battery(id INTEGER PRIMARY KEY,level INTEGER);
+INSERT INTO battery VALUES(1,80),(2,60),(3,50),(4,50),(5,55),(6,54),(7,54),(8,70);
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"level":80}.
+
+Expected shape
+Columns (exact aliases): id, level. 6 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "level": 80
+  },
+  {
+    "id": 2,
+    "level": 60
+  },
+  {
+    "id": 3,
+    "level": 50
+  },
+  {
+    "id": 5,
+    "level": 55
+  },
+  {
+    "id": 6,
+    "level": 54
+  },
+  {
+    "id": 8,
+    "level": 70
+  }
+]
+
+Submission
+Edit starters/Q170.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q170
+Reference: node sql-200/verify.cjs --id=Q170

@@ -1,0 +1,58 @@
+SQL-200 — 20 related scenario families, 10 scenarios per family
+
+Prerequisite: Node v22.16.0 with built-in node:sqlite DatabaseSync (verified).
+Authoring runtime SQLite: 3.49.1. No sqlite3 CLI, packages, network, or services.
+ExperimentalWarning from Node is informational.
+
+From unionboot:
+  node sql-200/verify.cjs --inventory
+  node sql-200/verify.cjs
+  node sql-200/verify.cjs --id=Q001
+  node sql-200/verify.cjs --id=1
+  node sql-200/verify.cjs --starters --id=Q001
+  node sql-200/verify.cjs --starters
+
+Inventory checks files/manifest only and never loads node:sqlite or opens a DB.
+Default mode grades all reference solutions; --starters grades your work.
+Exit codes: 0 all selected groups pass; 1 any grading failure; 2 bad CLI or manifest/inventory parse errors. SQL syntax/runtime errors are grading failures (1), not CLI parse errors.
+Reports: verification-solution.json / verification-starter.json; per-ID runs use verification-solution-Q001.json etc. Reports include groups,passed,failed and per-id phase/errorType/error.
+
+Workflow: read prompts/Qxxx.txt, edit starters/Qxxx.sql, run one starter group.
+Each starter initially contains exactly -- TODO: write your SQL here.
+No hidden helper SQL completes a blank. Every expected result has at least one row; blanks return [] and fail exact-row assertions. SQL errors including no-such-table/column always fail.
+
+Each run opens its own fresh :memory: DB, enables foreign keys, seeds schema and data, runs submitted SQL, and compares exact final result rows. Constraints and some mutation tasks also inspect stored state. Identical tests grade either source. Tests are deterministic examples, not proof against adversarial hardcoding; do not replace queries with literal answers.
+The script runner supports simple semicolon-separated statements with quoted strings/identifiers and comments. CREATE TRIGGER BEGIN...END bodies and sqlite shell dot commands are intentionally outside this pack. Only the final statement returns graded rows. Binding tasks bind fixed values to the final prepared statement through node:sqlite; no SQL interpolation.
+
+SQLite-specific caveats
+- INTEGER PRIMARY KEY is a rowid alias; SQLite has dynamic typing unless STRICT is used.
+- Booleans are represented with integers/NULL; date functions operate on supported text/numeric encodings.
+- Built-in lower/NOCASE are ASCII-oriented without ICU. Fixed offsets are not time zones.
+- RETURNING multi-row order is unspecified; the RETURNING scenario changes one row.
+- EXPLAIN QUERY PLAN scenarios compare detail text only and target SQLite 3.49.1; optimizer text can change on another Node/SQLite version. These are educational plan experiments, not cross-version performance tests.
+- Transaction scenarios use one connection and check final state, not concurrency/isolation under competing writers.
+
+Families
+01. Join preservation and matching (Q001..Q010)
+02. Multi-table commerce joins (Q011..Q020)
+03. GROUP BY HAVING and aggregate policy (Q021..Q030)
+04. Subqueries correlated lookups and existence (Q031..Q040)
+05. Ranking and top N per group (Q041..Q050)
+06. Window offsets frames and analytics (Q051..Q060)
+07. CTE pipelines and recursive traversal (Q061..Q070)
+08. Set operations and membership policies (Q071..Q080)
+09. NULL semantics and three valued logic (Q081..Q090)
+10. SQLite dates times and calendar boundaries (Q091..Q100)
+11. String normalization parsing and matching (Q101..Q110)
+12. CASE pivot and conditional aggregation (Q111..Q120)
+13. SQLite schema constraints and integrity (Q121..Q130)
+14. UPSERT conflict targets and merge policy (Q131..Q140)
+15. Transactions savepoints and atomic state (Q141..Q150)
+16. UPDATE DELETE and subquery driven mutations (Q151..Q160)
+17. Gaps islands sequences and streaks (Q161..Q170)
+18. Deduplication keep policies and hygiene (Q171..Q180)
+19. Parameterized queries with node sqlite bindings (Q181..Q190)
+20. EXPLAIN QUERY PLAN and index aware queries (Q191..Q200)
+
+Authoring
+../build-sql-200.cjs owns family definitions and emits this pack. It first executes all 200 references against manually specified expected rows and enforces unique family|semanticKey. It refuses any existing sql-200 path and writes new files exclusively. Do not delete your work to regenerate. Maintainers must patch the generator and only the specifically affected generated files with old-content comparison; never replace learner starters.

@@ -1,0 +1,27 @@
+Q302 — family Reconciliation null safe comparison and source authority, scenario 2: local-only-deletions
+
+Task
+Find local keys absent remotely.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE local(key TEXT PRIMARY KEY,value INTEGER);CREATE TABLE remote(key TEXT PRIMARY KEY,value INTEGER);INSERT INTO local VALUES('A',10),('B',20),('C',NULL),('D',4);INSERT INTO remote VALUES('A',10),('B',25),('C',NULL),('E',5);
+
+Concrete example
+The first result row on this seed is {"key":"D","value":4}.
+
+Expected shape
+Columns: key, value. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "key": "D",
+    "value": 4
+  }
+]
+
+Submission
+Write SQL in starters/Q302.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q302
+Learner: node sql-more/verify.cjs --starters --id=Q302

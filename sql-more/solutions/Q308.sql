@@ -1,0 +1,1 @@
+BEGIN;INSERT INTO local SELECT * FROM remote WHERE true ON CONFLICT(key) DO UPDATE SET value=excluded.value;DELETE FROM local WHERE NOT EXISTS(SELECT 1 FROM remote r WHERE r.key=local.key);COMMIT;SELECT key,value FROM local ORDER BY key;

@@ -1,0 +1,14 @@
+{
+  "track": "dotnet-web-300",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "all",
+  "groups": 300,
+  "phase": "build",
+  "passed": 0,
+  "failed": 0,
+  "notRun": 300,
+  "buildExitCode": 1,
+  "error": "Build failed; see build log",
+  "results": []
+}

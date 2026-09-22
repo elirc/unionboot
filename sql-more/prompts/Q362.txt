@@ -1,0 +1,48 @@
+Q362 — family Inventory valuation and stock flow policies, scenario 2: running-balance-per-sku
+
+Task
+Return running stock after each move using ROWS frame; preserve chronological order.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);
+
+Concrete example
+The first result row on this seed is {"id":1,"sku":"A","stock":10}.
+
+Expected shape
+Columns: id, sku, stock. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "sku": "A",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "sku": "A",
+    "stock": 6
+  },
+  {
+    "id": 3,
+    "sku": "B",
+    "stock": 7
+  },
+  {
+    "id": 4,
+    "sku": "A",
+    "stock": 11
+  },
+  {
+    "id": 5,
+    "sku": "B",
+    "stock": 5
+  }
+]
+
+Submission
+Write SQL in starters/Q362.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q362
+Learner: node sql-more/verify.cjs --starters --id=Q362

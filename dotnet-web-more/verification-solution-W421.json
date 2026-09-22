@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-more",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W421",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 9,
+  "results": [
+    {
+      "id": "W421",
+      "family": "Channel worker contracts",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 9
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

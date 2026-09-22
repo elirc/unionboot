@@ -1,0 +1,8 @@
+W533 | Request culture injected providers
+Scenario 3: Injected culture fallback de-DE
+Semantic key: injected-culture-fallback-de-de
+
+Call the injected IRequestCultureProvider exactly once with the original context. Use its first culture or fallback de-DE when no result/cultures. Do not mutate process-wide CurrentCulture; this is request-local resolution.
+
+Signature: public static async Task<string> Resolve(HttpContext context,IRequestCultureProvider provider)
+Implement starters/W533.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

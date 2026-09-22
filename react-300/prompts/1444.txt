@@ -1,0 +1,18 @@
+Filter-aware pagination / scenario 6 — Page size 4; clamp on filtering; case-sensitive query
+
+TASK
+Props items strings, list page size 4. Query substring matching case-sensitive. Page starts1, Page output. Prev/Next disable at boundaries. Filter edits permanently clamp to valid range (do not resurrect old page after clearing). Size select 4/5; changing size resets page1. Count shows filtered total. Empty list still Page1.
+
+EXAMPLE
+Next shows Av, Bu, At, Bs.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1444.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{items=[]}
+Example data: {"items":["Ax","By","Az","Bw","Av","Bu","At","Bs"]}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1444
+node react-300/verify.cjs --starters --id=1444

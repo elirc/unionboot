@@ -1,0 +1,1 @@
+ALTER TABLE jobs ADD COLUMN lease_token TEXT;CREATE UNIQUE INDEX unique_lease ON jobs(lease_token);UPDATE jobs SET lease_token='tok1' WHERE id=1;UPDATE jobs SET lease_token='tok2' WHERE id=2;SELECT id,lease_token FROM jobs ORDER BY id;

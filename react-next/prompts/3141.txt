@@ -1,0 +1,18 @@
+Drag-transfer drop protocol / scenario 3 — Boundary 3; retain source after valid copy
+
+TASK
+Draggable Source button carries transfer type application/x-exercise-item with ID item-3. On dragStart setData(type,id), effectAllowed=copy. Target data-testid=drop-zone handles dragOver by preventDefault and dropEffect=copy. On drop accept only matching ID, then output Dropped ID and leave Source mounted. Invalid transfer gives alert Invalid transfer, no source change. Valid drop clears error; prevent default on drop. No browser drag engine or network needed.
+
+EXAMPLE
+Transfer item-3 => Dropped=item-3; another ID => rejected.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3141.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3141
+node react-next/verify.cjs --starters --id=3141

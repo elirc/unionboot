@@ -1,0 +1,802 @@
+[
+  {
+    "id": 184,
+    "tech": "ts",
+    "title": "Sum readonly numbers / basic",
+    "starter": "starters/184.ts",
+    "solution": "solutions/184.ts",
+    "test": "tests/184.cjs"
+  },
+  {
+    "id": 185,
+    "tech": "ts",
+    "title": "Sum readonly numbers / empty-boundary",
+    "starter": "starters/185.ts",
+    "solution": "solutions/185.ts",
+    "test": "tests/185.cjs"
+  },
+  {
+    "id": 186,
+    "tech": "ts",
+    "title": "Sum readonly numbers / duplicate-values",
+    "starter": "starters/186.ts",
+    "solution": "solutions/186.ts",
+    "test": "tests/186.cjs"
+  },
+  {
+    "id": 187,
+    "tech": "ts",
+    "title": "Sum readonly numbers / negative-values",
+    "starter": "starters/187.ts",
+    "solution": "solutions/187.ts",
+    "test": "tests/187.cjs"
+  },
+  {
+    "id": 188,
+    "tech": "ts",
+    "title": "Sum readonly numbers / large-values",
+    "starter": "starters/188.ts",
+    "solution": "solutions/188.ts",
+    "test": "tests/188.cjs"
+  },
+  {
+    "id": 189,
+    "tech": "ts",
+    "title": "Map to labelled records / basic",
+    "starter": "starters/189.ts",
+    "solution": "solutions/189.ts",
+    "test": "tests/189.cjs"
+  },
+  {
+    "id": 190,
+    "tech": "ts",
+    "title": "Map to labelled records / empty-boundary",
+    "starter": "starters/190.ts",
+    "solution": "solutions/190.ts",
+    "test": "tests/190.cjs"
+  },
+  {
+    "id": 191,
+    "tech": "ts",
+    "title": "Map to labelled records / duplicate-values",
+    "starter": "starters/191.ts",
+    "solution": "solutions/191.ts",
+    "test": "tests/191.cjs"
+  },
+  {
+    "id": 192,
+    "tech": "ts",
+    "title": "Map to labelled records / negative-values",
+    "starter": "starters/192.ts",
+    "solution": "solutions/192.ts",
+    "test": "tests/192.cjs"
+  },
+  {
+    "id": 193,
+    "tech": "ts",
+    "title": "Map to labelled records / large-values",
+    "starter": "starters/193.ts",
+    "solution": "solutions/193.ts",
+    "test": "tests/193.cjs"
+  },
+  {
+    "id": 194,
+    "tech": "ts",
+    "title": "Discriminated sign union / basic",
+    "starter": "starters/194.ts",
+    "solution": "solutions/194.ts",
+    "test": "tests/194.cjs"
+  },
+  {
+    "id": 195,
+    "tech": "ts",
+    "title": "Discriminated sign union / empty-boundary",
+    "starter": "starters/195.ts",
+    "solution": "solutions/195.ts",
+    "test": "tests/195.cjs"
+  },
+  {
+    "id": 196,
+    "tech": "ts",
+    "title": "Discriminated sign union / duplicate-values",
+    "starter": "starters/196.ts",
+    "solution": "solutions/196.ts",
+    "test": "tests/196.cjs"
+  },
+  {
+    "id": 197,
+    "tech": "ts",
+    "title": "Discriminated sign union / negative-values",
+    "starter": "starters/197.ts",
+    "solution": "solutions/197.ts",
+    "test": "tests/197.cjs"
+  },
+  {
+    "id": 198,
+    "tech": "ts",
+    "title": "Discriminated sign union / large-values",
+    "starter": "starters/198.ts",
+    "solution": "solutions/198.ts",
+    "test": "tests/198.cjs"
+  },
+  {
+    "id": 199,
+    "tech": "ts",
+    "title": "Optional first value / basic",
+    "starter": "starters/199.ts",
+    "solution": "solutions/199.ts",
+    "test": "tests/199.cjs"
+  },
+  {
+    "id": 200,
+    "tech": "ts",
+    "title": "Optional first value / empty-boundary",
+    "starter": "starters/200.ts",
+    "solution": "solutions/200.ts",
+    "test": "tests/200.cjs"
+  },
+  {
+    "id": 201,
+    "tech": "ts",
+    "title": "Optional first value / duplicate-values",
+    "starter": "starters/201.ts",
+    "solution": "solutions/201.ts",
+    "test": "tests/201.cjs"
+  },
+  {
+    "id": 202,
+    "tech": "ts",
+    "title": "Optional first value / negative-values",
+    "starter": "starters/202.ts",
+    "solution": "solutions/202.ts",
+    "test": "tests/202.cjs"
+  },
+  {
+    "id": 203,
+    "tech": "ts",
+    "title": "Optional first value / large-values",
+    "starter": "starters/203.ts",
+    "solution": "solutions/203.ts",
+    "test": "tests/203.cjs"
+  },
+  {
+    "id": 204,
+    "tech": "ts",
+    "title": "Readonly tuple bounds / basic",
+    "starter": "starters/204.ts",
+    "solution": "solutions/204.ts",
+    "test": "tests/204.cjs"
+  },
+  {
+    "id": 205,
+    "tech": "ts",
+    "title": "Readonly tuple bounds / empty-boundary",
+    "starter": "starters/205.ts",
+    "solution": "solutions/205.ts",
+    "test": "tests/205.cjs"
+  },
+  {
+    "id": 206,
+    "tech": "ts",
+    "title": "Readonly tuple bounds / duplicate-values",
+    "starter": "starters/206.ts",
+    "solution": "solutions/206.ts",
+    "test": "tests/206.cjs"
+  },
+  {
+    "id": 207,
+    "tech": "ts",
+    "title": "Readonly tuple bounds / negative-values",
+    "starter": "starters/207.ts",
+    "solution": "solutions/207.ts",
+    "test": "tests/207.cjs"
+  },
+  {
+    "id": 208,
+    "tech": "ts",
+    "title": "Readonly tuple bounds / large-values",
+    "starter": "starters/208.ts",
+    "solution": "solutions/208.ts",
+    "test": "tests/208.cjs"
+  },
+  {
+    "id": 209,
+    "tech": "ts",
+    "title": "Typed Result mean / basic",
+    "starter": "starters/209.ts",
+    "solution": "solutions/209.ts",
+    "test": "tests/209.cjs"
+  },
+  {
+    "id": 210,
+    "tech": "ts",
+    "title": "Typed Result mean / empty-boundary",
+    "starter": "starters/210.ts",
+    "solution": "solutions/210.ts",
+    "test": "tests/210.cjs"
+  },
+  {
+    "id": 211,
+    "tech": "ts",
+    "title": "Typed Result mean / duplicate-values",
+    "starter": "starters/211.ts",
+    "solution": "solutions/211.ts",
+    "test": "tests/211.cjs"
+  },
+  {
+    "id": 212,
+    "tech": "ts",
+    "title": "Typed Result mean / negative-values",
+    "starter": "starters/212.ts",
+    "solution": "solutions/212.ts",
+    "test": "tests/212.cjs"
+  },
+  {
+    "id": 213,
+    "tech": "ts",
+    "title": "Typed Result mean / large-values",
+    "starter": "starters/213.ts",
+    "solution": "solutions/213.ts",
+    "test": "tests/213.cjs"
+  },
+  {
+    "id": 214,
+    "tech": "ts",
+    "title": "Record frequency index / basic",
+    "starter": "starters/214.ts",
+    "solution": "solutions/214.ts",
+    "test": "tests/214.cjs"
+  },
+  {
+    "id": 215,
+    "tech": "ts",
+    "title": "Record frequency index / empty-boundary",
+    "starter": "starters/215.ts",
+    "solution": "solutions/215.ts",
+    "test": "tests/215.cjs"
+  },
+  {
+    "id": 216,
+    "tech": "ts",
+    "title": "Record frequency index / duplicate-values",
+    "starter": "starters/216.ts",
+    "solution": "solutions/216.ts",
+    "test": "tests/216.cjs"
+  },
+  {
+    "id": 217,
+    "tech": "ts",
+    "title": "Record frequency index / negative-values",
+    "starter": "starters/217.ts",
+    "solution": "solutions/217.ts",
+    "test": "tests/217.cjs"
+  },
+  {
+    "id": 218,
+    "tech": "ts",
+    "title": "Record frequency index / large-values",
+    "starter": "starters/218.ts",
+    "solution": "solutions/218.ts",
+    "test": "tests/218.cjs"
+  },
+  {
+    "id": 219,
+    "tech": "ts",
+    "title": "Generic identity copy / basic",
+    "starter": "starters/219.ts",
+    "solution": "solutions/219.ts",
+    "test": "tests/219.cjs"
+  },
+  {
+    "id": 220,
+    "tech": "ts",
+    "title": "Generic identity copy / empty-boundary",
+    "starter": "starters/220.ts",
+    "solution": "solutions/220.ts",
+    "test": "tests/220.cjs"
+  },
+  {
+    "id": 221,
+    "tech": "ts",
+    "title": "Generic identity copy / duplicate-values",
+    "starter": "starters/221.ts",
+    "solution": "solutions/221.ts",
+    "test": "tests/221.cjs"
+  },
+  {
+    "id": 222,
+    "tech": "ts",
+    "title": "Generic identity copy / negative-values",
+    "starter": "starters/222.ts",
+    "solution": "solutions/222.ts",
+    "test": "tests/222.cjs"
+  },
+  {
+    "id": 223,
+    "tech": "ts",
+    "title": "Generic identity copy / large-values",
+    "starter": "starters/223.ts",
+    "solution": "solutions/223.ts",
+    "test": "tests/223.cjs"
+  },
+  {
+    "id": 224,
+    "tech": "ts",
+    "title": "Generic pair each element / basic",
+    "starter": "starters/224.ts",
+    "solution": "solutions/224.ts",
+    "test": "tests/224.cjs"
+  },
+  {
+    "id": 225,
+    "tech": "ts",
+    "title": "Generic pair each element / empty-boundary",
+    "starter": "starters/225.ts",
+    "solution": "solutions/225.ts",
+    "test": "tests/225.cjs"
+  },
+  {
+    "id": 226,
+    "tech": "ts",
+    "title": "Generic pair each element / duplicate-values",
+    "starter": "starters/226.ts",
+    "solution": "solutions/226.ts",
+    "test": "tests/226.cjs"
+  },
+  {
+    "id": 227,
+    "tech": "ts",
+    "title": "Generic pair each element / negative-values",
+    "starter": "starters/227.ts",
+    "solution": "solutions/227.ts",
+    "test": "tests/227.cjs"
+  },
+  {
+    "id": 228,
+    "tech": "ts",
+    "title": "Generic pair each element / large-values",
+    "starter": "starters/228.ts",
+    "solution": "solutions/228.ts",
+    "test": "tests/228.cjs"
+  },
+  {
+    "id": 229,
+    "tech": "ts",
+    "title": "Generic last value / basic",
+    "starter": "starters/229.ts",
+    "solution": "solutions/229.ts",
+    "test": "tests/229.cjs"
+  },
+  {
+    "id": 230,
+    "tech": "ts",
+    "title": "Generic last value / empty-boundary",
+    "starter": "starters/230.ts",
+    "solution": "solutions/230.ts",
+    "test": "tests/230.cjs"
+  },
+  {
+    "id": 231,
+    "tech": "ts",
+    "title": "Generic last value / duplicate-values",
+    "starter": "starters/231.ts",
+    "solution": "solutions/231.ts",
+    "test": "tests/231.cjs"
+  },
+  {
+    "id": 232,
+    "tech": "ts",
+    "title": "Generic last value / negative-values",
+    "starter": "starters/232.ts",
+    "solution": "solutions/232.ts",
+    "test": "tests/232.cjs"
+  },
+  {
+    "id": 233,
+    "tech": "ts",
+    "title": "Generic last value / large-values",
+    "starter": "starters/233.ts",
+    "solution": "solutions/233.ts",
+    "test": "tests/233.cjs"
+  },
+  {
+    "id": 234,
+    "tech": "ts",
+    "title": "Exclude negative numbers / basic",
+    "starter": "starters/234.ts",
+    "solution": "solutions/234.ts",
+    "test": "tests/234.cjs"
+  },
+  {
+    "id": 235,
+    "tech": "ts",
+    "title": "Exclude negative numbers / empty-boundary",
+    "starter": "starters/235.ts",
+    "solution": "solutions/235.ts",
+    "test": "tests/235.cjs"
+  },
+  {
+    "id": 236,
+    "tech": "ts",
+    "title": "Exclude negative numbers / duplicate-values",
+    "starter": "starters/236.ts",
+    "solution": "solutions/236.ts",
+    "test": "tests/236.cjs"
+  },
+  {
+    "id": 237,
+    "tech": "ts",
+    "title": "Exclude negative numbers / negative-values",
+    "starter": "starters/237.ts",
+    "solution": "solutions/237.ts",
+    "test": "tests/237.cjs"
+  },
+  {
+    "id": 238,
+    "tech": "ts",
+    "title": "Exclude negative numbers / large-values",
+    "starter": "starters/238.ts",
+    "solution": "solutions/238.ts",
+    "test": "tests/238.cjs"
+  },
+  {
+    "id": 239,
+    "tech": "ts",
+    "title": "Cumulative typed records / basic",
+    "starter": "starters/239.ts",
+    "solution": "solutions/239.ts",
+    "test": "tests/239.cjs"
+  },
+  {
+    "id": 240,
+    "tech": "ts",
+    "title": "Cumulative typed records / empty-boundary",
+    "starter": "starters/240.ts",
+    "solution": "solutions/240.ts",
+    "test": "tests/240.cjs"
+  },
+  {
+    "id": 241,
+    "tech": "ts",
+    "title": "Cumulative typed records / duplicate-values",
+    "starter": "starters/241.ts",
+    "solution": "solutions/241.ts",
+    "test": "tests/241.cjs"
+  },
+  {
+    "id": 242,
+    "tech": "ts",
+    "title": "Cumulative typed records / negative-values",
+    "starter": "starters/242.ts",
+    "solution": "solutions/242.ts",
+    "test": "tests/242.cjs"
+  },
+  {
+    "id": 243,
+    "tech": "ts",
+    "title": "Cumulative typed records / large-values",
+    "starter": "starters/243.ts",
+    "solution": "solutions/243.ts",
+    "test": "tests/243.cjs"
+  },
+  {
+    "id": 244,
+    "tech": "ts",
+    "title": "Tuple neighbouring differences / basic",
+    "starter": "starters/244.ts",
+    "solution": "solutions/244.ts",
+    "test": "tests/244.cjs"
+  },
+  {
+    "id": 245,
+    "tech": "ts",
+    "title": "Tuple neighbouring differences / empty-boundary",
+    "starter": "starters/245.ts",
+    "solution": "solutions/245.ts",
+    "test": "tests/245.cjs"
+  },
+  {
+    "id": 246,
+    "tech": "ts",
+    "title": "Tuple neighbouring differences / duplicate-values",
+    "starter": "starters/246.ts",
+    "solution": "solutions/246.ts",
+    "test": "tests/246.cjs"
+  },
+  {
+    "id": 247,
+    "tech": "ts",
+    "title": "Tuple neighbouring differences / negative-values",
+    "starter": "starters/247.ts",
+    "solution": "solutions/247.ts",
+    "test": "tests/247.cjs"
+  },
+  {
+    "id": 248,
+    "tech": "ts",
+    "title": "Tuple neighbouring differences / large-values",
+    "starter": "starters/248.ts",
+    "solution": "solutions/248.ts",
+    "test": "tests/248.cjs"
+  },
+  {
+    "id": 249,
+    "tech": "ts",
+    "title": "Union numeric parser / basic",
+    "starter": "starters/249.ts",
+    "solution": "solutions/249.ts",
+    "test": "tests/249.cjs"
+  },
+  {
+    "id": 250,
+    "tech": "ts",
+    "title": "Union numeric parser / empty-boundary",
+    "starter": "starters/250.ts",
+    "solution": "solutions/250.ts",
+    "test": "tests/250.cjs"
+  },
+  {
+    "id": 251,
+    "tech": "ts",
+    "title": "Union numeric parser / duplicate-values",
+    "starter": "starters/251.ts",
+    "solution": "solutions/251.ts",
+    "test": "tests/251.cjs"
+  },
+  {
+    "id": 252,
+    "tech": "ts",
+    "title": "Union numeric parser / negative-values",
+    "starter": "starters/252.ts",
+    "solution": "solutions/252.ts",
+    "test": "tests/252.cjs"
+  },
+  {
+    "id": 253,
+    "tech": "ts",
+    "title": "Union numeric parser / large-values",
+    "starter": "starters/253.ts",
+    "solution": "solutions/253.ts",
+    "test": "tests/253.cjs"
+  },
+  {
+    "id": 254,
+    "tech": "ts",
+    "title": "Nullable count summary / basic",
+    "starter": "starters/254.ts",
+    "solution": "solutions/254.ts",
+    "test": "tests/254.cjs"
+  },
+  {
+    "id": 255,
+    "tech": "ts",
+    "title": "Nullable count summary / empty-boundary",
+    "starter": "starters/255.ts",
+    "solution": "solutions/255.ts",
+    "test": "tests/255.cjs"
+  },
+  {
+    "id": 256,
+    "tech": "ts",
+    "title": "Nullable count summary / duplicate-values",
+    "starter": "starters/256.ts",
+    "solution": "solutions/256.ts",
+    "test": "tests/256.cjs"
+  },
+  {
+    "id": 257,
+    "tech": "ts",
+    "title": "Nullable count summary / negative-values",
+    "starter": "starters/257.ts",
+    "solution": "solutions/257.ts",
+    "test": "tests/257.cjs"
+  },
+  {
+    "id": 258,
+    "tech": "ts",
+    "title": "Nullable count summary / large-values",
+    "starter": "starters/258.ts",
+    "solution": "solutions/258.ts",
+    "test": "tests/258.cjs"
+  },
+  {
+    "id": 259,
+    "tech": "ts",
+    "title": "Typed sorted set / basic",
+    "starter": "starters/259.ts",
+    "solution": "solutions/259.ts",
+    "test": "tests/259.cjs"
+  },
+  {
+    "id": 260,
+    "tech": "ts",
+    "title": "Typed sorted set / empty-boundary",
+    "starter": "starters/260.ts",
+    "solution": "solutions/260.ts",
+    "test": "tests/260.cjs"
+  },
+  {
+    "id": 261,
+    "tech": "ts",
+    "title": "Typed sorted set / duplicate-values",
+    "starter": "starters/261.ts",
+    "solution": "solutions/261.ts",
+    "test": "tests/261.cjs"
+  },
+  {
+    "id": 262,
+    "tech": "ts",
+    "title": "Typed sorted set / negative-values",
+    "starter": "starters/262.ts",
+    "solution": "solutions/262.ts",
+    "test": "tests/262.cjs"
+  },
+  {
+    "id": 263,
+    "tech": "ts",
+    "title": "Typed sorted set / large-values",
+    "starter": "starters/263.ts",
+    "solution": "solutions/263.ts",
+    "test": "tests/263.cjs"
+  },
+  {
+    "id": 264,
+    "tech": "ts",
+    "title": "Discriminated parity labels / basic",
+    "starter": "starters/264.ts",
+    "solution": "solutions/264.ts",
+    "test": "tests/264.cjs"
+  },
+  {
+    "id": 265,
+    "tech": "ts",
+    "title": "Discriminated parity labels / empty-boundary",
+    "starter": "starters/265.ts",
+    "solution": "solutions/265.ts",
+    "test": "tests/265.cjs"
+  },
+  {
+    "id": 266,
+    "tech": "ts",
+    "title": "Discriminated parity labels / duplicate-values",
+    "starter": "starters/266.ts",
+    "solution": "solutions/266.ts",
+    "test": "tests/266.cjs"
+  },
+  {
+    "id": 267,
+    "tech": "ts",
+    "title": "Discriminated parity labels / negative-values",
+    "starter": "starters/267.ts",
+    "solution": "solutions/267.ts",
+    "test": "tests/267.cjs"
+  },
+  {
+    "id": 268,
+    "tech": "ts",
+    "title": "Discriminated parity labels / large-values",
+    "starter": "starters/268.ts",
+    "solution": "solutions/268.ts",
+    "test": "tests/268.cjs"
+  },
+  {
+    "id": 269,
+    "tech": "ts",
+    "title": "Readonly input reversal / basic",
+    "starter": "starters/269.ts",
+    "solution": "solutions/269.ts",
+    "test": "tests/269.cjs"
+  },
+  {
+    "id": 270,
+    "tech": "ts",
+    "title": "Readonly input reversal / empty-boundary",
+    "starter": "starters/270.ts",
+    "solution": "solutions/270.ts",
+    "test": "tests/270.cjs"
+  },
+  {
+    "id": 271,
+    "tech": "ts",
+    "title": "Readonly input reversal / duplicate-values",
+    "starter": "starters/271.ts",
+    "solution": "solutions/271.ts",
+    "test": "tests/271.cjs"
+  },
+  {
+    "id": 272,
+    "tech": "ts",
+    "title": "Readonly input reversal / negative-values",
+    "starter": "starters/272.ts",
+    "solution": "solutions/272.ts",
+    "test": "tests/272.cjs"
+  },
+  {
+    "id": 273,
+    "tech": "ts",
+    "title": "Readonly input reversal / large-values",
+    "starter": "starters/273.ts",
+    "solution": "solutions/273.ts",
+    "test": "tests/273.cjs"
+  },
+  {
+    "id": 274,
+    "tech": "ts",
+    "title": "Optional object entries / basic",
+    "starter": "starters/274.ts",
+    "solution": "solutions/274.ts",
+    "test": "tests/274.cjs"
+  },
+  {
+    "id": 275,
+    "tech": "ts",
+    "title": "Optional object entries / empty-boundary",
+    "starter": "starters/275.ts",
+    "solution": "solutions/275.ts",
+    "test": "tests/275.cjs"
+  },
+  {
+    "id": 276,
+    "tech": "ts",
+    "title": "Optional object entries / duplicate-values",
+    "starter": "starters/276.ts",
+    "solution": "solutions/276.ts",
+    "test": "tests/276.cjs"
+  },
+  {
+    "id": 277,
+    "tech": "ts",
+    "title": "Optional object entries / negative-values",
+    "starter": "starters/277.ts",
+    "solution": "solutions/277.ts",
+    "test": "tests/277.cjs"
+  },
+  {
+    "id": 278,
+    "tech": "ts",
+    "title": "Optional object entries / large-values",
+    "starter": "starters/278.ts",
+    "solution": "solutions/278.ts",
+    "test": "tests/278.cjs"
+  },
+  {
+    "id": 279,
+    "tech": "ts",
+    "title": "Typed running product / basic",
+    "starter": "starters/279.ts",
+    "solution": "solutions/279.ts",
+    "test": "tests/279.cjs"
+  },
+  {
+    "id": 280,
+    "tech": "ts",
+    "title": "Typed running product / empty-boundary",
+    "starter": "starters/280.ts",
+    "solution": "solutions/280.ts",
+    "test": "tests/280.cjs"
+  },
+  {
+    "id": 281,
+    "tech": "ts",
+    "title": "Typed running product / duplicate-values",
+    "starter": "starters/281.ts",
+    "solution": "solutions/281.ts",
+    "test": "tests/281.cjs"
+  },
+  {
+    "id": 282,
+    "tech": "ts",
+    "title": "Typed running product / negative-values",
+    "starter": "starters/282.ts",
+    "solution": "solutions/282.ts",
+    "test": "tests/282.cjs"
+  },
+  {
+    "id": 283,
+    "tech": "ts",
+    "title": "Typed running product / large-values",
+    "starter": "starters/283.ts",
+    "solution": "solutions/283.ts",
+    "test": "tests/283.cjs"
+  }
+]

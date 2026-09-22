@@ -1,0 +1,15 @@
+1318: Branded identifier validation / scenario 10
+
+Contract focus: unique symbol branding; unknown validation; nominal types.
+Validate usr_ followed by a positive decimal integer with no leading zero. Successful strings are branded UserId; invalid unknown inputs return invalid-id without coercion or trimming. Keep the original string. A single cast after validation creates the brand; arbitrary plain strings must not assign to UserId.
+
+This is scenario 10/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize sparse magnitudes; scalar/state exercises use deterministic case seed 9. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1318.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1318.cjs. Positive strict fixtures: types/1318.positive.ts. Negative strict fixtures: types/1318.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-final/verify.cjs --starters --id=1318
+Reference check:
+  node ts-final/verify.cjs --id=1318
+

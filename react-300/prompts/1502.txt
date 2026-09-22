@@ -1,0 +1,18 @@
+Soft delete and restore / scenario 4 — One undo slot; restore end; locked row 4
+
+TASK
+Initial active rows A..E, original rank order. D is locked: Remove button disabled. Remove NAME moves item to trash. Trash holds only the most recently deleted item; older trash is discarded permanently. Active and Trash are named lists with plain spans for row text. Trash rows have Restore NAME. Restore appends to active list. Empty trash clears trash only. Outputs Active count and Trash count.
+
+EXAMPLE
+Remove A moves it out of Active; Restore A appends it.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1502.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1502
+node react-300/verify.cjs --starters --id=1502

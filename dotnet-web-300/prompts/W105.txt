@@ -1,0 +1,12 @@
+W105 — JSON request body validation
+Scenario 5/10: Body {count}; integer range 0..7
+
+Parse JSON directly from request Body and honor RequestAborted. Non-JSON media type->415. Invalid JSON, non-object, missing count, non-integer number/string, or count outside0..7->400. Valid->200 {count}; extra properties ignored. Do not catch cancellation. Example {"count":0}->200. Shared TryGetInt32Safe extension checks Number kind first.
+
+Signature: public static async Task<IResult> Handle(HttpRequest request)
+
+Edit starters/W105.cs. Run node dotnet-web-300/verify.cjs --starters --id=W105 from unionboot.
+Reference: solutions/W105.cs; shared checks: tests/W105.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

@@ -1,0 +1,9 @@
+// 3204 URL query writeback / scenario 6 — Boundary 6; push history entry
+// Read injected history.read() query string; Query field uses parameter q, default empty. Editing writes q using URLSearchParams, preserves unrelated parameters, deletes q when empty, and calls history.push(search) with leading ? (or empty if no parameters). Subscribe to pop notifications and reread without writing back. Initial query is seed6. Cleanup subscription.
+// Full prompt: ../prompts/3204.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({history}) {
+  // TODO: independently implement the prompt.
+  return null;
+}

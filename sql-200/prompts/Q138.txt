@@ -1,0 +1,35 @@
+Q138 — family UPSERT conflict targets and merge policy, scenario 8: minimum-price-and-version-increment
+
+Task
+Incoming A price 8; keep minimum price, preserve qty, increment stored version by one rather than adopting incoming version.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE inventory(sku TEXT PRIMARY KEY NOT NULL,qty INTEGER NOT NULL,price INTEGER NOT NULL,version INTEGER NOT NULL);
+INSERT INTO inventory VALUES('A',5,10,2),('B',0,20,1);
+
+Concrete example
+With the exact seed above, the first result row is {"sku":"A","qty":5,"price":8,"version":3}.
+
+Expected shape
+Columns (exact aliases): sku, qty, price, version. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "sku": "A",
+    "qty": 5,
+    "price": 8,
+    "version": 3
+  },
+  {
+    "sku": "B",
+    "qty": 0,
+    "price": 20,
+    "version": 1
+  }
+]
+
+Submission
+Edit starters/Q138.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q138
+Reference: node sql-200/verify.cjs --id=Q138

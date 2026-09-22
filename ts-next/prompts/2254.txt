@@ -1,0 +1,14 @@
+2254: Balanced literal envelope construction / bracket-depth=1
+
+Contract focus: recursive template wrapping; branded-free literal proofs.
+
+Wrap text in exactly 1 balanced square-bracket layers. Preserve the complete resulting string literal using recursive template construction. Existing brackets in text are opaque; do not parse or escape them.
+
+Semantic variation 1/15: bracket-depth=1. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2254.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2254.cjs. Type contracts: types/2254.positive.ts and types/2254.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2254
+Reference: node ts-next/verify.cjs --id=2254

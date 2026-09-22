@@ -1,0 +1,1 @@
+BEGIN IMMEDIATE; UPDATE accounts SET balance=balance-15 WHERE id=1; UPDATE accounts SET balance=balance+15 WHERE id=2; COMMIT; SELECT id,balance FROM accounts ORDER BY id;

@@ -1,0 +1,6 @@
+// 1380 Conditional delivery fields [forms]
+// Shipping and Pickup are radio choices in a Delivery method group, initially Shipping. Shipping displays Address and requires nonempty trimmed address; Pickup hides Address and requires no address. Switching away and back preserves its draft. Place order is disabled while invalid. Submitting outputs Ship: ADDRESS or Pickup. Changing method must not implicitly submit.
+// Run: node react-junior/verify.cjs --id=1380 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({}){const [method,setMethod]=useState('shipping'),[address,setAddress]=useState(''),[saved,setSaved]=useState('');const valid=method==='pickup'||!!address.trim();
+return <form onSubmit={e=>{e.preventDefault();if(valid)setSaved(method==='pickup'?'Pickup':'Ship: '+address.trim());}}><fieldset><legend>Delivery method</legend>{['Shipping','Pickup'].map(name=><label key={name}>{name}<input type="radio" name="method" checked={method===name.toLowerCase()} onChange={()=>setMethod(name.toLowerCase())}/></label>)}</fieldset>{method==='shipping'&&<label>Address<input value={address} onChange={e=>setAddress(e.target.value)}/></label>}<button disabled={!valid}>Place order</button><output>{saved}</output></form>;}

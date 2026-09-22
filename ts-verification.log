@@ -1,0 +1,101 @@
+PASS 184 Sum readonly numbers / basic
+PASS 185 Sum readonly numbers / empty-boundary
+PASS 186 Sum readonly numbers / duplicate-values
+PASS 187 Sum readonly numbers / negative-values
+PASS 188 Sum readonly numbers / large-values
+PASS 189 Map to labelled records / basic
+PASS 190 Map to labelled records / empty-boundary
+PASS 191 Map to labelled records / duplicate-values
+PASS 192 Map to labelled records / negative-values
+PASS 193 Map to labelled records / large-values
+PASS 194 Discriminated sign union / basic
+PASS 195 Discriminated sign union / empty-boundary
+PASS 196 Discriminated sign union / duplicate-values
+PASS 197 Discriminated sign union / negative-values
+PASS 198 Discriminated sign union / large-values
+PASS 199 Optional first value / basic
+PASS 200 Optional first value / empty-boundary
+PASS 201 Optional first value / duplicate-values
+PASS 202 Optional first value / negative-values
+PASS 203 Optional first value / large-values
+PASS 204 Readonly tuple bounds / basic
+PASS 205 Readonly tuple bounds / empty-boundary
+PASS 206 Readonly tuple bounds / duplicate-values
+PASS 207 Readonly tuple bounds / negative-values
+PASS 208 Readonly tuple bounds / large-values
+PASS 209 Typed Result mean / basic
+PASS 210 Typed Result mean / empty-boundary
+PASS 211 Typed Result mean / duplicate-values
+PASS 212 Typed Result mean / negative-values
+PASS 213 Typed Result mean / large-values
+PASS 214 Record frequency index / basic
+PASS 215 Record frequency index / empty-boundary
+PASS 216 Record frequency index / duplicate-values
+PASS 217 Record frequency index / negative-values
+PASS 218 Record frequency index / large-values
+PASS 219 Generic identity copy / basic
+PASS 220 Generic identity copy / empty-boundary
+PASS 221 Generic identity copy / duplicate-values
+PASS 222 Generic identity copy / negative-values
+PASS 223 Generic identity copy / large-values
+PASS 224 Generic pair each element / basic
+PASS 225 Generic pair each element / empty-boundary
+PASS 226 Generic pair each element / duplicate-values
+PASS 227 Generic pair each element / negative-values
+PASS 228 Generic pair each element / large-values
+PASS 229 Generic last value / basic
+PASS 230 Generic last value / empty-boundary
+PASS 231 Generic last value / duplicate-values
+PASS 232 Generic last value / negative-values
+PASS 233 Generic last value / large-values
+PASS 234 Exclude negative numbers / basic
+PASS 235 Exclude negative numbers / empty-boundary
+PASS 236 Exclude negative numbers / duplicate-values
+PASS 237 Exclude negative numbers / negative-values
+PASS 238 Exclude negative numbers / large-values
+PASS 239 Cumulative typed records / basic
+PASS 240 Cumulative typed records / empty-boundary
+PASS 241 Cumulative typed records / duplicate-values
+PASS 242 Cumulative typed records / negative-values
+PASS 243 Cumulative typed records / large-values
+PASS 244 Tuple neighbouring differences / basic
+PASS 245 Tuple neighbouring differences / empty-boundary
+PASS 246 Tuple neighbouring differences / duplicate-values
+PASS 247 Tuple neighbouring differences / negative-values
+PASS 248 Tuple neighbouring differences / large-values
+PASS 249 Union numeric parser / basic
+PASS 250 Union numeric parser / empty-boundary
+PASS 251 Union numeric parser / duplicate-values
+PASS 252 Union numeric parser / negative-values
+PASS 253 Union numeric parser / large-values
+PASS 254 Nullable count summary / basic
+PASS 255 Nullable count summary / empty-boundary
+PASS 256 Nullable count summary / duplicate-values
+PASS 257 Nullable count summary / negative-values
+PASS 258 Nullable count summary / large-values
+PASS 259 Typed sorted set / basic
+PASS 260 Typed sorted set / empty-boundary
+PASS 261 Typed sorted set / duplicate-values
+PASS 262 Typed sorted set / negative-values
+PASS 263 Typed sorted set / large-values
+PASS 264 Discriminated parity labels / basic
+PASS 265 Discriminated parity labels / empty-boundary
+PASS 266 Discriminated parity labels / duplicate-values
+PASS 267 Discriminated parity labels / negative-values
+PASS 268 Discriminated parity labels / large-values
+PASS 269 Readonly input reversal / basic
+PASS 270 Readonly input reversal / empty-boundary
+PASS 271 Readonly input reversal / duplicate-values
+PASS 272 Readonly input reversal / negative-values
+PASS 273 Readonly input reversal / large-values
+PASS 274 Optional object entries / basic
+PASS 275 Optional object entries / empty-boundary
+PASS 276 Optional object entries / duplicate-values
+PASS 277 Optional object entries / negative-values
+PASS 278 Optional object entries / large-values
+PASS 279 Typed running product / basic
+PASS 280 Typed running product / empty-boundary
+PASS 281 Typed running product / duplicate-values
+PASS 282 Typed running product / negative-values
+PASS 283 Typed running product / large-values
+solution: 100 passed, 0 failed. TypeScript compiler gate: required.

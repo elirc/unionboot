@@ -1,0 +1,18 @@
+Table schema visibility projection / scenario 4 — Boundary 4; allow empty schema
+
+TASK
+Render a table with one header and one data row; input columns define schema order and cell text is column + '-value'. Each Show Cx checkbox toggles visibility, preserving original schema order when restored. Permit all columns hidden; keep an empty table row. Output Schema joins visible column names by comma. New columns introduced via props become visible; removed columns disappear. Hidden names retained internally so a removed then restored previously hidden column remains hidden. No row sorting or data selection.
+
+EXAMPLE
+Hide C2 => schema excludes C2; show C2 again => original order restored.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3042.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{columns=[]}
+Example data: {"columns":["C1","C2","C3","C4","C5","C6"]}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3042
+node react-next/verify.cjs --starters --id=3042

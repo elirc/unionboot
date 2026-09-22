@@ -1,0 +1,14 @@
+2091: Positional reverse tuple contracts / heterogeneous-arity=3
+
+Contract focus: tuple right inference; reversed position correspondence.
+
+Reverse exactly 3 heterogeneous positions. The source cycles number/string/boolean position contracts, so reversing changes more than array order. Return a fresh array; readonly is static only.
+
+Semantic variation 3/15: heterogeneous-arity=3. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2091.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2091.cjs. Type contracts: types/2091.positive.ts and types/2091.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2091
+Reference: node ts-next/verify.cjs --id=2091

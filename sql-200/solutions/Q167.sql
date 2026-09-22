@@ -1,0 +1,1 @@
+SELECT id,CASE WHEN level>LAG(level) OVER(ORDER BY id) THEN 1 ELSE 0 END AS flag FROM battery ORDER BY id;

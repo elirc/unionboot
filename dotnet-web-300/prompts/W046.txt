@@ -1,0 +1,12 @@
+W046 — Pagination query handlers
+Scenario 6/10: Default size 7, max 15; strict single-value query
+
+Parse optional page and size query parameters as single ASCII unsigned decimal int32 values >0. Defaults page1,size7; size>15->400. Duplicate/malformed values->400. Return200 JSON {page,size,total,items}; pages beyond end yield []. Use overflow-safe skip. Example ?page=2&size=2 with[1,2,3,4,5] ->items[3,4].
+
+Signature: public static IResult Handle(HttpRequest request, IReadOnlyList<int> rows)
+
+Edit starters/W046.cs. Run node dotnet-web-300/verify.cjs --starters --id=W046 from unionboot.
+Reference: solutions/W046.cs; shared checks: tests/W046.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

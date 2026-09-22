@@ -1,0 +1,14 @@
+2316: Optional-property default materialization / required-default-fields=name+count
+
+Contract focus: mapped required modifiers; exact absence semantics.
+
+Materialize absent optional fields from the documented defaults {"name":"Ada","count":3}. Output requires every field and preserves its individual value type. Explicit undefined is forbidden; supplied false, zero and empty values override defaults. Return a fresh mutable record.
+
+Semantic variation 3/15: required-default-fields=name+count. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2316.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2316.cjs. Type contracts: types/2316.positive.ts and types/2316.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2316
+Reference: node ts-next/verify.cjs --id=2316

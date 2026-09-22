@@ -1,0 +1,1 @@
+SELECT a.id AS first,b.id AS second FROM bookings a JOIN bookings b ON a.id<b.id AND (a.end>a.start OR a.end IS NULL) AND (b.end>b.start OR b.end IS NULL) AND (a.start<b.end OR b.end IS NULL) AND (b.start<a.end OR a.end IS NULL) ORDER BY a.id,b.id;

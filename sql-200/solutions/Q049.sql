@@ -1,0 +1,1 @@
+WITH r AS(SELECT *,DENSE_RANK() OVER(PARTITION BY team ORDER BY score DESC) AS n FROM scores) SELECT team,name,score FROM r WHERE n=2 ORDER BY team,id;

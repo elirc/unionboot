@@ -1,0 +1,18 @@
+Document title lease hook / scenario 19 — Boundary 9; restore title only while lease still owns it
+
+TASK
+Implement a renderless useTitleLease(title) hook: effect writes title prefixed 9 + ':', captures previous document.title, and cleans up on title change/unmount. Restore previous title only if the current document title is still this lease's written value (do not overwrite external changes). Exercise calls the hook and renders output Active title with the requested title. No global title mutation during render.
+
+EXAMPLE
+Original -> 9:Working. External title External then unmount => External.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2957.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{title="Working"}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2957
+node react-next/verify.cjs --starters --id=2957

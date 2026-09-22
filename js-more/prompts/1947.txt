@@ -1,0 +1,18 @@
+Zero-one knapsack policies / scenario 9 — capacity=8; tie=lighter
+
+TASK
+Input items {id,weight,value}, unique ASCII ids, positive integer weight and nonnegative value. Select each at most once, capacity 8. Maximize value, tied value prefers lighter total weight, then lexical JSON id array in original item order. Return {value,ids,weight}; empty selection allowed. Dynamic programming; invalid weight RangeError('Weight').
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1947.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1947
+node js-more/verify.cjs --starters --id=1947
+
+POLICIES
+capacity=8; tie=lighter
+Semantic key: {"capacity":8,"tie":"lighter"}

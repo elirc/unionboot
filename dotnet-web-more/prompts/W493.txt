@@ -1,0 +1,8 @@
+W493 | Static-like content type mapping
+Scenario 3: Custom mapping .report to text/csv
+Semantic key: custom-mapping-report-to-text-csv
+
+Use FileExtensionContentTypeProvider, add/override .report=text/csv, retain framework mappings. Unknown extension ->application/octet-stream. No file access. Extension lookup should be case-insensitive.
+
+Signature: public static string Map(string path)
+Implement starters/W493.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

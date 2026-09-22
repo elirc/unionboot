@@ -1,0 +1,1 @@
+SELECT c.name AS customer,o.id AS order_id,p.name AS product,l.qty,l.qty*l.price AS amount FROM customers c JOIN orders o ON o.customer_id=c.id JOIN lines l ON l.order_id=o.id JOIN products p ON p.id=l.product_id WHERE o.status='paid' ORDER BY o.id,p.id;

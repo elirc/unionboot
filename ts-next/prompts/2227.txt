@@ -1,0 +1,14 @@
+2227: Query-template placeholder interpolation / query-placeholder-arity=4
+
+Contract focus: template infer records; URLSearchParams value encoding.
+
+Interpolate every braced value placeholder in k1={v1}&k2={v2}&k3={v3}&k4={v4}, percent-encoding values with encodeURIComponent. Preserve query key order. This is a query template, not arbitrary object serialization; all 4 variables are required and may be empty.
+
+Semantic variation 4/15: query-placeholder-arity=4. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2227.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2227.cjs. Type contracts: types/2227.positive.ts and types/2227.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2227
+Reference: node ts-next/verify.cjs --id=2227

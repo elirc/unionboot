@@ -1,0 +1,780 @@
+REACT NEXT: BROWSER AND REACT PROTOCOLS
+
+720 NEW exercises, IDs 2719..3438, 36 families x20 related scenarios. Each family combines ten active boundaries/initial-data configurations with two observable policies. Not 720 unrelated concepts; these are repeated practice opportunities. semanticKey records operational rules without cosmetic ID/title knobs. Every family is checked for family|semanticKey and family|variant uniqueness both during generation and inventory.
+
+WORKFLOW
+Read prompts/ID.txt, implement starters/ID.jsx, run node react-next/verify.cjs --starters --id=ID. Start with scenario 1 of each family; then compare the policy at scenario 11 before varying boundaries. Solutions are independent and unbundled. The junior families require state/array/DOM basics; intermediate families introduce browser event protocols, effects, concurrency, composition, and lifecycle ownership. Implementation requirements (hooks, contexts, boundaries) additionally require source review.
+
+VERIFY FROM unionboot
+node react-next/verify.cjs --inventory
+node react-next/verify.cjs --id=2719
+node react-next/verify.cjs --id 2719
+node react-next/verify.cjs
+node react-next/verify.cjs --starters
+Run full suites sequentially. Inventory exits 0 without loading DOM dependencies. Duplicate/unknown options and unknown IDs exit2. Compile/DOM failures exit1. Blank starters compile and intentionally fail DOM groups. Reports verification-solution.json / verification-starter.json (or -ID suffix) count groups, not individual assertions. Summary: solution DOM groups: N passed, M failed.
+
+ARCHITECTURE
+esbuild transform per JSX component (cjs, automatic JSX), preserving external React identity, then Module._compile. jsdom globals are installed before RTL with IS_REACT_ACT_ENVIRONMENT. Cleanup between groups. Frozen data props; deterministic deferred promises, manual schedulers and sources. Pointer events use custom DOM Event fields because jsdom does not implement native PointerEvent. Observer functions are minimal injected adapters, not browser polyfills. No installation, network, live browser, actual layout, or wall-clock sleeps. Expected boundary errors may log during learner implementations.
+
+GENERATOR
+node build-react-next.cjs writes only react-next/ and REFUSES any existing output directory or flags. Never delete learner work to regenerate. Root integration belongs to coordinator.
+
+FAMILIES
+2719..2738 Atomic external-store snapshots [intermediate]
+2739..2758 Transition-backed route preview [intermediate]
+2759..2778 Reset-key error boundaries [intermediate]
+2779..2798 Portal event ownership [intermediate]
+2799..2818 Reactive media query predicates [intermediate]
+2819..2838 Intersection exposure latch [intermediate]
+2839..2858 Resize-derived packing layout [intermediate]
+2859..2878 IME-safe command submission [intermediate]
+2879..2898 Pointer capture drag intent [intermediate]
+2899..2918 Coalesced live announcements [intermediate]
+2919..2938 Compound field registration [intermediate]
+2939..2958 Document title lease hook [intermediate]
+2959..2978 Fixed-window event throttle [intermediate]
+2979..2998 Shared promise resource cache [intermediate]
+2999..3018 Virtual window slicing [junior]
+3019..3038 Socket handshake and buffered sends [intermediate]
+3039..3058 Table schema visibility projection [junior]
+3059..3078 Keyboard carousel geometry [junior]
+3079..3098 Lazy panel mount lifetime [intermediate]
+3099..3118 Keyboard split-pane separator [junior]
+3119..3138 File batch admission [junior]
+3139..3158 Drag-transfer drop protocol [intermediate]
+3159..3178 Connectivity capability gate [intermediate]
+3179..3198 Permission request lifecycle [intermediate]
+3199..3218 URL query writeback [intermediate]
+3219..3238 Opaque cursor history cache [intermediate]
+3239..3258 Keyboard multi-selection listbox [intermediate]
+3259..3278 Deferred resource display [intermediate]
+3279..3298 Imperative editor handle [intermediate]
+3299..3318 Paste replacement transaction [junior]
+3319..3338 Context menu anchor geometry [junior]
+3339..3358 Image fallback source ladder [junior]
+3359..3378 Object URL preview ownership [intermediate]
+3379..3398 Native listener phase contract [intermediate]
+3399..3418 Scroll anchor prepend compensation [intermediate]
+3419..3438 Selection-aware text formatting [junior]
+
+INDEX
+2719 Atomic external-store snapshots / scenario 1 — Boundary 1; raw selector
+2720 Atomic external-store snapshots / scenario 2 — Boundary 2; raw selector
+2721 Atomic external-store snapshots / scenario 3 — Boundary 3; raw selector
+2722 Atomic external-store snapshots / scenario 4 — Boundary 4; raw selector
+2723 Atomic external-store snapshots / scenario 5 — Boundary 5; raw selector
+2724 Atomic external-store snapshots / scenario 6 — Boundary 6; raw selector
+2725 Atomic external-store snapshots / scenario 7 — Boundary 7; raw selector
+2726 Atomic external-store snapshots / scenario 8 — Boundary 8; raw selector
+2727 Atomic external-store snapshots / scenario 9 — Boundary 9; raw selector
+2728 Atomic external-store snapshots / scenario 10 — Boundary 10; raw selector
+2729 Atomic external-store snapshots / scenario 11 — Boundary 1; double selector
+2730 Atomic external-store snapshots / scenario 12 — Boundary 2; double selector
+2731 Atomic external-store snapshots / scenario 13 — Boundary 3; double selector
+2732 Atomic external-store snapshots / scenario 14 — Boundary 4; double selector
+2733 Atomic external-store snapshots / scenario 15 — Boundary 5; double selector
+2734 Atomic external-store snapshots / scenario 16 — Boundary 6; double selector
+2735 Atomic external-store snapshots / scenario 17 — Boundary 7; double selector
+2736 Atomic external-store snapshots / scenario 18 — Boundary 8; double selector
+2737 Atomic external-store snapshots / scenario 19 — Boundary 9; double selector
+2738 Atomic external-store snapshots / scenario 20 — Boundary 10; double selector
+2739 Transition-backed route preview / scenario 1 — Boundary 1; urgent route replacement
+2740 Transition-backed route preview / scenario 2 — Boundary 2; urgent route replacement
+2741 Transition-backed route preview / scenario 3 — Boundary 3; urgent route replacement
+2742 Transition-backed route preview / scenario 4 — Boundary 4; urgent route replacement
+2743 Transition-backed route preview / scenario 5 — Boundary 5; urgent route replacement
+2744 Transition-backed route preview / scenario 6 — Boundary 6; urgent route replacement
+2745 Transition-backed route preview / scenario 7 — Boundary 7; urgent route replacement
+2746 Transition-backed route preview / scenario 8 — Boundary 8; urgent route replacement
+2747 Transition-backed route preview / scenario 9 — Boundary 9; urgent route replacement
+2748 Transition-backed route preview / scenario 10 — Boundary 10; urgent route replacement
+2749 Transition-backed route preview / scenario 11 — Boundary 1; retain old route during transition
+2750 Transition-backed route preview / scenario 12 — Boundary 2; retain old route during transition
+2751 Transition-backed route preview / scenario 13 — Boundary 3; retain old route during transition
+2752 Transition-backed route preview / scenario 14 — Boundary 4; retain old route during transition
+2753 Transition-backed route preview / scenario 15 — Boundary 5; retain old route during transition
+2754 Transition-backed route preview / scenario 16 — Boundary 6; retain old route during transition
+2755 Transition-backed route preview / scenario 17 — Boundary 7; retain old route during transition
+2756 Transition-backed route preview / scenario 18 — Boundary 8; retain old route during transition
+2757 Transition-backed route preview / scenario 19 — Boundary 9; retain old route during transition
+2758 Transition-backed route preview / scenario 20 — Boundary 10; retain old route during transition
+2759 Reset-key error boundaries / scenario 1 — Boundary 1; manual retry only
+2760 Reset-key error boundaries / scenario 2 — Boundary 2; manual retry only
+2761 Reset-key error boundaries / scenario 3 — Boundary 3; manual retry only
+2762 Reset-key error boundaries / scenario 4 — Boundary 4; manual retry only
+2763 Reset-key error boundaries / scenario 5 — Boundary 5; manual retry only
+2764 Reset-key error boundaries / scenario 6 — Boundary 6; manual retry only
+2765 Reset-key error boundaries / scenario 7 — Boundary 7; manual retry only
+2766 Reset-key error boundaries / scenario 8 — Boundary 8; manual retry only
+2767 Reset-key error boundaries / scenario 9 — Boundary 9; manual retry only
+2768 Reset-key error boundaries / scenario 10 — Boundary 10; manual retry only
+2769 Reset-key error boundaries / scenario 11 — Boundary 1; reset when resetKey changes
+2770 Reset-key error boundaries / scenario 12 — Boundary 2; reset when resetKey changes
+2771 Reset-key error boundaries / scenario 13 — Boundary 3; reset when resetKey changes
+2772 Reset-key error boundaries / scenario 14 — Boundary 4; reset when resetKey changes
+2773 Reset-key error boundaries / scenario 15 — Boundary 5; reset when resetKey changes
+2774 Reset-key error boundaries / scenario 16 — Boundary 6; reset when resetKey changes
+2775 Reset-key error boundaries / scenario 17 — Boundary 7; reset when resetKey changes
+2776 Reset-key error boundaries / scenario 18 — Boundary 8; reset when resetKey changes
+2777 Reset-key error boundaries / scenario 19 — Boundary 9; reset when resetKey changes
+2778 Reset-key error boundaries / scenario 20 — Boundary 10; reset when resetKey changes
+2779 Portal event ownership / scenario 1 — Boundary 1; bubble through React parent
+2780 Portal event ownership / scenario 2 — Boundary 2; bubble through React parent
+2781 Portal event ownership / scenario 3 — Boundary 3; bubble through React parent
+2782 Portal event ownership / scenario 4 — Boundary 4; bubble through React parent
+2783 Portal event ownership / scenario 5 — Boundary 5; bubble through React parent
+2784 Portal event ownership / scenario 6 — Boundary 6; bubble through React parent
+2785 Portal event ownership / scenario 7 — Boundary 7; bubble through React parent
+2786 Portal event ownership / scenario 8 — Boundary 8; bubble through React parent
+2787 Portal event ownership / scenario 9 — Boundary 9; bubble through React parent
+2788 Portal event ownership / scenario 10 — Boundary 10; bubble through React parent
+2789 Portal event ownership / scenario 11 — Boundary 1; stop React bubbling at portal child
+2790 Portal event ownership / scenario 12 — Boundary 2; stop React bubbling at portal child
+2791 Portal event ownership / scenario 13 — Boundary 3; stop React bubbling at portal child
+2792 Portal event ownership / scenario 14 — Boundary 4; stop React bubbling at portal child
+2793 Portal event ownership / scenario 15 — Boundary 5; stop React bubbling at portal child
+2794 Portal event ownership / scenario 16 — Boundary 6; stop React bubbling at portal child
+2795 Portal event ownership / scenario 17 — Boundary 7; stop React bubbling at portal child
+2796 Portal event ownership / scenario 18 — Boundary 8; stop React bubbling at portal child
+2797 Portal event ownership / scenario 19 — Boundary 9; stop React bubbling at portal child
+2798 Portal event ownership / scenario 20 — Boundary 10; stop React bubbling at portal child
+2799 Reactive media query predicates / scenario 1 — Boundary 1; direct media match
+2800 Reactive media query predicates / scenario 2 — Boundary 2; direct media match
+2801 Reactive media query predicates / scenario 3 — Boundary 3; direct media match
+2802 Reactive media query predicates / scenario 4 — Boundary 4; direct media match
+2803 Reactive media query predicates / scenario 5 — Boundary 5; direct media match
+2804 Reactive media query predicates / scenario 6 — Boundary 6; direct media match
+2805 Reactive media query predicates / scenario 7 — Boundary 7; direct media match
+2806 Reactive media query predicates / scenario 8 — Boundary 8; direct media match
+2807 Reactive media query predicates / scenario 9 — Boundary 9; direct media match
+2808 Reactive media query predicates / scenario 10 — Boundary 10; direct media match
+2809 Reactive media query predicates / scenario 11 — Boundary 1; invert media match
+2810 Reactive media query predicates / scenario 12 — Boundary 2; invert media match
+2811 Reactive media query predicates / scenario 13 — Boundary 3; invert media match
+2812 Reactive media query predicates / scenario 14 — Boundary 4; invert media match
+2813 Reactive media query predicates / scenario 15 — Boundary 5; invert media match
+2814 Reactive media query predicates / scenario 16 — Boundary 6; invert media match
+2815 Reactive media query predicates / scenario 17 — Boundary 7; invert media match
+2816 Reactive media query predicates / scenario 18 — Boundary 8; invert media match
+2817 Reactive media query predicates / scenario 19 — Boundary 9; invert media match
+2818 Reactive media query predicates / scenario 20 — Boundary 10; invert media match
+2819 Intersection exposure latch / scenario 1 — Boundary 1; track current exposure
+2820 Intersection exposure latch / scenario 2 — Boundary 2; track current exposure
+2821 Intersection exposure latch / scenario 3 — Boundary 3; track current exposure
+2822 Intersection exposure latch / scenario 4 — Boundary 4; track current exposure
+2823 Intersection exposure latch / scenario 5 — Boundary 5; track current exposure
+2824 Intersection exposure latch / scenario 6 — Boundary 6; track current exposure
+2825 Intersection exposure latch / scenario 7 — Boundary 7; track current exposure
+2826 Intersection exposure latch / scenario 8 — Boundary 8; track current exposure
+2827 Intersection exposure latch / scenario 9 — Boundary 9; track current exposure
+2828 Intersection exposure latch / scenario 10 — Boundary 10; track current exposure
+2829 Intersection exposure latch / scenario 11 — Boundary 1; latch first qualifying exposure
+2830 Intersection exposure latch / scenario 12 — Boundary 2; latch first qualifying exposure
+2831 Intersection exposure latch / scenario 13 — Boundary 3; latch first qualifying exposure
+2832 Intersection exposure latch / scenario 14 — Boundary 4; latch first qualifying exposure
+2833 Intersection exposure latch / scenario 15 — Boundary 5; latch first qualifying exposure
+2834 Intersection exposure latch / scenario 16 — Boundary 6; latch first qualifying exposure
+2835 Intersection exposure latch / scenario 17 — Boundary 7; latch first qualifying exposure
+2836 Intersection exposure latch / scenario 18 — Boundary 8; latch first qualifying exposure
+2837 Intersection exposure latch / scenario 19 — Boundary 9; latch first qualifying exposure
+2838 Intersection exposure latch / scenario 20 — Boundary 10; latch first qualifying exposure
+2839 Resize-derived packing layout / scenario 1 — Boundary 1; whole cells only
+2840 Resize-derived packing layout / scenario 2 — Boundary 2; whole cells only
+2841 Resize-derived packing layout / scenario 3 — Boundary 3; whole cells only
+2842 Resize-derived packing layout / scenario 4 — Boundary 4; whole cells only
+2843 Resize-derived packing layout / scenario 5 — Boundary 5; whole cells only
+2844 Resize-derived packing layout / scenario 6 — Boundary 6; whole cells only
+2845 Resize-derived packing layout / scenario 7 — Boundary 7; whole cells only
+2846 Resize-derived packing layout / scenario 8 — Boundary 8; whole cells only
+2847 Resize-derived packing layout / scenario 9 — Boundary 9; whole cells only
+2848 Resize-derived packing layout / scenario 10 — Boundary 10; whole cells only
+2849 Resize-derived packing layout / scenario 11 — Boundary 1; allow partial final cell
+2850 Resize-derived packing layout / scenario 12 — Boundary 2; allow partial final cell
+2851 Resize-derived packing layout / scenario 13 — Boundary 3; allow partial final cell
+2852 Resize-derived packing layout / scenario 14 — Boundary 4; allow partial final cell
+2853 Resize-derived packing layout / scenario 15 — Boundary 5; allow partial final cell
+2854 Resize-derived packing layout / scenario 16 — Boundary 6; allow partial final cell
+2855 Resize-derived packing layout / scenario 17 — Boundary 7; allow partial final cell
+2856 Resize-derived packing layout / scenario 18 — Boundary 8; allow partial final cell
+2857 Resize-derived packing layout / scenario 19 — Boundary 9; allow partial final cell
+2858 Resize-derived packing layout / scenario 20 — Boundary 10; allow partial final cell
+2859 IME-safe command submission / scenario 1 — Boundary 1; commit only on noncomposing Enter
+2860 IME-safe command submission / scenario 2 — Boundary 2; commit only on noncomposing Enter
+2861 IME-safe command submission / scenario 3 — Boundary 3; commit only on noncomposing Enter
+2862 IME-safe command submission / scenario 4 — Boundary 4; commit only on noncomposing Enter
+2863 IME-safe command submission / scenario 5 — Boundary 5; commit only on noncomposing Enter
+2864 IME-safe command submission / scenario 6 — Boundary 6; commit only on noncomposing Enter
+2865 IME-safe command submission / scenario 7 — Boundary 7; commit only on noncomposing Enter
+2866 IME-safe command submission / scenario 8 — Boundary 8; commit only on noncomposing Enter
+2867 IME-safe command submission / scenario 9 — Boundary 9; commit only on noncomposing Enter
+2868 IME-safe command submission / scenario 10 — Boundary 10; commit only on noncomposing Enter
+2869 IME-safe command submission / scenario 11 — Boundary 1; commit at composition end
+2870 IME-safe command submission / scenario 12 — Boundary 2; commit at composition end
+2871 IME-safe command submission / scenario 13 — Boundary 3; commit at composition end
+2872 IME-safe command submission / scenario 14 — Boundary 4; commit at composition end
+2873 IME-safe command submission / scenario 15 — Boundary 5; commit at composition end
+2874 IME-safe command submission / scenario 16 — Boundary 6; commit at composition end
+2875 IME-safe command submission / scenario 17 — Boundary 7; commit at composition end
+2876 IME-safe command submission / scenario 18 — Boundary 8; commit at composition end
+2877 IME-safe command submission / scenario 19 — Boundary 9; commit at composition end
+2878 IME-safe command submission / scenario 20 — Boundary 10; commit at composition end
+2879 Pointer capture drag intent / scenario 1 — Boundary 1; x axis threshold
+2880 Pointer capture drag intent / scenario 2 — Boundary 2; x axis threshold
+2881 Pointer capture drag intent / scenario 3 — Boundary 3; x axis threshold
+2882 Pointer capture drag intent / scenario 4 — Boundary 4; x axis threshold
+2883 Pointer capture drag intent / scenario 5 — Boundary 5; x axis threshold
+2884 Pointer capture drag intent / scenario 6 — Boundary 6; x axis threshold
+2885 Pointer capture drag intent / scenario 7 — Boundary 7; x axis threshold
+2886 Pointer capture drag intent / scenario 8 — Boundary 8; x axis threshold
+2887 Pointer capture drag intent / scenario 9 — Boundary 9; x axis threshold
+2888 Pointer capture drag intent / scenario 10 — Boundary 10; x axis threshold
+2889 Pointer capture drag intent / scenario 11 — Boundary 1; y axis threshold
+2890 Pointer capture drag intent / scenario 12 — Boundary 2; y axis threshold
+2891 Pointer capture drag intent / scenario 13 — Boundary 3; y axis threshold
+2892 Pointer capture drag intent / scenario 14 — Boundary 4; y axis threshold
+2893 Pointer capture drag intent / scenario 15 — Boundary 5; y axis threshold
+2894 Pointer capture drag intent / scenario 16 — Boundary 6; y axis threshold
+2895 Pointer capture drag intent / scenario 17 — Boundary 7; y axis threshold
+2896 Pointer capture drag intent / scenario 18 — Boundary 8; y axis threshold
+2897 Pointer capture drag intent / scenario 19 — Boundary 9; y axis threshold
+2898 Pointer capture drag intent / scenario 20 — Boundary 10; y axis threshold
+2899 Coalesced live announcements / scenario 1 — Boundary 1; announce latest in burst
+2900 Coalesced live announcements / scenario 2 — Boundary 2; announce latest in burst
+2901 Coalesced live announcements / scenario 3 — Boundary 3; announce latest in burst
+2902 Coalesced live announcements / scenario 4 — Boundary 4; announce latest in burst
+2903 Coalesced live announcements / scenario 5 — Boundary 5; announce latest in burst
+2904 Coalesced live announcements / scenario 6 — Boundary 6; announce latest in burst
+2905 Coalesced live announcements / scenario 7 — Boundary 7; announce latest in burst
+2906 Coalesced live announcements / scenario 8 — Boundary 8; announce latest in burst
+2907 Coalesced live announcements / scenario 9 — Boundary 9; announce latest in burst
+2908 Coalesced live announcements / scenario 10 — Boundary 10; announce latest in burst
+2909 Coalesced live announcements / scenario 11 — Boundary 1; announce joined burst
+2910 Coalesced live announcements / scenario 12 — Boundary 2; announce joined burst
+2911 Coalesced live announcements / scenario 13 — Boundary 3; announce joined burst
+2912 Coalesced live announcements / scenario 14 — Boundary 4; announce joined burst
+2913 Coalesced live announcements / scenario 15 — Boundary 5; announce joined burst
+2914 Coalesced live announcements / scenario 16 — Boundary 6; announce joined burst
+2915 Coalesced live announcements / scenario 17 — Boundary 7; announce joined burst
+2916 Coalesced live announcements / scenario 18 — Boundary 8; announce joined burst
+2917 Coalesced live announcements / scenario 19 — Boundary 9; announce joined burst
+2918 Coalesced live announcements / scenario 20 — Boundary 10; announce joined burst
+2919 Compound field registration / scenario 1 — Boundary 1; fieldset keeps inputs enabled
+2920 Compound field registration / scenario 2 — Boundary 2; fieldset keeps inputs enabled
+2921 Compound field registration / scenario 3 — Boundary 3; fieldset keeps inputs enabled
+2922 Compound field registration / scenario 4 — Boundary 4; fieldset keeps inputs enabled
+2923 Compound field registration / scenario 5 — Boundary 5; fieldset keeps inputs enabled
+2924 Compound field registration / scenario 6 — Boundary 6; fieldset keeps inputs enabled
+2925 Compound field registration / scenario 7 — Boundary 7; fieldset keeps inputs enabled
+2926 Compound field registration / scenario 8 — Boundary 8; fieldset keeps inputs enabled
+2927 Compound field registration / scenario 9 — Boundary 9; fieldset keeps inputs enabled
+2928 Compound field registration / scenario 10 — Boundary 10; fieldset keeps inputs enabled
+2929 Compound field registration / scenario 11 — Boundary 1; fieldset disables registered inputs
+2930 Compound field registration / scenario 12 — Boundary 2; fieldset disables registered inputs
+2931 Compound field registration / scenario 13 — Boundary 3; fieldset disables registered inputs
+2932 Compound field registration / scenario 14 — Boundary 4; fieldset disables registered inputs
+2933 Compound field registration / scenario 15 — Boundary 5; fieldset disables registered inputs
+2934 Compound field registration / scenario 16 — Boundary 6; fieldset disables registered inputs
+2935 Compound field registration / scenario 17 — Boundary 7; fieldset disables registered inputs
+2936 Compound field registration / scenario 18 — Boundary 8; fieldset disables registered inputs
+2937 Compound field registration / scenario 19 — Boundary 9; fieldset disables registered inputs
+2938 Compound field registration / scenario 20 — Boundary 10; fieldset disables registered inputs
+2939 Document title lease hook / scenario 1 — Boundary 1; always restore previous title
+2940 Document title lease hook / scenario 2 — Boundary 2; always restore previous title
+2941 Document title lease hook / scenario 3 — Boundary 3; always restore previous title
+2942 Document title lease hook / scenario 4 — Boundary 4; always restore previous title
+2943 Document title lease hook / scenario 5 — Boundary 5; always restore previous title
+2944 Document title lease hook / scenario 6 — Boundary 6; always restore previous title
+2945 Document title lease hook / scenario 7 — Boundary 7; always restore previous title
+2946 Document title lease hook / scenario 8 — Boundary 8; always restore previous title
+2947 Document title lease hook / scenario 9 — Boundary 9; always restore previous title
+2948 Document title lease hook / scenario 10 — Boundary 10; always restore previous title
+2949 Document title lease hook / scenario 11 — Boundary 1; restore title only while lease still owns it
+2950 Document title lease hook / scenario 12 — Boundary 2; restore title only while lease still owns it
+2951 Document title lease hook / scenario 13 — Boundary 3; restore title only while lease still owns it
+2952 Document title lease hook / scenario 14 — Boundary 4; restore title only while lease still owns it
+2953 Document title lease hook / scenario 15 — Boundary 5; restore title only while lease still owns it
+2954 Document title lease hook / scenario 16 — Boundary 6; restore title only while lease still owns it
+2955 Document title lease hook / scenario 17 — Boundary 7; restore title only while lease still owns it
+2956 Document title lease hook / scenario 18 — Boundary 8; restore title only while lease still owns it
+2957 Document title lease hook / scenario 19 — Boundary 9; restore title only while lease still owns it
+2958 Document title lease hook / scenario 20 — Boundary 10; restore title only while lease still owns it
+2959 Fixed-window event throttle / scenario 1 — Boundary 1; leading delivery only
+2960 Fixed-window event throttle / scenario 2 — Boundary 2; leading delivery only
+2961 Fixed-window event throttle / scenario 3 — Boundary 3; leading delivery only
+2962 Fixed-window event throttle / scenario 4 — Boundary 4; leading delivery only
+2963 Fixed-window event throttle / scenario 5 — Boundary 5; leading delivery only
+2964 Fixed-window event throttle / scenario 6 — Boundary 6; leading delivery only
+2965 Fixed-window event throttle / scenario 7 — Boundary 7; leading delivery only
+2966 Fixed-window event throttle / scenario 8 — Boundary 8; leading delivery only
+2967 Fixed-window event throttle / scenario 9 — Boundary 9; leading delivery only
+2968 Fixed-window event throttle / scenario 10 — Boundary 10; leading delivery only
+2969 Fixed-window event throttle / scenario 11 — Boundary 1; leading and latest trailing delivery
+2970 Fixed-window event throttle / scenario 12 — Boundary 2; leading and latest trailing delivery
+2971 Fixed-window event throttle / scenario 13 — Boundary 3; leading and latest trailing delivery
+2972 Fixed-window event throttle / scenario 14 — Boundary 4; leading and latest trailing delivery
+2973 Fixed-window event throttle / scenario 15 — Boundary 5; leading and latest trailing delivery
+2974 Fixed-window event throttle / scenario 16 — Boundary 6; leading and latest trailing delivery
+2975 Fixed-window event throttle / scenario 17 — Boundary 7; leading and latest trailing delivery
+2976 Fixed-window event throttle / scenario 18 — Boundary 8; leading and latest trailing delivery
+2977 Fixed-window event throttle / scenario 19 — Boundary 9; leading and latest trailing delivery
+2978 Fixed-window event throttle / scenario 20 — Boundary 10; leading and latest trailing delivery
+2979 Shared promise resource cache / scenario 1 — Boundary 1; evict rejected cache entry
+2980 Shared promise resource cache / scenario 2 — Boundary 2; evict rejected cache entry
+2981 Shared promise resource cache / scenario 3 — Boundary 3; evict rejected cache entry
+2982 Shared promise resource cache / scenario 4 — Boundary 4; evict rejected cache entry
+2983 Shared promise resource cache / scenario 5 — Boundary 5; evict rejected cache entry
+2984 Shared promise resource cache / scenario 6 — Boundary 6; evict rejected cache entry
+2985 Shared promise resource cache / scenario 7 — Boundary 7; evict rejected cache entry
+2986 Shared promise resource cache / scenario 8 — Boundary 8; evict rejected cache entry
+2987 Shared promise resource cache / scenario 9 — Boundary 9; evict rejected cache entry
+2988 Shared promise resource cache / scenario 10 — Boundary 10; evict rejected cache entry
+2989 Shared promise resource cache / scenario 11 — Boundary 1; retain rejected cache entry until invalidate
+2990 Shared promise resource cache / scenario 12 — Boundary 2; retain rejected cache entry until invalidate
+2991 Shared promise resource cache / scenario 13 — Boundary 3; retain rejected cache entry until invalidate
+2992 Shared promise resource cache / scenario 14 — Boundary 4; retain rejected cache entry until invalidate
+2993 Shared promise resource cache / scenario 15 — Boundary 5; retain rejected cache entry until invalidate
+2994 Shared promise resource cache / scenario 16 — Boundary 6; retain rejected cache entry until invalidate
+2995 Shared promise resource cache / scenario 17 — Boundary 7; retain rejected cache entry until invalidate
+2996 Shared promise resource cache / scenario 18 — Boundary 8; retain rejected cache entry until invalidate
+2997 Shared promise resource cache / scenario 19 — Boundary 9; retain rejected cache entry until invalidate
+2998 Shared promise resource cache / scenario 20 — Boundary 10; retain rejected cache entry until invalidate
+2999 Virtual window slicing / scenario 1 — Boundary 1; visible rows only
+3000 Virtual window slicing / scenario 2 — Boundary 2; visible rows only
+3001 Virtual window slicing / scenario 3 — Boundary 3; visible rows only
+3002 Virtual window slicing / scenario 4 — Boundary 4; visible rows only
+3003 Virtual window slicing / scenario 5 — Boundary 5; visible rows only
+3004 Virtual window slicing / scenario 6 — Boundary 6; visible rows only
+3005 Virtual window slicing / scenario 7 — Boundary 7; visible rows only
+3006 Virtual window slicing / scenario 8 — Boundary 8; visible rows only
+3007 Virtual window slicing / scenario 9 — Boundary 9; visible rows only
+3008 Virtual window slicing / scenario 10 — Boundary 10; visible rows only
+3009 Virtual window slicing / scenario 11 — Boundary 1; one overscan row each side
+3010 Virtual window slicing / scenario 12 — Boundary 2; one overscan row each side
+3011 Virtual window slicing / scenario 13 — Boundary 3; one overscan row each side
+3012 Virtual window slicing / scenario 14 — Boundary 4; one overscan row each side
+3013 Virtual window slicing / scenario 15 — Boundary 5; one overscan row each side
+3014 Virtual window slicing / scenario 16 — Boundary 6; one overscan row each side
+3015 Virtual window slicing / scenario 17 — Boundary 7; one overscan row each side
+3016 Virtual window slicing / scenario 18 — Boundary 8; one overscan row each side
+3017 Virtual window slicing / scenario 19 — Boundary 9; one overscan row each side
+3018 Virtual window slicing / scenario 20 — Boundary 10; one overscan row each side
+3019 Socket handshake and buffered sends / scenario 1 — Boundary 1; reject offline sends
+3020 Socket handshake and buffered sends / scenario 2 — Boundary 2; reject offline sends
+3021 Socket handshake and buffered sends / scenario 3 — Boundary 3; reject offline sends
+3022 Socket handshake and buffered sends / scenario 4 — Boundary 4; reject offline sends
+3023 Socket handshake and buffered sends / scenario 5 — Boundary 5; reject offline sends
+3024 Socket handshake and buffered sends / scenario 6 — Boundary 6; reject offline sends
+3025 Socket handshake and buffered sends / scenario 7 — Boundary 7; reject offline sends
+3026 Socket handshake and buffered sends / scenario 8 — Boundary 8; reject offline sends
+3027 Socket handshake and buffered sends / scenario 9 — Boundary 9; reject offline sends
+3028 Socket handshake and buffered sends / scenario 10 — Boundary 10; reject offline sends
+3029 Socket handshake and buffered sends / scenario 11 — Boundary 1; buffer offline sends up to capacity
+3030 Socket handshake and buffered sends / scenario 12 — Boundary 2; buffer offline sends up to capacity
+3031 Socket handshake and buffered sends / scenario 13 — Boundary 3; buffer offline sends up to capacity
+3032 Socket handshake and buffered sends / scenario 14 — Boundary 4; buffer offline sends up to capacity
+3033 Socket handshake and buffered sends / scenario 15 — Boundary 5; buffer offline sends up to capacity
+3034 Socket handshake and buffered sends / scenario 16 — Boundary 6; buffer offline sends up to capacity
+3035 Socket handshake and buffered sends / scenario 17 — Boundary 7; buffer offline sends up to capacity
+3036 Socket handshake and buffered sends / scenario 18 — Boundary 8; buffer offline sends up to capacity
+3037 Socket handshake and buffered sends / scenario 19 — Boundary 9; buffer offline sends up to capacity
+3038 Socket handshake and buffered sends / scenario 20 — Boundary 10; buffer offline sends up to capacity
+3039 Table schema visibility projection / scenario 1 — Boundary 1; allow empty schema
+3040 Table schema visibility projection / scenario 2 — Boundary 2; allow empty schema
+3041 Table schema visibility projection / scenario 3 — Boundary 3; allow empty schema
+3042 Table schema visibility projection / scenario 4 — Boundary 4; allow empty schema
+3043 Table schema visibility projection / scenario 5 — Boundary 5; allow empty schema
+3044 Table schema visibility projection / scenario 6 — Boundary 6; allow empty schema
+3045 Table schema visibility projection / scenario 7 — Boundary 7; allow empty schema
+3046 Table schema visibility projection / scenario 8 — Boundary 8; allow empty schema
+3047 Table schema visibility projection / scenario 9 — Boundary 9; allow empty schema
+3048 Table schema visibility projection / scenario 10 — Boundary 10; allow empty schema
+3049 Table schema visibility projection / scenario 11 — Boundary 1; protect final visible column
+3050 Table schema visibility projection / scenario 12 — Boundary 2; protect final visible column
+3051 Table schema visibility projection / scenario 13 — Boundary 3; protect final visible column
+3052 Table schema visibility projection / scenario 14 — Boundary 4; protect final visible column
+3053 Table schema visibility projection / scenario 15 — Boundary 5; protect final visible column
+3054 Table schema visibility projection / scenario 16 — Boundary 6; protect final visible column
+3055 Table schema visibility projection / scenario 17 — Boundary 7; protect final visible column
+3056 Table schema visibility projection / scenario 18 — Boundary 8; protect final visible column
+3057 Table schema visibility projection / scenario 19 — Boundary 9; protect final visible column
+3058 Table schema visibility projection / scenario 20 — Boundary 10; protect final visible column
+3059 Keyboard carousel geometry / scenario 1 — Boundary 1; bounded slide navigation
+3060 Keyboard carousel geometry / scenario 2 — Boundary 2; bounded slide navigation
+3061 Keyboard carousel geometry / scenario 3 — Boundary 3; bounded slide navigation
+3062 Keyboard carousel geometry / scenario 4 — Boundary 4; bounded slide navigation
+3063 Keyboard carousel geometry / scenario 5 — Boundary 5; bounded slide navigation
+3064 Keyboard carousel geometry / scenario 6 — Boundary 6; bounded slide navigation
+3065 Keyboard carousel geometry / scenario 7 — Boundary 7; bounded slide navigation
+3066 Keyboard carousel geometry / scenario 8 — Boundary 8; bounded slide navigation
+3067 Keyboard carousel geometry / scenario 9 — Boundary 9; bounded slide navigation
+3068 Keyboard carousel geometry / scenario 10 — Boundary 10; bounded slide navigation
+3069 Keyboard carousel geometry / scenario 11 — Boundary 1; cyclic slide navigation
+3070 Keyboard carousel geometry / scenario 12 — Boundary 2; cyclic slide navigation
+3071 Keyboard carousel geometry / scenario 13 — Boundary 3; cyclic slide navigation
+3072 Keyboard carousel geometry / scenario 14 — Boundary 4; cyclic slide navigation
+3073 Keyboard carousel geometry / scenario 15 — Boundary 5; cyclic slide navigation
+3074 Keyboard carousel geometry / scenario 16 — Boundary 6; cyclic slide navigation
+3075 Keyboard carousel geometry / scenario 17 — Boundary 7; cyclic slide navigation
+3076 Keyboard carousel geometry / scenario 18 — Boundary 8; cyclic slide navigation
+3077 Keyboard carousel geometry / scenario 19 — Boundary 9; cyclic slide navigation
+3078 Keyboard carousel geometry / scenario 20 — Boundary 10; cyclic slide navigation
+3079 Lazy panel mount lifetime / scenario 1 — Boundary 1; unmount inactive panels
+3080 Lazy panel mount lifetime / scenario 2 — Boundary 2; unmount inactive panels
+3081 Lazy panel mount lifetime / scenario 3 — Boundary 3; unmount inactive panels
+3082 Lazy panel mount lifetime / scenario 4 — Boundary 4; unmount inactive panels
+3083 Lazy panel mount lifetime / scenario 5 — Boundary 5; unmount inactive panels
+3084 Lazy panel mount lifetime / scenario 6 — Boundary 6; unmount inactive panels
+3085 Lazy panel mount lifetime / scenario 7 — Boundary 7; unmount inactive panels
+3086 Lazy panel mount lifetime / scenario 8 — Boundary 8; unmount inactive panels
+3087 Lazy panel mount lifetime / scenario 9 — Boundary 9; unmount inactive panels
+3088 Lazy panel mount lifetime / scenario 10 — Boundary 10; unmount inactive panels
+3089 Lazy panel mount lifetime / scenario 11 — Boundary 1; keep visited panels mounted
+3090 Lazy panel mount lifetime / scenario 12 — Boundary 2; keep visited panels mounted
+3091 Lazy panel mount lifetime / scenario 13 — Boundary 3; keep visited panels mounted
+3092 Lazy panel mount lifetime / scenario 14 — Boundary 4; keep visited panels mounted
+3093 Lazy panel mount lifetime / scenario 15 — Boundary 5; keep visited panels mounted
+3094 Lazy panel mount lifetime / scenario 16 — Boundary 6; keep visited panels mounted
+3095 Lazy panel mount lifetime / scenario 17 — Boundary 7; keep visited panels mounted
+3096 Lazy panel mount lifetime / scenario 18 — Boundary 8; keep visited panels mounted
+3097 Lazy panel mount lifetime / scenario 19 — Boundary 9; keep visited panels mounted
+3098 Lazy panel mount lifetime / scenario 20 — Boundary 10; keep visited panels mounted
+3099 Keyboard split-pane separator / scenario 1 — Boundary 1; vertical separator uses left/right
+3100 Keyboard split-pane separator / scenario 2 — Boundary 2; vertical separator uses left/right
+3101 Keyboard split-pane separator / scenario 3 — Boundary 3; vertical separator uses left/right
+3102 Keyboard split-pane separator / scenario 4 — Boundary 4; vertical separator uses left/right
+3103 Keyboard split-pane separator / scenario 5 — Boundary 5; vertical separator uses left/right
+3104 Keyboard split-pane separator / scenario 6 — Boundary 6; vertical separator uses left/right
+3105 Keyboard split-pane separator / scenario 7 — Boundary 7; vertical separator uses left/right
+3106 Keyboard split-pane separator / scenario 8 — Boundary 8; vertical separator uses left/right
+3107 Keyboard split-pane separator / scenario 9 — Boundary 9; vertical separator uses left/right
+3108 Keyboard split-pane separator / scenario 10 — Boundary 10; vertical separator uses left/right
+3109 Keyboard split-pane separator / scenario 11 — Boundary 1; horizontal separator uses up/down
+3110 Keyboard split-pane separator / scenario 12 — Boundary 2; horizontal separator uses up/down
+3111 Keyboard split-pane separator / scenario 13 — Boundary 3; horizontal separator uses up/down
+3112 Keyboard split-pane separator / scenario 14 — Boundary 4; horizontal separator uses up/down
+3113 Keyboard split-pane separator / scenario 15 — Boundary 5; horizontal separator uses up/down
+3114 Keyboard split-pane separator / scenario 16 — Boundary 6; horizontal separator uses up/down
+3115 Keyboard split-pane separator / scenario 17 — Boundary 7; horizontal separator uses up/down
+3116 Keyboard split-pane separator / scenario 18 — Boundary 8; horizontal separator uses up/down
+3117 Keyboard split-pane separator / scenario 19 — Boundary 9; horizontal separator uses up/down
+3118 Keyboard split-pane separator / scenario 20 — Boundary 10; horizontal separator uses up/down
+3119 File batch admission / scenario 1 — Boundary 1; accept valid subset
+3120 File batch admission / scenario 2 — Boundary 2; accept valid subset
+3121 File batch admission / scenario 3 — Boundary 3; accept valid subset
+3122 File batch admission / scenario 4 — Boundary 4; accept valid subset
+3123 File batch admission / scenario 5 — Boundary 5; accept valid subset
+3124 File batch admission / scenario 6 — Boundary 6; accept valid subset
+3125 File batch admission / scenario 7 — Boundary 7; accept valid subset
+3126 File batch admission / scenario 8 — Boundary 8; accept valid subset
+3127 File batch admission / scenario 9 — Boundary 9; accept valid subset
+3128 File batch admission / scenario 10 — Boundary 10; accept valid subset
+3129 File batch admission / scenario 11 — Boundary 1; reject whole batch if any file invalid
+3130 File batch admission / scenario 12 — Boundary 2; reject whole batch if any file invalid
+3131 File batch admission / scenario 13 — Boundary 3; reject whole batch if any file invalid
+3132 File batch admission / scenario 14 — Boundary 4; reject whole batch if any file invalid
+3133 File batch admission / scenario 15 — Boundary 5; reject whole batch if any file invalid
+3134 File batch admission / scenario 16 — Boundary 6; reject whole batch if any file invalid
+3135 File batch admission / scenario 17 — Boundary 7; reject whole batch if any file invalid
+3136 File batch admission / scenario 18 — Boundary 8; reject whole batch if any file invalid
+3137 File batch admission / scenario 19 — Boundary 9; reject whole batch if any file invalid
+3138 File batch admission / scenario 20 — Boundary 10; reject whole batch if any file invalid
+3139 Drag-transfer drop protocol / scenario 1 — Boundary 1; retain source after valid copy
+3140 Drag-transfer drop protocol / scenario 2 — Boundary 2; retain source after valid copy
+3141 Drag-transfer drop protocol / scenario 3 — Boundary 3; retain source after valid copy
+3142 Drag-transfer drop protocol / scenario 4 — Boundary 4; retain source after valid copy
+3143 Drag-transfer drop protocol / scenario 5 — Boundary 5; retain source after valid copy
+3144 Drag-transfer drop protocol / scenario 6 — Boundary 6; retain source after valid copy
+3145 Drag-transfer drop protocol / scenario 7 — Boundary 7; retain source after valid copy
+3146 Drag-transfer drop protocol / scenario 8 — Boundary 8; retain source after valid copy
+3147 Drag-transfer drop protocol / scenario 9 — Boundary 9; retain source after valid copy
+3148 Drag-transfer drop protocol / scenario 10 — Boundary 10; retain source after valid copy
+3149 Drag-transfer drop protocol / scenario 11 — Boundary 1; consume source after valid drop
+3150 Drag-transfer drop protocol / scenario 12 — Boundary 2; consume source after valid drop
+3151 Drag-transfer drop protocol / scenario 13 — Boundary 3; consume source after valid drop
+3152 Drag-transfer drop protocol / scenario 14 — Boundary 4; consume source after valid drop
+3153 Drag-transfer drop protocol / scenario 15 — Boundary 5; consume source after valid drop
+3154 Drag-transfer drop protocol / scenario 16 — Boundary 6; consume source after valid drop
+3155 Drag-transfer drop protocol / scenario 17 — Boundary 7; consume source after valid drop
+3156 Drag-transfer drop protocol / scenario 18 — Boundary 8; consume source after valid drop
+3157 Drag-transfer drop protocol / scenario 19 — Boundary 9; consume source after valid drop
+3158 Drag-transfer drop protocol / scenario 20 — Boundary 10; consume source after valid drop
+3159 Connectivity capability gate / scenario 1 — Boundary 1; reject actions while offline
+3160 Connectivity capability gate / scenario 2 — Boundary 2; reject actions while offline
+3161 Connectivity capability gate / scenario 3 — Boundary 3; reject actions while offline
+3162 Connectivity capability gate / scenario 4 — Boundary 4; reject actions while offline
+3163 Connectivity capability gate / scenario 5 — Boundary 5; reject actions while offline
+3164 Connectivity capability gate / scenario 6 — Boundary 6; reject actions while offline
+3165 Connectivity capability gate / scenario 7 — Boundary 7; reject actions while offline
+3166 Connectivity capability gate / scenario 8 — Boundary 8; reject actions while offline
+3167 Connectivity capability gate / scenario 9 — Boundary 9; reject actions while offline
+3168 Connectivity capability gate / scenario 10 — Boundary 10; reject actions while offline
+3169 Connectivity capability gate / scenario 11 — Boundary 1; defer one latest action until online
+3170 Connectivity capability gate / scenario 12 — Boundary 2; defer one latest action until online
+3171 Connectivity capability gate / scenario 13 — Boundary 3; defer one latest action until online
+3172 Connectivity capability gate / scenario 14 — Boundary 4; defer one latest action until online
+3173 Connectivity capability gate / scenario 15 — Boundary 5; defer one latest action until online
+3174 Connectivity capability gate / scenario 16 — Boundary 6; defer one latest action until online
+3175 Connectivity capability gate / scenario 17 — Boundary 7; defer one latest action until online
+3176 Connectivity capability gate / scenario 18 — Boundary 8; defer one latest action until online
+3177 Connectivity capability gate / scenario 19 — Boundary 9; defer one latest action until online
+3178 Connectivity capability gate / scenario 20 — Boundary 10; defer one latest action until online
+3179 Permission request lifecycle / scenario 1 — Boundary 1; prompt state is view only
+3180 Permission request lifecycle / scenario 2 — Boundary 2; prompt state is view only
+3181 Permission request lifecycle / scenario 3 — Boundary 3; prompt state is view only
+3182 Permission request lifecycle / scenario 4 — Boundary 4; prompt state is view only
+3183 Permission request lifecycle / scenario 5 — Boundary 5; prompt state is view only
+3184 Permission request lifecycle / scenario 6 — Boundary 6; prompt state is view only
+3185 Permission request lifecycle / scenario 7 — Boundary 7; prompt state is view only
+3186 Permission request lifecycle / scenario 8 — Boundary 8; prompt state is view only
+3187 Permission request lifecycle / scenario 9 — Boundary 9; prompt state is view only
+3188 Permission request lifecycle / scenario 10 — Boundary 10; prompt state is view only
+3189 Permission request lifecycle / scenario 11 — Boundary 1; request permission from prompt state
+3190 Permission request lifecycle / scenario 12 — Boundary 2; request permission from prompt state
+3191 Permission request lifecycle / scenario 13 — Boundary 3; request permission from prompt state
+3192 Permission request lifecycle / scenario 14 — Boundary 4; request permission from prompt state
+3193 Permission request lifecycle / scenario 15 — Boundary 5; request permission from prompt state
+3194 Permission request lifecycle / scenario 16 — Boundary 6; request permission from prompt state
+3195 Permission request lifecycle / scenario 17 — Boundary 7; request permission from prompt state
+3196 Permission request lifecycle / scenario 18 — Boundary 8; request permission from prompt state
+3197 Permission request lifecycle / scenario 19 — Boundary 9; request permission from prompt state
+3198 Permission request lifecycle / scenario 20 — Boundary 10; request permission from prompt state
+3199 URL query writeback / scenario 1 — Boundary 1; push history entry
+3200 URL query writeback / scenario 2 — Boundary 2; push history entry
+3201 URL query writeback / scenario 3 — Boundary 3; push history entry
+3202 URL query writeback / scenario 4 — Boundary 4; push history entry
+3203 URL query writeback / scenario 5 — Boundary 5; push history entry
+3204 URL query writeback / scenario 6 — Boundary 6; push history entry
+3205 URL query writeback / scenario 7 — Boundary 7; push history entry
+3206 URL query writeback / scenario 8 — Boundary 8; push history entry
+3207 URL query writeback / scenario 9 — Boundary 9; push history entry
+3208 URL query writeback / scenario 10 — Boundary 10; push history entry
+3209 URL query writeback / scenario 11 — Boundary 1; replace history entry
+3210 URL query writeback / scenario 12 — Boundary 2; replace history entry
+3211 URL query writeback / scenario 13 — Boundary 3; replace history entry
+3212 URL query writeback / scenario 14 — Boundary 4; replace history entry
+3213 URL query writeback / scenario 15 — Boundary 5; replace history entry
+3214 URL query writeback / scenario 16 — Boundary 6; replace history entry
+3215 URL query writeback / scenario 17 — Boundary 7; replace history entry
+3216 URL query writeback / scenario 18 — Boundary 8; replace history entry
+3217 URL query writeback / scenario 19 — Boundary 9; replace history entry
+3218 URL query writeback / scenario 20 — Boundary 10; replace history entry
+3219 Opaque cursor history cache / scenario 1 — Boundary 1; refetch forward page after back
+3220 Opaque cursor history cache / scenario 2 — Boundary 2; refetch forward page after back
+3221 Opaque cursor history cache / scenario 3 — Boundary 3; refetch forward page after back
+3222 Opaque cursor history cache / scenario 4 — Boundary 4; refetch forward page after back
+3223 Opaque cursor history cache / scenario 5 — Boundary 5; refetch forward page after back
+3224 Opaque cursor history cache / scenario 6 — Boundary 6; refetch forward page after back
+3225 Opaque cursor history cache / scenario 7 — Boundary 7; refetch forward page after back
+3226 Opaque cursor history cache / scenario 8 — Boundary 8; refetch forward page after back
+3227 Opaque cursor history cache / scenario 9 — Boundary 9; refetch forward page after back
+3228 Opaque cursor history cache / scenario 10 — Boundary 10; refetch forward page after back
+3229 Opaque cursor history cache / scenario 11 — Boundary 1; cache forward page after back
+3230 Opaque cursor history cache / scenario 12 — Boundary 2; cache forward page after back
+3231 Opaque cursor history cache / scenario 13 — Boundary 3; cache forward page after back
+3232 Opaque cursor history cache / scenario 14 — Boundary 4; cache forward page after back
+3233 Opaque cursor history cache / scenario 15 — Boundary 5; cache forward page after back
+3234 Opaque cursor history cache / scenario 16 — Boundary 6; cache forward page after back
+3235 Opaque cursor history cache / scenario 17 — Boundary 7; cache forward page after back
+3236 Opaque cursor history cache / scenario 18 — Boundary 8; cache forward page after back
+3237 Opaque cursor history cache / scenario 19 — Boundary 9; cache forward page after back
+3238 Opaque cursor history cache / scenario 20 — Boundary 10; cache forward page after back
+3239 Keyboard multi-selection listbox / scenario 1 — Boundary 3; document selection order
+3240 Keyboard multi-selection listbox / scenario 2 — Boundary 4; document selection order
+3241 Keyboard multi-selection listbox / scenario 3 — Boundary 5; document selection order
+3242 Keyboard multi-selection listbox / scenario 4 — Boundary 6; document selection order
+3243 Keyboard multi-selection listbox / scenario 5 — Boundary 7; document selection order
+3244 Keyboard multi-selection listbox / scenario 6 — Boundary 8; document selection order
+3245 Keyboard multi-selection listbox / scenario 7 — Boundary 9; document selection order
+3246 Keyboard multi-selection listbox / scenario 8 — Boundary 10; document selection order
+3247 Keyboard multi-selection listbox / scenario 9 — Boundary 11; document selection order
+3248 Keyboard multi-selection listbox / scenario 10 — Boundary 12; document selection order
+3249 Keyboard multi-selection listbox / scenario 11 — Boundary 3; selection insertion order
+3250 Keyboard multi-selection listbox / scenario 12 — Boundary 4; selection insertion order
+3251 Keyboard multi-selection listbox / scenario 13 — Boundary 5; selection insertion order
+3252 Keyboard multi-selection listbox / scenario 14 — Boundary 6; selection insertion order
+3253 Keyboard multi-selection listbox / scenario 15 — Boundary 7; selection insertion order
+3254 Keyboard multi-selection listbox / scenario 16 — Boundary 8; selection insertion order
+3255 Keyboard multi-selection listbox / scenario 17 — Boundary 9; selection insertion order
+3256 Keyboard multi-selection listbox / scenario 18 — Boundary 10; selection insertion order
+3257 Keyboard multi-selection listbox / scenario 19 — Boundary 11; selection insertion order
+3258 Keyboard multi-selection listbox / scenario 20 — Boundary 12; selection insertion order
+3259 Deferred resource display / scenario 1 — Boundary 1; urgent suspended preview
+3260 Deferred resource display / scenario 2 — Boundary 2; urgent suspended preview
+3261 Deferred resource display / scenario 3 — Boundary 3; urgent suspended preview
+3262 Deferred resource display / scenario 4 — Boundary 4; urgent suspended preview
+3263 Deferred resource display / scenario 5 — Boundary 5; urgent suspended preview
+3264 Deferred resource display / scenario 6 — Boundary 6; urgent suspended preview
+3265 Deferred resource display / scenario 7 — Boundary 7; urgent suspended preview
+3266 Deferred resource display / scenario 8 — Boundary 8; urgent suspended preview
+3267 Deferred resource display / scenario 9 — Boundary 9; urgent suspended preview
+3268 Deferred resource display / scenario 10 — Boundary 10; urgent suspended preview
+3269 Deferred resource display / scenario 11 — Boundary 1; defer suspended preview
+3270 Deferred resource display / scenario 12 — Boundary 2; defer suspended preview
+3271 Deferred resource display / scenario 13 — Boundary 3; defer suspended preview
+3272 Deferred resource display / scenario 14 — Boundary 4; defer suspended preview
+3273 Deferred resource display / scenario 15 — Boundary 5; defer suspended preview
+3274 Deferred resource display / scenario 16 — Boundary 6; defer suspended preview
+3275 Deferred resource display / scenario 17 — Boundary 7; defer suspended preview
+3276 Deferred resource display / scenario 18 — Boundary 8; defer suspended preview
+3277 Deferred resource display / scenario 19 — Boundary 9; defer suspended preview
+3278 Deferred resource display / scenario 20 — Boundary 10; defer suspended preview
+3279 Imperative editor handle / scenario 1 — Boundary 1; handle reads raw draft
+3280 Imperative editor handle / scenario 2 — Boundary 2; handle reads raw draft
+3281 Imperative editor handle / scenario 3 — Boundary 3; handle reads raw draft
+3282 Imperative editor handle / scenario 4 — Boundary 4; handle reads raw draft
+3283 Imperative editor handle / scenario 5 — Boundary 5; handle reads raw draft
+3284 Imperative editor handle / scenario 6 — Boundary 6; handle reads raw draft
+3285 Imperative editor handle / scenario 7 — Boundary 7; handle reads raw draft
+3286 Imperative editor handle / scenario 8 — Boundary 8; handle reads raw draft
+3287 Imperative editor handle / scenario 9 — Boundary 9; handle reads raw draft
+3288 Imperative editor handle / scenario 10 — Boundary 10; handle reads raw draft
+3289 Imperative editor handle / scenario 11 — Boundary 1; handle reads trimmed draft
+3290 Imperative editor handle / scenario 12 — Boundary 2; handle reads trimmed draft
+3291 Imperative editor handle / scenario 13 — Boundary 3; handle reads trimmed draft
+3292 Imperative editor handle / scenario 14 — Boundary 4; handle reads trimmed draft
+3293 Imperative editor handle / scenario 15 — Boundary 5; handle reads trimmed draft
+3294 Imperative editor handle / scenario 16 — Boundary 6; handle reads trimmed draft
+3295 Imperative editor handle / scenario 17 — Boundary 7; handle reads trimmed draft
+3296 Imperative editor handle / scenario 18 — Boundary 8; handle reads trimmed draft
+3297 Imperative editor handle / scenario 19 — Boundary 9; handle reads trimmed draft
+3298 Imperative editor handle / scenario 20 — Boundary 10; handle reads trimmed draft
+3299 Paste replacement transaction / scenario 1 — Boundary 1; preserve pasted case
+3300 Paste replacement transaction / scenario 2 — Boundary 2; preserve pasted case
+3301 Paste replacement transaction / scenario 3 — Boundary 3; preserve pasted case
+3302 Paste replacement transaction / scenario 4 — Boundary 4; preserve pasted case
+3303 Paste replacement transaction / scenario 5 — Boundary 5; preserve pasted case
+3304 Paste replacement transaction / scenario 6 — Boundary 6; preserve pasted case
+3305 Paste replacement transaction / scenario 7 — Boundary 7; preserve pasted case
+3306 Paste replacement transaction / scenario 8 — Boundary 8; preserve pasted case
+3307 Paste replacement transaction / scenario 9 — Boundary 9; preserve pasted case
+3308 Paste replacement transaction / scenario 10 — Boundary 10; preserve pasted case
+3309 Paste replacement transaction / scenario 11 — Boundary 1; uppercase pasted text
+3310 Paste replacement transaction / scenario 12 — Boundary 2; uppercase pasted text
+3311 Paste replacement transaction / scenario 13 — Boundary 3; uppercase pasted text
+3312 Paste replacement transaction / scenario 14 — Boundary 4; uppercase pasted text
+3313 Paste replacement transaction / scenario 15 — Boundary 5; uppercase pasted text
+3314 Paste replacement transaction / scenario 16 — Boundary 6; uppercase pasted text
+3315 Paste replacement transaction / scenario 17 — Boundary 7; uppercase pasted text
+3316 Paste replacement transaction / scenario 18 — Boundary 8; uppercase pasted text
+3317 Paste replacement transaction / scenario 19 — Boundary 9; uppercase pasted text
+3318 Paste replacement transaction / scenario 20 — Boundary 10; uppercase pasted text
+3319 Context menu anchor geometry / scenario 1 — Boundary 1; preserve requested coordinates
+3320 Context menu anchor geometry / scenario 2 — Boundary 2; preserve requested coordinates
+3321 Context menu anchor geometry / scenario 3 — Boundary 3; preserve requested coordinates
+3322 Context menu anchor geometry / scenario 4 — Boundary 4; preserve requested coordinates
+3323 Context menu anchor geometry / scenario 5 — Boundary 5; preserve requested coordinates
+3324 Context menu anchor geometry / scenario 6 — Boundary 6; preserve requested coordinates
+3325 Context menu anchor geometry / scenario 7 — Boundary 7; preserve requested coordinates
+3326 Context menu anchor geometry / scenario 8 — Boundary 8; preserve requested coordinates
+3327 Context menu anchor geometry / scenario 9 — Boundary 9; preserve requested coordinates
+3328 Context menu anchor geometry / scenario 10 — Boundary 10; preserve requested coordinates
+3329 Context menu anchor geometry / scenario 11 — Boundary 1; clamp menu inside viewport
+3330 Context menu anchor geometry / scenario 12 — Boundary 2; clamp menu inside viewport
+3331 Context menu anchor geometry / scenario 13 — Boundary 3; clamp menu inside viewport
+3332 Context menu anchor geometry / scenario 14 — Boundary 4; clamp menu inside viewport
+3333 Context menu anchor geometry / scenario 15 — Boundary 5; clamp menu inside viewport
+3334 Context menu anchor geometry / scenario 16 — Boundary 6; clamp menu inside viewport
+3335 Context menu anchor geometry / scenario 17 — Boundary 7; clamp menu inside viewport
+3336 Context menu anchor geometry / scenario 18 — Boundary 8; clamp menu inside viewport
+3337 Context menu anchor geometry / scenario 19 — Boundary 9; clamp menu inside viewport
+3338 Context menu anchor geometry / scenario 20 — Boundary 10; clamp menu inside viewport
+3339 Image fallback source ladder / scenario 1 — Boundary 1; source replacement retains fallback index
+3340 Image fallback source ladder / scenario 2 — Boundary 2; source replacement retains fallback index
+3341 Image fallback source ladder / scenario 3 — Boundary 3; source replacement retains fallback index
+3342 Image fallback source ladder / scenario 4 — Boundary 4; source replacement retains fallback index
+3343 Image fallback source ladder / scenario 5 — Boundary 5; source replacement retains fallback index
+3344 Image fallback source ladder / scenario 6 — Boundary 6; source replacement retains fallback index
+3345 Image fallback source ladder / scenario 7 — Boundary 7; source replacement retains fallback index
+3346 Image fallback source ladder / scenario 8 — Boundary 8; source replacement retains fallback index
+3347 Image fallback source ladder / scenario 9 — Boundary 9; source replacement retains fallback index
+3348 Image fallback source ladder / scenario 10 — Boundary 10; source replacement retains fallback index
+3349 Image fallback source ladder / scenario 11 — Boundary 1; source replacement resets fallback index
+3350 Image fallback source ladder / scenario 12 — Boundary 2; source replacement resets fallback index
+3351 Image fallback source ladder / scenario 13 — Boundary 3; source replacement resets fallback index
+3352 Image fallback source ladder / scenario 14 — Boundary 4; source replacement resets fallback index
+3353 Image fallback source ladder / scenario 15 — Boundary 5; source replacement resets fallback index
+3354 Image fallback source ladder / scenario 16 — Boundary 6; source replacement resets fallback index
+3355 Image fallback source ladder / scenario 17 — Boundary 7; source replacement resets fallback index
+3356 Image fallback source ladder / scenario 18 — Boundary 8; source replacement resets fallback index
+3357 Image fallback source ladder / scenario 19 — Boundary 9; source replacement resets fallback index
+3358 Image fallback source ladder / scenario 20 — Boundary 10; source replacement resets fallback index
+3359 Object URL preview ownership / scenario 1 — Boundary 1; retain last preview when blob absent
+3360 Object URL preview ownership / scenario 2 — Boundary 2; retain last preview when blob absent
+3361 Object URL preview ownership / scenario 3 — Boundary 3; retain last preview when blob absent
+3362 Object URL preview ownership / scenario 4 — Boundary 4; retain last preview when blob absent
+3363 Object URL preview ownership / scenario 5 — Boundary 5; retain last preview when blob absent
+3364 Object URL preview ownership / scenario 6 — Boundary 6; retain last preview when blob absent
+3365 Object URL preview ownership / scenario 7 — Boundary 7; retain last preview when blob absent
+3366 Object URL preview ownership / scenario 8 — Boundary 8; retain last preview when blob absent
+3367 Object URL preview ownership / scenario 9 — Boundary 9; retain last preview when blob absent
+3368 Object URL preview ownership / scenario 10 — Boundary 10; retain last preview when blob absent
+3369 Object URL preview ownership / scenario 11 — Boundary 1; clear preview when no blob
+3370 Object URL preview ownership / scenario 12 — Boundary 2; clear preview when no blob
+3371 Object URL preview ownership / scenario 13 — Boundary 3; clear preview when no blob
+3372 Object URL preview ownership / scenario 14 — Boundary 4; clear preview when no blob
+3373 Object URL preview ownership / scenario 15 — Boundary 5; clear preview when no blob
+3374 Object URL preview ownership / scenario 16 — Boundary 6; clear preview when no blob
+3375 Object URL preview ownership / scenario 17 — Boundary 7; clear preview when no blob
+3376 Object URL preview ownership / scenario 18 — Boundary 8; clear preview when no blob
+3377 Object URL preview ownership / scenario 19 — Boundary 9; clear preview when no blob
+3378 Object URL preview ownership / scenario 20 — Boundary 10; clear preview when no blob
+3379 Native listener phase contract / scenario 1 — Boundary 1; bubble-phase native listener
+3380 Native listener phase contract / scenario 2 — Boundary 2; bubble-phase native listener
+3381 Native listener phase contract / scenario 3 — Boundary 3; bubble-phase native listener
+3382 Native listener phase contract / scenario 4 — Boundary 4; bubble-phase native listener
+3383 Native listener phase contract / scenario 5 — Boundary 5; bubble-phase native listener
+3384 Native listener phase contract / scenario 6 — Boundary 6; bubble-phase native listener
+3385 Native listener phase contract / scenario 7 — Boundary 7; bubble-phase native listener
+3386 Native listener phase contract / scenario 8 — Boundary 8; bubble-phase native listener
+3387 Native listener phase contract / scenario 9 — Boundary 9; bubble-phase native listener
+3388 Native listener phase contract / scenario 10 — Boundary 10; bubble-phase native listener
+3389 Native listener phase contract / scenario 11 — Boundary 1; capture-phase native listener
+3390 Native listener phase contract / scenario 12 — Boundary 2; capture-phase native listener
+3391 Native listener phase contract / scenario 13 — Boundary 3; capture-phase native listener
+3392 Native listener phase contract / scenario 14 — Boundary 4; capture-phase native listener
+3393 Native listener phase contract / scenario 15 — Boundary 5; capture-phase native listener
+3394 Native listener phase contract / scenario 16 — Boundary 6; capture-phase native listener
+3395 Native listener phase contract / scenario 17 — Boundary 7; capture-phase native listener
+3396 Native listener phase contract / scenario 18 — Boundary 8; capture-phase native listener
+3397 Native listener phase contract / scenario 19 — Boundary 9; capture-phase native listener
+3398 Native listener phase contract / scenario 20 — Boundary 10; capture-phase native listener
+3399 Scroll anchor prepend compensation / scenario 1 — Boundary 1; leave scroll position unchanged
+3400 Scroll anchor prepend compensation / scenario 2 — Boundary 2; leave scroll position unchanged
+3401 Scroll anchor prepend compensation / scenario 3 — Boundary 3; leave scroll position unchanged
+3402 Scroll anchor prepend compensation / scenario 4 — Boundary 4; leave scroll position unchanged
+3403 Scroll anchor prepend compensation / scenario 5 — Boundary 5; leave scroll position unchanged
+3404 Scroll anchor prepend compensation / scenario 6 — Boundary 6; leave scroll position unchanged
+3405 Scroll anchor prepend compensation / scenario 7 — Boundary 7; leave scroll position unchanged
+3406 Scroll anchor prepend compensation / scenario 8 — Boundary 8; leave scroll position unchanged
+3407 Scroll anchor prepend compensation / scenario 9 — Boundary 9; leave scroll position unchanged
+3408 Scroll anchor prepend compensation / scenario 10 — Boundary 10; leave scroll position unchanged
+3409 Scroll anchor prepend compensation / scenario 11 — Boundary 1; compensate prepended row heights
+3410 Scroll anchor prepend compensation / scenario 12 — Boundary 2; compensate prepended row heights
+3411 Scroll anchor prepend compensation / scenario 13 — Boundary 3; compensate prepended row heights
+3412 Scroll anchor prepend compensation / scenario 14 — Boundary 4; compensate prepended row heights
+3413 Scroll anchor prepend compensation / scenario 15 — Boundary 5; compensate prepended row heights
+3414 Scroll anchor prepend compensation / scenario 16 — Boundary 6; compensate prepended row heights
+3415 Scroll anchor prepend compensation / scenario 17 — Boundary 7; compensate prepended row heights
+3416 Scroll anchor prepend compensation / scenario 18 — Boundary 8; compensate prepended row heights
+3417 Scroll anchor prepend compensation / scenario 19 — Boundary 9; compensate prepended row heights
+3418 Scroll anchor prepend compensation / scenario 20 — Boundary 10; compensate prepended row heights
+3419 Selection-aware text formatting / scenario 1 — Boundary 1; replace selected text with uppercase
+3420 Selection-aware text formatting / scenario 2 — Boundary 2; replace selected text with uppercase
+3421 Selection-aware text formatting / scenario 3 — Boundary 3; replace selected text with uppercase
+3422 Selection-aware text formatting / scenario 4 — Boundary 4; replace selected text with uppercase
+3423 Selection-aware text formatting / scenario 5 — Boundary 5; replace selected text with uppercase
+3424 Selection-aware text formatting / scenario 6 — Boundary 6; replace selected text with uppercase
+3425 Selection-aware text formatting / scenario 7 — Boundary 7; replace selected text with uppercase
+3426 Selection-aware text formatting / scenario 8 — Boundary 8; replace selected text with uppercase
+3427 Selection-aware text formatting / scenario 9 — Boundary 9; replace selected text with uppercase
+3428 Selection-aware text formatting / scenario 10 — Boundary 10; replace selected text with uppercase
+3429 Selection-aware text formatting / scenario 11 — Boundary 1; wrap selected text in brackets
+3430 Selection-aware text formatting / scenario 12 — Boundary 2; wrap selected text in brackets
+3431 Selection-aware text formatting / scenario 13 — Boundary 3; wrap selected text in brackets
+3432 Selection-aware text formatting / scenario 14 — Boundary 4; wrap selected text in brackets
+3433 Selection-aware text formatting / scenario 15 — Boundary 5; wrap selected text in brackets
+3434 Selection-aware text formatting / scenario 16 — Boundary 6; wrap selected text in brackets
+3435 Selection-aware text formatting / scenario 17 — Boundary 7; wrap selected text in brackets
+3436 Selection-aware text formatting / scenario 18 — Boundary 8; wrap selected text in brackets
+3437 Selection-aware text formatting / scenario 19 — Boundary 9; wrap selected text in brackets
+3438 Selection-aware text formatting / scenario 20 — Boundary 10; wrap selected text in brackets

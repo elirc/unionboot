@@ -1,0 +1,25 @@
+{
+  "track": "dotnet-web-300",
+  "mode": "starter",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W001",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 0,
+  "failed": 1,
+  "assertions": 0,
+  "results": [
+    {
+      "id": "W001",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W001"
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 1
+}

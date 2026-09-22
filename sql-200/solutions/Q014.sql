@@ -1,0 +1,1 @@
+SELECT p.name,COUNT(DISTINCT CASE WHEN o.status='paid' THEN o.customer_id END) AS buyers FROM products p LEFT JOIN lines l ON l.product_id=p.id LEFT JOIN orders o ON o.id=l.order_id GROUP BY p.id,p.name ORDER BY p.id;

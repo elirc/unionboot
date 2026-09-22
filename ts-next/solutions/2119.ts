@@ -1,0 +1,8 @@
+// 2119: Route-template parameter binding / route-parameters=1
+// template literal parsing; inferred parameter records
+export type Route="/users/:p1";
+export type Params<S extends string>=S extends `${string}:${infer K}/${infer R}`?{[P in K|keyof Params<R>]:string}:S extends `${string}:${infer K}`?{[P in K]:string}:{};
+export type Input=Params<Route>;
+export function solve(params:Input): string {
+  const route:Route="/users/:p1";return route.replace(/:([A-Za-z0-9]+)/g,(_,key:string)=>encodeURIComponent(params[key as keyof Input]));
+}

@@ -1,0 +1,14 @@
+2123: Route-template parameter binding / route-parameters=5
+
+Contract focus: template literal parsing; inferred parameter records.
+
+Bind the 5 required route parameters in /users/:p1/:p2/:p3/:p4/:p5. URI-encode each complete segment with encodeURIComponent (spaces become %20, embedded / becomes %2F). Leave literal segments unchanged. Derive the parameter record with a template-literal infer parser; no optional parameters.
+
+Semantic variation 5/15: route-parameters=5. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2123.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2123.cjs. Type contracts: types/2123.positive.ts and types/2123.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2123
+Reference: node ts-next/verify.cjs --id=2123

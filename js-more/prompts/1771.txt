@@ -1,0 +1,18 @@
+Dijkstra route policies / scenario 3 — toll=1; tie=lexical
+
+TASK
+Input {nodes,edges,start}, unique ASCII labels, directed [from,to,weight], strictly positive weights and valid labels. Each edge costs weight+1. Return input-node-order {node,cost,path}, unreachable cost null/path[]. Shortest ties prefer lexical JSON path; start path [start], cost0. Use Dijkstra; no mutation.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1771.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1771
+node js-more/verify.cjs --starters --id=1771
+
+POLICIES
+toll=1; tie=lexical
+Semantic key: {"tie":"lexical","toll":1}

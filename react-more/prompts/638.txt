@@ -1,0 +1,11 @@
+Checklist selection cap / scenario 10 — cap 2; click output; initial empty; locked B
+
+Checkboxes A–D; B is permanently disabled and unchecked. Initial selection empty, cap 2. Disable unchecked boxes at cap; checked boxes remain removable. Output comma-separated selected labels in click order. Unchecking then rechecking appends to selection history for click order.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=638
+Run your starter: node react-more/verify.cjs --starters --id=638

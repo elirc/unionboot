@@ -1,0 +1,8 @@
+// 2883 Pointer capture drag intent / scenario 5 — Boundary 5; x axis threshold
+// A Drag handle button tracks the first primary pointer only, captures its pointerId on down, releases on matching up/cancel. Ignore other IDs and nonprimary buttons. Measure absolute clientX distance from start; threshold 25px enters dragging. Output Gesture idle/pressed/dragging/dropped/canceled; pointerup gives dropped only after dragging, otherwise idle. pointercancel gives canceled. Capture methods are injected on DOM node by tests.
+// Full prompt: ../prompts/2883.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({}) {
+const [state,set]=useState('idle'),drag=useRef(null);return <section><button onPointerDown={e=>{if(drag.current||e.button!==0)return;drag.current={id:e.pointerId,start:e.clientX,active:false};e.currentTarget.setPointerCapture(e.pointerId);set('pressed');}} onPointerMove={e=>{const d=drag.current;if(!d||d.id!==e.pointerId)return;if(Math.abs(e.clientX-d.start)>=25){d.active=true;set('dragging');}}} onPointerUp={e=>{const d=drag.current;if(!d||d.id!==e.pointerId)return;e.currentTarget.releasePointerCapture(d.id);drag.current=null;set(d.active?'dropped':'idle');}} onPointerCancel={e=>{if(drag.current?.id!==e.pointerId)return;e.currentTarget.releasePointerCapture(e.pointerId);drag.current=null;set('canceled');}}>Drag handle</button><output aria-label="Gesture">{state}</output></section>;
+}

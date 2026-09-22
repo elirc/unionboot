@@ -1,0 +1,15 @@
+1346: Template-literal field events / scenario 08
+
+Contract focus: template literal types; mapped keys; keyof.
+Create a field change envelope with event `${key}Changed` and the corresponding field value. Preserve the specific event literal and payload type in the return. Reject unknown fields and mismatched payloads instead of widening the key.
+
+This is scenario 8/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize alternating signs; scalar/state exercises use deterministic case seed 7. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1346.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1346.cjs. Positive strict fixtures: types/1346.positive.ts. Negative strict fixtures: types/1346.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-final/verify.cjs --starters --id=1346
+Reference check:
+  node ts-final/verify.cjs --id=1346
+

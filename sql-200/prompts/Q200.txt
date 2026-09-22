@@ -1,0 +1,32 @@
+Q200 — family EXPLAIN QUERY PLAN and index aware queries, scenario 10: temporary-btree-for-group-by
+
+Task
+Confirm a GROUP BY on unindexed lines2.product_id uses a TEMP B-TREE FOR GROUP BY step in its plan.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE orders2(id INTEGER PRIMARY KEY,customer_id INTEGER NOT NULL,status TEXT NOT NULL);
+CREATE TABLE lines2(order_id INTEGER NOT NULL,product_id INTEGER);
+INSERT INTO orders2 VALUES(1,10,'paid'),(2,11,'pending'),(3,10,'paid');
+INSERT INTO lines2 VALUES(1,100),(1,101),(3,100);
+
+Concrete example
+With the exact seed above, the first result row is {"detail":"SCAN lines2"}.
+
+Expected shape
+Columns (exact aliases): detail. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "detail": "SCAN lines2"
+  },
+  {
+    "detail": "USE TEMP B-TREE FOR GROUP BY"
+  }
+]
+
+Submission
+Edit starters/Q200.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+EXPLAIN QUERY PLAN mode: return the native EQP rows. The runner compares only their detail strings in order, ignoring numeric node IDs/parent/estimates. Text expectations target the bundled SQLite version documented in GUIDE.txt.
+Run: node sql-200/verify.cjs --starters --id=Q200
+Reference: node sql-200/verify.cjs --id=Q200

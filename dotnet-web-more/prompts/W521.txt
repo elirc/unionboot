@@ -1,0 +1,8 @@
+W521 | Header propagation policies
+Scenario 1: Allowlist X-Trace-Id and baggage
+Semantic key: allowlist-x-trace-id-and-baggage
+
+Copy only X-Trace-Id and baggage to a fresh header dictionary. Preserve all values and case-insensitive lookup. Do not forward Authorization/Cookie/Connection or other unlisted headers; do not mutate input.
+
+Signature: public static IHeaderDictionary Propagate(IHeaderDictionary incoming)
+Implement starters/W521.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

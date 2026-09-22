@@ -1,0 +1,18 @@
+Atomic external-store snapshots / scenario 7 — Boundary 7; raw selector
+
+TASK
+Use useSyncExternalStore with injected store.subscribe/getSnapshot. Snapshot is an immutable {value,revision} object with stable identity until publish. Two sibling readers must show the same snapshot, outputs Left and Right; display value. Revision output shows revision. Do not copy snapshots into effect-managed state. Unsubscribe on store replacement and unmount.
+
+EXAMPLE
+Initial value 7 => both readers 7. Publish 10 => both 10.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2725.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{store}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2725
+node react-next/verify.cjs --starters --id=2725

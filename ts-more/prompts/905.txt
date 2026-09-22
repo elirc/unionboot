@@ -1,0 +1,15 @@
+905: First typed search result / scenario 02
+
+Contract focus: discriminated unions; generic payloads.
+Return the first matching value and index using a found discriminant. A present undefined value is still a match. Stop calling the predicate after success. Missing result contains only found:false.
+
+This is scenario 2/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize singleton; scalar/state exercises use deterministic case seed 1. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/905.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/905.cjs. Positive strict fixtures: types/905.positive.ts. Negative strict fixtures: types/905.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=905
+Reference check:
+  node ts-more/verify.cjs --id=905
+

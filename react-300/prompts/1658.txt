@@ -1,0 +1,18 @@
+Dismissible dialog focus / scenario 10 — Escape ignored; backdrop dismisses; checkbox confirmation; initial focus Confirm
+
+TASK
+Open opens role dialog labelled Remove draft, aria-modal=true. Focus Confirm on open; trap Tab/Shift+Tab across all enabled inputs/buttons. I understand checkbox enables Confirm. Confirm increments Removed output, closes, restores Open focus. Cancel closes without increment. Ignore Escape. Click the backdrop (data-testid=backdrop) cancels, not clicks inside dialog. Reopening clears confirmation. Initial focus target Confirm must instead focus confirmation field while Confirm is disabled.
+
+EXAMPLE
+Open, confirm by checking I understand, Confirm => Removed=1.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1658.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1658
+node react-300/verify.cjs --starters --id=1658

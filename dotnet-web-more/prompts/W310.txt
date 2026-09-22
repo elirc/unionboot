@@ -1,0 +1,8 @@
+W310 | Rate limiting partition counters
+Scenario 10: Fixed window 10 permits keyed by subject
+Semantic key: fixed-window-10-permits-keyed-by-subject
+
+Implement the partition callback used by an ASP.NET Core IRateLimiterPolicy. Read X-subject exactly (missing is the empty partition). Fixed window: 10 permits, one hour, no automatic replenishment, queue zero. The shared PartitionedRateLimiter retains counters; do not recreate or dispose it per request.
+
+Signature: public static RateLimitPartition<string> Partition(HttpContext context)
+Implement starters/W310.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

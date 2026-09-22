@@ -1,0 +1,18 @@
+Opaque cursor history cache / scenario 12 — Boundary 2; cache forward page after back
+
+TASK
+Load first calls injected loadPage(null). Promise resolves {text,next}; next is opaque cursor or null. Show Page text and Next/Back buttons. Next calls loadPage(next), Back shows previous resolved page without network. Forward pages are cached by cursor and reused after Back. Buttons disabled during pending; Load first resets history. Page initially empty, Busy yes/no. On rejection retain current page and alert Page failed; retry clears alert. Ignore completion after unmount. Tests use cursor token token-2.
+
+EXAMPLE
+Load first resolves One/token-2; Next resolves Two/null; Back => One without another request.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3230.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{loadPage}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3230
+node react-next/verify.cjs --starters --id=3230

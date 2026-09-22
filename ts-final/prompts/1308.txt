@@ -1,0 +1,15 @@
+1308: Result-producing flatMap / scenario 15
+
+Contract focus: generic union composition; error unions.
+Chain a Result-returning function without nesting Results. Successful input invokes next once; failure returns the same input object without invoking next. Output combines the original and next error types. Propagate callback exceptions.
+
+This is scenario 15/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize fractional values; scalar/state exercises use deterministic case seed 14. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1308.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1308.cjs. Positive strict fixtures: types/1308.positive.ts. Negative strict fixtures: types/1308.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-final/verify.cjs --starters --id=1308
+Reference check:
+  node ts-final/verify.cjs --id=1308
+

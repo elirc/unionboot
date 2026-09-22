@@ -1,0 +1,49 @@
+Q196 — family EXPLAIN QUERY PLAN and index aware queries, scenario 6: unique-index-enforces-uniqueness
+
+Task
+Create a UNIQUE index on lines2(order_id,product_id); insert the distinct pair (2,100), then return all four rows ordered by order_id,product_id. The grader subsequently checks that inserting duplicate (1,100) fails.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE orders2(id INTEGER PRIMARY KEY,customer_id INTEGER NOT NULL,status TEXT NOT NULL);
+CREATE TABLE lines2(order_id INTEGER NOT NULL,product_id INTEGER);
+INSERT INTO orders2 VALUES(1,10,'paid'),(2,11,'pending'),(3,10,'paid');
+INSERT INTO lines2 VALUES(1,100),(1,101),(3,100);
+
+Concrete example
+With the exact seed above, the first result row is {"order_id":1,"product_id":100}.
+
+Expected shape
+Columns (exact aliases): order_id, product_id. 4 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "order_id": 1,
+    "product_id": 100
+  },
+  {
+    "order_id": 1,
+    "product_id": 101
+  },
+  {
+    "order_id": 2,
+    "product_id": 100
+  },
+  {
+    "order_id": 3,
+    "product_id": 100
+  }
+]
+
+Integrity checks after the result assertion (these exercise constraints/state, not helper solution SQL):
+[
+  {
+    "sql": "INSERT INTO lines2 VALUES(1,100)",
+    "reject": "UNIQUE"
+  }
+]
+
+Submission
+Edit starters/Q196.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q196
+Reference: node sql-200/verify.cjs --id=Q196

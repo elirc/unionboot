@@ -1,0 +1,9 @@
+{
+  "mode": "starter",
+  "compilerVersion": "5.9.3",
+  "id": 2524,
+  "compiler": "passed",
+  "runtime": "failed",
+  "todoMatch": true,
+  "diagnostic": "Error: TODO exercise 2524\n    at solve (C:\\Users\\Owner\\Desktop\\unionboot\\ts-next\\.verify\\run-np1Or5\\build\\starters\\2524.js:6:11)\n    at module.exports (C:\\Users\\Owner\\Desktop\\unionboot\\ts-next\\tests\\2524.cjs:4:38)\n    at main (C:\\Users\\Owner\\Desktop\\unionboot\\ts-next\\verify.cjs:24:196)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}

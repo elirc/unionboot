@@ -1,0 +1,18 @@
+Deferred resource display / scenario 19 — Boundary 9; defer suspended preview
+
+TASK
+Controlled Text input updates immediately. Preview reads injected resource.read(text), which may throw a promise, inside Suspense fallback Waiting. Pass useDeferredValue(text) to preview, retaining previous visible content during suspense; Stale output yes while text differs from deferred value. Preview output echoes resource result. Resource for target9 is pending in tests. This is render-priority behavior, not debounce: no timer or request effect.
+
+EXAMPLE
+Type target9 while unresolved => input updates immediately, empty preview retained.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3277.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{resource}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3277
+node react-next/verify.cjs --starters --id=3277

@@ -1,0 +1,31 @@
+Q108 — family String normalization parsing and matching, scenario 8: like-literal-wildcard-escape
+
+Task
+Find labels containing a literal underscore with LIKE and ESCAPE, not a one-character wildcard.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE contacts(id INTEGER PRIMARY KEY,name TEXT,email TEXT,code TEXT);
+INSERT INTO contacts VALUES(1,' Ada ','ADA@EXAMPLE.COM','AB-001'),(2,'Bo','bo@work.org','AB-002'),(3,'cy','cy@example.com','XY-010'),(4,'Dee',NULL,'XY-011'),(5,'Eli','eli+tag@example.com','ZZ-100');CREATE TABLE labels(id INTEGER,label TEXT); INSERT INTO labels VALUES(1,'a_b'),(2,'axb'),(3,'_'),(4,'ab');
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"label":"a_b"}.
+
+Expected shape
+Columns (exact aliases): id, label. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "label": "a_b"
+  },
+  {
+    "id": 3,
+    "label": "_"
+  }
+]
+
+Submission
+Edit starters/Q108.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q108
+Reference: node sql-200/verify.cjs --id=Q108

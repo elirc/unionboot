@@ -1,0 +1,33 @@
+Q339 — family Composite tenant keys and relationship integrity, scenario 9: composite-fk-metadata
+
+Task
+Inspect task FK columns in sequence, showing tenant->tenant and project_id->id.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE projects(tenant INTEGER,id INTEGER,title TEXT,PRIMARY KEY(tenant,id)) WITHOUT ROWID;CREATE TABLE tasks(tenant INTEGER,id INTEGER,project_id INTEGER,title TEXT,PRIMARY KEY(tenant,id),FOREIGN KEY(tenant,project_id) REFERENCES projects(tenant,id)) WITHOUT ROWID;INSERT INTO projects VALUES(1,1,'Alpha'),(1,2,'Beta'),(2,1,'Gamma');INSERT INTO tasks VALUES(1,1,1,'A'),(1,2,2,'B'),(2,1,1,'C');
+
+Concrete example
+The first result row on this seed is {"seq":0,"child_column":"tenant","parent_column":"tenant"}.
+
+Expected shape
+Columns: seq, child_column, parent_column. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "seq": 0,
+    "child_column": "tenant",
+    "parent_column": "tenant"
+  },
+  {
+    "seq": 1,
+    "child_column": "project_id",
+    "parent_column": "id"
+  }
+]
+
+Submission
+Write SQL in starters/Q339.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q339
+Learner: node sql-more/verify.cjs --starters --id=Q339

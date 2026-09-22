@@ -1,0 +1,1 @@
+SELECT team,SUM(CASE priority WHEN 1 THEN 5 WHEN 2 THEN 2 WHEN 3 THEN 1 ELSE 0 END) AS points FROM tickets GROUP BY team ORDER BY team;

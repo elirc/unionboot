@@ -1,0 +1,33 @@
+Q061 — family CTE pipelines and recursive traversal, scenario 1: ordinary-cte-direct-report-count
+
+Task
+Use a nonrecursive CTE to count direct reports per manager, returning only managers with two or more.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE staff(id INTEGER PRIMARY KEY,name TEXT,manager_id INTEGER);
+INSERT INTO staff VALUES(1,'Ada',NULL),(2,'Bo',1),(3,'Cy',1),(4,'Dee',2),(5,'Eli',2),(6,'Flo',4);
+CREATE TABLE edges(src INTEGER,dst INTEGER);
+INSERT INTO edges VALUES(1,2),(2,3),(3,1),(2,4);
+
+Concrete example
+With the exact seed above, the first result row is {"name":"Ada","reports":2}.
+
+Expected shape
+Columns (exact aliases): name, reports. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "name": "Ada",
+    "reports": 2
+  },
+  {
+    "name": "Bo",
+    "reports": 2
+  }
+]
+
+Submission
+Edit starters/Q061.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q061
+Reference: node sql-200/verify.cjs --id=Q061

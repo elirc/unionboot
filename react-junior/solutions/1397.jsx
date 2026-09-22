@@ -1,0 +1,6 @@
+// 1397 Typewriter effect with cleanup [effects]
+// When playing, reveal one character of the fixed message every 150ms into a Visible output; when finished (or paused), stop advancing. Play/Pause toggles playing; Play resumes mid-word. At completion, keep the Play button disabled. Reset clears the visible text and pauses. Output Label shows playing/paused/done. Must clean up its timer on unmount and on pause. Test uses fake timers.
+// Run: node react-junior/verify.cjs --id=1397 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({text="abcdef"}){const [chars,setChars]=useState(0),[playing,setPlaying]=useState(false);const done=chars>=text.length;useEffect(()=>{if(!playing||done)return;const id=setInterval(()=>setChars(c=>Math.min(text.length,c+1)),150);return()=>clearInterval(id);},[playing,done,text]);
+return <section><output aria-label="Visible">{text.slice(0,chars)}</output><output aria-label="Label">{done?'done':playing?'playing':'paused'}</output><button disabled={done} onClick={()=>setPlaying(p=>!p)}>{playing&&!done?'Pause':'Play'}</button><button onClick={()=>{setPlaying(false);setChars(0);}}>Reset</button></section>;}

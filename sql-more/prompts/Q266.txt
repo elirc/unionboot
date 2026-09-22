@@ -1,0 +1,34 @@
+Q266 — family Views projection and live query contracts, scenario 6: sqlite-view-readonly
+
+Task
+Create all_orders view and return its row count; grader verifies direct INSERT into view fails without INSTEAD OF trigger.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE orders(id INTEGER PRIMARY KEY,customer TEXT,status TEXT,amount INTEGER);INSERT INTO orders VALUES(1,'Ada','paid',10),(2,'Ada','pending',20),(3,'Bo','paid',30),(4,'Cy','cancelled',40);
+
+Concrete example
+The first result row on this seed is {"count":4}.
+
+Expected shape
+Columns: count. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "count": 4
+  }
+]
+
+Post-result integrity assertions:
+[
+  {
+    "sql": "INSERT INTO all_orders VALUES(5,'Dee','paid',1)",
+    "reject": "cannot modify.*view"
+  }
+]
+
+Submission
+Write SQL in starters/Q266.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q266
+Learner: node sql-more/verify.cjs --starters --id=Q266

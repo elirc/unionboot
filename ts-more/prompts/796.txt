@@ -1,0 +1,15 @@
+796: Stable generic partition / scenario 13
+
+Contract focus: generics; readonly inputs; callback variance.
+Return [accepted,rejected], preserving order and references. Call predicate exactly once per element with its zero-based index. Empty input gives two empty arrays; do not mutate input.
+
+This is scenario 13/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize mixed duplicates; scalar/state exercises use deterministic case seed 12. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/796.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/796.cjs. Positive strict fixtures: types/796.positive.ts. Negative strict fixtures: types/796.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=796
+Reference check:
+  node ts-more/verify.cjs --id=796
+

@@ -1,0 +1,14 @@
+2381: Exhaustive handler-table dispatch / handled-variants=tags
+
+Contract focus: mapped handler tables; complete coverage; return correlations.
+
+Dispatch a tags message through a complete typed handler table. Narrow before indexing so handler parameter types remain correlated. Invoke exactly one handler, return its result, and propagate its exceptions.
+
+Semantic variation 8/15: handled-variants=tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2381.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2381.cjs. Type contracts: types/2381.positive.ts and types/2381.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2381
+Reference: node ts-next/verify.cjs --id=2381

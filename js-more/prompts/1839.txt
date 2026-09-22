@@ -1,0 +1,18 @@
+Lazy iterator pipelines / scenario 1 — mode=even; take=2
+
+TASK
+Input iterable of finite numbers. Return lazy iterable: filter even integers, then take at most 2. Do not pull input at construction or beyond the last yielded item. Early consumer termination or reaching take must close underlying iterator with return(). Do not materialize input.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1839.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1839
+node js-more/verify.cjs --starters --id=1839
+
+POLICIES
+mode=even; take=2
+Semantic key: {"mode":"even","take":2}

@@ -1,0 +1,32 @@
+Q300 — family Relational division and requirement coverage, scenario 10: at-most-one-missing
+
+Task
+Allow candidates to miss at most one level-qualified requirement.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE candidates(name TEXT PRIMARY KEY);CREATE TABLE skills(name TEXT,skill TEXT,level INTEGER);CREATE TABLE required(skill TEXT,min_level INTEGER);INSERT INTO candidates VALUES('Ada'),('Bo'),('Cy'),('Dee');INSERT INTO skills VALUES('Ada','sql',3),('Ada','js',2),('Ada','css',1),('Bo','sql',2),('Cy','sql',1),('Cy','js',3);INSERT INTO required VALUES('sql',2),('js',2);
+
+Concrete example
+The first result row on this seed is {"name":"Ada"}.
+
+Expected shape
+Columns: name. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "name": "Ada"
+  },
+  {
+    "name": "Bo"
+  },
+  {
+    "name": "Cy"
+  }
+]
+
+Submission
+Write SQL in starters/Q300.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q300
+Learner: node sql-more/verify.cjs --starters --id=Q300

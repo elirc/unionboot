@@ -1,0 +1,1 @@
+WITH lots AS(SELECT SUM(CASE WHEN delta>0 THEN delta ELSE 0 END) AS units_in,SUM(CASE WHEN delta>0 THEN delta*unit_cost ELSE 0 END) AS cost_in,SUM(CASE WHEN delta<0 THEN -delta ELSE 0 END) AS units_out FROM priced) SELECT units_in-units_out AS units,ROUND(1.0*cost_in/units_in,2) AS unit_cost FROM lots;

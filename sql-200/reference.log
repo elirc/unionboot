@@ -1,0 +1,203 @@
+PASS Q001 Join preservation and matching / scenario 1 / inner-match-only
+PASS Q002 Join preservation and matching / scenario 2 / left-preserve-every-person
+PASS Q003 Join preservation and matching / scenario 3 / left-preserve-every-team
+PASS Q004 Join preservation and matching / scenario 4 / full-outer-emulation
+PASS Q005 Join preservation and matching / scenario 5 / on-filter-preserves-left
+PASS Q006 Join preservation and matching / scenario 6 / where-filter-rejects-unmatched
+PASS Q007 Join preservation and matching / scenario 7 / self-join-unique-teammate-pairs
+PASS Q008 Join preservation and matching / scenario 8 / cross-join-small-assignment-grid
+PASS Q009 Join preservation and matching / scenario 9 / unmatched-including-dangling-fk
+PASS Q010 Join preservation and matching / scenario 10 / empty-team-count-zero
+PASS Q011 Multi-table commerce joins / scenario 1 / paid-line-detail
+PASS Q012 Multi-table commerce joins / scenario 2 / paid-spend-preserve-customers
+PASS Q013 Multi-table commerce joins / scenario 3 / category-paid-revenue
+PASS Q014 Multi-table commerce joins / scenario 4 / distinct-paid-buyers-per-product
+PASS Q015 Multi-table commerce joins / scenario 5 / order-count-not-line-count
+PASS Q016 Multi-table commerce joins / scenario 6 / office-paid-customers-semijoin
+PASS Q017 Multi-table commerce joins / scenario 7 / pending-reserved-quantities
+PASS Q018 Multi-table commerce joins / scenario 8 / customer-category-paid-breakdown
+PASS Q019 Multi-table commerce joins / scenario 9 / customers-with-no-paid-lines
+PASS Q020 Multi-table commerce joins / scenario 10 / average-paid-order-not-line
+PASS Q021 GROUP BY HAVING and aggregate policy / scenario 1 / sum-all-statuses
+PASS Q022 GROUP BY HAVING and aggregate policy / scenario 2 / where-paid-before-group
+PASS Q023 GROUP BY HAVING and aggregate policy / scenario 3 / having-paid-total-at-least-thirty
+PASS Q024 GROUP BY HAVING and aggregate policy / scenario 4 / count-rows-versus-values
+PASS Q025 GROUP BY HAVING and aggregate policy / scenario 5 / average-unknown-excluded
+PASS Q026 GROUP BY HAVING and aggregate policy / scenario 6 / average-unknown-as-zero
+PASS Q027 GROUP BY HAVING and aggregate policy / scenario 7 / having-multiple-statuses
+PASS Q028 GROUP BY HAVING and aggregate policy / scenario 8 / having-no-unknowns
+PASS Q029 GROUP BY HAVING and aggregate policy / scenario 9 / where-positive-versus-net
+PASS Q030 GROUP BY HAVING and aggregate policy / scenario 10 / group-by-two-dimensions
+PASS Q031 Subqueries correlated lookups and existence / scenario 1 / scalar-global-average
+PASS Q032 Subqueries correlated lookups and existence / scenario 2 / correlated-department-average
+PASS Q033 Subqueries correlated lookups and existence / scenario 3 / exists-any-bonus-including-zero
+PASS Q034 Subqueries correlated lookups and existence / scenario 4 / not-exists-null-safe-antijoin
+PASS Q035 Subqueries correlated lookups and existence / scenario 5 / in-subquery-positive-bonus
+PASS Q036 Subqueries correlated lookups and existence / scenario 6 / join-preaggregated-bonus
+PASS Q037 Subqueries correlated lookups and existence / scenario 7 / correlated-bonus-total
+PASS Q038 Subqueries correlated lookups and existence / scenario 8 / correlated-no-higher-salary
+PASS Q039 Subqueries correlated lookups and existence / scenario 9 / correlated-count-higher-colleagues
+PASS Q040 Subqueries correlated lookups and existence / scenario 10 / relational-division-all-known-paid
+PASS Q041 Ranking and top N per group / scenario 1 / row-number-with-id-tiebreak
+PASS Q042 Ranking and top N per group / scenario 2 / rank-with-gaps-on-ties
+PASS Q043 Ranking and top N per group / scenario 3 / dense-rank-without-gaps
+PASS Q044 Ranking and top N per group / scenario 4 / top-one-deterministic
+PASS Q045 Ranking and top N per group / scenario 5 / top-one-all-tied-winners
+PASS Q046 Ranking and top N per group / scenario 6 / top-two-rows-per-team
+PASS Q047 Ranking and top N per group / scenario 7 / top-two-distinct-score-levels
+PASS Q048 Ranking and top N per group / scenario 8 / global-rank-not-partitioned
+PASS Q049 Ranking and top N per group / scenario 9 / second-distinct-score-only
+PASS Q050 Ranking and top N per group / scenario 10 / bottom-one-per-team
+PASS Q051 Window offsets frames and analytics / scenario 1 / lag-previous-reading-null-boundary
+PASS Q052 Window offsets frames and analytics / scenario 2 / lead-next-reading-zero-boundary
+PASS Q053 Window offsets frames and analytics / scenario 3 / lag-delta-null-first
+PASS Q054 Window offsets frames and analytics / scenario 4 / running-total-rows-frame
+PASS Q055 Window offsets frames and analytics / scenario 5 / running-total-range-day-peers
+PASS Q056 Window offsets frames and analytics / scenario 6 / moving-average-two-rows
+PASS Q057 Window offsets frames and analytics / scenario 7 / centered-three-row-average
+PASS Q058 Window offsets frames and analytics / scenario 8 / last-value-full-partition
+PASS Q059 Window offsets frames and analytics / scenario 9 / share-of-partition-total
+PASS Q060 Window offsets frames and analytics / scenario 10 / moving-calendar-range-one-day
+PASS Q061 CTE pipelines and recursive traversal / scenario 1 / ordinary-cte-direct-report-count
+PASS Q062 CTE pipelines and recursive traversal / scenario 2 / org-tree-root-depth
+PASS Q063 CTE pipelines and recursive traversal / scenario 3 / subtree-exclude-anchor
+PASS Q064 CTE pipelines and recursive traversal / scenario 4 / ancestors-upward
+PASS Q065 CTE pipelines and recursive traversal / scenario 5 / tree-path-strings
+PASS Q066 CTE pipelines and recursive traversal / scenario 6 / depth-limited-subtree
+PASS Q067 CTE pipelines and recursive traversal / scenario 7 / cycle-safe-reachability-union
+PASS Q068 CTE pipelines and recursive traversal / scenario 8 / integer-series-inclusive
+PASS Q069 CTE pipelines and recursive traversal / scenario 9 / recursive-date-spine-left-join
+PASS Q070 CTE pipelines and recursive traversal / scenario 10 / all-manager-descendant-counts
+PASS Q071 Set operations and membership policies / scenario 1 / union-distinct-including-null
+PASS Q072 Set operations and membership policies / scenario 2 / union-all-retain-multiplicity
+PASS Q073 Set operations and membership policies / scenario 3 / intersect-including-null
+PASS Q074 Set operations and membership policies / scenario 4 / except-spring-minus-autumn
+PASS Q075 Set operations and membership policies / scenario 5 / except-autumn-minus-spring
+PASS Q076 Set operations and membership policies / scenario 6 / symmetric-difference
+PASS Q077 Set operations and membership policies / scenario 7 / intersect-known-names-only
+PASS Q078 Set operations and membership policies / scenario 8 / union-all-source-tagged
+PASS Q079 Set operations and membership policies / scenario 9 / multiset-count-after-union-all
+PASS Q080 Set operations and membership policies / scenario 10 / join-is-not-intersect-multiplicity
+PASS Q081 NULL semantics and three valued logic / scenario 1 / coalesce-missing-numeric
+PASS Q082 NULL semantics and three valued logic / scenario 2 / nullif-safe-real-ratio
+PASS Q083 NULL semantics and three valued logic / scenario 3 / blank-and-null-label-fallback
+PASS Q084 NULL semantics and three valued logic / scenario 4 / not-equal-excludes-unknown
+PASS Q085 NULL semantics and three valued logic / scenario 5 / not-equal-or-unknown
+PASS Q086 NULL semantics and three valued logic / scenario 6 / null-safe-equality-emulation
+PASS Q087 NULL semantics and three valued logic / scenario 7 / is-distinct-emulation
+PASS Q088 NULL semantics and three valued logic / scenario 8 / not-in-null-filter-and-known-left
+PASS Q089 NULL semantics and three valued logic / scenario 9 / three-valued-or-truth-table
+PASS Q090 NULL semantics and three valued logic / scenario 10 / count-null-and-zero-separately
+PASS Q091 SQLite dates times and calendar boundaries / scenario 1 / date-part-iso-text
+PASS Q092 SQLite dates times and calendar boundaries / scenario 2 / half-open-month-filter
+PASS Q093 SQLite dates times and calendar boundaries / scenario 3 / month-group-strftime
+PASS Q094 SQLite dates times and calendar boundaries / scenario 4 / leap-year-end-of-month
+PASS Q095 SQLite dates times and calendar boundaries / scenario 5 / fixed-offset-day-shift
+PASS Q096 SQLite dates times and calendar boundaries / scenario 6 / elapsed-hours-julianday
+PASS Q097 SQLite dates times and calendar boundaries / scenario 7 / weekend-sunday-zero
+PASS Q098 SQLite dates times and calendar boundaries / scenario 8 / monday-week-bucket
+PASS Q099 SQLite dates times and calendar boundaries / scenario 9 / unixepoch-explicit-modifier
+PASS Q100 SQLite dates times and calendar boundaries / scenario 10 / calendar-day-age-fixed-asof
+PASS Q101 String normalization parsing and matching / scenario 1 / trim-lowercase-ascii
+PASS Q102 String normalization parsing and matching / scenario 2 / extract-email-domain
+PASS Q103 String normalization parsing and matching / scenario 3 / domain-count-normalized
+PASS Q104 String normalization parsing and matching / scenario 4 / code-prefix-and-numeric-suffix
+PASS Q105 String normalization parsing and matching / scenario 5 / replace-delimiter
+PASS Q106 String normalization parsing and matching / scenario 6 / length-after-trim
+PASS Q107 String normalization parsing and matching / scenario 7 / case-sensitive-glob-prefix
+PASS Q108 String normalization parsing and matching / scenario 8 / like-literal-wildcard-escape
+PASS Q109 String normalization parsing and matching / scenario 9 / concatenation-null-fallback
+PASS Q110 String normalization parsing and matching / scenario 10 / ordered-group-concat
+PASS Q111 CASE pivot and conditional aggregation / scenario 1 / searched-case-priority-bands
+PASS Q112 CASE pivot and conditional aggregation / scenario 2 / simple-case-status-labels
+PASS Q113 CASE pivot and conditional aggregation / scenario 3 / count-pivot-all-statuses
+PASS Q114 CASE pivot and conditional aggregation / scenario 4 / sum-pivot-hours-zero-fill
+PASS Q115 CASE pivot and conditional aggregation / scenario 5 / conditional-average-ignore-other-statuses
+PASS Q116 CASE pivot and conditional aggregation / scenario 6 / weighted-priority-score
+PASS Q117 CASE pivot and conditional aggregation / scenario 7 / case-boundary-hours
+PASS Q118 CASE pivot and conditional aggregation / scenario 8 / conditional-having-open-at-least-two
+PASS Q119 CASE pivot and conditional aggregation / scenario 9 / closed-percentage-all-tickets
+PASS Q120 CASE pivot and conditional aggregation / scenario 10 / custom-case-sort-status
+PASS Q121 SQLite schema constraints and integrity / scenario 1 / integer-primary-key-rowid-alias
+PASS Q122 SQLite schema constraints and integrity / scenario 2 / not-null-and-check-positive
+PASS Q123 SQLite schema constraints and integrity / scenario 3 / unique-email-case-sensitive
+PASS Q124 SQLite schema constraints and integrity / scenario 4 / unique-email-nocase-ascii
+PASS Q125 SQLite schema constraints and integrity / scenario 5 / composite-primary-key-without-rowid
+PASS Q126 SQLite schema constraints and integrity / scenario 6 / foreign-key-restrict
+PASS Q127 SQLite schema constraints and integrity / scenario 7 / foreign-key-cascade-delete
+PASS Q128 SQLite schema constraints and integrity / scenario 8 / check-enum-and-boolean-integer
+PASS Q129 SQLite schema constraints and integrity / scenario 9 / strict-table-reject-text-numeric
+PASS Q130 SQLite schema constraints and integrity / scenario 10 / nullable-check-three-valued-acceptance
+PASS Q131 UPSERT conflict targets and merge policy / scenario 1 / insert-new-key
+PASS Q132 UPSERT conflict targets and merge policy / scenario 2 / existing-key-do-nothing
+PASS Q133 UPSERT conflict targets and merge policy / scenario 3 / replace-quantity-only
+PASS Q134 UPSERT conflict targets and merge policy / scenario 4 / accumulate-quantity
+PASS Q135 UPSERT conflict targets and merge policy / scenario 5 / keep-maximum-quantity
+PASS Q136 UPSERT conflict targets and merge policy / scenario 6 / accept-newer-version
+PASS Q137 UPSERT conflict targets and merge policy / scenario 7 / reject-stale-version
+PASS Q138 UPSERT conflict targets and merge policy / scenario 8 / minimum-price-and-version-increment
+PASS Q139 UPSERT conflict targets and merge policy / scenario 9 / batch-insert-select-merge
+PASS Q140 UPSERT conflict targets and merge policy / scenario 10 / composite-conflict-target
+PASS Q141 Transactions savepoints and atomic state / scenario 1 / commit-balanced-transfer
+PASS Q142 Transactions savepoints and atomic state / scenario 2 / rollback-transfer
+PASS Q143 Transactions savepoints and atomic state / scenario 3 / savepoint-discard-inner-changes
+PASS Q144 Transactions savepoints and atomic state / scenario 4 / release-savepoint-then-outer-rollback
+PASS Q145 Transactions savepoints and atomic state / scenario 5 / savepoint-as-outer-transaction
+PASS Q146 Transactions savepoints and atomic state / scenario 6 / transactional-ddl-rollback
+PASS Q147 Transactions savepoints and atomic state / scenario 7 / commit-data-and-audit
+PASS Q148 Transactions savepoints and atomic state / scenario 8 / rollback-audit-with-transfer
+PASS Q149 Transactions savepoints and atomic state / scenario 9 / nested-savepoint-preserve-middle
+PASS Q150 Transactions savepoints and atomic state / scenario 10 / immediate-transaction-commit
+PASS Q151 UPDATE DELETE and subquery driven mutations / scenario 1 / update-owner-in-subquery
+PASS Q152 UPDATE DELETE and subquery driven mutations / scenario 2 / delete-blocked-exists
+PASS Q153 UPDATE DELETE and subquery driven mutations / scenario 3 / correlated-adjustment-guard
+PASS Q154 UPDATE DELETE and subquery driven mutations / scenario 4 / coalesce-fill-unknown-points
+PASS Q155 UPDATE DELETE and subquery driven mutations / scenario 5 / delete-completed-only
+PASS Q156 UPDATE DELETE and subquery driven mutations / scenario 6 / delete-owner-with-low-total
+PASS Q157 UPDATE DELETE and subquery driven mutations / scenario 7 / update-unblocked-open-semijoin
+PASS Q158 UPDATE DELETE and subquery driven mutations / scenario 8 / update-highest-open-task
+PASS Q159 UPDATE DELETE and subquery driven mutations / scenario 9 / delete-no-adjustment-owners
+PASS Q160 UPDATE DELETE and subquery driven mutations / scenario 10 / update-returning-single-row
+PASS Q161 Gaps islands sequences and streaks / scenario 1 / next-visit-gap
+PASS Q162 Gaps islands sequences and streaks / scenario 2 / missing-day-gaps-list
+PASS Q163 Gaps islands sequences and streaks / scenario 3 / triple-streak-at-least-three-consecutive
+PASS Q164 Gaps islands sequences and streaks / scenario 4 / island-identity-both-ends
+PASS Q165 Gaps islands sequences and streaks / scenario 5 / largest-island-size
+PASS Q166 Gaps islands sequences and streaks / scenario 6 / every-island-start-and-end
+PASS Q167 Gaps islands sequences and streaks / scenario 7 / battery-rising-flag
+PASS Q168 Gaps islands sequences and streaks / scenario 8 / rising-streak-summed-groups
+PASS Q169 Gaps islands sequences and streaks / scenario 9 / longest-nonincreasing-run
+PASS Q170 Gaps islands sequences and streaks / scenario 10 / adjacent-duplicate-compress
+PASS Q171 Deduplication keep policies and hygiene / scenario 1 / keep-first-seen-per-email
+PASS Q172 Deduplication keep policies and hygiene / scenario 2 / keep-latest-seen-per-email
+PASS Q173 Deduplication keep policies and hygiene / scenario 3 / group-min-policy
+PASS Q174 Deduplication keep policies and hygiene / scenario 4 / delete-duplicates-keep-min-id
+PASS Q175 Deduplication keep policies and hygiene / scenario 5 / duplicate-emails-only
+PASS Q176 Deduplication keep policies and hygiene / scenario 6 / exact-duplicate-pairs
+PASS Q177 Deduplication keep policies and hygiene / scenario 7 / keep-latest-per-normalized-name
+PASS Q178 Deduplication keep policies and hygiene / scenario 8 / dedup-projection-only
+PASS Q179 Deduplication keep policies and hygiene / scenario 9 / delete-null-email-rows
+PASS Q180 Deduplication keep policies and hygiene / scenario 10 / dedup-count-before-after
+PASS Q181 Parameterized queries with node sqlite bindings / scenario 1 / positional-parameters
+PASS Q182 Parameterized queries with node sqlite bindings / scenario 2 / named-parameter-object
+PASS Q183 Parameterized queries with node sqlite bindings / scenario 3 / bound-like-pattern
+PASS Q184 Parameterized queries with node sqlite bindings / scenario 4 / limit-offset-parameterized-pagination
+PASS Q185 Parameterized queries with node sqlite bindings / scenario 5 / parameterized-in-list-dynamic-placeholders
+PASS Q186 Parameterized queries with node sqlite bindings / scenario 6 / parameterized-aggregate-minimum-price
+PASS Q187 Parameterized queries with node sqlite bindings / scenario 7 / parameterized-update-raise-price
+PASS Q188 Parameterized queries with node sqlite bindings / scenario 8 / bound-quote-containing-value
+PASS Q189 Parameterized queries with node sqlite bindings / scenario 9 / parameterized-between-range
+PASS Q190 Parameterized queries with node sqlite bindings / scenario 10 / parameterized-conditional-aggregate
+PASS Q191 EXPLAIN QUERY PLAN and index aware queries / scenario 1 / rowid-lookup-uses-index
+PASS Q192 EXPLAIN QUERY PLAN and index aware queries / scenario 2 / scan-without-index
+PASS Q193 EXPLAIN QUERY PLAN and index aware queries / scenario 3 / index-creation-changes-plan
+PASS Q194 EXPLAIN QUERY PLAN and index aware queries / scenario 4 / covering-index-avoids-table-lookup
+PASS Q195 EXPLAIN QUERY PLAN and index aware queries / scenario 5 / join-order-inner-outer-loop
+PASS Q196 EXPLAIN QUERY PLAN and index aware queries / scenario 6 / unique-index-enforces-uniqueness
+PASS Q197 EXPLAIN QUERY PLAN and index aware queries / scenario 7 / auto-index-for-unique-constraint
+PASS Q198 EXPLAIN QUERY PLAN and index aware queries / scenario 8 / uncorrelated-in-list-plan
+PASS Q199 EXPLAIN QUERY PLAN and index aware queries / scenario 9 / order-by-uses-index-avoids-sort
+PASS Q200 EXPLAIN QUERY PLAN and index aware queries / scenario 10 / temporary-btree-for-group-by
+solution SQL groups: 200 passed, 0 failed.
+(node:12244) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

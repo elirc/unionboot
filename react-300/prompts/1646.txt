@@ -1,0 +1,18 @@
+Optimistic row toggle rollback / scenario 8 — Single global mutation; other-row errors retained; 3 initial active rows
+
+TASK
+Rows A..E have Toggle NAME buttons; initially first 3 active. Each row output Active NAME is yes/no. Toggle optimistically flips value and calls persist(id,nextBoolean). Disable all row buttons while any request pending. Resolve true commits; false/rejection rolls back only affected row and shows alert Failed NAME. New attempt clears only that row error. Pending output is pending count. Ignore completion after unmount. Repeated click while pending cannot create duplicate calls.
+
+EXAMPLE
+Toggle A immediately changes yes to no; rejected save restores yes.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1646.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{persist}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1646
+node react-300/verify.cjs --starters --id=1646

@@ -1,0 +1,12 @@
+W010 — Resource lookup HTTP results
+Scenario 10/10: Catalog 10; positive IDs; missing returns 404
+
+Implement a GET-style lookup handler. Nonpositive id gives 400 with error invalid-id. Existing id gives 200 JSON {id,name}; missing positive id gives 404 with empty body. Do not mutate catalog. Example: catalog {10:"Tea"}, id 10 -> 200, name Tea.
+
+Signature: public static IResult Handle(int id, IReadOnlyDictionary<int,string> catalog)
+
+Edit starters/W010.cs. Run node dotnet-web-300/verify.cjs --starters --id=W010 from unionboot.
+Reference: solutions/W010.cs; shared checks: tests/W010.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

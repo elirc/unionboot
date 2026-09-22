@@ -1,0 +1,1 @@
+SELECT DISTINCT e.dept FROM employees e WHERE EXISTS(SELECT 1 FROM employees k WHERE k.dept=e.dept AND k.salary IS NOT NULL) AND NOT EXISTS(SELECT 1 FROM employees x WHERE x.dept=e.dept AND x.salary IS NOT NULL AND NOT EXISTS(SELECT 1 FROM bonuses b WHERE b.employee_id=x.id)) ORDER BY e.dept;

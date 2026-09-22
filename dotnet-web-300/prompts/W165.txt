@@ -1,0 +1,12 @@
+W165 — Response header middleware
+Scenario 5/10: X-Exercise-5=web-5; overwrite before next
+
+Build RequestDelegate middleware that sets X-Exercise-5=web-5 before awaiting next exactly once. Replace existing header, preserve others; propagate downstream exceptions. This header is not a security control. Example existing X-Exercise-5=old becomesweb-5, downstream sees it.
+
+Signature: public static RequestDelegate Wrap(RequestDelegate next)
+
+Edit starters/W165.cs. Run node dotnet-web-300/verify.cjs --starters --id=W165 from unionboot.
+Reference: solutions/W165.cs; shared checks: tests/W165.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

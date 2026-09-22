@@ -1,0 +1,31 @@
+Q367 — family Inventory valuation and stock flow policies, scenario 7: lifetime-lifo-consumption
+
+Task
+Allocate hypothetical 8-unit consumption across all A receipts LIFO, ignoring existing negative movements. Most recent lot id4 supplies5, id1 supplies3.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);
+
+Concrete example
+The first result row on this seed is {"id":4,"consumed":5}.
+
+Expected shape
+Columns: id, consumed. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 4,
+    "consumed": 5
+  },
+  {
+    "id": 1,
+    "consumed": 3
+  }
+]
+
+Submission
+Write SQL in starters/Q367.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q367
+Learner: node sql-more/verify.cjs --starters --id=Q367

@@ -1,0 +1,8 @@
+W576 | Response compression decision logic
+Scenario 6: Compression minimum 600 bytes
+Semantic key: compression-minimum-600-bytes
+
+Decision-only compression policy (no streams): minimum 600 inclusive bytes, only exact text/plain or application/json. Accept is a simplified comma-separated token list with NO q-values; prefer br then gzip, otherwise no compression/null.
+
+Signature: public static string? EncodingFor(string? accept,string mime,long bytes)
+Implement starters/W576.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

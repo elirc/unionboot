@@ -1,0 +1,33 @@
+Q336 — family Composite tenant keys and relationship integrity, scenario 6: tuple-in-composite-membership
+
+Task
+Select project tuples (1,2) and (2,1) using row-value IN; do not combine separate IN lists.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE projects(tenant INTEGER,id INTEGER,title TEXT,PRIMARY KEY(tenant,id)) WITHOUT ROWID;CREATE TABLE tasks(tenant INTEGER,id INTEGER,project_id INTEGER,title TEXT,PRIMARY KEY(tenant,id),FOREIGN KEY(tenant,project_id) REFERENCES projects(tenant,id)) WITHOUT ROWID;INSERT INTO projects VALUES(1,1,'Alpha'),(1,2,'Beta'),(2,1,'Gamma');INSERT INTO tasks VALUES(1,1,1,'A'),(1,2,2,'B'),(2,1,1,'C');
+
+Concrete example
+The first result row on this seed is {"tenant":1,"id":2,"title":"Beta"}.
+
+Expected shape
+Columns: tenant, id, title. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "tenant": 1,
+    "id": 2,
+    "title": "Beta"
+  },
+  {
+    "tenant": 2,
+    "id": 1,
+    "title": "Gamma"
+  }
+]
+
+Submission
+Write SQL in starters/Q336.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q336
+Learner: node sql-more/verify.cjs --starters --id=Q336

@@ -1,0 +1,18 @@
+Validated row creation / scenario 10 — Exact duplicate keys; prepend; maximum 2
+
+TASK
+Start empty. Code and Description controlled fields. Add requires trimmed code (ASCII letters/digits, 2..5 chars), nonempty trimmed description, unique code (case-sensitive), and fewer than 2 records. Show alert invalid, duplicate, or full in that priority on rejected submission. Valid add clears fields/error and prepends record. Rows display CODE:DESCRIPTION in listitem plus Remove CODE button. Remove clears error, keeps drafts. Count output is record count.
+
+EXAMPLE
+Code= AB , Description= bolt => row AB:bolt.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1498.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1498
+node react-300/verify.cjs --starters --id=1498

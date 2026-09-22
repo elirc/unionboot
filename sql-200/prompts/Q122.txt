@@ -1,0 +1,42 @@
+Q122 — family SQLite schema constraints and integrity, scenario 2: not-null-and-check-positive
+
+Task
+Create stock(sku TEXT PRIMARY KEY NOT NULL,qty INTEGER NOT NULL CHECK(qty>=0)); insert A with 0 and B with 3, then return all rows ordered by sku. Negative and NULL quantity must be rejected.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE departments(id INTEGER PRIMARY KEY); INSERT INTO departments VALUES(10),(20);
+
+Concrete example
+With the exact seed above, the first result row is {"sku":"A","qty":0}.
+
+Expected shape
+Columns (exact aliases): sku, qty. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "sku": "A",
+    "qty": 0
+  },
+  {
+    "sku": "B",
+    "qty": 3
+  }
+]
+
+Integrity checks after the result assertion (these exercise constraints/state, not helper solution SQL):
+[
+  {
+    "sql": "INSERT INTO stock VALUES('C',-1)",
+    "reject": "CHECK"
+  },
+  {
+    "sql": "INSERT INTO stock VALUES('C',NULL)",
+    "reject": "NOT NULL"
+  }
+]
+
+Submission
+Edit starters/Q122.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q122
+Reference: node sql-200/verify.cjs --id=Q122

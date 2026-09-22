@@ -1,0 +1,1 @@
+WITH n AS(SELECT sku,valid_to,LEAD(valid_from) OVER(PARTITION BY sku ORDER BY valid_from) AS next_start FROM prices) SELECT sku,valid_to AS gap_start,next_start AS gap_end FROM n WHERE next_start>valid_to ORDER BY sku,gap_start;

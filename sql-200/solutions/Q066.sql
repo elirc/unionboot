@@ -1,0 +1,1 @@
+WITH RECURSIVE tree(id,name,depth) AS(SELECT id,name,0 FROM staff WHERE id=1 UNION ALL SELECT s.id,s.name,t.depth+1 FROM staff s JOIN tree t ON s.manager_id=t.id WHERE t.depth<2) SELECT name FROM tree WHERE depth=2 ORDER BY id;

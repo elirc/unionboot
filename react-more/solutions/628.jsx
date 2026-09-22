@@ -1,0 +1,9 @@
+// 628 Accessible tab selection / scenario 10 — horizontal; automatic activation; disabled Green; initial 0
+// Red/Green/Blue tabs in a tablist with aria-orientation=horizontal. Green is disabled. Initially select and make focusable index 0. ArrowRight/ArrowLeft move focus, skip disabled tabs, wrap. Home/End focus first/last enabled tab. Navigation also selects the focused tab. Click selects and focuses. Ignore the other axis. Use roving tabIndex, aria-selected and one tabpanel showing the selected name.
+// Prompt: ../prompts/628.txt
+// Run from unionboot: node react-more/verify.cjs --id=628 [--starters]
+import React, {useState, useEffect, useReducer, useRef} from 'react';
+
+export default function Exercise({items=[], rows=[], load=async()=>''}) {
+const names=['Red','Green','Blue'],allowed=[0,2];const [selected,select]=useState(0),[focused,focus]=useState(0);const refs=useRef([]);const move=i=>{focus(i);select(i);refs.current[i].focus();};return <section><div role="tablist" aria-orientation="horizontal">{names.map((name,i)=><button key={name} role="tab" ref={el=>{refs.current[i]=el;}} disabled={i===1} tabIndex={focused===i?0:-1} aria-selected={selected===i} onClick={()=>{select(i);focus(i);refs.current[i].focus();}} onKeyDown={e=>{let next;if(e.key==='ArrowRight')next=allowed[(allowed.indexOf(i)+1)%allowed.length];else if(e.key==='ArrowLeft')next=allowed[(allowed.indexOf(i)+allowed.length-1)%allowed.length];else if(e.key==='Home')next=allowed[0];else if(e.key==='End')next=allowed[allowed.length-1];if(next!==undefined){e.preventDefault();move(next);}}}>{name}</button>)}</div><div role="tabpanel">{names[selected]}</div></section>;
+}

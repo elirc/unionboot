@@ -1,0 +1,1 @@
+INSERT INTO nodes VALUES(6,'North');INSERT INTO closure VALUES(6,6,0);INSERT INTO closure SELECT ancestor,6,depth+1 FROM closure WHERE descendant=2;SELECT ancestor,depth FROM closure WHERE descendant=6 ORDER BY depth,ancestor;

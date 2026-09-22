@@ -1,0 +1,12 @@
+W255 — Conditional GET ETags
+Scenario 5/10: Representation v5; weak If-None-Match comparison
+
+Always set response ETag to quoted "v5". For GET, If-None-Match tokens separated by commas: trim each, match strong tag, W/weak form, or *. Match->304 empty body; no match/missing->200 {version:5}. Malformed tokens are ignored. Scope: fixed comma-free tag, not a general HTTP entity-tag parser. Example W/"v5" ->304.
+
+Signature: public static IResult Handle(HttpContext context)
+
+Edit starters/W255.cs. Run node dotnet-web-300/verify.cjs --starters --id=W255 from unionboot.
+Reference: solutions/W255.cs; shared checks: tests/W255.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

@@ -1,0 +1,18 @@
+Portal event ownership / scenario 12 — Boundary 2; stop React bubbling at portal child
+
+TASK
+Use createPortal from react-dom to place a Send button in injected host, never in the render root. Each Send adds 2 to Local. Parent React section onClick adds one to Parent for bubbled clicks. Send stops propagation, so Parent stays unchanged. Local/Parent outputs stay in root. Changing host moves the portal without resetting counters. Unmount removes portal DOM, not the host.
+
+EXAMPLE
+Send twice => Local=4, Parent=0.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2790.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{host}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2790
+node react-next/verify.cjs --starters --id=2790

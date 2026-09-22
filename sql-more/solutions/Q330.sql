@@ -1,0 +1,1 @@
+WITH flags AS(SELECT joined,EXISTS(SELECT 1 FROM activity a WHERE a.user_id=u.id AND a.day BETWEEN u.joined AND u.joined+1) AS activated FROM users u) SELECT joined AS cohort,SUM(activated) AS activated,SUM(1-activated) AS not_activated FROM flags GROUP BY joined ORDER BY joined;

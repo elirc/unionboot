@@ -1,0 +1,11 @@
+Ref focus controls / scenario 14 — focus First; clear target; caret at start; fallback when locked
+
+Controlled First and Second inputs initially 'alpha' and 'beta'. Lock target checkbox disables First. Focus button falls back to the other input when target is locked. Focusing moves caret to start without changing either value. Clear empties only First, then focuses target if enabled, otherwise the other input. Clear does not alter locking. Use refs; no querySelector in component.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=752
+Run your starter: node react-more/verify.cjs --starters --id=752

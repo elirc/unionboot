@@ -1,0 +1,18 @@
+Keyboard carousel geometry / scenario 17 — Boundary 7; cyclic slide navigation
+
+TASK
+Carousel region labelled Gallery contains exactly one visible slide, a role=group labelled Slide X of 9. Initial index 1. ArrowRight/Left on Gallery and Next/Previous buttons wrap across 9 slides. Home/End select endpoints. Output Position is X/9. Both buttons always enabled. Do not move DOM focus when selecting slides. No timers/auto-play.
+
+EXAMPLE
+End, then Next => 1/9.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3075.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3075
+node react-next/verify.cjs --starters --id=3075

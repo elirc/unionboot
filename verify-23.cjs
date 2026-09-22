@@ -1,0 +1,26 @@
+// Tests the actual exercise 23 reference code in SOLUTIONS.md.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const text = fs.readFileSync(path.join(__dirname, 'SOLUTIONS.md'), 'utf8');
+const section = text.split('## 23 — Todo reducer')[1]?.split('## 24')[0];
+const code = section?.match(/```js\r?\n([\s\S]*?)```/)?.[1];
+assert.ok(code, 'Exercise 23 solution must exist');
+const reduce = new Function(`${code}\nreturn todoReducer;`)();
+const initial = Object.freeze([]);
+const action = Object.freeze({ type: 'ADD', text: 'learn closures' });
+const first = reduce(initial, action);
+assert.deepEqual(reduce(initial, action), first, 'Pure reducer: identical inputs must produce identical outputs');
+assert.deepEqual(first, [{ id: 1, text: 'learn closures', done: false }]);
+assert.deepEqual(initial, []);
+Object.freeze(first[0]);
+Object.freeze(first);
+const second = reduce(first, { type: 'ADD', text: 'learn promises' });
+assert.equal(second[1].id, 2);
+const toggled = reduce(second, { type: 'TOGGLE', id: 1 });
+assert.equal(toggled[0].done, true);
+assert.equal(second[0].done, false);
+assert.notEqual(toggled, second);
+assert.deepEqual(reduce(toggled, { type: 'REMOVE', id: 2 }), [{ id: 1, text: 'learn closures', done: true }]);
+assert.notEqual(reduce(first, { type: 'UNKNOWN' }), first, 'Exercise contract asks for a new array on every action');
+console.log('PASS exercise 23: 10 assertions — determinism, IDs, immutability, toggle, removal, unknown action.');

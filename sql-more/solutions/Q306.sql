@@ -1,0 +1,1 @@
+WITH keys AS(SELECT key FROM local UNION SELECT key FROM remote) SELECT k.key,CASE WHEN r.key IS NOT NULL THEN r.value ELSE l.value END AS value FROM keys k LEFT JOIN local l USING(key) LEFT JOIN remote r USING(key) ORDER BY k.key;

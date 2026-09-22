@@ -1,0 +1,1 @@
+WITH RECURSIVE p(node,path,hops) AS(VALUES('A','/A/',0) UNION ALL SELECT e.dst,p.path||e.dst||'/',hops+1 FROM p JOIN edges e ON e.src=p.node WHERE instr(p.path,'/'||e.dst||'/')=0) SELECT node,MIN(hops) AS hops FROM p GROUP BY node ORDER BY node;

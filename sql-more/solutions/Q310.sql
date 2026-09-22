@@ -1,0 +1,1 @@
+UPDATE remote SET value=NULL WHERE key='B';UPDATE local SET value=(SELECT r.value FROM remote r WHERE r.key=local.key) WHERE EXISTS(SELECT 1 FROM remote r WHERE r.key=local.key);SELECT key,value FROM local ORDER BY key;

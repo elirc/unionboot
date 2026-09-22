@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-300",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W181",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 7,
+  "results": [
+    {
+      "id": "W181",
+      "family": "Request cancellation propagation",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

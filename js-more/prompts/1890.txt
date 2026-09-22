@@ -1,0 +1,18 @@
+Injected token-bucket limiter / scenario 2 — capacity=2; refill=1
+
+TASK
+solve({now}) creates independent token bucket, initially 2 tokens. Injected now() returns finite monotonic virtual time. take(cost=1) first refills elapsed*1, capped 2, then spends iff enough. Return {allowed,tokens}. Fractional tokens/cost permitted. Denial retains balance. Reverse time throws RangeError('Time reversed'). Nonfinite or nonpositive cost RangeError('Invalid cost'). No real timers.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1890.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1890
+node js-more/verify.cjs --starters --id=1890
+
+POLICIES
+capacity=2; refill=1
+Semantic key: {"capacity":2,"refill":1}

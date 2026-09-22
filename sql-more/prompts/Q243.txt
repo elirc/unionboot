@@ -1,0 +1,28 @@
+Q243 — family Partial expression and composite index contracts, scenario 3: partial-index-metadata
+
+Task
+Create nonunique index on email WHERE active=1; inspect pragma_index_list for its unique and partial flags.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE users(id INTEGER PRIMARY KEY,email TEXT,active INTEGER,tenant INTEGER);INSERT INTO users VALUES(1,'Ada@x',1,10),(2,'ada@x',0,10),(3,'Bo@x',1,20);
+
+Concrete example
+The first result row on this seed is {"name":"active_only","is_unique":0,"partial":1}.
+
+Expected shape
+Columns: name, is_unique, partial. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "name": "active_only",
+    "is_unique": 0,
+    "partial": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q243.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q243
+Learner: node sql-more/verify.cjs --starters --id=Q243

@@ -1,0 +1,18 @@
+Polynomial convolution / scenario 6 — modulus=5; trim=true
+
+TASK
+Input {a,b}, finite integer polynomial coefficients in ascending exponent order, values small enough for exact JS arithmetic. Multiply by convolution. Reduce every coefficient to nonnegative residue modulo5. Remove trailing zero coefficients; zero polynomial []. Either input empty yields []. No mutation.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1964.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1964
+node js-more/verify.cjs --starters --id=1964
+
+POLICIES
+modulus=5; trim=true
+Semantic key: {"modulus":5,"trim":true}

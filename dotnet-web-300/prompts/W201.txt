@@ -1,0 +1,12 @@
+W201 — Endpoint route metadata
+Scenario 1/10: GET /catalog1/{id:int}; name catalog-1
+
+Construct a RouteEndpoint with pattern /catalog1/{id:int}, order0, DisplayNamecatalog-1, GET-only HttpMethodMetadata and unique EndpointNameMetadatacatalog-1; no authorization metadata in this public endpoint. Request delegate completes without modifying response. This tests metadata construction only, not route matching. Example metadata.HttpMethods == [GET].
+
+Signature: public static RouteEndpoint Build()
+
+Edit starters/W201.cs. Run node dotnet-web-300/verify.cjs --starters --id=W201 from unionboot.
+Reference: solutions/W201.cs; shared checks: tests/W201.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

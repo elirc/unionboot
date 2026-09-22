@@ -1,0 +1,48 @@
+ASP.NET Core Web More: W301..W600
+300 exercises, 30 new families, 10 observable policy/data/boundary scenarios each.
+
+Requires installed .NET 10 SDK and shared ASP.NET Core reference pack. No packages or network.
+One project compiles solutions XOR starters; no duplicate classes. All 300 compile even with --id.
+Run sequentially because bin/obj are shared.
+
+node verify.cjs --inventory
+node verify.cjs --id=W301
+node verify.cjs --starters --id=301
+node verify.cjs                 (full solutions, coordinator only during authoring)
+node verify.cjs --starters      (full starters, coordinator only during authoring)
+
+Exit 0 = passed; 1 = grading failure; 2 = usage/build failure.
+Blank starters compile then throw NotImplementedException. Each test fragment has its own lexical block.
+verification-solution.json / verification-starter.json and per-ID variants include phase/groups/results/buildPassed.
+Generator refuses an existing output directory to preserve learner work.
+
+W301..W310 Rate limiting partition counters
+W311..W320 Endpoint filter pipelines
+W321..W330 Custom IResult implementations
+W331..W340 ProblemDetails customization
+W341..W350 IFormFile in-memory binding
+W351..W360 LinkGenerator path resolution
+W361..W370 IRouteConstraint evaluation
+W371..W380 CORS policy evaluation
+W381..W390 HMAC webhook signatures
+W391..W400 Cursor pagination
+W401..W410 If-Match ETag concurrency
+W411..W420 Output cache policy objects
+W421..W430 Channel worker contracts
+W431..W440 Hosted service lifecycle
+W441..W450 Captured ILogger assertions
+W451..W460 Options post-configure validation
+W461..W470 Media type segment versioning
+W471..W480 Sparse fieldset projection
+W481..W490 Exception handler status mapping
+W491..W500 Static-like content type mapping
+W501..W510 WebSocket handshake stub features
+W511..W520 Form-file size gates
+W521..W530 Header propagation policies
+W531..W540 Request culture injected providers
+W541..W550 Health-check aggregation
+W551..W560 Compile-time endpoint metadata reflection
+W561..W570 Typed route groups and delegate contracts
+W571..W580 Response compression decision logic
+W581..W590 Multipart section counting through ReadFormAsync
+W591..W600 Idempotent PATCH merge semantics

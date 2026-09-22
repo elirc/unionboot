@@ -1,0 +1,40 @@
+Q242 — family Partial expression and composite index contracts, scenario 2: tenant-scoped-active-unique
+
+Task
+Create unique partial index on tenant,lower(email) for active rows; same email in different tenant is allowed. Insert active ADA@X in tenant20 and return active ids.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE users(id INTEGER PRIMARY KEY,email TEXT,active INTEGER,tenant INTEGER);INSERT INTO users VALUES(1,'Ada@x',1,10),(2,'ada@x',0,10),(3,'Bo@x',1,20);
+
+Concrete example
+The first result row on this seed is {"id":1}.
+
+Expected shape
+Columns: id. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1
+  },
+  {
+    "id": 3
+  },
+  {
+    "id": 4
+  }
+]
+
+Post-result integrity assertions:
+[
+  {
+    "sql": "INSERT INTO users VALUES(5,'ada@x',1,10)",
+    "reject": "UNIQUE"
+  }
+]
+
+Submission
+Write SQL in starters/Q242.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q242
+Learner: node sql-more/verify.cjs --starters --id=Q242

@@ -1,0 +1,16 @@
+{
+  "phase": "tests",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "assertions": 8,
+  "results": [
+    {
+      "id": "W311",
+      "family": "Endpoint filter pipelines",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 8
+    }
+  ]
+}

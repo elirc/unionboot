@@ -1,0 +1,18 @@
+Precedence expression parsing / scenario 9 — precedence=standard; power=right; unaryPlus=false; offset=1
+
+TASK
+Parse ASCII numeric expressions with parentheses, + - * / ^ and whitespace. * / bind above + -. ^ always highest binary precedence and right-associative. Unary minus binds tighter than ^; unary plus invalid. No eval/Function. Invalid syntax, division by zero, nonfinite results throw SyntaxError('Invalid expression'). Return computed result plus1 (calibrated result policy). Normalize -0.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1867.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1867
+node js-more/verify.cjs --starters --id=1867
+
+POLICIES
+precedence=standard; power=right; unaryPlus=false; offset=1
+Semantic key: {"offset":1,"power":"right","precedence":"standard","unaryPlus":false}

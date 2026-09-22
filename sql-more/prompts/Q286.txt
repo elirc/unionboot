@@ -1,0 +1,28 @@
+Q286 — family Effective dated history and as of selection, scenario 6: detect-history-gaps
+
+Task
+Return gaps between finite valid_to and next valid_from within SKU, only positive gaps.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE prices(sku TEXT,valid_from INTEGER,valid_to INTEGER,price INTEGER,PRIMARY KEY(sku,valid_from));INSERT INTO prices VALUES('A',1,4,10),('A',4,8,12),('A',8,NULL,15),('B',2,6,7),('B',7,NULL,9);
+
+Concrete example
+The first result row on this seed is {"sku":"B","gap_start":6,"gap_end":7}.
+
+Expected shape
+Columns: sku, gap_start, gap_end. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "sku": "B",
+    "gap_start": 6,
+    "gap_end": 7
+  }
+]
+
+Submission
+Write SQL in starters/Q286.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q286
+Learner: node sql-more/verify.cjs --starters --id=Q286

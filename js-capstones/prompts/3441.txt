@@ -1,0 +1,3 @@
+3441 — Produce a deterministic JSON Pointer diff
+
+Implement solve(before, after) for JSON values. Return operations {op:"add"|"remove"|"replace",path,value?}. Root path is the empty string. Recursively compare plain objects, visiting the sorted union of own keys. Missing keys yield add/remove; remove has no value property. Arrays are atomic: emit one replace only if their JSON structures differ (object key insertion order is irrelevant). Scalar/type changes emit replace; equal structures emit nothing. Escape pointer segments by replacing ~ with ~0 and / with ~1. Every emitted value must be deeply cloned, not aliased to either input. Example {"a/b":1} -> {"a/b":2} yields [{op:"replace",path:"/a~1b",value:2}]. No input mutation.

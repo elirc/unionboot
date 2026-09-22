@@ -1,0 +1,12 @@
+W117 — Form body handling
+Scenario 7/10: Urlencoded nickname max 14
+
+Use ReadFormAsync (not manual split) for form requests. Unsupported media type->415. nickname must have exactly one nonblank value; trim and enforce <=14 UTF-16 units. Invalid->400, valid->200 {nickname}. Example nickname=Ada+L ->"Ada L". Tests use real urlencoded body; malformed multipart is outside scope.
+
+Signature: public static async Task<IResult> Handle(HttpRequest request)
+
+Edit starters/W117.cs. Run node dotnet-web-300/verify.cjs --starters --id=W117 from unionboot.
+Reference: solutions/W117.cs; shared checks: tests/W117.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

@@ -1,0 +1,18 @@
+Permission request lifecycle / scenario 18 — Boundary 8; request permission from prompt state
+
+TASK
+Query injected permissions.query('capability-8') returning {state,subscribe}. Output Permission prompt/granted/denied/requesting/error. Subscription changes update current state. Request button enabled only in prompt or error, calls permissions.request(name) promise; disable while pending; resolution granted/denied, rejection error. Use button only while granted, increments Uses output. External subscription change invalidates a pending request; stale completions must not override it. Clean up on unmount.
+
+EXAMPLE
+Subscription granted => Use enabled; denied => disabled.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3196.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{permissions}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3196
+node react-next/verify.cjs --starters --id=3196

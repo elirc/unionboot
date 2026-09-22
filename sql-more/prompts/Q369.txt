@@ -1,0 +1,27 @@
+Q369 — family Inventory valuation and stock flow policies, scenario 9: weighted-average-cost-consume
+
+Task
+Using priced only: buy10 at2, buy5 at4, then consume7. Compute remaining units and pooled weighted-average cost, rounded to two decimals; not FIFO.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);CREATE TABLE priced(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,unit_cost INTEGER);INSERT INTO priced VALUES(1,'A',10,2),(2,'A',5,4),(3,'A',-7,NULL);
+
+Concrete example
+The first result row on this seed is {"units":8,"unit_cost":2.67}.
+
+Expected shape
+Columns: units, unit_cost. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "units": 8,
+    "unit_cost": 2.67
+  }
+]
+
+Submission
+Write SQL in starters/Q369.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q369
+Learner: node sql-more/verify.cjs --starters --id=Q369

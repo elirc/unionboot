@@ -1,0 +1,14 @@
+2241: Fixed-width binary-word decoding / binary-width=3
+
+Contract focus: recursive template validation; intersection input constraints.
+
+Decode an unsigned binary literal of exactly 3 bits. Recursive template validation must reject wrong characters and wrong width, not enumerate 2^width strings. Widened strings must be validated elsewhere. JavaScript callers get Invalid binary word on invalid input.
+
+Semantic variation 3/15: binary-width=3. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2241.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2241.cjs. Type contracts: types/2241.positive.ts and types/2241.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2241
+Reference: node ts-next/verify.cjs --id=2241

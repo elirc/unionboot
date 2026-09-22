@@ -1,0 +1,8 @@
+W355 | LinkGenerator path resolution
+Scenario 5: Named files link under version 5
+Semantic key: named-files-link-under-version-5
+
+Use real LinkGenerator.GetPathByName for endpoint files, supply id and path base /v5. Do not manually concatenate the generated route. Unresolved endpoint ->null.
+
+Signature: public static string? Resolve(LinkGenerator generator,int id)
+Implement starters/W355.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

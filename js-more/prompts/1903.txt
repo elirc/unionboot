@@ -1,0 +1,18 @@
+Bloom membership bitsets / scenario 5 — bits=17; hashes=2
+
+TASK
+Input add/has operations {type,value}, ASCII strings. Start zero bitset length17. Hash a starts0, update (a*31+charCode)%m; b starts0, update (b*17+charCode+1)%m. 2 positions (a+i*(b||1))%m, i starts0. Add sets bits; has true iff all set (false positives intentional). Return {answers,bits} as bit string index0 first. No deletion. Unknown type throws Error.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1903.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1903
+node js-more/verify.cjs --starters --id=1903
+
+POLICIES
+bits=17; hashes=2
+Semantic key: {"bits":17,"hashes":2}

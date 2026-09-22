@@ -1,0 +1,6 @@
+const assert=require('node:assert/strict');module.exports=solve=>{
+{const input=[{"id":"a","amount":5,"status":"open","team":"red"},{"id":"b","amount":15,"status":"closed","team":"blue"},{"id":"c","amount":25,"status":"open","team":"red"},{"id":"d","amount":35,"status":"closed","team":"blue"},{"id":"e","amount":45,"status":"open","team":"red"}];const before=structuredClone(input);assert.deepEqual(solve(input),[]);assert.deepEqual(input,before,'Input must not mutate');}
+{const input=[];const before=structuredClone(input);assert.deepEqual(solve(input),[]);assert.deepEqual(input,before,'Input must not mutate');}
+{const input=[{"id":"z","amount":20,"status":"open","team":"solo"}];const before=structuredClone(input);assert.deepEqual(solve(input),[]);assert.deepEqual(input,before,'Input must not mutate');}
+{const input=[{"id":"e","amount":45,"status":"open","team":"red"},{"id":"d","amount":35,"status":"closed","team":"blue"},{"id":"c","amount":25,"status":"open","team":"red"},{"id":"b","amount":15,"status":"closed","team":"blue"},{"id":"a","amount":5,"status":"open","team":"red"}];const before=structuredClone(input);assert.deepEqual(solve(input),[]);assert.deepEqual(input,before,'Input must not mutate');}
+};

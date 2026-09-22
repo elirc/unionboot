@@ -1,0 +1,32 @@
+Q143 — family Transactions savepoints and atomic state, scenario 3: savepoint-discard-inner-changes
+
+Task
+Begin; subtract 10 from account 1; set savepoint optional; add 99 to account 2; roll back to optional and release it; commit. Return balances.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE accounts(id INTEGER PRIMARY KEY,balance INTEGER NOT NULL CHECK(balance>=0));
+INSERT INTO accounts VALUES(1,100),(2,50);
+CREATE TABLE audit(id INTEGER PRIMARY KEY,note TEXT);
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"balance":90}.
+
+Expected shape
+Columns (exact aliases): id, balance. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "balance": 90
+  },
+  {
+    "id": 2,
+    "balance": 50
+  }
+]
+
+Submission
+Edit starters/Q143.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q143
+Reference: node sql-200/verify.cjs --id=Q143

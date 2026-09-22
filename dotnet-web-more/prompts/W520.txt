@@ -1,0 +1,8 @@
+W520 | Form-file size gates
+Scenario 10: Batch upload each 40 bytes count 1
+Semantic key: batch-upload-each-40-bytes-count-1
+
+Metadata-only upload batch gate: no files ->400; above 1 files or any file above 40 bytes ->413. Exactly at boundaries allowed. Do not read file streams. Return 200 {count,total}. Unlike binding exercises, this contract gates a whole collection before content processing.
+
+Signature: public static IResult Gate(IFormFileCollection files)
+Implement starters/W520.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

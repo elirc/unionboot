@@ -1,0 +1,14 @@
+2540: Explicit-this record methods / this-receiver-fields=count
+
+Contract focus: this parameters; call binding; receiver constraints.
+
+Return a method requiring an explicit receiver with count. Format prefix plus receiver values in declaration order, joined by | with String conversion. The function must use call-time this, not a captured object. Unbound calls are statically invalid.
+
+Semantic variation 2/15: this-receiver-fields=count. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2540.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2540.cjs. Type contracts: types/2540.positive.ts and types/2540.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2540
+Reference: node ts-next/verify.cjs --id=2540

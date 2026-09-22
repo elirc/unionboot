@@ -1,0 +1,15 @@
+1123: Minimum nonempty tuple / scenario 10
+
+Contract focus: nonempty tuples; generic comparison; safe indexing.
+Return the smallest element of a statically nonempty tuple according to compare. Keep the first on ties and preserve its reference. Empty arrays must be rejected by the compiler; do not add an undefined return for impossible typed emptiness.
+
+This is scenario 10/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize sparse magnitudes; scalar/state exercises use deterministic case seed 9. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1123.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1123.cjs. Positive strict fixtures: types/1123.positive.ts. Negative strict fixtures: types/1123.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=1123
+Reference check:
+  node ts-more/verify.cjs --id=1123
+

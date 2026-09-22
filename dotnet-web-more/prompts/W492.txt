@@ -1,0 +1,8 @@
+W492 | Static-like content type mapping
+Scenario 2: Custom mapping .note to text/plain
+Semantic key: custom-mapping-note-to-text-plain
+
+Use FileExtensionContentTypeProvider, add/override .note=text/plain, retain framework mappings. Unknown extension ->application/octet-stream. No file access. Extension lookup should be case-insensitive.
+
+Signature: public static string Map(string path)
+Implement starters/W492.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

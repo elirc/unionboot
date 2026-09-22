@@ -1,0 +1,18 @@
+Object URL preview ownership / scenario 4 — Boundary 4; retain last preview when blob absent
+
+TASK
+Create preview object URL for blob prop with injected urlAPI, in an effect not render. Output URL string. Replacing blob revokes previous URL exactly once and creates next. When blob absent retain previous URL and keep it owned until next blob or unmount. Unmount revokes currently owned URL. Never revoke URLs that were not created here. Tests use blob size 4 as initial data.
+
+EXAMPLE
+blob A then B => blob:local-1 revoked; current blob:local-2.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3362.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{blob,urlAPI}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3362
+node react-next/verify.cjs --starters --id=3362

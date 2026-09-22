@@ -1,0 +1,32 @@
+[
+  {
+    "id": 3439,
+    "tech": "js",
+    "family": "Three-way document merge",
+    "title": "Merge independent flat-document edits",
+    "prompt": "prompts/3439.txt",
+    "starter": "starters/3439.cjs",
+    "solution": "solutions/3439.cjs",
+    "test": "tests/3439.cjs"
+  },
+  {
+    "id": 3440,
+    "tech": "js",
+    "family": "Revision event replay",
+    "title": "Replay idempotent ordered account events",
+    "prompt": "prompts/3440.txt",
+    "starter": "starters/3440.cjs",
+    "solution": "solutions/3440.cjs",
+    "test": "tests/3440.cjs"
+  },
+  {
+    "id": 3441,
+    "tech": "js",
+    "family": "Structural JSON change log",
+    "title": "Produce a deterministic JSON Pointer diff",
+    "prompt": "prompts/3441.txt",
+    "starter": "starters/3441.cjs",
+    "solution": "solutions/3441.cjs",
+    "test": "tests/3441.cjs"
+  }
+]

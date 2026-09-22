@@ -1,0 +1,15 @@
+1161: Nullish fallback without falsy loss / scenario 03
+
+Contract focus: generic inference; nullish unions; NoInfer.
+Use fallback only when value is null or undefined. Preserve false, zero, empty string and NaN. The fallback must match the explicitly supplied/inferred T rather than broadening it. Pass a type argument when the only value available is null.
+
+This is scenario 3/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize ordered positives; scalar/state exercises use deterministic case seed 2. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1161.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1161.cjs. Positive strict fixtures: types/1161.positive.ts. Negative strict fixtures: types/1161.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=1161
+Reference check:
+  node ts-more/verify.cjs --id=1161
+

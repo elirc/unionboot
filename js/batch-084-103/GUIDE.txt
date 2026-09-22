@@ -1,0 +1,93 @@
+UNIONBOOT: JAVASCRIPT 084–103
+
+20 distinct intermediate exercises. Node 22, no dependencies.
+
+From Desktop/unionboot:
+  node js/batch-084-103/verify.cjs
+  node js/batch-084-103/verify.cjs --starters --id=84
+
+Edit only starters/ while practising. Tests/ contains worked input/output examples
+and edge cases. Solutions/ contains complete reference implementations.
+The same checks grade starter and solution exports; blank starters fail by design.
+Reference verification checks syntax of all three files and then executes assertions.
+Do not rerun the generator over this folder: it refuses to overwrite your work.
+
+84 Group consecutive equal values
+  Return arrays of consecutive equal primitive values using Object.is equality. Do not merge separated runs or mutate the input. Empty input returns [].
+  Hint: Compare each value with the last value of the current run, not a global lookup.
+
+85 Zip uneven arrays
+  Return pairs through the longer dense array. Fill missing positions with fill (default null). Preserve actual undefined entries. Do not mutate either input.
+  Hint: Use index bounds rather than nullish coalescing to detect missing entries.
+
+86 Partition with callback indices
+  Return [matches, others], preserving input order. Call predicate(value,index) exactly once per item. Input is a dense array; do not mutate it.
+  Hint: One loop and two result arrays avoid evaluating the predicate twice.
+
+87 Rolling fixed-window sums
+  Return the sum of every contiguous window of size k over finite numbers. k must be a positive integer or throw RangeError. k larger than input length returns []. Target O(n).
+  Hint: Add the entering value and subtract the departing value.
+
+88 Build a range-sum query function
+  Return query(start,end) summing nums[start..end), in O(1) per query after O(n) setup. Reject noninteger indices or bounds outside 0 <= start <= end <= length with RangeError. Capture a snapshot, not later input mutations.
+  Hint: A prefix array with an initial zero makes empty ranges natural.
+
+89 First valid insertion index
+  For a sorted ascending array of finite numbers, return the first index whose value is >= target; return length if none. Duplicates must return their first position. O(log n), no mutation.
+  Hint: Keep a half-open search interval [lo,hi).
+
+90 Compact sorted duplicates in place
+  Given a sorted dense array of finite numbers, remove duplicate values in place, truncate its length, and return the new length. Use O(1) extra space. Empty input stays empty.
+  Hint: A write pointer advances only for a value unlike the previous retained value.
+
+91 Decode explicit run records
+  Input is an array of [text,count] pairs. Text must be a string, count a nonnegative safe integer, otherwise throw TypeError. Return their repeated concatenation. Before allocating output, reject a total UTF-16 length over maxLength (default 10000) with RangeError. maxLength must be a nonnegative safe integer.
+  Hint: Validate the complete output length first, then allocate repetitions.
+
+92 Escape literal regex input
+  Return a string that can be passed to new RegExp to match the input literally. Escape regular-expression metacharacters, including backslash. No regex flags are needed; slash is not special in the constructor.
+  Hint: Iterating characters makes the escape list explicit.
+
+93 Normalize an absolute virtual path
+  Accept a string beginning with / or throw TypeError. Collapse repeated / and dot segments; .. removes one component but cannot go above root. Remove trailing slash except for root. No filesystem access, URL decoding, or backslash interpretation.
+  Hint: Process segments using a stack; this is a virtual POSIX path only.
+
+94 Compare numeric version components
+  Accept nonempty dot-separated digit components, otherwise throw TypeError. Return -1, 0, or 1. Ignore leading zeros and trailing zero components. Components can exceed Number precision; no prerelease/build notation.
+  Hint: BigInt avoids rounding version components.
+
+95 Bezout coefficients with BigInt
+  Given nonnegative BigInts a,b, return {gcd,x,y} with a*x+b*y=gcd. gcd must be nonnegative. For (0n,0n), use {gcd:0n,x:1n,y:0n}. Coefficients are not otherwise unique.
+  Hint: Track coefficient pairs alongside Euclidean remainders.
+
+96 Normalize a rational number
+  Given BigInt numerator and denominator, return [numerator,denominator] reduced to lowest terms, with positive denominator. Zero normalizes to [0n,1n]. A zero denominator throws RangeError.
+  Hint: Normalize the sign, then divide both values by their greatest common divisor.
+
+97 Encode BigInt without toString(radix)
+  Return the base-2-through-36 lowercase representation of a nonnegative BigInt. Reject invalid bases with RangeError and negative values with RangeError. Do not use toString(radix). Zero returns "0".
+  Hint: Collect remainder digits in reverse order.
+
+98 Transpose a rectangular matrix
+  Return a fresh transpose of a dense rectangular array of rows; [] and rows with zero columns return []. Throw RangeError for unequal row lengths. Do not mutate input rows. Cell objects retain identity.
+  Hint: The result has one row per original column.
+
+99 Walk a matrix clockwise
+  Return rectangular matrix values in clockwise spiral order starting at top-left. Empty rows/matrix return []. Inputs are rectangular; do not mutate them. Handle single rows and columns without duplicates.
+  Hint: Shrink top, bottom, left and right boundaries; guard the last two edges.
+
+100 Length of a strictly increasing subsequence
+  Return the longest strictly increasing subsequence length of finite numbers (not necessarily contiguous). Equal values do not extend a sequence. Empty input returns 0. Target O(n log n).
+  Hint: Track the smallest possible tail for each subsequence length using lower-bound search.
+
+101 Levenshtein edit distance
+  For ASCII strings, return the minimum number of single-character insertions, deletions and substitutions to change a into b. Each costs 1. Use a rolling DP row rather than storing the full matrix.
+  Hint: Save the old diagonal before overwriting each DP cell.
+
+102 Fixed-size combinations reaching a target
+  Given distinct integers in input order, a nonnegative integer k and integer target, return all k-element combinations whose sum equals target. Use each position at most once; keep index order within combinations and lexicographic index order across results. Negative values are allowed. k=0,target=0 returns [[]].
+  Hint: Backtrack with a start index; do not prune solely because a partial sum exceeds the target.
+
+103 Breadth-first reachable labels
+  A directed graph is a Map<label,label[]> of string labels. Return all labels reachable from start in BFS discovery order, including start. Missing keys are leaves; duplicate edges and cycles must not duplicate results. Do not mutate graph arrays.
+  Hint: Mark visited when enqueueing, not when dequeueing. Use a queue index rather than shift.

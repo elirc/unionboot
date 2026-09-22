@@ -1,0 +1,1 @@
+SELECT team,SUM(CASE WHEN status='open' THEN COALESCE(hours,0) ELSE 0 END) AS open_hours,SUM(CASE WHEN status='closed' THEN COALESCE(hours,0) ELSE 0 END) AS closed_hours FROM tickets GROUP BY team ORDER BY team;

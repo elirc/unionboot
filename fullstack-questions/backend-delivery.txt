@@ -1,0 +1,1042 @@
+BACKEND AND DELIVERY ENGINEERING
+260 self-study questions with reference answers; not executable exercises.
+
+FS261 | API resource design and contracts | junior
+Q: An order API accepts one POST /doEverything request for creation, cancellation, and address changes. How would you improve its contract?
+A: Model operations around an order resource and its lifecycle. Define separate creation, address update, and cancellation operations with explicit eligibility rules. Choose HTTP methods by their semantics. Document request fields, response shapes, status codes, and repeated-request behavior. Keep state transitions in the service layer so another transport cannot bypass the same business rules.
+
+FS262 | API resource design and contracts | junior
+Q: A client requests a new customer record. When should the API return 201, 202, or 200?
+A: Return 201 when creation has completed, normally including the resource representation or its location. Return 202 when work has only been accepted and provide a way to inspect its eventual outcome. Use 200 for successful operations such as queries or updates returning content. Asynchronous language features inside a handler do not themselves justify 202.
+
+FS263 | API resource design and contracts | junior
+Q: A PATCH request omits phoneNumber while another explicitly sends null. What should the contract specify?
+A: Define omission as leaving the field unchanged and null as clearing it only if clearing is permitted. Use a patch-specific schema rather than treating the request as a complete replacement. If using JSON Merge Patch, follow its null-removal semantics. Test omitted, null, empty-string, and valid-value cases so serializers cannot silently change the intended meaning.
+
+FS264 | API resource design and contracts | mid
+Q: A public API must rename customerName to displayName without immediately breaking consumers. What rollout would you suggest?
+A: Introduce the new field while retaining the old one during an announced transition. Define write behavior when both appear; reject contradictory values rather than guessing. Update schemas and examples, measure adoption, and communicate a deadline. Remove the old field through the agreed breaking-change mechanism. Even additive changes need review when consumers reject unknown fields.
+
+FS265 | API resource design and contracts | mid
+Q: Why can offset pagination repeat or skip orders during a busy day, and what alternative would you offer?
+A: Concurrent inserts and deletions shift row positions between requests. Cursor pagination instead continues after a stable ordering tuple such as createdAt and id. Include a unique tie-breaker, bound page sizes, and bind the cursor to its ordering context. This improves traversal stability but does not automatically provide a frozen snapshot of changing records.
+
+FS266 | API resource design and contracts | junior
+Q: A search endpoint supports many filters and sort fields. How do you keep its contract predictable?
+A: Publish allowed filters, operators, and sort keys with clear defaults and limits. Specify how multiple filters combine and how empty values behave. Map public names to predefined query expressions instead of exposing arbitrary database expressions. Return consistent errors for unsupported combinations. Add a stable tie-breaker to ordering so pagination does not depend on accidental row order.
+
+FS267 | API resource design and contracts | mid
+Q: A bulk update of 100 products finds three invalid entries. Should the other 97 be updated?
+A: Either atomic processing or partial success can be valid, but the contract must choose explicitly. Atomic processing suits shared invariants. Partial success needs an outcome for every item, stable correlation identifiers, and clear retry rules. Limit batch size before processing. A single success flag must not conceal partial failure or encourage retries of already-completed changes.
+
+FS268 | API resource design and contracts | junior
+Q: An invoice-generation operation takes two minutes. How should clients discover whether it completed?
+A: Create a durable job resource and return 202 with its status location. Expose queued, running, succeeded, and failed states, plus a result link when available. Provide reasonable polling guidance and define cancellation and retention. Progress must survive the original connection ending; an HTTP timeout cannot be the only record of the operation's outcome.
+
+FS269 | API resource design and contracts | junior
+Q: Should a product endpoint expose its database entity directly to avoid mapping code?
+A: Usually prefer an explicit response model. Entities may contain internal fields, persistence relationships, or columns that evolve independently of the public contract. Response models make supported fields intentional and reduce accidental disclosure and over-fetching. Mapping costs some maintenance, but separates schema changes from consumer compatibility. Keep the mapping straightforward rather than introducing an elaborate framework.
+
+FS270 | API resource design and contracts | mid
+Q: An API schema is generated from application types. What contract problems can still remain?
+A: Generated types describe shapes but may omit lifecycle rules, null meanings, ordering guarantees, side effects, and retry behavior. Runtime validation can also differ from generated documentation. Add semantic descriptions, examples, and contract checks for important responses. Review schema changes during code review. A syntactically valid specification does not prove that an API is usable or backward compatible.
+
+FS271 | Validation and error semantics | junior
+Q: A request sends quantity as the string 'three'. Where should it fail?
+A: Reject the malformed type at the request boundary before business processing. Return the documented validation status, commonly 400 or 422, with a stable error code and field path. Explain the expected type without unnecessarily repeating input. Domain validation must still check rules such as available stock after the request has a valid shape.
+
+FS272 | Validation and error semantics | junior
+Q: A booking contains valid dates but ends before it starts. Is type validation enough?
+A: Parsing confirms individual values, not their relationship. Apply cross-field validation after normalization and specify whether equal endpoints are allowed. Then evaluate domain rules such as operating hours and availability. Keep the failure reasons distinguishable. Availability can change concurrently, so race-sensitive invariants must also be enforced when committing the booking rather than only during initial validation.
+
+FS273 | Validation and error semantics | mid
+Q: Two registrations simultaneously claim the same normalized email. Why is checking availability first insufficient?
+A: Both requests can observe availability before either inserts. Enforce uniqueness in the database using the same normalization policy as the application. Translate the constraint violation into a documented response instead of exposing a database exception. A preliminary lookup improves feedback but cannot close the race. Consider account-discovery privacy before making registration errors highly specific.
+
+FS274 | Validation and error semantics | junior
+Q: Why might automatically trimming every input string corrupt valid data?
+A: Some fields intentionally preserve whitespace, and credentials should not be silently rewritten without a defined policy. Normalize according to field semantics: trim a display label if appropriate, preserve document content, and define canonical lookup keys. Check lengths after applicable normalization. A universal transformation can make stored values differ unexpectedly from the user's intended input.
+
+FS275 | Validation and error semantics | mid
+Q: An API accepts an unknown property named shippingAdress without error. Should unknown request fields always be ignored?
+A: Choose a documented policy rather than silently relying on deserializer defaults. Rejecting unknown write fields catches misspellings and unsupported options, but may reduce compatibility with newer clients. Ignoring them suits deliberately extensible contracts when omitted behavior is safe. Never automatically map every supplied property into persisted entities. Test unknown fields and distinguish request strictness from response extensibility.
+
+FS276 | Validation and error semantics | junior
+Q: A controller catches every exception and returns 400. What goes wrong?
+A: Server defects and dependency outages become mislabeled as client mistakes, damaging monitoring and prompting useless input changes. Handle expected domain failures explicitly. A centralized handler should sanitize unexpected errors and log diagnostics with correlation identifiers. Distinguish malformed input, missing resources, conflicts, and internal failures so clients and operators can respond appropriately without depending on exception text.
+
+FS277 | Validation and error semantics | mid
+Q: Can a default safely replace a newly required field that older clients omit?
+A: Only when the default has legitimate backward-compatible business meaning. Inventing a value can silently create incorrect records even though requests succeed. Prefer introducing the field as optional, measuring adoption, and migrating consumers before enforcement. Document server-assigned values versus absence. Test older payloads against the new service rather than inferring compatibility from application types alone.
+
+FS278 | Validation and error semantics | junior
+Q: A monetary request contains 19.999 for a two-decimal currency. What should happen?
+A: Explicitly reject excess precision or round using a documented rule. Do not let binary floating-point conversion make the decision accidentally. Use exact decimals or specified minor units together with currency. Validate range and sign for the operation. Separate calculation precision from settlement precision where necessary, and test rounding ties because inconsistent rules cause reconciliation differences.
+
+FS279 | Validation and error semantics | mid
+Q: How should a large nested import report many validation errors without overwhelming the service?
+A: Bound document size, nesting, item count, and returned errors. Include paths such as items[4].price so callers can locate failures. Return enough errors to support useful correction and indicate truncation. Avoid repeated expensive external lookups during structural validation. Particularly large imports may need asynchronous validation and a downloadable report rather than an enormous synchronous response.
+
+FS280 | Validation and error semantics | junior
+Q: Should public error responses include SQL messages, stack traces, and the original request?
+A: No. Return a stable code, concise explanation, appropriate field details, and a correlation identifier. Keep diagnostics in access-controlled logs with redaction and retention. Requests may contain personal data or credentials, and internal exceptions reveal implementation details. Separate client correction information from operational debugging so improving observability does not accidentally broaden sensitive-data exposure.
+
+FS281 | Authentication and session lifecycle | junior
+Q: What should a service store when supporting password-based authentication?
+A: Use a vetted password-hashing library with a password-specific algorithm such as Argon2id and an appropriate work configuration. Store its hash and parameters; libraries normally manage unique salts. Never invent a custom scheme. Support rehashing older configurations after successful sign-in. Protect backups and transport too, because secure password storage does not secure every place credentials pass through.
+
+FS282 | Authentication and session lifecycle | mid
+Q: A user signs out but an earlier access token still works. Is that always a bug?
+A: It depends on the session contract. Self-contained tokens may remain valid until expiry unless verification includes revocation or session-state checks. Sign-out should invalidate refresh capability, but immediate access-token revocation requires additional enforcement. Choose lifetimes and revocation strength according to sensitivity. Deleting a local token does not invalidate every existing copy held elsewhere.
+
+FS283 | Authentication and session lifecycle | junior
+Q: What must a backend verify before trusting an identity provider's access token?
+A: Use a maintained library to verify the signature, allowed algorithm, issuer, audience, and relevant time claims under configured trust settings. A valid signature alone does not make a token intended for this service. Support documented signing-key rotation. Extract identity only after verification and still authorize the requested action. Decoding a token is not authentication.
+
+FS284 | Authentication and session lifecycle | mid
+Q: How can password-reset emails avoid becoming reusable account access mechanisms?
+A: Issue high-entropy, short-lived, single-use tokens bound to an account and reset purpose. Store a protected token representation where practical and consume it atomically with the password change. Keep reset-request responses consistent to limit account discovery. Define session invalidation and owner notifications. Exclude reset tokens from routine logs, analytics, and support screenshots.
+
+FS285 | Authentication and session lifecycle | junior
+Q: After scaling to three instances, users randomly appear signed out. Sessions are stored in memory. Why?
+A: Requests reach instances that lack the session created elsewhere. Use a shared session store or an intentionally designed token model with explicit expiration and revocation rules. Sticky routing may reduce symptoms but does not solve restarts or failover. Treat shared storage as a dependency with defined failure handling, never interpreting its unavailability as successful authentication.
+
+FS286 | Authentication and session lifecycle | mid
+Q: What principles should guide recovery after a user loses their second authentication factor?
+A: Recovery should not become a weak bypass of normal authentication. Offer protected, single-use recovery codes or a reviewed verification process with rate limits and audit events. Notify the owner when factors change and invalidate consumed recovery material. Sensitive accounts may need additional review or delay. Personal trivia alone is poor evidence of account ownership.
+
+FS287 | Authentication and session lifecycle | mid
+Q: Why require recent authentication before changing payout details if the current session remains valid?
+A: A valid session proves an earlier authentication event, not necessarily present control by the owner. Require recent authentication or step-up verification for high-impact changes, and bind confirmation to the intended operation where feasible. Record and notify about the change. This supplements authorization rather than replacing it. Document the freshness window for predictable client handling.
+
+FS288 | Authentication and session lifecycle | junior
+Q: Should a background worker call internal services using an employee's personal token?
+A: Use a dedicated workload identity or service account with narrow permissions and managed credential rotation. Personal credentials introduce ambiguous ownership and outages when an employee leaves. Prefer short-lived credentials where supported. Audit calls as the workload while retaining initiating-user context separately when needed. Internal network placement alone should not establish trust or permission.
+
+FS289 | Authentication and session lifecycle | mid
+Q: How can sign-in rate limiting protect accounts without permanently excluding legitimate users?
+A: Combine account and request-origin signals with temporary restrictions, bounded delays, and recovery paths. Monitor false positives and use shared enforcement across instances. Keep responses sufficiently consistent to limit account discovery. Rate limiting is one defensive layer, not a replacement for password hashing or stronger authentication. Permanent lockouts triggered by anonymous failures can themselves harm users.
+
+FS290 | Authentication and session lifecycle | mid
+Q: An identity provider is unavailable. Must existing sessions fail exactly like new sign-ins?
+A: Not necessarily. Existing sessions can continue under their validated policy while new sign-ins depend on the provider. Locally verifiable tokens may remain usable with trusted keys until normal expiry. Do not indefinitely extend expiry or bypass verification for availability. Define timeouts and recovery behavior beforehand; sensitive operations may require stronger freshness than ordinary reads.
+
+FS291 | Authorization and tenant boundaries | junior
+Q: An authenticated request asks for invoice 42. What else must the service check?
+A: Verify permission to read that particular invoice within the caller's tenant and context. Prefer queries scoped by both identifier and authorized account, followed by action-specific rules. Authentication does not establish ownership. Choose consistent missing-versus-forbidden behavior based on disclosure policy. Include tests using a valid authenticated user who belongs to another account.
+
+FS292 | Authorization and tenant boundaries | mid
+Q: Managers may approve expenses but not their own. How should the rule be implemented?
+A: Treat role membership as one input to a resource-aware policy that also compares actor and expense owner. Include amount limits and workflow state if required. Centralize the policy across approval paths and recheck relevant conditions at the state transition. Test both permitted approval of another person's expense and prohibited self-approval, rather than only testing role presence.
+
+FS293 | Authorization and tenant boundaries | junior
+Q: Why is tenantId in a request body not sufficient evidence of tenant membership?
+A: The caller controls that value; it identifies a requested target, not authorized access. Derive active tenant context from verified identity and an authorized membership selection. Scope queries and mutations accordingly. Cross-tenant administration requires explicit policy. Composite constraints can additionally prevent cross-tenant relationships, but recording a tenant in logs alone does not enforce isolation.
+
+FS294 | Authorization and tenant boundaries | junior
+Q: Profile readers may see employee names, but only payroll staff may see salary. Where is that enforced?
+A: Use authorized response projections or a separate payroll resource with stricter policy. Never return salary and rely on consumers to hide it. Apply the same rule to exports, search, and nested responses. Exclude sensitive fields from broad default serializers. Test that protected fields are absent because successful status-code assertions alone cannot detect disclosure.
+
+FS295 | Authorization and tenant boundaries | mid
+Q: A user's permission is revoked while their export waits in a queue. Should it still run?
+A: Define whether authorization applies at submission, execution, or both. Sensitive exports typically recheck current permission before execution and download using the initiating user's tenant context. Record a clear denied or cancelled job outcome. Some approved workflows deliberately preserve prior authority, but that exception must be explicit rather than accidentally inheriting the worker's broad access.
+
+FS296 | Authorization and tenant boundaries | mid
+Q: A permission service times out during a protected operation. What is the safe default?
+A: Deny or defer the operation instead of assuming access. Distinguish unavailable authorization infrastructure from a confirmed denial where the contract permits. Cached decisions are acceptable only under an explicit staleness and revocation policy. Monitor failures separately. An availability problem must not silently turn an external dependency failure into unrestricted access to protected resources.
+
+FS297 | Authorization and tenant boundaries | mid
+Q: How should support impersonation differ from logging in with a customer's credentials?
+A: Preserve the support agent's real identity and require an explicit, scoped, expiring impersonation grant. Record the reason, subject account, and actual actor. Restrict sensitive actions and avoid indistinguishable customer sessions. A read-only support view may satisfy the need with less authority. Never share customer credentials as an operational shortcut for investigating account issues.
+
+FS298 | Authorization and tenant boundaries | mid
+Q: What do database row-level policies add to tenant isolation, and what remains the application's responsibility?
+A: They enforce filtering near the data and reduce harm from omitted predicates. Pooled connections must receive and clear tenant context correctly, and privileged workers need deliberate treatment. Such policies do not automatically enforce every business action or field-level rule. Keep application authorization, migrations, and tests aligned with them rather than treating the database as a complete replacement.
+
+FS299 | Authorization and tenant boundaries | junior
+Q: Why test permissions as an action matrix rather than checking role names alone?
+A: Labels such as manager do not specify every permitted action or resource condition. Enumerate create, read, edit, approve, export, and delete decisions across ownership, tenant, and lifecycle state. Cover explicit denials as well as success. This exposes gaps when roles evolve and provides reviewers a concrete business policy instead of assumptions about familiar role names.
+
+FS300 | Authorization and tenant boundaries | junior
+Q: Can random record identifiers replace object-level permission checks?
+A: No. Unpredictability is not authorization. Identifiers can appear in shared links, logs, or previously legitimate access. Every protected operation still needs an action-specific decision for the requested object. Opaque identifiers are useful supporting design choices but cannot enforce ownership. Authorization tests should pass regardless of how easily a record identifier could be discovered.
+
+FS301 | Relational modeling and invariants | junior
+Q: A project can have many members and a person can join many projects. How would you model membership?
+A: Use a membership table referencing project and person, with a unique constraint on the pair. Put relationship attributes such as role, joinedAt, and invitation status on that table. Foreign keys protect references. Avoid comma-separated identifier lists, which make constraints and queries difficult. Decide whether leaving deletes the relationship or records a historical end date.
+
+FS302 | Relational modeling and invariants | junior
+Q: Should an order display the customer's current shipping address or the address used when purchased?
+A: Store an order-specific address snapshot when the order is placed. Keep the customer reference for account relationships, but do not let later profile edits rewrite historical fulfillment facts. Define when the snapshot may still be corrected, such as before dispatch. Historical facts and current reusable preferences serve different purposes even if their initial values match.
+
+FS303 | Relational modeling and invariants | junior
+Q: An optional middleName column contains both null and empty strings. Why might that complicate the model?
+A: Queries and application logic must interpret two representations of absence, and uniqueness or aggregation may behave differently. Choose a canonical meaning: null usually indicates no supplied value, while an empty string is an actual string. Normalize incoming data according to the chosen contract and migrate existing inconsistencies. Do not impose this rule on fields where emptiness has meaningful semantics.
+
+FS304 | Relational modeling and invariants | junior
+Q: A booking must have a positive duration. Should this rule exist only in application code?
+A: Use application validation for useful feedback and a database check constraint where the engine supports the invariant. The constraint protects imports, maintenance scripts, and alternate write paths. Keep both definitions consistent through tests. Constraints involving other rows may need different mechanisms, such as uniqueness, locking, or supported exclusion constraints; a simple row check cannot enforce every booking rule.
+
+FS305 | Relational modeling and invariants | junior
+Q: What tradeoffs arise when choosing a natural key such as email versus a generated customer identifier?
+A: Natural keys express domain meaning but may change, need normalization, or contain personal information. Generated identifiers provide stable references while separate unique constraints enforce business identity. This often simplifies email changes and foreign keys. Generated keys do not eliminate the need for domain uniqueness, and their ordering or size characteristics should suit the chosen database and workload.
+
+FS306 | Relational modeling and invariants | mid
+Q: When is a JSON column appropriate for product attributes, and when is it a warning sign?
+A: It suits variable, sparsely queried attributes with a controlled schema and clear ownership. Frequently filtered, joined, constrained, or independently updated fields often belong in ordinary columns or related tables. JSON support varies across databases, including indexes and validation. Avoid using one document column merely to postpone modeling core relationships, because that transfers integrity work into every reader and writer.
+
+FS307 | Relational modeling and invariants | junior
+Q: Deleting a department currently cascades to all employee records. How would you evaluate that relationship?
+A: Ask whether employees truly cease to exist when a department disappears. Often the intended action is reassignment or restricting deletion until the department is empty. Cascades are appropriate for dependent records with no independent lifecycle, not automatically for every foreign key. Review the whole cascade graph and test realistic deletions before enabling destructive behavior on business entities.
+
+FS308 | Relational modeling and invariants | mid
+Q: A user may have only one active subscription but several cancelled historical subscriptions. How can the database represent that?
+A: Keep subscription history as separate rows and enforce active uniqueness with a filtered or partial unique index where supported. Other engines may need an alternate schema or transactional mechanism. Define exactly which states count as active. Application checks provide feedback, but concurrency-safe enforcement must prevent simultaneous activations. Avoid a unique userId constraint that accidentally forbids all history.
+
+FS309 | Relational modeling and invariants | mid
+Q: A calendar stores recurring meetings for users in several time zones. Is a UTC timestamp enough?
+A: UTC identifies an instant but not necessarily a recurring wall-clock intention. Store the relevant named time zone and recurrence rule alongside occurrence instants or derived schedules. Define behavior for daylight-saving gaps and repeated times. A weekly 9 AM meeting usually follows local clock rules, whereas an event already scheduled at an instant should retain that instant consistently.
+
+FS310 | Relational modeling and invariants | mid
+Q: When would you denormalize a customer's orderCount onto the customer row?
+A: Consider it only after identifying a read requirement that an indexed aggregate cannot satisfy economically. Define how every order lifecycle change updates the count, whether exactness is required, and how to rebuild it. A stored aggregate introduces synchronization work and possible drift. Keep the underlying order records authoritative unless the domain explicitly chooses a different source of truth.
+
+FS311 | SQL query semantics | junior
+Q: A report joins customers to orders but must include customers with no orders. What query shape is needed?
+A: Start with customers and use a left join to orders. Keep restrictions on optional order rows in the join condition when placing them in WHERE would remove unmatched customers. Aggregate carefully: count an order identifier rather than COUNT(*) to avoid counting the preserved customer row as an order. Test a customer with zero orders explicitly.
+
+FS312 | SQL query semantics | mid
+Q: Joining orders to both line items and payments doubles revenue totals. What likely happened?
+A: Two one-to-many joins multiplied rows: each line item paired with each payment for the same order. Aggregate each child relation to one row per order before joining, or calculate independent totals in separate subqueries. DISTINCT is not a reliable repair when equal amounts can be legitimate. Check intermediate row counts to identify where the cardinality expanded.
+
+FS313 | SQL query semantics | mid
+Q: Why can NOT IN return unexpected results when its subquery contains null?
+A: SQL uses three-valued logic. Comparing a value against a set containing null can yield unknown rather than true, causing rows to be excluded by WHERE. Prefer a correlated NOT EXISTS for anti-join intent, or explicitly remove nulls when that matches the model. Understand whether null represents missing data rather than treating it as an ordinary comparable value.
+
+FS314 | SQL query semantics | mid
+Q: How would you select the latest status record for each shipment without losing associated columns?
+A: Rank status rows within each shipment using a window function ordered by event time and a deterministic tie-breaker, then select rank one using a subquery or supported syntax. Taking MAX(timestamp) alongside unrelated columns does not reliably identify one complete row. Define whether latest means recorded time or business-effective time, especially when events can arrive late.
+
+FS315 | SQL query semantics | junior
+Q: A sales report should show daily totals only for days exceeding a threshold. Where do WHERE and HAVING belong?
+A: Use WHERE to restrict input rows, such as the date range or included order states. Group those rows by day, then use HAVING to filter groups based on their aggregate total. Filtering individual orders by the threshold would answer a different question. Specify the reporting time zone before assigning timestamps to days, and test boundary timestamps.
+
+FS316 | SQL query semantics | junior
+Q: A query returns the first 20 products without ORDER BY. Why is that not a stable contract?
+A: Relational results have no guaranteed order unless the query requests one. Index changes, parallel execution, or a different plan can change which rows appear first. Specify the business ordering and a unique tie-breaker before applying a limit. Apparent stability in a small development database is accidental and should not be relied upon by pagination or tests.
+
+FS317 | SQL query semantics | junior
+Q: How should an application search for a user-supplied title while preserving literal input semantics?
+A: Pass values through the database driver's parameter mechanism rather than constructing SQL text from input. If using LIKE, decide whether wildcard characters are intentional operators or should be escaped as literal characters using supported syntax. Parameters protect query structure but do not automatically define wildcard behavior. Bound result sizes and document case-sensitivity according to collation and search requirements.
+
+FS318 | SQL query semantics | junior
+Q: An ORM fetches 50 orders and then queries each order's customer separately. What is the problem?
+A: This is an N+1 access pattern: one initial query followed by many additional round trips. Fetch required customer data through an appropriate join, projection, or batched lookup. Avoid blindly loading every relationship because that can create oversized or multiplied results. Measure query count and transferred rows for realistic page sizes, not only the duration of one query.
+
+FS319 | SQL query semantics | junior
+Q: A query lists customers with at least one overdue invoice. Why might EXISTS be clearer than a join?
+A: EXISTS expresses a yes-or-no relationship without multiplying customer rows for multiple matching invoices. A join can work but may require grouping or DISTINCT to restore one row per customer. The optimizer may produce similar plans, so choose clear semantics and measure rather than assuming one syntax is always faster. Include the overdue-state and date conditions in the existence test.
+
+FS320 | SQL query semantics | junior
+Q: Two exports use UNION and UNION ALL respectively. Why do their counts differ?
+A: UNION removes duplicate result rows, whereas UNION ALL retains every row from both inputs. Choose based on whether duplicates represent valid separate facts or repeated representations of the same fact. Deduplication also adds work. Do not use UNION merely as a default when combining event sources; equal projected values may still correspond to distinct legitimate events.
+
+FS321 | Query plans and indexes | mid
+Q: A query is slow despite an index on status. Why might the database ignore that index?
+A: If most rows share the requested status, scanning the table may cost less than many index lookups. Statistics, selected columns, ordering, and table size also affect the plan. Inspect the actual plan and row estimates rather than forcing index use immediately. An index is an available access path, not a promise that every matching query becomes faster.
+
+FS322 | Query plans and indexes | mid
+Q: A query filters by tenantId and orders by createdAt. How would you evaluate a composite index?
+A: Consider an index beginning with the equality-constrained tenantId followed by ordering columns and a stable identifier. Check the actual predicates, direction, and selected fields against the database's index behavior. Test representative tenant sizes and pagination depth. Column order matters, but there is no universal perfect index; write overhead and other important query patterns also influence the choice.
+
+FS323 | Query plans and indexes | mid
+Q: Why can filtering with a function applied to an indexed timestamp reduce index usefulness?
+A: Transforming the column can prevent a normal index from matching the predicate directly. Express a day filter as a bounded timestamp range when semantics allow, calculating boundaries in the correct time zone. Some databases support expression indexes, but those add maintenance and must match the query. Confirm the resulting plan instead of assuming every function prevents optimization.
+
+FS324 | Query plans and indexes | mid
+Q: An execution plan estimates ten rows but actually processes a million. What would you investigate?
+A: Check stale statistics, skewed values, correlated columns, and predicates the optimizer cannot estimate accurately. Compare parameters from fast and slow executions. Refreshing statistics may help, but correlation can require engine-specific extended statistics or query changes. Large estimation errors can produce poor join and memory choices, so investigate the earliest major divergence rather than only the final expensive operator.
+
+FS325 | Query plans and indexes | mid
+Q: What does a covering index improve, and why not include every column in every index?
+A: A covering index can satisfy a query without additional table lookups when the engine and visibility rules allow it. Wider indexes consume storage, memory, and write bandwidth, reducing cache efficiency and increasing maintenance. Include only columns justified by important workloads. Measure the complete read/write tradeoff rather than optimizing one query at the expense of all mutations.
+
+FS326 | Query plans and indexes | junior
+Q: After adding several indexes, reads improve but imports become slow. Why?
+A: Each inserted or changed row may update multiple index structures in addition to the table and transaction log. More indexes also consume memory and storage bandwidth. Review redundant and unused indexes using representative usage data, including infrequent critical jobs. Batch imports appropriately and measure lock and logging pressure. Dropping indexes indiscriminately can merely move the bottleneck back to reads.
+
+FS327 | Query plans and indexes | mid
+Q: A query is fast for one tenant but slow for another using identical SQL. What could explain it?
+A: Tenant data sizes or value distributions may differ dramatically. Cached plans optimized for one parameter set can also perform poorly for another, depending on the engine. Compare actual row counts, estimates, and chosen access paths with representative parameters. Avoid testing only small tenants. Possible remedies include better statistics, revised indexing, query shape changes, or engine-specific plan management.
+
+FS328 | Query plans and indexes | mid
+Q: Why should EXPLAIN ANALYZE or an equivalent actual-plan command be used carefully in production?
+A: Actual-plan tools commonly execute the query, so expensive reads consume resources and writes may change data unless safely contained using supported procedures. Prefer representative non-production data first and understand the engine's exact behavior. Production sampling requires bounded scope and operational approval. Estimated plans avoid execution but cannot show actual row counts or runtime behavior.
+
+FS329 | Query plans and indexes | mid
+Q: A database plan shows a large sort spilling to disk. What changes might help?
+A: First reduce unnecessary input rows and selected data, and check whether an index can provide the required ordering. Inspect estimates that drive memory allocation. Increasing sort memory may help but can multiply resource use across concurrent queries. Evaluate pagination and whether the full sort is necessary. Measure under realistic concurrency rather than solving one query by exhausting shared memory.
+
+FS330 | Query plans and indexes | junior
+Q: Should a frequently filtered boolean column always have its own index?
+A: Not necessarily. A boolean often has low selectivity, so a standalone index may provide little benefit. A partial index on a rare state or a composite index matching additional filters can be more useful where supported. Evaluate data distribution and query frequency. The decision should come from workload evidence and plans, not a rule that every filtered column needs an index.
+
+FS331 | Transactions and concurrency | junior
+Q: A transfer debits one account and credits another across separate autocommit statements. What can go wrong?
+A: A failure between statements can leave money debited without the corresponding credit. Wrap both updates in one transaction so they commit or roll back together. Define behavior when the operation retries, detect already-applied transfers idempotently, and validate balances under the chosen isolation model. Partially applied multi-step money movement is a classic transaction failure.
+
+FS332 | Transactions and concurrency | junior
+Q: What does a rollback guarantee after an error inside a transaction?
+A: It discards uncommitted changes made during that transaction, restoring database-visible state to its prior point. It does not reverse external side effects such as sent emails, published messages, or files already written. Design around this by sequencing external actions after commit or compensating deliberately. Database state and the outside world are not covered by one atomic boundary.
+
+FS333 | Transactions and concurrency | mid
+Q: Two agents read the same product stock, then both decrement and save. What anomaly occurs and how can it be prevented?
+A: This is a lost update: one decrement silently overwrites the other. Options include atomic conditional updates such as UPDATE ... WHERE stock >= requested, selecting rows for update, optimistic version checks that fail concurrent writes, or serializable isolation. Choose based on contention, latency, and engine support. Verify the chosen mechanism with a concurrency test rather than assuming the ORM prevents this pattern.
+
+FS334 | Transactions and concurrency | mid
+Q: An inventory report needs consistent totals while orders keep arriving. How can snapshot semantics help?
+A: A transaction-level snapshot lets related reads observe one consistent database version while other transactions commit. A statement-level snapshot alone does not guarantee agreement across multiple report queries. Check the engine's isolation behavior and configure the required scope. Long snapshots can delay version cleanup and consume storage, so bound report duration and avoid assuming every default read mode offers identical guarantees.
+
+FS335 | Transactions and concurrency | junior
+Q: What is a deadlock, and what practices reduce its likelihood?
+A: A deadlock occurs when transactions hold locks each other needs, so neither can proceed; the database typically aborts one. Reduce risk by accessing rows in a consistent order, keeping transactions short, avoiding user interaction inside transactions, batching changes sensibly, and minimizing unnecessary lock scope. Handle deadlock aborts with bounded, safe retries, and instrument their frequency to detect contention trends before users notice failures.
+
+FS336 | Transactions and concurrency | junior
+Q: Why can a long transaction that holds many row locks degrade unrelated features?
+A: Other statements needing those rows block, queues fill, connection pools exhaust, and monitoring may show timeouts apparently unrelated to the original feature. Batch work, commit in bounded chunks, and schedule heavy jobs off-peak. Locks also interact with vacuum or cleanup depending on engine. Measure lock wait time explicitly because application latency dashboards alone rarely identify the responsible transaction.
+
+FS337 | Transactions and concurrency | mid
+Q: An ORM wraps the whole request in one transaction. What are the consequences?
+A: Every read participates in the transaction, extending its duration through any slow work inside the request, including calls to other services. Locking and snapshot behavior vary by isolation level and engine. It simplifies consistency but couples latency to the longest operation. Consider narrower transactions around specific state changes, and never perform external side effects inside the request assuming later rollback.
+
+FS338 | Transactions and concurrency | mid
+Q: When is SELECT FOR UPDATE appropriate, and what risk does it add?
+A: It locks selected rows until the transaction ends, preventing concurrent modification between read and write, which suits short read-modify-write sequences. It can reduce throughput under contention and contributes to deadlock risk if locking order varies. Prefer precise predicates to lock only required rows. Always combine it with an explicit transaction; outside one, locks release immediately and provide no protection.
+
+FS339 | Transactions and concurrency | mid
+Q: After deploying, payment confirmations occasionally apply twice. Retry logic was added around a flaky payment gateway call. What likely happened?
+A: The gateway may have processed the charge before its response timed out, so a retry created a second charge. External calls inside a transaction that also updates local state need idempotency keys scoped to the payment intent, recorded outcomes checked before retrying, and reconciliation between local and provider records. A database rollback cannot undo an external side effect that already occurred.
+
+FS340 | Transactions and concurrency | mid
+Q: Why does the isolation level matter for a transfer checking both accounts before updating?
+A: Under weaker isolation, another transfer can change an account between the read and the update, producing decisions based on stale balances. Appropriate isolation, row locking, or conditional atomic updates close those windows. Serializable isolation detects serialization failures that need retries. The right choice balances correctness requirements, contention, and engine behavior, and should be verified with deliberate concurrent tests.
+
+FS341 | Schema migrations | mid
+Q: A migration adding a non-null column with a default runs long on a large table. What approaches reduce risk?
+A: Understand engine-specific behavior for defaults and metadata changes. Common strategies include adding a nullable column, backfilling in bounded batches, then enforcing non-null with a supported constraint step. Some engines handle defaults efficiently, others rewrite the table. Test on production-scale data, know lock behavior, and schedule maintenance windows when rewriting is unavoidable.
+
+FS342 | Schema migrations | junior
+Q: Why should a migration adding an index on a busy production table avoid a long exclusive lock?
+A: A blocking lock stalls reads and writes queueing behind it. Prefer concurrent or online index builds where supported, run during low traffic, and watch for lock queues or statement timeouts. Some engines require disabling concurrent mode inside one transaction, so tooling configuration matters. Always know the rollback path before starting, because a failed build can leave invalid objects behind.
+
+FS343 | Schema migrations | mid
+Q: What is expand-and-contract migration, and when is it useful?
+A: Deploy additive schema changes first, migrate data with the application tolerating both shapes, then remove legacy structures after consumers adapt. It supports zero-downtime deploys because old and new code can coexist. It requires coordination across releases and monitoring of both paths. Useful for column renames, splits, and constraint changes; overkill for small internal changes with no dependent consumers.
+
+FS344 | Schema migrations | mid
+Q: A rename migration ships with the deploy. Why can old instances still break during rollout?
+A: Rolling deploys run old and new code simultaneously, and old instances may still reference the previous name or assumptions. Renames and removals need an expand phase: add the new name, dual-write or backfill, verify, then remove the old one after all instances update. Coordinating schema changes with rollout order prevents transient failures invisible in single-instance tests.
+
+FS345 | Schema migrations | junior
+Q: Why should destructive migrations be reviewable and reversible where possible?
+A: Dropping columns or tables destroys data that may be needed by rollback, reports, or undiscovered consumers. Prefer deferred removal with a grace period and a backup or archive step. Ensure the migration tool records applied changes so rollback is a documented, tested path rather than improvisation. Announce data-affecting changes to the team and verify restore capability before relying on it.
+
+FS346 | Schema migrations | mid
+Q: What belongs in a migration's design beyond the schema change itself?
+A: Include lock impact, expected duration at production scale, backfill strategy, rollback plan, and monitoring signals. Note interactions with background jobs, caches, and read replicas. Test against realistic data volume. Coordinate with deployment ordering so application code tolerates both old and new schema states during rollout. A migration is an operational event, not only a file in the repository.
+
+FS347 | Schema migrations | mid
+Q: How would you backfill ten million rows without a prolonged outage?
+A: Process updates in bounded batches keyed by primary key ranges, committing each batch separately to avoid one giant transaction. Throttle to control replication lag and lock contention, and make the job resumable and idempotent. Monitor progress and pause safely. Consider engine-specific bulk update features. Verify completion with counts and spot checks before enabling dependent constraints or dropping fallbacks.
+
+FS348 | Schema migrations | mid
+Q: Two services share one database and both run automatic migrations on startup. What problems arise?
+A: Concurrent migrations can conflict or apply out of order, and one service's changes can break the other's assumptions. Ownership should be explicit: a single designated owner or a controlled release process applies schema changes. Shared databases also couple availability and capacity planning. Evaluate extracting service boundaries or at least separating migration responsibility before scaling the team.
+
+FS349 | Schema migrations | junior
+Q: A migration passes locally but fails in staging with a lock timeout. What does this reveal?
+A: Local datasets were too small to expose lock contention or duration differences. Staging data volumes, concurrent traffic patterns, and configuration must approximate production for meaningful migration testing. The failure also highlights missing preflight checks such as lock timeout settings. Improve the pipeline to run migrations against production-scale snapshots before reaching deployment day.
+
+FS350 | Schema migrations | mid
+Q: When would you split one large migration into multiple deployed steps?
+A: When it combines structural change with heavy data movement, long locks, or coordinated code changes. Deploy schema additively, backfill separately with resumable jobs, switch application reads, then clean up. Each step stays reviewable and reversible. Splitting also isolates failures: a backfill bug should not force re-running a DDL change. The cost is more deploys and interim compatibility code.
+
+FS351 | Caching strategy | junior
+Q: A cached product list serves stale prices for up to an hour. How would you manage that tradeoff?
+A: Quantify acceptable staleness per data type. Prices may need short TTLs, explicit invalidation on change, or versioned cache keys; marketing copy tolerates longer TTLs. Choose write-through invalidation or event-driven purge for accuracy-sensitive data. Communicate eventual consistency to stakeholders. One global TTL rarely fits all data; document the policy per cache rather than discovering it from user complaints.
+
+FS352 | Caching strategy | mid
+Q: Why is cache invalidation considered hard, and what reduces its risk?
+A: Invalidation must identify every representation affected by an underlying change, including lists, aggregates, and derived views. Missing one serves stale data indefinitely. Reduce risk by deriving keys systematically from entity identity, using explicit dependency tracking, applying conservative TTLs as backstops, and testing invalidation paths like any feature. Versioned keys or short TTLs trade cost for simplicity when dependency graphs grow complex.
+
+FS353 | Caching strategy | mid
+Q: Traffic spikes after a popular cache entry expires and the database struggles. What is this and what mitigates it?
+A: This is a cache stampede: many concurrent requests rebuild the same entry simultaneously. Mitigations include request coalescing so one rebuild serves waiters, probabilistic early refresh before expiry, staggered TTLs, and locking rebuilds per key. Ensure the rebuild path itself is efficient. Distinguish stampedes from general overload by observing whether database load spikes track expiry patterns.
+
+FS354 | Caching strategy | mid
+Q: Why is caching a per-user permissions-filtered API response risky?
+A: A shared cache key can leak one user's authorized data to another if identity is not part of the key, and including identity fragments the cache. Alternatively, authorization changes may not invalidate cached results promptly. Prefer caching pre-authorization shared data and applying permissions per request, or use carefully designed user-scoped entries with explicit policies. Verify with tests that cross-user leakage cannot occur.
+
+FS355 | Caching strategy | junior
+Q: A team adds caching to fix a slow endpoint, and it works until a deploy. What might have happened?
+A: Deploys commonly flush caches, so the first requests after release hit the database simultaneously, exposing the underlying slow query that caching had hidden. This reveals an unfixed performance problem rather than a new regression. Fix the query, warm critical entries after deployment, or accept measured load. Profiling without cache shows the true cost that capacity planning must handle during cold starts.
+
+FS356 | Caching strategy | junior
+Q: What belongs in cache key design for an API listing endpoint?
+A: Include every input affecting the result: resource path, filters, pagination, sort, relevant tenant or user scope, and any data version the response depends on. Omitting one input returns wrong data to someone; including unnecessary inputs fragments the cache. Use a deterministic serialization and consistent encoding. Document key construction because debugging stale or missing entries depends on reproducing exact keys.
+
+FS357 | Caching strategy | mid
+Q: How does the thundering herd at startup differ from a cache stampede, and what helps?
+A: Both involve concurrent identical work, but startup herds occur when many instances begin with cold caches simultaneously after deployment or failover. Mitigations include warming critical entries before serving traffic, staggered instance starts, persistent cache layers surviving restarts, and graceful degradation while cold. Distinguishing the trigger matters because TTL tuning alone does not solve restart-driven cold starts.
+
+FS358 | Caching strategy | mid
+Q: When should a result be cached at the HTTP layer versus the application layer?
+A: HTTP caching suits responses that are legitimately shareable, with explicit cache-control directives and correct handling of authorization and vary rules. Application caching suits computed results, partial data, or entries needing precise invalidation tied to domain events. They can coexist. Do not mark authenticated responses shareable without verifying scope. Choose per response type after checking what actually varies and how staleness affects users.
+
+FS359 | Caching strategy | mid
+Q: A cache stores session data. Why is eviction policy important to reason about?
+A: Eviction under memory pressure silently removes sessions, signing users out unpredictably and possibly during peak traffic. Size the store for realistic session counts, monitor eviction rates and hit ratios, and consider whether eviction should prefer short-lived or inactive entries. Some caches support persistence or replication. Treating a cache as infinite memory without eviction analysis creates intermittent, hard-to-diagnose authentication failures.
+
+FS360 | Caching strategy | junior
+Q: Why monitor cache hit ratio together with latency rather than as an isolated success metric?
+A: A high hit ratio can coexist with poor latency if misses are expensive or stampedes dominate tail requests. It can also reward over-caching stale or rarely useful data. Measure p95 and p99 end-to-end latency, database load during misses, and staleness incidents. Cache metrics are diagnostic inputs into user-visible performance, not goals that justify their own optimization at the expense of correctness.
+
+FS361 | Queues and background jobs | junior
+Q: Why put email sending in a background queue instead of the request path?
+A: Email delivery latency and failure rates vary independently of your API. Queuing keeps request responses fast and decouples retries from the caller. Define delivery guarantees, retry backoff, and dead-letter handling. Accept that queueing introduces eventual consistency: callers cannot assume the email exists when the response returns. Critical flows may need explicit delivery confirmation through a separate status mechanism.
+
+FS362 | Queues and background jobs | mid
+Q: What does at-least-once delivery imply for job handlers?
+A: Handlers must tolerate repeated execution because redelivery can happen after worker crashes, timeouts, or visibility timeouts expiring. Make each job idempotent using stable job identifiers, check for already-completed work, or design effects that are safe to repeat. Exactly-once semantics generally require collaboration between delivery guarantees and deduplicated processing, not just queue configuration. Test handler behavior with deliberate duplicate deliveries.
+
+FS363 | Queues and background jobs | junior
+Q: A nightly report job grows past its window. What approaches help?
+A: Reduce work by processing only changed records since the last run, using incremental state rather than full recomputation. Parallelize independent partitions, batch database operations, and move expensive joins or aggregations into precomputed structures if readers allow. Consider scheduling earlier or splitting into staggered pieces. Measure which stage dominates before optimizing, and alert when runtime approaches the scheduling boundary.
+
+FS364 | Queues and background jobs | mid
+Q: A queue backs up and jobs run hours late. What would you investigate first?
+A: Compare arrival rate against processing throughput. Check for a poison message repeatedly retried, a slow downstream dependency, worker pool exhaustion, or a burst of oversized jobs. Distinguish backlog from individual job latency. Options include scaling workers, improving per-job cost, adding dead-letter policies, and rejecting or deferring low-priority work. Alert on backlog age, not just queue length, because message size varies.
+
+FS365 | Queues and background jobs | junior
+Q: How do you prevent one malformed message from permanently blocking a queue?
+A: Cap retry attempts per message, then move it to a dead-letter queue with its error context preserved. Alert on dead-letter arrivals and provide a controlled replay path after fixes. Distinguish transient failures that deserve retries from permanent validation failures that never succeed. Poison messages differ from slow messages; the first needs quarantine, the second needs throughput or timeout work.
+
+FS366 | Queues and background jobs | mid
+Q: Why do long-running jobs need heartbeat or visibility timeout mechanisms?
+A: Without heartbeats, a crashed worker's job may remain invisible until a fixed timeout expires, delaying recovery; with heartbeats, the system detects abandonment sooner and reassigns work. Alternatively, long work may exceed visibility timeouts, causing duplicate execution. Choose mechanisms that match job duration, checkpoint progress where possible, and make reassignment safe through idempotency. Never assume a running process implies progress.
+
+FS367 | Queues and background jobs | mid
+Q: A job sends a confirmation email and updates a database row. The worker crashes after sending but before committing. What happens?
+A: Redelivery can send the email twice because completion was not recorded. Store delivery intent durably before sending and use a stable provider idempotency key where supported. An outbox prevents lost intent but its relay can still resend after an ambiguous outcome. Neither an outbox nor reordering alone creates atomicity with an arbitrary email provider; define reconciliation and acceptable duplicate behavior.
+
+FS368 | Queues and background jobs | mid
+Q: What does an outbox pattern solve, and what overhead does it add?
+A: It stores outgoing events in the same database transaction as the state change, guaranteeing events cannot be lost if the transaction commits. A relay publishes them afterward, achieving eventual consistency without distributed transactions. Overhead includes relay infrastructure, ordering considerations, event cleanup, and monitoring publication lag. It is justified when losing an event has real business cost, not for every write.
+
+FS369 | Queues and background jobs | junior
+Q: How would you prioritize urgent password-reset emails over routine digest emails sharing infrastructure?
+A: Separate traffic into distinct queues or priority levels so bulk work cannot starve urgent messages. Assign dedicated worker capacity or weighted polling. Monitor each class's latency independently, and allow load shedding of low-priority work during saturation. Mixing all traffic in one queue with shared workers means throughput problems surface first as delayed critical notifications, which users notice immediately.
+
+FS370 | Queues and background jobs | junior
+Q: A cron job silently stopped producing output last week. What would you check?
+A: Verify the scheduler actually triggered: inspect execution logs, cron daemon health, and deployment changes to schedule definitions. Check whether the job ran but failed partway, writing partial output. Confirm downstream consumers did not move expectations. Add explicit success metrics and alerting on job completion rather than assuming silence means health. Idempotent design enables safe manual runs while investigating.
+
+FS371 | Idempotency and retries | junior
+Q: A client retries a payment request after a timeout and is charged twice. How does an idempotency key prevent this?
+A: The client supplies a unique key per intended operation. The server records the key with the outcome of first execution and returns that stored result for duplicate submissions instead of processing again. Scope keys to the operation and owner, define retention, and handle concurrent duplicate requests atomically. Without storage of outcomes, the server cannot distinguish a retry from a genuinely new request.
+
+FS372 | Idempotency and retries | junior
+Q: A retry mechanism uses exponential backoff. Why add jitter?
+A: Without jitter, many clients that failed together retry in synchronized waves, repeatedly overloading recovering dependencies. Randomized delay spreads retries across time, smoothing load and improving recovery odds. Combine with maximum attempts, backoff ceilings, and circuit breaking. Jitter is especially important when a shared trigger causes simultaneous failures, such as a dependency restart affecting many callers at once.
+
+FS373 | Idempotency and retries | junior
+Q: Why is retrying a POST blindly risky, and what conditions make it safer?
+A: A POST may have succeeded server-side even though the response was lost, so retries can duplicate orders or charges. It is safer when the operation is idempotent by design, carries a unique client key the server deduplicates, or targets an endpoint documented as safe to repeat. Otherwise use explicit status queries or reconciliation. Document retry semantics in the API contract rather than leaving clients to guess.
+
+FS374 | Idempotency and retries | mid
+Q: A webhook consumer receives duplicate notifications. How should it process them safely?
+A: Record processed event identifiers and skip duplicates, using a unique constraint to close races between concurrent deliveries. Treat payloads as hints and fetch authoritative state from the source when necessary, since delivery order is not guaranteed. Respond quickly and move heavy work to internal queues. Design handlers assuming at-least-once delivery and arbitrary ordering rather than trusting sender behavior.
+
+FS375 | Idempotency and retries | mid
+Q: What is the difference between an idempotent operation and a retried operation, and why does it matter?
+A: Idempotency is a property of the operation: repeating it produces no additional effect. Retrying is a client behavior that may or may not be safe depending on that property and on recorded outcomes. A non-idempotent operation can still be safely retried if the server deduplicates by key. Conversely, an idempotent-by-design endpoint still benefits from keys when concurrent duplicate requests race. Document both aspects explicitly.
+
+FS376 | Idempotency and retries | mid
+Q: A bulk import crashed midway. How should rerunning it avoid duplicating already-imported rows?
+A: Design the import idempotently: use deterministic row keys so upserts replace rather than duplicate, record completed batch checkpoints, and make each batch independently re-runnable. Avoid generated identifiers assigned before persistence that change between runs. Verify totals after rerun rather than assuming success. If the source lacks stable keys, derive them from content hashes or natural identifiers agreed with the data owner.
+
+FS377 | Idempotency and retries | junior
+Q: How should a client retry a request that failed with a 500 response?
+A: Confirm the operation is safe to repeat, ideally via documented idempotency semantics. Apply exponential backoff with jitter, cap attempts, and distinguish timeout or connection errors from explicit rejections. If the API offers a status-check endpoint for async operations, prefer querying it over blind resubmission. Repeated identical 500s suggest a service problem to report, not a retry problem to solve client-side.
+
+FS378 | Idempotency and retries | mid
+Q: Where should a circuit breaker sit relative to retries, and what does each solve?
+A: Retries handle transient failures by repeating individual attempts with backoff. A circuit breaker stops sending traffic to a failing dependency after a threshold, failing fast and allowing recovery probes before resuming. Retries without a breaker amplify outages; breakers without retries miss recoverable blips. Combine them: bounded, jittered retries inside a breaker-protected call path, with distinct alerts for breaker openings.
+
+FS379 | Idempotency and retries | mid
+Q: A batch job writes to two systems. System A commits, system B fails, and the job retries. What design limits harm?
+A: Make each system interaction independently idempotent using stable transaction or batch identifiers so reapplying to A is harmless. Track per-system completion, resume from the earliest incomplete step, and reconcile discrepancies afterward. Coordinate distributed transactions only when business rules demand atomicity across systems, since two-phase commit has its own availability and operational costs. Accept that eventual consistency may be the pragmatic target.
+
+FS380 | Idempotency and retries | mid
+Q: An idempotency key is reused accidentally for different operations. What should the server do?
+A: Detect the mismatch between stored request fingerprint and incoming request, then reject with a clear error rather than returning the old result, which would be wrong for the new operation. Fingerprint comparison requires storing enough request context, adding storage cost. Define this behavior in API documentation because clients debugging unexpected results need to understand key lifecycle rules and scope boundaries.
+
+FS381 | Files, uploads, and data lifecycle | junior
+Q: How would you design an upload endpoint for images up to 20 MB?
+A: Validate content type and size early, ideally before reading the full body, and enforce limits at proxy and application layers. Stream to storage rather than buffering entirely in memory. Generate server-side identifiers rather than trusting client filenames, scan or validate content as appropriate, and store metadata separately. Decide synchronous versus asynchronous processing based on latency needs and downstream work.
+
+FS382 | Files, uploads, and data lifecycle | junior
+Q: Uploaded files are stored with user-supplied names. What risks follow?
+A: Client names can contain path traversal characters, excessive lengths, unexpected encodings, or misleading extensions. Use generated storage identifiers and keep original names only as display metadata after sanitization. Never construct filesystem or object-store paths directly from user input. Enforce extension and content-type checks independently, since either can be spoofed, and record provenance for audit purposes.
+
+FS383 | Files, uploads, and data lifecycle | mid
+Q: How can direct-to-storage uploads with pre-signed URLs help an application server?
+A: The client uploads directly to object storage using a short-lived, scoped credential, avoiding large payloads through application servers. The server issues the URL, validates the resulting object through callbacks or confirmation requests, then records metadata. Benefits include reduced bandwidth and memory pressure. Tradeoffs include credential scoping care, handling incomplete uploads, and validating actual content type and size after upload completes.
+
+FS384 | Files, uploads, and data lifecycle | junior
+Q: A report export accumulates files for months with no cleanup. What policy would you introduce?
+A: Define retention per artifact class based on business need, compliance requirements, and storage cost. Apply lifecycle rules at the storage layer where supported, such as expiration policies, plus application-level cleanup for metadata rows. Communicate retention to users so exports do not silently vanish. Monitor cleanup job success and storage growth. Distinguish temporary artifacts from records with audit obligations.
+
+FS385 | Files, uploads, and data lifecycle | mid
+Q: The database insert succeeds but its corresponding file upload fails. How should the application handle this split outcome?
+A: Model an explicit pending-upload state and transition to available only after validating the stored object. Keep retries tied to a stable object identifier and clean up expired pending records and orphaned objects through reconciliation. Alternatively upload first and commit metadata afterward, but still handle orphaned files. A database transaction does not automatically include independent object-storage operations.
+
+FS386 | Files, uploads, and data lifecycle | mid
+Q: An export contains all fields from the database. What should a data export design consider beyond serialization?
+A: Apply authorization to exported data just as to API responses, excluding fields the requesting user may not see. Consider volume: streaming or paginated generation avoids memory exhaustion. Record who exported what and when for audit. Handle large formats efficiently, support resumable or asynchronous generation for big datasets, and document retention of the produced file. Exports are a common source of unintentional sensitive-data disclosure.
+
+FS387 | Files, uploads, and data lifecycle | mid
+Q: A user deletes their account. What should happen to their uploaded files and derived records?
+A: Define retention obligations per data class: some content must be removed, some anonymized, some retained for legal or audit reasons with access restricted. Handle files, thumbnails, caches, backups, and analytics copies, not just primary tables. Communicate timelines because backup rotation means immediate removal everywhere is often infeasible. Document the policy and test the deletion path end to end.
+
+FS388 | Files, uploads, and data lifecycle | junior
+Q: Generating a large CSV export in one request causes timeouts and memory spikes. What alternatives exist?
+A: Stream the response incrementally rather than building the whole file in memory, using database cursors with bounded fetch sizes. For very large or slow exports, generate asynchronously via a job and provide a download link with expiry. Paginate client-side fetching as a third option. Choose based on dataset size, user expectations, and infrastructure limits, and test with representative volumes rather than sample data.
+
+FS389 | Files, uploads, and data lifecycle | mid
+Q: An antivirus scan is asynchronous, but downloads are available immediately. What is the risk and a mitigation?
+A: Malicious content could be downloaded before scanning completes. Mitigate by gating downloads behind a processing status, serving only from a validated location, or using a quarantine bucket until scans pass. Timeouts must define a safe failure state. Balance protection against availability for legitimate uploads. The severity of this gap depends on what users can do with downloaded content and your threat model.
+
+FS390 | Files, uploads, and data lifecycle | junior
+Q: A feature stores derived thumbnails alongside originals. The thumbnails are lost during a storage migration. Why does design matter here?
+A: Treating derived artifacts as rebuildable cache rather than primary data determines recovery strategy. If originals remain intact and the derivation logic is deterministic, regeneration restores state without user impact. Document which files are authoritative and which are projections, and test rebuild pipelines. Store derivations separately from originals so migration or cleanup mistakes cannot destroy both simultaneously.
+
+FS391 | Backend architecture and layering | junior
+Q: What distinguishes a service layer from putting business logic directly in HTTP handlers?
+A: A service layer centralizes domain rules so multiple transports, such as HTTP handlers, queue consumers, and CLI commands, enforce identical behavior. Handlers focus on protocol concerns: parsing, status codes, serialization. This separation eases testing business rules without HTTP plumbing. Overhead exists for trivial CRUD, so teams judge when the boundary earns its cost. Consistency matters more than dogmatic layering.
+
+FS392 | Backend architecture and layering | junior
+Q: Why is a repository interface useful even against a single database?
+A: It isolates query construction from business logic, making rules testable with in-memory fakes and clarifying what data each operation needs. It reduces leakage of ORM specifics into domain code. Costs include additional interfaces and mapping. Some teams use repository patterns heavily; others use query objects directly. The architectural value is a deliberate boundary, not the pattern's name.
+
+FS393 | Backend architecture and layering | mid
+Q: Two services need the same pricing rule. Where should it live?
+A: Extract shared domain logic into a library or service both consume rather than duplicating. The choice between a shared library and a shared pricing service depends on coupling tolerance, deployment independence, and consistency requirements. Duplicated rules drift apart, causing reconciliation bugs. Centralizing creates a dependency that needs versioning and availability planning. Document the decision and its rationale.
+
+FS394 | Backend architecture and layering | mid
+Q: What problems arise when a module both writes to the database and sends HTTP requests to another service?
+A: Combining persistence with network calls couples transaction boundaries to external availability. Rollback cannot undo a sent request, and failure ordering matters: external effects survive while database state reverts. Design alternatives include sequencing external calls after commit, outbox patterns for reliable event publication, or compensation logic. Understanding this boundary clarifies where eventual consistency is acceptable.
+
+FS395 | Backend architecture and layering | junior
+Q: How should configuration differ from secrets, and where does each belong?
+A: Configuration values like feature flags, pool sizes, and URLs typically live in deployment configuration or environment-specific files without repository secrecy concerns. Secrets such as credentials and keys belong in secret managers with rotation, audit, and access control, never committed to source control. Both should be injected at runtime rather than hardcoded. Distinguishing them clarifies review, rotation, and incident response responsibilities.
+
+FS396 | Backend architecture and layering | junior
+Q: Why do circular dependencies between modules signal design problems?
+A: They prevent independent reasoning, testing, and reuse of either module, and can create initialization order issues. Circular references usually indicate a missing abstraction or a responsibility that belongs elsewhere. Refactoring often means extracting shared contracts or reorganizing ownership. Some languages tolerate cycles at runtime while still suffering cognitively. Treat cycles as review findings, not merely stylistic preferences.
+
+FS397 | Backend architecture and layering | mid
+Q: What is a modular monolith, and when might it suit a team better than microservices?
+A: A modular monolith is a single deployable with strictly bounded internal modules and explicit interfaces. It avoids distributed-systems overhead such as network failures, versioned contracts, and operational sprawl while preserving domain separation. Suits smaller teams or early products where operational simplicity matters. Modules can later extract into services if scale or organizational needs demand it. Discipline is still required to keep boundaries meaningful.
+
+FS398 | Backend architecture and layering | junior
+Q: How would you expose a new capability to both an HTTP API and a background worker?
+A: Define the capability as a service-layer operation independent of transport, with explicit inputs, outputs, and errors. HTTP handlers translate requests and responses; workers translate messages and ack/nack semantics. Avoid embedding protocol details in the core logic. Test the shared operation once with representative cases plus thin transport adapters. This prevents divergent behavior between synchronous and asynchronous paths.
+
+FS399 | Backend architecture and layering | mid
+Q: Why is it risky for a domain service to return ORM entities directly to HTTP handlers?
+A: Handlers may accidentally trigger lazy loading, depend on persistence session state, or serialize internal fields unintentionally. Returning explicit domain or DTO types clarifies the contract and decouples business logic from persistence representation. This matters when modules span process boundaries or when persistence models evolve. Keep mapping deliberate rather than letting convenience shapes define internal interfaces.
+
+FS400 | Backend architecture and layering | junior
+Q: What is the dependency inversion principle in practical backend terms?
+A: High-level business logic depends on abstractions it defines, not on concrete infrastructure implementations. A notification interface lets business rules remain testable while implementations vary across email providers or test doubles. Practical benefits include substitution for testing and clearer ownership of interface contracts. Applied excessively, it creates indirection; applied where variation or testing demands it, it decouples policy from mechanism.
+
+FS401 | Observability and logging | junior
+Q: What distinguishes structured logging from plain text logging for backend services?
+A: Structured logs serialize fields like timestamp, level, correlation ID, tenant, and event name, enabling filtering and aggregation by machines rather than regex over prose. Plain text is human-readable but harder to query at scale. Structured logging supports alerting on specific error codes and building dashboards. Consistency of field names across services matters more than the specific format chosen.
+
+FS402 | Observability and logging | junior
+Q: Why propagate a correlation ID through a request across services and queues?
+A: It links every log entry, metric, and trace belonging to one logical request, even across service boundaries and asynchronous hops. Without it, diagnosing a failure means piecing together timestamps and guesswork across systems. Generate at the entry point or accept from callers, propagate through headers and message metadata, and include in responses for support reference.
+
+FS403 | Observability and logging | junior
+Q: What should NOT be written to application logs, and why?
+A: Avoid logging passwords, tokens, full payment card data, government identifiers, health details, and unnecessarily complete request or response bodies. Logs often have broad access, long retention, and weaker deletion guarantees than primary stores. Redact or hash sensitive fields, document what is logged, and review logging changes like code. Log sufficient context to debug without turning logs into an unmanaged sensitive-data store.
+
+FS404 | Observability and logging | junior
+Q: How do metrics, logs, and traces complement each other?
+A: Metrics provide cheap aggregates suitable for alerting and dashboards. Logs offer per-event detail for investigation. Traces show request paths across services with timing and causality. A common workflow uses a metric alert to detect a problem, traces to localize the failing component, and logs for specific error details. Each answers different questions; none fully substitutes for the others.
+
+FS405 | Observability and logging | junior
+Q: Why is error rate alone an incomplete health signal?
+A: It misses latency degradation, saturation, and correctness problems that return success but wrong results. Combine error rate with latency percentiles, traffic volume, and resource saturation, alongside domain-specific indicators like order completion rate. A deployment can pass while silently producing wrong data if only infrastructure metrics are monitored. Define indicators per service based on what failure actually means to users.
+
+FS406 | Observability and logging | junior
+Q: Why do latency percentiles matter more than averages for user-facing services?
+A: Averages hide tail experiences. A service with a 200 ms mean may still have one in twenty requests exceeding two seconds, which shapes perceived reliability. Percentiles like p95 and p99 reveal distribution shape and outliers. They also guide capacity and timeout decisions. Do not chase the absolute tail at any cost; understand what causes slow requests and whether they correlate with specific tenants or operations.
+
+FS407 | Observability and logging | mid
+Q: What does a distributed trace add when a checkout spans API, payment service, and queue?
+A: It shows the causal chain across services, including timing, retries, and failures in each hop, making cross-service latency visible. Without tracing, each service's logs show only its own slice, and correlating them is manual work. Traces require context propagation through headers and message metadata. Sampling balances observability detail against instrumentation overhead and cost.
+
+FS408 | Observability and logging | mid
+Q: How would you log a failed login attempt usefully without enabling account-enumeration attacks or privacy problems?
+A: Record timestamp, source metadata, targeted account identifier internally, and outcome reason, but keep user-facing responses generic. Avoid logging passwords or full tokens. Aggregate patterns to detect credential stuffing: spikes per account or source warrant alerts. Define retention and access for authentication logs since they contain personal data. Consistent responses regardless of account existence prevent information leakage.
+
+FS409 | Observability and logging | mid
+Q: Why do high-cardinality labels on metrics cause problems?
+A: Each unique label combination creates a separate time series; unbounded labels like user ID or request ID can explode storage and query cost, degrading the monitoring system itself. Keep labels to bounded sets like endpoint, status class, and tenant tier. Put high-cardinality detail in logs or traces instead. Design dashboards around aggregates that answer operational questions without unbounded dimensionality.
+
+FS410 | Observability and logging | junior
+Q: A service runs fine in staging but production logs are overwhelming and mostly noise. How would you approach that?
+A: Audit log levels and content: demote routine operations to debug, keep warnings for actionable anomalies, and reserve errors for conditions needing response. Production volume requires sampling or rate limiting for repetitive messages. Ensure logs answer real questions by reviewing past incidents for missing context. Coordinate retention with cost. Effective logging is designed, not accumulated by default.
+
+FS411 | Unit tests and domain behavior | junior
+Q: A discount calculator has many business rules. What should its unit tests emphasize?
+A: Test observable price outcomes for meaningful combinations: threshold boundaries, excluded products, expired offers, rounding, and incompatible promotions. Keep calculations independent of clocks and databases where possible. A table of cases makes policy differences visible. Avoid asserting private helper calls, because implementation refactoring should not break tests when the promised business behavior remains unchanged.
+
+FS412 | Unit tests and domain behavior | junior
+Q: A subscription-expiry test passes today but fails next month. How would you make it deterministic?
+A: Inject a clock or pass the evaluation time explicitly instead of reading the system clock inside domain logic. Test fixed instants before, at, and after expiry. Specify whether expiration comparisons are inclusive and which time zone defines calendar boundaries. Keep a small integration check for clock wiring, while most policy tests use controlled time without sleeping.
+
+FS413 | Unit tests and domain behavior | junior
+Q: A test mocks every method called by an order service. Why can it become brittle?
+A: It may encode implementation choreography rather than business behavior, failing whenever helpers are reorganized. Mock external boundaries where needed, but use real simple domain objects and assert meaningful outcomes. Verify interaction details only when they are part of correctness, such as not charging a rejected order. Too many mocks can also hide incompatible assumptions between collaborating components.
+
+FS414 | Unit tests and domain behavior | mid
+Q: What is a useful property-based test for a shopping-cart total?
+A: Generate valid cart inputs and check invariants such as reordering lines leaving the total unchanged or adding a zero-quantity line having no effect when permitted. Constrain generated data to domain-valid values and retain failing examples or seeds. Properties complement specific examples; they do not decide the correct tax or rounding policy without an explicit specification.
+
+FS415 | Unit tests and domain behavior | junior
+Q: Code coverage reaches 100 percent, yet a tax calculation is wrong. What does coverage actually establish?
+A: Coverage shows that statements or branches executed, not that assertions checked the right result. Tests can exercise every line while accepting an incorrect formula. Review boundary cases and business examples, strengthen assertions, and consider mutation testing to see whether deliberate behavior changes are detected. Coverage is a gap-finding aid, not a correctness certificate.
+
+FS416 | Unit tests and domain behavior | mid
+Q: How should a random voucher-code generator be tested without making the suite flaky?
+A: Separate code-format rules from randomness and inject a controllable random source for deterministic examples. Test allowed characters, length, and handling of generated collisions. Use the appropriate production randomness source for the requirement. A small test asserting every random output is unique is probabilistic and cannot establish collision safety; the persistence layer still needs a uniqueness strategy.
+
+FS417 | Unit tests and domain behavior | junior
+Q: A state machine allows draft orders to become submitted but not cancelled orders to become shipped. How would you test it?
+A: Create a transition matrix containing every state and requested action, then test permitted outcomes and explicit rejections. Include side effects such as timestamps only where they are part of the contract. This exposes missing transitions more clearly than a few long happy-path tests. Keep concurrency enforcement separate: a correct in-memory transition function cannot prevent competing database writes.
+
+FS418 | Unit tests and domain behavior | junior
+Q: Why should a regression test fail before the bug fix is applied?
+A: Demonstrating the failure proves the test detects the reported behavior rather than merely executing nearby code. Reproduce the smallest relevant scenario, verify the expected failure, then apply the fix and rerun surrounding tests. Sometimes production conditions cannot be recreated exactly; document that limitation instead of claiming full reproduction. A permanently green test may provide little protection against recurrence.
+
+FS419 | Unit tests and domain behavior | junior
+Q: How can tests verify that rejected operations have no side effects?
+A: Arrange an invalid operation and assert both the expected rejection and unchanged relevant state. At dependency boundaries, verify that prohibited effects such as payment submission or event publication did not occur. Avoid checking every incidental call. The important claim is that a failed business decision does not partially execute work, which success-only assertions often overlook.
+
+FS420 | Unit tests and domain behavior | mid
+Q: A fake repository behaves differently from the real database. How should the test strategy respond?
+A: Keep fakes simple and avoid using them to prove database semantics such as null ordering, uniqueness races, or transaction isolation. Test business rules with fakes, then verify persistence behavior against the actual engine in integration tests. A shared repository contract suite can expose basic differences. Passing unit tests only demonstrates behavior under the fake's assumptions.
+
+FS421 | Integration and contract testing | junior
+Q: Why might SQLite integration tests miss a production PostgreSQL defect?
+A: Engines differ in SQL syntax, type coercion, constraints, date behavior, locking, and transaction isolation. SQLite tests may validate application flow without exercising the production database contract. Use the production engine for persistence-critical integration tests, with isolated test data and migrations. A lightweight substitute can remain useful for selected tests if its limitations are explicit rather than concealed.
+
+FS422 | Integration and contract testing | mid
+Q: How can parallel integration tests avoid deleting each other's database records?
+A: Give each worker an isolated database or schema, or rigorously scope fixtures by unique test identifiers with matching cleanup. Transaction rollback can help only when all relevant connections participate and background work is controlled. Never truncate a shared database from independent workers. Make isolation visible in setup and include guards preventing tests from targeting non-test environments.
+
+FS423 | Integration and contract testing | mid
+Q: What should a consumer-driven contract test verify for a shipping service integration?
+A: Capture the fields, statuses, and semantic expectations that the consuming service actually relies on, then verify the provider satisfies them. Include important failure responses and optional-field behavior. Contracts catch incompatible interface changes but do not prove the provider's internal business correctness or production connectivity. Keep expectations realistic; overly permissive matchers can allow changes that still break consumers.
+
+FS424 | Integration and contract testing | mid
+Q: A mocked payment provider always returns success. What integration cases are missing?
+A: Cover declines, rate limits, timeouts, malformed responses, duplicate requests, and ambiguous outcomes where the provider may have processed the operation. Use controlled stubs for deterministic failure scenarios and limited sandbox checks for provider compatibility where available. Verify local state and retry behavior after each outcome. A success-only mock cannot establish the safety of payment orchestration.
+
+FS425 | Integration and contract testing | mid
+Q: How would you test that two concurrent requests cannot reserve the final seat twice?
+A: Use the real database and coordinate two independent transactions so both attempt the contested operation together. Assert one succeeds and the other receives the documented conflict, with exactly one reservation committed. Avoid relying on arbitrary sleep timing. Repeat under the configured isolation mode and verify database state, because two acceptable-looking responses can still hide an invariant violation.
+
+FS426 | Integration and contract testing | junior
+Q: Should integration tests apply migrations or create tables directly from ORM models?
+A: Apply the same migrations used in deployment when testing schema compatibility. Direct model creation can hide missing indexes, data transformations, and migration ordering errors. Test both a clean installation and upgrades from representative earlier states when changes are significant. Model-generated schemas may be useful in narrow tests, but they cannot verify the real deployment path.
+
+FS427 | Integration and contract testing | junior
+Q: A response schema test passes although order totals are incorrect. Why?
+A: Schema validation checks shape and types, not all business meaning. Add assertions for calculated totals, currency, state, and relationships using controlled fixtures. Contract tests should include semantic examples where clients depend on them, while domain tests cover calculation detail. Distinguish structural compatibility from factual correctness rather than interpreting one green schema check as proof of both.
+
+FS428 | Integration and contract testing | mid
+Q: How should tests cover a queue worker's interaction with the database?
+A: Publish a controlled message, run a bounded worker, and wait for a durable observable outcome rather than sleeping for a fixed duration. Assert database changes, acknowledgement behavior, and safe duplicate processing. Isolate queue names and database fixtures between runs. Add controlled failure cases around commit and acknowledgement, because that boundary determines whether work is lost or redelivered.
+
+FS429 | Integration and contract testing | mid
+Q: Why can recording and replaying real HTTP responses create misleading integration tests?
+A: Recordings become stale and may omit failures, timing behavior, pagination, or provider changes. They can also capture sensitive data if not sanitized. Use them as controlled fixtures with reviewed provenance and refresh policy, not as permanent proof of live compatibility. Maintain explicit contract checks and a small appropriate live or sandbox verification layer separately.
+
+FS430 | Integration and contract testing | junior
+Q: What should an integration test assert when an authenticated user requests another tenant's export?
+A: Verify access is denied according to the public contract and that no file content or sensitive metadata is returned. Check alternate retrieval paths and signed-link generation if applicable. Use two real tenant fixtures, not merely a mocked permission boolean. The purpose is to validate identity, query scoping, authorization, and storage access working together across boundaries.
+
+FS431 | End-to-end verification strategy | junior
+Q: What makes a checkout test end to end rather than a large unit test?
+A: It crosses the deployed application's relevant boundaries using realistic entry points, persistence, and integrated components to verify an observable business outcome. External providers may use controlled test environments, which should be stated. Mocking every downstream dependency leaves important wiring untested. Choose a few critical journeys rather than reproducing every unit case through an expensive end-to-end path.
+
+FS432 | End-to-end verification strategy | junior
+Q: How can an end-to-end test safely create accounts without depending on a shared preexisting user?
+A: Provision a unique account and tenant through a supported test setup path, then clean up resources by those identifiers. Avoid shared mutable users whose passwords, permissions, or records other tests change. Keep setup privileges restricted to test environments. Deterministic ownership makes failures reproducible and prevents parallel suites from influencing each other's state.
+
+FS433 | End-to-end verification strategy | junior
+Q: A test waits five seconds for an export and sometimes fails on CI. What is a better synchronization method?
+A: Poll the export's public status or another stable observable outcome with a bounded deadline and useful diagnostic output. Stop on success or any terminal failure, not only success. Fixed sleeps are both slow on fast machines and insufficient on loaded ones. Keep the timeout aligned with expected test workload and investigate genuine performance regressions rather than endlessly increasing it.
+
+FS434 | End-to-end verification strategy | junior
+Q: How would you verify order confirmation emails without sending messages to real customers?
+A: Route test-environment delivery to a controlled mail sink or provider test facility. Submit an order through the application, then inspect the captured message for recipient, key content, and linkage to the order. Verify delivery failure handling separately. This checks template and integration wiring without uncontrolled external effects, while clearly distinguishing capture from actual internet delivery.
+
+FS435 | End-to-end verification strategy | junior
+Q: What evidence should a failed end-to-end API journey retain for diagnosis?
+A: Capture sanitized request and response summaries, correlation identifiers, relevant job states, and service logs around the failure. Preserve fixture identifiers and deployment version so the state can be investigated. Avoid recording credentials or full sensitive payloads. Good evidence identifies the failed boundary without rerunning blindly and makes failures actionable rather than merely reporting that a timeout occurred.
+
+FS436 | End-to-end verification strategy | mid
+Q: A full test suite takes an hour. Which journeys should block a small deployment?
+A: Select a fast smoke set covering startup, authentication, a critical read, and the highest-impact write workflow. Run broader regression coverage at appropriate pipeline stages or schedules based on change risk. Do not simply disable slow tests without replacing their protection. Track which guarantees the smoke set does and does not establish so release decisions remain informed.
+
+FS437 | End-to-end verification strategy | mid
+Q: How can an end-to-end test verify eventual consistency without treating temporary lag as failure?
+A: Submit a state change and wait within a documented convergence bound for the downstream projection or notification. Assert the final value and capture intermediate state when the deadline expires. Separately test that unacceptable stale behavior is handled correctly. Eventual consistency needs a measurable operational expectation; waiting forever would hide broken propagation rather than validate the design.
+
+FS438 | End-to-end verification strategy | mid
+Q: Should production smoke tests create real billable orders?
+A: Prefer dedicated synthetic accounts, clearly marked non-billable records, and scoped test capabilities that cannot affect real users. Read-only probes may cover basic health, while controlled synthetic transactions verify deeper paths. Define cleanup, audit labeling, and alert routing. Production verification must minimize side effects and should never casually reuse real customer accounts or payment instruments.
+
+FS439 | End-to-end verification strategy | junior
+Q: Why can a test retry policy conceal a genuine defect?
+A: Automatic reruns can turn intermittent races into a green build while users continue experiencing them. Record initial failures and track retry rates instead of counting only final passes. Use limited retries for known infrastructure instability, with ownership and investigation. A flaky business assertion deserves diagnosis, especially when it indicates concurrency, ordering, or incomplete cleanup problems.
+
+FS440 | End-to-end verification strategy | junior
+Q: An end-to-end journey fails after a harmless response field was added. What should be reviewed?
+A: Check whether the test compares entire responses unnecessarily instead of asserting the public guarantees relevant to the journey. Exact snapshots are useful for intentional contract review but can overconstrain incidental fields and timestamps. Keep strict assertions for important semantics and schema rules, while excluding nondeterministic or explicitly extensible details. Do not weaken assertions merely to accept an unexplained failure.
+
+FS441 | CI/CD pipelines | junior
+Q: What gates should run before a pull request merges, and why not run every possible check there?
+A: Gates should catch likely breakage quickly: build, type checks, unit tests, lint, and targeted integration tests. Longer suites can run on merge, on schedule, or in later stages so feedback stays fast and failures stay attributable. Balance signal against wait time, since developers avoid frequent small commits when verification is slow. Document what each gate establishes so skipped or optional checks remain understood.
+
+FS442 | CI/CD pipelines | junior
+Q: A pipeline test passes locally but fails in CI. What differences would you investigate?
+A: Compare environment versions, dependency resolution, available services, time zones and locale, resource limits, parallelism, and database state. Check whether tests depend on wall-clock timing, network access, port availability, or machine-specific paths. Reproduce with the CI configuration locally where possible, and capture diagnostics before fixing. Treating CI as the authority prevents local-only green builds from masking real problems.
+
+FS443 | CI/CD pipelines | junior
+Q: Why avoid storing production credentials directly in CI configuration files?
+A: Configuration files are broadly readable within a repository and may be exposed through logs, forks, or history. Use the CI platform's secret storage with least-privilege credentials scoped to specific jobs, rotate them, and avoid echoing values. Prefer short-lived credentials or workload identity federation where available. Review pipeline logs for accidental secrets before publication, and never disable masking for debugging convenience.
+
+FS444 | CI/CD pipelines | junior
+Q: What is the purpose of a staging environment, and what can it still miss?
+A: It provides a production-like environment for verifying deployments, migrations, integrations, and configuration under controlled conditions. It can miss production-scale data distributions, real traffic patterns, third-party behavior at full rate limits, and certain failure modes like region outages. Treat staging verification as necessary but not sufficient; complement it with production monitoring, controlled synthetic checks, and gradual rollout.
+
+FS445 | CI/CD pipelines | mid
+Q: How do database migrations fit into a deployment pipeline safely?
+A: Run migrations as an explicit, monitored step with known rollback behavior, ordered relative to application rollout. Prefer expand phases so old and new code run against one schema during transition. Verify migration success and record it before enabling new application instances. Avoid coupling migrations invisibly to application startup, which makes failures harder to diagnose and retries riskier.
+
+FS446 | CI/CD pipelines | junior
+Q: Why build a deployable artifact once and promote it through environments rather than rebuilding per environment?
+A: Rebuilding can produce different artifacts from changed dependencies or toolchains, so what you tested may differ from what you deploy. A single versioned artifact promoted with environment-specific configuration ensures the verified bits are what ships. Store provenance such as commit and pipeline identifiers. Configuration belongs outside the artifact to avoid rebuilding for environment differences.
+
+FS447 | CI/CD pipelines | mid
+Q: What does a canary deployment accomplish that a full rollout does not?
+A: A canary exposes a new version to a small traffic fraction first, revealing regressions, performance differences, or integration failures with limited blast radius. Compare error rates, latency, and business metrics between versions before expanding. It requires routing control, observability, and an automated or documented rollback decision. Some defects only appear under real traffic patterns that staging cannot reproduce.
+
+FS448 | CI/CD pipelines | junior
+Q: A deployment succeeded but the feature is broken for users. What deployment checks were missing?
+A: Post-deployment verification should confirm the actual user-visible outcome, not only that processes started. Add synthetic checks against key endpoints, health checks that verify dependencies rather than just process liveness, and business-metric monitoring after rollout. Verify configuration and secrets resolved correctly in the target environment. Deployment success without functional verification leaves regressions discovered by users rather than the team.
+
+FS449 | CI/CD pipelines | mid
+Q: How should rollback work when a migration has already applied destructive changes?
+A: Rolling back application code alone may not reverse the schema. Destructive migrations require a rehearsed recovery plan: restoring data from backups, applying a compensating migration, or both, each tested beforehand. Expand-and-contract avoids many such scenarios by delaying destructive steps until confidence is high. Practice recovery in staging, and document decision criteria for when rollback is appropriate versus forwarding.
+
+FS450 | CI/CD pipelines | junior
+Q: Why tag deployments with a version or commit identifier visible to the running service?
+A: It lets support, monitoring, and developers confirm what is actually running in each environment, which is essential during rollbacks, rollouts, and incident diagnosis. Expose it through a health endpoint or log line, and include it in error reports. Version ambiguity slows every investigation. Ensure the tag reflects the exact artifact rather than a manually maintained string that drifts from reality.
+
+FS451 | Containers and configuration | junior
+Q: What does a small container image provide beyond reduced download time?
+A: Smaller images reduce storage across registries and hosts, speed scheduling and scaling, and shrink the surface for vulnerabilities by excluding unneeded tools and libraries. Multi-stage builds keep build toolchains out of runtime images. However, minimal base images can complicate debugging, so ensure necessary diagnostics are accessible through sidecars or platform tooling rather than bloating every image by default.
+
+FS452 | Containers and configuration | junior
+Q: Why should a container run one foreground process rather than a startup script launching several services?
+A: Container orchestration manages the process it supervises; backgrounded child processes hide failures, restarts, and log routing from the platform. One process per container aligns lifecycle, signals, and health signals with the orchestrator's model. Use separate containers or a supported init approach for genuinely multi-process needs. This improves restart behavior and makes failures observable rather than silently absorbed by shell scripts.
+
+FS453 | Containers and configuration | mid
+Q: How should an application inside a container handle shutdown signals?
+A: Handle the termination signal by stopping acceptance of new work, finishing or safely delegating in-flight requests, closing database connections, and committing or checkpointing job state within the grace period. Ignore signals and the platform force-kills the process, losing state. Verify with a deployment or local test that shutdown completes cleanly, since graceful handling is only real if it actually works under load.
+
+FS454 | Containers and configuration | junior
+Q: What belongs in a health endpoint versus a readiness check?
+A: Liveness indicates the process should be restarted when irrecoverably stuck; it must not depend on external dependencies or a restart storm follows. Readiness indicates the instance can serve traffic now, legitimately including critical dependency checks and initialization status. Confusing them causes cascading restarts during dependency incidents. Keep checks cheap and avoid exposing sensitive internals through unauthenticated health endpoints.
+
+FS455 | Containers and configuration | junior
+Q: Why inject configuration through environment or mounted sources rather than baking values into images?
+A: One artifact should serve multiple environments with configuration supplied at deployment. Baked values force rebuilds for changes, risk leaking environment-specific settings between stages, and complicate provenance. Injected configuration also supports rotation and emergency changes without redeploying code. Keep secrets in dedicated secret mechanisms rather than ordinary environment files checked into repositories.
+
+FS456 | Containers and configuration | junior
+Q: A container exits immediately with a configuration error. Why is failing fast correct, and what should accompany it?
+A: Starting with invalid configuration creates a service that appears available but cannot work. Validate required settings before serving traffic and report the setting name without exposing its secret value. Make the deployment surface the failure clearly; repeated restarts will not fix a permanently invalid value. Document expected configuration and test validation so diagnosis is direct rather than dependent on downstream errors.
+
+FS457 | Containers and configuration | mid
+Q: What is a sidecar container, and when does it help?
+A: A sidecar runs alongside the application container in the same deployment unit, providing a supporting capability such as log shipping, proxying, or secret retrieval without embedding it in application code. It shares lifecycle with the workload while remaining independently maintainable. Use cases include TLS termination, metrics agents, and credential brokers. Overusing sidecars adds operational overhead, so adopt them where the separation pays off.
+
+FS458 | Containers and configuration | junior
+Q: Why pin dependency versions and base image digests rather than using latest?
+A: Unpinned dependencies make builds non-reproducible: an upstream release can change behavior or break builds without any repository change. Pinning versions, and digests where supported, makes deployments reproducible and reviews meaningful. Update deliberately through automated tooling that runs tests, rather than receiving surprise upgrades in production builds. Pinning does not replace vulnerability monitoring; it complements it with controlled upgrades.
+
+FS459 | Containers and configuration | mid
+Q: A config change requires redeploying the whole application. When is dynamic configuration justified?
+A: Dynamic configuration suits values needing change without redeployment: feature flags, rate limits, and operational toggles. It introduces consistency, caching, and failure-mode questions, since a config service outage affects behavior. Keep critical safety properties in code or static configuration and limit dynamic values to those benefiting from rapid change. Every dynamic setting needs a defined fallback when the source is unavailable.
+
+FS460 | Containers and configuration | junior
+Q: How should local development containers stay close to production without slowing daily development?
+A: Use the same core technologies and versions where practical, share configuration structure, and provide a documented compose or equivalent setup. Allow pragmatic substitutions such as lighter databases only where behavior differences are understood and covered elsewhere. Keep parity for anything affecting correctness, such as database engine and message formats, while optimizing startup time and iteration speed for developer experience.
+
+FS461 | Deployment and reliability | junior
+Q: What is the difference between rolling, blue-green, and canary deployments?
+A: Rolling replaces instances gradually, balancing resource cost against overlap risk. Blue-green maintains two full environments and switches traffic, enabling fast rollback but requiring double capacity and careful state handling. Canary exposes a small traffic slice to the new version and expands based on measured signals. Each balances risk, cost, and speed differently; choose based on traffic patterns, statefulness, and rollback needs.
+
+FS462 | Deployment and reliability | junior
+Q: Why do graceful shutdown and connection draining matter during rolling deployments?
+A: Without draining, terminating instances drop in-flight requests, producing user-visible errors during every deploy. Stop accepting new connections, finish or hand off in-flight work, and let load balancers detect readiness changes. Coordinate with job workers so tasks checkpoint or complete. Verify behavior by watching error rates during deploys; quiet deploys indicate the mechanism actually works under real traffic.
+
+FS463 | Deployment and reliability | mid
+Q: What does a rollback actually require beyond redeploying the previous artifact?
+A: Consider schema compatibility with the previous version, queues containing messages the old code cannot process, caches holding new-format data, and feature flags enabling new paths. A safe rollback plan addresses each. Some changes require forward-fixing because reversal is riskier. Define rollback triggers, who decides, and expected duration beforehand rather than improvising during an incident.
+
+FS464 | Deployment and reliability | mid
+Q: How would you define an SLO for an order API, and why not promise 100 percent availability?
+A: Set objectives on user-meaningful signals, such as 99.9 percent of order submissions succeeding within a latency threshold over a rolling window. Define measurement points, exclusions like planned maintenance, and error budget policy. Absolute availability targets are uneconomical and hide tradeoffs; error budgets make the cost of reliability explicit and inform when to slow feature velocity for stability work.
+
+FS465 | Deployment and reliability | junior
+Q: What is graceful degradation, and give an example for a product page. What is it?
+A: Serving reduced functionality when a dependency fails instead of failing entirely. A product page might show cached descriptions and disable reviews when a review service is down, or hide recommendations when their service times out. Design requires deciding per dependency whether failure blocks the core outcome, defaulting safely, and communicating reduced state to users. Timeouts and fallbacks must be deliberate, not accidental defaults.
+
+FS466 | Deployment and reliability | mid
+Q: Why do retries without limits make outages worse, and what patterns bound them?
+A: Unbounded retries multiply load exactly when systems are weakest, converting partial outages into overload. Bound retries by count and deadline, add jittered backoff, respect server hints like Retry-After, and apply circuit breakers to stop traffic during sustained failure. Coordinate budgets across call chains so nested retries do not multiply requests. Load shedding and prioritization protect critical work under stress.
+
+FS467 | Deployment and reliability | junior
+Q: What is a runbook, and what makes one useful during an incident?
+A: A runbook documents symptoms, diagnostic steps, remediation actions, and escalation paths for a specific failure mode. Useful runbooks are specific enough to execute under pressure: exact commands, dashboards, expected outputs, and decision points. Keep them near the code or alerting that references them and update after use. Untested runbooks decay into misleading documents; verify steps during calm periods.
+
+FS468 | Deployment and reliability | mid
+Q: How does a game day or failure drill improve reliability?
+A: Deliberately exercising failure modes, such as dependency outages or instance loss, in a controlled environment tests assumptions in runbooks, alerts, timeouts, and fallbacks before real incidents. Drills reveal whether on-call can actually execute recovery steps and whether monitoring surfaces the problem as designed. Findings feed concrete fixes. Practice converts theoretical resilience into verified behavior and builds team confidence.
+
+FS469 | Deployment and reliability | mid
+Q: Why can a single shared database become an availability bottleneck even when application servers scale horizontally?
+A: All instances contend for one database's connections, locks, and capacity, so scaling stateless tiers just concentrates pressure. Pool sizing, connection limits, and long transactions become failure points. Mitigations include pooling layers, read replicas for appropriate queries, caching, and eventually partitioning or extracting services. Recognize which components are stateful and scale them deliberately rather than assuming horizontal scaling solves everything.
+
+FS470 | Deployment and reliability | junior
+Q: What is the blast radius of a change, and how do you reduce it?
+A: Blast radius is the scope of users and functionality a failed change can affect. Reduce it through incremental rollouts, feature flags, tenant- or region-scoped enablement, thorough pre-production verification, and clear rollback paths. Design dependencies so failures stay localized. For data-changing operations, consider dry runs and backout scripts. Smaller, reversible changes shorten recovery time and make cause-effect easier to establish.
+
+FS471 | Distributed systems and consistency | junior
+Q: What does eventual consistency mean for a user who just placed an order?
+A: The write is accepted, but replicas, caches, search indexes, and downstream systems may lag before reflecting it. The user might not immediately see the order in a list or receive a notification, which is acceptable if the design acknowledges it. Problems arise when interfaces promise immediate visibility across all views. Identify which reads require strong guarantees and route them appropriately.
+
+FS472 | Distributed systems and consistency | mid
+Q: Two users concurrently update the same document. How might a conflict be detected and resolved?
+A: Optimistic concurrency uses a version or timestamp check so the second write is rejected or merged deliberately rather than silently overwriting. Pessimistic locking prevents concurrent edits at the cost of blocking. Resolution may be last-writer-wins, user-assisted merge, or domain rules. Choose based on how costly lost updates are. Version fields belong in API contracts when clients need to coordinate updates safely.
+
+FS473 | Distributed systems and consistency | mid
+Q: Why can two services holding the same data drift apart?
+A: Without a shared transaction boundary, writes to each system happen independently, so failures between them leave inconsistent state. Synchronization strategies include one authoritative owner, event-driven propagation with reconciliation, or periodic consistency checks. Drift is not inherently wrong if the domain accepts approximate agreement, but silent divergence in data that users expect to match causes support incidents and reconciliation work.
+
+FS474 | Distributed systems and consistency | mid
+Q: What is an event-driven architecture, and what does it change about reasoning?
+A: Services publish facts about state changes that other components consume asynchronously, decoupling producers from consumers. Reasoning shifts from synchronous request-response to eventual propagation, ordering, and replay. Benefits include resilience to consumer outages and easier extension through new subscribers. Costs include harder debugging across asynchronous hops, schema evolution, and duplicate or out-of-order delivery that consumers must handle.
+
+FS475 | Distributed systems and consistency | mid
+Q: An event adds a required field while some consumers still run older versions. How should event schemas evolve?
+A: Prefer backward-compatible additions with clearly defined absence semantics and tolerant consumers where appropriate. Deploy consumers that understand the new contract before producers require it, or publish a deliberately versioned event. Retained historical events must remain readable during replay. Verify old and new examples against consumer contracts; broker delivery guarantees do not protect against incompatible payload meaning.
+
+FS476 | Distributed systems and consistency | mid
+Q: A search projection has lost records while the primary database remains correct. How can the projection be rebuilt safely?
+A: Rebuild from authoritative records into a new index while recording a change-stream position or equivalent boundary. Apply changes occurring during the rebuild, verify counts and representative results, then switch readers. Define handling of deletions as well as updates. Rebuilding directly into the live index can expose partial results; a separate generation permits validation before replacing the current projection.
+
+FS477 | Distributed systems and consistency | mid
+Q: Why is a distributed transaction across two independent services generally avoided, and what replaces it?
+A: Coordinated two-phase commit couples availability across services and complicates every participant, so many designs prefer eventual consistency: one service owns the state change, publishes events, and others react idempotently with compensation when later steps fail. This accepts temporary inconsistency in exchange for independence. Choosing between them depends on business requirements for atomicity versus availability and operational maturity.
+
+FS478 | Distributed systems and consistency | mid
+Q: A downstream consumer processes events out of order. What design options exist?
+A: Include version numbers, sequence numbers, or timestamps in events and let consumers discard or reorder stale updates. Some brokers support partitioning by key so related events arrive in order. Alternatively, design consumers to be order-insensitive by reading authoritative state after notification. Event ordering assumptions must be explicit, because silent out-of-order processing corrupts projections and creates intermittent, confusing defects.
+
+FS479 | Distributed systems and consistency | mid
+Q: What is a saga, and how does it handle a step failing midway?
+A: A saga coordinates a multi-step business process across services as a sequence of local transactions, each with a defined compensating action if a later step fails. Compensation is semantic undo, like cancelling a reservation, not necessarily reversing the underlying operation. Sagas trade atomicity for availability and need careful state tracking, retry policy, and observability to remain debuggable.
+
+FS480 | Distributed systems and consistency | mid
+Q: Why do distributed clocks complicate event ordering across services?
+A: Wall clocks differ between machines and can step backward, so timestamps alone cannot establish causal order. Use logical clocks, sequence numbers, or dependency tracking where ordering matters, or route related events through a single ordered channel. Accept that perfect global ordering may be unnecessary; identify which decisions actually require it rather than assuming every event stream needs strict global sequencing.
+
+FS481 | Scalability and performance | junior
+Q: How would you identify whether a slow endpoint is limited by database, application logic, or external calls?
+A: Measure where time goes: application timing around each stage, database query durations and plans, and external call latency. Tracing across boundaries shows which dominates. Profile representative traffic rather than a single warmup request. Each cause has different remedies: indexing and query changes for database work, algorithmic improvement for logic, and caching or timeouts for external dependencies.
+
+FS482 | Scalability and performance | mid
+Q: Why can adding more application instances fail to improve throughput?
+A: If the bottleneck is a shared database, a single-threaded dependency, lock contention, or external rate limits, extra instances add load without adding capacity. Profile the whole path before scaling horizontally. Confirm that connection pools, queue consumers, and caches actually distribute work. Scaling the tier that is not saturated wastes cost and may worsen database contention through more concurrent connections.
+
+FS483 | Scalability and performance | junior
+Q: What are the tradeoffs of loading a full user profile on every request versus lazy loading parts of it?
+A: Full loading simplifies code and guarantees consistency within a request but wastes work when only a few fields are needed. Lazy or field-specific loading reduces transfer and computation but increases query counts and risks N+1 patterns. The right choice depends on access patterns, sizes, and latency budgets. Profile before optimizing; premature splitting adds complexity without measurable benefit.
+
+FS484 | Scalability and performance | junior
+Q: What is connection pooling, and what happens with too few or too many pooled connections?
+A: Pooling reuses database connections instead of opening one per request, avoiding expensive handshakes. Too few connections serialize work and build queues; too many exhaust database capacity and increase contention, degrading all clients. Size pools against the database's capacity and workload characteristics, monitor wait times, and ensure pool settings are coordinated across all instances sharing one database.
+
+FS485 | Scalability and performance | mid
+Q: A report performs CPU-heavy calculations and delays unrelated API requests. What isolation options help?
+A: Move expensive computation to a bounded worker pool or separate process, depending on the runtime. Limit queued work and reject or defer excess demand rather than spawning unlimited tasks. Separate compute-heavy jobs from latency-sensitive request capacity. Measure CPU saturation and scheduling delays; asynchronous syntax does not make CPU work nonblocking or create additional processor capacity.
+
+FS486 | Scalability and performance | mid
+Q: A growing events table is difficult to maintain. How does partitioning differ from sharding?
+A: Partitioning divides a logical table into manageable pieces, often within one database, enabling pruning and lifecycle operations when queries and partition keys align. Sharding distributes data across independent database nodes and adds routing, rebalancing, and cross-shard coordination. Neither automatically accelerates every query. Choose based on measured capacity or maintenance needs rather than table size alone.
+
+FS487 | Scalability and performance | mid
+Q: What problems come from storing large binary blobs directly in a relational table?
+A: Rows become heavy, slowing scans, backups, replication, and even queries that exclude the blob column depending on storage layout. Memory pressure rises when clients fetch wide rows. Object storage with a metadata row referencing the object usually scales better, keeps databases lean, and enables direct client uploads or downloads. Smaller inline blobs may be acceptable when access patterns truly require transactional coupling.
+
+FS488 | Scalability and performance | junior
+Q: Why does a missing LIMIT on an internal admin search cause production incidents?
+A: Unbounded queries return entire tables, exhausting memory, saturating network, and blocking database resources while other queries wait. Apply limits everywhere, including internal tools and scripts, and bound offsets or require explicit filters. Add statement timeouts where supported to prevent runaway queries from holding connections indefinitely. Review arbitrary admin queries with the same rigor as customer-facing endpoints.
+
+FS489 | Scalability and performance | mid
+Q: How can read replicas help a reporting workload, and what limitations apply?
+A: Replicas offload heavy reads from the primary, but replication lag means reported data may be behind writes. Queries that were fine on the primary can still consume replica resources and affect other reads. Route queries that tolerate staleness to replicas and keep strong-consistency reads on the primary, with monitoring for lag. Replicas also provide failover candidates but do not substitute for backups.
+
+FS490 | Scalability and performance | mid
+Q: One large tenant consumes most worker capacity. How can a shared service provide fairer throughput?
+A: Apply per-tenant concurrency limits, bounded queues, or weighted scheduling so one workload cannot occupy every worker. Reserve capacity for critical operations and expose understandable throttling behavior. Measure waiting time and throughput by workload class without introducing unbounded metric labels. Fairness may reduce peak throughput for the busiest tenant, so align scheduling policy with service commitments.
+
+FS491 | Incident diagnosis and response | junior
+Q: An alert fires: order API error rate exceeds 5 percent. What do you check first?
+A: Confirm scope: which endpoints, status codes, tenants, and regions are affected, and whether errors correlate with a recent deployment, configuration change, or dependency event. Check dependency health and saturation signals such as connection pools, CPU, and queue depth. Establish whether the alert reflects a real user-facing problem before mitigating. Communicate early with the team even while diagnosing.
+
+FS492 | Incident diagnosis and response | mid
+Q: Errors began minutes after a deployment. Why is correlation alone not proof of causation?
+A: Other changes, traffic patterns, cron jobs, or dependency events may coincide with the deployment. Compare error signatures with known behavior, check whether affected requests share a code path actually changed, and review canary or staged rollout data. If rollback is safe and cheap, do it while investigating rather than debating causation during an active incident. Record findings afterward for learning.
+
+FS493 | Incident diagnosis and response | mid
+Q: Why do incidents often reveal the same few categories of root cause?
+A: Configuration changes, dependency outages, resource exhaustion, data growth crossing thresholds, and coordination failures recur because systems share structural patterns. Building checklists for these categories speeds diagnosis. Post-incident reviews that stop at the proximate trigger without examining contributing conditions miss systemic improvements. Treat recurring causes as design signals rather than one-off operator errors to blame.
+
+FS494 | Incident diagnosis and response | junior
+Q: What belongs in an incident timeline, and why write it during the incident?
+A: Record detection time, alert source, actions taken, decision points, and key observations with timestamps. Writing contemporaneously preserves details that memory loses under stress and supports coordination when people hand over. Include rollback triggers and when they were evaluated. The timeline becomes the backbone of blameless review, distinguishing what happened from interpretation added later.
+
+FS495 | Incident diagnosis and response | junior
+Q: What does a blameless postmortem aim to produce?
+A: A shared understanding of what happened, why it made sense at the time, and concrete improvements: monitoring, automation, process, or design changes with owners. Blame discourages honest disclosure and produces shallow fixes. Focus on contributing conditions rather than individual mistakes. Track follow-up items to completion, since unresolved actions quietly recreate the same incident later.
+
+FS496 | Incident diagnosis and response | junior
+Q: How do you distinguish a database problem from an application problem in a latency spike?
+A: Compare database-side signals such as query duration, lock waits, connection saturation, and replication lag against application-side signals like thread pool exhaustion, garbage collection, and downstream call latency. Correlation across the request path matters: a slow query shows in database metrics; slow serialization shows only in application timing. Distributed tracing often resolves the ambiguity fastest.
+
+FS497 | Incident diagnosis and response | mid
+Q: A single tenant reports slowness while overall metrics look healthy. How do you investigate?
+A: Per-tenant data volume, feature flags, regional routing, and specific query patterns can affect one customer invisibly in aggregate metrics. Reproduce with their parameters, inspect their query plans and recent data growth, and check their rate limits and feature configuration. Avoid assuming that good aggregate dashboards exclude localized problems; per-tenant observability catches what averages hide.
+
+FS498 | Incident diagnosis and response | junior
+Q: Why should incident severity levels and communication templates be agreed before an incident?
+A: Under pressure, teams need pre-agreed criteria for escalation, response scope, and stakeholder updates. Severity definitions prevent debates about whether something qualifies and align response effort with impact. Templates speed accurate communication without downplaying uncertainty. Review the framework after each incident so it reflects reality rather than remaining an unused document written during calm conditions.
+
+FS499 | Incident diagnosis and response | mid
+Q: How do you preserve diagnostic data during an incident for later review?
+A: Snapshot logs, metrics, traces, and configuration around the incident window before rotation or cleanup removes them, using appropriate access controls. Record deployed versions, flags, and traffic patterns. Screenshots of dashboards supplement automated exports. Without preserved evidence, review depends on memory and loses precision. Balance retention with privacy obligations when data includes user information.
+
+FS500 | Incident diagnosis and response | mid
+Q: A cleanup bug deleted valid records. Why restore into a separate environment before changing production?
+A: An isolated restore lets the team inspect the recovery point, validate integrity, and identify precisely which records need recovery without overwriting newer valid production changes. Preserve evidence and stop the destructive path first. Compare restore options against recovery-time and data-loss objectives. A backup's existence does not prove restoration works or that a full production overwrite is appropriate.
+
+FS501 | Feature design and tradeoffs | junior
+Q: A PM asks for a 'recently viewed products' feature. What backend decisions shape it?
+A: Decide what counts as recent, how many items to retain, whether to store per-user or per-session, and whether anonymous browsing counts. Choose storage: a small per-user list in cache, a database table, or a stream aggregation. Define privacy implications and whether clearing history must be supported. Simple requirements often hide decisions about scope, retention, and personalization that determine implementation cost.
+
+FS502 | Feature design and tradeoffs | junior
+Q: Design tradeoffs for a 'save for later' wishlist versus a full cart.
+A: A wishlist is lower-stakes: no inventory reservation, no price guarantee, and relaxed consistency. A cart typically implies availability checks, price calculation, and checkout eligibility. Sharing infrastructure simplifies code but risks conflating different business semantics. Separate models cost more but keep each behavior clear. Ask which operations and guarantees each actually needs before unifying their storage or endpoints.
+
+FS503 | Feature design and tradeoffs | mid
+Q: A client wants real-time notifications for order status changes. What architectural choices exist?
+A: Options include client polling a status endpoint, server-sent events, WebSockets, or push notifications, each with different connection management, scaling, and complexity. Consider delivery guarantees, reconnection behavior, and whether mobile backgrounding matters. A pragmatic middle ground is frequent polling with efficient queries plus optional push for critical updates. Choose based on latency needs, client platforms, and operational capacity.
+
+FS504 | Feature design and tradeoffs | mid
+Q: What backend considerations arise when adding a search feature over product data?
+A: Decide whether database full-text search suffices or an external search service is justified by scale, relevance ranking, or typo tolerance. Search indexes introduce synchronization lag and eventual consistency between writes and search visibility. Define what fields are searchable, how filters compose, and how authorization applies. Start with the simplest adequate tool and measure before adopting infrastructure that requires operational investment.
+
+FS505 | Feature design and tradeoffs | mid
+Q: A feature must record every change to an order for audit. What design options exist?
+A: Append-only event records capturing what changed, who, and when, written in the same transaction as the mutation, preserve history without trusting application discipline alone. Database temporal features or triggers are alternatives where supported. Define retention, access control, and whether the audit trail is for compliance or user-facing history, because that shapes privacy exposure and query patterns.
+
+FS506 | Feature design and tradeoffs | junior
+Q: How would you design a rate limit for a public API endpoint, and what do clients need to know?
+A: Choose a limit basis such as requests per interval per API key or IP, implement shared enforcement across instances, and document limits in responses using standard headers. Define behavior when exceeded, including Retry-After and a distinct status code. Decide per endpoint rather than one global policy, since search and mutation differ in cost. Monitor rejections to tune limits against real usage patterns.
+
+FS507 | Feature design and tradeoffs | mid
+Q: A bulk CSV import feature is requested. What backend concerns shape its design?
+A: Validate structure and row-level content with bounded error reporting, handle encodings and size limits, and define whether imports are atomic or partial. Large files need asynchronous processing with progress and downloadable error reports. Consider duplicate handling, field mapping, permissions on imported records, and audit trails. Testing should cover malformed files, not just well-formed samples.
+
+FS508 | Feature design and tradeoffs | mid
+Q: Tradeoffs between implementing notifications internally versus using an external provider.
+A: Internal delivery gives control over templates, retries, and data residency but requires maintaining provider integrations, bounce handling, and deliverability. External providers offer established deliverability, analytics, and compliance features at cost and dependency risk. Evaluate volume, regulatory needs, and team capacity. Either way, design delivery as asynchronous with status tracking and failure handling, not fire-and-forget code in request paths.
+
+FS509 | Feature design and tradeoffs | mid
+Q: How would you approach soft-delete versus hard-delete for user records?
+A: Soft-delete retains records with a status flag, supporting recovery, audit, and references from historical records, but complicates every query with filters and may conflict with privacy requirements. Hard-delete is simpler to reason about but loses referential history. Hybrid approaches archive anonymized records. The choice depends on legal obligations, product expectations, and whether historical integrity matters more than storage simplicity.
+
+FS510 | Feature design and tradeoffs | mid
+Q: A stakeholder wants an admin dashboard with live metrics. What backend design decisions matter?
+A: Decide freshness requirements: real-time streaming versus periodic refresh changes infrastructure significantly. Precompute aggregates rather than scanning transactional tables on demand. Define access control for potentially sensitive operational data, and paginate or cap query scope. Live dashboards can inadvertently create load; cache aggregate queries and consider dedicated read paths. Clarify which decisions the dashboard actually informs before building elaborate visualizations.
+
+FS511 | Load and performance testing | mid
+Q: Leadership asks how many orders per second checkout can handle. What should a useful capacity test measure?
+A: Define acceptable throughput, latency percentiles, and errors before running the test. Use a realistic read/write mix, increase arrival rate gradually, and monitor database and application saturation together. Record the point where latency or errors exceed the target rather than reporting maximum requests alone. Repeat measurements with representative data and leave headroom for bursts and dependency variability.
+
+FS512 | Load and performance testing | junior
+Q: A service passes a 500-user test but fails in production with 300 users. What assumptions should be reviewed?
+A: User count alone does not describe workload. Production users may submit more requests, larger payloads, or more expensive queries. Tests may accidentally share one cached account or exercise only small datasets. Compare actual arrival rates, operation mix, think time, and data distribution. Include background work and cold paths rather than assuming simulated users automatically resemble real traffic.
+
+FS513 | Load and performance testing | mid
+Q: What does a six-hour soak test reveal that a five-minute load test may miss?
+A: Sustained operation can expose memory leaks, connection leaks, growing queues, cache churn, and periodic maintenance interactions. Track resource trends after warmup, not only final error counts. Use representative steady traffic and observe whether throughput remains stable. A short burst establishes immediate capacity, while a soak test checks whether that capacity remains sustainable over time.
+
+FS514 | Load and performance testing | mid
+Q: A load generator reaches its own CPU limit before the service slows down. How should the results be interpreted?
+A: The test has measured the generator's ceiling rather than the service's capacity. Monitor generator CPU, connection limits, network throughput, and achieved arrival rate. Distribute generation or simplify test overhead while preserving workload semantics. Report that the service handled the achieved load, not that its maximum capacity was established. Generator saturation can otherwise create misleadingly reassuring results.
+
+FS515 | Load and performance testing | mid
+Q: Why can a closed-loop load test hide overload that occurs with independently arriving requests?
+A: Closed-loop clients wait for responses before sending more work, so rising latency automatically reduces their request rate. Real arrivals may continue regardless of response time, building queues instead. An arrival-rate-driven test can model that condition. Choose the model matching the workload and record intended versus achieved arrivals; otherwise apparent stability may merely reflect reduced offered load.
+
+FS516 | Load and performance testing | mid
+Q: How would you test recovery after a sudden traffic burst rather than only performance during the burst?
+A: Apply a controlled burst in an isolated environment, then return traffic to baseline and watch queue age, latency, memory, and connection usage. Verify the service recovers within a defined window without manual restart or duplicate processing. Check rejected requests receive appropriate responses. A system that survives a spike but remains degraded afterward has not demonstrated effective recovery.
+
+FS517 | Load and performance testing | junior
+Q: Two benchmark runs differ by eight percent. Is that enough to claim a performance improvement?
+A: Not without understanding measurement variability. Repeat comparable runs with stable versions, data, hardware, warmup, and background load. Examine distributions and confidence rather than a single average. Also verify correctness and resource cost remain acceptable. Small changes inside normal variance should be reported as inconclusive, not advertised as improvements simply because one run happened to be faster.
+
+FS518 | Load and performance testing | mid
+Q: How should test data include both ordinary tenants and unusually large tenants?
+A: Model the observed distribution rather than giving every tenant identical small datasets. Include large accounts, skewed popular records, and realistic relationship counts because they produce different plans and contention. Keep generated data synthetic and preserve relevant structural characteristics. Report results by workload class so a healthy average does not conceal failures for the largest customers.
+
+FS519 | Load and performance testing | junior
+Q: A performance test reports excellent latency because it excludes failed requests. Why is that misleading?
+A: Fast successful requests may be only a small fraction of the offered workload while slow requests time out or fail. Report errors, timeout durations, achieved throughput, and latency together. State exactly which requests each metric includes. A service cannot meet a performance objective by dropping expensive work unless intentional load shedding is part of the documented success criteria.
+
+FS520 | Load and performance testing | junior
+Q: What safeguards should surround a load test that creates orders and sends notifications?
+A: Prefer an isolated environment with synthetic accounts, non-billable providers, explicit request limits, and controlled notification sinks. Agree on duration, stop conditions, resource budgets, and cleanup before execution. Monitor shared dependencies so testing does not disrupt unrelated work. A performance experiment must not accidentally create real financial or customer-facing effects merely to obtain realistic-looking traffic.

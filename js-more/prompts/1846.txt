@@ -1,0 +1,18 @@
+Lazy iterator pipelines / scenario 8 — mode=negate; take=4
+
+TASK
+Input iterable of finite numbers. Return lazy iterable: negate each value, then take at most 4. Do not pull input at construction or beyond the last yielded item. Early consumer termination or reaching take must close underlying iterator with return(). Do not materialize input.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1846.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1846
+node js-more/verify.cjs --starters --id=1846
+
+POLICIES
+mode=negate; take=4
+Semantic key: {"mode":"negate","take":4}

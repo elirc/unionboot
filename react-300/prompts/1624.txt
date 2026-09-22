@@ -1,0 +1,18 @@
+Ordered batch loader / scenario 6 — atomic result policy; order C,A,B
+
+TASK
+Load starts all injected loadOne(id,shared AbortSignal) concurrently in ids order, disabled while loading. State output idle/loading/done/error. Results list in input order, not response order. Any rejected slot makes whole batch State error with no result rows, after all settle. Alert lists failed IDs comma-joined in input order. Cancel aborts batch, clears rows/errors, idle; late settlements ignored. New load clears prior output/error. Empty ids => done, no requests. Unmount aborts.
+
+EXAMPLE
+Resolve C before A and B: final rows still match ids order.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1624.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{loadOne,ids=["C","A","B"]}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1624
+node react-300/verify.cjs --starters --id=1624

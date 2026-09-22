@@ -1,0 +1,187 @@
+UNIONBOOT — JAVASCRIPT, TYPESCRIPT, REACT, C#, ASP.NET CORE AND SQL
+================================================================
+
+Integrated inventory: 3384 exercises. This includes 1718 web exercise IDs
+(JS/TypeScript/React), two standalone C# files with 583 exercises each,
+300 ASP.NET Core web exercises, and 200 SQL/database exercises.
+C# uses E001–E1166, ASP.NET uses W001–W300, and SQL uses Q001–Q200;
+these sequences are separate from the web IDs.
+Additional expansion directories are in progress and are NOT included
+in this integrated inventory or the root verification command yet.
+Use verification-report.json for the outcome of the latest completed run.
+The larger sets are scenario variants, not thousands of
+unrelated algorithms: families are revisited with policy changes, type
+contracts, boundary cases, and integration requirements.
+
+REQUIREMENTS
+Node.js 22+ and npm. Dependencies are installed in this folder.
+Reinstall on another machine: npm ci
+TypeScript is pinned to 5.9.3. .NET SDK 10 for the C# file.
+No external APIs or accounts are needed.
+
+LAYOUT (web tracks, IDs 001–1718)
+001–083   Original *.js files at the root (83 exercises)
+084–103   js/batch-084-103/            (20 JavaScript exercises)
+104–183   js-rest/                     (80 JavaScript policy variants)
+184–283   ts/                          (100 TypeScript scenarios)
+284–383   react/                       (100 React interaction scenarios)
+384–453   mixed-data/                  (70 JavaScript report-policy scenarios)
+454–518   mixed-data/                  (65 TypeScript report-policy scenarios)
+519–583   mixed-react/                 (65 React integration scenarios)
+584–783   react-more/                  (200 React scenarios: the 20 core
+            interaction families expanded 5→15 each, i.e. core 100→300;
+            the 65 mixed-react integrations were NOT expanded)
+784–1203  ts-more/                     (420 TypeScript scenarios)
+1204–1368 ts-final/                    (165 TypeScript scenarios)
+1369–1418 react-junior/               (50 junior-SWE React upskilling tasks)
+1419–1718 react-300/                  (300 React tasks: 30 families × 10
+            scenarios; 170 junior and 130 intermediate exercises)
+
+Totals: JavaScript 253 (001–103, 104–183, 384–453) + TypeScript 750
+(184–283, 454–518, 784–1368) + React 715 (284–383, 519–783, 1369–1718).
+Including 1166 C#, 300 ASP.NET Core and 200 SQL exercises: 3384 overall.
+
+C# PACK (separate file, separate numbering)
+CSHARP-583.cs holds 583 exercises as 53 topic families × 11 labelled
+scenario variants. Every exercise is a static class ENNN with a blank
+Practice method, the Reference solution, and one shared Verify() that
+grades BOTH modes with identical checks.
+
+  dotnet run --file CSHARP-583.cs -- --list
+  dotnet run --file CSHARP-583.cs -- --show 1
+  dotnet run --file CSHARP-583.cs -- --verify          (all references)
+  dotnet run --file CSHARP-583.cs -- --practice 1      (grade your attempt)
+
+Edit the Practice method of class E001/E002/...; references sit beside
+them. Practice mode runs the same assertions on your code.
+
+C# EXPANSION (separate file, E584–E1166)
+CSHARP-MORE-583.cs adds 583 exercises in 53 additional topic families.
+Practice, Reference and Verify follow the same pattern as the first file.
+
+  dotnet run --file CSHARP-MORE-583.cs -- --list
+  dotnet run --file CSHARP-MORE-583.cs -- --show 584
+  dotnet run --file CSHARP-MORE-583.cs -- --practice 584
+  node verify-csharp-more.cjs
+
+SQL / DATABASE PACK (Q001–Q200)
+sql-200/ contains 20 families x 10 policy/scenario variants, each with a
+seeded schema, prompt, blank SQL starter, solution and shared grading test.
+Tests execute real SQL in a fresh in-memory SQLite database using Node's
+built-in node:sqlite. Use Node 22.16+; no database server is needed.
+Read sql-200/GUIDE.txt for SQLite-specific behavior, query-plan version
+sensitivity, script-tokenizer limitations and transaction scope.
+
+  node sql-200/verify.cjs --inventory
+  node sql-200/verify.cjs --id=Q001
+  node sql-200/verify.cjs --starters --id=Q001
+  node sql-200/verify.cjs
+
+Blank starters are expected to fail row assertions, not pass silently.
+
+ASP.NET CORE WEB PACK (separate numbering, W001–W300)
+dotnet-web-300/ holds 300 in-process ASP.NET Core exercises as 30
+web-development families × 10 labelled scenario variants: HTTP results,
+validation/problem details, pagination and query parsing, form/body
+parsing, DI lifetimes/keyed services/options, middleware headers and
+error boundaries, cancellation, streaming, route and authz metadata,
+content negotiation, ETags, cache policy, deterministic cache and
+idempotency stores. No NuGet packages or network.
+
+  node dotnet-web-300/verify.cjs --inventory
+  node dotnet-web-300/verify.cjs --id=W001
+  node dotnet-web-300/verify.cjs --starters --id=1
+  node dotnet-web-300/verify.cjs            (all references)
+  node dotnet-web-300/verify.cjs --starters (all blank, expect failures)
+
+Read prompts/W001.txt, edit starters/W001.cs. One SDK project compiles
+either solutions or starters (ExerciseSet), never both; even a single
+--id compiles the whole selected set, so an unrelated syntax error
+reports as a build failure (exit 2), not a failed exercise (exit 1).
+
+Each web track has manifest.json, GUIDE.txt, starters/, solutions/, and
+tests/. TypeScript tracks also have types/ for positive and negative
+compiler fixtures.
+
+VERIFY ALL REFERENCE SOLUTIONS
+Open a terminal in Desktop/unionboot:
+
+  npm run verify:all
+
+or:
+
+  node verify-all.cjs
+
+This inventories the integrated web IDs 001–1718, both C# files,
+dotnet-web-300 and sql-200, then runs their reference gates sequentially
+and checks representative blank starters. A failed gate exits nonzero.
+Logs go to verification-logs/ and the result to verification-report.json.
+Changed learner starters are left untouched; skipped blank controls are
+recorded separately. Run npm run inventory for inventory only (no grading).
+Expansion tracks enter this command only after their own verification.
+
+The report validates samples and tested edge cases, not every possible
+input. Reference tests passing DOES NOT mean learner starter files are
+completed. React tests run real DOM interactions in jsdom, not a visual
+browser audit. No preview server is included; import a component into
+your own React app and supply example props from its test.
+
+PRACTISE ONE EXERCISE
+1. Read that starter's header and its matching tests for examples.
+2. Implement only the starter; keep the solution separate while practising.
+3. Run its track's verifier with --starters and the ID:
+
+  node js/batch-084-103/verify.cjs --starters --id=84
+  node js-rest/verify.cjs --starters --id=104
+  node ts/verify.cjs --starters --id=184
+  node react/verify.cjs --starters --id=284
+  node mixed-data/verify.cjs --starters --id=384
+  node mixed-react/verify.cjs --starters --id=519
+  node react-more/verify.cjs --starters --id=584
+  node ts-more/verify.cjs --starters --id=784
+  node ts-final/verify.cjs --starters --id=1204
+  node react-junior/verify.cjs --starters --id=1369
+  node react-300/verify.cjs --starters --id=1419
+  node dotnet-web-300/verify.cjs --starters --id=1
+
+Omit --starters to check the reference solution instead.
+TypeScript verification runs strict compilation before runtime checks.
+@ts-expect-error fixtures prove that selected invalid calls are rejected.
+
+The original 001–083 files predate this shared runner: fill each function
+and run node FILE.js, comparing its expected comments/assertions.
+Exercise05 is already implemented as a worked example. Some blank
+originals throw when run; that is expected, not a syntax defect.
+
+WHERE TO FIND ORIGINAL SOLUTIONS
+001–033: SOLUTIONS.md
+034–038, 051–065, 072–073: solutions/round2-remaining.cjs (numeric exports)
+039–050: solutions/round2-39-50.cjs (named exports)
+066–071, 074–083: solutions/missing-refs.cjs (numeric exports)
+
+Verification commands for original references:
+  node verify-original.cjs       (55 reference groups)
+  node verify-39-50.cjs          (12 reference groups)
+  node verify-missing.cjs        (16 reference groups)
+Together these cover all 83 reference IDs. The old verify-round2-remaining.cjs
+is a narrow historical regression test, not full coverage. audit-existing.cjs
+was an earlier inventory check; use verify-all.cjs as the current gate.
+
+SUGGESTED ROUTE
+- Start with original 01–16, then the closure and collection exercises.
+- Work through 84–103 for algorithm/data-structure practice.
+- Pick one policy from each js-rest family, then compare sibling policies.
+- In TypeScript, explain why the invalid fixtures should fail before coding.
+- In React, focus on controlled state, keyboard behavior, cleanup and retries.
+- react-junior/ is the recommended first React pass before react/ scenarios.
+- Finish with mixed-data pipelines and mixed-react reset/integration scenarios.
+- For C#, run --list, pick a family, and use --practice ID on its class.
+
+NOTES
+- Most variants deliberately share patterns. Compare what changes between
+  policies instead of copying a sibling and changing only its number.
+- Supplied type signatures are scaffolding. Extend negative type fixtures for
+  a harder exercise; do not bypass checks with any or ts-ignore.
+- Generator scripts are authoring tools and refuse existing directories.
+  Do not delete a track and regenerate it: that would discard learner work.
+- README.md retains the original 33-exercise guide; this file is the full index.

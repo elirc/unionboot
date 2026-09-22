@@ -1,0 +1,18 @@
+Union-find components / scenario 1 — size=3; root=minimum
+
+TASK
+Start 3 singleton nodes numbered0..2. Input operations {type:'union'|'same',a,b}. Union representative is always minimum node in the component. Implement full path compression. Return {answers,roots,components}; answers for same operations; roots after compressing every node. Invalid node throws RangeError('Unknown node'); unknown operation throws Error('Unknown operation').
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1759.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1759
+node js-more/verify.cjs --starters --id=1759
+
+POLICIES
+size=3; root=minimum
+Semantic key: {"root":"minimum","size":3}

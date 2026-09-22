@@ -1,0 +1,62 @@
+DOTNET WEB 300 — ASP.NET CORE PRACTICE
+
+300 independent blank starters and reference solutions, W001..W300.
+30 meaningful web-development families x10 openly labelled scenario variants.
+Some lifetime/metadata families repeat the core implementation with different policies or labels: these are deliberate repetitions, not 300 distinct concepts.
+Separate numbering from C#583 and JavaScript/React1718.
+
+REQUIREMENTS
+Existing .NET SDK10 and shared Microsoft.AspNetCore.App. No NuGet packages, installation or external access. NuGet.Config clears package sources.
+
+WORKFLOW (from unionboot)
+node dotnet-web-300/verify.cjs --inventory
+node dotnet-web-300/verify.cjs --id=W001
+node dotnet-web-300/verify.cjs --starters --id=1
+node dotnet-web-300/verify.cjs
+node dotnet-web-300/verify.cjs --starters
+--id W001 also works. Choose one scenario from each family before doing policy variants.
+Read prompts/W001.txt, edit starters/W001.cs, use shared tests/W001.cs.
+
+BUILD ISOLATION
+One SDK project compiles either solutions/*.cs OR starters/*.cs via ExerciseSet, never both. Even --id compiles the selected set of all300 before grading the requested group; an unrelated syntax error is therefore a build failure, not a failed exercise assertion.
+Run wrappers sequentially: both modes intentionally share one build output. Blank methods compile and throw NotImplementedException at runtime.
+Wrapper: build failure exit2; grading failure exit1; all selected groups pass exit0; invalid flags/inventory exit2.
+Reports verification-MODE[-WID].json contain groups, phase, per-group errors/assertions and buildPassed. Build and test logs remain alongside them. Inventory only validates files/IDs; it does NOT compile or claim reference correctness.
+
+SCOPE
+Every group uses real ASP.NET Core HttpContext, IResult, DI, authorization, options or endpoint metadata. HTTP results are executed against DefaultHttpContext with MemoryStream where content matters. Metadata-only tests do not prove router or middleware integration. All tests are in-process; no server/socket/network integration is claimed. Auth exercises apply policies to synthetic principals, never parse credentials. Stores/clocks are deterministic and injected; cache/idempotency stores are explicitly sequential teaching stores, not production distributed implementations. No wall-clock sleeps or packages.
+
+GENERATOR
+node build-dotnet-web-300.cjs refuses any existing dotnet-web-300 directory, with no overwrite escape hatch. Do not delete learner work to regenerate. Generator writes only this pack.
+
+FAMILIES
+W001..W010 Resource lookup HTTP results
+W011..W020 Creation and Location contracts
+W021..W030 Conditional deletion contracts
+W031..W040 ValidationProblem field errors
+W041..W050 Pagination query handlers
+W051..W060 Filter and sort endpoint projections
+W061..W070 Strict boolean request query
+W071..W080 Date range query binding
+W081..W090 Header based request versioning
+W091..W100 JSON media type gates
+W101..W110 JSON request body validation
+W111..W120 Form body handling
+W121..W130 Route value parsing handlers
+W131..W140 Dependency injection lifetime registration
+W141..W150 Keyed dependency injection
+W151..W160 Options configuration and validation
+W161..W170 Response header middleware
+W171..W180 Domain error boundary middleware
+W181..W190 Request cancellation propagation
+W191..W200 Streaming text response writers
+W201..W210 Endpoint route metadata
+W211..W220 Authorization policy registration
+W221..W230 Protected endpoint policy metadata
+W231..W240 Current principal response projection
+W241..W250 Explicit content negotiation handlers
+W251..W260 Conditional GET ETags
+W261..W270 Cache policy response middleware
+W271..W280 Injected deterministic cache handlers
+W281..W290 Idempotency key POST contracts
+W291..W300 Binary file HTTP results

@@ -1,0 +1,1 @@
+SELECT name FROM spring WHERE name IS NOT NULL INTERSECT SELECT name FROM autumn WHERE name IS NOT NULL ORDER BY name;

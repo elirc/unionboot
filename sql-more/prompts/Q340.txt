@@ -1,0 +1,34 @@
+Q340 — family Composite tenant keys and relationship integrity, scenario 10: without-rowid-key-null-rejection
+
+Task
+Return project row count; verify WITHOUT ROWID composite PK rejects NULL tenant rather than treating it as a distinct nullable key.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE projects(tenant INTEGER,id INTEGER,title TEXT,PRIMARY KEY(tenant,id)) WITHOUT ROWID;CREATE TABLE tasks(tenant INTEGER,id INTEGER,project_id INTEGER,title TEXT,PRIMARY KEY(tenant,id),FOREIGN KEY(tenant,project_id) REFERENCES projects(tenant,id)) WITHOUT ROWID;INSERT INTO projects VALUES(1,1,'Alpha'),(1,2,'Beta'),(2,1,'Gamma');INSERT INTO tasks VALUES(1,1,1,'A'),(1,2,2,'B'),(2,1,1,'C');
+
+Concrete example
+The first result row on this seed is {"projects":3}.
+
+Expected shape
+Columns: projects. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "projects": 3
+  }
+]
+
+Post-result integrity assertions:
+[
+  {
+    "sql": "INSERT INTO projects VALUES(NULL,9,'invalid')",
+    "reject": "NOT NULL"
+  }
+]
+
+Submission
+Write SQL in starters/Q340.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q340
+Learner: node sql-more/verify.cjs --starters --id=Q340

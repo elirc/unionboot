@@ -1,0 +1,6 @@
+// 1402 Roving tabindex list navigation [a11y]
+// A vertical list of 4 fruits (aria-label Fruits) rendered as buttons in listitems. Exactly one is focusable via roving tabindex matching selection. ArrowDown/ArrowUp move selection and focus (no wrap needed beyond ends: clamp). Home/End select first/last. Click selects and focuses. Output shows the selected fruit. Variant of tab-pattern: same roving concept, list semantics.
+// Run: node react-junior/verify.cjs --id=1402 [--starters]
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useContext,createContext} from 'react';
+export default function Exercise({}){const fruits=['Apple','Banana','Cherry','Date'];const [index,setIndex]=useState(0);const refs=useRef([]);const move=next=>{const clamped=Math.max(0,Math.min(fruits.length-1,next));setIndex(clamped);refs.current[clamped].focus();};
+return <section><ul aria-label="Fruits">{fruits.map((name,i)=><li key={name}><button ref={el=>{refs.current[i]=el;}} tabIndex={index===i?0:-1} onClick={()=>move(i)} onKeyDown={e=>{const targets={ArrowDown:i+1,ArrowUp:i-1,Home:0,End:fruits.length-1};if(Object.hasOwn(targets,e.key)){e.preventDefault();move(targets[e.key]);}}}>{name}</button></li>)}</ul><output>{fruits[index]}</output></section>;}

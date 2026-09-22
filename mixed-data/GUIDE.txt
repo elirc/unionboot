@@ -1,0 +1,414 @@
+MIXED-DATA SCENARIO EXERCISES
+
+135 exercises. Variants deliberately revisit an API family with different policies, boundary cases, or type contracts. They are not 135 unrelated algorithms.
+
+From unionboot: node mixed-data/verify.cjs
+Practice: node mixed-data/verify.cjs --starters --id=384
+Edit starters, consult tests for examples, solutions only after attempting.
+TypeScript tracks use strict compilation plus negative type fixtures and runtime assertions.
+Blank starters compile but fail runtime tests by design. Reference solutions are not imported into starters.
+
+384 Report policy 1: any, min 0, rows
+Filter records by amount >=0, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+385 Report policy 2: any, min 10, rows
+Filter records by amount >=10, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+386 Report policy 3: any, min 20, rows
+Filter records by amount >=20, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+387 Report policy 4: any, min 30, rows
+Filter records by amount >=30, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+388 Report policy 5: any, min 40, rows
+Filter records by amount >=40, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+389 Report policy 6: any, min 0, rows
+Filter records by amount >=0, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+390 Report policy 7: any, min 10, rows
+Filter records by amount >=10, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+391 Report policy 8: any, min 20, rows
+Filter records by amount >=20, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+392 Report policy 9: any, min 30, rows
+Filter records by amount >=30, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+393 Report policy 10: any, min 40, rows
+Filter records by amount >=40, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+394 Report policy 11: open, min 0, rows
+Filter records by amount >=0, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+395 Report policy 12: open, min 10, rows
+Filter records by amount >=10, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+396 Report policy 13: open, min 20, rows
+Filter records by amount >=20, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+397 Report policy 14: open, min 30, rows
+Filter records by amount >=30, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+398 Report policy 15: open, min 40, rows
+Filter records by amount >=40, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+399 Report policy 16: open, min 0, rows
+Filter records by amount >=0, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+400 Report policy 17: open, min 10, rows
+Filter records by amount >=10, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+401 Report policy 18: open, min 20, rows
+Filter records by amount >=20, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+402 Report policy 19: open, min 30, rows
+Filter records by amount >=30, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+403 Report policy 20: open, min 40, rows
+Filter records by amount >=40, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+404 Report policy 21: closed, min 0, rows
+Filter records by amount >=0, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+405 Report policy 22: closed, min 10, rows
+Filter records by amount >=10, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+406 Report policy 23: closed, min 20, rows
+Filter records by amount >=20, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+407 Report policy 24: closed, min 30, rows
+Filter records by amount >=30, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+408 Report policy 25: closed, min 40, rows
+Filter records by amount >=40, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+409 Report policy 26: closed, min 0, rows
+Filter records by amount >=0, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+410 Report policy 27: closed, min 10, rows
+Filter records by amount >=10, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+411 Report policy 28: closed, min 20, rows
+Filter records by amount >=20, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+412 Report policy 29: closed, min 30, rows
+Filter records by amount >=30, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+413 Report policy 30: closed, min 40, rows
+Filter records by amount >=40, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+414 Report policy 31: any, min 0, total
+Filter records by amount >=0, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+415 Report policy 32: any, min 10, total
+Filter records by amount >=10, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+416 Report policy 33: any, min 20, total
+Filter records by amount >=20, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+417 Report policy 34: any, min 30, total
+Filter records by amount >=30, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+418 Report policy 35: any, min 40, total
+Filter records by amount >=40, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+419 Report policy 36: any, min 0, total
+Filter records by amount >=0, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+420 Report policy 37: any, min 10, total
+Filter records by amount >=10, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+421 Report policy 38: any, min 20, total
+Filter records by amount >=20, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+422 Report policy 39: any, min 30, total
+Filter records by amount >=30, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+423 Report policy 40: any, min 40, total
+Filter records by amount >=40, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+424 Report policy 41: open, min 0, total
+Filter records by amount >=0, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+425 Report policy 42: open, min 10, total
+Filter records by amount >=10, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+426 Report policy 43: open, min 20, total
+Filter records by amount >=20, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+427 Report policy 44: open, min 30, total
+Filter records by amount >=30, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+428 Report policy 45: open, min 40, total
+Filter records by amount >=40, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+429 Report policy 46: open, min 0, total
+Filter records by amount >=0, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+430 Report policy 47: open, min 10, total
+Filter records by amount >=10, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+431 Report policy 48: open, min 20, total
+Filter records by amount >=20, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+432 Report policy 49: open, min 30, total
+Filter records by amount >=30, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+433 Report policy 50: open, min 40, total
+Filter records by amount >=40, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+434 Report policy 51: closed, min 0, total
+Filter records by amount >=0, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+435 Report policy 52: closed, min 10, total
+Filter records by amount >=10, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+436 Report policy 53: closed, min 20, total
+Filter records by amount >=20, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+437 Report policy 54: closed, min 30, total
+Filter records by amount >=30, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+438 Report policy 55: closed, min 40, total
+Filter records by amount >=40, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+439 Report policy 56: closed, min 0, total
+Filter records by amount >=0, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+440 Report policy 57: closed, min 10, total
+Filter records by amount >=10, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+441 Report policy 58: closed, min 20, total
+Filter records by amount >=20, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+442 Report policy 59: closed, min 30, total
+Filter records by amount >=30, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+443 Report policy 60: closed, min 40, total
+Filter records by amount >=40, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 2. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+444 Report policy 61: any, min 0, groups
+Filter records by amount >=0, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+445 Report policy 62: any, min 10, groups
+Filter records by amount >=10, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+446 Report policy 63: any, min 20, groups
+Filter records by amount >=20, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+447 Report policy 64: any, min 30, groups
+Filter records by amount >=30, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+448 Report policy 65: any, min 40, groups
+Filter records by amount >=40, status any; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+449 Report policy 66: any, min 0, groups
+Filter records by amount >=0, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+450 Report policy 67: any, min 10, groups
+Filter records by amount >=10, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+451 Report policy 68: any, min 20, groups
+Filter records by amount >=20, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+452 Report policy 69: any, min 30, groups
+Filter records by amount >=30, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+453 Report policy 70: any, min 40, groups
+Filter records by amount >=40, status any; sort amount descending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+454 Report policy 71: open, min 0, groups
+Filter records by amount >=0, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+455 Report policy 72: open, min 10, groups
+Filter records by amount >=10, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+456 Report policy 73: open, min 20, groups
+Filter records by amount >=20, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+457 Report policy 74: open, min 30, groups
+Filter records by amount >=30, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+458 Report policy 75: open, min 40, groups
+Filter records by amount >=40, status open; sort amount ascending, ties id ascending (code-unit). Skip 0, take 3. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+459 Report policy 76: open, min 0, groups
+Filter records by amount >=0, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+460 Report policy 77: open, min 10, groups
+Filter records by amount >=10, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+461 Report policy 78: open, min 20, groups
+Filter records by amount >=20, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+462 Report policy 79: open, min 30, groups
+Filter records by amount >=30, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+463 Report policy 80: open, min 40, groups
+Filter records by amount >=40, status open; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+464 Report policy 81: closed, min 0, groups
+Filter records by amount >=0, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+465 Report policy 82: closed, min 10, groups
+Filter records by amount >=10, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+466 Report policy 83: closed, min 20, groups
+Filter records by amount >=20, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+467 Report policy 84: closed, min 30, groups
+Filter records by amount >=30, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+468 Report policy 85: closed, min 40, groups
+Filter records by amount >=40, status closed; sort amount ascending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+469 Report policy 86: closed, min 0, groups
+Filter records by amount >=0, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+470 Report policy 87: closed, min 10, groups
+Filter records by amount >=10, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+471 Report policy 88: closed, min 20, groups
+Filter records by amount >=20, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+472 Report policy 89: closed, min 30, groups
+Filter records by amount >=30, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+473 Report policy 90: closed, min 40, groups
+Filter records by amount >=40, status closed; sort amount descending, ties id ascending (code-unit). Skip 0, take 4. Return [team,totalAmount] pairs sorted by team, grouping only selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+474 Report policy 91: any, min 0, rows
+Filter records by amount >=0, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+475 Report policy 92: any, min 10, rows
+Filter records by amount >=10, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+476 Report policy 93: any, min 20, rows
+Filter records by amount >=20, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+477 Report policy 94: any, min 30, rows
+Filter records by amount >=30, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+478 Report policy 95: any, min 40, rows
+Filter records by amount >=40, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+479 Report policy 96: any, min 0, rows
+Filter records by amount >=0, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+480 Report policy 97: any, min 10, rows
+Filter records by amount >=10, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+481 Report policy 98: any, min 20, rows
+Filter records by amount >=20, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+482 Report policy 99: any, min 30, rows
+Filter records by amount >=30, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+483 Report policy 100: any, min 40, rows
+Filter records by amount >=40, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+484 Report policy 101: open, min 0, rows
+Filter records by amount >=0, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+485 Report policy 102: open, min 10, rows
+Filter records by amount >=10, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+486 Report policy 103: open, min 20, rows
+Filter records by amount >=20, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+487 Report policy 104: open, min 30, rows
+Filter records by amount >=30, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+488 Report policy 105: open, min 40, rows
+Filter records by amount >=40, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 2. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+489 Report policy 106: open, min 0, rows
+Filter records by amount >=0, status open; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+490 Report policy 107: open, min 10, rows
+Filter records by amount >=10, status open; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+491 Report policy 108: open, min 20, rows
+Filter records by amount >=20, status open; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+492 Report policy 109: open, min 30, rows
+Filter records by amount >=30, status open; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+493 Report policy 110: open, min 40, rows
+Filter records by amount >=40, status open; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+494 Report policy 111: closed, min 0, rows
+Filter records by amount >=0, status closed; sort amount ascending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+495 Report policy 112: closed, min 10, rows
+Filter records by amount >=10, status closed; sort amount ascending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+496 Report policy 113: closed, min 20, rows
+Filter records by amount >=20, status closed; sort amount ascending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+497 Report policy 114: closed, min 30, rows
+Filter records by amount >=30, status closed; sort amount ascending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+498 Report policy 115: closed, min 40, rows
+Filter records by amount >=40, status closed; sort amount ascending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+499 Report policy 116: closed, min 0, rows
+Filter records by amount >=0, status closed; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+500 Report policy 117: closed, min 10, rows
+Filter records by amount >=10, status closed; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+501 Report policy 118: closed, min 20, rows
+Filter records by amount >=20, status closed; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+502 Report policy 119: closed, min 30, rows
+Filter records by amount >=30, status closed; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+503 Report policy 120: closed, min 40, rows
+Filter records by amount >=40, status closed; sort amount descending, ties id ascending (code-unit). Skip 1, take 3. Return {id,amount} rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+504 Report policy 121: any, min 0, total
+Filter records by amount >=0, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+505 Report policy 122: any, min 10, total
+Filter records by amount >=10, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+506 Report policy 123: any, min 20, total
+Filter records by amount >=20, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+507 Report policy 124: any, min 30, total
+Filter records by amount >=30, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+508 Report policy 125: any, min 40, total
+Filter records by amount >=40, status any; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+509 Report policy 126: any, min 0, total
+Filter records by amount >=0, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+510 Report policy 127: any, min 10, total
+Filter records by amount >=10, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+511 Report policy 128: any, min 20, total
+Filter records by amount >=20, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+512 Report policy 129: any, min 30, total
+Filter records by amount >=30, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+513 Report policy 130: any, min 40, total
+Filter records by amount >=40, status any; sort amount descending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+514 Report policy 131: open, min 0, total
+Filter records by amount >=0, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+515 Report policy 132: open, min 10, total
+Filter records by amount >=10, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+516 Report policy 133: open, min 20, total
+Filter records by amount >=20, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+517 Report policy 134: open, min 30, total
+Filter records by amount >=30, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.
+
+518 Report policy 135: open, min 40, total
+Filter records by amount >=40, status open; sort amount ascending, ties id ascending (code-unit). Skip 1, take 4. Return {count,total} for selected rows. Never mutate input. Records are valid, amounts finite, IDs unique.

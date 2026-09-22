@@ -1,0 +1,35 @@
+Q203 — family JSON document projection and type policy, scenario 3: json-type-missing-versus-null
+
+Task
+Report JSON type at city: explicit JSON null yields text null; absent path yields SQL NULL.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE docs(id INTEGER PRIMARY KEY,body TEXT CHECK(json_valid(body)));INSERT INTO docs VALUES(1,'{"name":"Ada","age":30,"active":true,"city":null}'),(2,'{"name":"Bo","age":"20","active":false}'),(3,'{"name":"Cy","active":true,"city":"Rome"}');
+
+Concrete example
+The first result row on this seed is {"id":1,"kind":"null"}.
+
+Expected shape
+Columns: id, kind. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "kind": "null"
+  },
+  {
+    "id": 2,
+    "kind": null
+  },
+  {
+    "id": 3,
+    "kind": "text"
+  }
+]
+
+Submission
+Write SQL in starters/Q203.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q203
+Learner: node sql-more/verify.cjs --starters --id=Q203

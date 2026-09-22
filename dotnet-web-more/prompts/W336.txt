@@ -1,0 +1,8 @@
+W336 | ProblemDetails customization
+Scenario 6: Problem status 413 with trace correlation
+Semantic key: problem-status-413-with-trace-correlation
+
+Return ProblemDetails status 413, title Rejected 413, type urn:problem:413, detail unchanged, instance from request path and traceId extension from context. Null detail stays null/omitted, never fabricated.
+
+Signature: public static IResult Handle(string? detail,HttpContext context)
+Implement starters/W336.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

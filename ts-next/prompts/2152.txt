@@ -1,0 +1,14 @@
+2152: Budgeted delimited literal parsing / maximum-splits=4
+
+Contract focus: template-literal split inference; trailing empty positions.
+
+Split at most 4 pipe delimiters. The unsplit suffix is the final item; consecutive and trailing delimiters preserve empty strings. A template-literal parser must infer exact output positions from literal input.
+
+Semantic variation 4/15: maximum-splits=4. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2152.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2152.cjs. Type contracts: types/2152.positive.ts and types/2152.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2152
+Reference: node ts-next/verify.cjs --id=2152

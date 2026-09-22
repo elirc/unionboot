@@ -1,0 +1,11 @@
+Exclusive accordion / scenario 8 — one must stay open; Three disabled; unmount closed content
+
+Sections One/Two/Three. Three is disabled and never opens. Initially One open. Only one can be open. Clicking the open section keeps it open. Buttons expose aria-expanded and aria-controls pointing to content IDs. Unmount closed content.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=616
+Run your starter: node react-more/verify.cjs --starters --id=616

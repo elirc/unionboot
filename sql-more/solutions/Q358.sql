@@ -1,0 +1,1 @@
+WITH RECURSIVE forward(node) AS(VALUES('B') UNION SELECT dst FROM edges e JOIN forward f ON e.src=f.node),backward(node) AS(VALUES('B') UNION SELECT src FROM edges e JOIN backward b ON e.dst=b.node) SELECT node FROM forward INTERSECT SELECT node FROM backward ORDER BY node;

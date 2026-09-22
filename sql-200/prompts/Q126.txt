@@ -1,0 +1,38 @@
+Q126 — family SQLite schema constraints and integrity, scenario 6: foreign-key-restrict
+
+Task
+Create workers(id INTEGER PRIMARY KEY,dept_id INTEGER NOT NULL REFERENCES departments(id) ON DELETE RESTRICT). Insert (1,10), then return rows. Orphan insert and deleting department 10 must fail; foreign_keys is enabled by the runner.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE departments(id INTEGER PRIMARY KEY); INSERT INTO departments VALUES(10),(20);
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"dept_id":10}.
+
+Expected shape
+Columns (exact aliases): id, dept_id. 1 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "dept_id": 10
+  }
+]
+
+Integrity checks after the result assertion (these exercise constraints/state, not helper solution SQL):
+[
+  {
+    "sql": "INSERT INTO workers VALUES(2,99)",
+    "reject": "FOREIGN KEY"
+  },
+  {
+    "sql": "DELETE FROM departments WHERE id=10",
+    "reject": "FOREIGN KEY"
+  }
+]
+
+Submission
+Edit starters/Q126.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q126
+Reference: node sql-200/verify.cjs --id=Q126

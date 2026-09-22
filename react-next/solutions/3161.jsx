@@ -1,0 +1,8 @@
+// 3161 Connectivity capability gate / scenario 3 — Boundary 3; reject actions while offline
+// Read injected connection.read() on mount; subscribe to booleans. Sync action payload is 3. Output Network online/offline, Pending yes/no, Syncs count. Clicking Sync online calls onSync(3) immediately. Offline do not queue; show alert Offline. Going online clears alert. Duplicate online events must not replay queued work. Unmount unsubscribes and cancels pending intent.
+// Full prompt: ../prompts/3161.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({connection,onSync}) {
+const [online,setOnline]=useState(()=>connection.read()),[pending,setPending]=useState(false),[count,setCount]=useState(0),[error,fail]=useState(false);const onlineRef=useRef(online),pendingRef=useRef(false);const run=()=>{onSync(3);setCount(c=>c+1);};useEffect(()=>{let live=true;const off=connection.subscribe(value=>{if(!live)return;onlineRef.current=value;setOnline(value);if(value){fail(false);if(pendingRef.current){pendingRef.current=false;setPending(false);run();}}});return()=>{live=false;pendingRef.current=false;off();};},[connection,onSync]);return <section><button onClick={()=>{if(onlineRef.current)run();else{fail(true);}}}>Sync</button><output aria-label="Network">{online?'online':'offline'}</output><output aria-label="Pending">{pending?'yes':'no'}</output><output aria-label="Syncs">{count}</output>{error&&<p role="alert">Offline</p>}</section>;
+}

@@ -1,0 +1,33 @@
+Q261 — family Views projection and live query contracts, scenario 1: filtered-view
+
+Task
+Create paid_orders view exposing id,customer,amount for paid rows; select ordered by id.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE orders(id INTEGER PRIMARY KEY,customer TEXT,status TEXT,amount INTEGER);INSERT INTO orders VALUES(1,'Ada','paid',10),(2,'Ada','pending',20),(3,'Bo','paid',30),(4,'Cy','cancelled',40);
+
+Concrete example
+The first result row on this seed is {"id":1,"customer":"Ada","amount":10}.
+
+Expected shape
+Columns: id, customer, amount. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "customer": "Ada",
+    "amount": 10
+  },
+  {
+    "id": 3,
+    "customer": "Bo",
+    "amount": 30
+  }
+]
+
+Submission
+Write SQL in starters/Q261.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q261
+Learner: node sql-more/verify.cjs --starters --id=Q261

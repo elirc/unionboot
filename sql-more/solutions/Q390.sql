@@ -1,0 +1,1 @@
+SELECT n.name,p.mode AS own,(SELECT a.mode FROM closure c JOIN policy a ON a.node=c.ancestor WHERE c.descendant=n.id AND c.depth>0 ORDER BY c.depth LIMIT 1) AS inherited FROM nodes n JOIN policy p ON p.node=n.id ORDER BY n.id;

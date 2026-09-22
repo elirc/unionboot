@@ -1,0 +1,18 @@
+Ranked list reordering / scenario 4 — Bounded moves; B cannot move or be crossed; 6 rows
+
+TASK
+Initial list A,B,C,D,E,F. Up NAME and Down NAME swap the item with its neighbor, stopping at ends. B is locked: cannot move or be swapped across. Disable impossible buttons; guard updates. Ordered listitem text is NAME with move buttons; use span for NAME. Reset restores original ordering. Output Order joins names with >.
+
+EXAMPLE
+Up A => A>B>C>D>E>F.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1522.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1522
+node react-300/verify.cjs --starters --id=1522

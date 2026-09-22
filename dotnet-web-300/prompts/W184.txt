@@ -1,0 +1,12 @@
+W184 — Request cancellation propagation
+Scenario 4/10: Injected inventory lookup; amount factor 4
+
+Pass exact RequestAborted token to injected async lookup. Check cancellation before calling and after awaiting. Never swallow cancellation. Return200 {amount:lookupValue*4} with long arithmetic. Example lookup3 ->amount12. No actual network or delay; tests inject completion/cancellation.
+
+Signature: public static async Task<IResult> Handle(HttpContext context, Func<CancellationToken,Task<int>> lookup)
+
+Edit starters/W184.cs. Run node dotnet-web-300/verify.cjs --starters --id=W184 from unionboot.
+Reference: solutions/W184.cs; shared checks: tests/W184.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

@@ -1,0 +1,1 @@
+CREATE TABLE dead_letters(id INTEGER PRIMARY KEY,queue TEXT);INSERT INTO dead_letters SELECT id,queue FROM jobs WHERE state='failed' AND queue='mail';DELETE FROM jobs WHERE state='failed' AND queue='mail';SELECT (SELECT COUNT(*) FROM jobs WHERE queue='mail') AS remaining,(SELECT COUNT(*) FROM dead_letters) AS dead;

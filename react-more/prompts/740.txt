@@ -1,0 +1,11 @@
+Fake async request state / scenario 12 — one pending request; retain data while loading; error fallback Unavailable
+
+Injected props.load():Promise<string>, no network. Load starts request. Disable Load while pending; do not start duplicate requests. Status output labelled State is idle/loading/done/error; output labelled Data initially empty. Keep prior successful data during loading and failure. Show role alert on rejection, using nonempty Error.message else 'Unavailable'. Clear prior error on retry. Cancel invalidates pending work, sets State idle, and leaves current data; disable Cancel when not loading. Ignore stale success/failure and completion after unmount.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=740
+Run your starter: node react-more/verify.cjs --starters --id=740

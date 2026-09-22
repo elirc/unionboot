@@ -1,0 +1,23 @@
+{
+  "track": "dotnet-web-more",
+  "mode": "solution",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "W581",
+  "groups": 1,
+  "phase": "tests",
+  "passed": 1,
+  "failed": 0,
+  "assertions": 7,
+  "results": [
+    {
+      "id": "W581",
+      "family": "Multipart section counting through ReadFormAsync",
+      "passed": true,
+      "phase": "tests",
+      "assertions": 7
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 0
+}

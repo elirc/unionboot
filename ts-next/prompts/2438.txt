@@ -1,0 +1,14 @@
+2438: Depth-limited patch materialization / patch-depth=5
+
+Contract focus: recursive Partial; exact optional boundaries.
+
+Materialize a nested patch over defaults {"next":{"next":{"next":{"next":{"next":{"leaf":7}}}}}}. Make properties optional only through depth 5; at the boundary the whole leaf object must be present if supplied. Missing fields use defaults, explicit undefined is forbidden. Boundary objects supplied by the caller retain their reference.
+
+Semantic variation 5/15: patch-depth=5. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2438.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2438.cjs. Type contracts: types/2438.positive.ts and types/2438.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2438
+Reference: node ts-next/verify.cjs --id=2438

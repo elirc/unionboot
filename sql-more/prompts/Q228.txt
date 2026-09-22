@@ -1,0 +1,26 @@
+Q228 — family JSON mutation patch and serialization, scenario 8: merge-patch-array-replaces
+
+Task
+Merge Patch tags=[b] replaces the entire array rather than appending.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE configs(id INTEGER PRIMARY KEY,body TEXT);INSERT INTO configs VALUES(1,'{"mode":"draft","n":2,"tags":["a"],"nested":{"x":1,"y":2}}');
+
+Concrete example
+The first result row on this seed is {"tags":"[\"b\"]"}.
+
+Expected shape
+Columns: tags. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "tags": "[\"b\"]"
+  }
+]
+
+Submission
+Write SQL in starters/Q228.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q228
+Learner: node sql-more/verify.cjs --starters --id=Q228

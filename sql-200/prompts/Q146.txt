@@ -1,0 +1,27 @@
+Q146 — family Transactions savepoints and atomic state, scenario 6: transactional-ddl-rollback
+
+Task
+SQLite-specific: create temporary_work table within BEGIN, insert a row, then ROLLBACK. Return count of that table name in sqlite_schema (zero). DDL is transactional here.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE accounts(id INTEGER PRIMARY KEY,balance INTEGER NOT NULL CHECK(balance>=0));
+INSERT INTO accounts VALUES(1,100),(2,50);
+CREATE TABLE audit(id INTEGER PRIMARY KEY,note TEXT);
+
+Concrete example
+With the exact seed above, the first result row is {"tables_found":0}.
+
+Expected shape
+Columns (exact aliases): tables_found. 1 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "tables_found": 0
+  }
+]
+
+Submission
+Edit starters/Q146.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q146
+Reference: node sql-200/verify.cjs --id=Q146

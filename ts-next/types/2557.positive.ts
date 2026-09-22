@@ -1,0 +1,7 @@
+import * as api from '../solutions/2557';
+import {solve} from '../solutions/2557';
+type Assert<T extends true>=T;
+type Equal<A,B>=(<T>()=>T extends A?1:2) extends (<T>()=>T extends B?1:2)?true:false;
+type NotAny<T>=0 extends (1&T)?false:true;
+type SafeFunction=Assert<NotAny<typeof solve>>;
+const renderer:api.Renderer=solve();const text:string=renderer.render({"active":true});const all:string[]=renderer.renderAll([]);void text;void all;

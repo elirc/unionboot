@@ -1,0 +1,14 @@
+2628: Keyed all-settled outcome maps / settled-keys=name+count+active+tags
+
+Contract focus: mapped object Awaited; rejection unknown; key retention.
+
+Settle all named promises without rejecting for participant failures. Preserve each key and its awaited payload type; rejection reasons stay unknown. Run concurrently, preserve own key order, return fresh per-key outcomes. Input has exactly the declared keys.
+
+Semantic variation 15/15: settled-keys=name+count+active+tags. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2628.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2628.cjs. Type contracts: types/2628.positive.ts and types/2628.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2628
+Reference: node ts-next/verify.cjs --id=2628

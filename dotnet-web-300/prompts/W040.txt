@@ -1,0 +1,12 @@
+W040 — ValidationProblem field errors
+Scenario 10/10: Quantity 1..14; required display name
+
+Validate a JSON-bound request using ValidationProblem. Name null/whitespace -> errors.name ["required"]. Quantity outside1..14->errors.quantity ["range"]. Accumulate both. Invalid returns400 application/problem+json. Valid returns200 {name:trimmed,quantity}. Example empty name and0 ->both error keys.
+
+Signature: public static IResult Handle(string? name, int quantity)
+
+Edit starters/W040.cs. Run node dotnet-web-300/verify.cjs --starters --id=W040 from unionboot.
+Reference: solutions/W040.cs; shared checks: tests/W040.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

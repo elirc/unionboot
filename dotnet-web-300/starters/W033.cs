@@ -1,0 +1,11 @@
+// W033: ValidationProblem field errors / scenario 3
+// Quantity 1..7; required display name
+// Read prompts/W033.txt. In-process ASP.NET Core contract, no network.
+namespace DotnetWeb;
+public static class W033 {
+
+ public static IResult Handle(string? name, int quantity) {
+  // TODO: implement independently. References are excluded from practice builds.
+  throw new NotImplementedException("W033");
+ }
+}

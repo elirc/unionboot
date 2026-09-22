@@ -1,0 +1,1 @@
+WITH RECURSIVE tree(id,path) AS(SELECT id,name FROM staff WHERE manager_id IS NULL UNION ALL SELECT s.id,t.path||'/'||s.name FROM staff s JOIN tree t ON s.manager_id=t.id) SELECT path FROM tree t WHERE NOT EXISTS(SELECT 1 FROM staff s WHERE s.manager_id=t.id) ORDER BY t.id;

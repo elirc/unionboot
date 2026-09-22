@@ -1,0 +1,14 @@
+2207: Budgeted kebab-to-camel literal transforms / hyphen-conversions=14
+
+Contract focus: Capitalize intrinsic; recursive infer composition.
+
+Convert at most 14 hyphens to capitalization of the immediately following ASCII character. A final hyphen disappears. A consecutive hyphen is a character (uppercasing leaves it unchanged). Input domain: ASCII text only, so first-character intrinsic and runtime slicing agree.
+
+Semantic variation 14/15: hyphen-conversions=14. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2207.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2207.cjs. Type contracts: types/2207.positive.ts and types/2207.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2207
+Reference: node ts-next/verify.cjs --id=2207

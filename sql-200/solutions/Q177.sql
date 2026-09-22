@@ -1,0 +1,1 @@
+WITH r AS(SELECT *,ROW_NUMBER() OVER(PARTITION BY lower(name) ORDER BY seen_at DESC,id DESC) AS n FROM raw) SELECT id,name,email FROM r WHERE n=1 ORDER BY id;

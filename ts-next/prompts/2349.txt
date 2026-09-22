@@ -1,0 +1,14 @@
+2349: Schema-literal value inference / schema-fields=count+active
+
+Contract focus: satisfies contracts; indexed discriminant inference.
+
+Decode unknown using the fixed satisfies-checked schema. Every declared own field is required with exact primitive type (strings means dense string arrays). Reject arrays/null/nonrecords, inherited-only fields, and wrong field values. Strip extra keys. Infer the output shape from schema literals rather than widening kinds.
+
+Semantic variation 6/15: schema-fields=count+active. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2349.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2349.cjs. Type contracts: types/2349.positive.ts and types/2349.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2349
+Reference: node ts-next/verify.cjs --id=2349

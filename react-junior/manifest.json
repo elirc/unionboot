@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1369,
+    "tech": "react",
+    "category": "state / debugging",
+    "title": "Repair a batched counter",
+    "starter": "starters/1369.jsx",
+    "solution": "solutions/1369.jsx",
+    "test": "tests/1369.cjs"
+  },
+  {
+    "id": 1370,
+    "tech": "react",
+    "category": "state",
+    "title": "Immutable cart line updates",
+    "starter": "starters/1370.jsx",
+    "solution": "solutions/1370.jsx",
+    "test": "tests/1370.cjs"
+  },
+  {
+    "id": 1371,
+    "tech": "react",
+    "category": "state",
+    "title": "Reducer match scoreboard",
+    "starter": "starters/1371.jsx",
+    "solution": "solutions/1371.jsx",
+    "test": "tests/1371.cjs"
+  },
+  {
+    "id": 1372,
+    "tech": "react",
+    "category": "state",
+    "title": "Move people between teams",
+    "starter": "starters/1372.jsx",
+    "solution": "solutions/1372.jsx",
+    "test": "tests/1372.cjs"
+  },
+  {
+    "id": 1373,
+    "tech": "react",
+    "category": "state / debugging",
+    "title": "Update nested notification preferences",
+    "starter": "starters/1373.jsx",
+    "solution": "solutions/1373.jsx",
+    "test": "tests/1373.cjs"
+  },
+  {
+    "id": 1374,
+    "tech": "react",
+    "category": "state",
+    "title": "Three-state stable sorting",
+    "starter": "starters/1374.jsx",
+    "solution": "solutions/1374.jsx",
+    "test": "tests/1374.cjs"
+  },
+  {
+    "id": 1375,
+    "tech": "react",
+    "category": "state / derived data",
+    "title": "Split a bill without redundant state",
+    "starter": "starters/1375.jsx",
+    "solution": "solutions/1375.jsx",
+    "test": "tests/1375.cjs"
+  },
+  {
+    "id": 1376,
+    "tech": "react",
+    "category": "state / derived data",
+    "title": "Bidirectional temperature inputs",
+    "starter": "starters/1376.jsx",
+    "solution": "solutions/1376.jsx",
+    "test": "tests/1376.cjs"
+  },
+  {
+    "id": 1377,
+    "tech": "react",
+    "category": "forms",
+    "title": "Profile form with a saved baseline",
+    "starter": "starters/1377.jsx",
+    "solution": "solutions/1377.jsx",
+    "test": "tests/1377.cjs"
+  },
+  {
+    "id": 1378,
+    "tech": "react",
+    "category": "forms / a11y",
+    "title": "Password confirmation with touched errors",
+    "starter": "starters/1378.jsx",
+    "solution": "solutions/1378.jsx",
+    "test": "tests/1378.cjs"
+  },
+  {
+    "id": 1379,
+    "tech": "react",
+    "category": "forms",
+    "title": "Normalize a phone number on submission",
+    "starter": "starters/1379.jsx",
+    "solution": "solutions/1379.jsx",
+    "test": "tests/1379.cjs"
+  },
+  {
+    "id": 1380,
+    "tech": "react",
+    "category": "forms",
+    "title": "Conditional delivery fields",
+    "starter": "starters/1380.jsx",
+    "solution": "solutions/1380.jsx",
+    "test": "tests/1380.cjs"
+  },
+  {
+    "id": 1381,
+    "tech": "react",
+    "category": "forms",
+    "title": "Validate a date interval",
+    "starter": "starters/1381.jsx",
+    "solution": "solutions/1381.jsx",
+    "test": "tests/1381.cjs"
+  },
+  {
+    "id": 1382,
+    "tech": "react",
+    "category": "forms",
+    "title": "Dynamic guest fields with stable identities",
+    "starter": "starters/1382.jsx",
+    "solution": "solutions/1382.jsx",
+    "test": "tests/1382.cjs"
+  },
+  {
+    "id": 1383,
+    "tech": "react",
+    "category": "forms",
+    "title": "Preview a comma-separated import",
+    "starter": "starters/1383.jsx",
+    "solution": "solutions/1383.jsx",
+    "test": "tests/1383.cjs"
+  },
+  {
+    "id": 1384,
+    "tech": "react",
+    "category": "forms / state",
+    "title": "Branching feedback survey",
+    "starter": "starters/1384.jsx",
+    "solution": "solutions/1384.jsx",
+    "test": "tests/1384.cjs"
+  },
+  {
+    "id": 1385,
+    "tech": "react",
+    "category": "CRUD",
+    "title": "Editable inventory rows",
+    "starter": "starters/1385.jsx",
+    "solution": "solutions/1385.jsx",
+    "test": "tests/1385.cjs"
+  },
+  {
+    "id": 1386,
+    "tech": "react",
+    "category": "CRUD / async",
+    "title": "Optimistic comment list with rollback",
+    "starter": "starters/1386.jsx",
+    "solution": "solutions/1386.jsx",
+    "test": "tests/1386.cjs"
+  },
+  {
+    "id": 1387,
+    "tech": "react",
+    "category": "CRUD",
+    "title": "Paginated people table",
+    "starter": "starters/1387.jsx",
+    "solution": "solutions/1387.jsx",
+    "test": "tests/1387.cjs"
+  },
+  {
+    "id": 1388,
+    "tech": "react",
+    "category": "CRUD / a11y",
+    "title": "Expandable search over records",
+    "starter": "starters/1388.jsx",
+    "solution": "solutions/1388.jsx",
+    "test": "tests/1388.cjs"
+  },
+  {
+    "id": 1389,
+    "tech": "react",
+    "category": "effects",
+    "title": "Stopwatch with start and stop",
+    "starter": "starters/1389.jsx",
+    "solution": "solutions/1389.jsx",
+    "test": "tests/1389.cjs"
+  },
+  {
+    "id": 1390,
+    "tech": "react",
+    "category": "effects / debugging",
+    "title": "Interval ticker / changing-step debugging variant",
+    "starter": "starters/1390.jsx",
+    "solution": "solutions/1390.jsx",
+    "test": "tests/1390.cjs"
+  },
+  {
+    "id": 1391,
+    "tech": "react",
+    "category": "effects",
+    "title": "Debounced search indicator",
+    "starter": "starters/1391.jsx",
+    "solution": "solutions/1391.jsx",
+    "test": "tests/1391.cjs"
+  },
+  {
+    "id": 1392,
+    "tech": "react",
+    "category": "async",
+    "title": "Ignore stale profile responses",
+    "starter": "starters/1392.jsx",
+    "solution": "solutions/1392.jsx",
+    "test": "tests/1392.cjs"
+  },
+  {
+    "id": 1393,
+    "tech": "react",
+    "category": "async",
+    "title": "Restart an in-flight job",
+    "starter": "starters/1393.jsx",
+    "solution": "solutions/1393.jsx",
+    "test": "tests/1393.cjs"
+  },
+  {
+    "id": 1394,
+    "tech": "react",
+    "category": "async",
+    "title": "Batch fetch with partial failure",
+    "starter": "starters/1394.jsx",
+    "solution": "solutions/1394.jsx",
+    "test": "tests/1394.cjs"
+  },
+  {
+    "id": 1395,
+    "tech": "react",
+    "category": "async / effects",
+    "title": "Poll for status until ready",
+    "starter": "starters/1395.jsx",
+    "solution": "solutions/1395.jsx",
+    "test": "tests/1395.cjs"
+  },
+  {
+    "id": 1396,
+    "tech": "react",
+    "category": "effects",
+    "title": "Debounced save with flushed unsaved state",
+    "starter": "starters/1396.jsx",
+    "solution": "solutions/1396.jsx",
+    "test": "tests/1396.cjs"
+  },
+  {
+    "id": 1397,
+    "tech": "react",
+    "category": "effects",
+    "title": "Typewriter effect with cleanup",
+    "starter": "starters/1397.jsx",
+    "solution": "solutions/1397.jsx",
+    "test": "tests/1397.cjs"
+  },
+  {
+    "id": 1398,
+    "tech": "react",
+    "category": "effects",
+    "title": "Track window focus changes",
+    "starter": "starters/1398.jsx",
+    "solution": "solutions/1398.jsx",
+    "test": "tests/1398.cjs"
+  },
+  {
+    "id": 1399,
+    "tech": "react",
+    "category": "a11y",
+    "title": "Focus trap within a dialog",
+    "starter": "starters/1399.jsx",
+    "solution": "solutions/1399.jsx",
+    "test": "tests/1399.cjs"
+  },
+  {
+    "id": 1400,
+    "tech": "react",
+    "category": "a11y / forms",
+    "title": "Form with labelled error summary",
+    "starter": "starters/1400.jsx",
+    "solution": "solutions/1400.jsx",
+    "test": "tests/1400.cjs"
+  },
+  {
+    "id": 1401,
+    "tech": "react",
+    "category": "a11y",
+    "title": "Described-by hint and error pairing",
+    "starter": "starters/1401.jsx",
+    "solution": "solutions/1401.jsx",
+    "test": "tests/1401.cjs"
+  },
+  {
+    "id": 1402,
+    "tech": "react",
+    "category": "a11y",
+    "title": "Roving tabindex list navigation",
+    "starter": "starters/1402.jsx",
+    "solution": "solutions/1402.jsx",
+    "test": "tests/1402.cjs"
+  },
+  {
+    "id": 1403,
+    "tech": "react",
+    "category": "a11y",
+    "title": "Accessible star rating",
+    "starter": "starters/1403.jsx",
+    "solution": "solutions/1403.jsx",
+    "test": "tests/1403.cjs"
+  },
+  {
+    "id": 1404,
+    "tech": "react",
+    "category": "a11y",
+    "title": "Skip link and landmark order",
+    "starter": "starters/1404.jsx",
+    "solution": "solutions/1404.jsx",
+    "test": "tests/1404.cjs"
+  },
+  {
+    "id": 1405,
+    "tech": "react",
+    "category": "a11y / state",
+    "title": "Tree of expandable folders",
+    "starter": "starters/1405.jsx",
+    "solution": "solutions/1405.jsx",
+    "test": "tests/1405.cjs"
+  },
+  {
+    "id": 1406,
+    "tech": "react",
+    "category": "state / lists",
+    "title": "Keyed list with prepend and remove",
+    "starter": "starters/1406.jsx",
+    "solution": "solutions/1406.jsx",
+    "test": "tests/1406.cjs"
+  },
+  {
+    "id": 1407,
+    "tech": "react",
+    "category": "state",
+    "title": "Combine category and minimum-rating filters",
+    "starter": "starters/1407.jsx",
+    "solution": "solutions/1407.jsx",
+    "test": "tests/1407.cjs"
+  },
+  {
+    "id": 1408,
+    "tech": "react",
+    "category": "effects",
+    "title": "Copy to clipboard button",
+    "starter": "starters/1408.jsx",
+    "solution": "solutions/1408.jsx",
+    "test": "tests/1408.cjs"
+  },
+  {
+    "id": 1409,
+    "tech": "react",
+    "category": "effects",
+    "title": "Persist a draft to sessionStorage",
+    "starter": "starters/1409.jsx",
+    "solution": "solutions/1409.jsx",
+    "test": "tests/1409.cjs"
+  },
+  {
+    "id": 1410,
+    "tech": "react",
+    "category": "performance",
+    "title": "Memoized filtering / performance variant",
+    "starter": "starters/1410.jsx",
+    "solution": "solutions/1410.jsx",
+    "test": "tests/1410.cjs"
+  },
+  {
+    "id": 1411,
+    "tech": "react",
+    "category": "state",
+    "title": "Lifted state between two panels",
+    "starter": "starters/1411.jsx",
+    "solution": "solutions/1411.jsx",
+    "test": "tests/1411.cjs"
+  },
+  {
+    "id": 1412,
+    "tech": "react",
+    "category": "debugging / refactoring",
+    "title": "Independent counters / shared-handler refactor variant",
+    "starter": "starters/1412.jsx",
+    "solution": "solutions/1412.jsx",
+    "test": "tests/1412.cjs"
+  },
+  {
+    "id": 1413,
+    "tech": "react",
+    "category": "debugging / refactoring",
+    "title": "Refactor me: chained conditionals to map",
+    "starter": "starters/1413.jsx",
+    "solution": "solutions/1413.jsx",
+    "test": "tests/1413.cjs"
+  },
+  {
+    "id": 1414,
+    "tech": "react",
+    "category": "debugging / refactoring",
+    "title": "Context refactor of nested theme controls",
+    "starter": "starters/1414.jsx",
+    "solution": "solutions/1414.jsx",
+    "test": "tests/1414.cjs"
+  },
+  {
+    "id": 1415,
+    "tech": "react",
+    "category": "debugging / effects",
+    "title": "Trace a missing effect dependency",
+    "starter": "starters/1415.jsx",
+    "solution": "solutions/1415.jsx",
+    "test": "tests/1415.cjs"
+  },
+  {
+    "id": 1416,
+    "tech": "react",
+    "category": "debugging / immutability",
+    "title": "Immutable sorting / debugging variant",
+    "starter": "starters/1416.jsx",
+    "solution": "solutions/1416.jsx",
+    "test": "tests/1416.cjs"
+  },
+  {
+    "id": 1417,
+    "tech": "react",
+    "category": "debugging / state",
+    "title": "Fix the lost selection on rerender",
+    "starter": "starters/1417.jsx",
+    "solution": "solutions/1417.jsx",
+    "test": "tests/1417.cjs"
+  },
+  {
+    "id": 1418,
+    "tech": "react",
+    "category": "refactoring",
+    "title": "Migration: HOC wrapper to hook",
+    "starter": "starters/1418.jsx",
+    "solution": "solutions/1418.jsx",
+    "test": "tests/1418.cjs"
+  }
+]

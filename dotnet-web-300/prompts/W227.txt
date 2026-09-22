@@ -1,0 +1,12 @@
+W227 — Protected endpoint policy metadata
+Scenario 7/10: /private7 requires Editors7; no anonymous override
+
+Attach policy Editors7 to a POST-only RouteEndpoint at/private7, using IAuthorizeData metadata (AuthorizeAttribute). Do not add AllowAnonymous. Return endpoint with delegate. Metadata alone does not authenticate requests: app must install auth middleware; tests only inspect policy application. Example combined policy with a configured authenticated-user policy must reject an anonymous user.
+
+Signature: public static RouteEndpoint Build()
+
+Edit starters/W227.cs. Run node dotnet-web-300/verify.cjs --starters --id=W227 from unionboot.
+Reference: solutions/W227.cs; shared checks: tests/W227.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

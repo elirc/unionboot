@@ -1,0 +1,18 @@
+Image fallback source ladder / scenario 11 — Boundary 1; source replacement resets fallback index
+
+TASK
+Render img alt=Preview using first source. Each DOM error event advances to next source. When exhausted, remove image and show alert No image. Output Index is attempted index, starting 0. When sources prop identity changes, reset index to 0. DOM load event shows output Loaded yes; changing attempted source clears Loaded to no. Do not fetch images from tests.
+
+EXAMPLE
+2 error events exhaust 2 candidates.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3349.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{sources=[]}
+Example data: {"sources":["/asset-0.png","/asset-1.png"]}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3349
+node react-next/verify.cjs --starters --id=3349

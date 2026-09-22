@@ -1,0 +1,43 @@
+Q213 — family JSON array expansion and nested traversal, scenario 3: left-expand-empty-arrays
+
+Task
+Left join tags, retaining one NULL-tag row for empty arrays; order by basket id,index.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE baskets(id INTEGER PRIMARY KEY,body TEXT);INSERT INTO baskets VALUES(1,'{"tags":["red","blue","red"],"items":[{"sku":"A","qty":2},{"sku":"B","qty":1}]}'),(2,'{"tags":[],"items":[]}'),(3,'{"tags":["blue"],"items":[{"sku":"A","qty":3}]}');
+
+Concrete example
+The first result row on this seed is {"id":1,"tag":"red"}.
+
+Expected shape
+Columns: id, tag. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "tag": "red"
+  },
+  {
+    "id": 1,
+    "tag": "blue"
+  },
+  {
+    "id": 1,
+    "tag": "red"
+  },
+  {
+    "id": 2,
+    "tag": null
+  },
+  {
+    "id": 3,
+    "tag": "blue"
+  }
+]
+
+Submission
+Write SQL in starters/Q213.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q213
+Learner: node sql-more/verify.cjs --starters --id=Q213

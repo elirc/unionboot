@@ -1,0 +1,35 @@
+Q344 — family Schema migrations backfills and version gates, scenario 4: safe-numeric-backfill
+
+Task
+Add age INTEGER; convert only nonempty all-digit age_text, unknown becomes NULL instead of SQLite CAST unknown->0.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE customers(id INTEGER PRIMARY KEY,full_name TEXT,age_text TEXT);INSERT INTO customers VALUES(1,'Ada Lovelace','36'),(2,'Bo Li','20'),(3,'Cy','unknown');PRAGMA user_version=1;
+
+Concrete example
+The first result row on this seed is {"id":1,"age":36}.
+
+Expected shape
+Columns: id, age. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "age": 36
+  },
+  {
+    "id": 2,
+    "age": 20
+  },
+  {
+    "id": 3,
+    "age": null
+  }
+]
+
+Submission
+Write SQL in starters/Q344.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q344
+Learner: node sql-more/verify.cjs --starters --id=Q344

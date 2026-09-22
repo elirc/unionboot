@@ -1,0 +1,18 @@
+Concurrent row saves / scenario 9 — Retain rejected draft; uppercase normalization; max 7
+
+TASK
+Two independent rows A/B saved initially one/two. Draft A/B inputs. Save A/B requires trimmed nonempty length<=7; normalize uppercase. Disable only that row while pending, allow other saves concurrently. Outputs Saved A/B show saved text; State A/B idle/saving/saved/error. Success returns accepted string from injected saveRow(id,text), updates saved and draft. Failure keeps draft for retry, shows alert Failed ID. Retry clears its alert only. Ignore results after unmount. No global pending flag.
+
+EXAMPLE
+Save A and B; resolve B first => A remains saving while B updates.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1617.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{saveRow}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1617
+node react-300/verify.cjs --starters --id=1617

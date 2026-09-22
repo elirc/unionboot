@@ -1,0 +1,18 @@
+Two-dimensional keyboard grid / scenario 6 — 3 columns; wrap row/column; cell 1 unavailable
+
+TASK
+Render role grid with 3 rows, 3 gridcells each, labels Cell1..Cell9; gridcell contains a button with same name. Cell1 button disabled; blocked moves stay put (do not skip). Initially Cell2 roving focus target; do not steal focus on mount. Arrow keys move in two dimensions, wrap within row/column. Movement focuses target and updates roving tabindex. Enter/Space or click selects cell, Selection output initially none. Focus output current cell name.
+
+EXAMPLE
+ArrowDown from Cell2 => Cell5.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1474.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1474
+node react-300/verify.cjs --starters --id=1474

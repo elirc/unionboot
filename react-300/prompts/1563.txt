@@ -1,0 +1,18 @@
+Cross-field pack orders / scenario 5 — Pack plus remainder
+
+TASK
+Units controlled text starts blank. Accept finite positive integers <=16 (20 capacity less 4 reserve). Breakdown output shows P packs + R units, using pack size 4, or invalid. Submit disabled and guarded while invalid. Valid submit stores numeric units string in Saved without clearing input. Reset clears Units and Saved.
+
+EXAMPLE
+16 units => 4 packs + 0 units.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1563.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1563
+node react-300/verify.cjs --starters --id=1563

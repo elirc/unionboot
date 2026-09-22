@@ -1,0 +1,39 @@
+Q021 — family GROUP BY HAVING and aggregate policy, scenario 1: sum-all-statuses
+
+Task
+Sum amounts by region, retaining SQL NULL when every amount is NULL; order alphabetically.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE sales(id INTEGER PRIMARY KEY,region TEXT,amount INTEGER,status TEXT);
+INSERT INTO sales VALUES(1,'East',10,'paid'),(2,'East',20,'paid'),(3,'East',100,'pending'),(4,'West',5,'paid'),(5,'West',NULL,'paid'),(6,'North',40,'paid'),(7,'North',-10,'refund'),(8,'South',NULL,'pending');
+
+Concrete example
+With the exact seed above, the first result row is {"region":"East","total":130}.
+
+Expected shape
+Columns (exact aliases): region, total. 4 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "region": "East",
+    "total": 130
+  },
+  {
+    "region": "North",
+    "total": 30
+  },
+  {
+    "region": "South",
+    "total": null
+  },
+  {
+    "region": "West",
+    "total": 5
+  }
+]
+
+Submission
+Edit starters/Q021.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q021
+Reference: node sql-200/verify.cjs --id=Q021

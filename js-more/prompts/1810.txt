@@ -1,0 +1,18 @@
+JSON wildcard selection / scenario 2 — order=forward; missing=null; output=all
+
+TASK
+Input {value,path}, JSON data, path array of own-property string tokens or '*'. Expand wildcard over Object.keys order forward; primitives have no wildcard children. Literal missing key produces null. Repeat per path segment. Return all resulting values. Empty path selects root. No prototype traversal, no expressions or recursive descent.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1810.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1810
+node js-more/verify.cjs --starters --id=1810
+
+POLICIES
+order=forward; missing=null; output=all
+Semantic key: {"missing":"null","order":"forward","output":"all"}

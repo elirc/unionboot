@@ -1,0 +1,31 @@
+Q365 — family Inventory valuation and stock flow policies, scenario 5: reorder-points-trigger-flag
+
+Task
+Create items with A reorder9 and B reorder8; return a query-derived below flag (1 only when current stock is strictly below reorder). No trigger or generated stock column.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE moves(id INTEGER PRIMARY KEY,sku TEXT,delta INTEGER,at INTEGER);INSERT INTO moves VALUES(1,'A',10,1),(2,'A',-4,2),(3,'B',7,3),(4,'A',5,4),(5,'B',-2,5);
+
+Concrete example
+The first result row on this seed is {"sku":"A","below":0}.
+
+Expected shape
+Columns: sku, below. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "sku": "A",
+    "below": 0
+  },
+  {
+    "sku": "B",
+    "below": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q365.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q365
+Learner: node sql-more/verify.cjs --starters --id=Q365

@@ -1,0 +1,13 @@
+W273 — Injected deterministic cache handlers
+Scenario 3/10: Injected clock; TTL 3 seconds; exact expiry is stale
+
+Cache GET-like value by exact ordinal key in injected store, using injected TimeProvider. Blank key->400 without loading. Fresh now<Expires ->200 {value,cached:true}. Missing/expired ->load once, cache for3s, return cached:false. Exact expiry is stale; loader failure must not write. Single-thread teaching store, not production concurrency. Example clock t0 first key ->load; t0+3s ->reload.
+
+Signature: public static IResult Handle(string key, Cache store, TimeProvider clock, Func<string> load)
+Provided domain types: public sealed record Entry(string Value,DateTimeOffset Expires); public sealed class Cache { public Dictionary<string,Entry> Values {get;}=new(StringComparer.Ordinal); }
+
+Edit starters/W273.cs. Run node dotnet-web-300/verify.cjs --starters --id=W273 from unionboot.
+Reference: solutions/W273.cs; shared checks: tests/W273.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

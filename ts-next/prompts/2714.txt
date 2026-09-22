@@ -1,0 +1,14 @@
+2714: Typed coefficient polynomial evaluation / polynomial-degree=11
+
+Contract focus: const tuple coefficient degree; exact arity contracts.
+
+Evaluate a degree-11 coefficient tuple in descending-power order using Horner's method. Exactly 12 coefficients are required, including leading zeros. Return the declared degree literal (not the effective nonzero degree) and computed value. Do not mutate input.
+
+Semantic variation 11/15: polynomial-degree=11. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2714.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2714.cjs. Type contracts: types/2714.positive.ts and types/2714.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2714
+Reference: node ts-next/verify.cjs --id=2714

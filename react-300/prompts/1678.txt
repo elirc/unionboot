@@ -1,0 +1,18 @@
+Delayed draft commit / scenario 10 — 500ms quiet period; raw commit; flush on blur
+
+TASK
+Text input initially empty. Editing schedules injected scheduler.after(delay,callback), returning cancel, for 500ms quiet period. Replace/cancel prior task on each edit. Commit raw latest value to Saved output and onSave(value). Dirty output pending/clean. Save now flushes once, disabled when clean. Blur flushes a pending draft. Cancel discards pending work, restores latest committed field value. Unmount cancels pending task; retained old callbacks cannot commit. Initial empty draft must not schedule/save.
+
+EXAMPLE
+Type a, then ab before time elapses => only ab is committed.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1678.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{scheduler,onSave}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1678
+node react-300/verify.cjs --starters --id=1678

@@ -1,0 +1,35 @@
+Q264 — family Views projection and live query contracts, scenario 4: view-explicit-column-names
+
+Task
+Create view totals(person,total) using explicit column list, aggregating all statuses; select alphabetical.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE orders(id INTEGER PRIMARY KEY,customer TEXT,status TEXT,amount INTEGER);INSERT INTO orders VALUES(1,'Ada','paid',10),(2,'Ada','pending',20),(3,'Bo','paid',30),(4,'Cy','cancelled',40);
+
+Concrete example
+The first result row on this seed is {"person":"Ada","total":30}.
+
+Expected shape
+Columns: person, total. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "person": "Ada",
+    "total": 30
+  },
+  {
+    "person": "Bo",
+    "total": 30
+  },
+  {
+    "person": "Cy",
+    "total": 40
+  }
+]
+
+Submission
+Write SQL in starters/Q264.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q264
+Learner: node sql-more/verify.cjs --starters --id=Q264

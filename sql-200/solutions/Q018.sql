@@ -1,0 +1,1 @@
+SELECT c.name,p.category,SUM(l.qty*l.price) AS total FROM customers c JOIN orders o ON o.customer_id=c.id JOIN lines l ON l.order_id=o.id JOIN products p ON p.id=l.product_id WHERE o.status='paid' GROUP BY c.id,c.name,p.category ORDER BY c.id,p.category;

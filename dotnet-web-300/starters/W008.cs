@@ -1,0 +1,11 @@
+// W008: Resource lookup HTTP results / scenario 8
+// Catalog 8; positive IDs; missing returns 404
+// Read prompts/W008.txt. In-process ASP.NET Core contract, no network.
+namespace DotnetWeb;
+public static class W008 {
+
+ public static IResult Handle(int id, IReadOnlyDictionary<int,string> catalog) {
+  // TODO: implement independently. References are excluded from practice builds.
+  throw new NotImplementedException("W008");
+ }
+}

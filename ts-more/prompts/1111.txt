@@ -1,0 +1,15 @@
+1111: Runtime-frozen readonly snapshot / scenario 13
+
+Contract focus: Readonly mapped type; shallow copy semantics.
+Return a fresh shallow-frozen object snapshot. The return type forbids top-level assignment; nested values retain their original types and references (not a deep freeze). Copy enumerable own properties including symbols; do not freeze or mutate the input.
+
+This is scenario 13/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize mixed duplicates; scalar/state exercises use deterministic case seed 12. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1111.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1111.cjs. Positive strict fixtures: types/1111.positive.ts. Negative strict fixtures: types/1111.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=1111
+Reference check:
+  node ts-more/verify.cjs --id=1111
+

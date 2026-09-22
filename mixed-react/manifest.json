@@ -1,0 +1,522 @@
+[
+  {
+    "id": 519,
+    "tech": "react",
+    "title": "Bounded quantity editor / scenario 1",
+    "starter": "starters/519.jsx",
+    "solution": "solutions/519.jsx",
+    "test": "tests/519.cjs"
+  },
+  {
+    "id": 520,
+    "tech": "react",
+    "title": "Bounded quantity editor / scenario 2",
+    "starter": "starters/520.jsx",
+    "solution": "solutions/520.jsx",
+    "test": "tests/520.cjs"
+  },
+  {
+    "id": 521,
+    "tech": "react",
+    "title": "Bounded quantity editor / scenario 3",
+    "starter": "starters/521.jsx",
+    "solution": "solutions/521.jsx",
+    "test": "tests/521.cjs"
+  },
+  {
+    "id": 522,
+    "tech": "react",
+    "title": "Bounded quantity editor / scenario 4",
+    "starter": "starters/522.jsx",
+    "solution": "solutions/522.jsx",
+    "test": "tests/522.cjs"
+  },
+  {
+    "id": 523,
+    "tech": "react",
+    "title": "Bounded quantity editor / scenario 5",
+    "starter": "starters/523.jsx",
+    "solution": "solutions/523.jsx",
+    "test": "tests/523.cjs"
+  },
+  {
+    "id": 524,
+    "tech": "react",
+    "title": "Validated text submission / scenario 1",
+    "starter": "starters/524.jsx",
+    "solution": "solutions/524.jsx",
+    "test": "tests/524.cjs"
+  },
+  {
+    "id": 525,
+    "tech": "react",
+    "title": "Validated text submission / scenario 2",
+    "starter": "starters/525.jsx",
+    "solution": "solutions/525.jsx",
+    "test": "tests/525.cjs"
+  },
+  {
+    "id": 526,
+    "tech": "react",
+    "title": "Validated text submission / scenario 3",
+    "starter": "starters/526.jsx",
+    "solution": "solutions/526.jsx",
+    "test": "tests/526.cjs"
+  },
+  {
+    "id": 527,
+    "tech": "react",
+    "title": "Validated text submission / scenario 4",
+    "starter": "starters/527.jsx",
+    "solution": "solutions/527.jsx",
+    "test": "tests/527.cjs"
+  },
+  {
+    "id": 528,
+    "tech": "react",
+    "title": "Validated text submission / scenario 5",
+    "starter": "starters/528.jsx",
+    "solution": "solutions/528.jsx",
+    "test": "tests/528.cjs"
+  },
+  {
+    "id": 529,
+    "tech": "react",
+    "title": "Filtered product list / scenario 1",
+    "starter": "starters/529.jsx",
+    "solution": "solutions/529.jsx",
+    "test": "tests/529.cjs"
+  },
+  {
+    "id": 530,
+    "tech": "react",
+    "title": "Filtered product list / scenario 2",
+    "starter": "starters/530.jsx",
+    "solution": "solutions/530.jsx",
+    "test": "tests/530.cjs"
+  },
+  {
+    "id": 531,
+    "tech": "react",
+    "title": "Filtered product list / scenario 3",
+    "starter": "starters/531.jsx",
+    "solution": "solutions/531.jsx",
+    "test": "tests/531.cjs"
+  },
+  {
+    "id": 532,
+    "tech": "react",
+    "title": "Filtered product list / scenario 4",
+    "starter": "starters/532.jsx",
+    "solution": "solutions/532.jsx",
+    "test": "tests/532.cjs"
+  },
+  {
+    "id": 533,
+    "tech": "react",
+    "title": "Filtered product list / scenario 5",
+    "starter": "starters/533.jsx",
+    "solution": "solutions/533.jsx",
+    "test": "tests/533.cjs"
+  },
+  {
+    "id": 534,
+    "tech": "react",
+    "title": "Exclusive accordion / scenario 1",
+    "starter": "starters/534.jsx",
+    "solution": "solutions/534.jsx",
+    "test": "tests/534.cjs"
+  },
+  {
+    "id": 535,
+    "tech": "react",
+    "title": "Exclusive accordion / scenario 2",
+    "starter": "starters/535.jsx",
+    "solution": "solutions/535.jsx",
+    "test": "tests/535.cjs"
+  },
+  {
+    "id": 536,
+    "tech": "react",
+    "title": "Exclusive accordion / scenario 3",
+    "starter": "starters/536.jsx",
+    "solution": "solutions/536.jsx",
+    "test": "tests/536.cjs"
+  },
+  {
+    "id": 537,
+    "tech": "react",
+    "title": "Exclusive accordion / scenario 4",
+    "starter": "starters/537.jsx",
+    "solution": "solutions/537.jsx",
+    "test": "tests/537.cjs"
+  },
+  {
+    "id": 538,
+    "tech": "react",
+    "title": "Exclusive accordion / scenario 5",
+    "starter": "starters/538.jsx",
+    "solution": "solutions/538.jsx",
+    "test": "tests/538.cjs"
+  },
+  {
+    "id": 539,
+    "tech": "react",
+    "title": "Accessible tab selection / scenario 1",
+    "starter": "starters/539.jsx",
+    "solution": "solutions/539.jsx",
+    "test": "tests/539.cjs"
+  },
+  {
+    "id": 540,
+    "tech": "react",
+    "title": "Accessible tab selection / scenario 2",
+    "starter": "starters/540.jsx",
+    "solution": "solutions/540.jsx",
+    "test": "tests/540.cjs"
+  },
+  {
+    "id": 541,
+    "tech": "react",
+    "title": "Accessible tab selection / scenario 3",
+    "starter": "starters/541.jsx",
+    "solution": "solutions/541.jsx",
+    "test": "tests/541.cjs"
+  },
+  {
+    "id": 542,
+    "tech": "react",
+    "title": "Accessible tab selection / scenario 4",
+    "starter": "starters/542.jsx",
+    "solution": "solutions/542.jsx",
+    "test": "tests/542.cjs"
+  },
+  {
+    "id": 543,
+    "tech": "react",
+    "title": "Accessible tab selection / scenario 5",
+    "starter": "starters/543.jsx",
+    "solution": "solutions/543.jsx",
+    "test": "tests/543.cjs"
+  },
+  {
+    "id": 544,
+    "tech": "react",
+    "title": "Checklist selection cap / scenario 1",
+    "starter": "starters/544.jsx",
+    "solution": "solutions/544.jsx",
+    "test": "tests/544.cjs"
+  },
+  {
+    "id": 545,
+    "tech": "react",
+    "title": "Checklist selection cap / scenario 2",
+    "starter": "starters/545.jsx",
+    "solution": "solutions/545.jsx",
+    "test": "tests/545.cjs"
+  },
+  {
+    "id": 546,
+    "tech": "react",
+    "title": "Checklist selection cap / scenario 3",
+    "starter": "starters/546.jsx",
+    "solution": "solutions/546.jsx",
+    "test": "tests/546.cjs"
+  },
+  {
+    "id": 547,
+    "tech": "react",
+    "title": "Checklist selection cap / scenario 4",
+    "starter": "starters/547.jsx",
+    "solution": "solutions/547.jsx",
+    "test": "tests/547.cjs"
+  },
+  {
+    "id": 548,
+    "tech": "react",
+    "title": "Checklist selection cap / scenario 5",
+    "starter": "starters/548.jsx",
+    "solution": "solutions/548.jsx",
+    "test": "tests/548.cjs"
+  },
+  {
+    "id": 549,
+    "tech": "react",
+    "title": "Stable sortable table / scenario 1",
+    "starter": "starters/549.jsx",
+    "solution": "solutions/549.jsx",
+    "test": "tests/549.cjs"
+  },
+  {
+    "id": 550,
+    "tech": "react",
+    "title": "Stable sortable table / scenario 2",
+    "starter": "starters/550.jsx",
+    "solution": "solutions/550.jsx",
+    "test": "tests/550.cjs"
+  },
+  {
+    "id": 551,
+    "tech": "react",
+    "title": "Stable sortable table / scenario 3",
+    "starter": "starters/551.jsx",
+    "solution": "solutions/551.jsx",
+    "test": "tests/551.cjs"
+  },
+  {
+    "id": 552,
+    "tech": "react",
+    "title": "Stable sortable table / scenario 4",
+    "starter": "starters/552.jsx",
+    "solution": "solutions/552.jsx",
+    "test": "tests/552.cjs"
+  },
+  {
+    "id": 553,
+    "tech": "react",
+    "title": "Stable sortable table / scenario 5",
+    "starter": "starters/553.jsx",
+    "solution": "solutions/553.jsx",
+    "test": "tests/553.cjs"
+  },
+  {
+    "id": 554,
+    "tech": "react",
+    "title": "Paged list controls / scenario 1",
+    "starter": "starters/554.jsx",
+    "solution": "solutions/554.jsx",
+    "test": "tests/554.cjs"
+  },
+  {
+    "id": 555,
+    "tech": "react",
+    "title": "Paged list controls / scenario 2",
+    "starter": "starters/555.jsx",
+    "solution": "solutions/555.jsx",
+    "test": "tests/555.cjs"
+  },
+  {
+    "id": 556,
+    "tech": "react",
+    "title": "Paged list controls / scenario 3",
+    "starter": "starters/556.jsx",
+    "solution": "solutions/556.jsx",
+    "test": "tests/556.cjs"
+  },
+  {
+    "id": 557,
+    "tech": "react",
+    "title": "Paged list controls / scenario 4",
+    "starter": "starters/557.jsx",
+    "solution": "solutions/557.jsx",
+    "test": "tests/557.cjs"
+  },
+  {
+    "id": 558,
+    "tech": "react",
+    "title": "Paged list controls / scenario 5",
+    "starter": "starters/558.jsx",
+    "solution": "solutions/558.jsx",
+    "test": "tests/558.cjs"
+  },
+  {
+    "id": 559,
+    "tech": "react",
+    "title": "Editable label with cancel / scenario 1",
+    "starter": "starters/559.jsx",
+    "solution": "solutions/559.jsx",
+    "test": "tests/559.cjs"
+  },
+  {
+    "id": 560,
+    "tech": "react",
+    "title": "Editable label with cancel / scenario 2",
+    "starter": "starters/560.jsx",
+    "solution": "solutions/560.jsx",
+    "test": "tests/560.cjs"
+  },
+  {
+    "id": 561,
+    "tech": "react",
+    "title": "Editable label with cancel / scenario 3",
+    "starter": "starters/561.jsx",
+    "solution": "solutions/561.jsx",
+    "test": "tests/561.cjs"
+  },
+  {
+    "id": 562,
+    "tech": "react",
+    "title": "Editable label with cancel / scenario 4",
+    "starter": "starters/562.jsx",
+    "solution": "solutions/562.jsx",
+    "test": "tests/562.cjs"
+  },
+  {
+    "id": 563,
+    "tech": "react",
+    "title": "Editable label with cancel / scenario 5",
+    "starter": "starters/563.jsx",
+    "solution": "solutions/563.jsx",
+    "test": "tests/563.cjs"
+  },
+  {
+    "id": 564,
+    "tech": "react",
+    "title": "Confirm destructive local action / scenario 1",
+    "starter": "starters/564.jsx",
+    "solution": "solutions/564.jsx",
+    "test": "tests/564.cjs"
+  },
+  {
+    "id": 565,
+    "tech": "react",
+    "title": "Confirm destructive local action / scenario 2",
+    "starter": "starters/565.jsx",
+    "solution": "solutions/565.jsx",
+    "test": "tests/565.cjs"
+  },
+  {
+    "id": 566,
+    "tech": "react",
+    "title": "Confirm destructive local action / scenario 3",
+    "starter": "starters/566.jsx",
+    "solution": "solutions/566.jsx",
+    "test": "tests/566.cjs"
+  },
+  {
+    "id": 567,
+    "tech": "react",
+    "title": "Confirm destructive local action / scenario 4",
+    "starter": "starters/567.jsx",
+    "solution": "solutions/567.jsx",
+    "test": "tests/567.cjs"
+  },
+  {
+    "id": 568,
+    "tech": "react",
+    "title": "Confirm destructive local action / scenario 5",
+    "starter": "starters/568.jsx",
+    "solution": "solutions/568.jsx",
+    "test": "tests/568.cjs"
+  },
+  {
+    "id": 569,
+    "tech": "react",
+    "title": "Reducer undoable text / scenario 1",
+    "starter": "starters/569.jsx",
+    "solution": "solutions/569.jsx",
+    "test": "tests/569.cjs"
+  },
+  {
+    "id": 570,
+    "tech": "react",
+    "title": "Reducer undoable text / scenario 2",
+    "starter": "starters/570.jsx",
+    "solution": "solutions/570.jsx",
+    "test": "tests/570.cjs"
+  },
+  {
+    "id": 571,
+    "tech": "react",
+    "title": "Reducer undoable text / scenario 3",
+    "starter": "starters/571.jsx",
+    "solution": "solutions/571.jsx",
+    "test": "tests/571.cjs"
+  },
+  {
+    "id": 572,
+    "tech": "react",
+    "title": "Reducer undoable text / scenario 4",
+    "starter": "starters/572.jsx",
+    "solution": "solutions/572.jsx",
+    "test": "tests/572.cjs"
+  },
+  {
+    "id": 573,
+    "tech": "react",
+    "title": "Reducer undoable text / scenario 5",
+    "starter": "starters/573.jsx",
+    "solution": "solutions/573.jsx",
+    "test": "tests/573.cjs"
+  },
+  {
+    "id": 574,
+    "tech": "react",
+    "title": "Password visibility and length / scenario 1",
+    "starter": "starters/574.jsx",
+    "solution": "solutions/574.jsx",
+    "test": "tests/574.cjs"
+  },
+  {
+    "id": 575,
+    "tech": "react",
+    "title": "Password visibility and length / scenario 2",
+    "starter": "starters/575.jsx",
+    "solution": "solutions/575.jsx",
+    "test": "tests/575.cjs"
+  },
+  {
+    "id": 576,
+    "tech": "react",
+    "title": "Password visibility and length / scenario 3",
+    "starter": "starters/576.jsx",
+    "solution": "solutions/576.jsx",
+    "test": "tests/576.cjs"
+  },
+  {
+    "id": 577,
+    "tech": "react",
+    "title": "Password visibility and length / scenario 4",
+    "starter": "starters/577.jsx",
+    "solution": "solutions/577.jsx",
+    "test": "tests/577.cjs"
+  },
+  {
+    "id": 578,
+    "tech": "react",
+    "title": "Password visibility and length / scenario 5",
+    "starter": "starters/578.jsx",
+    "solution": "solutions/578.jsx",
+    "test": "tests/578.cjs"
+  },
+  {
+    "id": 579,
+    "tech": "react",
+    "title": "Select all checklist / scenario 1",
+    "starter": "starters/579.jsx",
+    "solution": "solutions/579.jsx",
+    "test": "tests/579.cjs"
+  },
+  {
+    "id": 580,
+    "tech": "react",
+    "title": "Select all checklist / scenario 2",
+    "starter": "starters/580.jsx",
+    "solution": "solutions/580.jsx",
+    "test": "tests/580.cjs"
+  },
+  {
+    "id": 581,
+    "tech": "react",
+    "title": "Select all checklist / scenario 3",
+    "starter": "starters/581.jsx",
+    "solution": "solutions/581.jsx",
+    "test": "tests/581.cjs"
+  },
+  {
+    "id": 582,
+    "tech": "react",
+    "title": "Select all checklist / scenario 4",
+    "starter": "starters/582.jsx",
+    "solution": "solutions/582.jsx",
+    "test": "tests/582.cjs"
+  },
+  {
+    "id": 583,
+    "tech": "react",
+    "title": "Select all checklist / scenario 5",
+    "starter": "starters/583.jsx",
+    "solution": "solutions/583.jsx",
+    "test": "tests/583.cjs"
+  }
+]

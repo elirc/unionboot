@@ -1,0 +1,15 @@
+984: Unknown record decoder / scenario 06
+
+Contract focus: unknown object narrowing; exact optional properties.
+Decode a plain data-shaped unknown object: own nonblank string name, optional own nonnegative safe-integer age. Trim name and strip extra properties. An own age:undefined is invalid; absent age stays absent. Arrays/null/nonobjects fail record. Validation order: record,name,age. Ignore inherited fields. Assume no throwing getters/proxies.
+
+This is scenario 6/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize zero boundaries; scalar/state exercises use deterministic case seed 5. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/984.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/984.cjs. Positive strict fixtures: types/984.positive.ts. Negative strict fixtures: types/984.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=984
+Reference check:
+  node ts-more/verify.cjs --id=984
+

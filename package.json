@@ -1,0 +1,33 @@
+{
+  "name": "unionboot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "unionboot local exercises: JavaScript, TypeScript, React, C#, ASP.NET Core and SQL",
+  "scripts": {
+    "verify:original": "node verify-original.cjs && node verify-39-50.cjs && node verify-missing.cjs",
+    "verify:js": "node js/batch-084-103/verify.cjs && node js-rest/verify.cjs",
+    "check:ts": "tsc -p ts/tsconfig.json --noEmit && tsc -p mixed-data/tsconfig.json --noEmit && tsc -p ts-more/tsconfig.json --noEmit && tsc -p ts-final/tsconfig.json --noEmit",
+    "verify:ts": "node ts/verify.cjs && node ts-more/verify.cjs && node ts-final/verify.cjs",
+    "verify:react": "node react/verify.cjs && node mixed-react/verify.cjs && node react-more/verify.cjs && node react-junior/verify.cjs && node react-300/verify.cjs",
+    "verify:react-300": "node react-300/verify.cjs",
+    "verify:react-junior": "node react-junior/verify.cjs",
+    "verify:csharp": "node verify-csharp.cjs && node verify-csharp-more.cjs",
+    "verify:csharp-more": "node verify-csharp-more.cjs",
+    "verify:sql": "node sql-200/verify.cjs",
+    "inventory": "node verify-all.cjs --inventory",
+    "verify:dotnet-web": "node dotnet-web-300/verify.cjs",
+    "verify:mix": "node mixed-data/verify.cjs && node mixed-react/verify.cjs",
+    "verify:all": "node verify-all.cjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "esbuild": "^0.25.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "jsdom": "^26.1.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

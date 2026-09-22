@@ -1,0 +1,43 @@
+Q398 — family Ordered event funnels and attribution windows, scenario 8: last-touch-view-attribution
+
+Task
+For every buy assign latest strictly earlier view timestamp for same user, NULL if none; order buy id.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE events(id INTEGER PRIMARY KEY,user TEXT,kind TEXT,t INTEGER);INSERT INTO events VALUES(1,'A','view',1),(2,'A','cart',2),(3,'A','buy',4),(4,'B','buy',1),(5,'B','view',2),(6,'B','cart',3),(7,'C','view',1),(8,'C','cart',5),(9,'C','buy',9),(10,'D','view',1),(11,'D','buy',3),(12,'A','buy',6);
+
+Concrete example
+The first result row on this seed is {"id":3,"view_at":1}.
+
+Expected shape
+Columns: id, view_at. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 3,
+    "view_at": 1
+  },
+  {
+    "id": 4,
+    "view_at": null
+  },
+  {
+    "id": 9,
+    "view_at": 1
+  },
+  {
+    "id": 11,
+    "view_at": 1
+  },
+  {
+    "id": 12,
+    "view_at": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q398.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q398
+Learner: node sql-more/verify.cjs --starters --id=Q398

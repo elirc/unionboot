@@ -1,0 +1,1082 @@
+[
+  {
+    "id": 384,
+    "tech": "js",
+    "title": "Report policy 1: any, min 0, rows",
+    "starter": "starters/384.cjs",
+    "solution": "solutions/384.cjs",
+    "test": "tests/384.cjs"
+  },
+  {
+    "id": 385,
+    "tech": "js",
+    "title": "Report policy 2: any, min 10, rows",
+    "starter": "starters/385.cjs",
+    "solution": "solutions/385.cjs",
+    "test": "tests/385.cjs"
+  },
+  {
+    "id": 386,
+    "tech": "js",
+    "title": "Report policy 3: any, min 20, rows",
+    "starter": "starters/386.cjs",
+    "solution": "solutions/386.cjs",
+    "test": "tests/386.cjs"
+  },
+  {
+    "id": 387,
+    "tech": "js",
+    "title": "Report policy 4: any, min 30, rows",
+    "starter": "starters/387.cjs",
+    "solution": "solutions/387.cjs",
+    "test": "tests/387.cjs"
+  },
+  {
+    "id": 388,
+    "tech": "js",
+    "title": "Report policy 5: any, min 40, rows",
+    "starter": "starters/388.cjs",
+    "solution": "solutions/388.cjs",
+    "test": "tests/388.cjs"
+  },
+  {
+    "id": 389,
+    "tech": "js",
+    "title": "Report policy 6: any, min 0, rows",
+    "starter": "starters/389.cjs",
+    "solution": "solutions/389.cjs",
+    "test": "tests/389.cjs"
+  },
+  {
+    "id": 390,
+    "tech": "js",
+    "title": "Report policy 7: any, min 10, rows",
+    "starter": "starters/390.cjs",
+    "solution": "solutions/390.cjs",
+    "test": "tests/390.cjs"
+  },
+  {
+    "id": 391,
+    "tech": "js",
+    "title": "Report policy 8: any, min 20, rows",
+    "starter": "starters/391.cjs",
+    "solution": "solutions/391.cjs",
+    "test": "tests/391.cjs"
+  },
+  {
+    "id": 392,
+    "tech": "js",
+    "title": "Report policy 9: any, min 30, rows",
+    "starter": "starters/392.cjs",
+    "solution": "solutions/392.cjs",
+    "test": "tests/392.cjs"
+  },
+  {
+    "id": 393,
+    "tech": "js",
+    "title": "Report policy 10: any, min 40, rows",
+    "starter": "starters/393.cjs",
+    "solution": "solutions/393.cjs",
+    "test": "tests/393.cjs"
+  },
+  {
+    "id": 394,
+    "tech": "js",
+    "title": "Report policy 11: open, min 0, rows",
+    "starter": "starters/394.cjs",
+    "solution": "solutions/394.cjs",
+    "test": "tests/394.cjs"
+  },
+  {
+    "id": 395,
+    "tech": "js",
+    "title": "Report policy 12: open, min 10, rows",
+    "starter": "starters/395.cjs",
+    "solution": "solutions/395.cjs",
+    "test": "tests/395.cjs"
+  },
+  {
+    "id": 396,
+    "tech": "js",
+    "title": "Report policy 13: open, min 20, rows",
+    "starter": "starters/396.cjs",
+    "solution": "solutions/396.cjs",
+    "test": "tests/396.cjs"
+  },
+  {
+    "id": 397,
+    "tech": "js",
+    "title": "Report policy 14: open, min 30, rows",
+    "starter": "starters/397.cjs",
+    "solution": "solutions/397.cjs",
+    "test": "tests/397.cjs"
+  },
+  {
+    "id": 398,
+    "tech": "js",
+    "title": "Report policy 15: open, min 40, rows",
+    "starter": "starters/398.cjs",
+    "solution": "solutions/398.cjs",
+    "test": "tests/398.cjs"
+  },
+  {
+    "id": 399,
+    "tech": "js",
+    "title": "Report policy 16: open, min 0, rows",
+    "starter": "starters/399.cjs",
+    "solution": "solutions/399.cjs",
+    "test": "tests/399.cjs"
+  },
+  {
+    "id": 400,
+    "tech": "js",
+    "title": "Report policy 17: open, min 10, rows",
+    "starter": "starters/400.cjs",
+    "solution": "solutions/400.cjs",
+    "test": "tests/400.cjs"
+  },
+  {
+    "id": 401,
+    "tech": "js",
+    "title": "Report policy 18: open, min 20, rows",
+    "starter": "starters/401.cjs",
+    "solution": "solutions/401.cjs",
+    "test": "tests/401.cjs"
+  },
+  {
+    "id": 402,
+    "tech": "js",
+    "title": "Report policy 19: open, min 30, rows",
+    "starter": "starters/402.cjs",
+    "solution": "solutions/402.cjs",
+    "test": "tests/402.cjs"
+  },
+  {
+    "id": 403,
+    "tech": "js",
+    "title": "Report policy 20: open, min 40, rows",
+    "starter": "starters/403.cjs",
+    "solution": "solutions/403.cjs",
+    "test": "tests/403.cjs"
+  },
+  {
+    "id": 404,
+    "tech": "js",
+    "title": "Report policy 21: closed, min 0, rows",
+    "starter": "starters/404.cjs",
+    "solution": "solutions/404.cjs",
+    "test": "tests/404.cjs"
+  },
+  {
+    "id": 405,
+    "tech": "js",
+    "title": "Report policy 22: closed, min 10, rows",
+    "starter": "starters/405.cjs",
+    "solution": "solutions/405.cjs",
+    "test": "tests/405.cjs"
+  },
+  {
+    "id": 406,
+    "tech": "js",
+    "title": "Report policy 23: closed, min 20, rows",
+    "starter": "starters/406.cjs",
+    "solution": "solutions/406.cjs",
+    "test": "tests/406.cjs"
+  },
+  {
+    "id": 407,
+    "tech": "js",
+    "title": "Report policy 24: closed, min 30, rows",
+    "starter": "starters/407.cjs",
+    "solution": "solutions/407.cjs",
+    "test": "tests/407.cjs"
+  },
+  {
+    "id": 408,
+    "tech": "js",
+    "title": "Report policy 25: closed, min 40, rows",
+    "starter": "starters/408.cjs",
+    "solution": "solutions/408.cjs",
+    "test": "tests/408.cjs"
+  },
+  {
+    "id": 409,
+    "tech": "js",
+    "title": "Report policy 26: closed, min 0, rows",
+    "starter": "starters/409.cjs",
+    "solution": "solutions/409.cjs",
+    "test": "tests/409.cjs"
+  },
+  {
+    "id": 410,
+    "tech": "js",
+    "title": "Report policy 27: closed, min 10, rows",
+    "starter": "starters/410.cjs",
+    "solution": "solutions/410.cjs",
+    "test": "tests/410.cjs"
+  },
+  {
+    "id": 411,
+    "tech": "js",
+    "title": "Report policy 28: closed, min 20, rows",
+    "starter": "starters/411.cjs",
+    "solution": "solutions/411.cjs",
+    "test": "tests/411.cjs"
+  },
+  {
+    "id": 412,
+    "tech": "js",
+    "title": "Report policy 29: closed, min 30, rows",
+    "starter": "starters/412.cjs",
+    "solution": "solutions/412.cjs",
+    "test": "tests/412.cjs"
+  },
+  {
+    "id": 413,
+    "tech": "js",
+    "title": "Report policy 30: closed, min 40, rows",
+    "starter": "starters/413.cjs",
+    "solution": "solutions/413.cjs",
+    "test": "tests/413.cjs"
+  },
+  {
+    "id": 414,
+    "tech": "js",
+    "title": "Report policy 31: any, min 0, total",
+    "starter": "starters/414.cjs",
+    "solution": "solutions/414.cjs",
+    "test": "tests/414.cjs"
+  },
+  {
+    "id": 415,
+    "tech": "js",
+    "title": "Report policy 32: any, min 10, total",
+    "starter": "starters/415.cjs",
+    "solution": "solutions/415.cjs",
+    "test": "tests/415.cjs"
+  },
+  {
+    "id": 416,
+    "tech": "js",
+    "title": "Report policy 33: any, min 20, total",
+    "starter": "starters/416.cjs",
+    "solution": "solutions/416.cjs",
+    "test": "tests/416.cjs"
+  },
+  {
+    "id": 417,
+    "tech": "js",
+    "title": "Report policy 34: any, min 30, total",
+    "starter": "starters/417.cjs",
+    "solution": "solutions/417.cjs",
+    "test": "tests/417.cjs"
+  },
+  {
+    "id": 418,
+    "tech": "js",
+    "title": "Report policy 35: any, min 40, total",
+    "starter": "starters/418.cjs",
+    "solution": "solutions/418.cjs",
+    "test": "tests/418.cjs"
+  },
+  {
+    "id": 419,
+    "tech": "js",
+    "title": "Report policy 36: any, min 0, total",
+    "starter": "starters/419.cjs",
+    "solution": "solutions/419.cjs",
+    "test": "tests/419.cjs"
+  },
+  {
+    "id": 420,
+    "tech": "js",
+    "title": "Report policy 37: any, min 10, total",
+    "starter": "starters/420.cjs",
+    "solution": "solutions/420.cjs",
+    "test": "tests/420.cjs"
+  },
+  {
+    "id": 421,
+    "tech": "js",
+    "title": "Report policy 38: any, min 20, total",
+    "starter": "starters/421.cjs",
+    "solution": "solutions/421.cjs",
+    "test": "tests/421.cjs"
+  },
+  {
+    "id": 422,
+    "tech": "js",
+    "title": "Report policy 39: any, min 30, total",
+    "starter": "starters/422.cjs",
+    "solution": "solutions/422.cjs",
+    "test": "tests/422.cjs"
+  },
+  {
+    "id": 423,
+    "tech": "js",
+    "title": "Report policy 40: any, min 40, total",
+    "starter": "starters/423.cjs",
+    "solution": "solutions/423.cjs",
+    "test": "tests/423.cjs"
+  },
+  {
+    "id": 424,
+    "tech": "js",
+    "title": "Report policy 41: open, min 0, total",
+    "starter": "starters/424.cjs",
+    "solution": "solutions/424.cjs",
+    "test": "tests/424.cjs"
+  },
+  {
+    "id": 425,
+    "tech": "js",
+    "title": "Report policy 42: open, min 10, total",
+    "starter": "starters/425.cjs",
+    "solution": "solutions/425.cjs",
+    "test": "tests/425.cjs"
+  },
+  {
+    "id": 426,
+    "tech": "js",
+    "title": "Report policy 43: open, min 20, total",
+    "starter": "starters/426.cjs",
+    "solution": "solutions/426.cjs",
+    "test": "tests/426.cjs"
+  },
+  {
+    "id": 427,
+    "tech": "js",
+    "title": "Report policy 44: open, min 30, total",
+    "starter": "starters/427.cjs",
+    "solution": "solutions/427.cjs",
+    "test": "tests/427.cjs"
+  },
+  {
+    "id": 428,
+    "tech": "js",
+    "title": "Report policy 45: open, min 40, total",
+    "starter": "starters/428.cjs",
+    "solution": "solutions/428.cjs",
+    "test": "tests/428.cjs"
+  },
+  {
+    "id": 429,
+    "tech": "js",
+    "title": "Report policy 46: open, min 0, total",
+    "starter": "starters/429.cjs",
+    "solution": "solutions/429.cjs",
+    "test": "tests/429.cjs"
+  },
+  {
+    "id": 430,
+    "tech": "js",
+    "title": "Report policy 47: open, min 10, total",
+    "starter": "starters/430.cjs",
+    "solution": "solutions/430.cjs",
+    "test": "tests/430.cjs"
+  },
+  {
+    "id": 431,
+    "tech": "js",
+    "title": "Report policy 48: open, min 20, total",
+    "starter": "starters/431.cjs",
+    "solution": "solutions/431.cjs",
+    "test": "tests/431.cjs"
+  },
+  {
+    "id": 432,
+    "tech": "js",
+    "title": "Report policy 49: open, min 30, total",
+    "starter": "starters/432.cjs",
+    "solution": "solutions/432.cjs",
+    "test": "tests/432.cjs"
+  },
+  {
+    "id": 433,
+    "tech": "js",
+    "title": "Report policy 50: open, min 40, total",
+    "starter": "starters/433.cjs",
+    "solution": "solutions/433.cjs",
+    "test": "tests/433.cjs"
+  },
+  {
+    "id": 434,
+    "tech": "js",
+    "title": "Report policy 51: closed, min 0, total",
+    "starter": "starters/434.cjs",
+    "solution": "solutions/434.cjs",
+    "test": "tests/434.cjs"
+  },
+  {
+    "id": 435,
+    "tech": "js",
+    "title": "Report policy 52: closed, min 10, total",
+    "starter": "starters/435.cjs",
+    "solution": "solutions/435.cjs",
+    "test": "tests/435.cjs"
+  },
+  {
+    "id": 436,
+    "tech": "js",
+    "title": "Report policy 53: closed, min 20, total",
+    "starter": "starters/436.cjs",
+    "solution": "solutions/436.cjs",
+    "test": "tests/436.cjs"
+  },
+  {
+    "id": 437,
+    "tech": "js",
+    "title": "Report policy 54: closed, min 30, total",
+    "starter": "starters/437.cjs",
+    "solution": "solutions/437.cjs",
+    "test": "tests/437.cjs"
+  },
+  {
+    "id": 438,
+    "tech": "js",
+    "title": "Report policy 55: closed, min 40, total",
+    "starter": "starters/438.cjs",
+    "solution": "solutions/438.cjs",
+    "test": "tests/438.cjs"
+  },
+  {
+    "id": 439,
+    "tech": "js",
+    "title": "Report policy 56: closed, min 0, total",
+    "starter": "starters/439.cjs",
+    "solution": "solutions/439.cjs",
+    "test": "tests/439.cjs"
+  },
+  {
+    "id": 440,
+    "tech": "js",
+    "title": "Report policy 57: closed, min 10, total",
+    "starter": "starters/440.cjs",
+    "solution": "solutions/440.cjs",
+    "test": "tests/440.cjs"
+  },
+  {
+    "id": 441,
+    "tech": "js",
+    "title": "Report policy 58: closed, min 20, total",
+    "starter": "starters/441.cjs",
+    "solution": "solutions/441.cjs",
+    "test": "tests/441.cjs"
+  },
+  {
+    "id": 442,
+    "tech": "js",
+    "title": "Report policy 59: closed, min 30, total",
+    "starter": "starters/442.cjs",
+    "solution": "solutions/442.cjs",
+    "test": "tests/442.cjs"
+  },
+  {
+    "id": 443,
+    "tech": "js",
+    "title": "Report policy 60: closed, min 40, total",
+    "starter": "starters/443.cjs",
+    "solution": "solutions/443.cjs",
+    "test": "tests/443.cjs"
+  },
+  {
+    "id": 444,
+    "tech": "js",
+    "title": "Report policy 61: any, min 0, groups",
+    "starter": "starters/444.cjs",
+    "solution": "solutions/444.cjs",
+    "test": "tests/444.cjs"
+  },
+  {
+    "id": 445,
+    "tech": "js",
+    "title": "Report policy 62: any, min 10, groups",
+    "starter": "starters/445.cjs",
+    "solution": "solutions/445.cjs",
+    "test": "tests/445.cjs"
+  },
+  {
+    "id": 446,
+    "tech": "js",
+    "title": "Report policy 63: any, min 20, groups",
+    "starter": "starters/446.cjs",
+    "solution": "solutions/446.cjs",
+    "test": "tests/446.cjs"
+  },
+  {
+    "id": 447,
+    "tech": "js",
+    "title": "Report policy 64: any, min 30, groups",
+    "starter": "starters/447.cjs",
+    "solution": "solutions/447.cjs",
+    "test": "tests/447.cjs"
+  },
+  {
+    "id": 448,
+    "tech": "js",
+    "title": "Report policy 65: any, min 40, groups",
+    "starter": "starters/448.cjs",
+    "solution": "solutions/448.cjs",
+    "test": "tests/448.cjs"
+  },
+  {
+    "id": 449,
+    "tech": "js",
+    "title": "Report policy 66: any, min 0, groups",
+    "starter": "starters/449.cjs",
+    "solution": "solutions/449.cjs",
+    "test": "tests/449.cjs"
+  },
+  {
+    "id": 450,
+    "tech": "js",
+    "title": "Report policy 67: any, min 10, groups",
+    "starter": "starters/450.cjs",
+    "solution": "solutions/450.cjs",
+    "test": "tests/450.cjs"
+  },
+  {
+    "id": 451,
+    "tech": "js",
+    "title": "Report policy 68: any, min 20, groups",
+    "starter": "starters/451.cjs",
+    "solution": "solutions/451.cjs",
+    "test": "tests/451.cjs"
+  },
+  {
+    "id": 452,
+    "tech": "js",
+    "title": "Report policy 69: any, min 30, groups",
+    "starter": "starters/452.cjs",
+    "solution": "solutions/452.cjs",
+    "test": "tests/452.cjs"
+  },
+  {
+    "id": 453,
+    "tech": "js",
+    "title": "Report policy 70: any, min 40, groups",
+    "starter": "starters/453.cjs",
+    "solution": "solutions/453.cjs",
+    "test": "tests/453.cjs"
+  },
+  {
+    "id": 454,
+    "tech": "ts",
+    "title": "Report policy 71: open, min 0, groups",
+    "starter": "starters/454.ts",
+    "solution": "solutions/454.ts",
+    "test": "tests/454.cjs"
+  },
+  {
+    "id": 455,
+    "tech": "ts",
+    "title": "Report policy 72: open, min 10, groups",
+    "starter": "starters/455.ts",
+    "solution": "solutions/455.ts",
+    "test": "tests/455.cjs"
+  },
+  {
+    "id": 456,
+    "tech": "ts",
+    "title": "Report policy 73: open, min 20, groups",
+    "starter": "starters/456.ts",
+    "solution": "solutions/456.ts",
+    "test": "tests/456.cjs"
+  },
+  {
+    "id": 457,
+    "tech": "ts",
+    "title": "Report policy 74: open, min 30, groups",
+    "starter": "starters/457.ts",
+    "solution": "solutions/457.ts",
+    "test": "tests/457.cjs"
+  },
+  {
+    "id": 458,
+    "tech": "ts",
+    "title": "Report policy 75: open, min 40, groups",
+    "starter": "starters/458.ts",
+    "solution": "solutions/458.ts",
+    "test": "tests/458.cjs"
+  },
+  {
+    "id": 459,
+    "tech": "ts",
+    "title": "Report policy 76: open, min 0, groups",
+    "starter": "starters/459.ts",
+    "solution": "solutions/459.ts",
+    "test": "tests/459.cjs"
+  },
+  {
+    "id": 460,
+    "tech": "ts",
+    "title": "Report policy 77: open, min 10, groups",
+    "starter": "starters/460.ts",
+    "solution": "solutions/460.ts",
+    "test": "tests/460.cjs"
+  },
+  {
+    "id": 461,
+    "tech": "ts",
+    "title": "Report policy 78: open, min 20, groups",
+    "starter": "starters/461.ts",
+    "solution": "solutions/461.ts",
+    "test": "tests/461.cjs"
+  },
+  {
+    "id": 462,
+    "tech": "ts",
+    "title": "Report policy 79: open, min 30, groups",
+    "starter": "starters/462.ts",
+    "solution": "solutions/462.ts",
+    "test": "tests/462.cjs"
+  },
+  {
+    "id": 463,
+    "tech": "ts",
+    "title": "Report policy 80: open, min 40, groups",
+    "starter": "starters/463.ts",
+    "solution": "solutions/463.ts",
+    "test": "tests/463.cjs"
+  },
+  {
+    "id": 464,
+    "tech": "ts",
+    "title": "Report policy 81: closed, min 0, groups",
+    "starter": "starters/464.ts",
+    "solution": "solutions/464.ts",
+    "test": "tests/464.cjs"
+  },
+  {
+    "id": 465,
+    "tech": "ts",
+    "title": "Report policy 82: closed, min 10, groups",
+    "starter": "starters/465.ts",
+    "solution": "solutions/465.ts",
+    "test": "tests/465.cjs"
+  },
+  {
+    "id": 466,
+    "tech": "ts",
+    "title": "Report policy 83: closed, min 20, groups",
+    "starter": "starters/466.ts",
+    "solution": "solutions/466.ts",
+    "test": "tests/466.cjs"
+  },
+  {
+    "id": 467,
+    "tech": "ts",
+    "title": "Report policy 84: closed, min 30, groups",
+    "starter": "starters/467.ts",
+    "solution": "solutions/467.ts",
+    "test": "tests/467.cjs"
+  },
+  {
+    "id": 468,
+    "tech": "ts",
+    "title": "Report policy 85: closed, min 40, groups",
+    "starter": "starters/468.ts",
+    "solution": "solutions/468.ts",
+    "test": "tests/468.cjs"
+  },
+  {
+    "id": 469,
+    "tech": "ts",
+    "title": "Report policy 86: closed, min 0, groups",
+    "starter": "starters/469.ts",
+    "solution": "solutions/469.ts",
+    "test": "tests/469.cjs"
+  },
+  {
+    "id": 470,
+    "tech": "ts",
+    "title": "Report policy 87: closed, min 10, groups",
+    "starter": "starters/470.ts",
+    "solution": "solutions/470.ts",
+    "test": "tests/470.cjs"
+  },
+  {
+    "id": 471,
+    "tech": "ts",
+    "title": "Report policy 88: closed, min 20, groups",
+    "starter": "starters/471.ts",
+    "solution": "solutions/471.ts",
+    "test": "tests/471.cjs"
+  },
+  {
+    "id": 472,
+    "tech": "ts",
+    "title": "Report policy 89: closed, min 30, groups",
+    "starter": "starters/472.ts",
+    "solution": "solutions/472.ts",
+    "test": "tests/472.cjs"
+  },
+  {
+    "id": 473,
+    "tech": "ts",
+    "title": "Report policy 90: closed, min 40, groups",
+    "starter": "starters/473.ts",
+    "solution": "solutions/473.ts",
+    "test": "tests/473.cjs"
+  },
+  {
+    "id": 474,
+    "tech": "ts",
+    "title": "Report policy 91: any, min 0, rows",
+    "starter": "starters/474.ts",
+    "solution": "solutions/474.ts",
+    "test": "tests/474.cjs"
+  },
+  {
+    "id": 475,
+    "tech": "ts",
+    "title": "Report policy 92: any, min 10, rows",
+    "starter": "starters/475.ts",
+    "solution": "solutions/475.ts",
+    "test": "tests/475.cjs"
+  },
+  {
+    "id": 476,
+    "tech": "ts",
+    "title": "Report policy 93: any, min 20, rows",
+    "starter": "starters/476.ts",
+    "solution": "solutions/476.ts",
+    "test": "tests/476.cjs"
+  },
+  {
+    "id": 477,
+    "tech": "ts",
+    "title": "Report policy 94: any, min 30, rows",
+    "starter": "starters/477.ts",
+    "solution": "solutions/477.ts",
+    "test": "tests/477.cjs"
+  },
+  {
+    "id": 478,
+    "tech": "ts",
+    "title": "Report policy 95: any, min 40, rows",
+    "starter": "starters/478.ts",
+    "solution": "solutions/478.ts",
+    "test": "tests/478.cjs"
+  },
+  {
+    "id": 479,
+    "tech": "ts",
+    "title": "Report policy 96: any, min 0, rows",
+    "starter": "starters/479.ts",
+    "solution": "solutions/479.ts",
+    "test": "tests/479.cjs"
+  },
+  {
+    "id": 480,
+    "tech": "ts",
+    "title": "Report policy 97: any, min 10, rows",
+    "starter": "starters/480.ts",
+    "solution": "solutions/480.ts",
+    "test": "tests/480.cjs"
+  },
+  {
+    "id": 481,
+    "tech": "ts",
+    "title": "Report policy 98: any, min 20, rows",
+    "starter": "starters/481.ts",
+    "solution": "solutions/481.ts",
+    "test": "tests/481.cjs"
+  },
+  {
+    "id": 482,
+    "tech": "ts",
+    "title": "Report policy 99: any, min 30, rows",
+    "starter": "starters/482.ts",
+    "solution": "solutions/482.ts",
+    "test": "tests/482.cjs"
+  },
+  {
+    "id": 483,
+    "tech": "ts",
+    "title": "Report policy 100: any, min 40, rows",
+    "starter": "starters/483.ts",
+    "solution": "solutions/483.ts",
+    "test": "tests/483.cjs"
+  },
+  {
+    "id": 484,
+    "tech": "ts",
+    "title": "Report policy 101: open, min 0, rows",
+    "starter": "starters/484.ts",
+    "solution": "solutions/484.ts",
+    "test": "tests/484.cjs"
+  },
+  {
+    "id": 485,
+    "tech": "ts",
+    "title": "Report policy 102: open, min 10, rows",
+    "starter": "starters/485.ts",
+    "solution": "solutions/485.ts",
+    "test": "tests/485.cjs"
+  },
+  {
+    "id": 486,
+    "tech": "ts",
+    "title": "Report policy 103: open, min 20, rows",
+    "starter": "starters/486.ts",
+    "solution": "solutions/486.ts",
+    "test": "tests/486.cjs"
+  },
+  {
+    "id": 487,
+    "tech": "ts",
+    "title": "Report policy 104: open, min 30, rows",
+    "starter": "starters/487.ts",
+    "solution": "solutions/487.ts",
+    "test": "tests/487.cjs"
+  },
+  {
+    "id": 488,
+    "tech": "ts",
+    "title": "Report policy 105: open, min 40, rows",
+    "starter": "starters/488.ts",
+    "solution": "solutions/488.ts",
+    "test": "tests/488.cjs"
+  },
+  {
+    "id": 489,
+    "tech": "ts",
+    "title": "Report policy 106: open, min 0, rows",
+    "starter": "starters/489.ts",
+    "solution": "solutions/489.ts",
+    "test": "tests/489.cjs"
+  },
+  {
+    "id": 490,
+    "tech": "ts",
+    "title": "Report policy 107: open, min 10, rows",
+    "starter": "starters/490.ts",
+    "solution": "solutions/490.ts",
+    "test": "tests/490.cjs"
+  },
+  {
+    "id": 491,
+    "tech": "ts",
+    "title": "Report policy 108: open, min 20, rows",
+    "starter": "starters/491.ts",
+    "solution": "solutions/491.ts",
+    "test": "tests/491.cjs"
+  },
+  {
+    "id": 492,
+    "tech": "ts",
+    "title": "Report policy 109: open, min 30, rows",
+    "starter": "starters/492.ts",
+    "solution": "solutions/492.ts",
+    "test": "tests/492.cjs"
+  },
+  {
+    "id": 493,
+    "tech": "ts",
+    "title": "Report policy 110: open, min 40, rows",
+    "starter": "starters/493.ts",
+    "solution": "solutions/493.ts",
+    "test": "tests/493.cjs"
+  },
+  {
+    "id": 494,
+    "tech": "ts",
+    "title": "Report policy 111: closed, min 0, rows",
+    "starter": "starters/494.ts",
+    "solution": "solutions/494.ts",
+    "test": "tests/494.cjs"
+  },
+  {
+    "id": 495,
+    "tech": "ts",
+    "title": "Report policy 112: closed, min 10, rows",
+    "starter": "starters/495.ts",
+    "solution": "solutions/495.ts",
+    "test": "tests/495.cjs"
+  },
+  {
+    "id": 496,
+    "tech": "ts",
+    "title": "Report policy 113: closed, min 20, rows",
+    "starter": "starters/496.ts",
+    "solution": "solutions/496.ts",
+    "test": "tests/496.cjs"
+  },
+  {
+    "id": 497,
+    "tech": "ts",
+    "title": "Report policy 114: closed, min 30, rows",
+    "starter": "starters/497.ts",
+    "solution": "solutions/497.ts",
+    "test": "tests/497.cjs"
+  },
+  {
+    "id": 498,
+    "tech": "ts",
+    "title": "Report policy 115: closed, min 40, rows",
+    "starter": "starters/498.ts",
+    "solution": "solutions/498.ts",
+    "test": "tests/498.cjs"
+  },
+  {
+    "id": 499,
+    "tech": "ts",
+    "title": "Report policy 116: closed, min 0, rows",
+    "starter": "starters/499.ts",
+    "solution": "solutions/499.ts",
+    "test": "tests/499.cjs"
+  },
+  {
+    "id": 500,
+    "tech": "ts",
+    "title": "Report policy 117: closed, min 10, rows",
+    "starter": "starters/500.ts",
+    "solution": "solutions/500.ts",
+    "test": "tests/500.cjs"
+  },
+  {
+    "id": 501,
+    "tech": "ts",
+    "title": "Report policy 118: closed, min 20, rows",
+    "starter": "starters/501.ts",
+    "solution": "solutions/501.ts",
+    "test": "tests/501.cjs"
+  },
+  {
+    "id": 502,
+    "tech": "ts",
+    "title": "Report policy 119: closed, min 30, rows",
+    "starter": "starters/502.ts",
+    "solution": "solutions/502.ts",
+    "test": "tests/502.cjs"
+  },
+  {
+    "id": 503,
+    "tech": "ts",
+    "title": "Report policy 120: closed, min 40, rows",
+    "starter": "starters/503.ts",
+    "solution": "solutions/503.ts",
+    "test": "tests/503.cjs"
+  },
+  {
+    "id": 504,
+    "tech": "ts",
+    "title": "Report policy 121: any, min 0, total",
+    "starter": "starters/504.ts",
+    "solution": "solutions/504.ts",
+    "test": "tests/504.cjs"
+  },
+  {
+    "id": 505,
+    "tech": "ts",
+    "title": "Report policy 122: any, min 10, total",
+    "starter": "starters/505.ts",
+    "solution": "solutions/505.ts",
+    "test": "tests/505.cjs"
+  },
+  {
+    "id": 506,
+    "tech": "ts",
+    "title": "Report policy 123: any, min 20, total",
+    "starter": "starters/506.ts",
+    "solution": "solutions/506.ts",
+    "test": "tests/506.cjs"
+  },
+  {
+    "id": 507,
+    "tech": "ts",
+    "title": "Report policy 124: any, min 30, total",
+    "starter": "starters/507.ts",
+    "solution": "solutions/507.ts",
+    "test": "tests/507.cjs"
+  },
+  {
+    "id": 508,
+    "tech": "ts",
+    "title": "Report policy 125: any, min 40, total",
+    "starter": "starters/508.ts",
+    "solution": "solutions/508.ts",
+    "test": "tests/508.cjs"
+  },
+  {
+    "id": 509,
+    "tech": "ts",
+    "title": "Report policy 126: any, min 0, total",
+    "starter": "starters/509.ts",
+    "solution": "solutions/509.ts",
+    "test": "tests/509.cjs"
+  },
+  {
+    "id": 510,
+    "tech": "ts",
+    "title": "Report policy 127: any, min 10, total",
+    "starter": "starters/510.ts",
+    "solution": "solutions/510.ts",
+    "test": "tests/510.cjs"
+  },
+  {
+    "id": 511,
+    "tech": "ts",
+    "title": "Report policy 128: any, min 20, total",
+    "starter": "starters/511.ts",
+    "solution": "solutions/511.ts",
+    "test": "tests/511.cjs"
+  },
+  {
+    "id": 512,
+    "tech": "ts",
+    "title": "Report policy 129: any, min 30, total",
+    "starter": "starters/512.ts",
+    "solution": "solutions/512.ts",
+    "test": "tests/512.cjs"
+  },
+  {
+    "id": 513,
+    "tech": "ts",
+    "title": "Report policy 130: any, min 40, total",
+    "starter": "starters/513.ts",
+    "solution": "solutions/513.ts",
+    "test": "tests/513.cjs"
+  },
+  {
+    "id": 514,
+    "tech": "ts",
+    "title": "Report policy 131: open, min 0, total",
+    "starter": "starters/514.ts",
+    "solution": "solutions/514.ts",
+    "test": "tests/514.cjs"
+  },
+  {
+    "id": 515,
+    "tech": "ts",
+    "title": "Report policy 132: open, min 10, total",
+    "starter": "starters/515.ts",
+    "solution": "solutions/515.ts",
+    "test": "tests/515.cjs"
+  },
+  {
+    "id": 516,
+    "tech": "ts",
+    "title": "Report policy 133: open, min 20, total",
+    "starter": "starters/516.ts",
+    "solution": "solutions/516.ts",
+    "test": "tests/516.cjs"
+  },
+  {
+    "id": 517,
+    "tech": "ts",
+    "title": "Report policy 134: open, min 30, total",
+    "starter": "starters/517.ts",
+    "solution": "solutions/517.ts",
+    "test": "tests/517.cjs"
+  },
+  {
+    "id": 518,
+    "tech": "ts",
+    "title": "Report policy 135: open, min 40, total",
+    "starter": "starters/518.ts",
+    "solution": "solutions/518.ts",
+    "test": "tests/518.cjs"
+  }
+]

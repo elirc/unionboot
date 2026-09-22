@@ -1,0 +1,14 @@
+2221: Suffix-selected asset descriptors / asset-kinds=png+txt+json
+
+Contract focus: template suffix unions; discriminated metadata.
+
+Classify only .png, .txt, .json assets by case-sensitive final suffix. Return kind-specific readonly metadata; infer the member from the literal filename. No filesystem access. Reject unsupported suffixes at runtime when called from JavaScript.
+
+Semantic variation 13/15: asset-kinds=png+txt+json. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2221.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2221.cjs. Type contracts: types/2221.positive.ts and types/2221.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2221
+Reference: node ts-next/verify.cjs --id=2221

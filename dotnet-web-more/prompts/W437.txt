@@ -1,0 +1,8 @@
+W437 | Hosted service lifecycle
+Scenario 7: Clock lifecycle duration 7 minutes
+Semantic key: clock-lifecycle-duration-7-minutes
+
+Build an IHostedService with injected clock. First start records timestamp/start event; repeated starts are no-ops. First stop after start records stop timestamp/event, repeated stops or stop-before-start are no-ops. Honor cancellation before mutation. Scenario observes 7 minutes elapsed without sleeping.
+
+Signature: public static IHostedService Create(TimeProvider clock,State state)
+Implement starters/W437.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

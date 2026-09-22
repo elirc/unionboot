@@ -1,0 +1,18 @@
+{
+  "phase": "tests",
+  "groups": 1,
+  "passed": 0,
+  "failed": 1,
+  "assertions": 0,
+  "results": [
+    {
+      "id": "W001",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W001"
+    }
+  ]
+}

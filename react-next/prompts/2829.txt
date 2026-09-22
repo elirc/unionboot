@@ -1,0 +1,18 @@
+Intersection exposure latch / scenario 11 — Boundary 1; latch first qualifying exposure
+
+TASK
+Render a div data-testid=target and output Exposure initially hidden. In an effect call injected observe(element,0.1,callback); it returns disconnect. Callback entries {isIntersecting,intersectionRatio} qualify only when intersecting AND ratio>=0.1. Latch visible forever after first qualifying entry and disconnect immediately. Ignore retained callbacks after disconnect or unmount.
+
+EXAMPLE
+Intersecting ratio 0.09000000000000001 => hidden; ratio 0.1 => visible.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/2829.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{observe}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=2829
+node react-next/verify.cjs --starters --id=2829

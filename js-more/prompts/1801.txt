@@ -1,0 +1,18 @@
+Huffman prefix codes / scenario 3 — tie=ascending; output=both; zero=0
+
+TASK
+Input ASCII string. Huffman frequencies; repeatedly merge two least-weight nodes, ties ascending by sorted concatenated leaf-symbol key. First removed is left child. Left edge uses 0, right opposite; singleton code 0. Return {codes,bits}, table sorted ASCII and encoded original input. Empty yields {codes:[],bits:""}.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1801.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1801
+node js-more/verify.cjs --starters --id=1801
+
+POLICIES
+tie=ascending; output=both; zero=0
+Semantic key: {"output":"both","tie":"ascending","zero":"0"}

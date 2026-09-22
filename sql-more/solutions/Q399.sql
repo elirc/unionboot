@@ -1,0 +1,1 @@
+WITH firsts AS(SELECT user,MIN(t) AS viewed FROM events WHERE kind='view' GROUP BY user) SELECT f.user,MIN(b.t)-f.viewed AS latency FROM firsts f JOIN events b ON b.user=f.user AND b.kind='buy' AND b.t>f.viewed GROUP BY f.user,f.viewed ORDER BY f.user;

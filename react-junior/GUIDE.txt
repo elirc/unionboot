@@ -1,0 +1,62 @@
+REACT-JUNIOR
+
+50 junior React exercises, ids 1369..1418. 50 separately specified scenarios; related-pattern variants are explicitly labelled, not claimed as unrelated concepts. Categories: state, forms, CRUD, a11y, effects, async, debugging/refactoring, performance.
+
+From unionboot:
+  node react-junior/verify.cjs
+  node react-junior/verify.cjs --starters
+  node react-junior/verify.cjs --id=1369
+  node react-junior/verify.cjs --starters --id=1369
+
+Each exercise exports a default component; read the spec comment in the starter and the matching tests/<id>.cjs for props. Tests run in jsdom using real DOM elements, React act, accessible queries and dispatched events. Timer exercises use the local deterministic clock.cjs (not Jest); asynchronous tests inject deferred promises and never access a network. Each test has behavior assertions; structural learning goals such as using a hook, useMemo or context additionally require self-review. No preview server. Blank starters intentionally fail. Debug/refactor prompts describe the legacy mistake rather than supplying a solved starter.
+
+1369 Repair a batched counter [state / debugging]
+1370 Immutable cart line updates [state]
+1371 Reducer match scoreboard [state]
+1372 Move people between teams [state]
+1373 Update nested notification preferences [state / debugging]
+1374 Three-state stable sorting [state]
+1375 Split a bill without redundant state [state / derived data]
+1376 Bidirectional temperature inputs [state / derived data]
+1377 Profile form with a saved baseline [forms]
+1378 Password confirmation with touched errors [forms / a11y]
+1379 Normalize a phone number on submission [forms]
+1380 Conditional delivery fields [forms]
+1381 Validate a date interval [forms]
+1382 Dynamic guest fields with stable identities [forms]
+1383 Preview a comma-separated import [forms]
+1384 Branching feedback survey [forms / state]
+1385 Editable inventory rows [CRUD]
+1386 Optimistic comment list with rollback [CRUD / async]
+1387 Paginated people table [CRUD]
+1388 Expandable search over records [CRUD / a11y]
+1389 Stopwatch with start and stop [effects]
+1390 Interval ticker / changing-step debugging variant [effects / debugging]
+1391 Debounced search indicator [effects]
+1392 Ignore stale profile responses [async]
+1393 Restart an in-flight job [async]
+1394 Batch fetch with partial failure [async]
+1395 Poll for status until ready [async / effects]
+1396 Debounced save with flushed unsaved state [effects]
+1397 Typewriter effect with cleanup [effects]
+1398 Track window focus changes [effects]
+1399 Focus trap within a dialog [a11y]
+1400 Form with labelled error summary [a11y / forms]
+1401 Described-by hint and error pairing [a11y]
+1402 Roving tabindex list navigation [a11y]
+1403 Accessible star rating [a11y]
+1404 Skip link and landmark order [a11y]
+1405 Tree of expandable folders [a11y / state]
+1406 Keyed list with prepend and remove [state / lists]
+1407 Combine category and minimum-rating filters [state]
+1408 Copy to clipboard button [effects]
+1409 Persist a draft to sessionStorage [effects]
+1410 Memoized filtering / performance variant [performance]
+1411 Lifted state between two panels [state]
+1412 Independent counters / shared-handler refactor variant [debugging / refactoring]
+1413 Refactor me: chained conditionals to map [debugging / refactoring]
+1414 Context refactor of nested theme controls [debugging / refactoring]
+1415 Trace a missing effect dependency [debugging / effects]
+1416 Immutable sorting / debugging variant [debugging / immutability]
+1417 Fix the lost selection on rerender [debugging / state]
+1418 Migration: HOC wrapper to hook [refactoring]

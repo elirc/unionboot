@@ -1,0 +1,1 @@
+WITH counts AS(SELECT manager_id,COUNT(*) AS reports FROM staff WHERE manager_id IS NOT NULL GROUP BY manager_id) SELECT s.name,c.reports FROM counts c JOIN staff s ON s.id=c.manager_id WHERE c.reports>=2 ORDER BY s.id;

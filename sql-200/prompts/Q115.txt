@@ -1,0 +1,31 @@
+Q115 — family CASE pivot and conditional aggregation, scenario 5: conditional-average-ignore-other-statuses
+
+Task
+Average known open-ticket hours per team; do not turn non-open rows into zero.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE tickets(id INTEGER PRIMARY KEY,team TEXT,status TEXT,hours INTEGER,priority INTEGER);
+INSERT INTO tickets VALUES(1,'A','open',2,1),(2,'A','closed',5,3),(3,'A','open',NULL,2),(4,'B','closed',3,1),(5,'B','pending',4,NULL),(6,'B','open',0,3);
+
+Concrete example
+With the exact seed above, the first result row is {"team":"A","average_open":2}.
+
+Expected shape
+Columns (exact aliases): team, average_open. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "team": "A",
+    "average_open": 2
+  },
+  {
+    "team": "B",
+    "average_open": 0
+  }
+]
+
+Submission
+Edit starters/Q115.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q115
+Reference: node sql-200/verify.cjs --id=Q115

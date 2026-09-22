@@ -1,0 +1,18 @@
+Notification dependency form / scenario 5 — Retain both intents
+
+TASK
+Email and Phone text fields. SMS checkbox requires trimmed Phone; Digest checkbox requires Email containing @. Disable unavailable channels. Invalidated prerequisite retains checked intent while disabled.  Effective output is active checked names in SMS,Digest order joined by comma, or none. Save copies Effective to Saved. Save always enabled. Draft edits leave Saved unchanged.
+
+EXAMPLE
+Phone=123 then check SMS => Effective=SMS.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1583.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1583
+node react-300/verify.cjs --starters --id=1583

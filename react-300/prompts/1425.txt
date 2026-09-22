@@ -1,0 +1,18 @@
+Faceted record search / scenario 7 — Any token match; exclude archived; score >=1
+
+TASK
+Props rows {id,name,kind,score,archived}. Query splits trimmed lowercase whitespace tokens; match any token as case-insensitive name substring; empty matches all. Kind select all/fruit/home combines with search. Always require score>=1 and not archived. List names only in input order, Count output. Clear filters resets query and Kind, not fixed policy. Reflect prop updates without mutating them.
+
+EXAMPLE
+Query red apple => red apple, green apple.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1425.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{rows=[]}
+Example data: {"rows":[{"id":1,"name":"red apple","kind":"fruit","score":4,"archived":false},{"id":2,"name":"green apple","kind":"fruit","score":2,"archived":false},{"id":3,"name":"red chair","kind":"home","score":5,"archived":true},{"id":4,"name":"blue cup","kind":"home","score":3,"archived":false}]}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1425
+node react-300/verify.cjs --starters --id=1425

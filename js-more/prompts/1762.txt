@@ -1,0 +1,18 @@
+Union-find components / scenario 4 — size=4; root=maximum
+
+TASK
+Start 4 singleton nodes numbered0..3. Input operations {type:'union'|'same',a,b}. Union representative is always maximum node in the component. Implement full path compression. Return {answers,roots,components}; answers for same operations; roots after compressing every node. Invalid node throws RangeError('Unknown node'); unknown operation throws Error('Unknown operation').
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1762.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1762
+node js-more/verify.cjs --starters --id=1762
+
+POLICIES
+size=4; root=maximum
+Semantic key: {"root":"maximum","size":4}

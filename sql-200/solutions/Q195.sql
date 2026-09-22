@@ -1,0 +1,1 @@
+CREATE INDEX orders2_status ON orders2(status); CREATE INDEX lines2_order ON lines2(order_id); EXPLAIN QUERY PLAN SELECT o.id,l.product_id FROM orders2 AS o INDEXED BY orders2_status CROSS JOIN lines2 AS l INDEXED BY lines2_order WHERE o.status='paid' AND l.order_id=o.id;

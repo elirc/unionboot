@@ -1,0 +1,18 @@
+Shared quota allocation / scenario 3 — Sold-out pool
+
+TASK
+A and B share 4 units, initially A=2, B=2. Take A/B requests 2; reject an entire request when free units are insufficient. Release A/B returns up to 2 owned units. Label outputs A, B, Free. Keep action buttons enabled, guard state updates. Reset restores initial counts.
+
+EXAMPLE
+Initially Free=0; Take A gives A=2 and Free=0.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1531.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1531
+node react-300/verify.cjs --starters --id=1531

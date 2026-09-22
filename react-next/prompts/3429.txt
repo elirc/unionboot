@@ -1,0 +1,18 @@
+Selection-aware text formatting / scenario 11 — Boundary 1; wrap selected text in brackets
+
+TASK
+Text textarea starts abc. Format operates on current DOM selection. Wrap nonempty selected text in [brackets]. Empty selection leaves text unchanged and shows alert Select text. On success clear alert and restore selection around transformed text via layout effect; do not select surrounding text. Output Text mirrors draft. Plain typing is unmodified. This is selection/caret management, not clipboard access.
+
+EXAMPLE
+Select first 1 characters, Format => [a]bc.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3429.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3429
+node react-next/verify.cjs --starters --id=3429

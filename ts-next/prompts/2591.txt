@@ -1,0 +1,14 @@
+2591: Arity-directed overload selection / overload-tuple-width=8
+
+Contract focus: overload sets; conditional input-return relationships.
+
+Return an overloaded formatter: scalar number gives string; a readonly tuple of exactly 8 numbers gives a readonly string tuple of the same arity. The implementation signature is not public, so union arguments need narrowing before a call. No mutation or locale formatting.
+
+Semantic variation 8/15: overload-tuple-width=8. Other scenarios change the type contract (not a policy argument or just test data).
+
+Implement starters/2591.ts. Keep exported types and signatures. Do not import solutions, use any, or silence errors. Localized assertions are allowed only to bridge the stated runtime invariant to a conditional/mapped type; never cast away invalid caller input.
+
+Runtime examples: tests/2591.cjs. Type contracts: types/2591.positive.ts and types/2591.negative.ts. Fixtures compile but are never executed.
+
+Practice: node ts-next/verify.cjs --starters --id=2591
+Reference: node ts-next/verify.cjs --id=2591

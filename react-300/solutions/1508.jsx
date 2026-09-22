@@ -1,0 +1,7 @@
+// 1508 Soft delete and restore / scenario 10 — Multi-item trash; restore end; locked row 5
+// Initial active rows A..E, original rank order. E is locked: Remove button disabled. Remove NAME moves item to trash. Trash retains all removed items in deletion order. Active and Trash are named lists with plain spans for row text. Trash rows have Restore NAME. Restore appends to active list. Empty trash clears trash only. Outputs Active count and Trash count.
+// Full prompt: ../prompts/1508.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId} from 'react';
+export default function Exercise({}) {
+const names=['A','B','C','D','E'];const [active,setActive]=useState(names),[trash,setTrash]=useState([]);const remove=x=>{if(x==='E')return;setActive(xs=>xs.filter(y=>y!==x));setTrash(xs=>[...xs,x]);};const restore=x=>{setTrash(xs=>xs.filter(y=>y!==x));setActive(xs=>[...xs,x]);};return <section><ul aria-label="Active">{active.map(x=><li key={x}><span>{x}</span><button disabled={x==='E'} aria-label={'Remove '+x} onClick={()=>remove(x)}>Remove</button></li>)}</ul><ul aria-label="Trash">{trash.map(x=><li key={x}><span>{x}</span><button aria-label={'Restore '+x} onClick={()=>restore(x)}>Restore</button></li>)}</ul><button onClick={()=>setTrash([])}>Empty trash</button><output aria-label="Active count">{active.length}</output><output aria-label="Trash count">{trash.length}</output></section>;
+}

@@ -1,0 +1,78 @@
+TS-NEXT — STRUCTURAL TYPESCRIPT CONTRACT LAB
+
+750 new exercises; IDs 1969–2718; tech: ts. 50 families × 15 observably different public contracts. Not 750 unrelated algorithms. Variations alter recursive budgets, tuple dimensions, required key sets, allowed variants, or protocol states. The manifest records semanticKey and a public-contract SHA-256. Generator gates require family|semanticKey uniqueness and 15 distinct public contracts per family.
+
+Architecture
+Six files per exercise: prompts/<id>.txt, starters/<id>.ts, solutions/<id>.ts, tests/<id>.cjs, types/<id>.positive.ts, types/<id>.negative.ts. Starters keep the type API but throw TODO exercise <id>. Solutions are independent and never imported by starters. Exactly four @ts-expect-error cases per negative fixture; positive fixtures guard against any on solve and assert concrete return/key/tuple types.
+
+Workflow
+1. Read a prompt and implement its starter without changing the API.
+2. node ts-next/verify.cjs --starters --id=1969
+3. Reference: node ts-next/verify.cjs --id=1969
+4. Inventory (no compiler/runtime): node ts-next/verify.cjs --inventory
+5. Full suites (coordinator only during authoring): node ts-next/verify.cjs and node ts-next/verify.cjs --starters
+--id N is also supported. Unknown/duplicate arguments and unknown IDs exit 2.
+
+Strict gate
+The existing local TypeScript 5.9.3 tsc CLI is required (never downloaded). strict, noUncheckedIndexedAccess, exactOptionalPropertyTypes, useUnknownInCatchVariables, noImplicitReturns and noEmitOnError are enabled. Both positive AND negative imports are rebound to the candidate. tsc must pass before any runtime test. Fixtures are compile-only. A compiler failure is never accepted as a blank control.
+
+Exit codes and evidence
+0: all runtime checks pass; 1: compiler passed but runtime grading failed; 2: setup/compiler/CLI failure. A valid blank control requires successful compiler followed by every selected runtime test failing with its exact TODO exercise ID. verification-solution.json and verification-starter.json record explicit scope and selected IDs; per-ID summary names and reports/<mode>-<id>.json preserve single-ID evidence. verification.log and blank-control.log append actual diagnostics. A single-ID report NEVER claims a full suite passed. Compiler scratch files are removed after each run.
+
+Authoring and safety
+Source: ../build-ts-next.cjs. It refuses an existing ts-next directory, uses exclusive writes, checks existing manifests for ID collisions, and never touches root integration. --inventory builds and checks inventory in memory without writing. No installs, network, commits, or publishing. No full suites were run by the author; the coordinator must run them sequentially on the memory-limited machine.
+
+Domain notes
+Template-literal transformations specify their exact ASCII or placeholder domain. Tuple algebra rejects widened arrays. Mapped object APIs assume exactly their declared own string fields unless otherwise specified. Assertions bridge runtime iteration with types, not validation gaps. Type fixtures are regression contracts, not a proof against deliberate type escapes.
+
+Families
+1969–1983: Bounded infer-chain box peeling (conditional infer chains; recursion fuel; terminal values)
+1984–1998: Saturating tuple prefix algebra (tuple infer; bounded take; literal length)
+1999–2013: Saturating tuple suffix algebra (variadic rest inference; bounded drop)
+2014–2028: Minimum-width tuple padding (recursive tuple construction; padding unions)
+2029–2043: Tuple left-rotation proofs (tuple concatenation; repeated rotations; exact positions)
+2044–2058: Literal tuple replication (const inference; fixed-size tuple construction)
+2059–2073: Overlapping tuple window types (recursive tuple windows; saturated boundaries)
+2074–2088: Position-labelled tuple enumeration (mapped tuple indexes; numeric template inference)
+2089–2103: Positional reverse tuple contracts (tuple right inference; reversed position correspondence)
+2104–2118: Tuple insertion boundary inference (tuple rest decomposition; insertion position algebra)
+2119–2133: Route-template parameter binding (template literal parsing; inferred parameter records)
+2134–2148: Positional printf-token inference (template literal token parser; heterogeneous rest tuples)
+2149–2163: Budgeted delimited literal parsing (template-literal split inference; trailing empty positions)
+2164–2178: Bounded leading-slash normalization (recursive template consumption; normalization budgets)
+2179–2193: Bounded ASCII whitespace trimming (template union matching; asymmetric literal transforms)
+2194–2208: Budgeted kebab-to-camel literal transforms (Capitalize intrinsic; recursive infer composition)
+2209–2223: Suffix-selected asset descriptors (template suffix unions; discriminated metadata)
+2224–2238: Query-template placeholder interpolation (template infer records; URLSearchParams value encoding)
+2239–2253: Fixed-width binary-word decoding (recursive template validation; intersection input constraints)
+2254–2268: Balanced literal envelope construction (recursive template wrapping; branded-free literal proofs)
+2269–2283: Getter-key remapping surfaces (mapped as clauses; Capitalize; lazy callbacks)
+2284–2298: Setter-key remapping surfaces (mapped as clauses; callback parameter correlation)
+2299–2313: Null-omitting optional property contracts (optional mapped modifiers; null exclusion; own-key omission)
+2314–2328: Optional-property default materialization (mapped required modifiers; exact absence semantics)
+2329–2343: Key-value entry union serialization (indexed mapped unions; entry tuple correlations)
+2344–2358: Schema-literal value inference (satisfies contracts; indexed discriminant inference)
+2359–2373: Phantom capability authorization plans (phantom records; structural capabilities; input authority)
+2374–2388: Exhaustive handler-table dispatch (mapped handler tables; complete coverage; return correlations)
+2389–2403: Readonly-key release maps (minus-readonly modifiers; selected mutable capability)
+2404–2418: Exclusive option-set encodings (never forbidden properties; XOR-shaped unions)
+2419–2433: Depth-limited readonly graph copies (recursive mapped readonly; bounded ownership)
+2434–2448: Depth-limited patch materialization (recursive Partial; exact optional boundaries)
+2449–2463: Nested promise-container inference (Awaited within recursive records; promise identity boundaries)
+2464–2478: Finite protocol transition tables (state-dependent events; indexed transition return types)
+2479–2493: Completion-gated immutable builders (phantom missing-key sets; conditional method availability)
+2494–2508: Covariant producer widening (out variance annotations; readonly production contracts)
+2509–2523: Contravariant consumer narrowing (in variance annotations; callback substitution)
+2524–2538: Invariant read-write cell copies (in out variance annotations; isolated mutable state)
+2539–2553: Explicit-this record methods (this parameters; call binding; receiver constraints)
+2554–2568: Abstract renderer specialization (abstract classes; implements contracts; polymorphic calls)
+2569–2583: Capability-composed audit mixins (intersection mixins; object augmentation; method capabilities)
+2584–2598: Arity-directed overload selection (overload sets; conditional input-return relationships)
+2599–2613: Index-tagged promise races (mapped tuple unions; Promise combinator attribution)
+2614–2628: Keyed all-settled outcome maps (mapped object Awaited; rejection unknown; key retention)
+2629–2643: Finite retry-attempt contracts (numeric literal unions; typed retry callbacks; failure boundaries)
+2644–2658: Cursor-page boundary metadata (cursor key projections; exact optional pagination unions)
+2659–2673: Unit-exponent quantity multiplication (unique-symbol dimension brands; exponent tuple composition)
+2674–2688: I18n named message argument inference (template placeholder inference; repeated named arguments)
+2689–2703: Index-safe fixed vector dot products (fixed tuple dimensions; corresponding input arity)
+2704–2718: Typed coefficient polynomial evaluation (const tuple coefficient degree; exact arity contracts)

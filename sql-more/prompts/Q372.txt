@@ -1,0 +1,51 @@
+Q372 — family Queue jobs state machines and idempotency, scenario 2: bounded-lease-limit-two
+
+Task
+Lease at most two queued mail jobs using ORDER BY id LIMIT, updating only selected ids. Extra queued jobs6 and7 make the batch bound observable.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE jobs(id INTEGER PRIMARY KEY,queue TEXT,state TEXT CHECK(state IN('queued','running','done','failed')));INSERT INTO jobs VALUES(1,'mail','queued'),(2,'mail','running'),(3,'mail','done'),(4,'bulk','queued'),(5,'bulk','failed');INSERT INTO jobs VALUES(6,'mail','queued'),(7,'mail','queued');
+
+Concrete example
+The first result row on this seed is {"id":1,"state":"running"}.
+
+Expected shape
+Columns: id, state. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "id": 1,
+    "state": "running"
+  },
+  {
+    "id": 2,
+    "state": "running"
+  },
+  {
+    "id": 3,
+    "state": "done"
+  },
+  {
+    "id": 4,
+    "state": "queued"
+  },
+  {
+    "id": 5,
+    "state": "failed"
+  },
+  {
+    "id": 6,
+    "state": "running"
+  },
+  {
+    "id": 7,
+    "state": "queued"
+  }
+]
+
+Submission
+Write SQL in starters/Q372.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q372
+Learner: node sql-more/verify.cjs --starters --id=Q372

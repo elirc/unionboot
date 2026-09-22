@@ -1,0 +1,15 @@
+1219: Typed asynchronous Result capture / scenario 01
+
+Contract focus: Promise; unknown catch values; generic Awaited.
+Invoke a sync or async thunk once and await its result. Convert throws/rejections into an error:unknown result, preserving the original thrown value. Successful results use Awaited<T>. Never assume thrown values are Error objects.
+
+This is scenario 1/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize empty collection; scalar/state exercises use deterministic case seed 0. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1219.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1219.cjs. Positive strict fixtures: types/1219.positive.ts. Negative strict fixtures: types/1219.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-final/verify.cjs --starters --id=1219
+Reference check:
+  node ts-final/verify.cjs --id=1219
+

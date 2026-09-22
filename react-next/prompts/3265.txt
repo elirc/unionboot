@@ -1,0 +1,18 @@
+Deferred resource display / scenario 7 — Boundary 7; urgent suspended preview
+
+TASK
+Controlled Text input updates immediately. Preview reads injected resource.read(text), which may throw a promise, inside Suspense fallback Waiting. Pass current text directly: preview suspends urgently; Stale output always no. Preview output echoes resource result. Resource for target7 is pending in tests. This is render-priority behavior, not debounce: no timer or request effect.
+
+EXAMPLE
+Type target7 while unresolved => input updates immediately, Waiting fallback visible.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3265.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{resource}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3265
+node react-next/verify.cjs --starters --id=3265

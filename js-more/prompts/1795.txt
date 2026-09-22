@@ -1,0 +1,18 @@
+Decimal-string arithmetic / scenario 7 — op=multiply; pad=false
+
+TASK
+Input nonempty unsigned digit strings {a,b}. Compute multiply exactly without Number whole-value conversion or BigInt in your implementation. Difference is absolute; subtract a-b throws RangeError('Negative result') if negative; maximum returns greater numeric operand. Return canonical digits, zero as 0. Invalid input throws TypeError('Decimal digits required').
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1795.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1795
+node js-more/verify.cjs --starters --id=1795
+
+POLICIES
+op=multiply; pad=false
+Semantic key: {"op":"multiply","pad":false}

@@ -1,0 +1,1 @@
+SELECT id,a FROM measures WHERE a IS NOT NULL AND a NOT IN(SELECT value FROM excluded WHERE value IS NOT NULL) ORDER BY id;

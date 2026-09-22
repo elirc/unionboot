@@ -1,0 +1,18 @@
+Socket handshake and buffered sends / scenario 7 — Boundary 7; reject offline sends
+
+TASK
+Injected socket.subscribe receives {type:'open'|'close'|'message',data?}, returns cleanup. State starts closed. Send button sends incrementing strings starting m8 (sequence baseline 7) when open. While closed reject all sends. Rejected attempts do not consume message numbers. On open drain queued messages once in order. Output State, Queued, Rejected, Received (last message or empty). Ignore unknown event types. Socket prop fixed per mount; unsubscribe on unmount.
+
+EXAMPLE
+8 offline clicks => 0 queued and 8 rejected.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3025.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{socket}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3025
+node react-next/verify.cjs --starters --id=3025

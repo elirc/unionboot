@@ -1,0 +1,11 @@
+Paged list controls / scenario 12 — size 3; start page 1; cyclic navigation; shrink permanently clamps
+
+List props.items with fixed page size 3, initial requested page 1. Clamp page to 1..max(1,ceil(length/size)), including on prop shrink; later growth must not resurrect an old out-of-range page. Output current page. Prev/Next wrap at ends and are disabled only when at most one page. First/Last jump to bounds and disable there. Empty shows page1 with no rows.
+
+Export default Exercise. Use React state/hooks; no external services, global mutable state, or imports from solutions. Match accessible labels and roles exactly. Props are immutable. Tests use real DOM events in jsdom; implementation-specific requirements such as useReducer/context must also be checked in your code review.
+
+Example test props: {"items":["Item1","Item2","Item3","Item4","Item5","Item6","Item7","Item8","Item9","Item10","Item11"]}
+
+This is a rule/boundary variant of an existing family, not a new unrelated component.
+Run solution: node react-more/verify.cjs --id=660
+Run your starter: node react-more/verify.cjs --starters --id=660

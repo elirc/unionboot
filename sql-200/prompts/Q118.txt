@@ -1,0 +1,27 @@
+Q118 — family CASE pivot and conditional aggregation, scenario 8: conditional-having-open-at-least-two
+
+Task
+Return team and total ticket count only for teams with at least two open tickets. Keep closed tickets in the total.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE tickets(id INTEGER PRIMARY KEY,team TEXT,status TEXT,hours INTEGER,priority INTEGER);
+INSERT INTO tickets VALUES(1,'A','open',2,1),(2,'A','closed',5,3),(3,'A','open',NULL,2),(4,'B','closed',3,1),(5,'B','pending',4,NULL),(6,'B','open',0,3);
+
+Concrete example
+With the exact seed above, the first result row is {"team":"A","tickets":3}.
+
+Expected shape
+Columns (exact aliases): team, tickets. 1 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "team": "A",
+    "tickets": 3
+  }
+]
+
+Submission
+Edit starters/Q118.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q118
+Reference: node sql-200/verify.cjs --id=Q118

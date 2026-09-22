@@ -1,0 +1,34 @@
+Q185 — family Parameterized queries with node sqlite bindings, scenario 5: parameterized-in-list-dynamic-placeholders
+
+Task
+Match ids 1 and 3 using IN with one bound placeholder per id, built as ?,?. Return id,name ordered by id.
+
+Dialect: SQLite, executed with Node node:sqlite DatabaseSync. SQLite date/string functions, dynamic typing, rowid/INTEGER PRIMARY KEY, booleans-as-integers, PRAGMAs and query-plan text are SQLite-specific, not portable SQL promises.
+
+Seed schema and data (a fresh in-memory database for every run; foreign_keys=ON)
+CREATE TABLE products(id INTEGER PRIMARY KEY,name TEXT,category TEXT,price INTEGER);
+INSERT INTO products VALUES(1,'Pen','office',3),(2,'Mug','home',8),(3,'Pad','office',12),(4,'Lamp','home',20),(5,'Rug','home',50);
+
+Bindings supplied by the test using node:sqlite preparedStatement.all(...params): [1,3]
+Write placeholders in SQL; do not interpolate these values. For a named-binding object, that object is passed as the first all() argument.
+
+Concrete example
+With the exact seed above, the first result row is {"id":1,"name":"Pen"}.
+
+Expected shape
+Columns (exact aliases): id, name. 2 row(s); exact order below is graded. NULL is JSON null; SQLite numeric results become JavaScript numbers.
+[
+  {
+    "id": 1,
+    "name": "Pen"
+  },
+  {
+    "id": 3,
+    "name": "Pad"
+  }
+]
+
+Submission
+Edit starters/Q185.sql. Use one query or a small semicolon-separated sequence; the final statement must produce the expected result. Earlier statements may mutate only this disposable database. The same test and seed grade starter and reference. Blank SQL executes no statements and returns [], which fails the nonempty expected rows.
+Run: node sql-200/verify.cjs --starters --id=Q185
+Reference: node sql-200/verify.cjs --id=Q185

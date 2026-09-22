@@ -1,0 +1,2716 @@
+{
+  "track": "dotnet-web-300",
+  "mode": "starter",
+  "scope": "in-process ASP.NET Core; no network",
+  "selected": "all",
+  "groups": 300,
+  "phase": "tests",
+  "passed": 0,
+  "failed": 300,
+  "assertions": 0,
+  "results": [
+    {
+      "id": "W001",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W001"
+    },
+    {
+      "id": "W002",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W002"
+    },
+    {
+      "id": "W003",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W003"
+    },
+    {
+      "id": "W004",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W004"
+    },
+    {
+      "id": "W005",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W005"
+    },
+    {
+      "id": "W006",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W006"
+    },
+    {
+      "id": "W007",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W007"
+    },
+    {
+      "id": "W008",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W008"
+    },
+    {
+      "id": "W009",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W009"
+    },
+    {
+      "id": "W010",
+      "family": "Resource lookup HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W010"
+    },
+    {
+      "id": "W011",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W011"
+    },
+    {
+      "id": "W012",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W012"
+    },
+    {
+      "id": "W013",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W013"
+    },
+    {
+      "id": "W014",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W014"
+    },
+    {
+      "id": "W015",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W015"
+    },
+    {
+      "id": "W016",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W016"
+    },
+    {
+      "id": "W017",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W017"
+    },
+    {
+      "id": "W018",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W018"
+    },
+    {
+      "id": "W019",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W019"
+    },
+    {
+      "id": "W020",
+      "family": "Creation and Location contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W020"
+    },
+    {
+      "id": "W021",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W021"
+    },
+    {
+      "id": "W022",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W022"
+    },
+    {
+      "id": "W023",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W023"
+    },
+    {
+      "id": "W024",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W024"
+    },
+    {
+      "id": "W025",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W025"
+    },
+    {
+      "id": "W026",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W026"
+    },
+    {
+      "id": "W027",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W027"
+    },
+    {
+      "id": "W028",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W028"
+    },
+    {
+      "id": "W029",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W029"
+    },
+    {
+      "id": "W030",
+      "family": "Conditional deletion contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W030"
+    },
+    {
+      "id": "W031",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W031"
+    },
+    {
+      "id": "W032",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W032"
+    },
+    {
+      "id": "W033",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W033"
+    },
+    {
+      "id": "W034",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W034"
+    },
+    {
+      "id": "W035",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W035"
+    },
+    {
+      "id": "W036",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W036"
+    },
+    {
+      "id": "W037",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W037"
+    },
+    {
+      "id": "W038",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W038"
+    },
+    {
+      "id": "W039",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W039"
+    },
+    {
+      "id": "W040",
+      "family": "ValidationProblem field errors",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W040"
+    },
+    {
+      "id": "W041",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W041"
+    },
+    {
+      "id": "W042",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W042"
+    },
+    {
+      "id": "W043",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W043"
+    },
+    {
+      "id": "W044",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W044"
+    },
+    {
+      "id": "W045",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W045"
+    },
+    {
+      "id": "W046",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W046"
+    },
+    {
+      "id": "W047",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W047"
+    },
+    {
+      "id": "W048",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W048"
+    },
+    {
+      "id": "W049",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W049"
+    },
+    {
+      "id": "W050",
+      "family": "Pagination query handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W050"
+    },
+    {
+      "id": "W051",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W051"
+    },
+    {
+      "id": "W052",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W052"
+    },
+    {
+      "id": "W053",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W053"
+    },
+    {
+      "id": "W054",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W054"
+    },
+    {
+      "id": "W055",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W055"
+    },
+    {
+      "id": "W056",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W056"
+    },
+    {
+      "id": "W057",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W057"
+    },
+    {
+      "id": "W058",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W058"
+    },
+    {
+      "id": "W059",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W059"
+    },
+    {
+      "id": "W060",
+      "family": "Filter and sort endpoint projections",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W060"
+    },
+    {
+      "id": "W061",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W061"
+    },
+    {
+      "id": "W062",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W062"
+    },
+    {
+      "id": "W063",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W063"
+    },
+    {
+      "id": "W064",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W064"
+    },
+    {
+      "id": "W065",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W065"
+    },
+    {
+      "id": "W066",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W066"
+    },
+    {
+      "id": "W067",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W067"
+    },
+    {
+      "id": "W068",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W068"
+    },
+    {
+      "id": "W069",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W069"
+    },
+    {
+      "id": "W070",
+      "family": "Strict boolean request query",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W070"
+    },
+    {
+      "id": "W071",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W071"
+    },
+    {
+      "id": "W072",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W072"
+    },
+    {
+      "id": "W073",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W073"
+    },
+    {
+      "id": "W074",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W074"
+    },
+    {
+      "id": "W075",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W075"
+    },
+    {
+      "id": "W076",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W076"
+    },
+    {
+      "id": "W077",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W077"
+    },
+    {
+      "id": "W078",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W078"
+    },
+    {
+      "id": "W079",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W079"
+    },
+    {
+      "id": "W080",
+      "family": "Date range query binding",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W080"
+    },
+    {
+      "id": "W081",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W081"
+    },
+    {
+      "id": "W082",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W082"
+    },
+    {
+      "id": "W083",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W083"
+    },
+    {
+      "id": "W084",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W084"
+    },
+    {
+      "id": "W085",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W085"
+    },
+    {
+      "id": "W086",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W086"
+    },
+    {
+      "id": "W087",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W087"
+    },
+    {
+      "id": "W088",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W088"
+    },
+    {
+      "id": "W089",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W089"
+    },
+    {
+      "id": "W090",
+      "family": "Header based request versioning",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W090"
+    },
+    {
+      "id": "W091",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W091"
+    },
+    {
+      "id": "W092",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W092"
+    },
+    {
+      "id": "W093",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W093"
+    },
+    {
+      "id": "W094",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W094"
+    },
+    {
+      "id": "W095",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W095"
+    },
+    {
+      "id": "W096",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W096"
+    },
+    {
+      "id": "W097",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W097"
+    },
+    {
+      "id": "W098",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W098"
+    },
+    {
+      "id": "W099",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W099"
+    },
+    {
+      "id": "W100",
+      "family": "JSON media type gates",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W100"
+    },
+    {
+      "id": "W101",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W101"
+    },
+    {
+      "id": "W102",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W102"
+    },
+    {
+      "id": "W103",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W103"
+    },
+    {
+      "id": "W104",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W104"
+    },
+    {
+      "id": "W105",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W105"
+    },
+    {
+      "id": "W106",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W106"
+    },
+    {
+      "id": "W107",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W107"
+    },
+    {
+      "id": "W108",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W108"
+    },
+    {
+      "id": "W109",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W109"
+    },
+    {
+      "id": "W110",
+      "family": "JSON request body validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W110"
+    },
+    {
+      "id": "W111",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W111"
+    },
+    {
+      "id": "W112",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W112"
+    },
+    {
+      "id": "W113",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W113"
+    },
+    {
+      "id": "W114",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W114"
+    },
+    {
+      "id": "W115",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W115"
+    },
+    {
+      "id": "W116",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W116"
+    },
+    {
+      "id": "W117",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W117"
+    },
+    {
+      "id": "W118",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W118"
+    },
+    {
+      "id": "W119",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W119"
+    },
+    {
+      "id": "W120",
+      "family": "Form body handling",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W120"
+    },
+    {
+      "id": "W121",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W121"
+    },
+    {
+      "id": "W122",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W122"
+    },
+    {
+      "id": "W123",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W123"
+    },
+    {
+      "id": "W124",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W124"
+    },
+    {
+      "id": "W125",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W125"
+    },
+    {
+      "id": "W126",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W126"
+    },
+    {
+      "id": "W127",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W127"
+    },
+    {
+      "id": "W128",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W128"
+    },
+    {
+      "id": "W129",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W129"
+    },
+    {
+      "id": "W130",
+      "family": "Route value parsing handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W130"
+    },
+    {
+      "id": "W131",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W131"
+    },
+    {
+      "id": "W132",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W132"
+    },
+    {
+      "id": "W133",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W133"
+    },
+    {
+      "id": "W134",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W134"
+    },
+    {
+      "id": "W135",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W135"
+    },
+    {
+      "id": "W136",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W136"
+    },
+    {
+      "id": "W137",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W137"
+    },
+    {
+      "id": "W138",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W138"
+    },
+    {
+      "id": "W139",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W139"
+    },
+    {
+      "id": "W140",
+      "family": "Dependency injection lifetime registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W140"
+    },
+    {
+      "id": "W141",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W141"
+    },
+    {
+      "id": "W142",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W142"
+    },
+    {
+      "id": "W143",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W143"
+    },
+    {
+      "id": "W144",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W144"
+    },
+    {
+      "id": "W145",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W145"
+    },
+    {
+      "id": "W146",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W146"
+    },
+    {
+      "id": "W147",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W147"
+    },
+    {
+      "id": "W148",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W148"
+    },
+    {
+      "id": "W149",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W149"
+    },
+    {
+      "id": "W150",
+      "family": "Keyed dependency injection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W150"
+    },
+    {
+      "id": "W151",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W151"
+    },
+    {
+      "id": "W152",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W152"
+    },
+    {
+      "id": "W153",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W153"
+    },
+    {
+      "id": "W154",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W154"
+    },
+    {
+      "id": "W155",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W155"
+    },
+    {
+      "id": "W156",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W156"
+    },
+    {
+      "id": "W157",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W157"
+    },
+    {
+      "id": "W158",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W158"
+    },
+    {
+      "id": "W159",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W159"
+    },
+    {
+      "id": "W160",
+      "family": "Options configuration and validation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W160"
+    },
+    {
+      "id": "W161",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W161"
+    },
+    {
+      "id": "W162",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W162"
+    },
+    {
+      "id": "W163",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W163"
+    },
+    {
+      "id": "W164",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W164"
+    },
+    {
+      "id": "W165",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W165"
+    },
+    {
+      "id": "W166",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W166"
+    },
+    {
+      "id": "W167",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W167"
+    },
+    {
+      "id": "W168",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W168"
+    },
+    {
+      "id": "W169",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W169"
+    },
+    {
+      "id": "W170",
+      "family": "Response header middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W170"
+    },
+    {
+      "id": "W171",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W171"
+    },
+    {
+      "id": "W172",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W172"
+    },
+    {
+      "id": "W173",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W173"
+    },
+    {
+      "id": "W174",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W174"
+    },
+    {
+      "id": "W175",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W175"
+    },
+    {
+      "id": "W176",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W176"
+    },
+    {
+      "id": "W177",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W177"
+    },
+    {
+      "id": "W178",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W178"
+    },
+    {
+      "id": "W179",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W179"
+    },
+    {
+      "id": "W180",
+      "family": "Domain error boundary middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W180"
+    },
+    {
+      "id": "W181",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W181"
+    },
+    {
+      "id": "W182",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W182"
+    },
+    {
+      "id": "W183",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W183"
+    },
+    {
+      "id": "W184",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W184"
+    },
+    {
+      "id": "W185",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W185"
+    },
+    {
+      "id": "W186",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W186"
+    },
+    {
+      "id": "W187",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W187"
+    },
+    {
+      "id": "W188",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W188"
+    },
+    {
+      "id": "W189",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W189"
+    },
+    {
+      "id": "W190",
+      "family": "Request cancellation propagation",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W190"
+    },
+    {
+      "id": "W191",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W191"
+    },
+    {
+      "id": "W192",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W192"
+    },
+    {
+      "id": "W193",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W193"
+    },
+    {
+      "id": "W194",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W194"
+    },
+    {
+      "id": "W195",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W195"
+    },
+    {
+      "id": "W196",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W196"
+    },
+    {
+      "id": "W197",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W197"
+    },
+    {
+      "id": "W198",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W198"
+    },
+    {
+      "id": "W199",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W199"
+    },
+    {
+      "id": "W200",
+      "family": "Streaming text response writers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W200"
+    },
+    {
+      "id": "W201",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W201"
+    },
+    {
+      "id": "W202",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W202"
+    },
+    {
+      "id": "W203",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W203"
+    },
+    {
+      "id": "W204",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W204"
+    },
+    {
+      "id": "W205",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W205"
+    },
+    {
+      "id": "W206",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W206"
+    },
+    {
+      "id": "W207",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W207"
+    },
+    {
+      "id": "W208",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W208"
+    },
+    {
+      "id": "W209",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W209"
+    },
+    {
+      "id": "W210",
+      "family": "Endpoint route metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W210"
+    },
+    {
+      "id": "W211",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W211"
+    },
+    {
+      "id": "W212",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W212"
+    },
+    {
+      "id": "W213",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W213"
+    },
+    {
+      "id": "W214",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W214"
+    },
+    {
+      "id": "W215",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W215"
+    },
+    {
+      "id": "W216",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W216"
+    },
+    {
+      "id": "W217",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W217"
+    },
+    {
+      "id": "W218",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W218"
+    },
+    {
+      "id": "W219",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W219"
+    },
+    {
+      "id": "W220",
+      "family": "Authorization policy registration",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W220"
+    },
+    {
+      "id": "W221",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W221"
+    },
+    {
+      "id": "W222",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W222"
+    },
+    {
+      "id": "W223",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W223"
+    },
+    {
+      "id": "W224",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W224"
+    },
+    {
+      "id": "W225",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W225"
+    },
+    {
+      "id": "W226",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W226"
+    },
+    {
+      "id": "W227",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W227"
+    },
+    {
+      "id": "W228",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W228"
+    },
+    {
+      "id": "W229",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W229"
+    },
+    {
+      "id": "W230",
+      "family": "Protected endpoint policy metadata",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W230"
+    },
+    {
+      "id": "W231",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W231"
+    },
+    {
+      "id": "W232",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W232"
+    },
+    {
+      "id": "W233",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W233"
+    },
+    {
+      "id": "W234",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W234"
+    },
+    {
+      "id": "W235",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W235"
+    },
+    {
+      "id": "W236",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W236"
+    },
+    {
+      "id": "W237",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W237"
+    },
+    {
+      "id": "W238",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W238"
+    },
+    {
+      "id": "W239",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W239"
+    },
+    {
+      "id": "W240",
+      "family": "Current principal response projection",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W240"
+    },
+    {
+      "id": "W241",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W241"
+    },
+    {
+      "id": "W242",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W242"
+    },
+    {
+      "id": "W243",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W243"
+    },
+    {
+      "id": "W244",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W244"
+    },
+    {
+      "id": "W245",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W245"
+    },
+    {
+      "id": "W246",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W246"
+    },
+    {
+      "id": "W247",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W247"
+    },
+    {
+      "id": "W248",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W248"
+    },
+    {
+      "id": "W249",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W249"
+    },
+    {
+      "id": "W250",
+      "family": "Explicit content negotiation handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W250"
+    },
+    {
+      "id": "W251",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W251"
+    },
+    {
+      "id": "W252",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W252"
+    },
+    {
+      "id": "W253",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W253"
+    },
+    {
+      "id": "W254",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W254"
+    },
+    {
+      "id": "W255",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W255"
+    },
+    {
+      "id": "W256",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W256"
+    },
+    {
+      "id": "W257",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W257"
+    },
+    {
+      "id": "W258",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W258"
+    },
+    {
+      "id": "W259",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W259"
+    },
+    {
+      "id": "W260",
+      "family": "Conditional GET ETags",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W260"
+    },
+    {
+      "id": "W261",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W261"
+    },
+    {
+      "id": "W262",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W262"
+    },
+    {
+      "id": "W263",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W263"
+    },
+    {
+      "id": "W264",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W264"
+    },
+    {
+      "id": "W265",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W265"
+    },
+    {
+      "id": "W266",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W266"
+    },
+    {
+      "id": "W267",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W267"
+    },
+    {
+      "id": "W268",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W268"
+    },
+    {
+      "id": "W269",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W269"
+    },
+    {
+      "id": "W270",
+      "family": "Cache policy response middleware",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W270"
+    },
+    {
+      "id": "W271",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W271"
+    },
+    {
+      "id": "W272",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W272"
+    },
+    {
+      "id": "W273",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W273"
+    },
+    {
+      "id": "W274",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W274"
+    },
+    {
+      "id": "W275",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W275"
+    },
+    {
+      "id": "W276",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W276"
+    },
+    {
+      "id": "W277",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W277"
+    },
+    {
+      "id": "W278",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W278"
+    },
+    {
+      "id": "W279",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W279"
+    },
+    {
+      "id": "W280",
+      "family": "Injected deterministic cache handlers",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W280"
+    },
+    {
+      "id": "W281",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W281"
+    },
+    {
+      "id": "W282",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W282"
+    },
+    {
+      "id": "W283",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W283"
+    },
+    {
+      "id": "W284",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W284"
+    },
+    {
+      "id": "W285",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W285"
+    },
+    {
+      "id": "W286",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W286"
+    },
+    {
+      "id": "W287",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W287"
+    },
+    {
+      "id": "W288",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W288"
+    },
+    {
+      "id": "W289",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W289"
+    },
+    {
+      "id": "W290",
+      "family": "Idempotency key POST contracts",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W290"
+    },
+    {
+      "id": "W291",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W291"
+    },
+    {
+      "id": "W292",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W292"
+    },
+    {
+      "id": "W293",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W293"
+    },
+    {
+      "id": "W294",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W294"
+    },
+    {
+      "id": "W295",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W295"
+    },
+    {
+      "id": "W296",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W296"
+    },
+    {
+      "id": "W297",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W297"
+    },
+    {
+      "id": "W298",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W298"
+    },
+    {
+      "id": "W299",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W299"
+    },
+    {
+      "id": "W300",
+      "family": "Binary file HTTP results",
+      "passed": false,
+      "phase": "tests",
+      "assertions": 0,
+      "errorType": "NotImplementedException",
+      "error": "W300"
+    }
+  ],
+  "buildPassed": true,
+  "buildExitCode": 0,
+  "runnerExitCode": 1
+}

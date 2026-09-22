@@ -1,0 +1,17 @@
+{
+  "track": "sql-more",
+  "mode": "starter",
+  "groups": 1,
+  "passed": 0,
+  "failed": 1,
+  "results": [
+    {
+      "id": "Q201",
+      "family": "JSON document projection and type policy",
+      "passed": false,
+      "phase": "assert",
+      "errorType": "AssertionError",
+      "error": "Exact result rows/order mismatch\n+ actual - expected\n\n+ []\n- [\n-   {\n-     id: 1,\n-     name: 'Ada'\n-   },\n-   {\n-     id: 2,\n-     name: 'Bo'\n-   },\n-   {\n-     id: 3,\n-     name: 'Cy'\n-   }\n- ]\n"
+    }
+  ]
+}

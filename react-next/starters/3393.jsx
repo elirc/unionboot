@@ -1,0 +1,9 @@
+// 3393 Native listener phase contract / scenario 15 — Boundary 5; capture-phase native listener
+// Attach native click listener to data-testid=outer via useEffect with capture=true. Child Inner button has its own React onClick. Output Trace appends N5 when native outer fires and R when React child fires. With delegation at root, native outer listener runs before child React bubble handler in both modes. Stop checkbox controls a native INNER listener which stopPropagation() before outer bubble; capture outer still fires. Reset clears trace. Cleanup exact listener/options on unmount. This tests native vs delegated event phases, not menu keyboard behavior.
+// Full prompt: ../prompts/3393.txt
+import React,{useState,useEffect,useReducer,useRef,useMemo,useLayoutEffect,useId,useCallback,useContext,useSyncExternalStore,useTransition,useDeferredValue,useImperativeHandle,forwardRef,Suspense} from 'react';
+import {createPortal} from 'react-dom';
+export default function Exercise({}) {
+  // TODO: independently implement the prompt.
+  return null;
+}

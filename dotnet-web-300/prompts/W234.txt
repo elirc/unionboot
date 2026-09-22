@@ -1,0 +1,12 @@
+W234 — Current principal response projection
+Scenario 4/10: Authenticated account_id projection only
+
+Project current principal into minimal profile. Unauthenticated->401. Authenticated needs exactly one nonblank account_id claim; absent/duplicate/blank->403. Success200 JSON {id}, preserving claim text; never expose other claims. This is not token validation. Example authenticated account_id=u7 plus secret claim ->only {id:"u7"}.
+
+Signature: public static IResult Handle(ClaimsPrincipal user)
+
+Edit starters/W234.cs. Run node dotnet-web-300/verify.cjs --starters --id=W234 from unionboot.
+Reference: solutions/W234.cs; shared checks: tests/W234.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

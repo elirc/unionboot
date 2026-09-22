@@ -1,0 +1,355 @@
+REACT 300: NEW PRACTICE SCENARIOS
+
+300 new exercises, IDs1419..1718. 30 template families x10 policy/configuration variants; not 300 unrelated concepts. Numeric rules, initial data and boundaries are configuration variants. Abortable keyed resource fallback strings and partial Ordered batch loader placeholders include copy/output variants, not distinct async algorithms. Existing exercises untouched.
+
+ROUTE
+Start with junior state/forms/CRUD/data families; then keyboard accessibility, effects/cleanup, injected services and async races. Pick scenario1 of every family, then work across its policy/boundary variants. Prompts include concrete examples and exact labels.
+
+WORKFLOW
+Read prompts/ID.txt; implement starters/ID.jsx; run node react-300/verify.cjs --starters --id=ID. Compare solutions only after trying. Each starter is independent and blank.
+
+VERIFY FROM unionboot
+node react-300/verify.cjs --inventory
+node react-300/verify.cjs --id=1419
+node react-300/verify.cjs
+node react-300/verify.cjs --starters
+Also supports --id 1419. Unknown flags/IDs exit2. DOM failures exit1; fresh blanks intentionally fail all300. Run suites sequentially to limit memory. Reports count groups, not assertions; each group contains multiple interactions.
+
+Dependencies reuse existing React/esbuild/jsdom/Testing Library. Components compiled individually with external React identity preserved. Tests exercise real DOM events, focus/ARIA, immutable props, injected deferred promises and deterministic manual schedulers. No network, installation, browser server or wall-clock sleeps. Structural hook requirements need source review too.
+
+GENERATOR
+node build-react-300.cjs writes only react-300 and refuses any existing output, with no refresh/overwrite escape hatch. Never delete learner work to regenerate it.
+
+FAMILIES
+1419..1428 Faceted record search [junior]
+1429..1438 Grouped totals view [junior]
+1439..1448 Filter-aware pagination [junior]
+1449..1458 Compare selected records [junior]
+1459..1468 Keyboard action menu [junior]
+1469..1478 Two-dimensional keyboard grid [junior]
+1479..1488 Line-item draft editor [junior]
+1489..1498 Validated row creation [junior]
+1499..1508 Soft delete and restore [junior]
+1509..1518 Bulk table actions [junior]
+1519..1528 Ranked list reordering [junior]
+1529..1538 Shared quota allocation [junior]
+1539..1548 Staged transaction ledger [junior]
+1549..1558 Reducer publishing workflow [junior]
+1559..1568 Cross-field pack orders [junior]
+1569..1578 Blackout-aware booking [junior]
+1579..1588 Notification dependency form [junior]
+1589..1598 Abortable keyed resource [intermediate]
+1599..1608 Latest validated async form [intermediate]
+1609..1618 Concurrent row saves [intermediate]
+1619..1628 Ordered batch loader [intermediate]
+1629..1638 Sequential queue runner [intermediate]
+1639..1648 Optimistic row toggle rollback [intermediate]
+1649..1658 Dismissible dialog focus [intermediate]
+1659..1668 Injected interval budget [intermediate]
+1669..1678 Delayed draft commit [intermediate]
+1679..1688 External subscription projection [intermediate]
+1689..1698 Storage-backed versioned draft [intermediate]
+1699..1708 Range selection anchor [intermediate]
+1709..1718 Editable combobox navigation [intermediate]
+
+INDEX
+1419 Faceted record search / scenario 1 — Any token match; include archived; score >=0
+1420 Faceted record search / scenario 2 — Every token match; include archived; score >=1
+1421 Faceted record search / scenario 3 — Any token match; include archived; score >=2
+1422 Faceted record search / scenario 4 — Every token match; include archived; score >=3
+1423 Faceted record search / scenario 5 — Any token match; include archived; score >=4
+1424 Faceted record search / scenario 6 — Every token match; exclude archived; score >=0
+1425 Faceted record search / scenario 7 — Any token match; exclude archived; score >=1
+1426 Faceted record search / scenario 8 — Every token match; exclude archived; score >=2
+1427 Faceted record search / scenario 9 — Any token match; exclude archived; score >=3
+1428 Faceted record search / scenario 10 — Every token match; exclude archived; score >=4
+1429 Grouped totals view / scenario 1 — sum aggregation; value ordering; retain zero groups; minimum amount 1
+1430 Grouped totals view / scenario 2 — count aggregation; value ordering; retain zero groups; minimum amount 2
+1431 Grouped totals view / scenario 3 — sum aggregation; name ordering; retain zero groups; minimum amount 3
+1432 Grouped totals view / scenario 4 — count aggregation; name ordering; retain zero groups; minimum amount 4
+1433 Grouped totals view / scenario 5 — sum aggregation; name ordering; retain zero groups; minimum amount 5
+1434 Grouped totals view / scenario 6 — count aggregation; value ordering; hide zero groups; minimum amount 6
+1435 Grouped totals view / scenario 7 — sum aggregation; value ordering; hide zero groups; minimum amount 7
+1436 Grouped totals view / scenario 8 — count aggregation; name ordering; hide zero groups; minimum amount 8
+1437 Grouped totals view / scenario 9 — sum aggregation; name ordering; hide zero groups; minimum amount 9
+1438 Grouped totals view / scenario 10 — count aggregation; name ordering; hide zero groups; minimum amount 10
+1439 Filter-aware pagination / scenario 1 — Page size 2; reset on filtering; case-folded query
+1440 Filter-aware pagination / scenario 2 — Page size 3; reset on filtering; case-sensitive query
+1441 Filter-aware pagination / scenario 3 — Page size 4; reset on filtering; case-folded query
+1442 Filter-aware pagination / scenario 4 — Page size 2; reset on filtering; case-sensitive query
+1443 Filter-aware pagination / scenario 5 — Page size 3; reset on filtering; case-folded query
+1444 Filter-aware pagination / scenario 6 — Page size 4; clamp on filtering; case-sensitive query
+1445 Filter-aware pagination / scenario 7 — Page size 2; clamp on filtering; case-folded query
+1446 Filter-aware pagination / scenario 8 — Page size 3; clamp on filtering; case-sensitive query
+1447 Filter-aware pagination / scenario 9 — Page size 4; clamp on filtering; case-folded query
+1448 Filter-aware pagination / scenario 10 — Page size 2; clamp on filtering; case-sensitive query
+1449 Compare selected records / scenario 1 — 2 compare slots; difference; retain hidden ids
+1450 Compare selected records / scenario 2 — 3 compare slots; sum; retain hidden ids
+1451 Compare selected records / scenario 3 — 4 compare slots; difference; retain hidden ids
+1452 Compare selected records / scenario 4 — 2 compare slots; sum; retain hidden ids
+1453 Compare selected records / scenario 5 — 3 compare slots; difference; retain hidden ids
+1454 Compare selected records / scenario 6 — 4 compare slots; sum; prune missing selection
+1455 Compare selected records / scenario 7 — 2 compare slots; difference; prune missing selection
+1456 Compare selected records / scenario 8 — 3 compare slots; sum; prune missing selection
+1457 Compare selected records / scenario 9 — 4 compare slots; difference; prune missing selection
+1458 Compare selected records / scenario 10 — 2 compare slots; sum; prune missing selection
+1459 Keyboard action menu / scenario 1 — Wrap movement; disabled Copy; remain open after activation
+1460 Keyboard action menu / scenario 2 — Clamp movement; disabled Move; remain open after activation
+1461 Keyboard action menu / scenario 3 — Wrap movement; disabled Share; remain open after activation
+1462 Keyboard action menu / scenario 4 — Clamp movement; disabled Copy; remain open after activation
+1463 Keyboard action menu / scenario 5 — Wrap movement; disabled Move; remain open after activation
+1464 Keyboard action menu / scenario 6 — Clamp movement; disabled Share; close on activation
+1465 Keyboard action menu / scenario 7 — Wrap movement; disabled Copy; close on activation
+1466 Keyboard action menu / scenario 8 — Clamp movement; disabled Move; close on activation
+1467 Keyboard action menu / scenario 9 — Wrap movement; disabled Share; close on activation
+1468 Keyboard action menu / scenario 10 — Clamp movement; disabled Copy; close on activation
+1469 Two-dimensional keyboard grid / scenario 1 — 2 columns; clamp edges; cell 1 unavailable
+1470 Two-dimensional keyboard grid / scenario 2 — 3 columns; clamp edges; cell 2 unavailable
+1471 Two-dimensional keyboard grid / scenario 3 — 2 columns; clamp edges; cell 3 unavailable
+1472 Two-dimensional keyboard grid / scenario 4 — 3 columns; clamp edges; cell 4 unavailable
+1473 Two-dimensional keyboard grid / scenario 5 — 2 columns; clamp edges; cell 5 unavailable
+1474 Two-dimensional keyboard grid / scenario 6 — 3 columns; wrap row/column; cell 1 unavailable
+1475 Two-dimensional keyboard grid / scenario 7 — 2 columns; wrap row/column; cell 2 unavailable
+1476 Two-dimensional keyboard grid / scenario 8 — 3 columns; wrap row/column; cell 3 unavailable
+1477 Two-dimensional keyboard grid / scenario 9 — 2 columns; wrap row/column; cell 4 unavailable
+1478 Two-dimensional keyboard grid / scenario 10 — 3 columns; wrap row/column; cell 5 unavailable
+1479 Line-item draft editor / scenario 1 — Zero permitted; cap 2; cancel retains drafts
+1480 Line-item draft editor / scenario 2 — Positive quantities; cap 3; cancel retains drafts
+1481 Line-item draft editor / scenario 3 — Zero permitted; cap 4; cancel retains drafts
+1482 Line-item draft editor / scenario 4 — Positive quantities; cap 2; cancel retains drafts
+1483 Line-item draft editor / scenario 5 — Zero permitted; cap 3; cancel retains drafts
+1484 Line-item draft editor / scenario 6 — Positive quantities; cap 4; cancel restores drafts
+1485 Line-item draft editor / scenario 7 — Zero permitted; cap 2; cancel restores drafts
+1486 Line-item draft editor / scenario 8 — Positive quantities; cap 3; cancel restores drafts
+1487 Line-item draft editor / scenario 9 — Zero permitted; cap 4; cancel restores drafts
+1488 Line-item draft editor / scenario 10 — Positive quantities; cap 2; cancel restores drafts
+1489 Validated row creation / scenario 1 — Case-folded duplicate keys; append; maximum 2
+1490 Validated row creation / scenario 2 — Exact duplicate keys; append; maximum 3
+1491 Validated row creation / scenario 3 — Case-folded duplicate keys; append; maximum 4
+1492 Validated row creation / scenario 4 — Exact duplicate keys; append; maximum 2
+1493 Validated row creation / scenario 5 — Case-folded duplicate keys; append; maximum 3
+1494 Validated row creation / scenario 6 — Exact duplicate keys; prepend; maximum 4
+1495 Validated row creation / scenario 7 — Case-folded duplicate keys; prepend; maximum 2
+1496 Validated row creation / scenario 8 — Exact duplicate keys; prepend; maximum 3
+1497 Validated row creation / scenario 9 — Case-folded duplicate keys; prepend; maximum 4
+1498 Validated row creation / scenario 10 — Exact duplicate keys; prepend; maximum 2
+1499 Soft delete and restore / scenario 1 — One undo slot; restore original; locked row 1
+1500 Soft delete and restore / scenario 2 — One undo slot; restore end; locked row 2
+1501 Soft delete and restore / scenario 3 — One undo slot; restore original; locked row 3
+1502 Soft delete and restore / scenario 4 — One undo slot; restore end; locked row 4
+1503 Soft delete and restore / scenario 5 — One undo slot; restore original; locked row 5
+1504 Soft delete and restore / scenario 6 — Multi-item trash; restore end; locked row 1
+1505 Soft delete and restore / scenario 7 — Multi-item trash; restore original; locked row 2
+1506 Soft delete and restore / scenario 8 — Multi-item trash; restore end; locked row 3
+1507 Soft delete and restore / scenario 9 — Multi-item trash; restore original; locked row 4
+1508 Soft delete and restore / scenario 10 — Multi-item trash; restore end; locked row 5
+1509 Bulk table actions / scenario 1 — Archive eligible selection
+1510 Bulk table actions / scenario 2 — Delete eligible selection
+1511 Bulk table actions / scenario 3 — Confirm bulk archive
+1512 Bulk table actions / scenario 4 — Confirm bulk deletion
+1513 Bulk table actions / scenario 5 — Preserve hidden selection
+1514 Bulk table actions / scenario 6 — Delete across filter
+1515 Bulk table actions / scenario 7 — Confirmation across filter
+1516 Bulk table actions / scenario 8 — Lock-aware delete review
+1517 Bulk table actions / scenario 9 — Visible-only archive retains hidden picks
+1518 Bulk table actions / scenario 10 — Visible-only deletion retains hidden picks
+1519 Ranked list reordering / scenario 1 — Cyclic moves; B cannot move or be crossed; 3 rows
+1520 Ranked list reordering / scenario 2 — Bounded moves; B cannot move or be crossed; 4 rows
+1521 Ranked list reordering / scenario 3 — Cyclic moves; B cannot move or be crossed; 5 rows
+1522 Ranked list reordering / scenario 4 — Bounded moves; B cannot move or be crossed; 6 rows
+1523 Ranked list reordering / scenario 5 — Cyclic moves; B cannot move or be crossed; 7 rows
+1524 Ranked list reordering / scenario 6 — Bounded moves; all movable; 8 rows
+1525 Ranked list reordering / scenario 7 — Cyclic moves; all movable; 9 rows
+1526 Ranked list reordering / scenario 8 — Bounded moves; all movable; 10 rows
+1527 Ranked list reordering / scenario 9 — Cyclic moves; all movable; 11 rows
+1528 Ranked list reordering / scenario 10 — Bounded moves; all movable; 12 rows
+1529 Shared quota allocation / scenario 1 — Reserve final ticket
+1530 Shared quota allocation / scenario 2 — Clamp group booking
+1531 Shared quota allocation / scenario 3 — Sold-out pool
+1532 Shared quota allocation / scenario 4 — Reclaim then allocate
+1533 Shared quota allocation / scenario 5 — Partial final batch
+1534 Shared quota allocation / scenario 6 — Empty pool
+1535 Shared quota allocation / scenario 7 — Atomic oversized batch
+1536 Shared quota allocation / scenario 8 — Oversized partial batch
+1537 Shared quota allocation / scenario 9 — Release only owned units
+1538 Shared quota allocation / scenario 10 — Asymmetric ownership
+1539 Staged transaction ledger / scenario 1 — Reject overdraft
+1540 Staged transaction ledger / scenario 2 — Allow credit line
+1541 Staged transaction ledger / scenario 3 — Require review note
+1542 Staged transaction ledger / scenario 4 — Signed adjustments
+1543 Staged transaction ledger / scenario 5 — Exact ceiling
+1544 Staged transaction ledger / scenario 6 — Ignore zero transaction
+1545 Staged transaction ledger / scenario 7 — Cancel preserves committed money
+1546 Staged transaction ledger / scenario 8 — Negative opening balance
+1547 Staged transaction ledger / scenario 9 — Tight balance window
+1548 Staged transaction ledger / scenario 10 — Integer-only accounting
+1549 Reducer publishing workflow / scenario 1 — Independent review; edit only; rejection clears draft; title minimum 1
+1550 Reducer publishing workflow / scenario 2 — Direct publish; edit only; rejection retains draft; title minimum 2
+1551 Reducer publishing workflow / scenario 3 — Independent review; edit only; rejection retains draft; title minimum 3
+1552 Reducer publishing workflow / scenario 4 — Direct publish; edit only; rejection clears draft; title minimum 4
+1553 Reducer publishing workflow / scenario 5 — Independent review; edit only; rejection retains draft; title minimum 1
+1554 Reducer publishing workflow / scenario 6 — Direct publish; archive/restore; rejection retains draft; title minimum 2
+1555 Reducer publishing workflow / scenario 7 — Independent review; archive/restore; rejection clears draft; title minimum 3
+1556 Reducer publishing workflow / scenario 8 — Direct publish; archive/restore; rejection retains draft; title minimum 4
+1557 Reducer publishing workflow / scenario 9 — Independent review; archive/restore; rejection retains draft; title minimum 1
+1558 Reducer publishing workflow / scenario 10 — Direct publish; archive/restore; rejection clears draft; title minimum 2
+1559 Cross-field pack orders / scenario 1 — Full cartons
+1560 Cross-field pack orders / scenario 2 — Loose units
+1561 Cross-field pack orders / scenario 3 — Reserved buffer
+1562 Cross-field pack orders / scenario 4 — Small pack boundary
+1563 Cross-field pack orders / scenario 5 — Pack plus remainder
+1564 Cross-field pack orders / scenario 6 — Large minimum shipment
+1565 Cross-field pack orders / scenario 7 — Single-unit pack
+1566 Cross-field pack orders / scenario 8 — Loose capacity limit
+1567 Cross-field pack orders / scenario 9 — Protect last pack
+1568 Cross-field pack orders / scenario 10 — Non-divisible ceiling
+1569 Blackout-aware booking / scenario 1 — Closed blackout
+1570 Blackout-aware booking / scenario 2 — Half-open blackout
+1571 Blackout-aware booking / scenario 3 — Two-day minimum
+1572 Blackout-aware booking / scenario 4 — Single blocked date
+1573 Blackout-aware booking / scenario 5 — Allowed checkout contact
+1574 Blackout-aware booking / scenario 6 — Three-day minimum
+1575 Blackout-aware booking / scenario 7 — Short open interval
+1576 Blackout-aware booking / scenario 8 — Weekend closure
+1577 Blackout-aware booking / scenario 9 — Long open interval
+1578 Blackout-aware booking / scenario 10 — Month-end closure
+1579 Notification dependency form / scenario 1 — SMS requires phone
+1580 Notification dependency form / scenario 2 — Retain SMS intent
+1581 Notification dependency form / scenario 3 — Digest requires email
+1582 Notification dependency form / scenario 4 — Two prerequisites
+1583 Notification dependency form / scenario 5 — Retain both intents
+1584 Notification dependency form / scenario 6 — No prerequisites
+1585 Notification dependency form / scenario 7 — Consent and SMS
+1586 Notification dependency form / scenario 8 — Consent and digest
+1587 Notification dependency form / scenario 9 — Exclusive channels
+1588 Notification dependency form / scenario 10 — Unrestricted exclusive channels
+1589 Abortable keyed resource / scenario 1 — Retain prior data; blank key is valid; fallback offline
+1590 Abortable keyed resource / scenario 2 — Clear prior data; blank key is valid; fallback unavailable
+1591 Abortable keyed resource / scenario 3 — Retain prior data; blank key is valid; fallback failed
+1592 Abortable keyed resource / scenario 4 — Clear prior data; blank key is valid; fallback retry
+1593 Abortable keyed resource / scenario 5 — Retain prior data; blank key is valid; fallback error
+1594 Abortable keyed resource / scenario 6 — Clear prior data; blank key skips load; fallback offline
+1595 Abortable keyed resource / scenario 7 — Retain prior data; blank key skips load; fallback unavailable
+1596 Abortable keyed resource / scenario 8 — Clear prior data; blank key skips load; fallback failed
+1597 Abortable keyed resource / scenario 9 — Retain prior data; blank key skips load; fallback retry
+1598 Abortable keyed resource / scenario 10 — Clear prior data; blank key skips load; fallback error
+1599 Latest validated async form / scenario 1 — Minimum 2 letters; restart only; lowercase request
+1600 Latest validated async form / scenario 2 — Minimum 3 letters; restart only; uppercase request
+1601 Latest validated async form / scenario 3 — Minimum 4 letters; restart only; lowercase request
+1602 Latest validated async form / scenario 4 — Minimum 5 letters; restart only; uppercase request
+1603 Latest validated async form / scenario 5 — Minimum 6 letters; restart only; lowercase request
+1604 Latest validated async form / scenario 6 — Minimum 2 letters; explicit cancel; uppercase request
+1605 Latest validated async form / scenario 7 — Minimum 3 letters; explicit cancel; lowercase request
+1606 Latest validated async form / scenario 8 — Minimum 4 letters; explicit cancel; uppercase request
+1607 Latest validated async form / scenario 9 — Minimum 5 letters; explicit cancel; lowercase request
+1608 Latest validated async form / scenario 10 — Minimum 6 letters; explicit cancel; uppercase request
+1609 Concurrent row saves / scenario 1 — Retain rejected draft; trim only normalization; max 4
+1610 Concurrent row saves / scenario 2 — Restore saved draft on rejection; trim only normalization; max 5
+1611 Concurrent row saves / scenario 3 — Retain rejected draft; trim only normalization; max 6
+1612 Concurrent row saves / scenario 4 — Restore saved draft on rejection; trim only normalization; max 7
+1613 Concurrent row saves / scenario 5 — Retain rejected draft; trim only normalization; max 8
+1614 Concurrent row saves / scenario 6 — Restore saved draft on rejection; uppercase normalization; max 4
+1615 Concurrent row saves / scenario 7 — Retain rejected draft; uppercase normalization; max 5
+1616 Concurrent row saves / scenario 8 — Restore saved draft on rejection; uppercase normalization; max 6
+1617 Concurrent row saves / scenario 9 — Retain rejected draft; uppercase normalization; max 7
+1618 Concurrent row saves / scenario 10 — Restore saved draft on rejection; uppercase normalization; max 8
+1619 Ordered batch loader / scenario 1 — partial result policy; order A,B,C; failed-slot copy/output variant missing
+1620 Ordered batch loader / scenario 2 — atomic result policy; order A,B,C
+1621 Ordered batch loader / scenario 3 — partial result policy; order A,B,C; failed-slot copy/output variant unavailable
+1622 Ordered batch loader / scenario 4 — atomic result policy; order A,C,B
+1623 Ordered batch loader / scenario 5 — partial result policy; order A,B,C; failed-slot copy/output variant error
+1624 Ordered batch loader / scenario 6 — atomic result policy; order C,A,B
+1625 Ordered batch loader / scenario 7 — partial result policy; order C,A,B; failed-slot copy/output variant failed
+1626 Ordered batch loader / scenario 8 — atomic result policy; order B,A,C
+1627 Ordered batch loader / scenario 9 — partial result policy; order C,A,B; failed-slot copy/output variant empty
+1628 Ordered batch loader / scenario 10 — atomic result policy; order B,C,A
+1629 Sequential queue runner / scenario 1 — Stop on first error; restart whole queue; attempt limit 3
+1630 Sequential queue runner / scenario 2 — Continue after errors; restart whole queue; attempt limit 4
+1631 Sequential queue runner / scenario 3 — Stop on first error; restart whole queue; attempt limit 5
+1632 Sequential queue runner / scenario 4 — Continue after errors; restart whole queue; attempt limit 6
+1633 Sequential queue runner / scenario 5 — Stop on first error; restart whole queue; attempt limit 7
+1634 Sequential queue runner / scenario 6 — Continue after errors; restart whole queue; attempt limit 8
+1635 Sequential queue runner / scenario 7 — Stop on first error; retry failed run from failure; attempt limit 9
+1636 Sequential queue runner / scenario 8 — Continue after errors; restart whole queue; attempt limit 10
+1637 Sequential queue runner / scenario 9 — Stop on first error; retry failed run from failure; attempt limit 11
+1638 Sequential queue runner / scenario 10 — Continue after errors; restart whole queue; attempt limit 12
+1639 Optimistic row toggle rollback / scenario 1 — Independent concurrent rows; new attempt clears all errors; 1 initial active rows
+1640 Optimistic row toggle rollback / scenario 2 — Single global mutation; new attempt clears all errors; 2 initial active rows
+1641 Optimistic row toggle rollback / scenario 3 — Independent concurrent rows; new attempt clears all errors; 3 initial active rows
+1642 Optimistic row toggle rollback / scenario 4 — Single global mutation; new attempt clears all errors; 4 initial active rows
+1643 Optimistic row toggle rollback / scenario 5 — Independent concurrent rows; new attempt clears all errors; 5 initial active rows
+1644 Optimistic row toggle rollback / scenario 6 — Single global mutation; other-row errors retained; 1 initial active rows
+1645 Optimistic row toggle rollback / scenario 7 — Independent concurrent rows; other-row errors retained; 2 initial active rows
+1646 Optimistic row toggle rollback / scenario 8 — Single global mutation; other-row errors retained; 3 initial active rows
+1647 Optimistic row toggle rollback / scenario 9 — Independent concurrent rows; other-row errors retained; 4 initial active rows
+1648 Optimistic row toggle rollback / scenario 10 — Single global mutation; other-row errors retained; 5 initial active rows
+1649 Dismissible dialog focus / scenario 1 — Escape closes; backdrop ignored; typed confirmation; initial focus Cancel
+1650 Dismissible dialog focus / scenario 2 — Escape ignored; backdrop ignored; typed confirmation; initial focus Confirm
+1651 Dismissible dialog focus / scenario 3 — Escape closes; backdrop ignored; checkbox confirmation; initial focus Cancel
+1652 Dismissible dialog focus / scenario 4 — Escape ignored; backdrop ignored; checkbox confirmation; initial focus Confirm
+1653 Dismissible dialog focus / scenario 5 — Escape closes; backdrop ignored; checkbox confirmation; initial focus Confirm
+1654 Dismissible dialog focus / scenario 6 — Escape ignored; backdrop dismisses; typed confirmation; initial focus Confirm
+1655 Dismissible dialog focus / scenario 7 — Escape closes; backdrop dismisses; typed confirmation; initial focus Cancel
+1656 Dismissible dialog focus / scenario 8 — Escape ignored; backdrop dismisses; checkbox confirmation; initial focus Cancel
+1657 Dismissible dialog focus / scenario 9 — Escape closes; backdrop dismisses; checkbox confirmation; initial focus Confirm
+1658 Dismissible dialog focus / scenario 10 — Escape ignored; backdrop dismisses; checkbox confirmation; initial focus Confirm
+1659 Injected interval budget / scenario 1 — Tick 1, cap 5; manual start
+1660 Injected interval budget / scenario 2 — Tick 2, cap 6; manual start
+1661 Injected interval budget / scenario 3 — Tick 3, cap 7; manual start
+1662 Injected interval budget / scenario 4 — Tick 4, cap 8; manual start
+1663 Injected interval budget / scenario 5 — Tick 5, cap 9; manual start
+1664 Injected interval budget / scenario 6 — Tick 1, cap 10; auto-start
+1665 Injected interval budget / scenario 7 — Tick 2, cap 11; auto-start
+1666 Injected interval budget / scenario 8 — Tick 3, cap 12; auto-start
+1667 Injected interval budget / scenario 9 — Tick 4, cap 13; auto-start
+1668 Injected interval budget / scenario 10 — Tick 5, cap 14; auto-start
+1669 Delayed draft commit / scenario 1 — 100ms quiet period; trim commit; blur does not flush
+1670 Delayed draft commit / scenario 2 — 200ms quiet period; raw commit; blur does not flush
+1671 Delayed draft commit / scenario 3 — 300ms quiet period; trim commit; blur does not flush
+1672 Delayed draft commit / scenario 4 — 400ms quiet period; raw commit; blur does not flush
+1673 Delayed draft commit / scenario 5 — 500ms quiet period; trim commit; blur does not flush
+1674 Delayed draft commit / scenario 6 — 100ms quiet period; raw commit; flush on blur
+1675 Delayed draft commit / scenario 7 — 200ms quiet period; trim commit; flush on blur
+1676 Delayed draft commit / scenario 8 — 300ms quiet period; raw commit; flush on blur
+1677 Delayed draft commit / scenario 9 — 400ms quiet period; trim commit; flush on blur
+1678 Delayed draft commit / scenario 10 — 500ms quiet period; raw commit; flush on blur
+1679 External subscription projection / scenario 1 — latest projection; always subscribed
+1680 External subscription projection / scenario 2 — sum projection; always subscribed
+1681 External subscription projection / scenario 3 — unique projection; always subscribed
+1682 External subscription projection / scenario 4 — count projection; always subscribed
+1683 External subscription projection / scenario 5 — maximum projection; always subscribed
+1684 External subscription projection / scenario 6 — latest projection; pause/resume supported
+1685 External subscription projection / scenario 7 — sum projection; pause/resume supported
+1686 External subscription projection / scenario 8 — unique projection; pause/resume supported
+1687 External subscription projection / scenario 9 — count projection; pause/resume supported
+1688 External subscription projection / scenario 10 — maximum projection; pause/resume supported
+1689 Storage-backed versioned draft / scenario 1 — Schema version 1; raw storage
+1690 Storage-backed versioned draft / scenario 2 — Schema version 2; raw storage
+1691 Storage-backed versioned draft / scenario 3 — Schema version 3; raw storage
+1692 Storage-backed versioned draft / scenario 4 — Schema version 4; raw storage
+1693 Storage-backed versioned draft / scenario 5 — Schema version 5; raw storage
+1694 Storage-backed versioned draft / scenario 6 — Schema version 1; normalized storage
+1695 Storage-backed versioned draft / scenario 7 — Schema version 2; normalized storage
+1696 Storage-backed versioned draft / scenario 8 — Schema version 3; normalized storage
+1697 Storage-backed versioned draft / scenario 9 — Schema version 4; normalized storage
+1698 Storage-backed versioned draft / scenario 10 — Schema version 5; normalized storage
+1699 Range selection anchor / scenario 1 — Shift range unions; all eligible; 1-based initial anchor
+1700 Range selection anchor / scenario 2 — Shift range replaces; all eligible; 2-based initial anchor
+1701 Range selection anchor / scenario 3 — Shift range unions; all eligible; 3-based initial anchor
+1702 Range selection anchor / scenario 4 — Shift range replaces; all eligible; 4-based initial anchor
+1703 Range selection anchor / scenario 5 — Shift range unions; all eligible; 5-based initial anchor
+1704 Range selection anchor / scenario 6 — Shift range replaces; skip locked C; 1-based initial anchor
+1705 Range selection anchor / scenario 7 — Shift range unions; skip locked C; 2-based initial anchor
+1706 Range selection anchor / scenario 8 — Shift range replaces; skip locked C; 3-based initial anchor
+1707 Range selection anchor / scenario 9 — Shift range unions; skip locked C; 4-based initial anchor
+1708 Range selection anchor / scenario 10 — Shift range replaces; skip locked C; 5-based initial anchor
+1709 Editable combobox navigation / scenario 1 — Prefix search; clamp options; limit 2
+1710 Editable combobox navigation / scenario 2 — Substring search; clamp options; limit 3
+1711 Editable combobox navigation / scenario 3 — Prefix search; clamp options; limit 4
+1712 Editable combobox navigation / scenario 4 — Substring search; clamp options; limit 2
+1713 Editable combobox navigation / scenario 5 — Prefix search; clamp options; limit 3
+1714 Editable combobox navigation / scenario 6 — Substring search; wrap options; limit 4
+1715 Editable combobox navigation / scenario 7 — Prefix search; wrap options; limit 2
+1716 Editable combobox navigation / scenario 8 — Substring search; wrap options; limit 3
+1717 Editable combobox navigation / scenario 9 — Prefix search; wrap options; limit 4
+1718 Editable combobox navigation / scenario 10 — Substring search; wrap options; limit 2

@@ -1,0 +1,18 @@
+Sequential queue runner / scenario 2 — Continue after errors; restart whole queue; attempt limit 4
+
+TASK
+Run processes A,B,C sequentially via injected runJob(id,AbortSignal), never overlapping. Output State idle/running/done/error, Current current id or none. List records ID:ok / ID:failed in attempt order. Continue after failure, finish State done. Run disabled while running. New Run clears results and starts at A. Cancel aborts current, keeps completed rows, idle, ignores late result. Unmount aborts. Permit at most 4 Run attempts per mount, including canceled attempts; Remaining output decrements each Run and Run disables at zero.
+
+EXAMPLE
+Run => only A requested until it settles.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Do not mutate props or import another exercise or solution. Match accessible names/roles exactly. Injected service/scheduler props are defined in tests/1630.cjs; no network or real timers. Implementation constraints such as useReducer need source review as well as DOM tests.
+
+PROPS
+{runJob}
+Example data: {}
+
+RUN FROM unionboot
+node react-300/verify.cjs --id=1630
+node react-300/verify.cjs --starters --id=1630

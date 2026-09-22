@@ -1,0 +1,15 @@
+1054: Immutable typed property replacement / scenario 01
+
+Contract focus: keyof; indexed assignment; NoInfer.
+Return a shallow copy with one existing property replaced. Key must belong to T; value must match Required<T>[K] (the present-property type) without widening inferred T to accept an invalid value. Preserve other properties and references. Works with symbols. NoInfer is available in TS 5.9.3.
+
+This is scenario 1/15 of this API family, not a new algorithm. Collection-oriented exercises emphasize empty collection; scalar/state exercises use deterministic case seed 0. All scenarios also cover shared edge contracts. There is no scenario/policy argument to add.
+
+Implement the supplied public signature in starters/1054.ts. Keep exported types. Do not import the reference solution, use any, or silence errors with ts-ignore. Localized assertions are allowed only where the prompt explains the runtime invariant.
+
+Examples and edge assertions: tests/1054.cjs. Positive strict fixtures: types/1054.positive.ts. Negative strict fixtures: types/1054.negative.ts. Negative calls are compiled but never executed.
+From unionboot:
+  node ts-more/verify.cjs --starters --id=1054
+Reference check:
+  node ts-more/verify.cjs --id=1054
+

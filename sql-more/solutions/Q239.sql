@@ -1,0 +1,1 @@
+CREATE TABLE calc AS SELECT * FROM source;ALTER TABLE calc ADD COLUMN total INTEGER AS(qty*price) VIRTUAL;SELECT id,total FROM calc ORDER BY id;

@@ -1,0 +1,27 @@
+Q375 — family Queue jobs state machines and idempotency, scenario 5: dead-letter-failed
+
+Task
+Move failed mail jobs to a dead_letters table and remove them from jobs; return remaining mail job count and dead-letter count.
+
+Dialect
+SQLite 3.49.1 using Node node:sqlite DatabaseSync. JSON/FTS5, generated columns, PRAGMAs, rowid, date functions and EQP syntax/text are SQLite-specific. This is a related scenario within its family, not a claim of a wholly unrelated concept.
+
+Fresh seed (foreign_keys=ON)
+CREATE TABLE jobs(id INTEGER PRIMARY KEY,queue TEXT,state TEXT CHECK(state IN('queued','running','done','failed')));INSERT INTO jobs VALUES(1,'mail','queued'),(2,'mail','running'),(3,'mail','done'),(4,'bulk','queued'),(5,'bulk','failed');INSERT INTO jobs VALUES(6,'mail','failed');
+
+Concrete example
+The first result row on this seed is {"remaining":3,"dead":1}.
+
+Expected shape
+Columns: remaining, dead. Exact ordered rows, including NULL and duplicates:
+[
+  {
+    "remaining": 3,
+    "dead": 1
+  }
+]
+
+Submission
+Write SQL in starters/Q375.sql. The final statement returns the graded rows; preceding statements may change only this disposable database. Blank SQL returns [] and fails. No helper SQL implements a blank answer. Reference and starter use the same tests. Use ORDER BY for the stated output order.
+Reference: node sql-more/verify.cjs --id=Q375
+Learner: node sql-more/verify.cjs --starters --id=Q375

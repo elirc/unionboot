@@ -1,0 +1,12 @@
+W127 — Route value parsing handlers
+Scenario 7/10: fileId; positive invariant route integer
+
+Read route value fileId from Request.RouteValues. Require a string of unsigned decimal digits fitting positive int32; non-string/missing/zero/overflow->400. Valid->200 {id}. Example route fileId="007" ->id7. This exercise tests handler parsing in-process, not router matching.
+
+Signature: public static IResult Handle(HttpContext context)
+
+Edit starters/W127.cs. Run node dotnet-web-300/verify.cjs --starters --id=W127 from unionboot.
+Reference: solutions/W127.cs; shared checks: tests/W127.cs.
+All tests run in-process against actual ASP.NET Core types, not over a socket.
+This is one of ten related family scenarios, not an unrelated concept.
+Tests cover specified examples and edges, not a proof for every input.

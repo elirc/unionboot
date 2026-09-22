@@ -1,0 +1,29 @@
+TS-FINAL - STRICT TYPESCRIPT CONTRACT PRACTICE
+
+165 exercises; IDs 1204-1368. 11 API families, each with 15 explicitly labelled regression scenarios. This is repeated contract practice, NOT 165 unrelated algorithms. Signatures and implementations repeat within a family; scenario inputs and deterministic seeds vary. Boundary tests remain shared deliberately. No artificial policy tokens.
+
+Workflow
+1. Read prompts/<id>.txt and inspect the public signature in starters/<id>.ts.
+2. Implement the blank body without importing solutions.
+3. Inspect tests/<id>.cjs for concrete runtime examples and types/<id>.*.ts for compile contracts.
+4. Run node ts-final/verify.cjs --starters --id=1204. (--id 1204 also works.)
+5. Run node ts-final/verify.cjs for all references, or --starters for all your work.
+
+The verifier invokes the existing TypeScript 5.9.3 tsc CLI before any runtime test. Strict, exactOptionalPropertyTypes, noUncheckedIndexedAccess, useUnknownInCatchVariables and noImplicitReturns are enabled. Positive and @ts-expect-error negative fixtures are rebound to the selected STARTER in practice mode; solution types cannot mask a broken starter API. Fixtures are never executed. The exported solve symbol has an any guard, supplemented by concrete typed assignments and negative return-use checks; fixtures are regression coverage, not a complete proof against deliberate type escapes.
+
+Exit codes: 0 all pass; 1 runtime failures; 2 compiler/setup failures. Unknown flags/IDs fail. Untouched starters compile successfully but every test fails with TODO exercise <id>; compiler failure is NOT a successful blank-starter control. Temporary compiler outputs live under .verify/ and are cleaned after each run. Readonly contracts do not imply runtime deep freeze unless the prompt says so.
+
+Authoring source: ../build-ts-expansion.cjs. It refuses to overwrite either existing track so a rerun cannot destroy learner work. Root package, index and master verifier are intentionally not edited by this generator.
+
+Families
+1204-1218: Variadic call forwarding (variadic tuple inference; Parameters; ReturnType)
+1219-1233: Typed asynchronous Result capture (Promise; unknown catch values; generic Awaited)
+1234-1248: Sequential typed async mapping (async generics; readonly inputs; sequencing)
+1249-1263: Exact tuple Promise resolution (mapped tuples; Awaited; readonly removal)
+1264-1278: Key-correlated event publisher (keyof event maps; NoInfer payloads; callbacks)
+1279-1293: Discriminant-selected union extraction (Extract; indexed access; generic unions)
+1294-1308: Result-producing flatMap (generic union composition; error unions)
+1309-1323: Branded identifier validation (unique symbol branding; unknown validation; nominal types)
+1324-1338: Typed leaf path lookup (nested keyof; indexed access; optional values)
+1339-1353: Template-literal field events (template literal types; mapped keys; keyof)
+1354-1368: Typed function memoization (generic closures; Map cache; undefined results)

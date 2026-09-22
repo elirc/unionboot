@@ -1,0 +1,18 @@
+Weighted interval scheduling / scenario 3 — gap=1; tie=fewer
+
+TASK
+Input jobs {id,start,end,value} with unique lowercase ASCII ids, start<end, positive duration and nonnegative value. Select maximum total value without overlap; consecutive jobs require previous.end+1<=next.start. Return {value,ids} in time order. Tied value prefers fewer jobs, then lexicographically smaller JSON-serialized id sequence. Empty schedule is allowed.
+
+CONTRACT
+Export one CommonJS function: module.exports=solve. Each call creates independent state. Do not import another exercise or reference solution. Preserve inputs. Tests use only Node built-ins and injected synchronous clocks or promise microtasks; no network, DOM, timers, filesystem access, or random data. Algorithmic complexity/structural sharing requirements also need source review.
+
+EXAMPLES
+Read tests/1741.cjs for executable input/output cases and an independent oracle.
+
+RUN FROM unionboot
+node js-more/verify.cjs --id=1741
+node js-more/verify.cjs --starters --id=1741
+
+POLICIES
+gap=1; tie=fewer
+Semantic key: {"gap":1,"tie":"fewer"}

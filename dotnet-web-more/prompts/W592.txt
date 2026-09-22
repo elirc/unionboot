@@ -1,0 +1,8 @@
+W592 | Idempotent PATCH merge semantics
+Scenario 2: Idempotent string merge for note
+Semantic key: idempotent-string-merge-for-note
+
+Restricted JSON Merge Patch: allow only note; string replaces, null removes, missing leaves unchanged. Reject unknown/non-string/non-null fields atomically before mutation with 400. Reapplying identical patch must produce identical state. Preserve unrelated existing keys.
+
+Signature: public static IResult Merge(IDictionary<string,string> state,JsonElement patch)
+Implement starters/W592.cs. Provided adapters only delegate to your method. Tests use real shared-framework objects without a server or network.

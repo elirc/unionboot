@@ -1,0 +1,18 @@
+URL query writeback / scenario 11 — Boundary 1; replace history entry
+
+TASK
+Read injected history.read() query string; Query field uses parameter q, default empty. Editing writes q using URLSearchParams, preserves unrelated parameters, deletes q when empty, and calls history.replace(search) with leading ? (or empty if no parameters). Subscribe to pop notifications and reread without writing back. Initial query is seed1. Cleanup subscription.
+
+EXAMPLE
+?keep=yes&q=seed1, edit a b => ?keep=yes&q=a+b.
+
+CONTRACT
+Export default Exercise. Each mount owns its state. Preserve frozen data props. Do not import another exercise or reference solution. Match accessible names and roles exactly. Services are injected by tests/3209.cjs; no network, real timers, or actual layout. Hook/architectural constraints also need source review; DOM tests alone do not prove implementation technique. These are related boundary/policy scenarios, not unrelated concepts.
+
+PROPS
+{history}
+Example data: {}
+
+RUN FROM unionboot
+node react-next/verify.cjs --id=3209
+node react-next/verify.cjs --starters --id=3209
