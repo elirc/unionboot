@@ -3,10 +3,37 @@
 // Hint: BigInt avoids rounding version components.
 // Test starter: node js/batch-084-103/verify.cjs --starters --id=94
 'use strict';
-function compareVersions(a,b) {
-  const parse=s=>{if(typeof s!=='string'||!/^\d+(\.\d+)*$/.test(s))throw new TypeError('Invalid version');return s.split('.').map(BigInt);};
-  const x=parse(a),y=parse(b);
-  for(let i=0;i<Math.max(x.length,y.length);i++){const p=x[i]??0n,q=y[i]??0n;if(p!==q)return p<q?-1:1;}
+// Why this works:
+// Each version string is validated with /^\d+(\.\d+)*$/ — one digit group,
+// then any number of further groups each preceded by a single dot. That
+// rejects '1..2', a leading or trailing dot, and a non-string, all as
+// TypeError, before any comparison happens.
+// Components are parsed with BigInt rather than Number. The test compares
+// '9007199254740993' with '9007199254740992'; those differ by one just above
+// Number.MAX_SAFE_INTEGER and would round to the same double.
+// BigInt('02') is 2n, so leading zeros stop mattering the moment the component
+// is parsed.
+// The loop runs to the longer of the two component counts and treats a missing
+// component as 0n. That makes trailing zero components invisible, so '1.2' and
+// '1.2.0' compare equal, and the first component that differs decides whether
+// the answer is -1 or 1.
+function compareVersions(a, b) {
+  function parse(version) {
+    if (typeof version !== 'string' || !/^\d+(\.\d+)*$/.test(version)) {
+      throw new TypeError('Invalid version');
+    }
+    return version.split('.').map(BigInt);
+  }
+  const left = parse(a);
+  const right = parse(b);
+  const componentCount = Math.max(left.length, right.length);
+  for (let i = 0; i < componentCount; i++) {
+    const leftPart = left[i] ?? 0n;
+    const rightPart = right[i] ?? 0n;
+    if (leftPart !== rightPart) {
+      return leftPart < rightPart ? -1 : 1;
+    }
+  }
   return 0;
 }
 module.exports = compareVersions;

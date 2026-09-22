@@ -1,5 +1,11 @@
 UNIONBOOT: JAVASCRIPT 084–103
 
+HOW TO USE THE EXPLANATIONS
+explanations/README.md lists every family with the exercises it covers.
+Read the family doc first, attempt the starter, run the verifier, then
+compare with the readable reference in solutions/. Each doc ends with a
+policy matrix showing exactly what changes between sibling variants.
+
 20 distinct intermediate exercises. Node 22, no dependencies.
 
 From Desktop/unionboot:
