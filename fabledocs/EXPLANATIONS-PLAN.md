@@ -47,10 +47,15 @@ Legend: ☐ not started · ◐ writing · ◑ written, awaiting review · ☑ re
 
 | Slice | Writer | Status | Verifier result | Review notes |
 | --- | --- | --- | --- | --- |
-| Root originals 01–83 (`SOLUTIONS.md`, `README.md`) | Opus #1 | ◐ | — | pilot; planner spot-check 2026-09-21: 83 sections, one js fence each in 01–33, LF; §17 and §62 read well, §62 code identical to `round2-remaining.cjs` |
-| `js-rest` 104–183 | Opus #2 | ◐ | — | pilot; planner spot-check: 80 solutions rewritten (106, 120 read well, error message matches test); doc `01-index-records.md` matches spec §2 — format APPROVED for scale-up. Typo "comments the ids" → "compares" |
-| `js/batch-084-103` + `js-capstones` | — | ☐ | — | |
-| `js-more` 1719–1968 (2 slices) | — | ☐ | — | |
+| Root originals 01–83 (`SOLUTIONS.md`, `README.md`) | Opus #1 | ☑ | 3/3 root verifiers exit 0 (writer + planner reruns) | pilot. Writer machine-checked every 34–83 fence against the verifiers' assertions. 3,726 lines (over the 2,500 target; accepted). Commit `84d1e489`. |
+| `js-rest` 104–183 | Opus #2 | ☑ | 80/80 (writer 82 runs + planner full run) exit 0 | pilot; format APPROVED. Writer self-corrected a `-0` claim in doc 05. Removed provably dead code in 110, 147, 176, 177, 179. Typo fixed by planner. Commit `2f1d1da5`. |
+| `js/batch-084-103` + `js-capstones` | Opus #3 | ☑ | 20/20 and 3/3 exit 0 (writer + planner) | Policy matrix replaced by "Variations you could build" for one-member families. Commit `919fa589`. |
+| `js-more` 1719–1848 (families 1–13) | Opus #4 | ◑ | 130/130 `--id` runs exit 0 | Quirks documented, not changed: 1803/1808 Huffman tie-break reads an absent `cfg.tie` (total length invariant, oracle does the same); 1809–1818 carry an unreachable `output==='count'` branch. Commit with 14–25. |
+| `js-more` 1849–1968 (families 14–25) + index + GUIDE | Opus #5 | ◑ | 120/120 `--id` runs exit 0; planner full-track run in progress | Family 18 test never calls its no-mutation guard — doc says so. 1877/1878, 1927/1928 read absent `cfg.tie` (unobservable). |
+| `sql-200` Q001–Q100 (families 1–10) | Opus #6 | ◑ | 100/100 + writer full track 200/200 exit 0 | Writer checked 4 SQLite claims against the live runtime; corrected 2 of its drafts. Q082 NULLIF and Q059 `100.0 *` looser than prompt wording, documented. |
+| `sql-200` Q101–Q200 (families 11–20) + index + GUIDE | Opus #7 | ◐ | — | |
+| `sql-more` Q201–Q300 (families 1–10) | Opus #8 | ◐ | — | not in verify-all; baseline state to be recorded by writer |
+| `sql-more` Q301–Q400 (families 11–20) + index + GUIDE | — | ☐ | — | |
 | `mixed-data` 384–518 | — | ☐ | — | |
 | `ts` 184–283 | — | ☐ | — | |
 | `ts-more` 784–1203 (3 slices) | — | ☐ | — | |
