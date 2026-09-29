@@ -1,1 +1,11 @@
-SELECT json_object('label','a"b','note',NULL) AS body;
+-- Why this works:
+-- json_object takes alternating keys and values and serializes them, so the
+-- escaping rules are SQLite's responsibility rather than the query's.
+-- The label value contains a double quote, which is emitted as the escaped
+-- two-character sequence backslash quote inside the JSON string.
+-- A SQL NULL value becomes the JSON literal null, not the text "null" and
+-- not a missing member.
+-- Building this text with || would be wrong twice over: the quote would not
+-- be escaped and concatenating with NULL yields NULL in SQLite.
+-- No FROM clause is needed; a bare SELECT returns exactly one row.
+SELECT json_object('label', 'a"b', 'note', NULL) AS body;

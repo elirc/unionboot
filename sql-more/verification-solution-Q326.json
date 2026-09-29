@@ -1,0 +1,17 @@
+{
+  "track": "sql-more",
+  "mode": "solution",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "results": [
+    {
+      "id": "Q326",
+      "family": "Retention cohorts and churn definitions",
+      "passed": true,
+      "phase": "complete",
+      "errorType": null,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "track": "sql-200",
+  "mode": "solution",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "results": [
+    {
+      "id": "Q154",
+      "family": "UPDATE DELETE and subquery driven mutations",
+      "passed": true,
+      "phase": "complete",
+      "errorType": null,
+      "error": null
+    }
+  ]
+}

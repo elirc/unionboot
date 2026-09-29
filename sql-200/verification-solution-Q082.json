@@ -1,0 +1,17 @@
+{
+  "track": "sql-200",
+  "mode": "solution",
+  "groups": 1,
+  "passed": 1,
+  "failed": 0,
+  "results": [
+    {
+      "id": "Q082",
+      "family": "NULL semantics and three valued logic",
+      "passed": true,
+      "phase": "complete",
+      "errorType": null,
+      "error": null
+    }
+  ]
+}

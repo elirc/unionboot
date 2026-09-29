@@ -1,4 +1,0 @@
-starter SQL groups: 0 passed, 1 failed.
-FAIL Q001 assert AssertionError Exact rows/order do not match expected result + actual - expected  + [] - [ -   { -     label: 'Blue', -     name: 'Ada' -   }, -   { -     label: 'Blue', -     name: 'Bo' -   }, -
-(node:30064) ExperimentalWarning: SQLite is an experimental feature and might change at any time
-(Use `node --trace-warnings ...` to show where the warning was created)

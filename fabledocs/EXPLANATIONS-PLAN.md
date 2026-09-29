@@ -51,13 +51,13 @@ Legend: ☐ not started · ◐ writing · ◑ written, awaiting review · ☑ re
 | `js-rest` 104–183 | Opus #2 | ☑ | 80/80 (writer 82 runs + planner full run) exit 0 | pilot; format APPROVED. Writer self-corrected a `-0` claim in doc 05. Removed provably dead code in 110, 147, 176, 177, 179. Typo fixed by planner. Commit `2f1d1da5`. |
 | `js/batch-084-103` + `js-capstones` | Opus #3 | ☑ | 20/20 and 3/3 exit 0 (writer + planner) | Policy matrix replaced by "Variations you could build" for one-member families. Commit `919fa589`. |
 | `js-more` 1719–1848 (families 1–13) | Opus #4 | ◑ | 130/130 `--id` runs exit 0 | Quirks documented, not changed: 1803/1808 Huffman tie-break reads an absent `cfg.tie` (total length invariant, oracle does the same); 1809–1818 carry an unreachable `output==='count'` branch. Commit with 14–25. |
-| `js-more` 1849–1968 (families 14–25) + index + GUIDE | Opus #5 | ◑ | 120/120 `--id` runs exit 0; planner full-track run in progress | Family 18 test never calls its no-mutation guard — doc says so. 1877/1878, 1927/1928 read absent `cfg.tie` (unobservable). |
-| `sql-200` Q001–Q100 (families 1–10) | Opus #6 | ◑ | 100/100 + writer full track 200/200 exit 0 | Writer checked 4 SQLite claims against the live runtime; corrected 2 of its drafts. Q082 NULLIF and Q059 `100.0 *` looser than prompt wording, documented. |
-| `sql-200` Q101–Q200 (families 11–20) + index + GUIDE | Opus #7 | ◐ | — | |
+| `js-more` 1849–1968 (families 14–25) + index + GUIDE | Opus #5 | ☑ | 120/120 `--id`; planner full track 250/250 exit 0 (30 min under load) | Family 18 test never calls its no-mutation guard — doc says so. 1877/1878, 1927/1928 read absent `cfg.tie` (unobservable). Whole track committed `82661363`. |
+| `sql-200` Q001–Q100 (families 1–10) | Opus #6 | ☑ | 100/100; track 200/200 (writer + planner) exit 0 | Writer checked 4 SQLite claims against the live runtime; corrected 2 drafts. Q082 NULLIF and Q059 `100.0 *` looser than prompt wording, documented. Commit `9fd7ae19`. |
+| `sql-200` Q101–Q200 (families 11–20) + index + GUIDE | Opus #7 | ☑ | 100/100; track 200/200 exit 0 | 4 more SQLite claims corrected against the runtime (no-target `ON CONFLICT`, recursive CTE with `UNION`, node:sqlite under/over-binding). Commit `9fd7ae19`. |
 | `sql-more` Q201–Q300 (families 1–10) | Opus #8 | ◐ | — | not in verify-all; baseline state to be recorded by writer |
-| `sql-more` Q301–Q400 (families 11–20) + index + GUIDE | — | ☐ | — | |
-| `mixed-data` 384–518 | — | ☐ | — | |
-| `ts` 184–283 | — | ☐ | — | |
+| `sql-more` Q301–Q400 (families 11–20) + index + GUIDE | Opus #10 | ◐ | — | |
+| `mixed-data` 384–518 | Opus #9 | ☑ | 10 writer full-track runs + planner run 135/135 exit 0 (tsc gate) | Writer parsed all baseline bodies with one strict regex and cross-checked axes vs prompts; TS signatures byte-identical. `__proto__` team-name caveat documented. Commit `68c18e0d`. |
+| `ts` 184–283 | Opus #11 | ◐ | — | verify per family via full-track runs (tsc gate every run) |
 | `ts-more` 784–1203 (3 slices) | — | ☐ | — | |
 | `ts-final` 1204–1368 | — | ☐ | — | |
 | `ts-next` 1969–2718 (5 slices) | — | ☐ | — | |

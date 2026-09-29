@@ -1,7 +1,42 @@
-﻿# Baseline snapshot created 2026-09-21 before the explanations/solutions rewrite.
+# Baseline snapshot created 2026-09-21 before the explanations/solutions rewrite.
 # Dependencies and compiler output only; every authored file is tracked.
 node_modules/
 bin/
 obj/
 .build/
 .verify/
+
+# Desktop GitHub upload: local credentials and reproducible output
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.next/
+.turbo/
+.cache/
+.pytest_cache/
+coverage/
+dist/
+bin/
+obj/
+target/
+target-*/
+.env
+.env.*
+!.env*.example
+!.env*.sample
+!.env*.template
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+credentials.json
+service-account*.json
+*.log
+*.sqlite
+*.sqlite3
+*.db
+.DS_Store
+Thumbs.db
