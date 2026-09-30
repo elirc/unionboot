@@ -21,7 +21,7 @@ The word *absence* does a lot of work in those rules. A key missing from `local`
 
 That is what the `missing` sentinel is for. `read(record, key)` returns the stored string when `Object.hasOwn` says the key is an own property, and the unique symbol `missing` otherwise. Every comparison is then an ordinary `===` between two strings or between two occurrences of the same symbol.
 
-A `??` fallback cannot do this job. The values are strings, and `''` is a perfectly good string; `record[key] ?? 'absent'` cannot tell an empty string from a missing key, and `record[key] ?? undefined` cannot tell a missing key from anything else either. A unique `Symbol` can never collide with a document value, which is exactly why it is used.
+`??` preserves `''`: it falls back only for `null` or `undefined`. The problem with `record[key] ?? 'absent'` is a collision with the legitimate stored string `'absent'`, plus ordinary lookup can read inherited properties. Under this exact string-only contract, `Object.hasOwn(record, key) ? record[key] : undefined` can represent absence correctly because stored `undefined` is excluded. The reference uses a unique `Symbol` to make the separation explicit and avoid collisions if the value domain later expands. Logical OR (`||`), unlike `??`, would discard an empty string.
 
 `Object.hasOwn` rather than `key in record` matters for a second reason. `'toString' in {}` is `true`, because the lookup walks the prototype chain. `Object.hasOwn({}, 'toString')` is `false`. The test feeds a record built from `JSON.parse('{"__proto__":"data","constructor":"ok"}')`, where those two names are ordinary own data properties, and they have to be merged like any other key.
 
@@ -49,7 +49,7 @@ Taken from `tests/3439.cjs` and `prompts/3439.txt`:
 
 Because the keys are visited in sorted order, `conflicts` is already sorted when the loop ends — there is no second sort.
 
-`Object.fromEntries` is what makes `__proto__` safe on the way out. It defines each pair as an own data property. An accumulator written as `result[key] = selected` would instead *set* `__proto__`, replacing the object's prototype and storing nothing.
+`Object.fromEntries` is what makes `__proto__` safe on the way out. It defines each pair as an own data property. An accumulator written as `result[key] = selected` invokes the inherited `__proto__` setter for that key. In this string-only exercise the string assignment is ignored rather than creating an own data property; an object-valued assignment in a wider domain could replace the prototype.
 
 ## Worked example — 3439 Merge independent flat-document edits
 
@@ -134,9 +134,9 @@ function solve(base, local, remote) {
 
 ## Pitfalls the tests are designed to catch
 
-- **Using `record[key] ?? fallback` instead of a sentinel.** The `{a:''}` case has a legitimately empty string, which `??` cannot distinguish from a missing key in general — and any non-symbol fallback could in principle equal a real document value.
+- **Using a colliding string fallback or inherited lookup.** `??` correctly preserves `{a:''}`. A string fallback can equal an allowed stored string; `record[key]` may also read a prototype value. Check own-property presence separately. `undefined` is a valid sentinel under this string-only contract, though the reference uses a symbol.
 - **Using `key in record` instead of `Object.hasOwn`.** Inherited names such as `constructor` and `toString` would read as present on every record.
-- **Accumulating with `result[key] = selected`.** The `__proto__` case assigns the object's prototype instead of storing data, and `deepEqual` against the parsed special record fails.
+- **Accumulating with `result[key] = selected`.** The `__proto__` string assignment fails to create an own data property, and `deepEqual` against the parsed special record fails.
 - **Treating a conflicted local deletion as "keep base".** Line 5 asserts that key `a` is absent from `value`, not that it is restored to `'x'`.
 - **Sorting `conflicts` but iterating the keys in insertion order.** It would pass this test, but the merged entries would then depend on argument order; sorting once up front makes both outputs deterministic.
 - **Writing into `base`, `local` or `remote`.** The first case freezes all three, and `'use strict'` turns a write into a `TypeError`.
@@ -147,3 +147,7 @@ function solve(base, local, remote) {
 1. Add a fourth argument `onConflict` that receives `(key, localValue, remoteValue)` and returns the value to keep. What do you pass it when one side is `missing`?
 2. Write the inverse check: given `base` and a merge result, decide whether the merge could have come from a given pair of edits. Which rule is impossible to invert?
 3. In words: explain why a fresh `Symbol` is a safe sentinel here while the string `'__missing__'` is not, and name the exact input that would break the string version.
+
+## Independent boundary practice
+
+Continue with the [advanced trace and executable counterexamples](../../advanced-practice/README.md). The lab distinguishes nullish coalescing, fallback collisions, and inherited lookup without changing any learner starter.

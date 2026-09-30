@@ -1,6 +1,6 @@
 # unionboot — JavaScript exercise pack
 
-33 standalone exercises, ordered easy → harder. No dependencies, no test
+83 standalone root exercises, ordered easy → harder. No dependencies, no test
 runner — just you, the file, and `node`.
 
 ## How to work
@@ -134,3 +134,7 @@ Things you'll likely need, in the order they appear:
 - `setTimeout(fn, ms)`
 - A stack = an array with `push()` and `pop()`
 - BFS = a queue: array with `push()` and `shift()`, loop `while (queue.length)`
+
+## Independent advanced practice
+
+Use the [six-chapter engineering route](advanced-practice/README.md) for placement, worked traces, debugging counterexamples, independent exercises, and a reviewable capstone. It connects the existing starters and capstone verifier without replacing your answers.

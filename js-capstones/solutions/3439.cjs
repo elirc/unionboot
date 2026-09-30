@@ -6,10 +6,11 @@
 // handle as a value in its own right.
 // `missing` is a unique Symbol used as that value, and `read` returns it
 // whenever Object.hasOwn reports the key is not an own property. A sentinel is
-// needed rather than undefined or a `record[key] ?? fallback` fallback,
-// because the record values are strings and deletion must stay distinguishable
-// from the empty string: the test asserts that solve({}, {a:''}, {a:''}) keeps
-// a with the value ''.
+// useful as an explicit absence marker. Nullish coalescing preserves empty
+// strings; a string fallback can instead collide with a legitimate string.
+// Under this string-only contract, an own-property reader returning undefined
+// for absence would also work. Checking ownership remains necessary because
+// ordinary property lookup can read inherited values.
 // Object.hasOwn also keeps inherited names out of the answer. The test feeds a
 // record parsed from '{"__proto__":"data","constructor":"ok"}', where both of
 // those are ordinary own data keys and must be merged like any other.

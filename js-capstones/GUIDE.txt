@@ -5,3 +5,7 @@ explanations/README.md lists every family with the exercises it covers.
 Read the family doc first, attempt the starter, run the verifier, then
 compare with the readable reference in solutions/. Each doc ends with a
 policy matrix showing exactly what changes between sibling variants.
+
+ADVANCED PRACTICE
+../advanced-practice/README.md adds a placement route, independent exercises,
+and an isolated merge-boundary lab. It never overwrites your starters.
