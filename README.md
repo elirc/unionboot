@@ -1,7 +1,13 @@
 # unionboot — JavaScript exercise pack
 
-83 standalone root exercises, ordered easy → harder. No dependencies, no test
-runner — just you, the file, and `node`.
+This README covers the **83 standalone root exercises** (`01-temperature.js` … `83-async-pipeline.js`),
+ordered easy → harder. Those files need no dependencies and no test runner — just you, the file, and
+`node`.
+
+The repository has grown well beyond them into a multi-language pack (TypeScript, React, C#,
+ASP.NET Core and SQL tracks with their own verifiers). See
+[What else is in this repository](#what-else-is-in-this-repository) at the end, and
+`START-HERE.txt` for the full inventory.
 
 ## How to work
 
@@ -117,6 +123,29 @@ runner — just you, the file, and `node`.
   once with raw `.then()`.
 - **Boss level:** 29, 30, 31, 32, 33.
 
+The path above stops at 33; exercises 34–83 were added later. Grouped by the topic column in the
+table:
+
+- **Array and string patterns (day 11–13):** 34, 35, 37, 38, 39, 41, 42, 46, 59 — single-pass maps,
+  two pointers, value tables, binary search.
+- **Windows, prefixes and sweeps (day 14–15):** 36, 40, 51, 72, 73, 82 — Kadane, sliding window,
+  prefix/suffix products, interval merge, sweep line, ring buffer.
+- **Recursion, backtracking and DP (day 16–18):** 43, 44, 45, 49, 52, 53, 54 — sieve, subsets,
+  permutations, memoization, grid and coin DP.
+- **Data structures and classes (day 19–20):** 55, 56, 57, 58, 79 — file-backed JSON store, private
+  fields, linked list, BST invariant, O(1) queue.
+- **Async and timers (day 21–22):** 47, 48, 60, 61, 62, 63, 64, 65 — debounce/throttle,
+  `Promise.all`/`allSettled` by hand, a concurrency pool, timeouts, `AbortSignal`.
+- **Objects, parsing and policies (day 23–25):** 50, 66, 67, 68, 69, 70, 71, 74, 75, 80 — deep
+  clone with cycles, query parsing, pagination edges, stable sorts, own-property paths,
+  (un)flattening, top-k, running median, validation cascades.
+- **State and graphs (day 26–27):** 76, 77, 78, 81 — transactional cart, state machine,
+  undo/redo, Kahn topological sort.
+- **Capstone:** 83 — async pipeline with an error trap.
+
+**Check yourself:** after each group, run every file in it with `node` and confirm every
+`// expected:` line matches before opening `SOLUTIONS.md`.
+
 ## Concepts cheat-sheet
 
 Things you'll likely need, in the order they appear:
@@ -137,4 +166,37 @@ Things you'll likely need, in the order they appear:
 
 ## Independent advanced practice
 
-Use the [six-chapter engineering route](advanced-practice/README.md) for placement, worked traces, debugging counterexamples, independent exercises, and a reviewable capstone. It connects the existing starters and capstone verifier without replacing your answers.
+Use the [six-chapter engineering route](advanced-practice/README.md) for placement, worked traces, debugging counterexamples, independent exercises, and a reviewable capstone. It connects the existing starters and capstone verifier without replacing your answers. A longer 24-chapter version lives in [advanced-practice/extended-course/](advanced-practice/extended-course/README.md).
+
+## What else is in this repository
+
+`START-HERE.txt` is the authoritative map; this section only points to it. According to that file,
+the integrated inventory is 3384 exercises: 1718 web exercises with IDs 001–1718 (the 83 root
+files, `js/batch-084-103/`, `js-rest/`, `ts/`, `react/`, `mixed-data/`, `mixed-react/`,
+`react-more/`, `ts-more/`, `ts-final/`, `react-junior/`, `react-300/`), two C# files with 583
+exercises each (`CSHARP-583.cs`, `CSHARP-MORE-583.cs`), 300 ASP.NET Core exercises
+(`dotnet-web-300/`) and 200 SQL exercises (`sql-200/`). It also states that the expansion folders
+(for example `ts-next/`, `react-next/`, `js-more/`, `sql-more/`, `dotnet-web-more/`) are in
+progress and not part of that inventory or the root verification.
+
+Unlike the root exercises, these tracks have verifiers, declared in `package.json`:
+
+| Script | What it runs |
+| --- | --- |
+| `npm run verify:original` | the root exercises (`verify-original.cjs`, `verify-39-50.cjs`, `verify-missing.cjs`) |
+| `npm run verify:js` | `js/batch-084-103/` and `js-rest/` |
+| `npm run check:ts` / `verify:ts` | TypeScript type-check and the `ts`, `ts-more`, `ts-final` verifiers |
+| `npm run verify:react` | the five React tracks |
+| `npm run verify:csharp` | both C# files (needs the .NET 10 SDK) |
+| `npm run verify:sql` | `sql-200/` against in-memory `node:sqlite` |
+| `npm run verify:dotnet-web` | `dotnet-web-300/` |
+| `npm run verify:all` | everything in the integrated inventory (`verify-all.cjs`) |
+
+Those need `npm ci` first (the TypeScript, React and test dependencies in `package.json`).
+`verification-report.json` holds the result of the most recent completed full run (its
+`generatedAt` is 2026-09-17); it is a record of that run, not of the current tree, so re-run
+`npm run verify:all` after changing anything.
+
+Long-form explanations for some tracks are in `js-more/explanations/`, `js-rest/explanations/` and
+`js-capstones/explanations/`; `fabledocs/` holds the plan and specification those explanations were
+written to.
